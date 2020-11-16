@@ -1,7 +1,7 @@
 # ČVUT
 ## Bakalář
 
-|        Semestr        | Kredity | Povinné předměty (kredity) | Povinně volitelné předměty (kredity) | Volitelné předměty (kredity) | Bakalářksá práce (kredity) |
+|        Semestr        | Kredity | Povinné předměty (kredity) | Povinně volitelné předměty (kredity) | Volitelné předměty (kredity) | Bakalářská práce (kredity) |
 | :-------------------: | :-----: | :------------------------: | :----------------------------------: | :--------------------------: | :------------------------: |
 | [b201](b201/index.md) |   30    |             27             |                  3                   |              0               |             0              |
 |      **Celkem**       | **30**  |           **27**           |                **3**                 |            **0**             |           **0**            |
