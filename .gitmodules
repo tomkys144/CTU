@@ -2,3 +2,6 @@
 	path = b201/ZPR
 	url = https://github.com/tomkys144/ZPR
 	branch = master
+[submodule "PRGA"]
+	path = PRGA
+	url = https://github.com/tomkys144/PRGA.git
