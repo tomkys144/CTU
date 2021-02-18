@@ -5,3 +5,4 @@
 [submodule "b202/PRGA"]
 	path = b202/PRGA
 	url = https://github.com/tomkys144/PRGA
+	branch = master
