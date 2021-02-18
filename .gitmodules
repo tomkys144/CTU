@@ -3,5 +3,5 @@
 	url = https://github.com/tomkys144/ZPR
 	branch = master
 [submodule "PRGA"]
-	path = PRGA
+	path = b202/PRGA
 	url = https://github.com/tomkys144/PRGA.git
