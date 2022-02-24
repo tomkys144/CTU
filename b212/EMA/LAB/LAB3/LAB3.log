@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/TeX Live for SUSE Linux) (preloaded format=pdflatex 2022.2.16)  22 FEB 2022 18:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/TeX Live for SUSE Linux) (preloaded format=pdflatex 2022.2.16)  22 FEB 2022 18:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -695,15 +695,15 @@ Dictionary: translator-basic-dictionary, Language: English
 <LAB3.png, id=4, 425.4294pt x 154.8987pt>
 File: LAB3.png Graphic file (type png)
 <use LAB3.png>
-Package pdftex.def Info: LAB3.png  used on input line 49.
+Package pdftex.def Info: LAB3.png  used on input line 48.
 (pdftex.def)             Requested size: 425.42834pt x 154.8983pt.
 
-Overfull \hbox (80.42834pt too wide) in paragraph at lines 49--50
+Overfull \hbox (80.42834pt too wide) in paragraph at lines 48--49
  [][] 
  []
 
 
-Overfull \hbox (10.30623pt too wide) in paragraph at lines 53--59
+Overfull \hbox (10.30623pt too wide) in paragraph at lines 52--58
 [] 
  []
 
@@ -714,19 +714,19 @@ Overfull \hbox (10.30623pt too wide) in paragraph at lines 53--59
 \absvshift=\dimen318
 \absvshift=\dimen319
 
-Overfull \hbox (1.75616pt too wide) in paragraph at lines 119--120
+Overfull \hbox (1.75616pt too wide) in paragraph at lines 118--119
 []\OT1/cmr/m/n/10 Velikost v^^Systupn^^S^^Pho od-poru d^^Teli^^Tce m^^Wu^^Tzeme
  zjis-tit bud[] z n^^Sahradn^^S^^Pho sch^^Sematu
  []
 
 [2]
-Overfull \hbox (21.61183pt too wide) in paragraph at lines 129--131
+Overfull \hbox (21.61183pt too wide) in paragraph at lines 128--130
 \OT1/cmr/m/n/10 Pokud jsou fluk-tu-ace m^^Te^^Tren^^S^^P za-ne-dba-teln^^Se v^^
 Wu^^Tci p^^Tresnosti p^^Tr^^S^^Pstroje ud^^Savan^^Se v^^Syrobcem,
  []
 
 [3]
-Overfull \hbox (30.18033pt too wide) detected at line 222
+Overfull \hbox (30.18033pt too wide) detected at line 221
 [][]
  []
 
@@ -755,7 +755,7 @@ onts/cm/cmr8.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr9.pfb></us
 r/share/texmf/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts
 /type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf/fonts/type1/public/cm-sup
 er/sfrm1000.pfb>
-Output written on LAB3.pdf (4 pages, 230474 bytes).
+Output written on LAB3.pdf (4 pages, 230488 bytes).
 PDF statistics:
  100 PDF objects out of 1000 (max. 8388607)
  72 compressed objects within 1 object stream
