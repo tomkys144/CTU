@@ -1,0 +1,133 @@
+\documentclass{article}
+\title{\textbf{4. MĚŘENÍ MALÝCH PROUDŮ}}
+\author{Tomáš Kysela}
+\date{28/2/2022}
+
+\addtolength{\topmargin}{-3cm}
+\addtolength{\textheight}{3cm}
+
+\usepackage[czech]{babel}
+\usepackage{graphicx}
+\usepackage{circuitikz}
+\usepackage{amsmath}
+\usepackage{subcaption}
+\usepackage{pgfplots}
+\usepackage{siunitx}
+\usepackage{float}
+\sisetup{detect-all}
+
+\makeatletter
+\providecommand\add@text{}
+\newcommand\tagaddtext[1]{%
+	\gdef\add@text{#1\gdef\add@text{}}}%
+\renewcommand\tagform@[1]{%
+	\maketag@@@{\llap{\add@text\quad}(\ignorespaces#1\unskip\@@italiccorr)}%
+}
+\makeatother
+
+
+\begin{document}
+	
+	\maketitle
+	
+	\section{Úkol měření}
+	\begin{enumerate}
+		\item V zapojení podle obr. 1 změřte proud germaniovou diodou v propustném  směru v oblasti malých napětí (20 až 100 mV) v pěti bodech charakteristiky:
+		\begin{enumerate}
+			\item analogovým mikroampérmetrem
+			\item číslicovým mikroampérmetrem na různých rozsazích
+			\item pomocí převodníku proud - napětí s operačním zesilovačem, u něhož před měřením určete velikost odporu zpětnovazebního rezistoru R tak, aby převod proud - napětí byl $10^{-5} \si{\ampere\per\volt}$
+		\end{enumerate}
+		Naměřené hodnoty vyneste do společného grafu.
+		\item Při měření dle 1a) a 1b) určete chybu metody způsobenou vnitřním odporem ampérmetru.
+		\item  naměřených hodnot určete \textbf{vnitřní odpory použitých mikroampérmetrů}.
+	\end{enumerate}
+	
+	\section{Schéma zapojení}
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}{0.6\textwidth}
+			\begin{circuitikz}[european]
+				\draw (1,-0.0) node[ocirc,label=left:$+$]{};
+				\draw (1,-2.0) node[ocirc,label=left:$-$]{};
+				\draw (2,-0.0) to[rmeter,t=$V_1$] (2,-2.0);
+				\draw (4,-0.0) to[D,l=$D$] (6,-0.0);
+				\draw (2,-0.0) to[R,l=$R_1$,a=\SI{90}{\ohm}] (4,-0.0);
+				\draw (4,-0.0) to[R,l=$R_2$,a=\SI{10}{\ohm}] (4,-2.0);
+				\draw (6,-0.0) node[ocirc,label=right:$A$]{};
+				\draw (6,-2.0) node[ocirc,label=right:$B$]{};
+				\draw (6,-2.0) -- (4,-2.0);
+				\draw (4,-2.0) -- (2,-2.0);
+				\draw (2,-2.0) -- (1,-2.0);
+				\draw (1,-0.0) -- (2,-0.0);
+				\draw [dashed] (6,0)  -- (6,-2);
+			\end{circuitikz}
+		\caption{}
+	\end{subfigure}		
+	\begin{subfigure}{0.4\textwidth}
+		\begin{circuitikz}[european]
+				\draw (10,0) -- (8,0);
+				\draw (10,0) to[rmeter,t=$\mu A$] (10,-2);
+				\draw (10,-2) -- (8,-2);
+				\draw (8,0) node[currarrow,label=left:$A'$,rotate=180]{};
+				\draw (8,-2.0) node[currarrow,label=left:$B'$,rotate=180]{};
+			\end{circuitikz}
+			\caption{}
+		\end{subfigure}
+		\begin{subfigure}{0.4\textwidth}
+			\begin{circuitikz}[european]
+				\draw (0,-0.0) node[op amp] (opamp) {};
+				\draw (opamp.-) -- (-1.5,0.5);
+				\draw (opamp.+) -- (-1.5,-0.5) -- (-1.5,-1.5);
+				\draw (-1.5,0.5) -- (-1.5,1.5) -- (-1,1.5);
+				\draw (-1,1.5) to[R, l_=$R$] (1,1.5);
+				\draw (1,1.5) -- (1.5,1.5) -- (1.5,0);
+				\draw (opamp.out) -- (1.5, 0);
+				\draw (1.5,0) to[rmeter,t=$V_2$] (1.5,-1.5);
+				\draw (1.5,-1.5) -- (-2.5,-1.5) node[currarrow,label=left:$B''$,rotate=180]{};
+				\draw (-1.5,0.5) -- (-2.5,0.5) node[currarrow,label=left:$A''$,rotate=180]{};
+			\end{circuitikz}
+			\caption{}
+		\end{subfigure}
+		\caption{Zapojení pro měření malých proudů}
+	\end{figure}
+	\section{Soupis použitých přístrojů}
+	\begin{tabular}{ll}
+		$V_2$ & voltmetr číslicový, typ ..., přesnost ...  \\
+		$\mu A_2$ & mikroampérmetr magnetoelektrický, tř.přes. ..., rozsah ...  \\
+		$\mu A_1$ & mikroampérmetr magnetoelektrický, tř.přes. ..., rozsah ...  \\
+		$R$ & přesný rezistor nebo odporová dekáda, přesnost 0,1 \% (příp. 0,2 \%)  \\
+		Př1 & přípravek s odporovým děličem a polovodičovou diodou \\
+		Př2 & přípravek s operačním zesilovačem \\
+		$U_1$ & zdroj proměnného stejnosměrného napětí s číslicově nastavitelnou hodnotou  \\
+		$NZ$ & napájecí zdroj pro OZ  \\
+	\end{tabular}
+	\section{Teoretický základ}
+	Dioda je napájena ze zdroje napětí s odporovým děličem 10 : 1 (obr. 4.1 a)). Zapojíme-li do série s diodou mikroampérmetr, vznikne na něm úbytek napětí srovnatelný s napětím na diodě. Lze též říci, že napětí na rezistoru 10 \si{\ohm} nebude napětím na 	diodě, ale rozdělí se mezi diodu a mikroampérmetr v poměru velikostí jejich odporů, nebo že 	proud  procházející  diodou  v  sérii  s  odporem mikroampérmetru  bude  při  stejném  napětí  na rezistoru 10 \si{\ohm} menší, než je jeho hodnota při spojení bodů A - B nakrátko.
+	
+	V  zapojení  podle  obr. 1c),  což  je  převodník  proud-napětí  s  operačním  zesilovačem,  měříme 
+	velikost proudu diodou skutečně při napětí na diodě daném napětím na odporu R2, neboť mezi 
+	vstupy  OZ  (při  zanedbání  napěťového  offsetu)  je  nulový  rozdíl  napětí  (virtuální  nula).  
+	Velikost proudu diodou je dána výrazem:
+	\begin{equation}
+		I=\frac{U_2}{R}
+	\end{equation}
+	Přídavnou  chybu  měření  může  způsobit  vstupní  klidový  proud  I0  operačního  zesilovače  (pro  
+	OP07 platí $I_{0max} = 7\si{\nano\ampere} $); výsledná standardní nejistota měření proudu je pak dána vztahem:
+	\begin{equation}
+		u_I = \sqrt{(\frac{-1}{R} u_{U_2})^2+(\frac{U_2}{R^2}u_R)^2+(\frac{I_0}{\sqrt{3}})^2}
+	\end{equation}
+	Absolutní chybu metody p ři měření analogovým nebo číslicovým mikroampérmetrem 
+	určíme ze vztahu:
+	\begin{equation}
+		\Delta_{met}=N-S \tagaddtext{[\si{\milli\ampere}]}
+	\end{equation}
+	Relativní chybu metody určíme ze vztahu:
+	\begin{equation}
+		\sigma_{met}=\frac{N-S}{S} \cdot 100\%
+	\end{equation}
+	kde za naměřenou hodnotu N budeme považovat hodnotu proudu naměřenou 
+	mikroampérmetrem a za správnou hodnotu S hodnotu vypočtenou podle vztahu (1) vždy pro 
+	tutéž hodnotu nastaveného napětí. 
+	
+\end{document}

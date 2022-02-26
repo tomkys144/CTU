@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/TeX Live for SUSE Linux) (preloaded format=pdflatex 2022.1.12)  26 FEB 2022 16:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/TeX Live for SUSE Linux) (preloaded format=pdflatex 2022.1.12)  26 FEB 2022 16:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**LAB3.tex
-(./LAB3.tex
+**LAB4.tex
+(./LAB4.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18> (/usr/share/texmf/tex/latex/base/article.cls
 Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
@@ -637,37 +637,45 @@ Package: l3keys2e 2021-03-12 LaTeX2e option processing using LaTeX3 keys
 
 (/usr/share/texmf/tex/latex/translator/translator.sty
 Package: translator 2020-08-03 v1.12c Easy translation of strings in LaTeX
-)) (./LAB3.aux)
-\openout1 = `LAB3.aux'.
+))
+(/usr/share/texmf/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count322
+\float@exts=\toks38
+\float@box=\box71
+\@float@everytoks=\toks39
+\@floatcapt=\box72
+) (./LAB4.aux)
+\openout1 = `LAB4.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
-LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
 
 (/usr/share/texmf/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count322
+\scratchcounter=\count323
 \scratchdimen=\dimen315
-\scratchbox=\box71
-\nofMPsegments=\count323
-\nofMParguments=\count324
-\everyMPshowfont=\toks38
-\MPscratchCnt=\count325
+\scratchbox=\box73
+\nofMPsegments=\count324
+\nofMParguments=\count325
+\everyMPshowfont=\toks40
+\MPscratchCnt=\count326
 \MPscratchDim=\dimen316
-\MPnumerator=\count326
-\makeMPintoPDFobject=\count327
-\everyMPtoPDFconversion=\toks39
+\MPnumerator=\count327
+\makeMPintoPDFobject=\count328
+\everyMPtoPDFconversion=\toks41
 ) (/usr/share/texmf/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -678,13 +686,14 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.17} into 
 your preamble.
- on input line 28.
+ on input line 29.
 
 (/usr/share/texmf/tex/latex/siunitx/siunitx-abbreviations.cfg
 File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
@@ -692,73 +701,54 @@ File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 (/usr/share/texmf/tex/latex/translator/translator-basic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 )
-<LAB3.png, id=4, 425.4294pt x 154.8987pt>
-File: LAB3.png Graphic file (type png)
-<use LAB3.png>
-Package pdftex.def Info: LAB3.png  used on input line 48.
-(pdftex.def)             Requested size: 425.42834pt x 154.8983pt.
-
-Overfull \hbox (80.42834pt too wide) in paragraph at lines 48--49
- [][] 
+Overfull \hbox (17.28387pt too wide) in paragraph at lines 43--44
+[]\OT1/cmr/m/n/10 nam^^Te^^Tren^^Sych hod-not ur^^Tcete \OT1/cmr/bx/n/10 vnit^^
+Trn^^S^^P od-pory pou^^Tzit^^Sych mik-ro-amp^^Sermetr^^Wu\OT1/cmr/m/n/10 . 
  []
 
 
-Overfull \hbox (10.30623pt too wide) in paragraph at lines 52--58
+Overfull \hbox (8.22713pt too wide) in paragraph at lines 89--90
+[][] 
+ []
+
+
+Overfull \hbox (29.87343pt too wide) in paragraph at lines 95--105
 [] 
  []
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./LAB3.png>]
-\absvshift=\dimen317
-\absvshift=\dimen318
-\absvshift=\dimen319
-
-Overfull \hbox (1.75616pt too wide) in paragraph at lines 118--119
-[]\OT1/cmr/m/n/10 Velikost v^^Systupn^^S^^Pho od-poru d^^Teli^^Tce m^^Wu^^Tzeme
- zjis-tit bud[] z n^^Sahradn^^S^^Pho sch^^Sematu
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (21.36191pt too wide) in paragraph at lines 119--122
+\OT1/cmr/m/n/10 Absolutn^^S^^P chybu me-tody p ^^Tri m^^Te^^Tren^^S^^P ana-lo-g
+ov^^Sym nebo ^^Tc^^S^^Pslicov^^Sym mik-ro-amp^^Sermetrem
  []
 
-[2]
-Overfull \hbox (21.61183pt too wide) in paragraph at lines 128--130
-\OT1/cmr/m/n/10 Pokud jsou fluk-tu-ace m^^Te^^Tren^^S^^P za-ne-dba-teln^^Se v^^
-Wu^^Tci p^^Tresnosti p^^Tr^^S^^Pstroje ud^^Savan^^Se v^^Syrobcem,
- []
-
-[3]
-Overfull \hbox (30.18033pt too wide) detected at line 221
-[][]
- []
-
-[4] (./LAB3.aux) ) 
+[2] (./LAB4.aux) ) 
 Here is how much of TeX's memory you used:
- 41024 strings out of 480031
- 1120153 string characters out of 5884516
- 1721716 words of memory out of 5000000
- 57885 multiletter control sequences out of 15000+600000
- 413886 words of font info for 66 fonts, out of 8000000 for 9000
+ 40233 strings out of 480031
+ 1095509 string characters out of 5884516
+ 1694612 words of memory out of 5000000
+ 57088 multiletter control sequences out of 15000+600000
+ 414717 words of font info for 68 fonts, out of 8000000 for 9000
  475 hyphenation exceptions out of 8191
- 102i,19n,103p,720b,2142s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 102i,13n,103p,720b,1718s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<
-/usr/share/texmf/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf/fo
-nts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf/fonts/type1/public/am
-sfonts/cm/cmex10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmmi10.pf
-b></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf
-/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texmf/fonts/type1/public/
-amsfonts/cm/cmmi6.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmmi7.pf
-b></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf/
-fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf/fonts/type1/public/a
-msfonts/cm/cmr10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr12.pfb
-></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf/fo
-nts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf/fonts/type1/public/amsf
-onts/cm/cmr8.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr9.pfb></us
-r/share/texmf/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts
-/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf/fonts/type1/public/cm-sup
-er/sfrm1000.pfb>
-Output written on LAB3.pdf (4 pages, 230488 bytes).
+/usr/share/texmf/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texmf/f
+onts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf/fonts/type1/public/a
+msfonts/cm/cmbx12.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmex10.p
+fb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texm
+f/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf/fonts/type1/public
+/amsfonts/cm/cmr10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr12.p
+fb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texmf/
+fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf/fonts/type1/public/am
+sfonts/cm/cmr9.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+</usr/share/texmf/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf/fo
+nts/type1/public/cm-super/sfrm1000.pfb>
+Output written on LAB4.pdf (2 pages, 137960 bytes).
 PDF statistics:
- 100 PDF objects out of 1000 (max. 8388607)
- 72 compressed objects within 1 object stream
+ 71 PDF objects out of 1000 (max. 8388607)
+ 52 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
