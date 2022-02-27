@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/TeX Live for SUSE Linux) (preloaded format=pdflatex 2022.1.12)  26 FEB 2022 17:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/TeX Live for SUSE Linux) (preloaded format=pdflatex 2022.2.16)  27 FEB 2022 12:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -575,13 +575,29 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks38
 \@floatcapt=\box62
 )
+(/usr/share/texmf/tex/latex/parskip/parskip.sty
+Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
+
+(/usr/share/texmf/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+
+(/usr/share/texmf/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(/usr/share/texmf/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+))
+(/usr/share/texmf/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count305
+))
 (/usr/share/texmf/tex/latex/siunitx/siunitx.sty
 (/usr/share/texmf/tex/latex/l3kernel/expl3.sty
 Package: expl3 2021-02-18 L3 programming layer (loader) 
 
 (/usr/share/texmf/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count305
+\l__color_backend_stack_int=\count306
 \l__pdf_internal_box=\box63
 ))
 (/usr/share/texmf/tex/latex/l3packages/xparse/xparse.sty
@@ -604,27 +620,27 @@ Package: l3keys2e 2021-03-12 LaTeX2e option processing using LaTeX3 keys
 )
 \l__siunitx_tmp_box=\box66
 \l__siunitx_tmp_dim=\dimen303
-\l__siunitx_tmp_int=\count306
-\l__siunitx_number_mantissa_length_int=\count307
-\l__siunitx_number_uncert_length_int=\count308
-\l__siunitx_round_int=\count309
-\l__siunitx_process_decimal_int=\count310
-\l__siunitx_process_uncertainty_int=\count311
-\l__siunitx_process_fixed_int=\count312
-\l__siunitx_process_integer_min_int=\count313
-\l__siunitx_process_precision_int=\count314
-\l__siunitx_group_min_int=\count315
+\l__siunitx_tmp_int=\count307
+\l__siunitx_number_mantissa_length_int=\count308
+\l__siunitx_number_uncert_length_int=\count309
+\l__siunitx_round_int=\count310
+\l__siunitx_process_decimal_int=\count311
+\l__siunitx_process_uncertainty_int=\count312
+\l__siunitx_process_fixed_int=\count313
+\l__siunitx_process_integer_min_int=\count314
+\l__siunitx_process_precision_int=\count315
+\l__siunitx_group_min_int=\count316
 \l__siunitx_angle_marker_box=\box67
 \l__siunitx_angle_unit_box=\box68
 \l__siunitx_angle_marker_dim=\dimen304
 \l__siunitx_angle_unit_dim=\dimen305
-\l__siunitx_unit_int=\count316
-\l__siunitx_unit_denominator_int=\count317
-\l__siunitx_unit_numerator_int=\count318
-\l__siunitx_unit_prefix_int=\count319
-\l__siunitx_unit_prefix_base_int=\count320
-\l__siunitx_unit_prefix_gram_int=\count321
-\l__siunitx_number_product_int=\count322
+\l__siunitx_unit_int=\count317
+\l__siunitx_unit_denominator_int=\count318
+\l__siunitx_unit_numerator_int=\count319
+\l__siunitx_unit_prefix_int=\count320
+\l__siunitx_unit_prefix_base_int=\count321
+\l__siunitx_unit_prefix_gram_int=\count322
+\l__siunitx_number_product_int=\count323
 \c__siunitx_one_fill_skip=\skip54
 \l__siunitx_table_unit_align_skip=\skip55
 \l__siunitx_table_exponent_dim=\dimen306
@@ -648,33 +664,33 @@ Package: translator 2020-08-03 v1.12c Easy translation of strings in LaTeX
 )) (./LAB5.aux)
 \openout1 = `LAB5.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
 
 (/usr/share/texmf/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count323
+\scratchcounter=\count324
 \scratchdimen=\dimen315
 \scratchbox=\box73
-\nofMPsegments=\count324
-\nofMParguments=\count325
+\nofMPsegments=\count325
+\nofMParguments=\count326
 \everyMPshowfont=\toks40
-\MPscratchCnt=\count326
+\MPscratchCnt=\count327
 \MPscratchDim=\dimen316
-\MPnumerator=\count327
-\makeMPintoPDFobject=\count328
+\MPnumerator=\count328
+\makeMPintoPDFobject=\count329
 \everyMPtoPDFconversion=\toks41
 ) (/usr/share/texmf/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -693,7 +709,7 @@ Package caption Info: End \AtBeginDocument code.
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.17} into 
 your preamble.
- on input line 29.
+ on input line 30.
 
 (/usr/share/texmf/tex/latex/siunitx/siunitx-abbreviations.cfg
 File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
@@ -701,149 +717,105 @@ File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 (/usr/share/texmf/tex/latex/translator/translator-basic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 )
-Overfull \hbox (3.72287pt too wide) in paragraph at lines 44--45
+Overfull \hbox (3.72287pt too wide) in paragraph at lines 45--46
 \OT1/cmr/m/n/10 ur^^Tcete tep-lotu tepl^^Seho konce termo^^Tcl^^Sanku (tep-lotu
  m^^Te^^Trenou termo^^Tcl^^Sankem),
  []
 
 
-Overfull \hbox (0.45183pt too wide) in paragraph at lines 45--46
+Overfull \hbox (0.45183pt too wide) in paragraph at lines 46--47
 []\OT1/cmr/m/n/10 Ov^^Te^^Trte, zda je skute^^Tcn^^Sa vstupn^^S^^P nap^^Tet[]ov
 ^^Sa ne-sy-me-t-rie pou^^Tzit^^Seho opera^^Tcn^^S^^Pho
  []
 
 
-Overfull \hbox (10.44519pt too wide) in paragraph at lines 45--46
+Overfull \hbox (10.44519pt too wide) in paragraph at lines 46--47
 \OT1/cmr/m/n/10 ze-si-lova^^Tce men^^Ts^^S^^P ne^^Tz ma-xim^^Saln^^S^^P (p^^Tr^
 ^S^^Ppadn^^Te ty-pick^^Sa) hod-nota udan^^Sa v^^Syrobcem. 
  []
 
 
-Overfull \hbox (0.16731pt too wide) in paragraph at lines 49--50
+Overfull \hbox (0.16731pt too wide) in paragraph at lines 50--51
 \OT1/cmr/m/n/10 not^^Sonn^^S^^Pch zm^^Ten ^^Sudaje ^^Tc^^S^^Pslicov^^Seho volt-
 me-tru (ust^^Salen^^S^^P ^^Sudaje a^^Tz na p^^Tr^^S^^Ppadn^^Sy
  []
 
-<scheme1.png, id=4, 158.84344pt x 100.12407pt>
-File: scheme1.png Graphic file (type png)
-<use scheme1.png>
-Package pdftex.def Info: scheme1.png  used on input line 57.
-(pdftex.def)             Requested size: 158.84305pt x 100.12381pt.
-<scheme2.png, id=6, 225.09094pt x 106.89937pt>
-File: scheme2.png Graphic file (type png)
-<use scheme2.png>
-Package pdftex.def Info: scheme2.png  used on input line 64.
-(pdftex.def)             Requested size: 157.56258pt x 74.82903pt.
-<scheme3.png, id=7, 205.5178pt x 105.39375pt>
-File: scheme3.png Graphic file (type png)
-<use scheme3.png>
-Package pdftex.def Info: scheme3.png  used on input line 69.
-(pdftex.def)             Requested size: 143.86148pt x 73.7751pt.
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Runaway argument?
-lastnost \unskip \relax \d@llarend \do@row@strut \hfil \hskip \col@sep \ETC.
-! Forbidden control sequence found while scanning use of \check@nocorr@.
-<inserted text> 
-                \par 
-l.78 ...097 & OP 07     & LM 155 \\ \hline \hline}
-                                                  
-I suspect you have forgotten a `}', causing me
-to read past where you wanted me to stop.
-I'll try to recover; but if the error is serious,
-you'd better type `E' or `X' now and fix your file.
+<scheme1.png, id=16, 158.84344pt x 100.12407pt>
+File: scheme1.png Graphic file (type png)
+<use scheme1.png>
+Package pdftex.def Info: scheme1.png  used on input line 58.
+(pdftex.def)             Requested size: 158.84305pt x 100.12381pt.
+<scheme2.png, id=18, 225.09094pt x 106.89937pt>
+File: scheme2.png Graphic file (type png)
+<use scheme2.png>
+Package pdftex.def Info: scheme2.png  used on input line 65.
+(pdftex.def)             Requested size: 157.56258pt x 74.82903pt.
+<scheme3.png, id=19, 205.5178pt x 105.39375pt>
+File: scheme3.png Graphic file (type png)
+<use scheme3.png>
+Package pdftex.def Info: scheme3.png  used on input line 70.
+(pdftex.def)             Requested size: 143.86148pt x 73.7751pt.
 
-! Missing } inserted.
-<inserted text> 
-                }
-l.78 ...097 & OP 07     & LM 155 \\ \hline \hline}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
+Overfull \hbox (86.07921pt too wide) in paragraph at lines 77--86
+[][] 
+ []
 
-! Missing \endgroup inserted.
-<inserted text> 
-                \endgroup 
-l.78 ...097 & OP 07     & LM 155 \\ \hline \hline}
-                                                  
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
 
-! Undefined control sequence.
-\text@command ...e \check@nocorr@ #1\nocorr \@nil 
-                                                  \fi \fi 
-l.78 ...097 & OP 07     & LM 155 \\ \hline \hline}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+Overfull \hbox (16.3952pt too wide) in paragraph at lines 93--94
+\OT1/cmr/m/n/10 Vstupn^^S^^P nap^^Tet[]ovou ne-sy-me-t-rii in-ver-tuj^^S^^Pc^^S
+^^Pho ze-si-lova^^Tce zjist^^S^^Pme zm^^Te^^Tren^^S^^Pm v^^Systupn^^S^^Pho
+ []
 
-! Misplaced alignment tab character &.
-l.79 ...vý offset  typ./max. (\si{\micro\volt}) &
-                                                   0.7      & 1500/5000 & 10...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
 
-! Misplaced alignment tab character &.
-l.79 ... typ./max. (\si{\micro\volt}) & 0.7      &
-                                                   1500/5000 & 10/60   & 60/...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
+Overfull \hbox (5.53336pt too wide) in paragraph at lines 96--97
+\OT1/cmr/m/n/10 P^^Tri m^^Te^^Tren^^S^^P v^^Systupn^^S^^Pho nap^^Tet^^S^^P $\OM
+L/cmm/m/it/10 U[]$\OT1/cmr/m/n/10 , kter^^Se je ^^Sum^^Tern^^Se rozd^^S^^Plu te
+p-lot $\OML/cmm/m/it/10 #[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 #[]$ \OT1/cmr
+/m/n/10 oh^^Tr^^S^^Pvan^^Seho
+ []
 
-! Misplaced alignment tab character &.
-l.79 ...\si{\micro\volt}) & 0.7      & 1500/5000 &
-                                                   10/60   & 60/150    & 100...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
 
-! Misplaced alignment tab character &.
-l.79 ...\volt}) & 0.7      & 1500/5000 & 10/60   &
-                                                   60/150    & 1000   \\ \hline
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
+Overfull \hbox (0.6206pt too wide) in paragraph at lines 96--97
+\OT1/cmr/m/n/10 spoje a la-bo-rato^^Tre, ^^Tc^^S^^Pslicov^^Sym volt-me-t-rem, u
+r^^Tc^^S^^Pme jeho std. ne-jis-totu jako: 
+ []
 
-! Misplaced alignment tab character &.
-l.79 ...7      & 1500/5000 & 10/60   & 60/150    &
-                                                   1000   \\ \hline
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
+[2 <./scheme1.png> <./scheme2.png> <./scheme3.png>]
+Overfull \hbox (8.74965pt too wide) in paragraph at lines 109--111
+\OT1/cmr/m/n/10 uv^^Sa^^Tzit slo^^Tzky ne-jis-toty typu B p^^Wusoben^^Se to-le-
+ran-cemi od-por^^Wu zp^^Tetnovazebn^^S^^P smy^^Tcky
+ []
 
-! Misplaced \cr.
-\reserved@c ->\ifnum 0=`{}\fi \cr 
-                                  
-l.79 ...0 & 10/60   & 60/150    & 1000   \\ \hline
-                                                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvagea
+[3] [4] (./LAB5.aux) ) 
+Here is how much of TeX's memory you used:
+ 40383 strings out of 480031
+ 1090350 string characters out of 5884516
+ 1685608 words of memory out of 5000000
+ 57223 multiletter control sequences out of 15000+600000
+ 413599 words of font info for 64 fonts, out of 8000000 for 9000
+ 475 hyphenation exceptions out of 8191
+ 102i,17n,103p,718b,966s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.e
+nc}</usr/share/texmf/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texm
+f/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf/fonts/type1/publi
+c/amsfonts/cm/cmex10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmmi1
+0.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/te
+xmf/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf/fonts/type1/publ
+ic/amsfonts/cm/cmr10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr12
+.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texm
+f/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf/fonts/type1/public/
+amsfonts/cm/cmr9.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmsy10.pf
+b></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf/
+fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf/fonts/type1/public/
+cm-super/sfrm0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pf
+b>
+Output written on LAB5.pdf (4 pages, 185358 bytes).
+PDF statistics:
+ 92 PDF objects out of 1000 (max. 8388607)
+ 63 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 28 words of extra memory for PDF output out of 10000 (max. 10000000)
+
