@@ -14,6 +14,7 @@
 \usepackage{pgfplots}
 \usepackage{siunitx}
 \usepackage{float}
+\usepackage{multirow}
 \sisetup{detect-all}
 
 \makeatletter
@@ -40,7 +41,7 @@
 		\end{enumerate}
 		Naměřené hodnoty vyneste do společného grafu.
 		\item Při měření dle 1a) a 1b) určete chybu metody způsobenou vnitřním odporem ampérmetru.
-		\item  naměřených hodnot určete \textbf{vnitřní odpory použitých mikroampérmetrů}.
+		\item Z naměřených hodnot určete \textbf{vnitřní odpory použitých mikroampérmetrů}.
 	\end{enumerate}
 	
 	\section{Schéma zapojení}
@@ -93,10 +94,11 @@
 	\end{figure}
 	\section{Soupis použitých přístrojů}
 	\begin{tabular}{ll}
-		$V_2$ & voltmetr číslicový, typ ..., přesnost ...  \\
-		$\mu A_2$ & mikroampérmetr magnetoelektrický, tř.přes. ..., rozsah ...  \\
-		$\mu A_1$ & mikroampérmetr magnetoelektrický, tř.přes. ..., rozsah ...  \\
-		$R$ & přesný rezistor nebo odporová dekáda, přesnost 0,1 \% (příp. 0,2 \%)  \\
+		$V_2$ & voltmetr číslicový, typ U3401A, přesnost 0.02\%+4  \\
+		$\mu A_1$ & mikroampérmetr magnetoelektrický, tř.přes. 0.5, rozsah 15\si{\micro\ampere}  \\
+		$\mu A_2$ & mikroampérmetr magnetoelektrický, tř.přes. 0.5, rozsah 30\si{\micro\ampere}  \\
+		$\mu A_C$ & mikroampérmetr číslicový, typ U3401A, přesnost 0.05\%+5  \\
+		$R$ & přesný rezistor nebo odporová dekáda, přesnost 0,1 \%  \\
 		Př1 & přípravek s odporovým děličem a polovodičovou diodou \\
 		Př2 & přípravek s operačním zesilovačem \\
 		$U_1$ & zdroj proměnného stejnosměrného napětí s číslicově nastavitelnou hodnotou  \\
@@ -112,7 +114,7 @@
 	\begin{equation}
 		I=\frac{U_2}{R}
 	\end{equation}
-	Přídavnou  chybu  měření  může  způsobit  vstupní  klidový  proud  I0  operačního  zesilovače  (pro  
+	Přídavnou  chybu  měření  může  způsobit  vstupní  klidový  proud  $I_0$  operačního  zesilovače  (pro  
 	OP07 platí $I_{0max} = 7\si{\nano\ampere} $); výsledná standardní nejistota měření proudu je pak dána vztahem:
 	\begin{equation}
 		u_I = \sqrt{(\frac{-1}{R} u_{U_2})^2+(\frac{U_2}{R^2}u_R)^2+(\frac{I_0}{\sqrt{3}})^2}
@@ -128,6 +130,96 @@
 	\end{equation}
 	kde za naměřenou hodnotu N budeme považovat hodnotu proudu naměřenou 
 	mikroampérmetrem a za správnou hodnotu S hodnotu vypočtenou podle vztahu (1) vždy pro 
-	tutéž hodnotu nastaveného napětí. 
+	tutéž hodnotu nastaveného napětí.
 	
+	\section{Naměřené hodnoty}
+	\begin{tabular}{c||c|c|c|c|c}
+		$U_1' [\si{\milli\volt}]$ & $\mu A_1 [\si{\micro\ampere}]$ & $\mu A_2 [\si{\micro\ampere}]$ & $\mu A_C [\si{\micro\ampere}]$ & $ V_2 [\si{\milli\volt}]$ & $I(V_2) [\si{\micro\ampere}]$ \\ \hline \hline
+		20 & 0.6 & 0.5 & 0.91 & -97.1 & 0.971 \\ \hline
+		40 & 1.4 & 1.5 & 2.57 & -274.1 & 2.741 \\ \hline
+		60 & 2.4 & 3.0 & 5.58 & -597.2 & 5.972 \\ \hline
+		80 & 3.8 & 5.0 & 10.73 & -1162.5 & 11.625 \\ \hline
+		100 & 5.2 & 7.5 & 19.00 & -2089.7 & 20.897
+	\end{tabular}
+	\\\\\\
+	\begin{tikzpicture}
+		\begin{axis}[
+			xlabel={$U_1' [\si{\milli\volt}]$},
+			ylabel={$I [\si{\micro\ampere}]$]},
+			xmin=18, xmax=102,
+			ymin=0, ymax=21.5,
+			xtick={20,40,60,80,100},
+			ytick={0,2,4,6,8,10,12,14,16,18,20},
+			legend pos=north west,
+			xmajorgrids=true,
+			ymajorgrids=true,
+			grid style=dotted,
+			]
+			
+			\addplot[
+			color=red,
+			mark=*,
+			]
+			coordinates {
+				(20,0.6)(40,1.4)(60,2.4)(80,3.8)(100,5.2)
+			};
+			
+			\addplot[
+			color=blue,
+			mark=*,
+			]
+			coordinates {
+				(20,0.5)(40,1.5)(60,3.0)(80,5.0)(100,7.5)
+			};
+		
+			\addplot[
+			color=green,
+			mark=*,
+			]
+			coordinates {
+				(20,0.91)(40,2.57)(60,5.58)(80,10.73)(100,19.00)
+			};
+			
+			\addplot[
+			color=magenta,
+			mark=*,
+			]
+			coordinates {
+				(20,0.971)(40,2.741)(60,5.972)(80,11.625)(100,20.897)
+			};
+		
+			\legend{$\mu A_1$,$\mu A_2$, $\mu A_C$, $I(V_2)$}
+			
+		\end{axis}
+	\end{tikzpicture}
+	
+	\subsection{Výpočet vnitřních odporů}
+	$
+		I = 3 \si{\micro\ampere} = 0.003 \si{\milli\ampere}
+	$
+	
+	\begin{tabular}{c||c|c}
+		Přístroj & $U [\si{\milli\volt}]$ & $R [\si{\ohm}]$ \\ \hline \hline
+		OZ & 42 & \\ \hline
+		$\mu A_1$ & 43.5 & 500 \\ \hline
+		$\mu A_2$ & 60 & 6000 \\ \hline
+		$\mu A_C$ & 69 & 9000
+	\end{tabular}
+	
+	\section{Výpočet nejistot}
+	$$
+	\begin{aligned}
+		\Delta_{met}&=N-S\\
+		\Delta_{met1}&=5.2-20.897=15.697\si{\micro\ampere}\\
+		\Delta_{met2}&=7.5-20.897=13.397\si{\micro\ampere}\\
+		\Delta_{metC}&=19.00-20.897=1.897\si{\micro\ampere}\\
+		\\
+		\sigma_{met}&=\frac{N-S}{S} \cdot 100\%\\
+		\sigma_{met1}&=\frac{5.2-20.897}{20.897} \cdot 100\% = 75.116\%\\
+		\sigma_{met2}&=\frac{7.5-20.897}{20.897} \cdot 100\% = 64.110\%\\
+		\sigma_{metC}&=\frac{19.00-20.897}{20.897} \cdot 100\% = 9.078\%\\
+	\end{aligned}
+	$$
+	\section{Závěr}
+	Ukázali jsme, že čím vyšší je odpor ampérmetru, tím více exponenciálně roste naměřená hodnota. Zároveň jsme ukázali měření proudu pomocí zesilovače a voltmetru.
 \end{document}
