@@ -1,0 +1,155 @@
+ 
+\documentclass{article}
+\title{\textbf{2a. KMITOČTOVÁ ZÁVISLOST STŘÍDAVÝCH VOLTMETRŮ}}
+\author{Tomáš Kysela}
+\date{14/3/2022}
+
+\addtolength{\topmargin}{-3cm}
+\addtolength{\textheight}{3cm}
+
+\usepackage[czech]{babel}
+\usepackage{graphicx}
+\usepackage{circuitikz}
+\usepackage{amsmath}
+\usepackage{subcaption}
+\usepackage{pgfplots}
+\usepackage{siunitx}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\usepackage{tabularx}
+\usepackage{parskip}
+\usepackage{float}
+\sisetup{detect-all}
+
+\makeatletter
+\providecommand\add@text{}
+\newcommand\tagaddtext[1]{%
+	\gdef\add@text{#1\gdef\add@text{}}}%
+\renewcommand\tagform@[1]{%
+	\maketag@@@{\llap{\add@text\quad}(\ignorespaces#1\unskip\@@italiccorr)}%
+}
+\makeatother
+
+\begin{document}
+	
+	\maketitle
+	
+	\section{Úkol měření}
+		\begin{enumerate}
+			\item Určete potřebné parametry měřící cívky: konstantu $K_{CH}$, vlastní rezonanční úhlový kmitočet $\omega_r$ a hodnoty prvků $L_s$ a $C_p$ paralelního náhradního schématu.
+			\item Změřte rozptylové magnetické pole transformátoru. Měření proveďte ve vodorovné rovině procházející středním sloupkem transformátoru.
+			\item Z výsledků měření určete, v jaké vzdálenosti lze pole transformátoru považovat za pole dipólového charakteru.
+		\end{enumerate}
+	\section{Schéma zapojení}
+	\begin{figure}[H]
+		\centering
+		\begin{circuitikz}[european]
+			\ctikzset{american inductors}
+			\draw (0,1.0) to[twoport,t=$G$] (0,-1.0);
+			\draw (1,1.0) to[rmeter,t=$mA$] (3,1.0);
+			\draw (4,1.0) to[twoport,t=$V$] (4,-1.0);
+			\draw (6,2.0) to[L,l=$L_s$] (8,2.0);
+			\draw (8,2.0) to[R,l=$R_s$] (10,2.0);
+			\draw (7,0) to[C,l=$C_p$] (9,0);
+			\draw (0,1.0) to[short] (1,1.0);
+			\draw (3,1.0) to[short] (5,1.0);
+			\draw (5,1.0) to[short] (5,2.0);
+			\draw (5,2.0) to[short] (6,2.0);
+			\draw (5,1.0) to[short] (5,-0.0);
+			\draw (5,-0.0) to[short] (7,-0.0);
+			\draw (9,-0.0) to[short] (11,-0.0);
+			\draw (11,1.0) to[short] (11,-0.0);
+			\draw (10,2.0) to[short] (11,2.0);
+			\draw (11,2.0) to[short] (11,1.0);
+			\draw (11,1.0) to[short] (12,1.0);
+			\draw (12,1.0) to[short] (12, -1.0);
+			\draw (12, -1.0) to[short] (0, -1.0);
+			\draw (7,-1.0) node[rground]{};
+		\end{circuitikz}
+	\caption{Obvod pro stanovení vlastního rezonančního kmitočtu}
+	\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{screenshot001}
+	\caption{Obvod pro stanovení konstanty měřicí cívky}
+	\label{fig:screenshot001}
+\end{figure}
+
+\section{Soupis použitých přístrojů}
+\begin{tabular}{ll}
+	$G$ & RC generátor, typ ... \\
+	$T_r$ & transformátor jako zdroj měřeného rozptylového pole \\
+	$V$ & nf voltmetr, typ ... \\
+	$mA$ & miliampérmetr, typ ..., tř.přes., rozsah ... \\
+	$HC$ & Helmholtzovy cívky, $K_{HZ} = ... \si{\per\meter}$ \\
+	$MC$ & měřicí cívka\\
+	$R$ & posuvný rezistor, ... \si{\ohm}, ... \si{\ampere} \\
+\end{tabular}
+
+\section{Teoretický základ}
+
+Pro periodické průběhy s jedním průchodem nulou během periody lze magnetickou indukci 
+vypočítat ze vztahu
+
+\begin{equation}
+	B_m = \frac{U_s}{4fSN} \tagaddtext{[\si{\tesla}]}
+\end{equation}
+kde $B_m$ je maximální hodnota složky měřené indukce $B(t)$, $U_s$ aritmetická střední hodnota napětí $U(t)$ (po dvoucestném usměrnění) 
+indukovaného v měřicí cívce, $f$ kmitočet základní harmonické měřeného napětí, $N$ počet závitů měřicí cívky a $S$ plocha průřezu měřicí cívky.
+
+Maximální hodnotu intenzity magnetického pole $H_m$ vypočítáme ze vztahu
+\begin{equation}
+	H_m = \frac{B_m}{\mu_0}
+\end{equation}
+Budeme-li napětí indukované v měřicí cívce měřit voltmetrem udávajícím hodnotu $U_ef$ získanou měřením střední hodnoty $U_s$ po dvoucestném usměrnění a násobením činitelem tvaru $1.11$ pro sinusový průběh, můžeme hodnotu $U_s$ získat vydělením údaje přístroje $1.11$. (Pozor, pro neharmonický průběh neodpovídá údaj efektivní hodnotě).
+
+\subsection{Měřený objekt}
+V některých případech lze zdroj magnetického pole, jehož siločáry se uzavírají převážně vzduchem, přibližně nahradit polem magnetického dipólu (viz obr. 3).
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\linewidth]{screenshot002}
+	\caption{Souřadnicový systém pro měření dipólového pole v rovině $xy$}
+	\label{fig:screenshot002}
+\end{figure}
+
+Za předpokladu, že $\Delta<<x$ resp. $y$, lze intenzitu magnetického pole v rovině $xy$ na osách $x$ a $y $ vyjádřit vztahy
+\begin{equation}
+	H_x = \frac{m_C}{2\pi\mu_0x^3}, H_y = \frac{m_C}{4\pi\mu_0y^3}
+\end{equation}
+kde $m_C$ je Coulombův magnetický moment, $\mu_0$ je magnetická konstanta (permeabilita vakua) a $x,y$ jsou vzdálenosti měřených bodů od středu dipólu.
+
+ze-li měřením složek $H_x$ a $H_y$ dokázat, že v určité vzdálenosti od měřeného objektu má magnetické pole dipólový charakter, je v této oblasti zcela určeno hodnotou $m_C$ .
+
+\subsection{Určení parametrů měřicí cívky}
+Odpor vinutí cívky $R_S = ...\si{\kilo\ohm}$(lze určit libovolnou stejnosměrnou metodou). Celkovou 
+impedanci cívky změříme např. Ohmovou metodou. Předem musíme ale znát hodnotu vlastního rezonančního kmitočtu  fr  cívky, který zjistíme např. měřením v zapojení podle 
+obr. 1. Obvod  je  napájen  ze  zdroje  konstantního  napětí  $U$.  Při  rezonančním  kmitočtu    $f_r$  ,  kdy  je  impedance cívky maximální, je proud  $I$  minimální. Platí
+\begin{equation}
+	f_r = \frac{1}{2\pi\sqrt{L_sC_p}}
+\end{equation}
+
+Impedanci měřicí cívky měříme při  $f_m = 0.1 f_r$ , kdy je vliv  $C_p$  zanedbatelný. Pro impedanci při kmitočtu  $f_m$  platí
+
+\begin{equation}
+	Z_m = \frac{U_m}{I_m} = \sqrt{R_s^2+\omega_m^2L_s^2}, L_s = \frac{1}{\omega_m}\sqrt{Z_m^2-R_s^2}
+\end{equation}
+kde $U_m$ je napětí měřené při kmitočtu  $f_m$ , $I_m$  je proud měřený při kmitočtu  $f_m$ . Hodnotu $C_p$ vypočteme ze vztahu (4), kde známe změřený rezonanční kmitočet $f_r$ a indukčnost $L_s$. 
+
+\subsection{Určení konstanty měřicí cívky}
+Konstantu  $K_{CH}$  měřicí cívky určíme ve známém poli Helmholtzových cívek v zapojení podle obr. 2. Protože magnetické pole cívek má stejnou frekvenci (50 \si{\hertz}) a stejný průběh (harmonický) jako rozptylové pole transformátoru, platí
+\begin{equation}
+	K_{CH} = \frac{H_{max}}{U_{ef}} = \frac{\sqrt{2}I_{ef}K_{HZ}}{U_{ef}}
+\end{equation}
+kde  $K_{HZ}$  je konstanta Helmholtzových cívek, 
+$I_{ef}$  je proud Helmholzových cívek a $U_{ef}$ je napětí indukované v měřicí cívce.
+
+\subsection{Měření intenzity rozptylového pole transformátoru }
+Měření rozptylového magnetického pole transformátoru provedeme v uspořádání dle obr. 4.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\linewidth]{screenshot003}
+	\caption{Umístění sondy pro měření rozptylového pole}
+	\label{fig:screenshot003}
+\end{figure}
+V několika vzdálenostech na osách $x$ a $y$ od středu transformátoru změříme napětí indukovaná v měřicí cívce a s využitím vztahu (6) vypočteme hodnoty  intenzity  $H_{xmax} =  K_{CH}\cdot U_{Hx} = f(x)$  a  $H_{ymax} = K_{CH}\cdot U_{Hy} = f(y)$.  Z naměřených hodnot vypočteme podle (3) $m_C$ a zjistíme, v jakých vzdálenostech měřené pole odpovídá poli dipólového charakteru ( $m_C = $konst). 
+\end{document}

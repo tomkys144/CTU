@@ -84,9 +84,13 @@
 		rychlost přeběhu (\si{\volt\per\second})         & 2.5      & 0.5       & 0.2     & 0.3       & 5      \\ \hline
 	\end{tabular}
 \end{table}
+
 \section{Soupis použitých přístrojů}
-
-
+\begin{tabular}{ll}
+	voltmetr číslicový & typ LG DM441B, rozsah 2\si{\volt}/200\si{\milli\volt} \\ & přesnost $\pm$(0,1\% údaje + 4 digity), rozlišení 100\si{\micro\volt}/10\si{\micro\volt}  \\
+	Operační zesilovač & Typ OP07\\
+	Odpory & Přesnost 0.1\%
+\end{tabular}
 
 \section{Teoretický základ}
 \subsection{Kontrola vstupní napěťové nesymetrie}
@@ -95,9 +99,9 @@ Vstupní napěťovou nesymetrii invertujícího zesilovače zjistíme změření
 \subsection{Určení nejistot}
 Při měření výstupního napětí $U_1$, které je úměrné rozdílu teplot $\vartheta_1 - \vartheta_0$ ohřívaného spoje a laboratoře, číslicovým voltmetrem, určíme jeho std. nejistotu jako:
 \begin{equation}
-    u_{U1}=\frac{	| \frac{\sigma_1}{100}U_1 | + | \frac{\sigma_2}{100}U_R | }{\sqrt{3}}
+    u_{U1}=\frac{	| \frac{\sigma_1}{100}U_1 | + | NR | }{\sqrt{3}}
 \end{equation}
-kde $\sigma_1$ je chyba v \% měřené hodnoty a $\sigma_2$ je chyba v \% rozsahu$U_R$. Relativní standardní nejistota měření napětí číslicovým voltmetrem je
+kde $\sigma_1$ je chyba v \% měřené hodnoty. Relativní standardní nejistota měření napětí číslicovým voltmetrem je
 \begin{equation}
     u_{U1,r} = \frac{u_{U1}}{U_1} \cdot 100\%
 \end{equation}
@@ -124,19 +128,19 @@ Složka standardní nejistoty typu B měření napětí $U_X$ způsobená tolera
 \begin{equation}
     u_{Ux(id)}=\sqrt{(\frac{\partial U_X}{\partial R_1}u_{R1})^2 + (\frac{\partial U_X}{\partial R_2}u_{R2})^2 + (\frac{\partial U_X}{\partial U_2}u_{U2})^2}
 \end{equation}
-Kromě této složky se na nejistotě typu B podílí také složka působená nedokonalostmi reálného operačního zesilovače (nenulovými vstupními klidovými proudy $I_{1P}$ a $I{1N}$ a nenulovou vstupní napěťovou nesymetrií $U_{D0}$):
+Kromě této složky se na nejistotě typu B podílí také složka působená nedokonalostmi reálného operačního zesilovače (nenulovými vstupními klidovými proudy $I_{1P}$ a $I{1N}$ a nenulovou vstupní napěťovou nesymetrií $U_{off}$):
 \begin{equation}
-    U_X=-\frac{R_1}{R_2}U_2 \mp I_{1N}R_1\pm U_{D0}(1+\frac{R_1}{R_2})
+    U_X=-\frac{R_1}{R_2}U_2 \mp I_{1N}R_1\pm U_{off}(1+\frac{R_1}{R_2})
 \end{equation}
-Složka standardní nejistoty napětí $U_{X}$ odpovídající vstupní napěťové nesymetrii $U_{D0}$ je
+Složka standardní nejistoty napětí $U_{X}$ odpovídající vstupní napěťové nesymetrii $U_{off}$ je
 tedy
 \begin{equation}
-    u_{OZ(U_{D0})} = \frac{U_{D0}}{\sqrt{3}}(1+\frac{R_1}{R_2})
+    u_{OZ(U_{off})} = \frac{U_{off}}{\sqrt{3}}(1+\frac{R_1}{R_2})
 \end{equation}
 Celková nejistota měření napětí $U_{X}$ při použití reálného zesilovače je při zanedbání vlivu
 vstupního klidového proudu $I_{1N}$ tedy
 \begin{equation}
-    u_{U_X(OA)}=\sqrt{u_{U_X(id)}^2+u_{OA(U_{D0})}^2}
+    u_{U_X(OA)}=\sqrt{u_{U_X(id)}^2+u_{OA(U_{off})}^2}
 \end{equation}
 
 \subsubsection{Neinvertující OZ}
@@ -154,7 +158,7 @@ U reálného OZ pak dostaneme vztah
 \end{equation}
 Výsledná std. nejistota typu B je poté dána vztahem
 \begin{equation}
-    u_{U_X(OA)}=\sqrt{u_{U_X(id)}^2+u_{OA(I_{1N})}^2+u_{OA(U_{D0})}^2}
+    u_{U_X(OA)}=\sqrt{u_{U_X(id)}^2+u_{OA(I_{1N})}^2+u_{OA(U_{off})}^2}
 \end{equation}
 \subsection{Určení teploty}
 Výpočet teploty teplého konce termočlánku ze změřeného napětí termočlánku se provede podle přibližného vztahu
@@ -162,4 +166,93 @@ Výpočet teploty teplého konce termočlánku ze změřeného napětí termočl
     \vartheta_1=\frac{U_1}{K}+\vartheta_0
 \end{equation}
 kde $K = 54 \cdot 10^{-6} \si{\volt\per\degreeCelsius}$. Teplotu okolí předpokládáme $\vartheta_0 = 20 \si{\degreeCelsius}$.
+
+\section{Naměřené hodnoty}
+$$
+\begin{aligned}
+	U_T' &= 2.72 \si{\milli\volt}\\
+	U_T'' &= 2.72 \si{\milli\volt}\\
+	U_T &= 2.72 \si{\milli\volt}\\
+	\\
+	U_X &= \frac{R_V}{R_V+R_T}U_T\\
+	U_X &= \frac{10 \si{\mega\ohm}}{10 \si{\mega\ohm} + 2\si{\ohm}}2.72 \si{\milli\volt} \approx 2.72 \si{\milli\volt}
+\end{aligned}
+$$
+
+\subsection{Invertující operační zesilovač}
+
+$$
+\begin{aligned}
+	U_2' &= -0.2738 \si{\volt}\\
+	U_2'' &= -0.2582 \si{\volt}\\
+	U_2 &= -0.266 \si{\volt}
+	\\
+	U_2'+U_2'' &= 2U_{off}A_n\\
+	U_{off} &= 78 \si{\micro\volt}\\
+	\\
+	U_X &= -\frac{R_1}{R_2}U_2\\
+	U_X &= -\frac{1\si{\kilo\ohm}}{100\si{\kilo\ohm}}(-0.266) \si{\volt} = 2.66 \si{\milli\volt}\\
+\end{aligned}
+$$
+
+\subsection{Neinvertující operační zesilovač}
+
+$$
+\begin{aligned}
+	U_2' &= 0.2674 \si{\volt}\\
+	U_2'' &= 0.2522 \si{\volt}\\
+	U_2 &= 0.2598 \si{\volt}
+	\\
+	U_2'+U_2'' &= 2U_{off}A_n\\
+	U_{off} &= 76 \si{\micro\volt}\\
+	\\
+	U_X &= \frac{R_1}{R_1+R_2}U_2\\
+	U_X &= \frac{1\si{\kilo\ohm}}{1\si{\kilo\ohm} + 99\si{\kilo\ohm}}0.2598 \si{\volt} = 2.598 \si{\milli\volt}\\
+\end{aligned}
+$$
+
+\subsection{Teplota}
+
+$$
+\begin{aligned}
+	\vartheta_1&=\frac{U_1}{K}+\vartheta_0=\frac{2.72 \si{\milli\volt}}{54 \cdot 10^{-6} \si{\volt\per\degreeCelsius}}+20 \si{\degreeCelsius} = 70.37 \si{\degreeCelsius}
+\end{aligned}
+$$
+
+\section{Výpočet nejistot}
+
+$$
+\begin{aligned}
+	u_{UT}&=\frac{ \frac{\sigma_1}{100}U_T + NR }{\sqrt{3}}\\
+	u_{UT}&=\frac{	\frac{0.1\%}{100}2.72 \si{\milli\volt} + 4 \cdot 10 \si{\micro\volt}}{\sqrt{3}} = 24.66 \si{\micro\volt}\\
+	u_{rUT} &= u_{UT}*k_r = 24.66 \si{\micro\volt} * 2 = 49.32 \si{\micro\volt}
+\end{aligned}
+$$
+
+\subsection{Invertující operační zesilovač}
+
+$$
+\begin{aligned}
+	\frac{\partial U_X}{\partial R_1} &= -\frac{U_2}{R_2} = -\frac{-0.266 \si{\volt}}{100\si{\kilo\ohm}} = 2.66*10^{-3}\\
+	\frac{\partial U_X}{\partial R_2} &= \frac{R_1}{R_2^2}U_2 = \frac{1\si{\kilo\ohm}}{100^2\si{\kilo\ohm}}(-0.266) \si{\volt} = -26.6*10^{-6}\\
+	\frac{\partial U_X}{\partial U_2} &= -\frac{R_1}{R_2} = -\frac{1\si{\kilo\ohm}}{100\si{\kilo\ohm}} = -0.01\\
+	\\
+	u_{R1} &= \frac{\sigma_{R1}}{100\sqrt{3}}R_1 = \frac{0.1\%}{100\sqrt{3}}1\si{\kilo\ohm} = 0.57735\\
+	u_{R2} &= \frac{\sigma_{R2}}{100\sqrt{3}}R_2 = \frac{0.1\%}{100\sqrt{3}}100\si{\kilo\ohm} = 57.735\\
+	u_{U2}&=\frac{ \frac{\sigma_1}{100}U_2 + NR }{\sqrt{3}}=\frac{	\frac{0.1\%}{100}0.266 \si{\volt} + 4 \cdot 100 \si{\micro\volt}}{\sqrt{3}} = 384.5*10^{-6}\\
+	\\
+	u_{Ux(id)}&=\sqrt{(\frac{\partial U_X}{\partial R_1}u_{R1})^2 + (\frac{\partial U_X}{\partial R_2}u_{R2})^2 + (\frac{\partial U_X}{\partial U_2}u_{U2})^2}\\
+	 &= \sqrt{(2.66 *10^{-3} \cdot 0.57735)^2 + (-26.6*10^{-6} \cdot 57.735)^2 + (-0.01 \cdot 384.5*10^{-6})^2}\\
+	 &= \sqrt{2.35853*10^{-6}+2.35853*10^{-6}+1.4784*10^{-11}} = 2.17188 \si{\milli\volt}\\
+	 \\
+	 u_{OZ(U_{off})} &= \frac{U_{off}}{\sqrt{3}}(1+\frac{R_1}{R_2})=\frac{78 \si{\micro\volt}}{\sqrt{3}}(1+\frac{1\si{\kilo\ohm}}{100\si{\kilo\ohm}}) = 45.48 \si{\micro\volt}\\
+	 \\
+	 u_{U_X(OA)}&=\sqrt{u_{U_X(id)}^2+u_{OA(U_{off})}^2} = \sqrt{2.17188^2 \si{\milli\volt}+45.48^2 \si{\micro\volt}}=2.17236 \si{\milli\volt}
+\end{aligned}
+$$
+
+\section{Závěr}
+
+Hodnoty nejistot jasně ukazují, že užití operačního zesilovače nám pomůže efektivněji využít rozsah voltmetru. Celková nejistota pro OZ byla při ostatních hodnotách zanedbatelná.
+
 \end{document}
