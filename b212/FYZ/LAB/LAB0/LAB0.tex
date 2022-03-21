@@ -1,35 +1,155 @@
-\documentclass{article}
-\addtolength{\topmargin}{-3cm}
-\addtolength{\textheight}{3cm}
-
-
-
+\documentclass[titlepage]{article}
 \usepackage[czech]{babel}
-\usepackage{array}
+\usepackage{graphicx}
+\usepackage{circuitikz}
+\usepackage{amsmath}
+\usepackage{subcaption}
+\usepackage{pgfplots}
+\usepackage{siunitx}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\usepackage{tabularx}
+\usepackage{parskip}
+\usepackage{float}
+\sisetup{detect-all}
 \begin{document}
-    \begin{titlepage}
-        \vfill
-        \begin{tabular}{|c|c|c|c|}
-            \hline
-            ČESKÉ VYSOKÉ UČENÍ TECHNICKÉ V PRAZE & \multicolumn{3}{c|}{KATEDRA FYZIKY} \\ \hline
-            \multicolumn{4}{|c|}{LABORATORNÍ CVIČENÍ Z FYZIKY} \\ \hline
+	\begin{titlepage}
+		\begin{center}
+			\vspace*{1cm}
+			
+			\Large
+			\textbf{LABORATORNÍ CVIČENÍ Z FYZIKY}
+			
+			\vspace{0.5cm}
+			STUDIUM VOLNÉHO PÁDU
+			
+			\vspace{1.5cm}
+			
+			\textbf{Tomáš Kysela}\\
+			\textbf{Skupina L1061}
+			
+			\vfill
+			
+			\vspace{0.8cm}
+			
+			
+			ČESKÉ VYSKOKÉ UČENÍ TECHNICKÉ V PRAZE\\
+			FAKULTA ELEKTROTECHNICKÁ\\
+			KATEDRA FYZIKY\\
+			30. 03. 2021
+			
+		\end{center}
+	\end{titlepage}
+	\section{Úvod}
+	Objem válce dostaneme ze vztahu
+	\begin{equation}
+		V = \frac{\pi}{4} \cdot d^2 \cdot h
+	\end{equation}
+kde $r$ je poloměr a $h$ výška válce.
+	Objem kvádru je poté
+	\begin{equation}
+		V = a \cdot b \cdot h
+	\end{equation}
+kde $a$ je šířka, $b$ je hloubka a $h$ výška kvádru.
 
-        \end{tabular}
-    \end{titlepage}
-    \tableofcontents
-    \newpage
-    \section{Úkol měření}
+Při výpočtu chyb použijeme následující vzorce:
+\begin{equation}
+	\bar{x} = \frac{1}{n}\sum_{i=1}^{n}x_i-\bar{x}
+\end{equation}
+\begin{equation}
+	u_A(\bar{x}) = \sqrt{\frac{1}{n(n-1)}\sum_{i=1}^{n}(x_i-\bar{x})^2}
+\end{equation}
+kde $n$ je počet měření a $x$ měřená hodnota.
+\begin{equation}
+	u_B(\bar{x}) = \frac{R}{\sqrt{12}}
+\end{equation}
+kde R je rozlišení přístroje.
+\begin{equation}
+	u_C(\bar{x}) = \sqrt{u_A^2(\bar{x}) + u_B^2(\bar{x})}
+\end{equation}
 
-    \section{Seznam použitých přístrojů}
+\section{Naměřené hodnoty}
+\subsection{Válec}
 
-    \section{Tabulky naměřených hodnot, zpracování}
+\begin{figure}[h]
+	\centering
+\begin{tabular}{c|c|c}
+	i & d [\si{\milli\meter}] & h [\si{\centi\meter}] \\\hline\hline
+	1 & 12.90 & 3.216\\\hline
+	2 & 12.89 & 3.210\\\hline
+	3 & 12.87 & 3.206\\\hline
+	4 & 12.81 & 3.208\\\hline
+	5 & 12.80 & 3.2016\\\hline
+	6 & 12.80 & 3.202\\\hline
+	7 & 12.79 & 3.200\\\hline
+	8 & 12.85 & 3.206\\\hline
+	9 & 12.91 & 3.208\\\hline
+	10 & 12.96 & 3.210
+\end{tabular}
+\end{figure}
 
-    \section{Graf(y)}
+$$
+\begin{aligned}
+	\bar{d} &= \frac{1}{10} \sum_{i=1}^{10}h_i = 12.858 \si{\milli\meter}\\
+	u_A(\bar{d}) &= \sqrt{\frac{1}{90}\sum_{i=1}^{10}(h_i-12.858)^2} = 0.0182 \si{\milli\meter}\\
+	u_B(\bar{d}) &= \frac{0.01}{\sqrt{12}} = 0.0029 \si{\milli\meter}\\
+	u_C(\bar{d}) &= \sqrt{0.0182^2+0.0029} = 0.0184 \si{\milli\meter}\\
+	\\
+	\bar{h} &= \frac{1}{10} \sum_{i=1}^{10}d_i = 32.082 \si{\milli\meter}\\
+	u_A(\bar{h}) &= \sqrt{\frac{1}{90}\sum_{i=1}^{10}(d_i-32.082)^2} = 0.0165 \si{\milli\meter}\\
+	u_B(\bar{h}) &= \frac{0.2}{\sqrt{12}} = 0.0578 \si{\milli\meter}\\
+	u_C(\bar{h}) &= \sqrt{0.0165^2+0.0578} = 0.0601 \si{\milli\meter}\\
+	\\
+	\bar{V} &= \frac{\pi}{4} \cdot 12.858^2 \cdot 32.082 = 416.5798 \si{\cubic\milli\meter}\\
+	u(V) &= \sqrt{(\frac{\partial V}{\partial h}u_C(h))^2 + (\frac{\partial V}{\partial d}u_C(d))^2}\\
+	u(V) &= \sqrt{(\frac{\pi d^2}{4} u_C(h))^2 + (\frac{\pi d h}{2} u_C(d))^2}\\
+	u(V) &= \sqrt{(\frac{\pi 12.858^2}{4} \cdot 0.0601)^2 + (\frac{\pi 12.858 \cdot 32.082}{2} \cdot 0.0184)^2} = 14.2496 \si{\cubic\milli\meter}
+\end{aligned}
+$$
 
-    \section{Zhodnocení výsledku měření}
+\subsection{Kvádr}
 
-    \section{Seznam použité literatury}
+\begin{figure}[h]
+	\centering
+	\begin{tabular}{c|c|c|c}
+		i & a [\si{\milli\meter}] & b [\si{\centi\meter}] & h [\si{\centi\meter}] \\\hline\hline
+		1  & 18.04 & 3.02  & 3.268 \\ \hline
+		2  & 18.08 & 3.022 & 3.266 \\ \hline
+		3  & 17.94 & 3.01  & 3.276 \\ \hline
+		4  & 17.74 & 3.018 & 3.27  \\ \hline
+		5  & 18.31 & 3.008 & 3.264 \\ \hline
+		6  & 17.96 & 3.006 & 3.26  \\ \hline
+		7  & 17.32 & 3.016 & 3.262 \\ \hline
+		8  & 16.62 & 3.018 & 3.268 \\ \hline
+		9  & 19.19 & 3.01  & 3.266 \\ \hline
+		10 & 18.66 & 3.024 & 3.276 \\
+	\end{tabular}
+\end{figure}
 
-    \section{Kopie záznamu s naměřenými hodnotami}
+$$
+\begin{aligned}
+	\bar{a} &= \frac{1}{10} \sum_{i=1}^{10}h_i = 17.986 \si{\milli\meter}\\
+	u_A(\bar{a}) &= \sqrt{\frac{1}{90}\sum_{i=1}^{10}(h_i-12.858)^2} = 0.2209 \si{\milli\meter}\\
+	u_B(\bar{a}) &= \frac{0.01}{\sqrt{12}} = 0.0029 \si{\milli\meter}\\
+	u_C(\bar{a}) &= \sqrt{0.2209^2+0.0029^2} = 0.2209 \si{\milli\meter}\\
+	\\
+	\bar{b} &= \frac{1}{10} \sum_{i=1}^{10}h_i = 30.152 \si{\milli\meter}\\
+	u_A(\bar{b}) &= \sqrt{\frac{1}{90}\sum_{i=1}^{10}(h_i-12.858)^2} = 0.0198 \si{\milli\meter}\\
+	u_B(\bar{b}) &= \frac{0.2}{\sqrt{12}} = 0.0578 \si{\milli\meter}\\
+	u_C(\bar{b}) &= \sqrt{0.0198^2+0.0578^2} = 0.0611 \si{\milli\meter}\\
+	\\
+	\bar{h} &= \frac{1}{10} \sum_{i=1}^{10}h_i = 32.676 \si{\milli\meter}\\
+	u_A(\bar{h}) &= \sqrt{\frac{1}{90}\sum_{i=1}^{10}(h_i-12.858)^2} = 0.0168 \si{\milli\meter}\\
+	u_B(\bar{h}) &= \frac{0.2}{\sqrt{12}} = 0.0578 \si{\milli\meter}\\
+	u_C(\bar{h}) &= \sqrt{0.0168^2+0.0578^2} = 0.0602 \si{\milli\meter}\\
+	\\
+	V &= a \cdot b \cdot h = 17.986 \cdot 30.152 \cdot 32.676 = 17720.6481 \si{\cubic\milli\meter}\\
+	u(V) &= \sqrt{(\frac{\partial V}{\partial h}u_C(h))^2 + (\frac{\partial V}{\partial a}u_C(a))^2 + (\frac{\partial V}{\partial b}u_C(b))^2}\\
+	u(V) &= \sqrt{(abu_C(h))^2 + (hbu_C(a))^2 + (ahu_C(b))^2}\\
+	u(V) &= \sqrt{(17.986 \cdot 30.152 \cdot 0.0602)^2 + (32.676 \cdot 30.152 \cdot 0.2209)^2 + (17.986 \cdot 32.676 \cdot 0.0611)^2}\\ &= 222.986\si{\cubic\milli\meter}\\
+\end{aligned}
+$$
+
+\section{Závěr}
+Změřili jsme objem válce $(416.5798 \pm 14.2496) \si{\cubic\milli\meter}$ a kvádru $(17720.6481 \pm 222.986) \si{\cubic\milli\meter}$.
 \end{document}
-
