@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/TeX Live for SUSE Linux) (preloaded format=pdflatex 2022.1.12)  20 MAR 2022 17:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/TeX Live for SUSE Linux) (preloaded format=pdflatex 2022.1.12)  21 MAR 2022 08:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -773,10 +773,10 @@ Package pdftex.def Info: screenshot003.png  used on input line 150.
 (pdftex.def)             Requested size: 207.0021pt x 132.37411pt.
  [3] [4 <./screenshot003.png (PNG copy)>] (./LAB7.aux) ) 
 Here is how much of TeX's memory you used:
- 41230 strings out of 480031
- 1114071 string characters out of 5884516
- 1693636 words of memory out of 5000000
- 58068 multiletter control sequences out of 15000+600000
+ 41229 strings out of 480031
+ 1114063 string characters out of 5884516
+ 1693645 words of memory out of 5000000
+ 58067 multiletter control sequences out of 15000+600000
  411968 words of font info for 59 fonts, out of 8000000 for 9000
  475 hyphenation exceptions out of 8191
  102i,19n,103p,720b,1020s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -789,7 +789,7 @@ fonts/cm/cmr10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr12.pfb><
 /usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf/font
 s/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/amsf
 onts/cm/cmsy7.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on LAB7.pdf (4 pages, 197272 bytes).
+Output written on LAB7.pdf (4 pages, 197950 bytes).
 PDF statistics:
  64 PDF objects out of 1000 (max. 8388607)
  44 compressed objects within 1 object stream
