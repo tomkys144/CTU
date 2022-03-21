@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/TeX Live for SUSE Linux) (preloaded format=pdflatex 2022.1.12)  19 MAR 2022 20:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/TeX Live for SUSE Linux) (preloaded format=pdflatex 2022.1.12)  20 MAR 2022 17:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**LAB5.tex
-(./LAB5.tex
+**LAB7.tex
+(./LAB7.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18> (/usr/share/texmf/tex/latex/base/article.cls
 Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
@@ -567,13 +567,93 @@ File: tikzlibraryplotmarks.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 (/usr/share/texmf/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
 File: pgflibraryplotmarks.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )))
-(/usr/share/texmf/tex/latex/float/float.sty
-Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count304
-\float@exts=\toks37
-\float@box=\box61
-\@float@everytoks=\toks38
-\@floatcapt=\box62
+(/usr/share/texmf/tex/latex/siunitx/siunitx.sty
+(/usr/share/texmf/tex/latex/l3kernel/expl3.sty
+Package: expl3 2021-02-18 L3 programming layer (loader) 
+
+(/usr/share/texmf/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count304
+\l__pdf_internal_box=\box61
+))
+(/usr/share/texmf/tex/latex/l3packages/xparse/xparse.sty
+(/usr/share/texmf/tex/latex/l3packages/xparse/xparse-2020-10-01.sty
+(/usr/share/texmf/tex/latex/l3packages/xparse/xparse-generic.tex)))
+Package: siunitx 2021/03/27 v2.8c A comprehensive (SI) units package
+
+(/usr/share/texmf/tex/latex/tools/array.sty
+Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
+\col@sep=\dimen301
+\ar@mcellbox=\box62
+\extrarowheight=\dimen302
+\NC@list=\toks37
+\extratabsurround=\skip52
+\backup@length=\skip53
+\ar@cellbox=\box63
+)
+(/usr/share/texmf/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2021-03-12 LaTeX2e option processing using LaTeX3 keys
+)
+\l__siunitx_tmp_box=\box64
+\l__siunitx_tmp_dim=\dimen303
+\l__siunitx_tmp_int=\count305
+\l__siunitx_number_mantissa_length_int=\count306
+\l__siunitx_number_uncert_length_int=\count307
+\l__siunitx_round_int=\count308
+\l__siunitx_process_decimal_int=\count309
+\l__siunitx_process_uncertainty_int=\count310
+\l__siunitx_process_fixed_int=\count311
+\l__siunitx_process_integer_min_int=\count312
+\l__siunitx_process_precision_int=\count313
+\l__siunitx_group_min_int=\count314
+\l__siunitx_angle_marker_box=\box65
+\l__siunitx_angle_unit_box=\box66
+\l__siunitx_angle_marker_dim=\dimen304
+\l__siunitx_angle_unit_dim=\dimen305
+\l__siunitx_unit_int=\count315
+\l__siunitx_unit_denominator_int=\count316
+\l__siunitx_unit_numerator_int=\count317
+\l__siunitx_unit_prefix_int=\count318
+\l__siunitx_unit_prefix_base_int=\count319
+\l__siunitx_unit_prefix_gram_int=\count320
+\l__siunitx_number_product_int=\count321
+\c__siunitx_one_fill_skip=\skip54
+\l__siunitx_table_unit_align_skip=\skip55
+\l__siunitx_table_exponent_dim=\dimen306
+\l__siunitx_table_integer_dim=\dimen307
+\l__siunitx_table_mantissa_dim=\dimen308
+\l__siunitx_table_marker_dim=\dimen309
+\l__siunitx_table_result_dim=\dimen310
+\l__siunitx_table_uncert_dim=\dimen311
+\l__siunitx_table_fill_pre_dim=\dimen312
+\l__siunitx_table_fill_post_dim=\dimen313
+\l__siunitx_table_fill_mid_dim=\dimen314
+\l__siunitx_table_pre_box=\box67
+\l__siunitx_table_post_box=\box68
+\l__siunitx_table_mantissa_box=\box69
+\l__siunitx_table_result_box=\box70
+\l__siunitx_table_number_align_skip=\skip56
+\l__siunitx_table_text_align_skip=\skip57
+
+(/usr/share/texmf/tex/latex/translator/translator.sty
+Package: translator 2020-08-03 v1.12c Easy translation of strings in LaTeX
+))
+(/usr/share/texmf/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip58
+\multirow@cntb=\count322
+\multirow@dima=\skip59
+\bigstrutjot=\dimen315
+)
+(/usr/share/texmf/tex/latex/tools/tabularx.sty
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+\TX@col@width=\dimen316
+\TX@old@table=\dimen317
+\TX@old@col=\dimen318
+\TX@target=\dimen319
+\TX@delta=\dimen320
+\TX@cols=\count323
+\TX@ftn=\toks38
 )
 (/usr/share/texmf/tex/latex/parskip/parskip.sty
 Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
@@ -589,109 +669,46 @@ Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
 ))
 (/usr/share/texmf/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count305
+\etb@tempcnta=\count324
 ))
-(/usr/share/texmf/tex/latex/siunitx/siunitx.sty
-(/usr/share/texmf/tex/latex/l3kernel/expl3.sty
-Package: expl3 2021-02-18 L3 programming layer (loader) 
+(/usr/share/texmf/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count325
+\float@exts=\toks39
+\float@box=\box71
+\@float@everytoks=\toks40
+\@floatcapt=\box72
+) (./LAB7.aux)
+\openout1 = `LAB7.aux'.
 
-(/usr/share/texmf/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count306
-\l__pdf_internal_box=\box63
-))
-(/usr/share/texmf/tex/latex/l3packages/xparse/xparse.sty
-(/usr/share/texmf/tex/latex/l3packages/xparse/xparse-2020-10-01.sty
-(/usr/share/texmf/tex/latex/l3packages/xparse/xparse-generic.tex)))
-Package: siunitx 2021/03/27 v2.8c A comprehensive (SI) units package
-
-(/usr/share/texmf/tex/latex/tools/array.sty
-Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
-\col@sep=\dimen301
-\ar@mcellbox=\box64
-\extrarowheight=\dimen302
-\NC@list=\toks39
-\extratabsurround=\skip52
-\backup@length=\skip53
-\ar@cellbox=\box65
-)
-(/usr/share/texmf/tex/latex/l3packages/l3keys2e/l3keys2e.sty
-Package: l3keys2e 2021-03-12 LaTeX2e option processing using LaTeX3 keys
-)
-\l__siunitx_tmp_box=\box66
-\l__siunitx_tmp_dim=\dimen303
-\l__siunitx_tmp_int=\count307
-\l__siunitx_number_mantissa_length_int=\count308
-\l__siunitx_number_uncert_length_int=\count309
-\l__siunitx_round_int=\count310
-\l__siunitx_process_decimal_int=\count311
-\l__siunitx_process_uncertainty_int=\count312
-\l__siunitx_process_fixed_int=\count313
-\l__siunitx_process_integer_min_int=\count314
-\l__siunitx_process_precision_int=\count315
-\l__siunitx_group_min_int=\count316
-\l__siunitx_angle_marker_box=\box67
-\l__siunitx_angle_unit_box=\box68
-\l__siunitx_angle_marker_dim=\dimen304
-\l__siunitx_angle_unit_dim=\dimen305
-\l__siunitx_unit_int=\count317
-\l__siunitx_unit_denominator_int=\count318
-\l__siunitx_unit_numerator_int=\count319
-\l__siunitx_unit_prefix_int=\count320
-\l__siunitx_unit_prefix_base_int=\count321
-\l__siunitx_unit_prefix_gram_int=\count322
-\l__siunitx_number_product_int=\count323
-\c__siunitx_one_fill_skip=\skip54
-\l__siunitx_table_unit_align_skip=\skip55
-\l__siunitx_table_exponent_dim=\dimen306
-\l__siunitx_table_integer_dim=\dimen307
-\l__siunitx_table_mantissa_dim=\dimen308
-\l__siunitx_table_marker_dim=\dimen309
-\l__siunitx_table_result_dim=\dimen310
-\l__siunitx_table_uncert_dim=\dimen311
-\l__siunitx_table_fill_pre_dim=\dimen312
-\l__siunitx_table_fill_post_dim=\dimen313
-\l__siunitx_table_fill_mid_dim=\dimen314
-\l__siunitx_table_pre_box=\box69
-\l__siunitx_table_post_box=\box70
-\l__siunitx_table_mantissa_box=\box71
-\l__siunitx_table_result_box=\box72
-\l__siunitx_table_number_align_skip=\skip56
-\l__siunitx_table_text_align_skip=\skip57
-
-(/usr/share/texmf/tex/latex/translator/translator.sty
-Package: translator 2020-08-03 v1.12c Easy translation of strings in LaTeX
-)) (./LAB5.aux)
-\openout1 = `LAB5.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
 
 (/usr/share/texmf/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count324
-\scratchdimen=\dimen315
+\scratchcounter=\count326
+\scratchdimen=\dimen321
 \scratchbox=\box73
-\nofMPsegments=\count325
-\nofMParguments=\count326
-\everyMPshowfont=\toks40
-\MPscratchCnt=\count327
-\MPscratchDim=\dimen316
-\MPnumerator=\count328
-\makeMPintoPDFobject=\count329
-\everyMPtoPDFconversion=\toks41
+\nofMPsegments=\count327
+\nofMParguments=\count328
+\everyMPshowfont=\toks41
+\MPscratchCnt=\count329
+\MPscratchDim=\dimen322
+\MPnumerator=\count330
+\makeMPintoPDFobject=\count331
+\everyMPtoPDFconversion=\toks42
 ) (/usr/share/texmf/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -709,7 +726,7 @@ Package caption Info: End \AtBeginDocument code.
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.17} into 
 your preamble.
- on input line 30.
+ on input line 33.
 
 (/usr/share/texmf/tex/latex/siunitx/siunitx-abbreviations.cfg
 File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
@@ -717,115 +734,65 @@ File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 (/usr/share/texmf/tex/latex/translator/translator-basic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 )
-Overfull \hbox (3.72287pt too wide) in paragraph at lines 45--46
-\OT1/cmr/m/n/10 ur^^Tcete tep-lotu tepl^^Seho konce termo^^Tcl^^Sanku (tep-lotu
- m^^Te^^Trenou termo^^Tcl^^Sankem),
+Overfull \hbox (3.3085pt too wide) in paragraph at lines 39--40
+\OT1/cmr/m/n/10 nan^^Tcn^^S^^P ^^Suhlov^^Sy kmito^^Tcet $\OML/cmm/m/it/10 ![]$ 
+\OT1/cmr/m/n/10 a hod-noty prvk^^Wu $\OML/cmm/m/it/10 L[]$ \OT1/cmr/m/n/10 a $\
+OML/cmm/m/it/10 C[]$ \OT1/cmr/m/n/10 pa-ra-leln^^S^^Pho n^^Sahradn^^S^^Pho
  []
 
 
-Overfull \hbox (0.45183pt too wide) in paragraph at lines 46--47
-[]\OT1/cmr/m/n/10 Ov^^Te^^Trte, zda je skute^^Tcn^^Sa vstupn^^S^^P nap^^Tet[]ov
-^^Sa ne-sy-me-t-rie pou^^Tzit^^Seho opera^^Tcn^^S^^Pho
+Overfull \hbox (15.86182pt too wide) in paragraph at lines 41--42
+[]\OT1/cmr/m/n/10 Z v^^Sysledk^^Wu m^^Te^^Tren^^S^^P ur^^Tcete, v jak^^Se vzd^^
+Salenosti lze pole trans-form^^Satoru pova^^Tzovat
  []
 
 
-Overfull \hbox (10.44519pt too wide) in paragraph at lines 46--47
-\OT1/cmr/m/n/10 ze-si-lova^^Tce men^^Ts^^S^^P ne^^Tz ma-xim^^Saln^^S^^P (p^^Tr^
-^S^^Ppadn^^Te ty-pick^^Sa) hod-nota udan^^Sa v^^Syrobcem. 
+Overfull \hbox (10.97464pt too wide) in paragraph at lines 68--69
+ [][] 
  []
 
-
-Overfull \hbox (0.16731pt too wide) in paragraph at lines 50--51
-\OT1/cmr/m/n/10 not^^Sonn^^S^^Pch zm^^Ten ^^Sudaje ^^Tc^^S^^Pslicov^^Seho volt-
-me-tru (ust^^Salen^^S^^P ^^Sudaje a^^Tz na p^^Tr^^S^^Ppadn^^Sy
- []
-
+<screenshot001.png, id=4, 749.80125pt x 295.85532pt>
+File: screenshot001.png Graphic file (type png)
+<use screenshot001.png>
+Package pdftex.def Info: screenshot001.png  used on input line 73.
+(pdftex.def)             Requested size: 241.49895pt x 95.28958pt.
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<scheme1.png, id=16, 158.84344pt x 100.12407pt>
-File: scheme1.png Graphic file (type png)
-<use scheme1.png>
-Package pdftex.def Info: scheme1.png  used on input line 58.
-(pdftex.def)             Requested size: 158.84305pt x 100.12381pt.
-<scheme2.png, id=18, 225.09094pt x 106.89937pt>
-File: scheme2.png Graphic file (type png)
-<use scheme2.png>
-Package pdftex.def Info: scheme2.png  used on input line 65.
-(pdftex.def)             Requested size: 157.56258pt x 74.82903pt.
-<scheme3.png, id=19, 205.5178pt x 105.39375pt>
-File: scheme3.png Graphic file (type png)
-<use scheme3.png>
-Package pdftex.def Info: scheme3.png  used on input line 70.
-(pdftex.def)             Requested size: 143.86148pt x 73.7751pt.
-
-Overfull \hbox (86.07921pt too wide) in paragraph at lines 77--86
-[][] 
- []
-
-
-Overfull \hbox (42.08128pt too wide) in paragraph at lines 89--94
-[] 
- []
-
-
-Overfull \hbox (16.3952pt too wide) in paragraph at lines 97--98
-\OT1/cmr/m/n/10 Vstupn^^S^^P nap^^Tet[]ovou ne-sy-me-t-rii in-ver-tuj^^S^^Pc^^S
-^^Pho ze-si-lova^^Tce zjist^^S^^Pme zm^^Te^^Tren^^S^^Pm v^^Systupn^^S^^Pho
- []
-
-[2 <./scheme1.png> <./scheme2.png> <./scheme3.png>]
-Overfull \hbox (5.53336pt too wide) in paragraph at lines 100--101
-\OT1/cmr/m/n/10 P^^Tri m^^Te^^Tren^^S^^P v^^Systupn^^S^^Pho nap^^Tet^^S^^P $\OM
-L/cmm/m/it/10 U[]$\OT1/cmr/m/n/10 , kter^^Se je ^^Sum^^Tern^^Se rozd^^S^^Plu te
-p-lot $\OML/cmm/m/it/10 #[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 #[]$ \OT1/cmr
-/m/n/10 oh^^Tr^^S^^Pvan^^Seho
- []
-
-
-Overfull \hbox (0.6206pt too wide) in paragraph at lines 100--101
-\OT1/cmr/m/n/10 spoje a la-bo-rato^^Tre, ^^Tc^^S^^Pslicov^^Sym volt-me-t-rem, u
-r^^Tc^^S^^Pme jeho std. ne-jis-totu jako: 
- []
-
-
-Overfull \hbox (8.74965pt too wide) in paragraph at lines 113--115
-\OT1/cmr/m/n/10 uv^^Sa^^Tzit slo^^Tzky ne-jis-toty typu B p^^Wusoben^^Se to-le-
-ran-cemi od-por^^Wu zp^^Tetnovazebn^^S^^P smy^^Tcky
- []
-
-[3] [4]
-Overfull \hbox (46.19354pt too wide) detected at line 252
-[][]
- []
-
-[5] [6] (./LAB5.aux) ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./screenshot001.png (PNG c
+opy)>]
+<screenshot002.png, id=15, 691.08188pt x 456.20438pt>
+File: screenshot002.png Graphic file (type png)
+<use screenshot002.png>
+Package pdftex.def Info: screenshot002.png  used on input line 110.
+(pdftex.def)             Requested size: 207.0021pt x 136.64656pt.
+ [2 <./screenshot002.png (PNG copy)>]
+<screenshot003.png, id=22, 849.92531pt x 543.53062pt>
+File: screenshot003.png Graphic file (type png)
+<use screenshot003.png>
+Package pdftex.def Info: screenshot003.png  used on input line 150.
+(pdftex.def)             Requested size: 207.0021pt x 132.37411pt.
+ [3] [4 <./screenshot003.png (PNG copy)>] (./LAB7.aux) ) 
 Here is how much of TeX's memory you used:
- 40383 strings out of 480031
- 1090350 string characters out of 5884516
- 1694608 words of memory out of 5000000
- 57223 multiletter control sequences out of 15000+600000
- 413599 words of font info for 64 fonts, out of 8000000 for 9000
+ 41230 strings out of 480031
+ 1114071 string characters out of 5884516
+ 1693636 words of memory out of 5000000
+ 58068 multiletter control sequences out of 15000+600000
+ 411968 words of font info for 59 fonts, out of 8000000 for 9000
  475 hyphenation exceptions out of 8191
- 102i,19n,103p,718b,966s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.e
-nc}</usr/share/texmf/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texm
-f/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf/fonts/type1/publi
-c/amsfonts/cm/cmex10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmmi1
-0.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/te
-xmf/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf/fonts/type1/publ
-ic/amsfonts/cm/cmr10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr12
-.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texm
-f/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf/fonts/type1/public/
-amsfonts/cm/cmr9.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmsy10.pf
-b></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf/
-fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf/fonts/type1/public/
-cm-super/sfrm0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pf
-b>
-Output written on LAB5.pdf (6 pages, 194160 bytes).
+ 102i,19n,103p,720b,1020s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts
+/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf/fonts/type1/public/amsfo
+nts/cm/cmbx12.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/share/texmf/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf/fo
+nts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf/fonts/type1/public/ams
+fonts/cm/cmr10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr12.pfb><
+/usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf/font
+s/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/amsf
+onts/cm/cmsy7.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on LAB7.pdf (4 pages, 197272 bytes).
 PDF statistics:
- 98 PDF objects out of 1000 (max. 8388607)
- 67 compressed objects within 1 object stream
+ 64 PDF objects out of 1000 (max. 8388607)
+ 44 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  28 words of extra memory for PDF output out of 10000 (max. 10000000)
 

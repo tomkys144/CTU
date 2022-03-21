@@ -14,6 +14,7 @@
 \usepackage{subcaption}
 \usepackage{pgfplots}
 \usepackage{siunitx}
+\usepackage{multirow}
 \sisetup{detect-all}
 
 \makeatletter
@@ -59,7 +60,7 @@
 	$V_1$ & číslicový multimetr HP 34401A, rozsah 1 V a 10 V \\
 	$V_2$ & číslicový multimetr Summit 45, rozsah 4 V a 40 V \\
 	$V_3$ & číslicový multimetr MY-64 (Mastech), rozsah 2 V a 20 V \\
-	$V_4$ & nízkofrekvenční elektronický voltmetr Troneer, rozsah 1 V a 10 V \\
+	$V_4$ & nízkofrekvenční elektronický voltmetr U1241C \\
 	Regulační obvod & přípravek pro regulaci průběhu proudu
 \end{tabular}
 \section{Teoretický základ}
@@ -99,4 +100,41 @@ Dosazením do vztahů (1) a (3) s úhlem sepnutí $\alpha$ a dobou sepnutí $t_\
 \begin{equation}
 	U_{ef,\alpha}=\sqrt{\frac{2}{T}\int_{\alpha/\omega}^{T/2}U_m\sin^2(\omega t)dt} = \frac{U_m}{\sqrt{2\pi}}\sqrt{\pi-\alpha+\frac{\sin(2\alpha)}{2}}
 \end{equation}
+
+\section{Naměřené hodnoty}
+\begin{tabular}{c|c||c|c|c|c}
+	\multirow{2}{*}{$\alpha$[\si{\degree}]} & \multirow{2}{*}{I[\si{\ampere}]} & \multicolumn{4}{c}{Napětí [\si{\volt}] }\\ && 34401A & SM45 & MY-64 & U1241C \\\hline \hline
+	0 & 0.5 & 50.2 & 49.3 & 50.3 & 50.24 \\\hline
+	45 & 0.49 & 49.4 & 46.5 & 48.2 & 49.45 \\\hline
+	90 & 0.43 & 38.4 & 28.9 & 31.0 & 38.5
+\end{tabular}
+
+$$
+\begin{aligned}
+	U_{ef} &= 1.11 \cdot U_{str}\\
+	U_{str} &= \frac{U_{ef}}{1.11}
+\end{aligned}
+$$
+
+\begin{tabular}{c||c|c}
+	\multirow{2}{*}{$\alpha$[\si{\degree}]}  & \multicolumn{2}{c}{Střední hodnota [\si{\volt}] }\\ & SM45 & MY-64 \\\hline \hline
+	0 & 44.414 & 45.315 \\\hline
+	45 & 41.892 & 43.426 \\\hline
+	90 & 26.036 & 27.927
+\end{tabular}
+
+\subsection{Výpočet střední a efektivní hodnoty}
+
+$$
+\begin{aligned}
+	U{sar,\alpha}&=\frac{U_m}{\pi}[\cos(\alpha)-\cos(\pi)]\\
+	U{sar,\frac{\pi}{2}}&=\frac{38.4 \si{\volt}}{\pi}[\cos(\frac{\pi}{2})-\cos(\pi)] = 12.22 \si{\volt}\\
+	\\
+	U_{ef,\alpha} &= \frac{U_m}{\sqrt{2\pi}}\sqrt{\pi-\alpha+\frac{\sin(2\alpha)}{2}}\\
+	U_{ef,\frac{\pi}{2}} &= \frac{38.4 \si{\volt}}{\sqrt{2\pi}}\sqrt{\pi-\frac{\pi}{2}+\frac{\sin(2\frac{\pi}{2})}{2}} = 19.2 \si{\volt}\\
+\end{aligned}
+$$
+
+\section{Závěr}
+Ruční multimetry podávají chybné hodnoty, což se očekává vzhledem k použití převodu pomocí konstanty.
 \end{document}
