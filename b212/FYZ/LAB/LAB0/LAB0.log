@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/TeX Live for SUSE Linux) (preloaded format=pdflatex 2022.1.12)  21 MAR 2022 22:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/TeX Live for SUSE Linux) (preloaded format=pdflatex 2022.1.12)  21 MAR 2022 22:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -750,10 +750,10 @@ Overfull \vbox (113.43843pt too high) has occurred while \output is active []
 
 [3] [4] (./LAB0.aux) ) 
 Here is how much of TeX's memory you used:
- 40401 strings out of 480031
- 1090705 string characters out of 5884516
+ 40403 strings out of 480031
+ 1090721 string characters out of 5884516
  1689535 words of memory out of 5000000
- 57251 multiletter control sequences out of 15000+600000
+ 57253 multiletter control sequences out of 15000+600000
  406503 words of font info for 39 fonts, out of 8000000 for 9000
  475 hyphenation exceptions out of 8191
  102i,18n,103p,720b,970s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -764,7 +764,7 @@ c/amsfonts/cm/cmmi7.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr10.
 pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texm
 f/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf/fonts/type1/public/
 amsfonts/cm/cmsy10.pfb>
-Output written on LAB0.pdf (5 pages, 94104 bytes).
+Output written on LAB0.pdf (5 pages, 94046 bytes).
 PDF statistics:
  55 PDF objects out of 1000 (max. 8388607)
  39 compressed objects within 1 object stream
