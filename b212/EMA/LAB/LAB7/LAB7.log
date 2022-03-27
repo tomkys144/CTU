@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/TeX Live for SUSE Linux) (preloaded format=pdflatex 2022.1.12)  21 MAR 2022 21:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/TeX Live for SUSE Linux) (preloaded format=pdflatex 2022.1.12)  27 MAR 2022 19:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -763,36 +763,35 @@ opy)>]
 <screenshot002.png, id=15, 691.08188pt x 456.20438pt>
 File: screenshot002.png Graphic file (type png)
 <use screenshot002.png>
-Package pdftex.def Info: screenshot002.png  used on input line 110.
+Package pdftex.def Info: screenshot002.png  used on input line 109.
 (pdftex.def)             Requested size: 207.0021pt x 136.64656pt.
  [2 <./screenshot002.png (PNG copy)>]
-<screenshot003.png, id=22, 849.92531pt x 543.53062pt>
+<screenshot003.png, id=21, 849.92531pt x 543.53062pt>
 File: screenshot003.png Graphic file (type png)
 <use screenshot003.png>
-Package pdftex.def Info: screenshot003.png  used on input line 150.
+Package pdftex.def Info: screenshot003.png  used on input line 149.
 (pdftex.def)             Requested size: 207.0021pt x 132.37411pt.
- [3] [4 <./screenshot003.png (PNG copy)>] (./LAB7.aux) ) 
+ [3] [4 <./screenshot003.png (PNG copy)>] [5] (./LAB7.aux) ) 
 Here is how much of TeX's memory you used:
- 41229 strings out of 480031
- 1114063 string characters out of 5884516
+ 41225 strings out of 480031
+ 1114019 string characters out of 5884516
  1693645 words of memory out of 5000000
- 58067 multiletter control sequences out of 15000+600000
- 411968 words of font info for 59 fonts, out of 8000000 for 9000
+ 58064 multiletter control sequences out of 15000+600000
+ 411633 words of font info for 58 fonts, out of 8000000 for 9000
  475 hyphenation exceptions out of 8191
- 102i,19n,103p,720b,1020s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts
-/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf/fonts/type1/public/amsfo
-nts/cm/cmbx12.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmex10.pfb><
-/usr/share/texmf/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf/fo
-nts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf/fonts/type1/public/ams
-fonts/cm/cmr10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr12.pfb><
-/usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf/font
-s/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/amsf
-onts/cm/cmsy7.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on LAB7.pdf (4 pages, 197950 bytes).
+ 102i,22n,103p,720b,1020s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf/f
+onts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf/fonts/type1/public/a
+msfonts/cm/cmex10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmmi10.p
+fb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf
+/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf/fonts/type1/public/
+amsfonts/cm/cmr12.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr7.pfb
+></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/
+fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on LAB7.pdf (5 pages, 202104 bytes).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
- 44 compressed objects within 1 object stream
+ 62 PDF objects out of 1000 (max. 8388607)
+ 42 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  28 words of extra memory for PDF output out of 10000 (max. 10000000)
 
