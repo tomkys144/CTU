@@ -1,0 +1,227 @@
+\documentclass[titlepage]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[czech]{babel}
+\usepackage{pdfpages}
+\usepackage{graphics}
+\begin{document}
+    \begin{titlepage}
+        \begin{center}
+            \vspace*{1cm}
+                
+            \Large
+            \textbf{LABORATORNÍ CVIČENÍ Z FYZIKY}
+                
+            \vspace{0.5cm}
+            STUDIUM VOLNÉHO PÁDU
+                
+            \vspace{1.5cm}
+                
+            \textbf{Tomáš Kysela}\\
+            \textbf{Skupina L1061}
+                
+            \vfill
+                
+            \vspace{0.8cm}
+            
+            
+            ČESKÉ VYSKOKÉ UČENÍ TECHNICKÉ V PRAZE\\
+            FAKULTA ELEKTROTECHNICKÁ\\
+            KATEDRA FYZIKY\\
+            30. 03. 2021
+                
+        \end{center}
+    \end{titlepage}
+    	\tableofcontents
+    \newpage
+    \section{Úvod}
+        Cílem experimentu je ukázat rozdíl mezi tíhou tělesa a hmotností tělesa. Dále sestrojit graf závislosti délky pádu na výšce a porovnat vypočtené gravitační zrychlení s místní hodnotou pro Prahu.\newline
+        
+        Hmotnost lze spočítat pomocí:
+        \begin{equation}
+            m = v \times \rho
+        \end{equation}
+        kde m je hmotnost, V objem a $\rho$ hustota tělesa.\newline
+        
+        Na druhou stranu do tíhy musíme započítat všechny síly na těleso působící.
+        \subsection{Gravitační síla}
+            Newtonův graviatční zákon říká:
+            \begin{quote}
+                Mezi dvěma hmotnými objekty působí přitažlivá síla nepřímo úměrná druhé mocnině vzdálenosti objektů a přímo úměrná jejich hmotnostem.
+            \end{quote}
+            tedy
+            \begin{equation}
+                F_G = G{m_1 m_2 \over r^2}
+            \end{equation}
+            ve vektorovém prostoru poté jako
+            \begin{equation}
+            	F_G = -G{m_1 m_2 \over r^3}
+            \end{equation}
+            kde $m_1 a m_2$ jsou hmotnosti tělesa, $r$ jejich vzdálenost a $G$ gravitační konstanta určena experimentálně jako:
+            \begin{equation}
+                G = (6.67408 \pm 0.00031) \times 10^{-11} m^3kg^{-1}s^{-2}
+            \end{equation}
+            Dále třetí Newtonův zákon říká
+            \begin{quote}
+                Působí-li jedno těleso na druhé silou $\vec{F_G}$, působí druhé na první silou $\vec{F_G'}$, která je stejně velká a má opačný směr, tj.
+                \begin{equation}
+                    \vec{F_G} = -\vec{F_G'}
+                \end{equation}
+                Obě síly současně vznikají a současně zanikají.
+            \end{quote}
+        	\subsection{Země jako statická koule}
+        		Jestliže považujeme Zemi za statickou kouli, lze pomocí druhého Newtonova zákona dostat vztah
+        		\begin{equation}
+        			m\vec{a} = \vec{F_G} = -G{m M_Z \over (R_Z * h)^2}
+        		\end{equation}
+        		kde h je výška od povrchu Země. V malých výškách je proto možné tuto hodnotu zanedbat a dostaneme vztah
+        		\begin{equation}
+        			m\vec{a} \approx -\vec{F_G} = -G{mM_Z \over R_Z^2}
+        		\end{equation}
+        	\subsection{Země jako rotující koule}
+        		Pokud začneme Zemi považovat za rotující těleso, je třeba dodat síly zdánlivé.\newline
+        		Je-li těleso vzhledem k Zemi v klidu, pak na něj působí pouze síla graviatční a síla odstředivá. Ta lze zapsat jako
+        		\begin{equation}
+        			\vec{F_od} = m(\vec{\omega} \times \vec{R_Z}) \times \vec{\omega}
+        		\end{equation}
+        		kde m je hmotnost tělesa, $\vec{\omega}$, úhlová rychlost a $\vec{R_Z}$ poloměr Země. Po kombinaci se silou gravitační dostáváme sílu tíhovou
+        		\begin{equation}
+        			\vec{F_T} = \vec{F_G} + \vec{F_od} = -G{m M_Z \over (R_Z * h)^2} + m(\vec{\omega} \times \vec{R_Z}) \times \vec{\omega}
+        		\end{equation}
+        		Zavedeme-li poté souřadnicový systém, kde osa y je osou rotace Země a osa x je na ni kolmá, lze sílu tíhovou vyjádřit jako
+        		\begin{equation}
+        			\vec{F_T} = -(F_G-{m4\pi^2R_Z \over T^2})\cos{\gamma}\vec{i}-F_G\sin{\gamma}\vec{j}
+        		\end{equation}
+        		kde T je perioda zemské rotace, tedy 1 den = 86400s.\newline
+        		Začne-li se těleso pohybovat je třeba přidat i Coriolisovu sílu
+        		\begin{equation}
+        			\vec{F_C} = 2m\vec{v}\omega\sin{\gamma}
+        		\end{equation}
+        	\subsection{Rovnice pro naše využití}
+        		Jelikož pracujeme v nízkých výškách, malých rychlostech a lehkými objekty, lze zanedbat odpor vzduchu, vztlak, výšku nad povrchem Země, hmotnost tělesa i Coriolisovu sílu.
+        		Z toho plyne, že využijeme rovnici
+        		\begin{equation}
+        			m\vec{a_g} = F_G = G{mM_Z \over R_Z^2}
+        		\end{equation}
+        		Tuto rovnici můžeme také zapsat ve tvaru
+        		\begin{equation}
+        			m\vec{g} = m{\partial{\vec{v}} \over \partial{t}} \Rightarrow \vec{g} = {\partial{\vec{v}} \over \partial{t}}
+        		\end{equation}
+        		a jelikož $\vec{g}$ považujeme za konstatntní je možné celou rovnici zintegrovat
+        		\begin{equation}
+        			\partial{\vec{v}} = \vec{g}\partial{t} \Rightarrow \int_{\vec{v_0}}^{\vec{v}}\partial{\vec{v}'} = \int_0^t(\vec{g}t'+\vec{v_0})\partial{t'} \Rightarrow \vec{v}=\vec{g}t+\vec{v_0}
+        		\end{equation}
+        		\begin{equation}
+        			\partial{\vec{r}} = (\vec{g}t+\vec{v_0})\partial{t} \Rightarrow \int_{r_0}^{r}\partial{r'} = \int_0^t(\vec{g}t'+\vec{v_0})\partial{t'} \Rightarrow \vec{r} = {1 \over 2}\vec{g}t^2+\vec{v_0}t+\vec{r_0}
+        		\end{equation}
+        		kde $\vec{v_0}$ je rychlost tělesa v čase 0, $\vec{r}$ je polohový vektor tělesa a $\vec{r_0}$ je polohový vektor tělesa v čase 0.\newline
+        		Protože v experimentu používáme svislý vrh lze upravit vztah (15) jako
+        		\begin{equation}
+        			x(t)=0\newline,\quad
+        			y(t)=0,\quad
+        			z(t)=-{1 \over 2}\vec{g}t^2+\vec{v_0}t+h
+        		\end{equation}
+        		kde h je vpočáteční výška a $\vec{g} = [0;0;-g]$ a $\vec{\vec{v_0}}=[0,0,\vec{v_0}]$\newline
+        		Z po dosazeni $z(\tau)=0$, $\tau$ je délka pádu dostaneme
+        		\begin{equation}
+        			h = {1 \over 2}\vec{g}\tau^2+\vec{v_0}\tau
+        		\end{equation}
+	\section{Úkoly}
+		Hodnoty, které je třeba naměřit jsou:
+		\begin{itemize}
+			\item $\tau_i$ - délky pádu kuliček
+			\item $m_1$ a $m_2$ - hmotnost kuliček
+			\item $d_1$ a $d_2$ - průměr kuliček
+			\item $h_i$ - výšky, ze kterých jsou kuličky spouštěny
+		\end{itemize}
+	\section{Popis experimentu}
+		K pokusu je použit jednoduchý stroj, takzvaný pádostroj. Jeho součástí je mechanický elektronicky ovládaný mechanismus na vypuštění kuličky. S vypuštěním kuličky je sepnut čítač, který je následně zastaven signálem z detektoru dopadu. Výška vypouštěče kuličky je nastavitelná.
+	
+		Ve chvíli, kdy známe délku pádu a počáteční výšku kuličky a za pomoci váhy a mikrometru ji máme změřenou lze dosadit do rovnice
+		\begin{equation}
+			h = {1 \over 2}\vec{g}\tau^2+\vec{v_0}\tau
+		\end{equation}
+		Jelikož máme ale počáteční rychlost nulovou, lze rovnici zkrátit pouze na
+		\begin{equation}
+			h = {1 \over 2}\vec{g}\tau^2
+		\end{equation}
+		\newpage
+		\subsection{Použité přístroje}
+		\begin{table}[!h]
+			\begin{tabular}{|c|c|c|}
+			\hline
+			\textbf{Přístroj} & \textbf{Výrobce} & \textbf{Rozlišení}\\
+			\hline
+			\hline
+			Laboratorní váhy & KERN \& SOHN GmbH & 0.1 g\\
+			\hline
+			Mikrometr & INSIZE Czech s.r.o. & 0.01 mm\\
+			\hline
+			Čítač & HELAGO-CZ s.r.o. & 1 ms\\
+			\hline
+			Měření výšky &  & 1 mm\\
+			\hline
+			\end{tabular}
+		\end{table}
+	\section{Výsledky}
+		\subsection{Naměřené hodnoty}
+			\begin{table}[!h]
+				\begin{tabular}{|c|c|c|}
+					\hline
+					 & \textbf{Kulička \#1} & \textbf{Kulička \#2}\\
+					 \hline\hline
+					 \textbf{Hmotnost [g]} & 18.91 & 16.73\\
+					 \hline
+					 \textbf{Průměr [mm]} & 16.68 & 16.01\\
+					 \hline\hline
+					 
+					 \textbf{výška [cm]} & \textbf{čas [ms]} & \textbf{čas [ms]}\\
+					 \hline\hline
+					 5  & 101 & 100 \\ \hline
+					 10 & 143 & 142 \\ \hline
+					 15 & 175 & 175 \\ \hline
+ 				   	 20 & 201 & 201 \\ \hline
+					 25 & 225 & 225 \\ \hline
+					 30 & 247 & 246 \\ \hline
+					 35 & 267 & 267 \\ \hline
+					 40 & 286 & 285 \\ \hline
+					 45 & 303 & 302 \\ \hline
+					 50 & 319 & 319 \\ \hline
+					 55 & 334 & 335 \\ \hline
+					 60 & 349 & 350 \\ \hline
+					 65 & 363 & 363 \\ \hline
+ 					 70 & 378 & 377 \\ \hline
+					 75 & 391 & 391 \\ \hline
+					 80 & 404 & 403 \\ \hline
+					 95 & 440 & 439 \\ \hline
+				\end{tabular}
+			\end{table}
+		\includepdf[scale=0.8,pages=1,pagecommand=\subsection{Graf závislosti délky pádu na výšce}]{gr-graf-1617134820-color.pdf}
+		\subsection{Výpočet gravitačního zrychlení}
+		$$ \bar{h} = {1 \over 17 }\sum_{i=1}^{17}h_i = 0.455882353m$$
+		$$ u_A(\bar{h}) = \sqrt{{1 \over n(n-1}\sum_{i=1}^{n}(h_i-\bar{h})^2} = \sqrt{{1 \over 17(17-1}\sum_{i=1}^{17}(h_i-0.455882353m)^2} = 0,063864855$$
+		$$ u_B(\bar{h}) = {0.001m \over \sqrt{12}} = 0.000289 $$
+		$$ u_C(\bar{h}) = \sqrt{u_A^2(\bar{h})+u_B^2(\bar{h})} = 0.063866 $$
+		\vspace{30pt}
+		$$ \bar{\tau} = {1 \over 34}\sum_{i=1}^{34}\tau_{i} = 0.289588235s$$
+		$$ u_A(\bar{\tau}) = \sqrt{{1 \over n(n-1}\sum_{i=1}^{n}(\tau_{i}-\bar{\tau})^2} = \sqrt{{1 \over 34(34-1}\sum_{i=1}^{34}(\tau_{i}-0.289588235s)^2} = 0.016374359$$
+		$$ u_B(\bar{\tau}) = {0.001s \over \sqrt{12}} = 0.000289 $$
+		$$ u_C(\bar{\tau}) = \sqrt{u_A^2(\bar{\tau})+u_B^2(\bar{\tau})} = 0.016376909 $$
+		\vspace{30pt}
+		$$ \bar{g_1} = {2\bar{h} \over \bar{\tau}^2} = {2*0.455882353m \over (0.289764706s)^2} = 10.872288022 ms^{-2}$$
+		$$ u(\bar{g_1}) = \sqrt{({\partial{g_1} \over \partial{h}})^2u^2(h)+({\partial{g_1} \over \partial{\tau}})^2u^2(\tau)} = \sqrt{({2 \over \tau})^2u^2(h)+(-{4h \over \tau^2})^2u^2(\tau)} = 0.452976$$
+		$$g = (10.86 \pm 0.45)ms^{-2}$$
+		$$g_{Praha} = 9,81373 ms^{-2}$$
+	\section{Diskuze}
+		Z porovnání je zřejmé, že výsledek se lyší od teoretického o zhruba $1ms^{-2}$. Je možné že se jedná o chybu způsobenou nedokonolým vypuštěním kuličky, či chybou ve výpočtu. Ani jedno se mi nezdá pravděpodobné (výpočet byl kontrolován několika nezávislími subjekty, rozdíl ve vzpouštění by měl být zandebatelný). Ideálně bych pokus opakoval, což za současné epidemiologické situace možné není.
+	\section{Závěry}
+		Výsledek $g = (10.86 \pm 0.45)ms^{-2}$ se zcela nevylučuje s teorií. Spíše se jedná o kombinaci několika faktorů, které ho o 1/9 očekávaného výsledku zvětšili.
+	\section{Seznam literatury}
+		[1] Gravitace | Newtonův gravitační zákon. Aldebaran [online]. [cit. 2021-03-30]. Dostupné z: https://www.aldebaran.cz/astrofyzika/gravitace/newton.php\newline
+		[2] ŠANDEROVÁ, Věra a Zdeněk KYNCL. Fyzika I. 3. Praha: Ediční středisko ČVUT, 1987.\newline
+		FEYNMAN, Richard Phillips, Robert B. LEIGHTON a Matthew SANDS. Feynmanovy přednášky z fyziky s řešenými příklady. Havlíčkův Brod: Fragment, 2000. ISBN 80-7200-405-0.\newline
+		[3] Červenka: Zpracování fyzikálních měření,\newline
+		http://planck.fel.cvut.cz/praktikum/downloads/navody/zpracdat.pdf\newline
+ 		[4] Červenka: Laboratorní úloha: Studium volného pádu,\newline
+ 		https://planck.fel.cvut.cz/praktikum/downloads/navody/padostroj.pdf
+		
+\end{document}
