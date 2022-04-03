@@ -1,0 +1,16 @@
+\babel@toc {czech}{}
+\contentsline {section}{\numberline {1}Úvod}{2}{}%
+\contentsline {subsection}{\numberline {1.1}Gravitační síla}{2}{}%
+\contentsline {subsection}{\numberline {1.2}Země jako statická koule}{2}{}%
+\contentsline {subsection}{\numberline {1.3}Země jako rotující koule}{3}{}%
+\contentsline {subsection}{\numberline {1.4}Rovnice pro naše využití}{3}{}%
+\contentsline {section}{\numberline {2}Úkoly}{4}{}%
+\contentsline {section}{\numberline {3}Popis experimentu}{4}{}%
+\contentsline {subsection}{\numberline {3.1}Použité přístroje}{5}{}%
+\contentsline {section}{\numberline {4}Výsledky}{5}{}%
+\contentsline {subsection}{\numberline {4.1}Naměřené hodnoty}{5}{}%
+\contentsline {subsection}{\numberline {4.2}Graf závislosti délky pádu na výšce}{6}{}%
+\contentsline {subsection}{\numberline {4.3}Výpočet gravitačního zrychlení}{7}{}%
+\contentsline {section}{\numberline {5}Diskuze}{7}{}%
+\contentsline {section}{\numberline {6}Závěry}{8}{}%
+\contentsline {section}{\numberline {7}Seznam literatury}{8}{}%
