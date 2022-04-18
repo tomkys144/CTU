@@ -1,0 +1,8 @@
+\babel@toc {czech}{}
+\contentsline {section}{\numberline {1}Úkol měření}{2}{}%
+\contentsline {section}{\numberline {2}Seznam použitých přístrojů}{2}{}%
+\contentsline {section}{\numberline {3}Tabulky naměřených hodnot, zpracování}{2}{}%
+\contentsline {section}{\numberline {4}Graf(y)}{2}{}%
+\contentsline {section}{\numberline {5}Zhodnocení výsledku měření}{2}{}%
+\contentsline {section}{\numberline {6}Seznam použité literatury}{2}{}%
+\contentsline {section}{\numberline {7}Kopie záznamu s naměřenými hodnotami}{2}{}%

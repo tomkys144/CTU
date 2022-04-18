@@ -1,0 +1,303 @@
+\documentclass{article}
+    \title{\textbf{9. MĚŘENÍ ODPORŮ}}
+    \author{Tomáš Kysela}
+    \date{4/4/2022}
+
+    \addtolength{\topmargin}{-3cm}
+    \addtolength{\textheight}{3cm}
+
+\usepackage[czech]{babel}
+\usepackage{graphicx}
+\usepackage{circuitikz}
+\usepackage{amsmath}
+\usepackage{subcaption}
+\usepackage{pgfplots}
+\usepackage{siunitx}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage[parfill]{parskip}
+\sisetup{detect-all}
+
+\makeatletter
+\providecommand\add@text{}
+\newcommand\tagaddtext[1]{%
+    \gdef\add@text{#1\gdef\add@text{}}}%
+\renewcommand\tagform@[1]{%
+    \maketag@@@{\llap{\add@text\quad}(\ignorespaces#1\unskip\@@italiccorr)}%
+}
+\makeatother
+
+
+\begin{document}
+
+\maketitle
+
+\section{Úkol měření}
+\begin{enumerate}
+	\item \textbf{Měření malých odporů Ohmovou metodou.} Sestavte měřicí obvod dle obr. 1a. Vhodnou metodikou měření vylučte vliv termoelektrických napětí. Z naměřených hodnot napětí a proudu vypočtěte velikost neznámého odporu $R_X$ a stanovte rozšířenou nejistotu měření (pro $k_r = 2$).
+	
+	\item \textbf{Měření malých odporů sériovou srovnávací metodou.} Zapojte měřicí obvod dle obr. 1b. Změřte napětí na etalonu $R_N$ a napětí na měřeném odporu $R_X$. Vhodnou metodikou měření vylučte vliv termoelektrických napětí. Vypočtěte velikost neznámého odporu $R_X$ a odvoďte vztah pro nejistotu měření.
+	
+	\item \textbf{Měření středních odporů převodníkem $R \to U$}. Sestavte převodník odpor-napětí s OZ 
+	($U_r = 10 \si{\volt}$, $R_{N1} = 10 \si{\kilo\ohm}$) dle obr. 1c. Odvoďte přenos převodníku a ověřte jeho funkci. Jako odpor $R_X$ použijte odporovou dekádu. Zdůvodněte, do jaké hodnoty odporu může uvedený převodník měřit. 
+\end{enumerate}
+
+\section{Schéma zapojení}
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{0.4 \linewidth}
+		\scalebox{0.4}{
+			\begin{circuitikz}[european]
+				\draw (0,-0.0) to[twoport,t=$V_{SS}$] (0,-2.0);
+				\draw (1,1.0) to[rmeter,t=$A$] (3,1.0);
+				\draw (4,-0.0) node[ocirc]{};
+				\draw (1,1.0) to[short] (0,1.0);
+				\draw (0,1.0) to[short] (0,-0.0);
+				\draw (4,-2.0) node[ocirc]{};
+				\draw (6,-0.0) node[ocirc]{};
+				\draw (6,-2.0) node[ocirc]{};
+				\draw (3,1.0) to[short] (4,1.0);
+				\draw (4,1.0) to[short] (4,-0.0);
+				\draw (4,-2.0) to[short] (4,-3.0);
+				\draw (4,-3.0) to[short] (0,-3.0);
+				\draw (0,-2.0) to[short] (0,-3.0);
+				\draw (6,-0.0) to[short] (6,1.0);
+				\draw (6,-2.0) to[short] (6,-3.0);
+				\draw (6,-3.0) to[short] (7,-3.0);
+				\draw [line width=2pt] (6,-2.0) to[short] (4,-2.0);
+				\draw [line width=2pt] (4,-0.0) to[short, l=K] (6,-0.0);
+				\draw [dashed] (4,-0.0) to[short] (6,-2.0);
+				\draw [dashed] (6,-0.0) to[short] (4,-2.0);
+				\draw (7,-3.0) to[R,l=$R_p$] (9,-3.0);
+				\draw (9,-2.0) to[R,l=$R_x$] (9,-0.0);
+				\draw (9,-2.0) to[short] (9,-3.0);
+				\draw (9,-0.0) to[short] (9,1.0);
+				\draw (9,1.0) to[short] (6,1.0);
+				\draw (9,1.0) node[ocirc]{};
+				\draw (9,-3.0) node[ocirc]{};
+				\draw (10,-2.0) node[ocirc]{};
+				\draw (10,-0.0) node[ocirc]{};
+				\draw (9,-0.0) to[short] (10,-0.0);
+				\draw (9,-2.0) to[short] (10,-2.0);
+				\draw (10,-0.0) to[short] (11,-0.0);
+				\draw (10,-2.0) to[short] (11,-2.0);
+				\draw (11,-0.0) to[rmeter,t=$CV$] (11,-2.0);
+			\end{circuitikz}
+		}
+	\caption{Měření malých odporů Ohmovou metodou.}
+	\end{subfigure}
+	\begin{subfigure}{0.48 \linewidth}
+		\scalebox{0.4}{
+			\begin{circuitikz}[european]
+				\draw (0,-0.0) to[twoport,t=$V_{SS}$] (0,-2.0);
+				\draw (1,1.0) to[rmeter,t=$A$] (3,1.0);
+				\draw (4,-0.0) node[ocirc]{};
+				\draw (1,1.0) to[short] (0,1.0);
+				\draw (0,1.0) to[short] (0,-0.0);
+				\draw (4,-2.0) node[ocirc]{};
+				\draw (6,-0.0) node[ocirc]{};
+				\draw (6,-2.0) node[ocirc]{};
+				\draw (3,1.0) to[short] (4,1.0);
+				\draw (4,1.0) to[short] (4,-0.0);
+				\draw (4,-2.0) to[short] (4,-3.0);
+				\draw (4,-3.0) to[short] (0,-3.0);
+				\draw (0,-2.0) to[short] (0,-3.0);
+				\draw (6,-0.0) to[short] (6,1.0);
+				\draw (6,-2.0) to[short] (6,-3.0);
+				\draw (6,-3.0) to[short] (7,-3.0);
+				\draw [line width=2pt] (6,-2.0) to[short] (4,-2.0);
+				\draw [line width=2pt] (4,-0.0) to[short, l=K] (6,-0.0);
+				\draw [dashed] (4,-0.0) to[short] (6,-2.0);
+				\draw [dashed] (6,-0.0) to[short] (4,-2.0);
+				\\draw (6,-0.0) to[short] (6,1.0);
+				\draw (6,-2.0) to[short] (6,-3.0);
+				\draw (6,-3.0) to[short] (7,-3.0);
+				\draw (7,-3.0) node[ocirc]{};
+				\draw (7,-3.0) to[short] (8,-3.0);
+				\draw (8,-3.0) to[short] (8,-4.0);
+				\draw (10,-3.0) to[short] (10,-4.0);
+				\draw (10,-3.0) to[short] (11,-3.0);
+				\draw (11,-3.0) to[short] (12,-3.0);
+				\draw (12,-3.0) to[short] (13,-3.0);
+				\draw (13,-3.0) to[short] (13,-4.0);
+				\draw (15,-3.0) to[short] (15,-4.0);
+				\draw (8,-4.0) to[short] (8,-5.0);
+				\draw (10,-4.0) to[short] (10,-5.0);
+				\draw (13,-4.0) to[short] (13,-5.0);
+				\draw (15,-4.0) to[short] (15,-5.0);
+				\draw (15,-3.0) to[short] (16,-3.0);
+				\draw (16,-3.0) to[short] (16,1.0);
+				\draw (16,1.0) to[short] (13,1.0);
+				\draw (11,1.0) to[short] (6,1.0);
+				\draw (11,1.0) to[R,l=$R_p$] (13,1.0);
+				\draw (8,-3.0) to[R,l=$R_x$] (10,-3.0);
+				\draw (13,-3.0) to[R,l=$R_N$] (15,-3.0);
+				\draw (13,-5.0) to[rmeter,t=$CV$] (15,-5.0);
+				\draw (8,-5.0) to[rmeter,t=$CV$] (10,-5.0);
+				\draw (8,-4.0) node[ocirc]{};
+				\draw (10,-4.0) node[ocirc]{};
+				\draw (11,-3.0) node[ocirc]{};
+				\draw (12,-3.0) node[ocirc]{};
+				\draw (13,-4.0) node[ocirc]{};
+				\draw (15,-4.0) node[ocirc]{};
+				\draw (16,-3.0) node[ocirc]{};
+			\end{circuitikz}
+		}
+	\caption{Měření malých odporů sériovou srovnávací metodou.}
+	\end{subfigure}
+\begin{subfigure}{ \linewidth}
+	\centering
+	\scalebox{0.4}{
+		\begin{circuitikz}[european]
+			\draw (0,-0.0) node[op amp,scale=2.04] (opamp2) {};
+			\draw (opamp2.-) to[short] (-3,1.0);
+			\draw (opamp2.+) to[short] (-3,-1.0);
+			\draw (-1,3.0) to[R,l=$R_x$] (2,3.0);
+			\draw (-3,1.0) to[R,l=$R_{N1}$] (-6,1.0);
+			\draw (-3,1.0) to[short] (-3,3.0);
+			\draw (-3,3.0) to[short] (-1,3.0);
+			\draw (2,3.0) to[short] (3,3.0);
+			\draw (3,3.0) to[short] (3,-0.0);
+			\draw (2,-0.0) to[short] (3,-0.0);
+			\draw (3,-0.0) to[short] (4,-0.0);
+			\draw (4,-0.0) node[ocirc]{};
+			\draw (4,-3.0) node[ocirc]{};
+			\draw (-1,3.0) node[ocirc]{};
+			\draw (2,3.0) node[ocirc]{};
+			\draw (-6,1.0) to[rmeter,t=$U_r$] (-6,-2.0);
+			\draw (4,-3.0) to[short] (-6,-3.0);
+			\draw (-6,-2.0) to[short] (-6,-3.0);
+			\draw (-3,-1.0) to[short] (-3,-3.0);
+			\draw (4,-0.0) to[open,v^>=$U_2$] (4,-3.0);
+			\draw (-3,-3.0) node[ground]{};
+		\end{circuitikz}
+	}
+	\caption{Měření středních odporů převodníkem $R \to U$}
+\end{subfigure}
+\caption{}
+\end{figure}
+
+\section{Soupis použitých přístrojů}
+\begin{tabular}{ll}
+	$V_{SS}$ & Zdroj SS. napětí typ AGILENT E3640A,\\ & měření proudu: TP 0.2\%, rozsah 3\si{\ampere} \\
+	$A$ & číslicový voltmetr, typ HP 34401A, $\pm 0.0050 \%$ údaje\\ & $\pm 0.0035 \%$ rozsahu, rozsah 100 \si{\milli\volt}\\
+	$R_p$ & ochranný rezistor \\
+	$R_X$ & měřený rezistor \\
+	$R_N$ & normálový odpor, velikost 10 \si{\milli\ohm} \\
+	$R_{N1}$ & normálový odpor, velikost 10 \si{\kilo\ohm} \\
+	$OZ$ & operační zesilovač, typ OP 07 \\
+\end{tabular}
+
+\section{Teoretický základ}
+\subsection{Ohmova metoda}
+Pro měření malých proudů použijeme čtyřsvorkové zapojení. Tím eliminujeme přechodové odpory a odpory přívodů. Pro eliminaci vlivu termoelektrických napětí, provedeme dvě měření, s opačným směrem proudu (proud komutujeme). Výsledný odpor bez zkreslujících vlivů se pak spočítá průměrem podle vzorce (1), kde $R_{X1}$ a $R_{X2}$ jsou odpory při různých směrech proudu.
+\begin{equation}
+	R_X = \frac{R_{X1} + R_{X2}}{2}
+\end{equation}
+Hodnoty $R_{X1}$ a $R_{X2}$ se určí podle Ohmova zákona (2) z naměřených hodnot napětí a proudu.
+\begin{equation}
+	R_{X1,2} = \frac{U_{1,2}}{I}
+\end{equation}
+Standardní nejistota měření Ohmovou metodou pro $R_{X1,2}$.
+\begin{equation}
+	u_{RX1,2}=\sqrt{(\frac{\partial R_{X1,2}}{\partial I}u_I)^2+(\frac{\partial R_{X1,2}}{\partial U}u_{U1,2})^2}=\sqrt{(-\frac{U_{1,2}}{I^2}u_I)^2+(\frac{1}{I}u_{U1,2})^2}
+\end{equation}
+kde $u_{U1,2}$ jsou standardní nejistoty napětí $U_{1,2}$ (4) a $u_I$ standardní nejistota proudu (5)
+\begin{equation}
+	u_U = \frac{\delta_1U+\delta_2M}{100\sqrt{3}}
+\end{equation}
+kde $U$ je údaj na ČV,
+$\delta_1$ chyba v procentech údaje ČV,
+$\delta_2$ chyba v procentech rozsahu ČV a
+$M$ použitý rozsah ČV
+
+\begin{equation}
+	u_I = \frac{TP \cdot M}{100\sqrt{3}}
+\end{equation}
+kde $TP$ je třída přesnosti a $M$ použitý rozsah.
+
+Absolutní hodnoty napětí (i proudu) jsou v obou směrech proudu přibližně stejně velké. Proto lze předpokládat, že $u_{RX1}$ je přibližně $u_{RX2}$. Výsledná standardní nejistota hodnoty $R_X$ (6).
+\begin{equation}
+	u_{RX} = \sqrt{(\frac{u{RX1}}{2})^2+(\frac{u{RX2}}{2})^2}=\sqrt{\frac{2u_{RX1,2}^2}{4}}=\frac{u_{RX1,2}}{\sqrt{2}}
+\end{equation}
+
+\subsection{Sériová srovnávací metoda}
+Při měření srovnávací metodou měříme jedním voltmetrem nejprve napětí na měřeném rezistoru a poté na normálovém rezistoru se známou hodnotou. Měříme na čtyřsvorkovém zapojení pro eliminaci přechodových odporů a přívodů. Vzoreček pro výpočet velikosti měřeného odporu(8).
+\begin{equation}
+	R_{X1,2}=\frac{U_{RX1,2}}{U_{RN1,2}}R_N
+\end{equation}
+Abychom opět eliminovali vzniklé termoelektrické napětí, změříme napětí při různých
+směrech proudu a výsledný odpor získáme opět podle vzorečku (1), kde indexy 1,2 značí různé
+směry proudu.
+
+Standardní nejistota měření srovnávací metodou pro $R_{X1,2}$.
+\begin{equation}
+	\begin{multlined}
+	u_{RX1,2}=\sqrt{(\frac{\partial R_{X1,2}}{\partial R_N}u_{RN})^2+(\frac{\partial R_{X1,2}}{\partial U_{RX1,2}}u_{URX1,2})^2+(\frac{\partial R_{X1,2}}{\partial U_{N1,2}}u_{UN1,2})^2}\\
+	=\sqrt{(\frac{\partial R_{X1,2}}{\partial R_N}u_{RN})^2+(\frac{\partial R_{X1,2}}{\partial U_{RX1,2}}u_{URX1,2})^2+(\frac{\partial R_{X1,2}}{\partial U_{N1,2}}u_{UN1,2})^2}
+\end{multlined}
+\end{equation}
+Kde $u_{URN1,2}$ a $u_{URX1,2}$ jsou standardní nejistoty měření napětí číslicovým voltmetrem (4) a $u_{RN}$ je standardní nejistota normálového odporu která je nulová, protože použitý normálový rezistor je absolutní.
+\subsection{Měření převodníkem $R \to U$}
+Pro ideální operační zesilovač v invertujícím zapojení platí
+\begin{equation}
+	\frac{U_2}{U_1}=-\frac{R_2}{R_1}
+\end{equation}
+Z tohoto vztahu při zapojení podle obr. 1c se velikost měřeného odporu RX spočítá:
+\begin{equation}
+	R_X = -\frac{U_2}{U_r}R_N
+\end{equation}
+
+\section{Naměřené hodnoty}
+\subsection{Ohmova metoda}
+$$
+\begin{aligned}
+	I &= 2.999 \si{\ampere}\\
+	U_1 &= 34.415 \si{\milli\volt}\\
+	U_2 &= -34.387 \si{\milli\volt}\\
+	\\
+	R_{X1} &= \frac{U_{1}}{I} = \frac{34.415 \si{\milli\volt}}{2.999 \si{\ampere}} = 11.4755 \si{\milli\ohm}\\
+	R_{X2} &= \frac{U_{1}}{I} = \frac{34.387 \si{\milli\volt}}{2.999 \si{\ampere}} = 11.4662 \si{\milli\ohm}\\
+	\\
+	R_X &= \frac{R_{X1} + R_{X2}}{2} = \frac{11.4755 \si{\milli\ohm + 11.4662 \si{\milli\ohm}}}{2}=11.4708 \si{\milli\ohm}\\
+\end{aligned}
+$$
+\subsection{Sériová srovnávací metoda}
+$$
+\begin{aligned}
+	I &= 2.998 \si{\ampere}\\
+	U_{RN1} &= -29.882 \si{\milli\volt}\\
+	U_{RN2} &= 29.891 \si{\milli\volt}\\
+	U_{RX1} &= -34.388 \si{\milli\volt}\\
+	U_{RX2} &= 34.398 \si{\milli\volt}\\
+	\\
+	R_{X1}&=\frac{U_{RX1}}{U_{RN1}}R_N = \frac{34.388 \si{\milli\volt}}{29.882 \si{\milli\volt}} \cdot 10 \si{\milli\ohm} = 11.5079 \si{\milli\ohm}\\
+	R_{X2}&=\frac{U_{RX2}}{U_{RN2}}R_N = \frac{34.398 \si{\milli\volt}}{29.891 \si{\milli\volt}} \cdot 10 \si{\milli\ohm} = 11.5078 \si{\milli\ohm}\\
+	\\
+	R_X &= \frac{R_{X1} + R_{X2}}{2} = \frac{11.5079 \si{\milli\ohm + 11.5078 \si{\milli\ohm}}}{2}=11.5079 \si{\milli\ohm}\\
+\end{aligned}
+$$
+\subsection{Měření převodníkem $R \to U$}
+$$
+\begin{aligned}
+	U_{21} &= -11.987 \si{\volt}\\
+	U_{22} &= -12.465 \si{\volt}\\
+	\\
+	R_{x1} &= -\frac{U_{21}}{U_r}R_N = -\frac{-11.987 \si{\volt}}{10\si{\volt}}\cdot 10\si{\kilo\ohm} = 11.987\si{\kilo\ohm}\\
+	R_{x2} &= -\frac{U_{22}}{U_r}R_N = -\frac{-12.465 \si{\volt}}{10\si{\volt}}\cdot 10\si{\kilo\ohm} = 12.465\si{\kilo\ohm}\\
+\end{aligned}
+$$
+\section{Výpočet nejistot}
+$$
+\begin{aligned}
+	u_U &= \frac{\delta_1U+\delta_2M}{100\sqrt{3}} = \frac{0.005 \cdot 34.401\si{\milli\volt}+0.0035 \cdot 100\si{\milli\volt}}{100\sqrt{3}}=3.0138\si{\micro\volt}\\
+	u_I &= \frac{TP \cdot M}{100\sqrt{3}} = \frac{0.2 \cdot 3\si{\ampere}}{100\sqrt{3}} = 3.4641\si{\milli\ampere}\\
+	u_{RX1} &= \sqrt{(-\frac{U_{1,2}}{I^2}u_I)^2+(\frac{1}{I}u_{U1,2})^2}= \\ &= \sqrt{(-\frac{34.415 \si{\milli\volt}}{(2.999 \si{\ampere})^2} \cdot 3.4641\si{\milli\ampere})^2+(\frac{1}{2.999 \si{\ampere}} \cdot 3.0138\si{\micro\volt})^2} = 13.2932 \si{\micro\volt}\\
+	u_{RX} &= \frac{u_{RX1}}{\sqrt{2}} = \frac{13.2932 \si{\micro\volt}}{\sqrt{2}} = 9.39972 \si{\micro\volt}\\
+	U_{RX} &= u_{RX} k_r = 9.39972 \si{\micro\volt} \cdot 2 = 18.7918 \si{\micro\volt}
+\end{aligned}
+$$
+\section{Závěr}
+V těchto laboratorních cvičeních jsme měřili velikosti odporů různými metodami. Neznámý malý odpor jsme měřili nejprve pomocí Ohmovy metody a následně srovnávací metodou. Obě měření vedla na hodnotu přibližně 11,5 \si{\milli\ohm}.
+\end{document}

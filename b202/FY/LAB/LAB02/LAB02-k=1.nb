@@ -21,30 +21,30 @@ Notebook[{
 
 Cell[CellGroupData[{
 Cell[BoxData[{
- RowBox[{"R", " ", "=", " ", 
-  RowBox[{"Quantity", "[", 
-   RowBox[{"10", ",", " ", "\"\<Centimeters\>\""}], 
-   "]"}]}], "\[IndentingNewLine]", 
- RowBox[{"U", " ", "=", " ", 
-  RowBox[{"Quantity", "[", 
-   RowBox[{"130", ",", " ", "\"\<Volts\>\""}], "]"}]}], "\[IndentingNewLine]", 
- RowBox[{"\[Mu]", " ", "=", " ", 
-  RowBox[{"Quantity", "[", 
+ RowBox[{"R", " ", "=", " ",
+  RowBox[{"Quantity", "[",
+   RowBox[{"10", ",", " ", "\"\<Centimeters\>\""}],
+   "]"}]}], "\[IndentingNewLine]",
+ RowBox[{"U", " ", "=", " ",
+  RowBox[{"Quantity", "[",
+   RowBox[{"130", ",", " ", "\"\<Volts\>\""}], "]"}]}], "\[IndentingNewLine]",
+ RowBox[{"\[Mu]", " ", "=", " ",
+  RowBox[{"Quantity", "[",
    RowBox[{
-    RowBox[{"4", "*", "Pi", "*", 
-     RowBox[{"10", "^", 
-      RowBox[{"(", 
-       RowBox[{"-", "7"}], ")"}]}]}], ",", " ", 
-    RowBox[{"\"\<Newtons\>\"", "/", 
-     RowBox[{"\"\<Amperes\>\"", "^", "2"}]}]}], 
-   "]"}]}], "\[IndentingNewLine]", 
- RowBox[{"Proud", " ", "=", " ", 
-  RowBox[{"Quantity", "[", 
-   RowBox[{"1.06", ",", " ", "\"\<Amperes\>\""}], 
-   "]"}]}], "\[IndentingNewLine]", 
- RowBox[{"n", " ", "=", " ", "154"}], "\[IndentingNewLine]", 
- RowBox[{"a", " ", "=", " ", 
-  RowBox[{"Quantity", "[", 
+    RowBox[{"4", "*", "Pi", "*",
+     RowBox[{"10", "^",
+      RowBox[{"(",
+       RowBox[{"-", "7"}], ")"}]}]}], ",", " ",
+    RowBox[{"\"\<Newtons\>\"", "/",
+     RowBox[{"\"\<Amperes\>\"", "^", "2"}]}]}],
+   "]"}]}], "\[IndentingNewLine]",
+ RowBox[{"Proud", " ", "=", " ",
+  RowBox[{"Quantity", "[",
+   RowBox[{"1.06", ",", " ", "\"\<Amperes\>\""}],
+   "]"}]}], "\[IndentingNewLine]",
+ RowBox[{"n", " ", "=", " ", "154"}], "\[IndentingNewLine]",
+ RowBox[{"a", " ", "=", " ",
+  RowBox[{"Quantity", "[",
    RowBox[{"200", ",", " ", "\"\<Millimeters\>\""}], "]"}]}]}], "Input",
  CellChangeTimes->{{3.8299106275436316`*^9, 3.829910826336998*^9}},
  CellLabel->"In[7]:=",ExpressionUUID->"cd63a217-a635-48f1-9c6c-a723ac922205"],
@@ -64,9 +64,9 @@ Cell[BoxData[
 Cell[BoxData[
  TemplateBox[{
   FractionBox["\[Pi]", "2500000"],
-   RowBox[{"\"N\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+   RowBox[{"\"N\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]",
      SuperscriptBox["\"A\"", "2"]}],"newtons per ampere squared",FractionBox[
-   "\"Newtons\"", 
+   "\"Newtons\"",
     SuperscriptBox["\"Amperes\"", "2"]]},
   "Quantity"]], "Output",
  CellChangeTimes->{{3.829910812254324*^9, 3.829910829833458*^9}},
@@ -92,15 +92,15 @@ Cell[BoxData[
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"B", " ", "=", " ", 
+ RowBox[{"B", " ", "=", " ",
   RowBox[{
-   RowBox[{"8", "/", 
-    RowBox[{"(", 
-     RowBox[{"5", " ", 
-      RowBox[{"Sqrt", "[", "5", "]"}]}], ")"}]}], "*", 
+   RowBox[{"8", "/",
+    RowBox[{"(",
+     RowBox[{"5", " ",
+      RowBox[{"Sqrt", "[", "5", "]"}]}], ")"}]}], "*",
    RowBox[{
-    RowBox[{"(", 
-     RowBox[{"\[Mu]", "*", "n", "*", "Proud"}], ")"}], "/", 
+    RowBox[{"(",
+     RowBox[{"\[Mu]", "*", "n", "*", "Proud"}], ")"}], "/",
     "a"}]}]}]], "Input",
  CellChangeTimes->{{3.8299108412496147`*^9, 3.8299109353640876`*^9}},
  CellLabel->"In[13]:=",ExpressionUUID->"a7ab032e-e598-4408-957f-a69da901eac3"],
@@ -108,9 +108,9 @@ Cell[BoxData[
 Cell[BoxData[
  TemplateBox[{
   "7.339076842848564`*^-7",
-   RowBox[{"\"N\"", "\[InvisibleSpace]", "\"/(\"", "\[InvisibleSpace]", 
+   RowBox[{"\"N\"", "\[InvisibleSpace]", "\"/(\"", "\[InvisibleSpace]",
      "\"mm\"", "\[ThinSpace]", "\"A\"", "\[InvisibleSpace]", "\")\""}],
-   "newtons per millimeter ampere",FractionBox["\"Newtons\"", 
+   "newtons per millimeter ampere",FractionBox["\"Newtons\"",
     RowBox[{"\"Amperes\"", " ", "\"Millimeters\""}]]},
   "Quantity"]], "Output",
  CellChangeTimes->{3.8299109376564007`*^9},
@@ -120,25 +120,25 @@ Cell[BoxData[
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"result", " ", "=", " ", 
+ RowBox[{"result", " ", "=", " ",
   RowBox[{
-   RowBox[{"(", 
-    RowBox[{"2", "U"}], ")"}], "/", 
-   RowBox[{"(", 
+   RowBox[{"(",
+    RowBox[{"2", "U"}], ")"}], "/",
+   RowBox[{"(",
     RowBox[{
-     RowBox[{"B", "^", "2"}], "*", 
+     RowBox[{"B", "^", "2"}], "*",
      RowBox[{"R", "^", "2"}]}], ")"}]}]}]], "Input",
  CellChangeTimes->{{3.8299109441257524`*^9, 3.829910968592553*^9}},
  CellLabel->"In[14]:=",ExpressionUUID->"a58636eb-7b8f-492d-a83c-8c17234d22b2"],
 
 Cell[BoxData[
  TemplateBox[{"4.827146484112394`*^10",RowBox[{
-     SuperscriptBox["\"A\"", "2"], "\[InvisibleSpace]", "\"V\"", 
-     "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+     SuperscriptBox["\"A\"", "2"], "\[InvisibleSpace]", "\"V\"",
+     "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]",
      SuperscriptBox["\"N\"", "2"]}],"ampere squared volts per newton squared",
    FractionBox[
     RowBox[{
-      SuperscriptBox["\"Amperes\"", "2"], " ", "\"Volts\""}], 
+      SuperscriptBox["\"Amperes\"", "2"], " ", "\"Volts\""}],
     SuperscriptBox["\"Newtons\"", "2"]]},
   "Quantity"]], "Output",
  CellChangeTimes->{3.829910969680313*^9},
@@ -148,7 +148,7 @@ Cell[BoxData[
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"UnitConvert", "[", 
+ RowBox[{"UnitConvert", "[",
   RowBox[{"result", ",", "\"\<C kg^(-1)\>\""}], "]"}]], "Input",
  NumberMarks->False,
  CellLabel->"In[15]:=",ExpressionUUID->"cfe5a1f4-218e-471d-9017-3cd46581e3ef"],
@@ -156,7 +156,7 @@ Cell[BoxData[
 Cell[BoxData[
  TemplateBox[{
   "4.827146484112394`*^10",
-   RowBox[{"\"C\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+   RowBox[{"\"C\"", "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]",
      "\"kg\""}],"coulombs per kilogram",FractionBox[
    "\"Coulombs\"", "\"Kilograms\""]},
   "Quantity"]], "Output",
@@ -206,4 +206,3 @@ Cell[5455, 155, 368, 8, 79, "Output",ExpressionUUID->"bff6a180-dd71-497b-a4d0-2d
 *)
 
 (* End of internal cache information *)
-
