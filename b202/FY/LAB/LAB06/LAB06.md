@@ -37,15 +37,15 @@ G &= 7.86203\cdot 10^{10} J\cdot s\\\\
 
 u(G) &= \sqrt{({\partial G \over \partial l})^2u^2(l) + ({\partial G \over \partial J})^2u^2(J) + ({\partial G \over \partial d})^2u^2(d) + ({\partial G \over \partial T_k})^2u^2(T_k)}\\
 
-u(G) &= \sqrt{({32 \pi J \over d^4 T_k^2})^2u^2(l) + 
-({32 \pi l \over d^4 T_k^2})^2u^2(J) + 
-({-128 \pi J l \over d^5 T_k^2})^2u^2(d) + 
+u(G) &= \sqrt{({32 \pi J \over d^4 T_k^2})^2u^2(l) +
+({32 \pi l \over d^4 T_k^2})^2u^2(J) +
+({-128 \pi J l \over d^5 T_k^2})^2u^2(d) +
 ({-64 \pi J l \over d^4 T_k^3})^2u^2(T_k)}\\
 
 u(G) &= \sqrt{
-({32 \pi \cdot  0.052761 \over 0.001182^4 \cdot  5.515^2})^2\cdot 0.000289^2 + 
+({32 \pi \cdot  0.052761 \over 0.001182^4 \cdot  5.515^2})^2\cdot 0.000289^2 +
 ({32 \pi \cdot  0.88 \over 0.001182^4 \cdot  5.515^2})^2\cdot 0.000002430465^2 +\\
-({-128 \pi \cdot  0.052761 \cdot  0.88 \over 0.001182^5 \cdot  5.515^2})^2\cdot 0.00000417665^2 + 
+({-128 \pi \cdot  0.052761 \cdot  0.88 \over 0.001182^5 \cdot  5.515^2})^2\cdot 0.00000417665^2 +
 ({-64 \pi \cdot  0.052761 \cdot  0.88 \over 0.001182^4 \cdot  5.515^3})^2\cdot 0.003^2
 }\\
 u(G) &= \sqrt{6.66653 \cdot  10^{14} + 1.31166 \cdot  10^{13} + 1.23484 \cdot  10^{18} + 7.31612 \cdot  10^{15}}\\
@@ -92,4 +92,3 @@ u(J_r) &= 0.0000316928 kg\cdot m^2 = 0.0316928 g\cdot m^2\\\\
 \bold{J_r} &= \bold{(1.507 \pm 0.032) g\cdot m^2}
 \end{align*}
 $$
-

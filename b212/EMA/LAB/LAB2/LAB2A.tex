@@ -1,0 +1,290 @@
+\documentclass{article}
+    \title{\textbf{2a. KMITOČTOVÁ ZÁVISLOST STŘÍDAVÝCH VOLTMETRŮ}}
+    \author{Tomáš Kysela}
+    \date{14/3/2022}
+
+    \addtolength{\topmargin}{-3cm}
+    \addtolength{\textheight}{3cm}
+
+\usepackage[czech]{babel}
+\usepackage{graphicx}
+\usepackage{circuitikz}
+\usepackage{amsmath}
+\usepackage{subcaption}
+\usepackage{pgfplots}
+\usepackage{siunitx}
+\usepackage{multirow}
+\usepackage{pgfplots}
+\usepackage{tabularx}
+\sisetup{detect-all}
+
+\makeatletter
+\providecommand\add@text{}
+\newcommand\tagaddtext[1]{%
+    \gdef\add@text{#1\gdef\add@text{}}}%
+\renewcommand\tagform@[1]{%
+    \maketag@@@{\llap{\add@text\quad}(\ignorespaces#1\unskip\@@italiccorr)}%
+}
+\makeatother
+
+\begin{document}
+
+\maketitle
+
+\section{Úkol měření}
+\begin{enumerate}
+	\item V rozsahu kmitočtů 70 \si{\hertz} až 300 \si{\kilo\hertz} (pro kmitočty 70, 200, 500 \si{\hertz}, 1, 3, 10, 20, 50, 100, 200, 300 \si{\kilo\hertz}) změřte kmitočtovou závislost předložených číslicových voltmetrů. Za kmitočtově nezávislý považujte v tomto frekvenčním rozsahu číslicový voltmetr HP 34401A. Měření proveďte na příslušných rozsazích voltmetrů při hodnotách napětí 1 \si{\volt} a 7 \si{\volt}.
+	\item Změřené závislosti vyneste do grafů a teoreticky zdůvodněte.
+\end{enumerate}
+\section{Schéma zapojení}
+\begin{figure}[h]
+	\centering
+	\begin{circuitikz}
+		\draw (0,-0.0) to[twoport,t=$G$] (0,-2.0);
+		\draw (2,-0.0) to[rmeter,t=$V_1$] (2,-2.0);
+		\draw (4,-0.0) to[rmeter,t=$V_2$] (4,-2.0);
+		\draw (6,-0.0) to[rmeter,t=$V_3$] (6,-2.0);
+		\draw (8,-0.0) to[rmeter,t=$V_4$] (8,-2.0);
+		\draw (0,-0.0) to[short] (2,-0.0);
+		\draw (2,-0.0) to[short] (4,-0.0);
+		\draw (4,-0.0) to[short] (6,-0.0);
+		\draw (6,-0.0) to[short] (8,-0.0);
+		\draw (8,-2.0) to[short] (6,-2.0);
+		\draw (6,-2.0) to[short] (4,-2.0);
+		\draw (4,-2.0) to[short] (2,-2.0);
+		\draw (2,-2.0) to[short] (0,-2.0);
+	\end{circuitikz}
+\end{figure}
+\section{Soupis použitých přístrojů}
+\begin{tabular}{ll}
+	$G$ & RC generátor \\
+	$V_1$ & číslicový multimetr HP 34401A, rozsah 1 V a 10 V \\
+	$V_2$ & číslicový multimetr Summit 45, rozsah 4 V a 40 V \\
+	$V_3$ & číslicový multimetr MY-64 (Mastech), rozsah 2 V, 20 V a 200 V \\
+	$V_4$ & nízkofrekvenční elektronický voltmetr U1241C, rozsah 1 V a 10 V \\
+\end{tabular}
+\section{Teoretický základ}
+Číslicové měřící přístroje jsou kmitočtově závislé. Jejich šířka pásma (kde měří správně) se odvíjí od mezního kmitočtu, tj. bodu, kde přenos klesne o 3 dB. U levných kmitočtů často dochází k rezonanci, tj. překmitu. Mezní kmitočet je proto často určen až za překmitem, šířka pásma je větší a tudíž nesprávná.
+
+\section{Naměřené hodnoty}
+
+\subsection{1 V}
+\begin{tabular}{c || c | c | c | c}
+	\multirow{2}{*}{Kmitočet[\si{\kilo\hertz}]} & \multicolumn{4}{c}{Napětí [\si{\volt}] }\\ & 34401A & SM45 & MY-64 & U1241C \\\hline \hline
+	0.07 & 1.016 & 1.010 & 1.020 & 1.016 \\\hline
+	0.2 & 1.009 & 1.003 & 1.015 & 1.010 \\\hline
+	0.5 & 1.008 & 0.997 & 1.014 & 1.009 \\\hline
+	1 & 1.007 & 0.985 & 1.014 & 1.009 \\\hline
+	3 & 1.006 & 0.893 & 1.013 & 1.006 \\\hline
+	10 & 1.002 & 0.498 & 0.981 & 1.003 \\\hline
+	20 & 1.000 & 0.245 & 0.918 & 1.002 \\\hline
+	50 & 0.999 & 0.037 & 0.734 & 1.040 \\\hline
+	100 & 1.010 & 0.003 & 0.364 & 1.155 \\\hline
+	200 & 0.999 & 0.001 & 0.008 & 1.162 \\\hline
+	300 & 1.009 & 0.000 & 0.006 & 0.806
+\end{tabular}
+
+\begin{tikzpicture}
+	\begin{axis}[
+		xmode=log,
+		log ticks with fixed point,
+		xlabel={Kmitočet [\si{\kilo\hertz}]},
+		ylabel={Napětí [\si{\volt}]},
+		xmin=0, xmax=320,
+		ymin=0, ymax=1.2,
+		legend pos=south west,
+		xmajorgrids=true,
+		ymajorgrids=true,
+		grid style=dotted,
+		]
+		
+		\addplot[
+		color=blue,
+		mark=*,
+		]
+		table {
+			0.07 1.016
+			0.2 1.009
+			0.5 1.008
+			1 1.007
+			3 1.006
+			10 1.002
+			20 1.000
+			50 0.999
+			100 1.010
+			200 0.999
+			300 1.009
+		};
+	
+		\addplot[
+		color=red,
+		mark=*,
+		]
+		table {
+			0.07 1.010
+			0.2 1.003
+			0.5 0.997
+			1 0.985
+			3 0.893
+			10 0.498
+			20 0.245
+			50 0.037
+			100 0.003
+			200 0.001
+			300 0.000
+		};
+	
+		\addplot[
+		color=green,
+		mark=*,
+		]
+		table {
+			0.07 1.020
+			0.2 1.015
+			0.5 1.014
+			1 1.014
+			3 1.013
+			10 0.981
+			20 0.918
+			50 0.734
+			100 0.364
+			200 0.008
+			300 0.006
+		};
+	
+		\addplot[
+		color=magenta,
+		mark=*,
+		]
+		table {
+			0.07 1.016
+			0.2 1.010
+			0.5 1.009
+			1 1.007
+			3 1.006
+			10 1.003
+			20 1.002
+			50 1.040
+			100 1.155
+			200 1.162
+			300 0.806
+		};
+		
+		\legend{34401A,SM45,MY-64,U1241C}
+		
+	\end{axis}
+\end{tikzpicture}
+
+\subsection{7 V}
+
+\begin{tabular}[]{c || c | c | c | c}
+	\multirow{2}{*}{Kmitočet[\si{\kilo\hertz}]} & \multicolumn{4}{c}{Napětí [\si{\volt}] }\\ & 34401A & SM45 & MY-64 & U1241C \\\hline \hline
+	0.07 & 7.052 & 6.96 & 7.07 & 7.062 \\\hline
+	0.2 & 7.056 & 6.96 & 7.08 & 7.068 \\\hline
+	0.5 & 7.046 & 6.95 & 7.07 & 7.059 \\\hline
+	1 & 7.046 & 6.93 & 7.07 & 7.053 \\\hline
+	3 & 7.048 & 6.87 & 7.21 & 7.042 \\\hline
+	10 & 7.028 & 6.62 & 8.95 & 7.034 \\\hline
+	20 & 7.025 & 6.26 & 13.43 & 7.022 \\\hline
+	50 & 7.034 & 5.25 & 16.3 & 7.050 \\\hline
+	100 & 7.017 & 3.62 & 20.5 & 7.145 \\\hline
+	200 & 7.018 & 0.63 & 5.7 & 7.603 \\\hline
+	300 & 7.002 & 0.14 & 0.9 & 8.061
+\end{tabular}
+
+\begin{tikzpicture}
+	\begin{axis}[
+		xmode=log,
+		ymode=linear,
+		log ticks with fixed point,
+		xlabel={Kmitočet [\si{\kilo\hertz}]},
+		ylabel={Napětí [\si{\volt}]},
+		xmin=0, xmax=320,
+		ymin=0, ymax=21,
+		legend pos=north west,
+		xmajorgrids=true,
+		ymajorgrids=true,
+		grid style=dotted,
+		]
+		
+		\addplot[
+		color=blue,
+		mark=*,
+		]
+		table {
+			0.07 7.052
+			0.2 7.056
+			0.5 7.046
+			1 7.046
+			3 7.048
+			10 7.028
+			20 7.025
+			50 7.034
+			100 7.017
+			200 7.018
+			300 7.002
+		};
+		
+		\addplot[
+		color=red,
+		mark=*,
+		]
+		table {
+			0.07 6.96
+			0.2 6.96
+			0.5 6.85
+			1 6.93
+			3 6.87
+			10 6.62
+			20 6.26
+			50 5.25
+			100 3.62
+			200 0.63
+			300 0.14
+		};
+		
+		\addplot[
+		color=green,
+		mark=*,
+		]
+		table {
+			0.07 7.07
+			0.2 7.08
+			0.5 7.07
+			1 7.07
+			3 7.21
+			10 8.95
+			20 13.43
+			50 16.3
+			100 20.5
+			200 5.7
+			300 0.9
+		};
+		
+		\addplot[
+		color=magenta,
+		mark=*,
+		]
+		table {
+			0.07 7.062
+			0.2 7.068
+			0.5 7.059
+			1 7.053
+			3 7.042
+			10 7.034
+			20 7.022
+			50 7.050
+			100 7.145
+			200 7.603
+			300 8.061
+		};
+		
+		\legend{34401A,SM45,MY-64,U1241C}
+		
+	\end{axis}
+\end{tikzpicture}
+
+\section{Závěr}
+Dle očekávání byl přístroj 33401A přesný a stabilní na celém rozsahu. Ruční multimetry naopak byly překvapivě stabilní i po rozsazích udávaných výrobcem.
+
+\end{document}
