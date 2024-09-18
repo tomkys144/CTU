@@ -1,0 +1,721 @@
+
+
+Microchip MPLAB XC8 Assembler V2.45 build 20230818022343 
+                                                                                               Wed Oct 11 16:02:27 2023
+
+Microchip MPLAB XC8 C Compiler v2.45 (Free license) build 20230818022343 Og1 
+     1                           	processor	18F47K40
+     2                           	fnconf	rparam,??,?,0
+     3                           	pagewidth 120
+     4                           	opt	flic
+     5                           	psect	cinit,global,reloc=2,class=CODE,delta=1
+     6                           	psect	bssCOMRAM,global,class=COMRAM,space=1,delta=1,lowdata,noexec
+     7                           	psect	cstackCOMRAM,global,class=COMRAM,space=1,delta=1,lowdata,noexec
+     8                           	psect	text0,global,reloc=2,class=CODE,delta=1
+     9                           	psect	smallconst,global,reloc=2,class=SMALLCONST,delta=1,noexec
+    10                           	psect	intsave_regs,global,class=BIGRAM,space=1,delta=1,noexec
+    11                           	psect	rparam,global,class=COMRAM,space=1,delta=1,noexec
+    12                           	psect	idloc,global,abs,ovrld,class=IDLOC,space=5,delta=1,noexec
+    13                           	psect	config,global,abs,ovrld,class=CONFIG,space=4,delta=1,noexec
+    14   000000                     
+    15                           ; Generated 21/07/2023 GMT
+    16                           ; 
+    17                           ; Copyright © 2023, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    18                           ; All rights reserved.
+    19                           ; 
+    20                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+      +                          ip").
+    21                           ; 
+    22                           ; Redistribution and use in source and binary forms, with or without modification, are
+    23                           ; permitted provided that the following conditions are met:
+    24                           ; 
+    25                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+      +                          t of
+    26                           ;        conditions and the following disclaimer.
+    27                           ; 
+    28                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+      +                          list
+    29                           ;        of conditions and the following disclaimer in the documentation and/or other
+    30                           ;        materials provided with the distribution. Publication is not required when
+    31                           ;        this file is used in an embedded application.
+    32                           ; 
+    33                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+      +                          is
+    34                           ;        software without specific prior written permission.
+    35                           ; 
+    36                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    37                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+      +                          OR
+    38                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+      +                          T,
+    39                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    40                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    41                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+      +                          RICT
+    42                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+      +                          SE OF
+    43                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    44                           ; 
+    45                           ; 
+    46                           ; Code-generator required, PIC18F47K40 Definitions
+    47                           ; 
+    48                           ; SFR Addresses
+    49   000000                     _LATCbits	set	3973
+    50   000000                     _LATAbits	set	3971
+    51   000000                     _ANSELA	set	3857
+    52   000000                     _ANSELB	set	3865
+    53   000000                     _ANSELC	set	3873
+    54   000000                     _ANSELD	set	3878
+    55   000000                     _LATA	set	3971
+    56   000000                     _TRISA	set	3976
+    57   000000                     _PORTBbits	set	3982
+    58   000000                     _TRISD	set	3979
+    59   000000                     _TRISC	set	3978
+    60   000000                     _TRISB	set	3977
+    61   000000                     _LATD	set	3974
+    62   000000                     _LATC	set	3973
+    63   000000                     _LATB	set	3972
+    64                           
+    65                           ; #config settings
+    66                           
+    67                           	psect	cinit
+    68   000FAA                     __pcinit:
+    69                           	callstack 0
+    70   000FAA                     start_initialization:
+    71                           	callstack 0
+    72   000FAA                     __initialization:
+    73                           	callstack 0
+    74                           
+    75                           ; Clear objects allocated to COMRAM (1 bytes)
+    76   000FAA  6A01               	clrf	__pbssCOMRAM& (0+255),c
+    77   000FAC                     end_of_initialization:
+    78                           	callstack 0
+    79   000FAC                     __end_of__initialization:
+    80                           	callstack 0
+    81   000FAC  0100               	movlb	0
+    82   000FAE  EF81  F007         	goto	_main	;jump to C main() function
+    83                           
+    84                           	psect	bssCOMRAM
+    85   000001                     __pbssCOMRAM:
+    86                           	callstack 0
+    87   000001                     _i:
+    88                           	callstack 0
+    89   000001                     	ds	1
+    90                           
+    91                           	psect	cstackCOMRAM
+    92   000002                     __pcstackCOMRAM:
+    93                           	callstack 0
+    94   000002                     ??_main:
+    95                           
+    96                           ; 1 bytes @ 0x0
+    97   000002                     	ds	1
+    98                           
+    99 ;;
+   100 ;;Main: autosize = 0, tempsize = 1, incstack = 0, save=0
+   101 ;;
+   102 ;; *************** function _main *****************
+   103 ;; Defined at:
+   104 ;;		line 46 in file "main.c"
+   105 ;; Parameters:    Size  Location     Type
+   106 ;;		None
+   107 ;; Auto vars:     Size  Location     Type
+   108 ;;		None
+   109 ;; Return value:  Size  Location     Type
+   110 ;;                  1    wreg      void 
+   111 ;; Registers used:
+   112 ;;		wreg, status,2
+   113 ;; Tracked objects:
+   114 ;;		On entry : 0/0
+   115 ;;		On exit  : 0/0
+   116 ;;		Unchanged: 0/0
+   117 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14
+   118 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0
+   119 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0
+   120 ;;      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0
+   121 ;;      Totals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0
+   122 ;;Total ram usage:        1 bytes
+   123 ;; This function calls:
+   124 ;;		Nothing
+   125 ;; This function is called by:
+   126 ;;		Startup code after reset
+   127 ;; This function uses a non-reentrant model
+   128 ;;
+   129                           
+   130                           	psect	text0
+   131   000F02                     __ptext0:
+   132                           	callstack 0
+   133   000F02                     _main:
+   134                           	callstack 31
+   135   000F02                     
+   136                           ;main.c: 48:     ANSELA = 0b00000000;
+   137   000F02  0E00               	movlw	0
+   138   000F04  010F               	movlb	15	; () banked
+   139   000F06  6F11               	movwf	17,b	;volatile
+   140                           
+   141                           ;main.c: 49:     ANSELB = 0b00000000;
+   142   000F08  0E00               	movlw	0
+   143   000F0A  6F19               	movwf	25,b	;volatile
+   144                           
+   145                           ;main.c: 50:     ANSELC = 0b00000000;
+   146   000F0C  0E00               	movlw	0
+   147   000F0E  6F21               	movwf	33,b	;volatile
+   148                           
+   149                           ;main.c: 51:     ANSELD = 0b00000000;
+   150   000F10  0E00               	movlw	0
+   151   000F12  6F26               	movwf	38,b	;volatile
+   152                           
+   153                           ;main.c: 52:     TRISA = 0b00000000;
+   154   000F14  0E00               	movlw	0
+   155   000F16  6E88               	movwf	136,c	;volatile
+   156                           
+   157                           ;main.c: 53:     TRISB = 0b11110000;
+   158   000F18  0EF0               	movlw	240
+   159   000F1A  6E89               	movwf	137,c	;volatile
+   160                           
+   161                           ;main.c: 54:     TRISC = 0b00000000;
+   162   000F1C  0E00               	movlw	0
+   163   000F1E  6E8A               	movwf	138,c	;volatile
+   164                           
+   165                           ;main.c: 55:     TRISD = 0b00000000;
+   166   000F20  0E00               	movlw	0
+   167   000F22  6E8B               	movwf	139,c	;volatile
+   168                           
+   169                           ;main.c: 56:     LATA = 0b00000000;
+   170   000F24  0E00               	movlw	0
+   171   000F26  6E83               	movwf	131,c	;volatile
+   172                           
+   173                           ;main.c: 57:     LATB = 0b00001111;
+   174   000F28  0E0F               	movlw	15
+   175   000F2A  6E84               	movwf	132,c	;volatile
+   176                           
+   177                           ;main.c: 58:     LATC = 0b00000000;
+   178   000F2C  0E00               	movlw	0
+   179   000F2E  6E85               	movwf	133,c	;volatile
+   180                           
+   181                           ;main.c: 59:     LATD = 0b00000000;
+   182   000F30  0E00               	movlw	0
+   183   000F32  6E86               	movwf	134,c	;volatile
+   184   000F34                     l759:
+   185                           
+   186                           ;main.c: 64:         LATAbits.LATA0 = 1;
+   187   000F34  8083               	bsf	131,0,c	;volatile
+   188                           
+   189                           ;main.c: 66:         LATD = 0b1100110;
+   190   000F36  0E66               	movlw	102
+   191   000F38  6E86               	movwf	134,c	;volatile
+   192   000F3A                     
+   193                           ;main.c: 68:         _delay((unsigned long)((3000)*(8000000/4000000.0)));
+   194   000F3A  0E08               	movlw	8
+   195   000F3C  6E02               	movwf	??_main^0,c
+   196   000F3E  0ECA               	movlw	202
+   197   000F40                     u17:
+   198   000F40  2EE8               	decfsz	wreg,f,c
+   199   000F42  D7FE               	bra	u17
+   200   000F44  2E02               	decfsz	??_main^0,f,c
+   201   000F46  D7FC               	bra	u17
+   202   000F48                     
+   203                           ;main.c: 70:         LATAbits.LATA0 = 0;
+   204   000F48  9083               	bcf	131,0,c	;volatile
+   205   000F4A                     
+   206                           ;main.c: 72:         LATAbits.LATA1 = 1;
+   207   000F4A  8283               	bsf	131,1,c	;volatile
+   208   000F4C                     
+   209                           ;main.c: 74:         _delay((unsigned long)((3000)*(8000000/4000000.0)));
+   210   000F4C  0E08               	movlw	8
+   211   000F4E  6E02               	movwf	??_main^0,c
+   212   000F50  0ECA               	movlw	202
+   213   000F52                     u27:
+   214   000F52  2EE8               	decfsz	wreg,f,c
+   215   000F54  D7FE               	bra	u27
+   216   000F56  2E02               	decfsz	??_main^0,f,c
+   217   000F58  D7FC               	bra	u27
+   218                           
+   219                           ;main.c: 76:         LATD = 0b1100110;
+   220   000F5A  0E66               	movlw	102
+   221   000F5C  6E86               	movwf	134,c	;volatile
+   222   000F5E                     
+   223                           ;main.c: 78:         _delay((unsigned long)((3000)*(8000000/4000000.0)));
+   224   000F5E  0E08               	movlw	8
+   225   000F60  6E02               	movwf	??_main^0,c
+   226   000F62  0ECA               	movlw	202
+   227   000F64                     u37:
+   228   000F64  2EE8               	decfsz	wreg,f,c
+   229   000F66  D7FE               	bra	u37
+   230   000F68  2E02               	decfsz	??_main^0,f,c
+   231   000F6A  D7FC               	bra	u37
+   232   000F6C                     
+   233                           ;main.c: 80:         LATAbits.LATA1 = 0;
+   234   000F6C  9283               	bcf	131,1,c	;volatile
+   235   000F6E                     
+   236                           ;main.c: 82:         LATAbits.LATA2 = 1;
+   237   000F6E  8483               	bsf	131,2,c	;volatile
+   238   000F70                     
+   239                           ;main.c: 84:         _delay((unsigned long)((3000)*(8000000/4000000.0)));
+   240   000F70  0E08               	movlw	8
+   241   000F72  6E02               	movwf	??_main^0,c
+   242   000F74  0ECA               	movlw	202
+   243   000F76                     u47:
+   244   000F76  2EE8               	decfsz	wreg,f,c
+   245   000F78  D7FE               	bra	u47
+   246   000F7A  2E02               	decfsz	??_main^0,f,c
+   247   000F7C  D7FC               	bra	u47
+   248                           
+   249                           ;main.c: 86:         LATD = 0b0000110;
+   250   000F7E  0E06               	movlw	6
+   251   000F80  6E86               	movwf	134,c	;volatile
+   252   000F82                     
+   253                           ;main.c: 88:         _delay((unsigned long)((3000)*(8000000/4000000.0)));
+   254   000F82  0E08               	movlw	8
+   255   000F84  6E02               	movwf	??_main^0,c
+   256   000F86  0ECA               	movlw	202
+   257   000F88                     u57:
+   258   000F88  2EE8               	decfsz	wreg,f,c
+   259   000F8A  D7FE               	bra	u57
+   260   000F8C  2E02               	decfsz	??_main^0,f,c
+   261   000F8E  D7FC               	bra	u57
+   262   000F90                     
+   263                           ;main.c: 90:         LATA = 0;
+   264   000F90  0E00               	movlw	0
+   265   000F92  6E83               	movwf	131,c	;volatile
+   266                           
+   267                           ;main.c: 92:         _delay((unsigned long)((3000)*(8000000/4000000.0)));
+   268   000F94  0E08               	movlw	8
+   269   000F96  6E02               	movwf	??_main^0,c
+   270   000F98  0ECA               	movlw	202
+   271   000F9A                     u67:
+   272   000F9A  2EE8               	decfsz	wreg,f,c
+   273   000F9C  D7FE               	bra	u67
+   274   000F9E  2E02               	decfsz	??_main^0,f,c
+   275   000FA0  D7FC               	bra	u67
+   276   000FA2  EF9A  F007         	goto	l759
+   277   000FA6  EF00  F000         	goto	start
+   278   000FAA                     __end_of_main:
+   279                           	callstack 0
+   280                           
+   281                           	psect	smallconst
+   282   000F00                     __psmallconst:
+   283                           	callstack 0
+   284   000F00  00                 	db	0
+   285   000F01  00                 	db	0	; dummy byte at the end
+   286   000000                     
+   287                           	psect	rparam
+   288   000000                     
+   289                           	psect	idloc
+   290                           
+   291                           ;Config register IDLOC0 @ 0x200000
+   292                           ;	unspecified, using default values
+   293   200000                     	org	2097152
+   294   200000  FFFF               	dw	65535
+   295                           
+   296                           ;Config register IDLOC1 @ 0x200002
+   297                           ;	unspecified, using default values
+   298   200002                     	org	2097154
+   299   200002  FFFF               	dw	65535
+   300                           
+   301                           ;Config register IDLOC2 @ 0x200004
+   302                           ;	unspecified, using default values
+   303   200004                     	org	2097156
+   304   200004  FFFF               	dw	65535
+   305                           
+   306                           ;Config register IDLOC3 @ 0x200006
+   307                           ;	unspecified, using default values
+   308   200006                     	org	2097158
+   309   200006  FFFF               	dw	65535
+   310                           
+   311                           ;Config register IDLOC4 @ 0x200008
+   312                           ;	unspecified, using default values
+   313   200008                     	org	2097160
+   314   200008  FFFF               	dw	65535
+   315                           
+   316                           ;Config register IDLOC5 @ 0x20000A
+   317                           ;	unspecified, using default values
+   318   20000A                     	org	2097162
+   319   20000A  FFFF               	dw	65535
+   320                           
+   321                           ;Config register IDLOC6 @ 0x20000C
+   322                           ;	unspecified, using default values
+   323   20000C                     	org	2097164
+   324   20000C  FFFF               	dw	65535
+   325                           
+   326                           ;Config register IDLOC7 @ 0x20000E
+   327                           ;	unspecified, using default values
+   328   20000E                     	org	2097166
+   329   20000E  FFFF               	dw	65535
+   330                           
+   331                           	psect	config
+   332                           
+   333                           ;Config register CONFIG1L @ 0x300000
+   334                           ;	External Oscillator mode Selection bits
+   335                           ;	FEXTOSC = HS, HS (crystal oscillator) above 8 MHz; PFM set to high power
+   336                           ;	Power-up default value for COSC bits
+   337                           ;	RSTOSC = EXTOSC, EXTOSC operating per FEXTOSC bits (device manufacturing default)
+   338   300000                     	org	3145728
+   339   300000  FA                 	db	250
+   340                           
+   341                           ;Config register CONFIG1H @ 0x300001
+   342                           ;	Clock Out Enable bit
+   343                           ;	CLKOUTEN = OFF, CLKOUT function is disabled
+   344                           ;	Clock Switch Enable bit
+   345                           ;	CSWEN = ON, Writing to NOSC and NDIV is allowed
+   346                           ;	Fail-Safe Clock Monitor Enable bit
+   347                           ;	FCMEN = ON, Fail-Safe Clock Monitor enabled
+   348   300001                     	org	3145729
+   349   300001  FF                 	db	255
+   350                           
+   351                           ;Config register CONFIG2L @ 0x300002
+   352                           ;	Master Clear Enable bit
+   353                           ;	MCLRE = EXTMCLR, If LVP = 0, MCLR pin is MCLR; If LVP = 1, RE3 pin function is MCLR
+   354                           ;	Power-up Timer Enable bit
+   355                           ;	PWRTE = OFF, Power up timer disabled
+   356                           ;	Low-power BOR enable bit
+   357                           ;	LPBOREN = OFF, ULPBOR disabled
+   358                           ;	Brown-out Reset Enable bits
+   359                           ;	BOREN = SBORDIS, Brown-out Reset enabled , SBOREN bit is ignored
+   360   300002                     	org	3145730
+   361   300002  FF                 	db	255
+   362                           
+   363                           ;Config register CONFIG2H @ 0x300003
+   364                           ;	Brown Out Reset Voltage selection bits
+   365                           ;	BORV = VBOR_2P45, Brown-out Reset Voltage (VBOR) set to 2.45V
+   366                           ;	ZCD Disable bit
+   367                           ;	ZCD = OFF, ZCD disabled. ZCD can be enabled by setting the ZCDSEN bit of ZCDCON
+   368                           ;	PPSLOCK bit One-Way Set Enable bit
+   369                           ;	PPS1WAY = ON, PPSLOCK bit can be cleared and set only once; PPS registers remain locke
+      +                          d after one clear/set cycle
+   370                           ;	Stack Full/Underflow Reset Enable bit
+   371                           ;	STVREN = ON, Stack full/underflow will cause Reset
+   372                           ;	Debugger Enable bit
+   373                           ;	DEBUG = OFF, Background debugger disabled
+   374                           ;	Extended Instruction Set Enable bit
+   375                           ;	XINST = OFF, Extended Instruction Set and Indexed Addressing Mode disabled
+   376   300003                     	org	3145731
+   377   300003  FF                 	db	255
+   378                           
+   379                           ;Config register CONFIG3L @ 0x300004
+   380                           ;	WDT Period Select bits
+   381                           ;	WDTCPS = WDTCPS_31, Divider ratio 1:65536; software control of WDTPS
+   382                           ;	WDT operating mode
+   383                           ;	WDTE = OFF, WDT Disabled
+   384   300004                     	org	3145732
+   385   300004  9F                 	db	159
+   386                           
+   387                           ;Config register CONFIG3H @ 0x300005
+   388                           ;	WDT Window Select bits
+   389                           ;	WDTCWS = WDTCWS_7, window always open (100%); software control; keyed access not requi
+      +                          red
+   390                           ;	WDT input clock selector
+   391                           ;	WDTCCS = SC, Software Control
+   392   300005                     	org	3145733
+   393   300005  FF                 	db	255
+   394                           
+   395                           ;Config register CONFIG4L @ 0x300006
+   396                           ;	unspecified, using default values
+   397                           ;	Write Protection Block 0
+   398                           ;	WRT0 = 0x1, unprogrammed default
+   399                           ;	Write Protection Block 1
+   400                           ;	WRT1 = 0x1, unprogrammed default
+   401                           ;	Write Protection Block 2
+   402                           ;	WRT2 = 0x1, unprogrammed default
+   403                           ;	Write Protection Block 3
+   404                           ;	WRT3 = 0x1, unprogrammed default
+   405                           ;	Write Protection Block 3
+   406                           ;	WRT4 = 0x1, unprogrammed default
+   407                           ;	Write Protection Block 3
+   408                           ;	WRT5 = 0x1, unprogrammed default
+   409                           ;	Write Protection Block 3
+   410                           ;	WRT6 = 0x1, unprogrammed default
+   411                           ;	Write Protection Block 3
+   412                           ;	WRT7 = 0x1, unprogrammed default
+   413   300006                     	org	3145734
+   414   300006  FF                 	db	255
+   415                           
+   416                           ;Config register CONFIG4H @ 0x300007
+   417                           ;	Configuration Register Write Protection bit
+   418                           ;	WRTC = 0x1, unprogrammed default
+   419                           ;	Boot Block Write Protection bit
+   420                           ;	WRTB = 0x1, unprogrammed default
+   421                           ;	Data EEPROM Write Protection bit
+   422                           ;	WRTD = 0x1, unprogrammed default
+   423                           ;	Scanner Enable bit
+   424                           ;	SCANE = 0x1, unprogrammed default
+   425                           ;	Low Voltage Programming Enable bit
+   426                           ;	LVP = OFF, HV on MCLR/VPP must be used for programming
+   427   300007                     	org	3145735
+   428   300007  DF                 	db	223
+   429                           
+   430                           ;Config register CONFIG5L @ 0x300008
+   431                           ;	unspecified, using default values
+   432                           ;	UserNVM Program Memory Code Protection bit
+   433                           ;	CP = 0x1, unprogrammed default
+   434                           ;	DataNVM Memory Code Protection bit
+   435                           ;	CPD = 0x1, unprogrammed default
+   436   300008                     	org	3145736
+   437   300008  FF                 	db	255
+   438                           
+   439                           ;Config register CONFIG5H @ 0x300009
+   440                           ;	unspecified, using default values
+   441   300009                     	org	3145737
+   442   300009  FF                 	db	255
+   443                           
+   444                           ;Config register CONFIG6L @ 0x30000A
+   445                           ;	unspecified, using default values
+   446                           ;	Table Read Protection Block 0
+   447                           ;	EBTR0 = 0x1, unprogrammed default
+   448                           ;	Table Read Protection Block 1
+   449                           ;	EBTR1 = 0x1, unprogrammed default
+   450                           ;	Table Read Protection Block 2
+   451                           ;	EBTR2 = 0x1, unprogrammed default
+   452                           ;	Table Read Protection Block 3
+   453                           ;	EBTR3 = 0x1, unprogrammed default
+   454                           ;	Table Read Protection Block 4
+   455                           ;	EBTR4 = 0x1, unprogrammed default
+   456                           ;	Table Read Protection Block 5
+   457                           ;	EBTR5 = 0x1, unprogrammed default
+   458                           ;	Table Read Protection Block 6
+   459                           ;	EBTR6 = 0x1, unprogrammed default
+   460                           ;	Table Read Protection Block 7
+   461                           ;	EBTR7 = 0x1, unprogrammed default
+   462   30000A                     	org	3145738
+   463   30000A  FF                 	db	255
+   464                           
+   465                           ;Config register CONFIG6H @ 0x30000B
+   466                           ;	unspecified, using default values
+   467                           ;	Boot Block Table Read Protection bit
+   468                           ;	EBTRB = 0x1, unprogrammed default
+   469   30000B                     	org	3145739
+   470   30000B  FF                 	db	255
+   471                           tosu	equ	0xFFF
+   472                           tosh	equ	0xFFE
+   473                           tosl	equ	0xFFD
+   474                           stkptr	equ	0xFFC
+   475                           pclatu	equ	0xFFB
+   476                           pclath	equ	0xFFA
+   477                           pcl	equ	0xFF9
+   478                           tblptru	equ	0xFF8
+   479                           tblptrh	equ	0xFF7
+   480                           tblptrl	equ	0xFF6
+   481                           tablat	equ	0xFF5
+   482                           prodh	equ	0xFF4
+   483                           prodl	equ	0xFF3
+   484                           indf0	equ	0xFEF
+   485                           postinc0	equ	0xFEE
+   486                           postdec0	equ	0xFED
+   487                           preinc0	equ	0xFEC
+   488                           plusw0	equ	0xFEB
+   489                           fsr0h	equ	0xFEA
+   490                           fsr0l	equ	0xFE9
+   491                           wreg	equ	0xFE8
+   492                           indf1	equ	0xFE7
+   493                           postinc1	equ	0xFE6
+   494                           postdec1	equ	0xFE5
+   495                           preinc1	equ	0xFE4
+   496                           plusw1	equ	0xFE3
+   497                           fsr1h	equ	0xFE2
+   498                           fsr1l	equ	0xFE1
+   499                           bsr	equ	0xFE0
+   500                           indf2	equ	0xFDF
+   501                           postinc2	equ	0xFDE
+   502                           postdec2	equ	0xFDD
+   503                           preinc2	equ	0xFDC
+   504                           plusw2	equ	0xFDB
+   505                           fsr2h	equ	0xFDA
+   506                           fsr2l	equ	0xFD9
+   507                           status	equ	0xFD8
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        0
+    BSS         1
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMRAM           95      1       2
+    BANK0           160      0       0
+    BANK1           256      0       0
+    BANK2           256      0       0
+    BANK3           256      0       0
+    BANK4           256      0       0
+    BANK5           256      0       0
+    BANK6           256      0       0
+    BANK7           256      0       0
+    BANK8           256      0       0
+    BANK9           256      0       0
+    BANK10          256      0       0
+    BANK11          256      0       0
+    BANK12          256      0       0
+    BANK13          256      0       0
+    BANK14          136      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMRAM
+
+    None.
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _main in BANK4
+
+    None.
+
+Critical Paths under _main in BANK5
+
+    None.
+
+Critical Paths under _main in BANK6
+
+    None.
+
+Critical Paths under _main in BANK7
+
+    None.
+
+Critical Paths under _main in BANK8
+
+    None.
+
+Critical Paths under _main in BANK9
+
+    None.
+
+Critical Paths under _main in BANK10
+
+    None.
+
+Critical Paths under _main in BANK11
+
+    None.
+
+Critical Paths under _main in BANK12
+
+    None.
+
+Critical Paths under _main in BANK13
+
+    None.
+
+Critical Paths under _main in BANK14
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 1     1      0       0
+                                              0 COMRAM     1     1      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 0
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BIGRAM             E87      0       0      43        0.0%
+EEDATA             400      0       0       0        0.0%
+BITBANK13          100      0       0      30        0.0%
+BANK13             100      0       0      31        0.0%
+BITBANK12          100      0       0      28        0.0%
+BANK12             100      0       0      29        0.0%
+BITBANK11          100      0       0      26        0.0%
+BANK11             100      0       0      27        0.0%
+BITBANK10          100      0       0      24        0.0%
+BANK10             100      0       0      25        0.0%
+BITBANK9           100      0       0      22        0.0%
+BANK9              100      0       0      23        0.0%
+BITBANK8           100      0       0      20        0.0%
+BANK8              100      0       0      21        0.0%
+BITBANK7           100      0       0      18        0.0%
+BANK7              100      0       0      19        0.0%
+BITBANK6           100      0       0      16        0.0%
+BANK6              100      0       0      17        0.0%
+BITBANK5           100      0       0      14        0.0%
+BANK5              100      0       0      15        0.0%
+BITBANK4           100      0       0      12        0.0%
+BANK4              100      0       0      13        0.0%
+BITBANK3           100      0       0      10        0.0%
+BANK3              100      0       0      11        0.0%
+BITBANK2           100      0       0       8        0.0%
+BANK2              100      0       0       9        0.0%
+BITBANK1           100      0       0       6        0.0%
+BANK1              100      0       0       7        0.0%
+BITBANK0            A0      0       0       4        0.0%
+BANK0               A0      0       0       5        0.0%
+BITBANK14           88      0       0      32        0.0%
+BANK14              88      0       0      33        0.0%
+BITBIGSFRl          84      0       0      41        0.0%
+BITBIGSFRhhhhhh     71      0       0      34        0.0%
+BITCOMRAM           5F      0       0       0        0.0%
+COMRAM              5F      1       2       1        2.1%
+BITBIGSFRhhhhll     5C      0       0      37        0.0%
+BITBIGSFRhhl         7      0       0      39        0.0%
+BITBIGSFRhl          7      0       0      40        0.0%
+BITBIGSFRhhhl        4      0       0      38        0.0%
+BITBIGSFRhhhhhl      2      0       0      35        0.0%
+BITBIGSFRhhhhlh      1      0       0      36        0.0%
+BIGSFR               0      0       0     200        0.0%
+BITSFR_2             0      0       0     200        0.0%
+SFR_2                0      0       0     200        0.0%
+BITSFR_1             0      0       0     200        0.0%
+SFR_1                0      0       0     200        0.0%
+BITSFR               0      0       0     200        0.0%
+SFR                  0      0       0     200        0.0%
+STACK                0      0       0       2        0.0%
+NULL                 0      0       0       0        0.0%
+ABS                  0      0       2      42        0.0%
+DATA                 0      0       2       3        0.0%
+CODE                 0      0       0       0        0.0%
+
+
+Microchip Technology PIC18 Macro Assembler V2.45 build 20230818022343 
+Symbol Table                                                                                   Wed Oct 11 16:02:27 2023
+
+                      _i 0001                       u17 0F40                       u27 0F52  
+                     u37 0F64                       u47 0F76                       u57 0F88  
+                     u67 0F9A                      l761 0F3A                      l771 0F6C  
+                    l763 0F48                      l773 0F6E                      l765 0F4A  
+                    l757 0F02                      l775 0F70                      l767 0F4C  
+                    l759 0F34                      l777 0F82                      l769 0F5E  
+                    l779 0F90                      wreg 0FE8                     _LATA 0F83  
+                   _LATB 0F84                     _LATC 0F85                     _LATD 0F86  
+                   _main 0F02                     start 0000             ___param_bank 0000  
+                  ?_main 0002                    _TRISA 0F88                    _TRISB 0F89  
+                  _TRISC 0F8A                    _TRISD 0F8B          __initialization 0FAA  
+           __end_of_main 0FAA                   ??_main 0002            __activetblptr 0000  
+                 _ANSELA 0F11                   _ANSELB 0F19                   _ANSELC 0F21  
+                 _ANSELD 0F26                   isa$std 0001             __mediumconst 0000  
+             __accesstop 0060  __end_of__initialization 0FAC            ___rparam_used 0001  
+         __pcstackCOMRAM 0002                  __Hparam 0000                  __Lparam 0000  
+           __psmallconst 0F00                  __pcinit 0FAA                  __ramtop 0F00  
+                __ptext0 0F02     end_of_initialization 0FAC                _PORTBbits 0F8E  
+    start_initialization 0FAA              __pbssCOMRAM 0001              __smallconst 0F00  
+               _LATAbits 0F83                 _LATCbits 0F85                 __Hrparam 0000  
+               __Lrparam 0000                 isa$xinst 0000  

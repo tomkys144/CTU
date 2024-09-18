@@ -1,0 +1,230 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{pgfplots}
+\usepackage{float}
+\usepackage[parfill]{parskip}
+\usepackage{siunitx}
+\sisetup{detect-all}
+
+%opening
+\title{Fraunhoferův ohyb světla na štěrbině a mřížce}
+\author{Tomáš Kysela}
+\date{04/10/2022}
+
+\begin{document}
+
+\maketitle
+
+\section{Použité veličiny}
+
+\begin{tabular}{l l}
+ $\lambda$ & vlnová délka\\
+ $l$ & vzdálenost stínítka od štěrbiny (mřížky)\\
+ $y$ & vzdálenost středů minim (maxim) pro štěrbinu (mřížku)\\
+ $b$ & šířka štěrbiny\\
+ $d$ & mřížková konstanta\\
+ $\varphi$ & úhel ohybu\\
+ $i$ & index
+\end{tabular}
+
+\section{Známé hodnoty}
+
+\begin{tabular}{l l}
+ $\lambda_z = 532 \si{\nano\meter}$ & vlnová délka zeleného laseru \\
+ $\lambda_c = 632.8 \si{\nano\meter}$ & vlnovádélka červeného laseru
+\end{tabular}
+
+\section{Ověření platnosti vzorce pro Fraunhoferův ohyb na štěrbině}
+
+\subsection{Naměřené hodnoty}
+
+\begin{figure}[H]
+	\centering
+    \begin{tabular}{c||c|c||c|c}
+        & \multicolumn{2}{c||}{Širší štěrbina} & \multicolumn{2}{c}{Užší štěrbina}\\\hline
+        & $l=63.5 \si{\milli\meter}$ & $l=63.5 \si{\milli\meter}$ & $l=40.1 \si{\milli\meter}$ & $l=61 \si{\milli\meter}$\\ \hline
+        $i$ & $y_{i\ zelena} [\si{\milli\meter}]$ & $y_{i\ cervena} [\si{\milli\meter}]$ & $y_{i\ zelena} [\si{\milli\meter}]$ & $y_{i\ cervena} [\si{\milli\meter}]$\\ \hline \hline
+        1 & 6 & 7 & 6 & 9.5\\ \hline
+        2 & 12 & 14 & 12.5 & 19\\ \hline
+        3 & 18 & 21.5 & 19.25 & 29.5\\ \hline
+        -1 & 6.5 & 7 & 6 & 9.5\\ \hline
+        -2 & 12 & 13.5 & 12.5 & 18.5\\ \hline
+        -3 & 18.25 & 21.5 & 17.75 & 28.5
+    \end{tabular}
+\end{figure}
+
+\subsection{Vzorec pro ohyb světla na štěrbině}
+
+Pro ohyb světla na štěrbině platí
+\begin{equation}
+\sin{\varphi_i} = \frac{y_i}{\sqrt{y_i^2+l^2}}
+\end{equation}
+\begin{equation}
+ b \cdot \sin{\varphi_i} = i \cdot \lambda
+\end{equation}
+
+Z toho dostáváme
+
+\begin{equation}
+ b = \frac{i \cdot \lambda}{\sin{\varphi_i}} = \frac{i \cdot \lambda \cdot \sqrt{y_i^2 + l^2}}{y_i}
+\end{equation}
+
+\subsection{Spočtené hodnoty}
+
+\begin{figure}[H]
+	\centering
+    \begin{tabular}{c||c|c||c|c}
+        & \multicolumn{2}{c||}{Širší štěrbina} & \multicolumn{2}{c}{Užší štěrbina}\\\hline
+        $i$ & $b_{i\ zelena} [\si{\micro\meter}]$ & $b_{i\ cervena} [\si{\micro\meter}]$ & $b_{i\ zelena} [\si{\micro\meter}]$ & $b_{i\ cervena} [\si{\micro\meter}]$\\ \hline \hline
+        1 & 5.655 & 5.775 & 3.595 & 4.046 \\ \hline
+        2 & 5.730 & 5.878 & 3.575 & 4.192 \\ \hline
+        3 & 5.852 & 5.920 & 3.688 & 4.303 \\ \hline
+        -1 & 5.224 & 5.775 & 3.595 & 4.046 \\ \hline
+        -2 & 5.730 & 6.086 & 3.575 & 4.295 \\ \hline
+        -3 & 5.778 & 5.920 & 3.943 & 4.425 \\ \hline
+        AVG & 5.662 & 5.892 & 3.662 & 4.218
+    \end{tabular}
+\end{figure}
+
+\subsection{Výpočet nejsitot}
+
+\begin{equation}
+ u(b) = \sqrt{\frac{\sum_{i=1}^N(b_i-\bar{b})^2}{N(N-1)}}
+\end{equation}
+kde $N$ je počet měření
+
+\begin{tabular}{l l}
+ Zelený laser na širší štěrbině & $ u(b) = 112 \si{\nano\meter}$\\
+ Červený laser na širší štěrbině & $ u(b) = 58 \si{\nano\meter}$\\
+ Zelený laser na užší štěrbině & $ u(b) = 72 \si{\nano\meter}$\\
+ Červený laser na užší štěrbině & $ u(b) = 76 \si{\nano\meter}$
+\end{tabular}
+
+\section{Určení mřížkové konstanty}
+\subsection{Naměřené hodnoty}
+
+\begin{figure}[H]
+	\centering
+    \begin{tabular}{c||c|c}
+        & $l=37.1 \si{\milli\meter}$ & $l=37.1 \si{\milli\meter}$\\ \hline
+        $i$ & $y_{i\ zelena} [\si{\milli\meter}]$ & $y_{i\ cervena} [\si{\milli\meter}]$\\ \hline \hline
+        1 & 9 & 11 \\ \hline
+        2 & 18 & 21.5 \\ \hline
+        3 & 27 & 33.5 \\ \hline
+        -1 & 9.5 & 11 \\ \hline
+        -2 & 19 & 22 \\ \hline
+        -3 & 28 & 33
+    \end{tabular}
+\end{figure}
+
+\subsection{Vzorec pro výpočet mřížkové konstanty}
+
+\begin{equation}
+ d = \frac{i \cdot \lambda}{\sin{\varphi_i}} = \frac{i \cdot \lambda \cdot \sqrt{y_i^2 + l^2}}{y_i}
+\end{equation}
+
+\subsection{Spočtené hodnoty}
+
+\begin{figure}[H]
+	\centering
+    \begin{tabular}{c||c|c}
+        $i$ & $d_{i\ zelena} [\si{\milli\meter}]$ & $d_{i\ cervena} [\si{\milli\meter}]$\\ \hline \hline
+        1 & 2.257 & 2.226 \\ \hline
+        2 & 2.438 & 2.524 \\ \hline
+        3 & 2.712 & 2.833 \\ \hline
+        -1 & 2.145 & 2.226 \\ \hline
+        -2 & 2.334 & 2.481 \\ \hline
+        -3 & 2.649 & 2.856
+    \end{tabular}
+\end{figure}
+
+Průměrná hodnota $\bar{d} = 2.473 \si{\micro\meter}$
+
+\subsection{Výpočet nejsitot}
+
+\begin{equation}
+ u(d) = \sqrt{\frac{\sum_{i=1}^N(d_i-\bar{d})^2}{N(N-1)}}
+\end{equation}
+kde $N$ je počet měření
+
+$u(d) = 86 \si{\nano\meter}$
+
+\section{Výpočet vlnové délky modrého laseru}
+
+\subsection{Naměřené hodnoty}
+
+\begin{figure}[H]
+	\centering
+    \begin{tabular}{c||c}
+        & $l=37.1 \si{\milli\meter}$\\ \hline
+        $i$ & $y_{i\ modra} [\si{\milli\meter}]$\\ \hline \hline
+        1 & 7.5 \\ \hline
+        2 & 13.5 \\ \hline
+        3 & 21.5 \\ \hline
+        -1 & 7 \\ \hline
+        -2 & 14 \\ \hline
+        -3 & 21
+    \end{tabular}
+\end{figure}
+
+\subsection{Vzorec pro výpočet vlnové délky}
+
+\begin{equation}
+ d = \frac{i \cdot \lambda}{\sin{\varphi_i}} = \frac{i \cdot \lambda \cdot \sqrt{y_i^2 + l^2}}{y_i}
+\end{equation}
+
+Z toho dostaneme
+
+\begin{equation}
+ \lambda = \frac{d \cdot y_i}{i \cdot \sqrt{y_i^2 + l^2}}
+\end{equation}
+
+\subsection{Spočtené hodnoty}
+
+\begin{figure}[H]
+	\centering
+    \begin{tabular}{c||c}
+        $i$ & $\lambda_{i m} [\si{\nano\meter}]$\\ \hline \hline
+        1 & 490.020006795228 \\ \hline
+        2 & 422.816760137884 \\ \hline
+        3 & 413.323984601494 \\ \hline
+        -1 & 458.51363579622 \\ \hline
+        -2 & 436.555292634941 \\ \hline
+        -3 & 406.065132564475 \\ \hline
+        AVG & 437.88246875504
+    \end{tabular}
+\end{figure}
+
+Průměrná hodnota $\bar{d} = 2.473 \si{\micro\meter}$
+
+\subsection{Výpočet nejsitot}
+
+\begin{equation}
+ u(\lambda) = \sqrt{\frac{\sum_{i=1}^N(\lambda_i-\bar{\lambda})^2}{N(N-1)}}
+\end{equation}
+kde $N$ je počet měření
+
+$u(d) = 63.2 \si{\nano\meter}$
+
+\section{Výsledky}
+\textbf{Velikost štěrbiny}
+
+\begin{tabular}{l l}
+ Zelený laser na širší štěrbině & $b = 5.662 \pm 0.112 \si{\micro\meter}$\\
+ Červený laser na širší štěrbině & $b = 5.892 \pm 0.058 \si{\micro\meter}$\\
+ Zelený laser na užší štěrbině & $b = 3.662 \pm 0.072 \si{\micro\meter}$\\
+ Červený laser na užší štěrbině & $b = 4.218 \pm 0.076 \si{\micro\meter}$
+\end{tabular}
+
+\textbf{ }
+
+\begin{tabular}{l l}
+ Mřížková konstanta & $d = 2.473 \pm 0.086 \si{\micro\meter}$\\
+ Vlnová délka modrého laseru & $\lambda_m = 438 \pm 63 \si{\nano\meter}$
+\end{tabular}
+
+\section{Závěr}
+Výsledky vyšly řádově jak bylo očekáváno. Jediné, co je překvapivé, je vysoká nejistota u vlnové délky modrého laseru. Tato nejsitota je nejspíše dána nepřesným měřením a výpočtem mřížkové konstanty.
+\end{document}

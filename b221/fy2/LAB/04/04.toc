@@ -1,0 +1,19 @@
+\babel@toc {czech}{}\relax 
+\contentsline {section}{\numberline {1}Úkol měření}{2}{section.1}%
+\contentsline {section}{\numberline {2}Seznam použitých přístrojů}{2}{section.2}%
+\contentsline {section}{\numberline {3}Teoretický úvod}{2}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Excitace atomů}{2}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Franckův-Hertzův pokus}{2}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Výpočet excitční energie atomu}{3}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Naměřené hodnoty a jejich zpracování}{4}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Závislost anodového proudu $I_A$ na napětí $U_G$}{4}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Naměřené hodnoty}{4}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Graf závislosti anodového proudu $I_A$ na napětí $U_G$}{6}{subsubsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.2}Výpočet energie atomů rtuti}{6}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Nalezená minima}{6}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Výpočet energie}{6}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}Výpočet vlnové délky vyzářeného atomu}{6}{subsubsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.4}Výpočet nejistot}{7}{subsubsection.4.2.4}%
+\contentsline {section}{\numberline {5}Závěr}{7}{section.5}%
+\contentsline {section}{\numberline {6}Použitá literatura}{7}{section.6}%
+\contentsline {section}{\numberline {7}Přílohy}{8}{section.7}%

@@ -1,0 +1,3 @@
+R(q) = SUM_k∈K SUM_x∈X p(x,k) * W(k,q(x))
+
+p(x,k) = p(x|k)p(k)

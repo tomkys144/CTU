@@ -1,0 +1,108 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{siunitx}
+\sisetup{detect-all}
+
+\begin{document}
+    \section*{11.20}
+    Z Bernoulliho rovnice plyne:
+    $$
+    \begin{aligned}
+        \frac{1}{2}\rho v_H^2+p_H+\rho g H = \frac{1}{2}\rho v_1^2+p_1+\rho g z_1 = \frac{1}{2}\rho v_2^2+p_2+\rho g z_2\\
+    \end{aligned}
+    $$
+    Označíme-li plochu hladiny $S_H$ a plochy otvorů $S_/{1,2}$ dostáváme z rovnice kontinuity:
+    $$
+    v_H = v_1 \frac{S_1}{S_H} = v_2 \frac{S_2}{S_H},\ S_H \gg S_1,S_2
+    $$
+    Jelikož tlak je všude stejný lze upravit první vztah na:
+    $$
+    \begin{aligned}
+    \rho g H &= \frac{1}{2}\rho v_1^2+\rho g z_1 = \frac{1}{2}\rho v_2^2+\rho g z_2\\
+    \\
+    v_1^2 &= 2\frac{\rho g H - \rho g z_1}{\rho} = 2g(H - z_1)\\
+    v_1 &= \sqrt{2g(H - z_1)} \rightarrow x_1 = \sqrt{2g(H - z_1)} \cdot \sqrt{\frac{2 z_1}{g}} = 2\sqrt{z_1(H - z_1)}\\
+    \\
+    v_2^2 &= 2\frac{\rho g H - \rho g z_2}{\rho} = 2g(H - z_2)\\
+    v_2 &= \sqrt{2g(H - z_2)} \rightarrow x_2 = \sqrt{2g(H - z_2)} \cdot \sqrt{\frac{2 z_2}{g}} = 2\sqrt{z_2(H - z_2)}\\
+    \\
+    x_1 &= x_2 \Rightarrow z_1(H-z_1) = z_2(H-z_2)\\
+    H(z_1-z_2) &= z_1^2-z_2^2\\
+    H &= \frac{z_1^2-z_2^2}{z_1-z_2} = z_1 + z_2\\
+    \\
+    x &= z_1(H-z_1) = z_2(H-z_2) = z_1z_2
+    \end{aligned}
+    $$
+
+    \section*{11.2}
+    $$
+    \begin{aligned}
+        V_{koule} (\text{dále je $V_k$}) &= \frac{4}{3}\pi R^3\\
+        V_{mosaz} (\text{dále je $V_m$}) &= V_k - \frac{4}{3}\pi (R-h)^3 = \frac{4}{3} \pi (R^3-(R-h)^3)\\
+        \\
+        F_G &= m_m g = V_m \rho_m g = \frac{4}{3} \pi (R^3-(R-h)^3) \rho_m g\\
+        F_{Vz} &= V_k \rho_v g = \frac{4}{3}\pi R^3 \rho_v g\\
+        \\
+        F_G &= F_{Vz}\\
+        \frac{4}{3} \pi (R^3-(R-h)^3) \rho_m g &= \frac{4}{3}\pi R^3 \rho_v g\\
+        (R^3-(R-h)^3) \rho_m &= R^3 \rho_v\\
+        R^3(\rho_m-\rho_v) &= \rho_m(R-h)^3\\
+        R\sqrt[3]{\rho_m-\rho_v} &= \sqrt[3]{\rho_m}(R-h)\\
+        R\sqrt[3]{1-\frac{\rho_v}{\rho_m}}&=R-h\\
+        h &= R(1-\sqrt[3]{1-\frac{\rho_v}{\rho_m}})\\
+        h &= 0.1 \si{\meter} (1-\sqrt[3]{1-\frac{1000 \si{\kilogram\per\cubic\meter}}{8500 \si{\kilogram\per\cubic\meter}}}) = 4.09 \si{\milli\meter}
+    \end{aligned}
+    $$
+    \section*{10.5}
+    $$
+    \begin{aligned}
+        v &= 0.866 c\\
+        \Delta t' &= 4\si{\second}\\
+        \Delta t &= ?\\
+    \end{aligned}
+    $$
+    Dopplerův jev:
+   $$
+   \begin{aligned}
+       \frac{f'}{f} &= \sqrt{\frac{1 + \beta}{1-\beta}},& \beta &= \frac{v}{c},& f &= \frac{1}{\Delta t}\\
+       \frac{\Delta t}{\Delta t'} &= \sqrt{\frac{1 + \frac{v}{c}}{1-\frac{v}{c}}}\\
+       \Delta t &= \Delta t'\sqrt{\frac{c+v}{c-v}} = 4\si{\second}\sqrt{\frac{1.866c}{0.134c}} = 14.93 \si{\second}
+   \end{aligned}
+   $$
+   \section*{10.11}
+   $$
+   \begin{aligned}
+       T_G &= \text{Doba průletu vzhledem ke galaxii}\\
+       T_p &= \text{Doba průletu vzhledem k protonu}\\
+       \\
+       T_G &= \frac{d}{c} = \frac{100000\si{\text{ly}}}{c} = 100000\si{\text{let}}\\
+       \\
+       E &= \gamma E_0 = \frac{E_0}{\sqrt{1-\frac{v^2}{c^2}}}\\
+       v &= \sqrt{1-(\frac{E_0}{E})^2}\cdot c\\
+       T_p &= \frac{d}{c}\frac{E_0}{E} = \frac{100000\si{\text{ly}}}{c} \frac{938 \si{\mega\electronvolt}}{10^{10} \si{\giga\electronvolt}} = 296 \si{\second}
+   \end{aligned}
+   $$
+   \section*{9.12}
+   $$
+   \begin{aligned}
+       F_{GZ} &= \text{Gravitační síla působící na těleso Zemí}\\
+       F_{GM} &= \text{Gravitační síla působící na těleso Měsícem}\\
+       \\
+       F_{GZ} &= \varkappa \frac{M_Z m}{r^2}\\
+       F_{GM} &= \varkappa \frac{M_M m}{(d-r)^2}\\
+       \\
+       F_{GZ}-F_{GM} &= 0\\
+       F_{GZ} &= F_{GM}\\
+       \varkappa \frac{M_Z m}{r^2} &= \varkappa \frac{M_M m}{(d-r)^2}\\
+       \frac{M_Z}{r^2} &= \frac{M_M}{(d-r)^2}\\
+       \text{Jelikož $M_M = \frac{M_Z}{81}$}:\\
+       \frac{M_Z}{r^2} &= \frac{M_Z}{81(d-r)^2}\\
+       r^2 &= 81(d-r)^2\\
+       r &= 9(d-r)\\
+       10r &= 9d\\
+       r &= \frac{9}{10}d
+   \end{aligned}
+   $$
+\end{document}

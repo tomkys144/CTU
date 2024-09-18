@@ -1,0 +1,59 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F47K40 ]
+[d frameptr 4065 ]
+"4 /opt/microchip/xc8/v2.45/pic/sources/c99/common/fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 /opt/microchip/xc8/v2.45/pic/sources/c99/common/float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 /opt/microchip/xc8/v2.45/pic/sources/c99/common/ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 /opt/microchip/xc8/v2.45/pic/sources/c99/common/ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 /opt/microchip/xc8/v2.45/pic/sources/c99/common/ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 /opt/microchip/xc8/v2.45/pic/sources/c99/common/ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"10 /opt/microchip/xc8/v2.45/pic/sources/c99/common/sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 /opt/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 /opt/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 /opt/microchip/xc8/v2.45/pic/sources/c99/common/Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 /opt/microchip/xc8/v2.45/pic/sources/c99/common/Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"44 /home/tomkys144/Documents/CTU/b231/MIK/Cviceni4.X/main.c
+[v _TIMER0 TIMER0 `IIH(v  1 e 1 0 ]
+"55
+[v _main main `(v  1 e 1 0 ]
+"10064 /opt/microchip/mplabx/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8/pic/include/proc/pic18f47k40.h
+[v _ANSELD ANSELD `VEuc  1 e 1 @3878 ]
+"16964
+[v _LATD LATD `VEuc  1 e 1 @3974 ]
+"17539
+[v _TRISD TRISD `VEuc  1 e 1 @3979 ]
+"27098
+[v _T0CON0 T0CON0 `VEuc  1 e 1 @4053 ]
+"27163
+[v _T0CON1 T0CON1 `VEuc  1 e 1 @4054 ]
+"30356
+[v _GIE GIE `VEb  1 e 0 @32663 ]
+"33929
+[v _TMR0IE TMR0IE `VEb  1 e 0 @30229 ]
+"33932
+[v _TMR0IF TMR0IF `VEb  1 e 0 @30293 ]
+"55 /home/tomkys144/Documents/CTU/b231/MIK/Cviceni4.X/main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"77
+} 0
+"44
+[v _TIMER0 TIMER0 `IIH(v  1 e 1 0 ]
+{
+"53
+} 0

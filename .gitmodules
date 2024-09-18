@@ -6,3 +6,18 @@
 	path = b202/PRGA
 	url = https://github.com/tomkys144/PRGA
 	branch = master
+[submodule "b221/RPZ/HW-template"]
+	path = b221/RPZ/HW-template
+	url = git@gitlab.fel.cvut.cz:B201_B4B33RPZ/rpz-python-assignment-templates.git
+[submodule "b222/lpe/projekt"]
+	path = b222/lpe/projekt
+	url = git@github.com:tomkys144/tonometer.git
+[submodule "b231/bsp/project"]
+	path = b231/bsp/project
+	url = git@github.com:tomkys144/Luxmeter.git
+[submodule "bc-project"]
+	path = bc-project
+	url = git@github.com:tomkys144/bc-project.git
+[submodule "bc-thesis"]
+	path = bc-thesis
+	url = git@github.com:tomkys144/bc-thesis.git
