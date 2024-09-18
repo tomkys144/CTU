@@ -1,0 +1,38 @@
+### HEXMate logfile and output summary ###
+
+### Command-line arguments ###
+ /tmp/xcXLIeJDd/driver_tmp_3.o
+ -Odist/default/debug/Cviceni4.X.debug.hex
+ -logfile=dist/default/debug/Cviceni4.X.debug.hxl
+ -addressing=1
+ -break=300000
+
+### Memory Usage ###
+ Input file ranges:
+  0h - 3h		(/tmp/xcXLIeJDd/driver_tmp_3.o)
+  8h - 25h		(/tmp/xcXLIeJDd/driver_tmp_3.o)
+  F00h - F31h		(/tmp/xcXLIeJDd/driver_tmp_3.o)
+  300000h - 300007h		(/tmp/xcXLIeJDd/driver_tmp_3.o)
+ Unused ranges:
+  4h - 7h
+  26h - EFFh
+  F32h - 2FFFFFh
+
+### Hex Memory Map ###
+ Legend:
+  -- = Unused memory
+  H1 = Input file             (/tmp/xcXLIeJDd/driver_tmp_3.o)
+----------------------------------------------------------
+         | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+----------------------------------------------------------
+00000000 | H1 H1 H1 H1 -- -- -- -- H1 H1 H1 H1 H1 H1 H1 H1
+00000010 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00000020 | H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- -- -- --
+----------------------------------------------------------
+00000F00 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00000F10 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00000F20 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00000F30 | H1 H1 -- -- -- -- -- -- -- -- -- -- -- -- -- --
+----------------------------------------------------------
+00300000 | H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- -- -- -- -- --
+00300010 | --

@@ -1,0 +1,1071 @@
+12 Dec 2023 10:21:07.988 INFO  - 
+Welcome to arara 7.0.4!
+-----------------------------------------------------------------
+12 Dec 2023 10:21:07.995 DEBUG - 
+::: arara @ /usr/share/texmf/scripts/arara
+::: Java 17.0.9, N/A
+::: /usr/lib64/jvm/java-17-openjdk-17
+::: Linux, amd64, 6.6.3-1-default
+::: user.home @ /home/tomkys144
+::: CF @ [none]
+-----------------------------------------------------------------
+12 Dec 2023 10:21:08.007 INFO  - Processing "zigbee.tex" (size: 12.4 kB, last modified: 2023-12-12 09:20:53), please wait.
+12 Dec 2023 10:21:08.033 INFO  - I found a potential pattern in line 1: indent: { overwrite : yes, files : [zigbee.tex, zigbee.bib] }
+12 Dec 2023 10:21:08.033 INFO  - I found a potential pattern in line 2: pdflatex
+12 Dec 2023 10:21:08.033 INFO  - I found a potential pattern in line 3: biber
+12 Dec 2023 10:21:08.034 INFO  - I found a potential pattern in line 4: pdflatex
+12 Dec 2023 10:21:08.034 INFO  - I found a potential pattern in line 5: pdflatex
+12 Dec 2023 10:21:08.330 INFO  -                     All directives were validated. We are good to go.
+                    -------------------------- DIRECTIVES ---------------------------
+                    Directive(identifier='indent', parameters={overwrite=yes, reference=/home/tomkys144/Documents/CTU/b231/mns/zigbee.tex},conditional={ NONE }, lineNumbers=[1])
+Directive(identifier='indent', parameters={overwrite=yes, reference=/home/tomkys144/Documents/CTU/b231/mns/zigbee.bib},conditional={ NONE }, lineNumbers=[1])
+Directive(identifier='pdflatex', parameters={reference=/home/tomkys144/Documents/CTU/b231/mns/zigbee.tex},conditional={ NONE }, lineNumbers=[2])
+Directive(identifier='biber', parameters={reference=/home/tomkys144/Documents/CTU/b231/mns/zigbee.tex},conditional={ NONE }, lineNumbers=[3])
+Directive(identifier='pdflatex', parameters={reference=/home/tomkys144/Documents/CTU/b231/mns/zigbee.tex},conditional={ NONE }, lineNumbers=[4])
+Directive(identifier='pdflatex', parameters={reference=/home/tomkys144/Documents/CTU/b231/mns/zigbee.tex},conditional={ NONE }, lineNumbers=[5])
+                    -----------------------------------------------------------------
+12 Dec 2023 10:21:08.333 INFO  - I am ready to interpret rule "indent".
+12 Dec 2023 10:21:08.337 INFO  - Rule location: "/usr/share/texmf/scripts/arara/rules"
+12 Dec 2023 10:21:08.495 INFO  - I am ready to interpret task "The latexindent.pl script" from rule "Indent".
+12 Dec 2023 10:21:08.496 INFO  - System command: [latexindent, -w, /home/tomkys144/Documents/CTU/b231/mns/zigbee.tex] @ /home/tomkys144/Documents/CTU/b231/mns
+12 Dec 2023 10:21:08.734 INFO  -                 ---------------------- BEGIN OUTPUT BUFFER ----------------------
+                % arara: indent: { overwrite : yes, files : [zigbee.tex, zigbee.bib] }
+% arara: pdflatex
+% arara: biber
+% arara: pdflatex
+% arara: pdflatex
+
+\documentclass[a4paper,10pt,titlepage]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{subfigure}
+\usepackage[czech]{babel}
+\usepackage{fontenc}
+\usepackage{graphicx}
+\usepackage[backend=biber, style=iso-numeric, urldate=comp]{biblatex}
+\usepackage[pdftex]{hyperref}
+\usepackage{url}
+\usepackage{csquotes}
+\usepackage[parfill]{parskip}
+\usepackage[version=4]{mhchem}
+\usepackage{siunitx}
+\usepackage{titlesec}
+\usepackage{float}
+
+\addbibresource{zigbee.bib}
+
+\DefineBibliographyStrings{czech}{
+  url         = [Online]\addspace Dostupn?? z~,
+}
+
+\counterwithin{figure}{section}
+\hyphenation{zig-bee}
+\sisetup{detect-all}
+\setcounter{secnumdepth}{4}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\author{Tom???? Kysela}
+\title{ZigBee}
+\date{\parbox{\linewidth}{\centering%
+  \today\endgraf\bigskip
+ Vytvo??eno jako semestr??ln?? projekt pro p??edm??t BAB34MNS\endgraf\medskip
+ FEL ??VUT}}
+ 
+
+
+\begin{document}
+
+\pagenumbering{Alph}
+\begin{titlepage}
+
+	\maketitle
+
+	\thispagestyle{empty}
+\end{titlepage}
+
+\pagenumbering{arabic}
+
+\tableofcontents
+\listoffigures
+% \listoftables
+
+\newpage
+
+\section{??vod} \label{sec:intro}
+ZigBee je protokol, kter?? navzdory zd??nliv?? podobnosti s~WiFi je od z??kladu navr??en prim??rn?? pro komunikaci n??zkov??konov??ch bezdr??tov??ch za????zen?? ve zdravotnictv??, dom??c?? automatizaci ??i pr??myslov?? automatizaci.~\cite{zigbee-tech-pres}
+Prvn?? specifikace vy??la v~roce 2003, v~roce 2007 pak byla ????ste??n?? nahrazena specifikac?? ZigBee PRO, kter?? byla n??sledn?? dopln??na specifikacemi ZigBee Green Power, kter?? dovoluje Energy harvesting p????mo v~ZigBee Stacku, a ZigBee Smart Energy, kter?? slou???? k~monitorov??n?? spot??eby a optimalizaci v??kon??.~\cite{ecstuff4u}
+
+\section{Princip ??innosti} \label{sec:spec}
+
+\subsection{Mesh network a typy za????zen??} \label{sec:mesh}
+V~b????n??m (nap????klad WiFi) modelu bezdr??tov?? s??t?? existuj?? tradi??n?? dva typy za????zen??, ZigBee Controller (ZC) a {ZigBee End Device} (ZED). Zat??mco ZC kontroluje s???? a propojuje s???? s~okoln??m sv??tem, ZED tradi??n?? p??ij??m?? a odes??l?? informace do Controlleru. End Device m????e b??t v~s??ti v??ckr??t, Controller pouze jeden. Tyto za????zen?? jsou zapojeny do tzv. hv??zdy.
+
+V~ZigBee je d??le specifikovan?? je??t?? za????zen?? ZigBee Router (ZR), je?? funguje podobn?? jako End Device, av??ak um?? p??epos??lat komunikaci mezi ostatn??mi za????zen??mi. D??ky tomu jsme schopni dos??hnout zapojen?? do stromu, ??i do takzvan?? mesh s??t??. Ta je v??hodn??j???? oproti stromu, jeliko?? lze optimalizovat cesty podle vyt????en?? jednotliv??ch ZR, ??i kvalit?? sign??lu vzhledem k~prom??nliv??m podm??nk??m. Tak?? p??i v??padku jednqoho ZR nedojde k~v??padku cel?? v??tve.~\cite{nordic-guide}
+
+\begin{figure}[h] \label{fig:wlan_topology}
+	\centering
+	\includegraphics[width=\textwidth]{assets/topology_types.png}
+	\caption[Topologie bezdr??tov??ch s??t??]{Topologie bezdr??tov??ch s??t??~\cite{nordic-guide}}
+\end{figure}
+
+ZigBee Router a Controller je d??le typicky napojen?? na zdroj nap??jen?? 230V, kdy typick??m Routerem je nap????klad chytr?? sp??na?? sv??tel, Controllerem pak server. ZigBee End Device je naopak pov??t??inou nap??jen?? z~baterie, kdy se jedn?? o~v??emo??n?? senzory, hl??si??e \ce{CO2} apod.
+
+V r??mci zp??tn?? kompatibility lze p??id??vat ZigBee 1.0/2.0 Router za????zen?? do ZigBee PRO (??i 3.0) s??t??, av??ak vzhledem ke zm??n??m ve specifikaci lze toto za????zen?? pou????vat pouze jako ZED. Stejn?? tak naopak lze ZigBee PRO ZR p??idat do legacy ZigBee s??t??, av??ak pouze jako ZED.
+
+\subsubsection{P??ipojen?? k~s??ti} \label{sec:joining}
+Existuje n??kolik mo??nost?? p??ipojen?? k~ZigBee s??ti. V~prvn??ch specifikac??ch se pou????val statick?? kl????, kter?? byl shodn?? pro v??echny za????zen??. N??sledn?? se p??idala varianta pomoc?? instala??n??ho k??du a od n??j odvozen??ho kl????e a v~revizi 23 se nov?? pou????v?? kryptografie s~pomoc?? ve??ejn??ch kl??????, kde prob??hne vyjedn??n?? s????ov??ho kl????e.
+
+\paragraph{Statick?? kl????}
+Zde se vyu????v?? tzv. Trust centera (nej??ast??ji ZC), kter?? centralizovan?? rozhoduje, zda-li p??ipust?? nov?? za????zen?? do s??t??. V p????pad?? ??e je vyu??it v??choz?? Global Trust Center propojovac?? kl????, je s???? do??asn?? vystavena p????padn??m ??tok??m, proto byla v revizi 21 p??id??na mo??nost vyu??it?? k????e odvozen??ho z instala??n??ho k??du.
+
+\begin{figure}[h] \label{fig:join_static}
+	\centering
+	\includegraphics[width=\textwidth]{assets/join_static}
+	\caption[Sch??ma komunikace p??i p??ipojen?? pomoc?? statick??ho kl????e]{Sch??ma komunikace p??i p??ipojen?? pomoc?? statick??ho kl????e~\cite{silabs-an1233}}
+\end{figure}
+
+\paragraph{Aktualizace kl????e po p??ipojen??}
+U ZigBee PRO za????zen?? je vy??adov??na aktualizace propojovac??ho kl????e po p??ipojen?? do s??t??, kter?? pou????vaj?? tak dlouho, dokud jsou do n?? p??ipojeni.
+
+\paragraph{Dynamick?? kl????}
+Od revize 23 je nov?? mo??n?? pou????t dynamick?? kl????e, kdy je nejd????ve domluveno pomoc?? ve??ejn??ho kl????e p??ipojen?? a po propojen?? za????zen?? nen?? pou??it jeden pevn?? Trust Center link key, n??br?? n??hodn?? generovan?? dynamick?? kl????, kter?? se pou????v?? pro ve??kerou dal???? komunikaci.
+
+\begin{figure}[H] \label{fig:join_dynamic}
+	\centering
+	\includegraphics[width=\textwidth]{assets/join_dynamic.png}
+	\caption[Sch??ma komunikace p??i p??ipojen?? pomoc?? dynamick??ho kl????e]{Sch??ma komunikace p??i p??ipojen?? pomoc?? dynamick??ho kl????e~\cite{ti-security}}
+\end{figure}
+
+\subsubsection{Odpojen??}
+P??i odpojov??n?? je t??eba vyslat sign??l pro odpojen?? rodi??i a d??tem v s??ti, jeliko?? je nutn?? d??t jejich NLME (viz \ref{sec:NWK}) v??d??t, ??e mo??n?? cesty se zm??nili.
+
+\subsubsection{Znovup??ipojen??}
+Znovup??ipojen?? prob??h?? velmi podobn?? jako prvn?? p??ipojen??. Zm??na nast??v?? a?? p??i nastaven?? zapojen?? do s??t?? a jeliko?? si Trust Center pamatuje d????v??j???? za????zen??, je mo??n?? povolit pouze p??i??ojen?? ji?? d????ve p??ipojen??ch za????zen??.
+
+\subsection{Stack architektura} \label{sec:stack}
+Architektura ZigBee se skl??da z~n??kolika na sob?? postaven??ch vrstev. Jeliko?? ZigBee vych??z?? ze standardu IEEE~802.15.4, je t??mto standardem specifikov??na fyzick?? (PHY) a Medium Access Control (MAC) vrstva. ZigBee protokol pot?? specifikuje s????ovou (NWK) vrstvu a r??mec pro aplika??n?? vrstvu. Ten se skl??d?? z~Podp??rn?? aplika??n?? podvrstvy (APS) a ZigBee Device objekt?? (ZDO).~\cite{zigbee-spec23}
+
+\begin{figure}[h] \label{fig:zb_stack}
+	\centering
+	\includegraphics[width=\textwidth]{assets/stack_architecture.png}
+	\caption[Sch??ma ZigBee Stacku]{Sch??ma ZigBee Stacku~\cite{5173521}}
+\end{figure}
+
+\subsubsection{PHY vrstva} \label{sec:PHY}
+Tato vsrtva m?? na starosti fyzick?? vys??l??n?? sign??l??. Pou????v?? bu?? sub-GHz p??smo, konkr??tn??  868~MHz v~Evrop?? a 915~MHz v~Americe ??i Austr??lii, nebo 2.4~GHz p??smo. Tato vrstva pou????v?? 16-QAM modulaci a p??enosov?? rychlosti jsou a?? 250~kb/s pro 2.4~GHz a 915~MHz a 100~kb/s pro 868~MHz.\cite{ieee-802-15-4}
+
+\subsubsection{MAC vrstva} \label{sec:MAC}
+????elem t??to vrstvy je propojen?? vy??????ch vrstev s~fyzickou vrstvou a obalen?? packet?? tak, aby byly doru??eny na spr??vn?? fyzick?? za????zen??. Ozna??uje za????tek a konec packetu, zad??v?? adresu c??lov??ho za????en??, ??i opravuje drobn?? chyby v~p??ij??man??ch datech. MAC adresy by m??li b??t EUI-64 definovan?? podle IEEE~802. Mac frame je n??sledn?? form??tov??n dle obr??zku \ref{fig:mac_frame}.~\cite{5173521}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{assets/mac_frame.png}
+	\caption[Form??t MAC Frame]{Form??t MAC Frame~\cite{5173521}}
+	\label{fig:mac_frame}
+\end{figure}
+
+\subsubsection{NWK vsrtva} \label{sec:NWK}
+S????ov?? vrstva propojuje ZigBee aplika??n?? vrstvu s~IEEE~802.15.4 MAC vrstvou. Tato vrstva se d??l?? na dv?? ????sti, Network Layer Data Entity (NLDE) a Network Layer Managment Entity (NLME).
+
+NLDE se star?? o~p??ed??v??n?? application protocol data units (APDU) mezi za????zen??mi v~s??ti. Toho dos??hne za pomoci p??id??v??n?? hlavi??ek k~APDU a n??sledn?? vzhledem k~topologii s??t?? vysl??n?? packetu na vhodn?? za????zen??. Z??rove?? m?? na starost zabezpe??en?? packet??, v??ce v~sekci \ref{sec:security}.
+
+NLME m?? na starost spr??vu NWK vrstvy. Mez?? jej?? ??koly pat???? nastaven?? za????zen?? po p??id??n?? do s??t??, zakl??d??n?? nov??ch s??t?? (pouze u~ZC), hled??n?? vhodn??ch cest, p??ipojov??n??/odpojov??n?? od s??t??, adresov??n?? nov??ch za????zen?? (pouze ZR a ZC), vyhled??v??n?? nov??ch soused?? a ov????ov??n?? kvality spojen?? se sousedy.
+
+\subsubsection{APL vsrtva} \label{sec:APL}
+Jak jsme ji?? zm??nili, tato vrstva se skl??d?? z~ZDO a APS. ZDO je propojen?? samotn?? aplikace na ZigBee za????zen??. ZDO aktivuje APS a NWK vrstvu a n??sledn?? odes??l?? data. D??le pak ??te jeden z~254 endpoint?? a n??sledn?? p??ed??v?? data do aplikace. APS pak propojuje ZDO a endpointy s~NWK vrstvou. Jej??m ??kolem je odstranit duplik??ty, rozd??len?? ??i slo??en?? zpr??v del????ch jak maxim??ln?? mo??n?? payload a spolu s~NLME se pod??l?? na zabezpe??en?? zpr??v.
+
+\subsection{Bezpe??nost} \label{sec:security}
+Jak ji?? bylo v sekci \ref{sec:joining} zm??n??no, p??i p??ipojen?? je t??eba sjednotit TC link key. Co je d??le t??eba je pou????vat shodn?? Network key. Ten je platn?? pouze pro omezen?? po??et packet?? na dan??m za????zen?? a tak je mo??nost bu?? neust??le kontrolovat, kolikr??t ji?? na kter??m za????zen?? byl pou??it, co?? je nere??ln??, a nebo ho periodicky pomoc?? Truct Centera zam????ovat. Oba tyto kl????e jsou pou????vany k ??ifrov??n?? na NWK vrstv??. Jeliko?? to znamen??, ??e ka??d?? za????zen?? na s??ti je pot?? schopno de??ifrovat a p??e????st paket, prim??rn?? za ????elem p????padn??ho posl??n?? d??l, je t??eba pou????t i ??ifrov??n?? na APS, kde se pou????vaj?? kl????e, kter?? zaji????uj?? end-to-end ??ifrov??n??.
+
+\section{HW implementace} \label{sec:hw}
+Co se t????e HW implementace jedn?? se o vcelku jednoduch?? zapojen??. V??t??ina designu pou????v?? SoC, MCU, ??i MPU s ji?? implementovanou v??t??inou fyzick?? vrstvy, pevn?? programovanou MAC vrstvou a knihovnami pro NWK a APL vrstvu. Na designerovi za????zen?? tak pov??t??inou z??st??vaj?? krystaly a samotn?? ant??ny. Zde je t??eba jednak p??ipravit spr??vn?? timer, ale z??rove?? je nutn?? spr??vn?? nastavit p??izp??sobovac?? obvod, ant??nu, filtry. Nej??ast??ji se pou????v?? lowpass na 2.5 GHz. Samotn?? komunikace m????e pou????vat 16-ti polohovou kvazi-ortogon??ln?? modulaci, av??ak v??dy se jedn?? o poloduplex.
+
+\begin{figure}[h] \label{fig:rf-ext}
+	\centering
+	\includegraphics[width=0.75\textwidth]{assets/rf_external.png}
+	\caption[Vzorov?? zapojen?? vn??j????ch komponent u STM32WB]{Vzorov?? zapojen?? vn??j????ch komponent u STM32WB~\cite{stm32wb}}
+\end{figure}
+
+
+Mezi v??znamen?? v??robce SoC a MCU se ??ad?? Texas Instruments (TI CC2530Fxx), ??i ST (ST STM32WBx5). Od v??robce je ??asto dod??v??na i knihovna pro implementaci SW.
+
+\begin{figure}[H] \label{fig:rf-int}
+	\centering
+	\includegraphics[width=0.75\textwidth]{assets/rf_inner.png}
+	\caption[Vnit??n?? zapojen?? RF bloku u STM32WB]{Vnit??n?? zapojen?? RF bloku u STM32WB~\cite{stm32wb}}
+\end{figure}
+
+\section{Vyu??it??}
+Mezi typick?? vyu??it?? ZigBee na 2.4 GHz pat???? chytr?? sp??na??e, ????rovky, z??suvky. Tyto za????zen?? funguj?? tak?? jako ZigBee Routery. Dal????m vyu??it??m jsou nap????klad meteostanice, senzory plynu, sv??tla, pohybu. Tyto za????zen?? jsou nej??ast??ji ZigBee End Device. Mezi pr??myslov?? vyu??it?? pat???? monitoring stroj?? ve v??rob??, sledov??n?? vhodn??ch podm??nek pro sta??en?? produkt??, potravin a mnoho dal????ho.
+
+Sub-GHz vyu??it?? je pak nej??ast??ji p??ipojen?? venkovn??ch za????zen?? do ZigBee s??t??, nap????klad monitorov??n?? sol??rn??ch panel??, ovl??d??n?? vjezdov?? br??ny apod.
+
+\section{Z??v??r}
+Connectivity Standards Alliance v ??ele s firmami jako je Schneider Electrics, ST, TI, ??i IKEA tvo???? st??le se vyv??jej??c?? modern?? standard, je?? m?? v??znamnou roli na poli n??zkov??konov??ch vnit??n??ch s??t?? pro IoT aplikace.
+
+\section{Zdroje}
+\nocite{*}
+\printbibliography[heading=none]
+\end{document}
+
+                ----------------------- END OUTPUT BUFFER -----------------------
+12 Dec 2023 10:21:08.750 INFO  - Task result: SUCCESS
+12 Dec 2023 10:21:08.751 INFO  - I am ready to interpret rule "indent".
+12 Dec 2023 10:21:08.753 INFO  - Rule location: "/usr/share/texmf/scripts/arara/rules"
+12 Dec 2023 10:21:08.774 INFO  - I am ready to interpret task "The latexindent.pl script" from rule "Indent".
+12 Dec 2023 10:21:08.774 INFO  - System command: [latexindent, -w, /home/tomkys144/Documents/CTU/b231/mns/zigbee.bib] @ /home/tomkys144/Documents/CTU/b231/mns
+12 Dec 2023 10:21:08.964 INFO  -                 ---------------------- BEGIN OUTPUT BUFFER ----------------------
+                @manual{zigbee-spec23,
+	title = {Zigbee Specification, R23},
+	year = {2023},
+	month = {Mar},
+	organization = {Connectivity Standards Alliance},
+	url = {https://csa-iot.org/wp-content/uploads/2023/04/05-3474-23-csg-zigbee-specification-compressed.pdf},
+	urldate = {2023-12-11},
+	langid = {english}
+}
+
+@manual{zigbee-spec22,
+	title = {Zigbee Specification, R22},
+	year = {2017},
+	month = {Apr},
+	organization = {Zigbee Alliance},
+	url = {https://csa-iot.org/wp-content/uploads/2022/01/docs-05-3474-22-0csg-zigbee-specification-1.pdf},
+	urldate = {2023-12-11},
+	langid = {english},
+	note = {[Zigbee Alliance byla v roce 2021 p??ejmenov??na na Connectivity Standards Alliance]}
+}
+
+@article{zigbee-behaviour,
+	title = {PRO Base Device Behavior Specification, v3.0.1},
+	year = {2021},
+	month = {Sep},
+	organization = {Connectivity Standards Alliance},
+	url = {https://csa-iot.org/wp-content/uploads/2022/12/16-02828-012-PRO-BDB-v3.0.1-Specification.pdf},
+	urldate = {2023-12-11},
+	langid = {english}
+}
+
+@misc{zigbee-tech-pres,
+	title = {Zigbee Technical Presentation},
+	year = {2019},
+	organization = {Connectivity Standards Alliance},
+	url = {https://csa-iot.org/developer-resource/zigbee-technical-presentation/},
+	urldate = {2023-12-06},
+	langid = {english}
+}
+
+@online{eltech,
+	journal = {Electrical Technology},
+	title = {What is ZigBee Technology and How it works?},
+	year = {c2023},
+	urldate = {2023-12-10},
+	url = {https://www.electricaltechnology.org/2017/09/zigbee-technology-wireless-networking-system.html},
+	langid = {english}
+}
+
+@online{ecstuff4u,
+	journal = {ECSTUFF4U},
+	title = {Zigbee Network | History | Features | Application},
+	year = {c2017-2023},
+	urldate = {2023-12-10},
+	url = {https://www.ecstuff4u.com/2017/11/zigbee-networks.html},
+	langid = {english}
+}
+
+@manual{nordic-guide,
+	title = {Zigbee quick start guide},
+	year = {2023},
+	month = {Nov},
+	organization = {Nordic Semiconductor},
+	url = {https://developer.nordicsemi.com/nRF_Connect_SDK/doc/2.5.0/nrf/protocols/zigbee/qsg.html},
+	urldate = {2023-12-10},
+	langid = {english}
+}
+
+@inproceedings{4608532,
+	author={Zhongmin Pei and Zhidong Deng and Bo Yang and Xiaoliang Cheng},
+	booktitle={2008 IEEE International Conference on Industrial Technology},
+	title={Application-oriented wireless sensor network communication protocols and hardware platforms: A survey},
+	year={2008},
+	volume={},
+	number={},
+	pages={1-6},
+	doi={10.1109/ICIT.2008.4608532
+		}}
+
+@article{5173521,
+	author={Al Agha, Khaldoun and Bertin, Marc-Henry and Dang, Tuan and Guitton, Alexandre and Minet, Pascale and Val, Thierry and Viollet, Jean-Baptiste},
+	journal={IEEE Transactions on Industrial Electronics},
+	title={Which Wireless Technology for Industrial Wireless Sensor Networks? The Development of OCARI Technology},
+	year={2009},
+	volume={56},
+	number={10},
+	pages={4266-4278},
+	doi={10.1109/TIE.2009.2027253}}
+
+@article{ieee-802-15-4,
+	journal={IEEE Std 802.15.4-2020 (Revision of IEEE Std 802.15.4-2015)},
+	title={IEEE Standard for Low-Rate Wireless Networks},
+	year={2020},
+	doi={10.1109/IEEESTD.2020.9144691}
+}
+
+@misc{silabs-an1233,
+	title = {AN1233: Zigbee Security},
+	year = {c2023},
+	organization = {Silicon Labs},
+	url = {https://www.silabs.com/documents/public/application-notes/an1233-zigbee-security.pdf},
+	urldate = {2023-12-11},
+	langid = {english}
+}
+
+@article{ti-security,
+	title = {The Key to Security: Zigbee 3.0???S Security Features},
+	author = {Kirtana Moorthy},
+	organization = {Texas Instruments},
+	year = {2019},
+	month = {Feb},
+	url = {https://www.ti.com/lit/ta/sszt545/sszt545.pdf},
+	urldate = {2023-12-11},
+	langid = {english}
+}
+
+@manual{stm32wb,
+	titile = {STM32WB55xx datasheet},
+	organization = {ST Microelectronics},
+	year = {2023},
+	month = {Aug},
+	url = {https://www.st.com/resource/en/datasheet/stm32wb35ce.pdf},
+	urldate = {2023-12-11},
+	langid = {english}
+}
+
+                ----------------------- END OUTPUT BUFFER -----------------------
+12 Dec 2023 10:21:08.966 INFO  - Task result: SUCCESS
+12 Dec 2023 10:21:08.967 INFO  - I am ready to interpret rule "pdflatex".
+12 Dec 2023 10:21:08.969 INFO  - Rule location: "/usr/share/texmf/scripts/arara/rules"
+12 Dec 2023 10:21:08.997 INFO  - I am ready to interpret task "PDFLaTeX engine" from rule "PDFLaTeX".
+12 Dec 2023 10:21:08.998 INFO  - System command: [pdflatex, zigbee.tex] @ /home/tomkys144/Documents/CTU/b231/mns
+12 Dec 2023 10:21:16.816 INFO  -                 ---------------------- BEGIN OUTPUT BUFFER ----------------------
+                This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/TeX Live for SUSE Linux) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./zigbee.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-02-22> (/usr/share/texmf/tex/latex/base/article.cls
+Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
+(/usr/share/texmf/tex/latex/base/size10.clo))
+(/usr/share/texmf/tex/latex/base/inputenc.sty)
+(/usr/share/texmf/tex/latex/subfigure/subfigure.sty
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/share/texmf/tex/latex/subfigure/subfigure.cfg))
+(/usr/share/texmf/tex/generic/babel/babel.sty
+(/usr/share/texmf/tex/generic/babel/txtbabel.def)
+(/usr/share/texmf/tex/generic/babel-czech/czech.ldf))
+(/usr/share/texmf/tex/generic/babel/locale/cs/babel-czech.tex)
+(/usr/share/texmf/tex/latex/base/fontenc.sty)
+(/usr/share/texmf/tex/latex/graphics/graphicx.sty
+(/usr/share/texmf/tex/latex/graphics/keyval.sty)
+(/usr/share/texmf/tex/latex/graphics/graphics.sty
+(/usr/share/texmf/tex/latex/graphics/trig.sty)
+(/usr/share/texmf/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/share/texmf/tex/latex/graphics-def/pdftex.def)))
+(/usr/share/texmf/tex/latex/biblatex/biblatex.sty
+(/usr/share/texmf/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texmf/tex/generic/infwarerr/infwarerr.sty)
+(/usr/share/texmf/tex/generic/iftex/iftex.sty)
+(/usr/share/texmf/tex/generic/ltxcmds/ltxcmds.sty))
+(/usr/share/texmf/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texmf/tex/latex/kvoptions/kvoptions.sty
+(/usr/share/texmf/tex/latex/kvsetkeys/kvsetkeys.sty))
+(/usr/share/texmf/tex/latex/logreq/logreq.sty
+(/usr/share/texmf/tex/latex/logreq/logreq.def))
+(/usr/share/texmf/tex/latex/base/ifthen.sty)
+(/usr/share/texmf/tex/latex/url/url.sty)
+(/usr/share/texmf/tex/latex/biblatex/blx-dm.def)
+(/home/tomkys144/texmf/tex/latex/iso-numeric.dbx)
+(/usr/share/texmf/tex/latex/biblatex/blx-compat.def)
+(/usr/share/texmf/tex/latex/biblatex/biblatex.def)
+(/home/tomkys144/texmf/tex/latex/iso-numeric.bbx
+(/home/tomkys144/texmf/tex/latex/iso.bbx))
+(/home/tomkys144/texmf/tex/latex/iso-numeric.cbx
+(/usr/share/texmf/tex/latex/biblatex/cbx/numeric.cbx)
+(/home/tomkys144/texmf/tex/latex/iso-fullcite.cbx))
+(/usr/share/texmf/tex/latex/biblatex/biblatex.cfg)
+(/usr/share/texmf/tex/latex/l3kernel/expl3.sty
+(/usr/share/texmf/tex/latex/l3backend/l3backend-pdftex.def))
+(/usr/share/texmf/tex/latex/biblatex/blx-case-expl3.sty
+(/usr/share/texmf/tex/latex/l3packages/xparse/xparse.sty)))
+(/usr/share/texmf/tex/latex/hyperref/hyperref.sty
+(/usr/share/texmf/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texmf/tex/generic/pdfescape/pdfescape.sty)
+(/usr/share/texmf/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texmf/tex/latex/letltxmacro/letltxmacro.sty)
+(/usr/share/texmf/tex/latex/auxhook/auxhook.sty)
+(/usr/share/texmf/tex/latex/hyperref/nameref.sty
+(/usr/share/texmf/tex/latex/refcount/refcount.sty)
+(/usr/share/texmf/tex/generic/gettitlestring/gettitlestring.sty))
+(/usr/share/texmf/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texmf/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texmf/tex/generic/etexcmds/etexcmds.sty)
+(/usr/share/texmf/tex/latex/hyperref/puenc.def)
+(/usr/share/texmf/tex/generic/bitset/bitset.sty
+(/usr/share/texmf/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/share/texmf/tex/latex/base/atbegshi-ltx.sty))
+(/usr/share/texmf/tex/latex/hyperref/hpdftex.def
+(/usr/share/texmf/tex/latex/base/atveryend-ltx.sty)
+(/usr/share/texmf/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texmf/tex/generic/uniquecounter/uniquecounter.sty)))
+(/usr/share/texmf/tex/latex/csquotes/csquotes.sty
+(/usr/share/texmf/tex/latex/csquotes/csquotes.def)
+(/usr/share/texmf/tex/latex/csquotes/csquotes.cfg))
+(/usr/share/texmf/tex/latex/parskip/parskip.sty)
+(/usr/share/texmf/tex/latex/mhchem/mhchem.sty
+(/usr/share/texmf/tex/latex/l3packages/l3keys2e/l3keys2e.sty)
+(/usr/share/texmf/tex/latex/tools/calc.sty)
+(/usr/share/texmf/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf/tex/latex/amsmath/amstext.sty
+(/usr/share/texmf/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texmf/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texmf/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texmf/tex/latex/chemgreek/chemgreek.sty))
+(/usr/share/texmf/tex/latex/siunitx/siunitx.sty
+(/usr/share/texmf/tex/latex/translations/translations.sty)
+(/usr/share/texmf/tex/latex/tools/array.sty))
+(/usr/share/texmf/tex/latex/titlesec/titlesec.sty)
+(/usr/share/texmf/tex/latex/float/float.sty) (./zigbee.aux
+(/usr/share/texmf/tex/generic/babel/locale/en/babel-english.tex))
+(/usr/share/texmf/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texmf/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/share/texmf/tex/latex/latexconfig/epstopdf-sys.cfg))
+(/home/tomkys144/texmf/tex/latex/czech-iso.lbx
+(/usr/share/texmf/tex/latex/biblatex/lbx/czech.lbx)
+(/usr/share/texmf/tex/latex/biblatex/lbx/czech.lbx))
+(/home/tomkys144/texmf/tex/latex/english-iso.lbx
+(/usr/share/texmf/tex/latex/biblatex/lbx/english.lbx)
+(/usr/share/texmf/tex/latex/biblatex/lbx/english.lbx)) (./zigbee.bbl)
+(./zigbee.out) (./zigbee.out)
+Couldn't patch \ttl@straight@ii
+Couldn't patch \ttl@straight@ii
+(/usr/share/texmf/tex/latex/graphics/color.sty
+(/usr/share/texmf/tex/latex/graphics-cfg/color.cfg)
+(/usr/share/texmf/tex/latex/graphics/mathcolor.ltx)) [1{/var/lib/texmf/fonts/ma
+p/pdftex/updmap/pdftex.map}] (./zigbee.toc) (./zigbee.lof) [1]
+Overfull \hbox (17.39516pt too wide) in paragraph at lines 76--77
+\OT1/cmr/m/n/10 podm^^S^^Pnk^^Sam. Tak^^Se p^^Tri v^^Sypadku jed-nqoho ZR ne-do
+-jde k v^^Sypadku cel^^Se v^^Tetve. [[]3[]] 
+[2
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.88 \subsubsection{P??ipojen?? k~s??ti}
+                                         \label{sec:joining} <./assets/topology
+_types.png>]
+Overfull \hbox (7.99849pt too wide) in paragraph at lines 101--102
+\OT1/cmr/m/n/10 U Zig-Bee PRO za^^Tr^^S^^Pzen^^S^^P je vy^^Tzadov^^Sana ak-tu-a
+-li-zace pro-po-jo-vac^^S^^Pho kl^^S^^P^^Tce po p^^Tripojen^^S^^P
+[3
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.111 
+       <./assets/join_static.png>]
+Overfull \hbox (4.41621pt too wide) in paragraph at lines 119--120
+\OT1/cmr/m/n/10 z Podp^^Wurn^^Se aplika^^Tcn^^S^^P pod-vrstvy (APS) a Zig-Bee D
+e-vice ob-jekt^^Wu (ZDO). [[]6[]] 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (0.47116pt too wide) in paragraph at lines 128--129
+\OT1/cmr/m/n/10 Tato vsrtva m^^Sa na sta-rosti fy-zick^^Se vys^^S^^Pl^^San^^S^^
+P sign^^Sal^^Wu. Pou^^Tz^^S^^Pv^^Sa bud[] sub-GHz p^^Sasmo,
+
+Overfull \hbox (8.1729pt too wide) in paragraph at lines 131--132
+\OT1/cmr/m/n/10 v p^^Trij^^S^^Pman^^Sych da-tech. MAC ad-resy by m^^Teli b^^Syt
+ EUI-64 de-fi-no-van^^Se podle IEEE 802.
+[4
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2.3}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.132 
+       <./assets/join_dynamic.png>] [5
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2.4}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.142 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2.5}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.142 
+       <./assets/stack_architecture.png> <./assets/mac_frame.png>]
+Overfull \hbox (12.91515pt too wide) in paragraph at lines 143--144
+[]\OT1/cmr/m/n/10 NLDE se star^^Sa o p^^Tred^^Sav^^San^^S^^P ap-pli-cation pro-
+to-col data units (APDU) mezi za^^Tr^^S^^Pzen^^S^^Pmi
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (5.44174pt too wide) in paragraph at lines 163--164
+[]\OT1/cmr/m/n/10 Mezi v^^Syznamen^^Se v^^Syrobce SoC a MCU se ^^Trad^^S^^P Tex
+as In-stru-ments (TI CC2530Fxx),
+[6]
+Overfull \hbox (11.33527pt too wide) in paragraph at lines 172--173
+\OT1/cmr/m/n/10 dov^^San^^S^^P vhodn^^Sych podm^^S^^Pnek pro sta^^Tren^^S^^P pr
+o-dukt^^Wu, po-tra-vin a mnoho dal^^Ts^^S^^Pho. 
+[7
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.173 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.2}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.173 
+       <./assets/rf_external.png> <./assets/rf_inner.png>]
+Overfull \hbox (6.19218pt too wide) in paragraph at lines 181--181
+[][]\OT1/cmr/m/n/10 Do-stupn^^Se z[][]: []$\OT1/cmtt/m/n/10 https : / / www . s
+ilabs . com / documents / public / application -[]
+
+Overfull \hbox (11.52493pt too wide) in paragraph at lines 181--181
+\OT1/cmtt/m/n/10 uploads / 2023 / 04 / 05 -[] 3474 -[] 23 -[] csg -[] zigbee -[
+] specification -[] compressed .
+
+Overfull \hbox (10.78055pt too wide) in paragraph at lines 181--181
+\OT1/cmr/m/n/10 Ale-xan-dre; MI-NET, Pas-cale; VAL, Thi-erry; VI-OLLET, Jean-Ba
+ptiste. Which
+[8]
+Overfull \hbox (18.29788pt too wide) in paragraph at lines 181--181
+[]\OT1/cmr/m/n/10 PEI, Zhong-min; DENG, Zhi-dong; YANG, Bo; CHENG, Xi-a-o-li-an
+g. Application-
+[9] (./zigbee.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+Package biblatex Warning: Please rerun LaTeX.
+
+ )
+(see the transcript file for additional information)</usr/share/texmf/fonts/typ
+e1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/
+cm/cmbx12.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></us
+r/share/texmf/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf/fonts/
+type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf/fonts/type1/public/amsfont
+s/cm/cmr17.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/
+share/texmf/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf/fonts/t
+ype1/public/amsfonts/cm/cmtt10.pfb>
+Output written on zigbee.pdf (10 pages, 1512815 bytes).
+Transcript written on zigbee.log.
+
+                ----------------------- END OUTPUT BUFFER -----------------------
+12 Dec 2023 10:21:16.818 INFO  - Task result: SUCCESS
+12 Dec 2023 10:21:16.818 INFO  - I am ready to interpret rule "biber".
+12 Dec 2023 10:21:16.819 INFO  - Rule location: "/usr/share/texmf/scripts/arara/rules"
+12 Dec 2023 10:21:16.826 INFO  - I am ready to interpret task "The Biber reference management software" from rule "Biber".
+12 Dec 2023 10:21:16.827 INFO  - System command: [biber, zigbee] @ /home/tomkys144/Documents/CTU/b231/mns
+12 Dec 2023 10:21:17.804 INFO  -                 ---------------------- BEGIN OUTPUT BUFFER ----------------------
+                INFO - This is Biber 2.19
+INFO - Logfile is 'zigbee.blg'
+INFO - Reading 'zigbee.bcf'
+INFO - Using all citekeys in bib section 0
+INFO - Processing section 0
+INFO - Looking for bibtex file 'zigbee.bib' for section 0
+INFO - LaTeX decoding ...
+INFO - Found BibTeX data source 'zigbee.bib'
+INFO - Overriding locale 'cs-CZ' defaults 'normalization = NFD' with 'normalization = prenormalized'
+INFO - Overriding locale 'cs-CZ' defaults 'variable = shifted' with 'variable = non-ignorable'
+INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'cs-CZ'
+INFO - Writing 'zigbee.bbl' with encoding 'UTF-8'
+INFO - Output to zigbee.bbl
+WARN - legacy year field 'c2023' in entry 'eltech' is not an integer - this will probably not sort properly.
+WARN - legacy month field 'Nov' in entry 'nordic-guide' is not an integer - this will probably not sort properly.
+WARN - legacy month field 'Sep' in entry 'zigbee-behaviour' is not an integer - this will probably not sort properly.
+WARN - legacy month field 'Apr' in entry 'zigbee-spec22' is not an integer - this will probably not sort properly.
+WARN - legacy year field 'c2017-2023' in entry 'ecstuff4u' is not an integer - this will probably not sort properly.
+WARN - legacy month field 'Feb' in entry 'ti-security' is not an integer - this will probably not sort properly.
+WARN - legacy month field 'Aug' in entry 'stm32wb' is not an integer - this will probably not sort properly.
+WARN - legacy year field 'c2023' in entry 'silabs-an1233' is not an integer - this will probably not sort properly.
+WARN - legacy month field 'Mar' in entry 'zigbee-spec23' is not an integer - this will probably not sort properly.
+INFO - WARNINGS: 9
+
+                ----------------------- END OUTPUT BUFFER -----------------------
+12 Dec 2023 10:21:17.804 INFO  - Task result: SUCCESS
+12 Dec 2023 10:21:17.805 INFO  - I am ready to interpret rule "pdflatex".
+12 Dec 2023 10:21:17.806 INFO  - Rule location: "/usr/share/texmf/scripts/arara/rules"
+12 Dec 2023 10:21:17.813 INFO  - I am ready to interpret task "PDFLaTeX engine" from rule "PDFLaTeX".
+12 Dec 2023 10:21:17.813 INFO  - System command: [pdflatex, zigbee.tex] @ /home/tomkys144/Documents/CTU/b231/mns
+12 Dec 2023 10:21:22.551 INFO  -                 ---------------------- BEGIN OUTPUT BUFFER ----------------------
+                This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/TeX Live for SUSE Linux) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./zigbee.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-02-22> (/usr/share/texmf/tex/latex/base/article.cls
+Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
+(/usr/share/texmf/tex/latex/base/size10.clo))
+(/usr/share/texmf/tex/latex/base/inputenc.sty)
+(/usr/share/texmf/tex/latex/subfigure/subfigure.sty
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/share/texmf/tex/latex/subfigure/subfigure.cfg))
+(/usr/share/texmf/tex/generic/babel/babel.sty
+(/usr/share/texmf/tex/generic/babel/txtbabel.def)
+(/usr/share/texmf/tex/generic/babel-czech/czech.ldf))
+(/usr/share/texmf/tex/generic/babel/locale/cs/babel-czech.tex)
+(/usr/share/texmf/tex/latex/base/fontenc.sty)
+(/usr/share/texmf/tex/latex/graphics/graphicx.sty
+(/usr/share/texmf/tex/latex/graphics/keyval.sty)
+(/usr/share/texmf/tex/latex/graphics/graphics.sty
+(/usr/share/texmf/tex/latex/graphics/trig.sty)
+(/usr/share/texmf/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/share/texmf/tex/latex/graphics-def/pdftex.def)))
+(/usr/share/texmf/tex/latex/biblatex/biblatex.sty
+(/usr/share/texmf/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texmf/tex/generic/infwarerr/infwarerr.sty)
+(/usr/share/texmf/tex/generic/iftex/iftex.sty)
+(/usr/share/texmf/tex/generic/ltxcmds/ltxcmds.sty))
+(/usr/share/texmf/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texmf/tex/latex/kvoptions/kvoptions.sty
+(/usr/share/texmf/tex/latex/kvsetkeys/kvsetkeys.sty))
+(/usr/share/texmf/tex/latex/logreq/logreq.sty
+(/usr/share/texmf/tex/latex/logreq/logreq.def))
+(/usr/share/texmf/tex/latex/base/ifthen.sty)
+(/usr/share/texmf/tex/latex/url/url.sty)
+(/usr/share/texmf/tex/latex/biblatex/blx-dm.def)
+(/home/tomkys144/texmf/tex/latex/iso-numeric.dbx)
+(/usr/share/texmf/tex/latex/biblatex/blx-compat.def)
+(/usr/share/texmf/tex/latex/biblatex/biblatex.def)
+(/home/tomkys144/texmf/tex/latex/iso-numeric.bbx
+(/home/tomkys144/texmf/tex/latex/iso.bbx))
+(/home/tomkys144/texmf/tex/latex/iso-numeric.cbx
+(/usr/share/texmf/tex/latex/biblatex/cbx/numeric.cbx)
+(/home/tomkys144/texmf/tex/latex/iso-fullcite.cbx))
+(/usr/share/texmf/tex/latex/biblatex/biblatex.cfg)
+(/usr/share/texmf/tex/latex/l3kernel/expl3.sty
+(/usr/share/texmf/tex/latex/l3backend/l3backend-pdftex.def))
+(/usr/share/texmf/tex/latex/biblatex/blx-case-expl3.sty
+(/usr/share/texmf/tex/latex/l3packages/xparse/xparse.sty)))
+(/usr/share/texmf/tex/latex/hyperref/hyperref.sty
+(/usr/share/texmf/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texmf/tex/generic/pdfescape/pdfescape.sty)
+(/usr/share/texmf/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texmf/tex/latex/letltxmacro/letltxmacro.sty)
+(/usr/share/texmf/tex/latex/auxhook/auxhook.sty)
+(/usr/share/texmf/tex/latex/hyperref/nameref.sty
+(/usr/share/texmf/tex/latex/refcount/refcount.sty)
+(/usr/share/texmf/tex/generic/gettitlestring/gettitlestring.sty))
+(/usr/share/texmf/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texmf/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texmf/tex/generic/etexcmds/etexcmds.sty)
+(/usr/share/texmf/tex/latex/hyperref/puenc.def)
+(/usr/share/texmf/tex/generic/bitset/bitset.sty
+(/usr/share/texmf/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/share/texmf/tex/latex/base/atbegshi-ltx.sty))
+(/usr/share/texmf/tex/latex/hyperref/hpdftex.def
+(/usr/share/texmf/tex/latex/base/atveryend-ltx.sty)
+(/usr/share/texmf/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texmf/tex/generic/uniquecounter/uniquecounter.sty)))
+(/usr/share/texmf/tex/latex/csquotes/csquotes.sty
+(/usr/share/texmf/tex/latex/csquotes/csquotes.def)
+(/usr/share/texmf/tex/latex/csquotes/csquotes.cfg))
+(/usr/share/texmf/tex/latex/parskip/parskip.sty)
+(/usr/share/texmf/tex/latex/mhchem/mhchem.sty
+(/usr/share/texmf/tex/latex/l3packages/l3keys2e/l3keys2e.sty)
+(/usr/share/texmf/tex/latex/tools/calc.sty)
+(/usr/share/texmf/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf/tex/latex/amsmath/amstext.sty
+(/usr/share/texmf/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texmf/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texmf/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texmf/tex/latex/chemgreek/chemgreek.sty))
+(/usr/share/texmf/tex/latex/siunitx/siunitx.sty
+(/usr/share/texmf/tex/latex/translations/translations.sty)
+(/usr/share/texmf/tex/latex/tools/array.sty))
+(/usr/share/texmf/tex/latex/titlesec/titlesec.sty)
+(/usr/share/texmf/tex/latex/float/float.sty) (./zigbee.aux
+(/usr/share/texmf/tex/generic/babel/locale/en/babel-english.tex))
+(/usr/share/texmf/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texmf/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/share/texmf/tex/latex/latexconfig/epstopdf-sys.cfg))
+(/home/tomkys144/texmf/tex/latex/czech-iso.lbx
+(/usr/share/texmf/tex/latex/biblatex/lbx/czech.lbx)
+(/usr/share/texmf/tex/latex/biblatex/lbx/czech.lbx))
+(/home/tomkys144/texmf/tex/latex/english-iso.lbx
+(/usr/share/texmf/tex/latex/biblatex/lbx/english.lbx)
+(/usr/share/texmf/tex/latex/biblatex/lbx/english.lbx)) (./zigbee.bbl)
+(./zigbee.out) (./zigbee.out)
+Couldn't patch \ttl@straight@ii
+Couldn't patch \ttl@straight@ii
+(/usr/share/texmf/tex/latex/graphics/color.sty
+(/usr/share/texmf/tex/latex/graphics-cfg/color.cfg)
+(/usr/share/texmf/tex/latex/graphics/mathcolor.ltx)) [1{/var/lib/texmf/fonts/ma
+p/pdftex/updmap/pdftex.map}] (./zigbee.toc) (./zigbee.lof) [1]
+Overfull \hbox (17.39516pt too wide) in paragraph at lines 76--77
+\OT1/cmr/m/n/10 podm^^S^^Pnk^^Sam. Tak^^Se p^^Tri v^^Sypadku jed-nqoho ZR ne-do
+-jde k v^^Sypadku cel^^Se v^^Tetve. [[]3[]] 
+[2
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.88 \subsubsection{P??ipojen?? k~s??ti}
+                                         \label{sec:joining} <./assets/topology
+_types.png>]
+Overfull \hbox (7.99849pt too wide) in paragraph at lines 101--102
+\OT1/cmr/m/n/10 U Zig-Bee PRO za^^Tr^^S^^Pzen^^S^^P je vy^^Tzadov^^Sana ak-tu-a
+-li-zace pro-po-jo-vac^^S^^Pho kl^^S^^P^^Tce po p^^Tripojen^^S^^P
+[3
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.111 
+       <./assets/join_static.png>]
+Overfull \hbox (4.41621pt too wide) in paragraph at lines 119--120
+\OT1/cmr/m/n/10 z Podp^^Wurn^^Se aplika^^Tcn^^S^^P pod-vrstvy (APS) a Zig-Bee D
+e-vice ob-jekt^^Wu (ZDO). [[]6[]] 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (0.47116pt too wide) in paragraph at lines 128--129
+\OT1/cmr/m/n/10 Tato vsrtva m^^Sa na sta-rosti fy-zick^^Se vys^^S^^Pl^^San^^S^^
+P sign^^Sal^^Wu. Pou^^Tz^^S^^Pv^^Sa bud[] sub-GHz p^^Sasmo,
+
+Overfull \hbox (8.1729pt too wide) in paragraph at lines 131--132
+\OT1/cmr/m/n/10 v p^^Trij^^S^^Pman^^Sych da-tech. MAC ad-resy by m^^Teli b^^Syt
+ EUI-64 de-fi-no-van^^Se podle IEEE 802.
+[4
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2.3}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.132 
+       <./assets/join_dynamic.png>] [5
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2.4}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.142 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2.5}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.142 
+       <./assets/stack_architecture.png> <./assets/mac_frame.png>]
+Overfull \hbox (12.91515pt too wide) in paragraph at lines 143--144
+[]\OT1/cmr/m/n/10 NLDE se star^^Sa o p^^Tred^^Sav^^San^^S^^P ap-pli-cation pro-
+to-col data units (APDU) mezi za^^Tr^^S^^Pzen^^S^^Pmi
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (5.44174pt too wide) in paragraph at lines 163--164
+[]\OT1/cmr/m/n/10 Mezi v^^Syznamen^^Se v^^Syrobce SoC a MCU se ^^Trad^^S^^P Tex
+as In-stru-ments (TI CC2530Fxx),
+[6]
+Overfull \hbox (11.33527pt too wide) in paragraph at lines 172--173
+\OT1/cmr/m/n/10 dov^^San^^S^^P vhodn^^Sych podm^^S^^Pnek pro sta^^Tren^^S^^P pr
+o-dukt^^Wu, po-tra-vin a mnoho dal^^Ts^^S^^Pho. 
+[7
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.173 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.2}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.173 
+       <./assets/rf_external.png> <./assets/rf_inner.png>]
+Overfull \hbox (6.19218pt too wide) in paragraph at lines 181--181
+[][]\OT1/cmr/m/n/10 Do-stupn^^Se z[][]: []$\OT1/cmtt/m/n/10 https : / / www . s
+ilabs . com / documents / public / application -[]
+
+Overfull \hbox (11.52493pt too wide) in paragraph at lines 181--181
+\OT1/cmtt/m/n/10 uploads / 2023 / 04 / 05 -[] 3474 -[] 23 -[] csg -[] zigbee -[
+] specification -[] compressed .
+
+Overfull \hbox (10.78055pt too wide) in paragraph at lines 181--181
+\OT1/cmr/m/n/10 Ale-xan-dre; MI-NET, Pas-cale; VAL, Thi-erry; VI-OLLET, Jean-Ba
+ptiste. Which
+[8]
+Overfull \hbox (18.29788pt too wide) in paragraph at lines 181--181
+[]\OT1/cmr/m/n/10 PEI, Zhong-min; DENG, Zhi-dong; YANG, Bo; CHENG, Xi-a-o-li-an
+g. Application-
+[9] (./zigbee.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+Package biblatex Warning: Please rerun LaTeX.
+
+ )
+(see the transcript file for additional information)</usr/share/texmf/fonts/typ
+e1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/
+cm/cmbx12.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></us
+r/share/texmf/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf/fonts/
+type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf/fonts/type1/public/amsfont
+s/cm/cmr17.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/
+share/texmf/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf/fonts/t
+ype1/public/amsfonts/cm/cmtt10.pfb>
+Output written on zigbee.pdf (10 pages, 1512815 bytes).
+Transcript written on zigbee.log.
+
+                ----------------------- END OUTPUT BUFFER -----------------------
+12 Dec 2023 10:21:22.553 INFO  - Task result: SUCCESS
+12 Dec 2023 10:21:22.553 INFO  - I am ready to interpret rule "pdflatex".
+12 Dec 2023 10:21:22.555 INFO  - Rule location: "/usr/share/texmf/scripts/arara/rules"
+12 Dec 2023 10:21:22.570 INFO  - I am ready to interpret task "PDFLaTeX engine" from rule "PDFLaTeX".
+12 Dec 2023 10:21:22.570 INFO  - System command: [pdflatex, zigbee.tex] @ /home/tomkys144/Documents/CTU/b231/mns
+12 Dec 2023 10:21:27.307 INFO  -                 ---------------------- BEGIN OUTPUT BUFFER ----------------------
+                This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/TeX Live for SUSE Linux) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./zigbee.tex
+LaTeX2e <2022-11-01> patch level 1
+L3 programming layer <2023-02-22> (/usr/share/texmf/tex/latex/base/article.cls
+Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
+(/usr/share/texmf/tex/latex/base/size10.clo))
+(/usr/share/texmf/tex/latex/base/inputenc.sty)
+(/usr/share/texmf/tex/latex/subfigure/subfigure.sty
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/share/texmf/tex/latex/subfigure/subfigure.cfg))
+(/usr/share/texmf/tex/generic/babel/babel.sty
+(/usr/share/texmf/tex/generic/babel/txtbabel.def)
+(/usr/share/texmf/tex/generic/babel-czech/czech.ldf))
+(/usr/share/texmf/tex/generic/babel/locale/cs/babel-czech.tex)
+(/usr/share/texmf/tex/latex/base/fontenc.sty)
+(/usr/share/texmf/tex/latex/graphics/graphicx.sty
+(/usr/share/texmf/tex/latex/graphics/keyval.sty)
+(/usr/share/texmf/tex/latex/graphics/graphics.sty
+(/usr/share/texmf/tex/latex/graphics/trig.sty)
+(/usr/share/texmf/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/share/texmf/tex/latex/graphics-def/pdftex.def)))
+(/usr/share/texmf/tex/latex/biblatex/biblatex.sty
+(/usr/share/texmf/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texmf/tex/generic/infwarerr/infwarerr.sty)
+(/usr/share/texmf/tex/generic/iftex/iftex.sty)
+(/usr/share/texmf/tex/generic/ltxcmds/ltxcmds.sty))
+(/usr/share/texmf/tex/latex/etoolbox/etoolbox.sty)
+(/usr/share/texmf/tex/latex/kvoptions/kvoptions.sty
+(/usr/share/texmf/tex/latex/kvsetkeys/kvsetkeys.sty))
+(/usr/share/texmf/tex/latex/logreq/logreq.sty
+(/usr/share/texmf/tex/latex/logreq/logreq.def))
+(/usr/share/texmf/tex/latex/base/ifthen.sty)
+(/usr/share/texmf/tex/latex/url/url.sty)
+(/usr/share/texmf/tex/latex/biblatex/blx-dm.def)
+(/home/tomkys144/texmf/tex/latex/iso-numeric.dbx)
+(/usr/share/texmf/tex/latex/biblatex/blx-compat.def)
+(/usr/share/texmf/tex/latex/biblatex/biblatex.def)
+(/home/tomkys144/texmf/tex/latex/iso-numeric.bbx
+(/home/tomkys144/texmf/tex/latex/iso.bbx))
+(/home/tomkys144/texmf/tex/latex/iso-numeric.cbx
+(/usr/share/texmf/tex/latex/biblatex/cbx/numeric.cbx)
+(/home/tomkys144/texmf/tex/latex/iso-fullcite.cbx))
+(/usr/share/texmf/tex/latex/biblatex/biblatex.cfg)
+(/usr/share/texmf/tex/latex/l3kernel/expl3.sty
+(/usr/share/texmf/tex/latex/l3backend/l3backend-pdftex.def))
+(/usr/share/texmf/tex/latex/biblatex/blx-case-expl3.sty
+(/usr/share/texmf/tex/latex/l3packages/xparse/xparse.sty)))
+(/usr/share/texmf/tex/latex/hyperref/hyperref.sty
+(/usr/share/texmf/tex/generic/kvdefinekeys/kvdefinekeys.sty)
+(/usr/share/texmf/tex/generic/pdfescape/pdfescape.sty)
+(/usr/share/texmf/tex/latex/hycolor/hycolor.sty)
+(/usr/share/texmf/tex/latex/letltxmacro/letltxmacro.sty)
+(/usr/share/texmf/tex/latex/auxhook/auxhook.sty)
+(/usr/share/texmf/tex/latex/hyperref/nameref.sty
+(/usr/share/texmf/tex/latex/refcount/refcount.sty)
+(/usr/share/texmf/tex/generic/gettitlestring/gettitlestring.sty))
+(/usr/share/texmf/tex/latex/hyperref/pd1enc.def)
+(/usr/share/texmf/tex/generic/intcalc/intcalc.sty)
+(/usr/share/texmf/tex/generic/etexcmds/etexcmds.sty)
+(/usr/share/texmf/tex/latex/hyperref/puenc.def)
+(/usr/share/texmf/tex/generic/bitset/bitset.sty
+(/usr/share/texmf/tex/generic/bigintcalc/bigintcalc.sty))
+(/usr/share/texmf/tex/latex/base/atbegshi-ltx.sty))
+(/usr/share/texmf/tex/latex/hyperref/hpdftex.def
+(/usr/share/texmf/tex/latex/base/atveryend-ltx.sty)
+(/usr/share/texmf/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texmf/tex/generic/uniquecounter/uniquecounter.sty)))
+(/usr/share/texmf/tex/latex/csquotes/csquotes.sty
+(/usr/share/texmf/tex/latex/csquotes/csquotes.def)
+(/usr/share/texmf/tex/latex/csquotes/csquotes.cfg))
+(/usr/share/texmf/tex/latex/parskip/parskip.sty)
+(/usr/share/texmf/tex/latex/mhchem/mhchem.sty
+(/usr/share/texmf/tex/latex/l3packages/l3keys2e/l3keys2e.sty)
+(/usr/share/texmf/tex/latex/tools/calc.sty)
+(/usr/share/texmf/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf/tex/latex/amsmath/amstext.sty
+(/usr/share/texmf/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texmf/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texmf/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texmf/tex/latex/chemgreek/chemgreek.sty))
+(/usr/share/texmf/tex/latex/siunitx/siunitx.sty
+(/usr/share/texmf/tex/latex/translations/translations.sty)
+(/usr/share/texmf/tex/latex/tools/array.sty))
+(/usr/share/texmf/tex/latex/titlesec/titlesec.sty)
+(/usr/share/texmf/tex/latex/float/float.sty) (./zigbee.aux
+(/usr/share/texmf/tex/generic/babel/locale/en/babel-english.tex))
+(/usr/share/texmf/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texmf/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/share/texmf/tex/latex/latexconfig/epstopdf-sys.cfg))
+(/home/tomkys144/texmf/tex/latex/czech-iso.lbx
+(/usr/share/texmf/tex/latex/biblatex/lbx/czech.lbx)
+(/usr/share/texmf/tex/latex/biblatex/lbx/czech.lbx))
+(/home/tomkys144/texmf/tex/latex/english-iso.lbx
+(/usr/share/texmf/tex/latex/biblatex/lbx/english.lbx)
+(/usr/share/texmf/tex/latex/biblatex/lbx/english.lbx)) (./zigbee.bbl)
+(./zigbee.out) (./zigbee.out)
+Couldn't patch \ttl@straight@ii
+Couldn't patch \ttl@straight@ii
+(/usr/share/texmf/tex/latex/graphics/color.sty
+(/usr/share/texmf/tex/latex/graphics-cfg/color.cfg)
+(/usr/share/texmf/tex/latex/graphics/mathcolor.ltx)) [1{/var/lib/texmf/fonts/ma
+p/pdftex/updmap/pdftex.map}] (./zigbee.toc) (./zigbee.lof) [1]
+Overfull \hbox (17.39516pt too wide) in paragraph at lines 76--77
+\OT1/cmr/m/n/10 podm^^S^^Pnk^^Sam. Tak^^Se p^^Tri v^^Sypadku jed-nqoho ZR ne-do
+-jde k v^^Sypadku cel^^Se v^^Tetve. [[]3[]] 
+[2
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.88 \subsubsection{P??ipojen?? k~s??ti}
+                                         \label{sec:joining} <./assets/topology
+_types.png>]
+Overfull \hbox (7.99849pt too wide) in paragraph at lines 101--102
+\OT1/cmr/m/n/10 U Zig-Bee PRO za^^Tr^^S^^Pzen^^S^^P je vy^^Tzadov^^Sana ak-tu-a
+-li-zace pro-po-jo-vac^^S^^Pho kl^^S^^P^^Tce po p^^Tripojen^^S^^P
+[3
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.111 
+       <./assets/join_static.png>]
+Overfull \hbox (4.41621pt too wide) in paragraph at lines 119--120
+\OT1/cmr/m/n/10 z Podp^^Wurn^^Se aplika^^Tcn^^S^^P pod-vrstvy (APS) a Zig-Bee D
+e-vice ob-jekt^^Wu (ZDO). [[]6[]] 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (0.47116pt too wide) in paragraph at lines 128--129
+\OT1/cmr/m/n/10 Tato vsrtva m^^Sa na sta-rosti fy-zick^^Se vys^^S^^Pl^^San^^S^^
+P sign^^Sal^^Wu. Pou^^Tz^^S^^Pv^^Sa bud[] sub-GHz p^^Sasmo,
+
+Overfull \hbox (8.1729pt too wide) in paragraph at lines 131--132
+\OT1/cmr/m/n/10 v p^^Trij^^S^^Pman^^Sych da-tech. MAC ad-resy by m^^Teli b^^Syt
+ EUI-64 de-fi-no-van^^Se podle IEEE 802.
+[4
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2.3}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.132 
+       <./assets/join_dynamic.png>] [5
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2.4}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.142 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2.5}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.142 
+       <./assets/stack_architecture.png> <./assets/mac_frame.png>]
+Overfull \hbox (12.91515pt too wide) in paragraph at lines 143--144
+[]\OT1/cmr/m/n/10 NLDE se star^^Sa o p^^Tred^^Sav^^San^^S^^P ap-pli-cation pro-
+to-col data units (APDU) mezi za^^Tr^^S^^Pzen^^S^^Pmi
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (5.44174pt too wide) in paragraph at lines 163--164
+[]\OT1/cmr/m/n/10 Mezi v^^Syznamen^^Se v^^Syrobce SoC a MCU se ^^Trad^^S^^P Tex
+as In-stru-ments (TI CC2530Fxx),
+[6]
+Overfull \hbox (11.33527pt too wide) in paragraph at lines 172--173
+\OT1/cmr/m/n/10 dov^^San^^S^^P vhodn^^Sych podm^^S^^Pnek pro sta^^Tren^^S^^P pr
+o-dukt^^Wu, po-tra-vin a mnoho dal^^Ts^^S^^Pho. 
+[7
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.173 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.2}) 
+has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.173 
+       <./assets/rf_external.png> <./assets/rf_inner.png>]
+Overfull \hbox (6.19218pt too wide) in paragraph at lines 181--181
+[][]\OT1/cmr/m/n/10 Do-stupn^^Se z[][]: []$\OT1/cmtt/m/n/10 https : / / www . s
+ilabs . com / documents / public / application -[]
+
+Overfull \hbox (11.52493pt too wide) in paragraph at lines 181--181
+\OT1/cmtt/m/n/10 uploads / 2023 / 04 / 05 -[] 3474 -[] 23 -[] csg -[] zigbee -[
+] specification -[] compressed .
+
+Overfull \hbox (10.78055pt too wide) in paragraph at lines 181--181
+\OT1/cmr/m/n/10 Ale-xan-dre; MI-NET, Pas-cale; VAL, Thi-erry; VI-OLLET, Jean-Ba
+ptiste. Which
+[8]
+Overfull \hbox (18.29788pt too wide) in paragraph at lines 181--181
+[]\OT1/cmr/m/n/10 PEI, Zhong-min; DENG, Zhi-dong; YANG, Bo; CHENG, Xi-a-o-li-an
+g. Application-
+[9] (./zigbee.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+Package biblatex Warning: Please rerun LaTeX.
+
+ )
+(see the transcript file for additional information)</usr/share/texmf/fonts/typ
+e1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf/fonts/type1/public/amsfonts/
+cm/cmbx12.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></us
+r/share/texmf/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf/fonts/
+type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf/fonts/type1/public/amsfont
+s/cm/cmr17.pfb></usr/share/texmf/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/
+share/texmf/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf/fonts/t
+ype1/public/amsfonts/cm/cmtt10.pfb>
+Output written on zigbee.pdf (10 pages, 1512815 bytes).
+Transcript written on zigbee.log.
+
+                ----------------------- END OUTPUT BUFFER -----------------------
+12 Dec 2023 10:21:27.309 INFO  - Task result: SUCCESS
+12 Dec 2023 10:21:27.313 INFO  - Total: 19.612 seconds

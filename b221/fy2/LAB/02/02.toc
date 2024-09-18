@@ -1,0 +1,17 @@
+\babel@toc {czech}{}\relax 
+\contentsline {section}{\numberline {1}Úkol měření}{2}{section.1}%
+\contentsline {section}{\numberline {2}Seznam použitých přístrojů}{2}{section.2}%
+\contentsline {section}{\numberline {3}Teoretický úvod}{3}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Stanovení Planckovy konstanty}{3}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Použití metody nejmenších čtverců}{3}{subsubsection.3.1.1}%
+\contentsline {section}{\numberline {4}Naměřené hodnoty a jejich zpracování}{4}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Tabulky naměřených hodnot}{4}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Závislost veliksoti brzdného napětí na vlnové délce}{4}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Závislost fotoelektrického proudu na velikosti \\brzdného napětí}{4}{subsubsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.2}Stanovení Planckovy konstanty}{4}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Graf závislosti maximální kinetické energie na \\kmitočtu dopadajícího světla}{5}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Graf závislosti fotoelektrického proudu na velikosti \\brzdného potenciálu}{6}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Výpočet nejistot}{7}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Závěr}{7}{section.5}%
+\contentsline {section}{\numberline {6}Použitá literatura}{7}{section.6}%
+\contentsline {section}{\numberline {7}Přílohy}{8}{section.7}%

@@ -1,0 +1,125 @@
+@manual{zigbee-spec23,
+	title = {Zigbee Specification, R23},
+	year = {2023},
+	month = {Mar},
+	organization = {Connectivity Standards Alliance},
+	url = {https://csa-iot.org/wp-content/uploads/2023/04/05-3474-23-csg-zigbee-specification-compressed.pdf},
+	urldate = {2023-12-11},
+	langid = {english}
+}
+
+@manual{zigbee-spec22,
+	title = {Zigbee Specification, R22},
+	year = {2017},
+	month = {Apr},
+	organization = {Zigbee Alliance},
+	url = {https://csa-iot.org/wp-content/uploads/2022/01/docs-05-3474-22-0csg-zigbee-specification-1.pdf},
+	urldate = {2023-12-11},
+	langid = {english},
+	note = {[Zigbee Alliance byla v roce 2021 přejmenována na Connectivity Standards Alliance]}
+}
+
+@article{zigbee-behaviour,
+	title = {PRO Base Device Behavior Specification, v3.0.1},
+	year = {2021},
+	month = {Sep},
+	organization = {Connectivity Standards Alliance},
+	url = {https://csa-iot.org/wp-content/uploads/2022/12/16-02828-012-PRO-BDB-v3.0.1-Specification.pdf},
+	urldate = {2023-12-11},
+	langid = {english}
+}
+
+@misc{zigbee-tech-pres,
+	title = {Zigbee Technical Presentation},
+	year = {2019},
+	organization = {Connectivity Standards Alliance},
+	url = {https://csa-iot.org/developer-resource/zigbee-technical-presentation/},
+	urldate = {2023-12-06},
+	langid = {english}
+}
+
+@online{eltech,
+	journal = {Electrical Technology},
+	title = {What is ZigBee Technology and How it works?},
+	year = {c2023},
+	urldate = {2023-12-10},
+	url = {https://www.electricaltechnology.org/2017/09/zigbee-technology-wireless-networking-system.html},
+	langid = {english}
+}
+
+@online{ecstuff4u,
+	journal = {ECSTUFF4U},
+	title = {Zigbee Network | History | Features | Application},
+	year = {c2017-2023},
+	urldate = {2023-12-10},
+	url = {https://www.ecstuff4u.com/2017/11/zigbee-networks.html},
+	langid = {english}
+}
+
+@manual{nordic-guide,
+	title = {Zigbee quick start guide},
+	year = {2023},
+	month = {Nov},
+	organization = {Nordic Semiconductor},
+	url = {https://developer.nordicsemi.com/nRF_Connect_SDK/doc/2.5.0/nrf/protocols/zigbee/qsg.html},
+	urldate = {2023-12-10},
+	langid = {english}
+}
+
+@inproceedings{4608532,
+	author={Zhongmin Pei and Zhidong Deng and Bo Yang and Xiaoliang Cheng},
+	booktitle={2008 IEEE International Conference on Industrial Technology},
+	title={Application-oriented wireless sensor network communication protocols and hardware platforms: A survey},
+	year={2008},
+	volume={},
+	number={},
+	pages={1-6},
+	doi={10.1109/ICIT.2008.4608532
+		}}
+
+@article{5173521,
+	author={Al Agha, Khaldoun and Bertin, Marc-Henry and Dang, Tuan and Guitton, Alexandre and Minet, Pascale and Val, Thierry and Viollet, Jean-Baptiste},
+	journal={IEEE Transactions on Industrial Electronics},
+	title={Which Wireless Technology for Industrial Wireless Sensor Networks? The Development of OCARI Technology},
+	year={2009},
+	volume={56},
+	number={10},
+	pages={4266-4278},
+	doi={10.1109/TIE.2009.2027253}}
+
+@article{ieee-802-15-4,
+	journal={IEEE Std 802.15.4-2020 (Revision of IEEE Std 802.15.4-2015)},
+	title={IEEE Standard for Low-Rate Wireless Networks},
+	year={2020},
+	doi={10.1109/IEEESTD.2020.9144691}
+}
+
+@misc{silabs-an1233,
+	title = {AN1233: Zigbee Security},
+	year = {c2023},
+	organization = {Silicon Labs},
+	url = {https://www.silabs.com/documents/public/application-notes/an1233-zigbee-security.pdf},
+	urldate = {2023-12-11},
+	langid = {english}
+}
+
+@article{ti-security,
+	title = {The Key to Security: Zigbee 3.0’S Security Features},
+	author = {Kirtana Moorthy},
+	organization = {Texas Instruments},
+	year = {2019},
+	month = {Feb},
+	url = {https://www.ti.com/lit/ta/sszt545/sszt545.pdf},
+	urldate = {2023-12-11},
+	langid = {english}
+}
+
+@manual{stm32wb,
+	titile = {STM32WB55xx datasheet},
+	organization = {ST Microelectronics},
+	year = {2023},
+	month = {Aug},
+	url = {https://www.st.com/resource/en/datasheet/stm32wb35ce.pdf},
+	urldate = {2023-12-11},
+	langid = {english}
+}

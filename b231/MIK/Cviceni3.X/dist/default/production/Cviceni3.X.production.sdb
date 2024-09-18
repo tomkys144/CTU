@@ -1,0 +1,119 @@
+[p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F47K40 ]
+[d frameptr 4065 ]
+"4 /opt/microchip/xc8/v2.45/pic/sources/c99/common/fleq.c
+[v ___fleq __fleq `(b  1 e 0 0 ]
+"62 /opt/microchip/xc8/v2.45/pic/sources/c99/common/float.c
+[v ___ftpack __ftpack `(f  1 e 4 0 ]
+"86 /opt/microchip/xc8/v2.45/pic/sources/c99/common/ftadd.c
+[v ___ftadd __ftadd `(f  1 e 4 0 ]
+"54 /opt/microchip/xc8/v2.45/pic/sources/c99/common/ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 4 0 ]
+"62 /opt/microchip/xc8/v2.45/pic/sources/c99/common/ftmul.c
+[v ___ftmul __ftmul `(f  1 e 4 0 ]
+"19 /opt/microchip/xc8/v2.45/pic/sources/c99/common/ftsub.c
+[v ___ftsub __ftsub `(f  1 e 4 0 ]
+"10 /opt/microchip/xc8/v2.45/pic/sources/c99/common/sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 4 0 ]
+"11 /opt/microchip/xc8/v2.45/pic/sources/c99/common/sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 4 0 ]
+"8 /opt/microchip/xc8/v2.45/pic/sources/c99/common/sprcmul.c
+[v ___flmul __flmul `(d  1 e 4 0 ]
+"15 /opt/microchip/xc8/v2.45/pic/sources/c99/common/Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"91 /opt/microchip/xc8/v2.45/pic/sources/c99/common/Umul64.c
+[v ___omul __omul `(uo  1 e 8 0 ]
+"46 /home/tomkys144/Documents/CTU/b231/MIK/Cviceni3.X/main.c
+[v _main main `(v  1 e 1 0 ]
+"8762 /opt/microchip/mplabx/v6.15/packs/Microchip/PIC18F-K_DFP/1.11.281/xc8/pic/include/proc/pic18f47k40.h
+[v _ANSELA ANSELA `VEuc  1 e 1 @3857 ]
+"9258
+[v _ANSELB ANSELB `VEuc  1 e 1 @3865 ]
+"9754
+[v _ANSELC ANSELC `VEuc  1 e 1 @3873 ]
+"10064
+[v _ANSELD ANSELD `VEuc  1 e 1 @3878 ]
+"16628
+[v _LATA LATA `VEuc  1 e 1 @3971 ]
+[s S36 . 1 `uc 1 LATA0 1 0 :1:0 
+`uc 1 LATA1 1 0 :1:1 
+`uc 1 LATA2 1 0 :1:2 
+`uc 1 LATA3 1 0 :1:3 
+`uc 1 LATA4 1 0 :1:4 
+`uc 1 LATA5 1 0 :1:5 
+`uc 1 LATA6 1 0 :1:6 
+`uc 1 LATA7 1 0 :1:7 
+]
+"16655
+[s S45 . 1 `uc 1 LA0 1 0 :1:0 
+`uc 1 LA1 1 0 :1:1 
+`uc 1 LA2 1 0 :1:2 
+`uc 1 LA3 1 0 :1:3 
+`uc 1 LA4 1 0 :1:4 
+`uc 1 LA5 1 0 :1:5 
+`uc 1 LA6 1 0 :1:6 
+`uc 1 LA7 1 0 :1:7 
+]
+[u S54 . 1 `S36 1 . 1 0 `S45 1 . 1 0 ]
+[v _LATAbits LATAbits `VES54  1 e 1 @3971 ]
+"16740
+[v _LATB LATB `VEuc  1 e 1 @3972 ]
+"16852
+[v _LATC LATC `VEuc  1 e 1 @3973 ]
+[s S110 . 1 `uc 1 LATC0 1 0 :1:0 
+`uc 1 LATC1 1 0 :1:1 
+`uc 1 LATC2 1 0 :1:2 
+`uc 1 LATC3 1 0 :1:3 
+`uc 1 LATC4 1 0 :1:4 
+`uc 1 LATC5 1 0 :1:5 
+`uc 1 LATC6 1 0 :1:6 
+`uc 1 LATC7 1 0 :1:7 
+]
+"16879
+[s S119 . 1 `uc 1 LC0 1 0 :1:0 
+`uc 1 LC1 1 0 :1:1 
+`uc 1 LC2 1 0 :1:2 
+`uc 1 LC3 1 0 :1:3 
+`uc 1 LC4 1 0 :1:4 
+`uc 1 LC5 1 0 :1:5 
+`uc 1 LC6 1 0 :1:6 
+`uc 1 LC7 1 0 :1:7 
+]
+[u S128 . 1 `S110 1 . 1 0 `S119 1 . 1 0 ]
+[v _LATCbits LATCbits `VES128  1 e 1 @3973 ]
+"16964
+[v _LATD LATD `VEuc  1 e 1 @3974 ]
+"17173
+[v _TRISA TRISA `VEuc  1 e 1 @3976 ]
+"17295
+[v _TRISB TRISB `VEuc  1 e 1 @3977 ]
+"17417
+[v _TRISC TRISC `VEuc  1 e 1 @3978 ]
+"17539
+[v _TRISD TRISD `VEuc  1 e 1 @3979 ]
+[s S82 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"17828
+[s S91 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CCP2_PA2 1 0 :1:3 
+]
+[u S94 . 1 `S82 1 . 1 0 `S91 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES94  1 e 1 @3982 ]
+"44 /home/tomkys144/Documents/CTU/b231/MIK/Cviceni3.X/main.c
+[v _i i `uc  1 e 1 0 ]
+"46
+[v _main main `(v  1 e 1 0 ]
+{
+"210
+} 0

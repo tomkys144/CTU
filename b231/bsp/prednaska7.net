@@ -1,0 +1,11 @@
+* C:\users\tomkys144\Documents\CTU\b231\bsp\prednaska7.asc
+VGS N002 0 1
+M1 N001 N002 0 0 bs170
+VDS N001 0 7.5
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\users\tomkys144\AppData\Local\LTspice\lib\cmp\standard.mos
+.lib BS170.lib
+.dc VGS 0 10 1m
+.backanno
+.end

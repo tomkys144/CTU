@@ -1,0 +1,3 @@
+Timestamp,Timestamp,System Timestamp,Wide Range Accelerometer X,Wide Range Accelerometer X,Wide Range Accelerometer Y,Wide Range Accelerometer Y,Wide Range Accelerometer Z,Wide Range Accelerometer Z,Gyroscope X,Gyroscope X,Gyroscope Y,Gyroscope Y,Gyroscope Z,Gyroscope Z,EXG1 Status,EMG CH1,EMG CH1,EMG CH2,EMG CH2
+RAW,CAL,CAL,RAW,CAL,RAW,CAL,RAW,CAL,RAW,CAL,RAW,CAL,RAW,CAL,RAW,RAW,CAL,RAW,CAL
+no units,mSecs,mSecs,no units,m/(sec^2),no units,m/(sec^2),no units,m/(sec^2),no units,deg/sec,no units,deg/sec,no units,deg/sec,no units,no units,mVolts,no units,mVolts
