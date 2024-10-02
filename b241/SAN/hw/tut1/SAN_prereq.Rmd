@@ -1,0 +1,268 @@
+---
+title: "SAN prerequisites -- hypothesis testing, t-test"
+output: pdf_document
+date: "2024-09-23"
+---
+
+```{r libs, include=FALSE}
+library(ggplot2)
+library(extraDistr)
+```
+
+# Statistical inference from small samples
+
+This notebook summarizes the most important steps in inference from small samples, where t-test can frequently be applied. The notebook will demonstrate how to do hypothesis tests about sample means and which factors influence their outcome. We will be operating in the domain of blood pressure-lowering medications, and we will be interested in how well each drug meets our expectations.
+
+## Does conventional blood pressure treatment work?
+
+Conventional blood pressure treatment results in stable pressure values represented by the sample of 10 different patients shown below. Decide whether the treatment is adequate, given that the goal is to achieve a mean pressure of no more than 95.
+
+```{r conventional}
+cgroup <- c(90,95,67,120,89,92,100,82,79,85,150)
+max_target_mean <- 95
+
+# mean blood pressure is smaller than the desired value
+mean(cgroup)
+
+```
+
+The mean blood pressure calculated from the sample is smaller than the desired value. However, it is a random variable and we need to know how often it will be smaller than 95 when sampling repeatedly. We can proceed in two ways: employ hypothesis testing or calculate confidence intervals.
+
+Before we do so, there is a couple of basic observations and assumptions: 1) we deal with a small sample (the most common small/large sample size threshold is 30), 2) we may assume that blood pressure is normally distributed (a commonly known medical fact), 3) the measurements are independent (see the design of the study mentioned above), 4) blood pressure variance in our population is unknown (and we will have to estimate it from the sample).
+
+Consequently, we will approximate the distribution of sample means with t-distribution. We will plot it, run the hypothesis test and compute the 95% population mean confidence interval.
+
+<!--  We would either need a large sample or known population variance to be able to deal with a bit simpler normal distribution and z-test. If the population has an arbitrary distribution we definitely need a large sample to be able to deal with the normal distribution. This reasoning makes t-test one of the most frequent statistical tests. -->
+
+```{r analyze conventional}
+c_mean <- mean(cgroup)
+c_sd <- sd(cgroup)
+
+# t-distribution probability density function, n-1 degrees of freedom, the mean is set to match the null hypothesis, the standard deviation is estimated from the sample
+# normal distribution added for illustration
+t.values <- seq(max_target_mean-15,max_target_mean+15,0.2)
+dft9 <- data.frame(t.values,dn=dnorm(t.values,mean=max_target_mean,sd=c_sd/sqrt(length(cgroup))),dt9=dlst(t.values,df=length(cgroup)-1,mu=max_target_mean,sigma=c_sd/sqrt(length(cgroup))))
+
+# use the observed sample mean and standard deviation and plot
+ggplot(dft9, aes(x = t.values)) + 
+  geom_line(aes(y = dt9, color="t_dist")) +
+  geom_line(aes(y = dn, color="normal"), linetype="dotted") +
+  geom_vline(xintercept = mean(cgroup), colour="blue", linetype="dashed") +
+  geom_vline(xintercept = 95, colour="red", linetype="dashed") +
+  scale_color_manual(name = "distribution", values = c(t_dist = "blue",  normal= "black")) +
+  labs(title="Probability density function of sample mean",x="sample mean", y="P(sample mean)") +
+  geom_polygon(data = rbind(c(mean(cgroup),0),c(dft9[1,1],0),subset(dft9[c(1,3)],t.values<mean(cgroup))), aes(x=t.values, y=dt9), fill="#FFD2D5")
+
+# The interpretation of density plot:
+# the probability that the population mean could still be 95 is relatively high, it corresponds to the area under the left-hand tail
+# let us estimate the area with one-sided t-test
+
+t.test(x=cgroup,alternative="less",mu=95)
+
+# The interpretation of t-test:
+# H_0: the population mean is 95, Ha: the population mean is smaller than 95
+# the p-value of 0.14 suggests that there is 14% probability that the sample as ours may appear by chance if H_0 holds, we cannot reject the null hypothesis in favor of the alternative one
+# the 95% confidence interval is from negative infinity to 98, the true value of population mean will be captured in 95% of trials like this, the critical value of 95 is there ... not really unlikely that the population mean is 95 or higher
+
+# Let us reach the same outcomes slower:
+m_sd <- c_sd/sqrt(length(cgroup))
+t.value <- (c_mean-95)/m_sd
+pt(t.value,df=9,lower.tail=T) # use distribution function to obtain p-value
+
+# the distribution function of t-distribution with 9 degrees of freedom
+dftd9 <- data.frame(t.vals=seq(-5,5,0.1),dtd9=pt(seq(-5,5,0.1),df=length(cgroup)-1))
+
+# use the observed sample mean and standard deviation and plot
+ggplot(dftd9, aes(x = t.vals, y = dtd9)) + 
+  geom_line(col="blue") +
+  geom_vline(aes(xintercept = t.value, color="observed"), linetype="dashed") +
+  geom_vline(aes(xintercept = qt(0.05,df=9,lower.tail=T), color="needed_to_reject"), linetype="dashed") +
+  geom_hline(aes(yintercept = pt(t.value,df=9,lower.tail=T)), color="blue", linetype="dashed") +
+  geom_hline(aes(yintercept = 0.05), color="red", linetype="dashed") +
+  scale_color_manual(name = "t-value", values = c(observed = "blue",  needed_to_reject= "red")) +
+  labs(title="Cumulative distribution function",x="t value", y="P(T<=t)")
+
+# the upper bound of the confidence interval
+c_mean+qt(0.95,df=9)*m_sd
+```
+
+Literally, we employed one-sample t-test whose formula is: $$t_c=\frac{\bar{x}_c-\mu}{s_c/\sqrt{n_c}}=\frac{89.9-95}{14.02/\sqrt{10}}=-1.15$$ where $\bar{x}_c$ is the sample mean, $\mu$ is the (desired) population mean, $s_c$ is the sample standard deviation and $n_c$ is the sample size. In terms of hypothesis testing, the value of t-statistic is compared with the quantiles of t-distribution with $n-1$ degrees of freedom. The p-value is 14%. If we choose a common level of significance $\alpha=0.05$ we can see that $p>\alpha$ and we cannot reject the null hypothesis. Statistically, we failed to confirm the initial goal.
+
+<!--  In the cumulative distribution function, the p-value does not correspond to the area under the tail but it can be read off on y-axis straightforwardly. -->
+
+The one-tailed 95% confidence interval will be: $$[-\infty,89.9+t_{1-\alpha,n_c-1}\times s_c/\sqrt{n}]=[-\infty,89.9+t_{0.95,9}\times 14.02/\sqrt{10}]=[-\infty,98.03]$$ The observation that the 95% confidence interval contains the blood pressure of 95, our above-defined threshold, leads us to the same conclusion as with the hypothesis testing. The sample does not provide sufficient information to demonstrate the desired effect of the drug. In practice, a larger sample would probably be taken now.
+
+## A new drug appears, does it meet our expectations?
+
+However, ... let a new blood pressure drug appear in the meantime. Physicians found a new treatment group of 10 people that received the new drug. The drug is expected to lower blood pressure more efficiently. After treatment for a couple of months (exactly the same procedure as in the previous conventional group), we have to decide whether the new drug works better than the conventional treatment.
+
+Obviously, we will use two sample t-test now. We will additionally assume that the blood pressure variance is equal in both the groups (a reasonable assumption), this helps us to decide which type of t-test to use.
+
+<!--  Alternatively, we may test the assumptions of normality (Kolmogorov–Smirnov or Shapiro–Wilk test) and equal variance (F-test, Levene test), however, samples are small and the tests would likely be passed anyway. What is more, it would be too much detailed for the moment. -->
+
+```{r new}
+ngroup <- c(71,79,69,98,91,85,89,75,78,80,60)
+mean(ngroup)
+sd(ngroup)
+
+df <- data.frame(group=c(rep("conventional",11),rep("new",11)),bp=c(cgroup,ngroup))
+
+# Draw overlaying histogram
+ggplot(df, aes(x = bp, fill = group)) + 
+  geom_histogram(position = "identity", alpha = 0.2, bins = 5)
+
+# The interpretation of histogram:
+# the new treatment looks promising, but we need to decide it formally
+
+# probability density function of t-distribution with n-1 degrees of freedom, the given mean and standard deviation
+n_mean <- mean(ngroup)
+n_sd <- sd(ngroup)
+t.values <- seq(min(c_mean,n_mean)-15,max(c_mean,n_mean)+15,0.2)
+dft9n <- data.frame(t.values,dt9=dlst(t.values,df=length(cgroup)-1,mu=c_mean,sigma=c_sd/sqrt(length(cgroup))),dt9n=dlst(t.values,df=length(ngroup)-1,mu=n_mean,sigma=n_sd/sqrt(length(ngroup))))
+
+# use the observed sample mean and standard deviation and plot t-distributions
+ggplot(dft9n, aes(x = t.values)) + 
+  geom_line(aes(y = dt9, color="conventional")) +
+  geom_line(aes(y = dt9n, color="new")) +
+  scale_color_manual(values = c("conventional" = "red", "new" = "blue")) +
+  labs(title="Probability density function of sample means",x="sample mean", y="P(sample mean)")
+
+# The interpretation of plot:
+# the new treatment has a large chance to overcome the conventional one, however, as the mean pdfs overlap the relationship between the treatments can still be opposite
+
+# The interpretation of t-test:
+# H_0: the population means are equal, Ha: the new drug population mean is smaller than the conventional drug population mean
+# the p-value of 0.065 suggests that there is around 7% probability that the samples as ours may appear by chance if H_0 holds, we cannot reject the null hypothesis in favor of the alternative one at the level of significance 0.05
+t.test(x=cgroup,y=ngroup,var.equal=T,alternative="less")
+
+# The interpretation of t-test:
+# H_0: "the population mean is 95", H_a: "the population mean is smaller than 95"
+# the p-value of 0.0006 suggests that there is only very small probability that the sample as ours may appear by chance if H_0 holds, we reject the null hypothesis in favor of the alternative one
+t.test(x=ngroup,alternative="less",mu=95)
+```
+
+Technically, we used a two-sample t-test assuming equal variance in both populations. Its formula is: $$df=n_c+n_n-2=18\;\;\; s_p^2=\frac{(n_c-1)s_c^2+(n_n-1)s_n^2}{df}=\frac{9\times 14.02^2+9\times 9.19^2}{18}=140.5$$ $$t=\frac{\bar{x}_c-\bar{x}_n}{\sqrt{s_p^2(\frac{1}{n_c}+\frac{1}{n_n})}}=\frac{89.9-81.5}{\sqrt{\frac{140.5\times 2}{10}}}=1.58$$ where the index $c$ refers to the conventional sample, the index $n$ refers to the new drug sample and $s_p$ is the pooled sample standard deviation. The p-value is around 7%, we cannot reject the null hypothesis that both treatments give the same mean blood pressure. However, the original requirement on the mean population blood pressure was (statistically) met with the new drug! The test formula was the same as the one sample t-test formula used earlier.
+
+**Further questions and tasks:**
+
+1.  propose a similar scenario where a two-tailed test could be applied, how would you change the formulas and graph interpretations above?
+    1.  Testing if steroids add bodymass. H0 would be change is zero. Alternative would be two sided, so we would reject H0 if the bodymass would be significantly greater or lower than without them.
+2.  what happens if we decrease/increase the sample size? explain the influence on statistical testing (technical changes, significance and power of the test),
+    1.  decreasing sample size changes the error rate, so widens confidence intervals
+    2.  increasing sample size lowers error rate, narrows confidence intervals
+3.  mention as many principal changes in the study design as possible for which you must choose a different statistical test.
+    1.  If the group is not independent, but same group under different conditions
+    2.  The distribution is not normal
+    3.  Study of more variables
+
+# The drug effects and populations known
+
+Now let us assume that both the blood pressure populations are known. In particular, they are normally distributed, the mean blood pressure in the conventional group as well as the new drug group is 90, the equal standard deviations of 12 can be observed in both the populations. In other words, $\mu_c=\mu_n=90$, $\sigma_c=\sigma_n=12$. Let us generate a large number of small samples from both the populations and see how well the t-test works.
+
+```{r generate samples from known populations}
+mu_c <- 90
+mu_n <- 90
+sigma_c <- 10
+sigma_n <- 10
+
+## sample size and the number of repeats
+sample_size <- 20
+reps <- 10000
+
+## generate the samples and run the tests
+# is mean in cgroup <95?
+tcs <- c() 
+pcs <- c()
+# is mean in ngroup <95?
+tns <- c() 
+pns <- c()
+# compare cgroup and ngroup
+tcns <- c() 
+pcns <- c()
+for (rep in seq(reps)){
+  ## generate two samples with the random normal generator
+  cgroup <- rnorm(sample_size,mean=mu_c,sd=sigma_c)
+  ngroup <- rnorm(sample_size,mean=mu_n,sd=sigma_n)  
+  ## compare groups with 95
+  ## t-test statistic
+  tcs[rep] <- (mean(cgroup)-95)/(sd(cgroup)/sqrt(sample_size))
+  tns[rep] <- (mean(ngroup)-95)/(sd(ngroup)/sqrt(sample_size))
+  ## do the same with built in t-test (remember only p-values)
+  pcs[rep] <- t.test(x=cgroup,alternative="less",mu=95)$p.value
+  pns[rep] <- t.test(x=ngroup,alternative="less",mu=95)$p.value
+  ## compare cgroup and ngroup
+  ## t-test statistic
+  tcns[rep] <- (mean(cgroup)-mean(ngroup))/(sqrt((sd(cgroup)^2+sd(ngroup)^2)/2)*sqrt(2/sample_size))
+  ## do the same with built in t-test (remember only p-values), run two-tailed test this time
+  pcns[rep] <- t.test(cgroup,ngroup,alternative = "two.sided",var.equal = TRUE,conf.level = 0.95)$p.value
+}
+```
+
+## Hypotheses tests only confirmatory now, power of the tests can be estimated
+
+We did two types of t-tests. The first one verifies whether the treatments achieve the mean blood pressure of no more than 95. We run the same test independently for both the treatments. Since we know that $\mu_c=\mu_n=90$ which is clearly less than 95, we also know that the null hypotheses $\mu_c=95$ and $\mu_n=95$ should definitely be rejected against their alternatives $\mu_c<95$ and $\mu_n<95$. Whenever we failed to reject the null hypotheses we made Type II error. The power of t-test is the probability that we correctly reject the null hypotheses.
+
+```{r analyze the t-test outcomes, compare with 95}
+## how often will we correctly reject the null hypothesis?
+## the power of test
+## can be reached in two ways, to compare the p-values with alpha or the t-statistics with the corresponding t-distribution quantile 
+## the conventional group
+thres_05 <- qt(0.05,df=sample_size-1)
+thres_10 <- qt(0.10, df=sample_size-1)
+mean(tcs<thres_10)
+mean(pcs<0.10)
+## the new drug group
+mean(tns<thres_10)
+mean(pns<0.10)
+```
+
+Under the given experimental setting, the power of tests for both the treatments is only a bit more than 30%. As a rule of thumb, statistical experiments should be designed to have a power of around 80%. We will return to this issue later.
+
+The second type of t-tests verifies whether the treatments match in their mean blood pressures. Since we know that $\mu_c=\mu_n=90$, we also know that the null hypotheses $\mu_c=\mu_n$ should not be rejected against its alternative $\mu_c\neq\mu_n$. Whenever we rejected the null hypothesis we made Type I error.
+
+```{r analyze the t-test outcomes, mutually compare the treatments}
+## how often will we incorrectly reject the null hypothesis about the identity of population means?
+## Type I error, false positive decisions
+thres_05 <- qt(0.975,df=2*sample_size-2)
+mean(abs(tcns)>thres_05)
+mean(pcns<0.05)
+```
+
+The Type I error should match the selected significance level $\alpha=0.05$. Quite as expected, we see that the null hypothesis was rejected in around 5% of the tests.
+
+Both the observations can be reinforced with the probability density plots. In the first plot, the power of test corresponds to the area under left-hand tail. In the second plot, the Type I error corresponds to both the tails.
+
+```{r t-test distribution plots}
+## plot the t-statistic distribution for the first two tests
+dft <- data.frame(ts=c(tcs,tns),group=c(rep("conventional",reps),rep("new",reps)))
+ggplot(NULL) + 
+  geom_density(data=dft,aes(x=ts,color=group)) +
+  geom_line(data=data.frame(t.vals=seq(-5,5,0.1)+mean(dft$ts),dtd9=dt(seq(-5,5,0.1),df=sample_size-1)),aes(x=t.vals,y=dtd9),linetype="dotted") +
+  geom_vline(aes(xintercept = qt(0.05,df=sample_size-1)),linetype="dashed")
+
+# The interpretation of density plot:
+# we know the populations, thus we know that the null hypothesis H_0: "mean=95" does not hold
+# the null hypothesis is correctly rejected if the value of t-statistic is smaller than -1.83
+# this holds only in about one third of samples
+
+## plot the t-statistic distribution for the comparison between treatments
+ggplot(NULL) + 
+  geom_density(data=data.frame(tcns=tcns),aes(x=tcns),color="blue") +
+  geom_vline(aes(xintercept = qt(0.025,df=2*sample_size-2)),linetype="dashed",color="blue") +
+  geom_vline(aes(xintercept = qt(0.975,df=2*sample_size-2)),linetype="dashed",color="blue") +
+  geom_line(data=data.frame(t.vals=seq(-5,5,0.1),dtd9=dt(seq(-5,5,0.1),df=2*sample_size-2)),aes(x=t.vals,y=dtd9),linetype="dotted")
+
+# The interpretation of density plot:
+# we know the populations, thus we know that the null hypothesis H_0: "means in both the groups are equal" holds, and H_a: "means in both the groups differ" does not hold
+# the null hypothesis is incorrectly rejected if the value of t-statistic is smaller than -2.1 or larger than 2.1
+# this condition is met in approximately 5% of cases which perfectly matches with the selected significance level alpha 0.05
+# the dotted t-distribution with 18 degrees of freedom shows that the emprically generated t-statistics follow the assumed distribution
+
+```
+
+**Further questions and tasks:**
+
+1.  the power of the test that evaluates whether the mean blood pressure after treatment is smaller than 95 is relatively low, change the parameters above to increase this power, report when you reach 80%,
+2.  see what happens with the test when violating assumptions with outliers, inject a severe outlier in the sample and explain the outcomes,
+3.  violate other assumptions to see what happens (a distribution different from normal one, unequal variances, etc.),
+4.  show the setting in which the central limit theorem can be applied, gradually change the setting to see what happens with the distribution of sample means.
