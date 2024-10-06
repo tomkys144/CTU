@@ -1,4 +1,5 @@
 #include <algorithm>
+#include <cmath>
 #include <iostream>
 #include <tuple>
 #include <unordered_set>
@@ -14,7 +15,7 @@ int unionFind(int *connections, int Q, int Q1, int Q2);
 
 int kruskal(vector<tuple<int, int, int> > &edges, vector<tuple<int, int, int> > &minspan, int Q, int C);
 
-int countItems(int *arr, int n);
+int countItems(const int *arr, int n);
 
 int filterEdges(vector<tuple<int, int, int> > &edges, vector<tuple<int, int, int> > &minspan, int Q, int D);
 
@@ -35,7 +36,7 @@ int main() {
 
     make_heap(edges.begin(), edges.end(), greater<>());
 
-    int price1 = kruskal(edges, minspan, Q, C);
+    int price1 = kruskal(edges, minspan, Q, C) % static_cast<int>(pow(2, 16));
 
     if (price1 == -1) return -1;
 
@@ -45,7 +46,7 @@ int main() {
 
     int price2 = kruskal(edges, secondary_minspan, Q, edges.size());
 
-    printf("%d %d\n", price1, price2);
+    printf("%d %d\n", price1, price2) % static_cast<int>(pow(2, 16));
 
     return 0;
 }
@@ -127,7 +128,7 @@ int kruskal(vector<tuple<int, int, int> > &edges, vector<tuple<int, int, int> > 
             price += get<0>(edge);
         }
 
-        edges = unused_edges;
+        swap(edges, unused_edges);
 
         return price;
     }
@@ -154,12 +155,12 @@ int kruskal(vector<tuple<int, int, int> > &edges, vector<tuple<int, int, int> > 
         }
     }
 
-    edges = unused_edges;
+    swap(edges, unused_edges);
 
     return price;
 }
 
-int countItems(int *arr, int n) {
+int countItems(const int *arr, const int n) {
     unordered_set<int> s;
 
     int res = 0;
@@ -174,7 +175,7 @@ int countItems(int *arr, int n) {
     return res;
 }
 
-int filterEdges(vector<tuple<int, int, int> > &edges, vector<tuple<int, int, int> > &minspan, int Q, int D) {
+int filterEdges(vector<tuple<int, int, int> > &edges, vector<tuple<int, int, int> > &minspan, int Q, const int D) {
     tuple<int, int, int> edge;
     vector<tuple<int, int, int> > secondary_minspan;
 
@@ -196,8 +197,9 @@ int filterEdges(vector<tuple<int, int, int> > &edges, vector<tuple<int, int, int
 
         q.push(get<1>(edge));
 
-        int i = 0;
-        while (!q.empty() && i < D) {
+        for (int i = 0; i < D-1; i++) {
+            if (q.empty()) break;
+
             current = q.front();
             q.pop();
 
@@ -222,7 +224,6 @@ int filterEdges(vector<tuple<int, int, int> > &edges, vector<tuple<int, int, int
                     return containsQpu(e, current);
                 });
             }
-            ++i;
         }
 
     search_finished:
@@ -235,7 +236,8 @@ int filterEdges(vector<tuple<int, int, int> > &edges, vector<tuple<int, int, int
         secondary_minspan.emplace_back(edge);
     }
 
-    edges = secondary_minspan;
+    swap(edges, secondary_minspan);
+
     return 0;
 }
 
