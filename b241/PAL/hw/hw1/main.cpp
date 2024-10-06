@@ -197,7 +197,7 @@ int filterEdges(vector<tuple<int, int, int> > &edges, vector<tuple<int, int, int
         q.push(get<1>(edge));
 
         int i = 0;
-        while (!q.empty() && i < D - 1) {
+        while (!q.empty() && i < D) {
             current = q.front();
             q.pop();
 
