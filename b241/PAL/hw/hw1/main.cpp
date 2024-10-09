@@ -11,42 +11,50 @@ using namespace std;
 
 int input(vector<tuple<int, int, int> > &edges, int C);
 
-int unionFind(int *connections, int Q, int Q1, int Q2);
+int unionFind(pair<int, int> *connections, int Q, int Q1, int Q2);
 
-int kruskal(vector<tuple<int, int, int> > &edges, vector<tuple<int, int, int> > &minspan, int Q, int C);
+int kruskal(
+    vector<tuple<int, int, int> > &edges,
+    pair<int, int> *minspan,
+    int Q,
+    int C,
+    int D,
+    bool filter,
+    pair<int, int> *filter_tree
+);
 
-int countItems(const int *arr, int n);
+int countItems(const pair<int, int> *arr, int n);
 
-int filterEdges(vector<tuple<int, int, int> > &edges, vector<tuple<int, int, int> > &minspan, int Q, int D);
+int filterEdge(int Q1, int Q2, const pair<int, int> *minspan, int Q, int D);
 
 bool containsQpu(tuple<int, int, int> e, int qpu);
 
 int main() {
-    vector<tuple<int, int, int> > edges;
-    vector<tuple<int, int, int> > minspan;
-    vector<tuple<int, int, int> > secondary_minspan;
-
     int Q, C, D;
 
     int res = scanf("%d %d %d", &Q, &C, &D);
     if (res != 3) return -1;
+
+    vector<tuple<int, int, int> > edges;
+    pair<int, int> minspan[Q];
+    pair<int, int> secondary_minspan[Q];
 
     res = input(edges, C);
     if (res == -1) return -1;
 
     make_heap(edges.begin(), edges.end(), greater<>());
 
-    int price1 = kruskal(edges, minspan, Q, C) % static_cast<int>(pow(2, 16));
+    const int price1 = kruskal(edges, minspan, Q, C, D, false, nullptr);
 
     if (price1 == -1) return -1;
 
-    filterEdges(edges, minspan, Q, D);
-
     make_heap(edges.begin(), edges.end(), greater<>());
 
-    int price2 = kruskal(edges, secondary_minspan, Q, edges.size());
+    const int price2 = kruskal(edges, secondary_minspan, Q, static_cast<int>(edges.size()), D, true, minspan);
 
-    printf("%d %d\n", price1, price2) % static_cast<int>(pow(2, 16));
+    if (price2 == -1) return -1;
+
+    printf("%d %d\n", price1, price2);
 
     return 0;
 }
@@ -54,7 +62,7 @@ int main() {
 int input(vector<tuple<int, int, int> > &edges, const int C) {
     int Q1, Q2, p;
     for (int i = 0; i < C; i++) {
-        int res = scanf("%d %d %d", &Q1, &Q2, &p);
+        const int res = scanf("%d %d %d", &Q1, &Q2, &p);
         if (res != 3) {
             return -1;
         }
@@ -65,49 +73,86 @@ int input(vector<tuple<int, int, int> > &edges, const int C) {
     return 0;
 }
 
-int unionFind(int *connections, int Q, int Q1, int Q2) {
+int unionFind(pair<int, int> *connections, int Q, int Q1, int Q2) {
     if (Q < Q1 || Q < Q2) return -1;
 
-    int parent1 = connections[Q1 - 1];
-    int parent2 = connections[Q2 - 1];
+    pair<int, int> parent1 = connections[Q1 - 1];
+    pair<int, int> parent2 = connections[Q2 - 1];
 
     // none of the vertices is connected
-    if (parent1 == -1 && parent2 == -1) {
-        connections[Q1 - 1] = Q1;
-        connections[Q2 - 1] = Q1;
+    if (parent1.first == -1 && parent2.first == -1) {
+        connections[Q1 - 1] = {Q1 - 1, Q1 - 1};
+        connections[Q2 - 1] = {Q1 - 1, Q1 - 1};
         return 0;
     }
 
     // both are in the same set
-    if (parent1 == parent2) return 1;
+    if (parent1.first == parent2.first) return 1;
 
     // Q1 is not connected
-    if (parent1 == -1) {
-        connections[Q1 - 1] = parent2;
+    if (parent1.first == -1) {
+        connections[Q1 - 1] = {parent2.first, Q2 - 1};
         return 0;
     }
 
     // Q2 is not connected
-    if (parent2 == -1) {
-        connections[Q2 - 1] = parent1;
+    if (parent2.first == -1) {
+        connections[Q2 - 1] = {parent1.first, Q1 - 1};
         return 0;
     }
 
     // Q1 and Q2 are in disjoint set
+    int parent = parent1.second;
+    int current = Q1 - 1;
+    int root = parent1.first;
+    int new_parent = 0;
+
+    while (current != root) {
+        new_parent = connections[parent].second;
+        connections[parent].second = current;
+
+        current = parent;
+        parent = new_parent;
+    }
+
+    parent = parent2.second;
+    current = Q2 - 1;
+    root = parent2.first;
+
+    while (current != root) {
+        new_parent = connections[parent].second;
+        connections[parent].second = current;
+
+        current = parent;
+        parent = new_parent;
+    }
+
+    connections[Q2 - 1].second = Q1 - 1;
+    connections[Q1 - 1].second = Q1 - 1;
+
     for (int i = 0; i < Q; i++) {
-        if (connections[i] == parent2) {
-            connections[i] = parent1;
+        if (connections[i].first == parent1.first || connections[i].first == parent2.first) {
+            connections[i].first = Q1 - 1;
         }
     }
+
+
     return 0;
 }
 
-int kruskal(vector<tuple<int, int, int> > &edges, vector<tuple<int, int, int> > &minspan, int Q, int C) {
+int kruskal(vector<tuple<int, int, int> > &edges,
+            pair<int, int> *minspan,
+            int Q,
+            int C,
+            int D,
+            bool filter,
+            pair<int, int> *filter_tree
+) {
     vector<tuple<int, int, int> > unused_edges;
     tuple<int, int, int> edge;
 
-    int connected[Q];
-    fill_n(connected, Q, -1);
+    fill_n(&minspan[0], Q, make_pair(-1, -1));
+
     int price = 0;
 
     if (C < Q * Q / 2) {
@@ -116,7 +161,15 @@ int kruskal(vector<tuple<int, int, int> > &edges, vector<tuple<int, int, int> > 
             edge = edges.back();
             edges.pop_back();
 
-            int res = unionFind(connected, Q, get<1>(edge), get<2>(edge));
+            int res;
+
+            if (filter) {
+                res = filterEdge(get<1>(edge), get<2>(edge), filter_tree, Q, D);
+                
+                if (res == 1) continue;
+            }
+
+            res = unionFind(minspan, Q, get<1>(edge), get<2>(edge));
 
             if (res == -1) return -1;
             if (res == 1) {
@@ -124,13 +177,12 @@ int kruskal(vector<tuple<int, int, int> > &edges, vector<tuple<int, int, int> > 
                 continue;
             }
 
-            minspan.emplace_back(edge);
             price += get<0>(edge);
         }
 
         swap(edges, unused_edges);
 
-        return price;
+        return price % static_cast<int>(pow(2, 16));
     }
 
     bool finished = false;
@@ -139,35 +191,41 @@ int kruskal(vector<tuple<int, int, int> > &edges, vector<tuple<int, int, int> > 
         edge = edges.back();
         edges.pop_back();
 
-        int res = unionFind(connected, Q, get<1>(edge), get<2>(edge));
+        int res;
+
+        if (filter) {
+            res = filterEdge(get<1>(edge), get<2>(edge), filter_tree, Q, D);
+
+            if (res == 1) continue;
+        }
+
+        res = unionFind(minspan, Q, get<1>(edge), get<2>(edge));
 
         if (res == -1) return -1;
         if (res == 1) {
             unused_edges.emplace_back(edge);
             continue;
         }
-
-        minspan.emplace_back(edge);
         price += get<0>(edge);
 
-        if (countItems(connected, Q) == 1 || edges.empty() == true) {
+        if (countItems(minspan, Q) == 1 || edges.empty() == true) {
             finished = true;
         }
     }
 
     swap(edges, unused_edges);
 
-    return price;
+    return price % static_cast<int>(pow(2, 16));
 }
 
-int countItems(const int *arr, const int n) {
+int countItems(const pair<int, int> *arr, const int n) {
     unordered_set<int> s;
 
     int res = 0;
 
     for (int i = 0; i < n; i++) {
-        if (s.find(arr[i]) == s.end()) {
-            s.insert(arr[i]);
+        if (s.find(arr[i].first) == s.end()) {
+            s.insert(arr[i].first);
             res++;
         }
     }
@@ -175,70 +233,50 @@ int countItems(const int *arr, const int n) {
     return res;
 }
 
-int filterEdges(vector<tuple<int, int, int> > &edges, vector<tuple<int, int, int> > &minspan, int Q, const int D) {
-    tuple<int, int, int> edge;
-    vector<tuple<int, int, int> > secondary_minspan;
+int filterEdge(const int Q1, const int Q2, const pair<int, int> *minspan, const int Q, const int D) {
+    int distance[Q];
+    fill_n(distance, Q, -1);
 
-    bool visited[Q];
-    queue<int> q;
+    distance[Q1 - 1] = 0;
+    distance[Q2 - 1] = 0;
 
-    vector<tuple<int, int, int> >::iterator it;
-    bool success;
-    int current;
+    int curr1 = Q1-1;
+    int curr2 = Q2-1;
 
-    while (!edges.empty()) {
-        success = false;
-        edge = edges.back();
-        edges.pop_back();
+    int parent1, parent2;
 
-        fill_n(visited, Q, false);
+    while(curr1 != curr2) {
+        parent1 = minspan[curr1].second;
+        parent2 = minspan[curr2].second;
 
-        visited[get<1>(edge) - 1] = true;
-
-        q.push(get<1>(edge));
-
-        for (int i = 0; i < D-1; i++) {
-            if (q.empty()) break;
-
-            current = q.front();
-            q.pop();
-
-            it = find_if(minspan.begin(), minspan.end(), [&current](const tuple<int, int, int> &e) {
-                return containsQpu(e, current);
-            });
-
-            while (it != minspan.end()) {
-                int adj = get<1>(*it) == current ? get<2>(*it) : get<1>(*it);
-
-                if (adj == get<2>(edge)) {
-                    success = true;
-                    goto search_finished;
-                }
-
-                if (visited[adj - 1] == false) {
-                    visited[adj - 1] = true;
-                    q.push(adj);
-                }
-
-                it = find_if(++it, minspan.end(), [&current](const tuple<int, int, int> &e) {
-                    return containsQpu(e, current);
-                });
+        if (distance[parent1] != -1 && curr1 != parent1) {
+            int total_dist = distance[parent1] + distance[curr1] + 1;
+            if (total_dist < D) {
+                return 0;
             }
+            break;
         }
 
-    search_finished:
-        queue<int> empty;
-        swap(q, empty);
-        if (success == false) {
-            continue;
+        if (curr1 != parent1) distance[parent1] = distance[curr1] + 1;
+
+        if (distance[parent2] != -1 && curr2 != parent2) {
+            int total_dist = distance[parent2] + distance[curr2] + 1;
+            if (total_dist < D) {
+                return 0;
+            }
+            break;
         }
 
-        secondary_minspan.emplace_back(edge);
+        if (curr2 != parent2) distance[parent2] = distance[curr2] + 1;
+
+        curr1 = parent1;
+        curr2 = parent2;
+
+        if (distance[curr1] == D || distance[curr2] == D) break;
     }
 
-    swap(edges, secondary_minspan);
 
-    return 0;
+    return 1;
 }
 
 bool containsQpu(tuple<int, int, int> e, int qpu) {
