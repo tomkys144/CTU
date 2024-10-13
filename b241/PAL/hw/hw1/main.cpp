@@ -1,33 +1,56 @@
 #include <algorithm>
-#include <cmath>
-#include <iostream>
-#include <tuple>
-#include <unordered_set>
+#include <functional>
 #include <vector>
-#include <set>
+#include <iostream>
+#include <numeric>
 #include <queue>
+#include <cmath>
 
 using namespace std;
 
-int input(vector<tuple<int, int, int> > &edges, int C);
+struct edge {
+    int from;
+    int to;
+    int weight;
 
-int unionFind(pair<int, int> *connections, int Q, int Q1, int Q2);
+    edge(const int from, const int to, const int weight) : from(from), to(to), weight(weight) {
+    }
 
-int kruskal(
-    vector<tuple<int, int, int> > &edges,
-    pair<int, int> *minspan,
-    int Q,
-    int C,
-    int D,
-    bool filter,
-    pair<int, int> *filter_tree
-);
+    bool operator <(const edge &e) const {
+        return weight < e.weight || (weight == e.weight && from < e.from) || (
+                   weight == e.weight && from == e.from && to < e.to);
+    }
 
-int countItems(const pair<int, int> *arr, int n);
+    bool operator >(const edge &e) const {
+        return weight > e.weight || (weight == e.weight && from > e.from) || (
+                   weight == e.weight && from == e.from && to > e.to);
+    }
+};
 
-int filterEdge(int Q1, int Q2, const pair<int, int> *minspan, int Q, int D);
+struct uf_vertex {
+    int parent;
+    int rank;
 
-bool containsQpu(tuple<int, int, int> e, int qpu);
+    explicit uf_vertex(const int parent = -1, const int rank = -1) : parent(parent), rank(rank) {
+    }
+
+    uf_vertex &operator ++() {
+        ++parent;
+        return *this;
+    }
+};
+
+int input(priority_queue<edge, vector<edge>, greater<>> &edges, int C);
+
+int find(uf_vertex *connections, int Q);
+
+int union_rank(uf_vertex *connections, int Q1, int Q2);
+
+int kruskal(priority_queue<edge, vector<edge>, greater<>> &edges, int *minspan, const int *filter_tree, int Q, int C, int D, bool filter);
+
+bool filterEdge(const int *connections, int Q1, int Q2, int Q, int D);
+
+int makeGraph(vector<edge> &edges, int *graph, int Q);
 
 int main() {
     int Q, C, D;
@@ -35,235 +58,144 @@ int main() {
     int res = scanf("%d %d %d", &Q, &C, &D);
     if (res != 3) return -1;
 
-    vector<tuple<int, int, int> > edges;
-    pair<int, int> minspan[Q];
-    pair<int, int> secondary_minspan[Q];
+    priority_queue<edge, vector<edge>, greater<>> edges;
 
     res = input(edges, C);
     if (res == -1) return -1;
 
-    make_heap(edges.begin(), edges.end(), greater<>());
+    int minspan[Q], secspan[Q];
 
-    const int price1 = kruskal(edges, minspan, Q, C, D, false, nullptr);
-
+    const int price1 = kruskal(edges, minspan, secspan, Q, C, D, false);
     if (price1 == -1) return -1;
 
-    make_heap(edges.begin(), edges.end(), greater<>());
-
-    const int price2 = kruskal(edges, secondary_minspan, Q, static_cast<int>(edges.size()), D, true, minspan);
-
+    const int price2 = kruskal(edges, secspan, minspan, Q, C, D, true);
     if (price2 == -1) return -1;
 
     printf("%d %d\n", price1, price2);
-
     return 0;
 }
 
-int input(vector<tuple<int, int, int> > &edges, const int C) {
-    int Q1, Q2, p;
+int input(priority_queue<edge, vector<edge>, greater<>> &edges, const int C) {
+    int Q1, Q2, weight;
+
     for (int i = 0; i < C; i++) {
-        const int res = scanf("%d %d %d", &Q1, &Q2, &p);
-        if (res != 3) {
-            return -1;
-        }
+        const int res = scanf("%d %d %d", &Q1, &Q2, &weight);
+        if (res != 3) return -1;
 
-        edges.emplace_back(p, Q1, Q2);
+        edges.emplace(Q1 - 1, Q2 - 1, weight);
     }
 
     return 0;
 }
 
-int unionFind(pair<int, int> *connections, int Q, int Q1, int Q2) {
-    if (Q < Q1 || Q < Q2) return -1;
+int find(uf_vertex *connections, const int Q) {
+    const int parent = connections[Q].parent;
 
-    pair<int, int> parent1 = connections[Q1 - 1];
-    pair<int, int> parent2 = connections[Q2 - 1];
+    if (Q == parent) return Q;
 
-    // none of the vertices is connected
-    if (parent1.first == -1 && parent2.first == -1) {
-        connections[Q1 - 1] = {Q1 - 1, Q1 - 1};
-        connections[Q2 - 1] = {Q1 - 1, Q1 - 1};
+    const int result = find(connections, parent);
+
+    connections[Q].parent = result;
+
+    return result;
+}
+
+int union_rank(uf_vertex *connections, const int Q1, const int Q2) {
+    const int root1 = find(connections, Q1);
+    const int root2 = find(connections, Q2);
+
+    if (root1 == root2) return 1;
+
+    const int rank1 = connections[root1].rank;
+    const int rank2 = connections[root2].rank;
+
+    if (rank1 < rank2) {
+        connections[root1].parent = root2;
         return 0;
     }
 
-    // both are in the same set
-    if (parent1.first == parent2.first) return 1;
-
-    // Q1 is not connected
-    if (parent1.first == -1) {
-        connections[Q1 - 1] = {parent2.first, Q2 - 1};
+    if (rank1 > rank2) {
+        connections[root2].parent = root1;
         return 0;
     }
 
-    // Q2 is not connected
-    if (parent2.first == -1) {
-        connections[Q2 - 1] = {parent1.first, Q1 - 1};
-        return 0;
-    }
-
-    // Q1 and Q2 are in disjoint set
-    int parent = parent1.second;
-    int current = Q1 - 1;
-    int root = parent1.first;
-    int new_parent = 0;
-
-    while (current != root) {
-        new_parent = connections[parent].second;
-        connections[parent].second = current;
-
-        current = parent;
-        parent = new_parent;
-    }
-
-    parent = parent2.second;
-    current = Q2 - 1;
-    root = parent2.first;
-
-    while (current != root) {
-        new_parent = connections[parent].second;
-        connections[parent].second = current;
-
-        current = parent;
-        parent = new_parent;
-    }
-
-    connections[Q2 - 1].second = Q1 - 1;
-    connections[Q1 - 1].second = Q1 - 1;
-
-    for (int i = 0; i < Q; i++) {
-        if (connections[i].first == parent1.first || connections[i].first == parent2.first) {
-            connections[i].first = Q1 - 1;
-        }
-    }
-
+    connections[root1].parent = root2;
+    connections[root2].rank += 1;
 
     return 0;
 }
 
-int kruskal(vector<tuple<int, int, int> > &edges,
-            pair<int, int> *minspan,
-            int Q,
-            int C,
-            int D,
-            bool filter,
-            pair<int, int> *filter_tree
+int kruskal(
+    priority_queue<edge, vector<edge>, greater<>> &edges,
+    int *minspan,
+    const int *filter_tree,
+    const int Q,
+    const int C,
+    const int D,
+    const bool filter
 ) {
-    vector<tuple<int, int, int> > unused_edges;
-    tuple<int, int, int> edge;
+    priority_queue<edge, vector<edge>, greater<>> unused_edges;
+    vector<edge> tree;
 
-    fill_n(&minspan[0], Q, make_pair(-1, -1));
+    uf_vertex connections[Q];
 
+    iota(connections, connections + Q, uf_vertex(0, 0));
+
+    int no_edges = 0;
     int price = 0;
 
-    if (C < Q * Q / 2) {
-        for (int i = 0; i < C; i++) {
-            pop_heap(edges.begin(), edges.end(), greater<>());
-            edge = edges.back();
-            edges.pop_back();
+    const int mod = static_cast<int>(pow(2, 16));
 
-            int res;
-
-            if (filter) {
-                res = filterEdge(get<1>(edge), get<2>(edge), filter_tree, Q, D);
-                
-                if (res == 1) continue;
-            }
-
-            res = unionFind(minspan, Q, get<1>(edge), get<2>(edge));
-
-            if (res == -1) return -1;
-            if (res == 1) {
-                unused_edges.emplace_back(edge);
-                continue;
-            }
-
-            price += get<0>(edge);
-        }
-
-        swap(edges, unused_edges);
-
-        return price % static_cast<int>(pow(2, 16));
-    }
-
-    bool finished = false;
-    while (finished == false) {
-        pop_heap(edges.begin(), edges.end(), greater<>());
-        edge = edges.back();
-        edges.pop_back();
-
-        int res;
+    while (no_edges < (Q - 1) || !edges.empty()) {
+        edge e = edges.top();
+        edges.pop();
 
         if (filter) {
-            res = filterEdge(get<1>(edge), get<2>(edge), filter_tree, Q, D);
-
-            if (res == 1) continue;
+            if (!filterEdge(filter_tree, e.from, e.to, Q, D)) continue;
         }
 
-        res = unionFind(minspan, Q, get<1>(edge), get<2>(edge));
+        const int res = union_rank(connections, e.from, e.to);
 
-        if (res == -1) return -1;
         if (res == 1) {
-            unused_edges.emplace_back(edge);
+            unused_edges.emplace(e);
             continue;
         }
-        price += get<0>(edge);
 
-        if (countItems(minspan, Q) == 1 || edges.empty() == true) {
-            finished = true;
-        }
+        tree.emplace_back(e);
+        no_edges++;
+        price += e.weight % mod;
+        price %= mod;
     }
 
-    swap(edges, unused_edges);
-
-    return price % static_cast<int>(pow(2, 16));
+    if (!filter) makeGraph(tree, minspan, Q);
+    edges = move(unused_edges);
+    return price;
 }
 
-int countItems(const pair<int, int> *arr, const int n) {
-    unordered_set<int> s;
-
-    int res = 0;
-
-    for (int i = 0; i < n; i++) {
-        if (s.find(arr[i].first) == s.end()) {
-            s.insert(arr[i].first);
-            res++;
-        }
-    }
-
-    return res;
-}
-
-int filterEdge(const int Q1, const int Q2, const pair<int, int> *minspan, const int Q, const int D) {
+bool filterEdge(const int *connections, const int Q1, const int Q2, const int Q, const int D) {
     int distance[Q];
     fill_n(distance, Q, -1);
 
-    distance[Q1 - 1] = 0;
-    distance[Q2 - 1] = 0;
+    distance[Q1] = 0;
+    distance[Q2] = 0;
 
-    int curr1 = Q1-1;
-    int curr2 = Q2-1;
+    int curr1 = Q1, curr2 = Q2;
 
-    int parent1, parent2;
-
-    while(curr1 != curr2) {
-        parent1 = minspan[curr1].second;
-        parent2 = minspan[curr2].second;
+    while (curr1 != curr2) {
+        const int parent1 = connections[curr1];
+        const int parent2 = connections[curr2];
 
         if (distance[parent1] != -1 && curr1 != parent1) {
-            int total_dist = distance[parent1] + distance[curr1] + 1;
-            if (total_dist < D) {
-                return 0;
-            }
+            const int total_dist = distance[parent1] + distance[curr1] + 1;
+            if (total_dist < D) return true;
             break;
         }
 
         if (curr1 != parent1) distance[parent1] = distance[curr1] + 1;
 
         if (distance[parent2] != -1 && curr2 != parent2) {
-            int total_dist = distance[parent2] + distance[curr2] + 1;
-            if (total_dist < D) {
-                return 0;
-            }
+            const int total_dist = distance[parent2] + distance[curr2] + 1;
+            if (total_dist < D) return true;
             break;
         }
 
@@ -275,12 +207,43 @@ int filterEdge(const int Q1, const int Q2, const pair<int, int> *minspan, const 
         if (distance[curr1] == D || distance[curr2] == D) break;
     }
 
-
-    return 1;
+    return false;
 }
 
-bool containsQpu(tuple<int, int, int> e, int qpu) {
-    bool first = get<1>(e) == qpu;
-    bool second = get<2>(e) == qpu;
-    return first || second;
+int makeGraph(vector<edge> &edges, int *graph, const int Q) {
+    queue<int> q;
+    bool visited[Q];
+
+    fill_n(visited, Q, false);
+
+    q.emplace(0);
+    visited[0] = true;
+    graph[0] = 0;
+
+    while (!q.empty()) {
+        vector<edge>::iterator it;
+
+        int curr = q.front();
+        q.pop();
+
+        it = find_if(edges.begin(), edges.end(), [&curr](const edge &e) {
+            return e.from == curr || e.to == curr;
+        });
+
+        while (it != edges.end()) {
+            int next = it->from == curr ? it->to : it->from;
+
+            if (!visited[next]) {
+                q.emplace(next);
+                visited[next] = true;
+                graph[next] = curr;
+            };
+
+            it = find_if(++it, edges.end(), [&curr](const edge &e) {
+                return e.from == curr || e.to == curr;
+            });
+        }
+    }
+
+    return 0;
 }
