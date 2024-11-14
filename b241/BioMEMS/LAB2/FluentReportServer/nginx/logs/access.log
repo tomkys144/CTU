@@ -1,0 +1,7 @@
+127.0.0.1 - nexus [23/Oct/2024:14:41:31 +0200] "GET /item/api_version/ HTTP/1.1" 200 79 "-" "python-requests/2.31.0"
+127.0.0.1 - nexus [23/Oct/2024:14:41:31 +0200] "GET /item/api_version/ HTTP/1.1" 200 79 "-" "python-requests/2.31.0"
+127.0.0.1 - nexus [23/Oct/2024:14:41:32 +0200] "GET /item/api_version/ HTTP/1.1" 200 79 "-" "python-requests/2.31.0"
+127.0.0.1 - nexus [23/Oct/2024:14:41:33 +0200] "PUT /session/api_detail/21fbc416-913c-11ef-912d-c03c59afbd87?version=1.0 HTTP/1.1" 200 177 "-" "python-requests/2.31.0"
+127.0.0.1 - nexus [23/Oct/2024:14:41:34 +0200] "PUT /dataset/api_detail/231b7df8-913c-11ef-924a-c03c59afbd87?version=1.0 HTTP/1.1" 200 131 "-" "python-requests/2.31.0"
+127.0.0.1 - nexus [23/Oct/2024:14:56:44 +0200] "GET /item/api_version/ HTTP/1.1" 200 79 "-" "python-requests/2.31.0"
+127.0.0.1 - nexus [23/Oct/2024:14:56:45 +0200] "GET /item/api_stop_local/ HTTP/1.1" 502 157 "-" "python-requests/2.31.0"
