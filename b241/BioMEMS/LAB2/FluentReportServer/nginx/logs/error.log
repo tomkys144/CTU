@@ -1,0 +1,1 @@
+2024/10/23 14:56:45 [error] 28524#24292: *8 WSARecv() failed (10054: An existing connection was forcibly closed by the remote host) while reading response header from upstream, client: 127.0.0.1, server: 127.0.0.1, request: "GET /item/api_stop_local/ HTTP/1.1", upstream: "http://127.0.0.1:12820/item/api_stop_local/", host: "127.0.0.1:22852"
