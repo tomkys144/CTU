@@ -1,0 +1,52 @@
+---
+title: "SAN linear regression -- Boston data"
+output: html_document
+date: "2023-10-02"
+---
+
+```{r libs, include=FALSE}
+library("MASS") # collection of data sets and functions
+library("ISLR") # data sets associated with the text
+library("glmnet") # lasso
+```
+
+# Learn a simple regression model
+
+This script stems from the lab accompanying Chapter 3 of Introduction to Statistical Learning. We will use Boston data set available in MASS to predict median house value in neighborhoods around Boston. In the beginning we will work with the single independent variable: the variable $lstat$ captures the percentage of population with lower economical status in the given neighborhood (a town, an area). We will learn the model and see its basic statistics.
+
+```{r simple regression}
+help(Boston) # learn the structure of the dataset, 506 areas described by 14 variables, medv will serve as the target variable
+
+## Simple linear regression
+## Start with a basic regression using the lm(y ~ x, data) function
+lm.fit <- lm(medv ~ lstat, data = Boston) # lstat gives the percent of households with low socioeconomic status in the neighborhood
+## Understand the model
+summary(lm.fit) # see the model
+names(lm.fit) # get all component names of the lm model
+coef(lm.fit) # see the coefficeints once more, same as lm.fit$coefficients
+confint(lm.fit) # confidence intervals around these estimates
+sum(residuals(lm.fit)^2) # RSS
+sqrt(sum(residuals(lm.fit)^2)/(nrow(Boston)-2)) # RSE, it can be interpreted as the estimate of standard deviation of the noise in our model
+```
+
+There are further ways to understand the model.
+
+```{r regression plots}
+plot(Boston$lstat, Boston$medv) # visualize the relationship between indep and dep variable
+abline(lm.fit, col="red", lw=2) # visualize the fit
+
+par(mfrow=c(2,2))
+plot(lm.fit) # see the diagnostic plots
+
+predict(lm.fit, data.frame(lstat=c(5,10,15)), interval = "confidence") # predict for three new neighborhoods including confints
+
+plot(hatvalues(lm.fit)) # Leverage statistics can be computed for our predictors with hatvalues()
+which.max(hatvalues(lm.fit)) # find the observation with the largest leverage
+```
+
+In summary, we can conclude the following. There is an obvious relationship between the independent variable (household status) and the dependent variable (median house value). Both the F-stat for the whole model and t-stat for the predictor are significant, the predictor helps to explain more than 50% of the variance in the target variable. The median house price is around \$34500, on average it dercreases by \$950 with one percent increase of households with low socio-economical status. For more than 30% it virtually becomes \$0 (the model does not extrapolate well for these unobserved values). Both simple plot and residual plot suggest that the relationship is rather non-linear. Consequences: prediction could be improved with additional non-linear terms, assumptions are violated, estimations do not have to be perfect (namely p-values, confidence intervals).
+
+**Further questions and tasks:**
+
+1.  Construct a multiple linear regression model. Start with a full model that deals with all the independent variables. Compare it with the simple model above. Show at least two meaningful ways to compare models of different sizes. Did you improve the simple model?
+2.  Propose a linear regression model of the right size. Focus on simple approaches, more advanced methods (shrinkage, etc.) will be practiced during the next lab.

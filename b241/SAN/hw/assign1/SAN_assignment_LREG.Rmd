@@ -1,0 +1,174 @@
+---
+title: "A well-specified linear regression model"
+author: "Tomas Kysela"
+output: pdf_document
+---
+
+### Introduction
+
+A regression model may suffer from various issues. When constructing such a model, it is important to check for assumptions such as linearity, independence of errors, normality of residuals, homoscedasticity and the absence of multicollinearity. Additionally, there are other potential issues, such as irrelevant variables, which can reduce model performance. In this assignment you will aim to achieve the best possible linear model using the techniques you have already learned.
+
+### Input data
+
+In this assignment, you will work with a dataset that contains 200 samples, 10 features $x_1,\dots,x_{10}$ and one dependent variable $y$. Your general task is to develop the best possible linear model. One that is both simple and interpretable while still performing well. You are expected to correctly interpret the model. Assume that outliers are not expected (if they are present they should be removed), and our primary focus is on identifying common trends rather than a few exceptional samples.
+
+### Load the necessary libraries and the dataset
+
+```{r load}
+library(car) # use vif function for multicollinearity detection
+library(lmtest) # use bptest for homoscedasticity test
+library(glmnet) # shrinked linear models
+library(MASS)
+
+d <- read.csv("lreg_data.csv")
+```
+
+### The full linear model
+
+Let us start with a full linear model. The first task is to evaluate the model based on its first summary. Then, check its assumptions and detect its potential issues. Your task is to evaluate the plots and tests performed below, you should also further develop the tests (propose their alternatives).
+
+```{r full model and its potential issues}
+#### improve the code below so that you can verbally explain the full model ####
+
+# construct the model
+full_lm <- lm(y ~ ., d)
+summary(full_lm)
+
+# check for the issues
+
+# start with the residual plot
+plot(full_lm, which=1)
+
+# perform a homoscedasticity test
+bptest(full_lm)
+
+# normality of residuals? Q-Q plot and normality test
+plot(full_lm, which = 2)  
+shapiro.test(residuals(full_lm))
+
+# search for outliers
+plot(full_lm, which = 4)
+which(cooks.distance(full_lm) > 4 / (nrow(d) - length(coef(full_lm))))
+
+# detect potential multicollinearity
+vif(full_lm)
+```
+
+#### Add your verbal summary here (1p):
+
+Residual plot shows us, that model is moved towards points like 74 and 88, thus the trend of residual distance is on the whole dataset above zero.
+
+Q-Q plot tells us, that from -1 std deviation to 2 std deviations residuals follow normal distribution. Points deviating from line on both ends means, the distribution of residuals is heavy-tailed on both sides
+
+Cook's distance shows us, that points 74, 98 and 102 have great impact on our model and skews the model towards them. This partly matches residual plot.
+
+Finally variables x2 and x5 have high VIF, meaning these variables should be removed from our model.
+
+### Remove the issues from the full model
+
+Now deal with the detected issues in the right order. Build an alternative model and show that it works better than the full model. Finally, verbally justify all the decisions that you made and explain their effects.
+
+```{r deal with the issues}
+#### add your code here (1p) ####
+ds <- subset(d, select = -c(x2))
+mod_lms <- lm(y ~ ., ds)
+summary(mod_lms)
+plot(mod_lms)
+
+
+d1 <- ds[-c(71, 74, 102, 98, 129), ]
+mod_lm1 <- lm(y ~ ., d1)
+summary(mod_lm1)
+plot(mod_lm1)
+
+
+d2 <- ds[-c(88, 133, 165, 71, 74, 102, 98, 129), ]
+mod_lm2 <- lm(y ~ ., d2)
+summary(mod_lm2)
+plot(mod_lm2)
+
+vif(mod_lm2)
+```
+
+#### Add your verbal summary here (1p):
+
+First I remove variables with VIF \> 10. Next I removed data-points with biggest leverage (71, 74, 102, 98, 129). After that I remove biggest outliers such as 88, 133, 165.
+
+### Feature selection
+
+The goal now is to perform feature selection and remove irrelevant variables. Compare several different feature selection methods and choose the most appropriate one. Demonstrate that applying feature selection to the full model yields very different results compared to applying it to an alternative model without issues. Finally, explain the selected model.
+
+```{r}
+#### add your code here (1p) ####
+print("full manual")
+lm.full.exclude <- lm(y ~ . -x1 -x3 -x6 -x7 -x8, data = d)
+print("y ~ x2 + x4 + x5 + x9 + x10")
+print("alt manual")
+lm.alt.exclude <- lm(y ~ . -x1 -x4 -x6 -x7 -x10, data = d2)
+print("y ~ x2 + x3 + x5 + x8 + x9")
+
+print("full step forward")
+lm.full.stepfor <- stepAIC(full_lm, direction="forward", trace=0)
+lm.full.stepfor$anova
+print("alt step forward")
+lm.alt.stepfor <- stepAIC(mod_lm2, direction="forward", trace=0)
+lm.alt.stepfor$anova
+
+print("full step backward")
+lm.full.stepback <- stepAIC(full_lm, direction="backward", trace=0)
+lm.full.stepback$anova
+print("alt step backward")
+lm.alt.stepback <- stepAIC(mod_lm2, direction="backward", trace=0)
+lm.alt.stepback$anova
+
+print("full step both")
+lm.full.stepboth <- stepAIC(full_lm, direction="both", trace=0)
+lm.full.stepboth$anova
+print("alt step both")
+lm.alt.stepboth <- stepAIC(mod_lm2, direction="both", trace=0)
+lm.alt.stepboth$anova
+
+anova(lm.full.exclude, lm.full.stepfor, lm.full.stepback, lm.full.stepboth)
+anova(lm.alt.exclude, lm.alt.stepfor, lm.alt.stepback, lm.alt.stepboth)
+
+summary(lm.full.stepback)
+summary(lm.alt.stepback)
+
+lambda_grid <- 10^ seq(10 , -3 , length =200)
+
+lasso.full_model <- glmnet(as.matrix(d[,-ncol(d)]), d$y, alpha=1, lambda=lambda_grid, standardize = TRUE)
+
+lasso.full.cv.out <- cv.glmnet(as.matrix(d[,-ncol(d)]), d$y, alpha=1)
+plot(lasso.full.cv.out)
+lasso.full.lambda <- lasso.full.cv.out$lambda.min
+lasso.full.coef <- predict(lasso.full_model, type = "coefficients", s = lasso.full.lambda)
+print("Lasso full")
+print(as.matrix(lasso.full.coef)[seq(2,length(d)),] != 0)
+
+
+
+lasso.alt_model <- glmnet(as.matrix(d2[,-ncol(d2)]), d2$y, alpha=1, lambda=lambda_grid, standardize = TRUE)
+
+lasso.alt.cv.out <- cv.glmnet(as.matrix(d2[,-ncol(d2)]), d2$y, alpha=1)
+plot(lasso.alt.cv.out)
+lasso.alt.lambda <- lasso.alt.cv.out$lambda.min
+lasso.alt.coef <- predict(lasso.alt_model, type = "coefficients", s = lasso.alt.lambda)
+print("Lasso alt")
+print(as.matrix(lasso.alt.coef)[seq(2,length(d2)),] != 0)
+```
+
+#### Add your verbal summary including the final wrap up here (1p):
+
+From step-wise selections I chose backwards selection for both, since it doesn't add much RSS, but simplifies the model.\
+Then I compare these models with models from LASSO. For the both models, LASSO chooses same parameters as chosen step-wise selection.
+
+Final model I choose is described with equation\
+y \~ -0.4076 \* x1 + 3.4611 \* x3 + 2.0362 \* x5 - 1.5114 \* x8 + 0.9598 \* x9
+
+#### Grading
+
+-   1p for selection of proper methods for assumption verification and their explanation
+-   1p for the correct implementation of issue removal
+-   1p for its explanation and right decisions in further model design themselves
+-   1p for proper application of feature selection techniques and their comparison
+-   1p for comprehensive evaluation of all the model improvements and the final wrap up
