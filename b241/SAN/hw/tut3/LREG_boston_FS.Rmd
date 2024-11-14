@@ -1,0 +1,54 @@
+---
+title: "SAN feature selection in regression models -- Boston data"
+output: pdf_document
+date: "2023-10-06"
+---
+
+```{r libs, include=FALSE}
+library("MASS") # collection of data sets and functions
+library("ISLR") # data sets associated with the text
+library("glmnet") # lasso
+```
+
+# Multiple linear regression
+
+This script stems from the lab accompanying Chapter 3 of Introduction to Statistical Learning and follows on from the previous script analyzing Boston data. This time we will work with multiple linear regression and will try to identify the model of right size.
+
+```{r multiple regression}
+help(Boston) # learn the structure of the dataset, 506 areas described by 14 variables, medv will serve as the target variable
+
+# employ all the available independent variables
+lm.fit.all <- lm(medv ~ ., data=Boston)
+summary(lm.fit.all) # model improves again, only some of the variables seem to be unimportant, we may want to exclude them
+
+# use correlation coefficients, keep only variables that significantly correlate with medv
+sort(apply(Boston,2,function(x) cor.test(x,Boston$medv)$p.value)) # recommendation: keep all
+
+# use the coefficient p-values to decide whether to include variables
+lm.fit.exclude <- lm(medv ~ . -age -indus, data=Boston) # truly exclude age and indus
+summary(lm.fit.exclude) # the simpler model seems to maintain the performance of the previous model
+anova(lm.fit.exclude,lm.fit.all) # no difference, the simpler model preferred
+
+## use stepwise regression for feature selection
+step <- stepAIC(lm.fit.all, direction="both") # stepwise regression, based on AIC criterion, taken from MASS library, use trace=0 to avoid output
+step$anova # display results, actually does the same as we did manually, removes age and indus
+stepAIC(lm(medv~1,Boston), direction="forward",scope=list(upper=lm.fit.all))
+stepAIC(lm.fit.all, direction="backward")
+
+# Fit LASSO to remove unimportant predictors
+lambda_grid <- 10^ seq(10 , -3 , length =200)
+lasso.model <- glmnet(as.matrix(Boston[,-ncol(Boston)]),Boston$medv,alpha=1, lambda=lambda_grid, standardize=TRUE)
+lasso.cv.out <- cv.glmnet(as.matrix(Boston[,-ncol(Boston)]),Boston$medv,alpha=1)
+plot(lasso.cv.out) # small lambda values preferred, shrinkage effect is small
+lasso.lambda <- lasso.cv.out$lambda.min
+lasso.coefficients <- predict(lasso.model, type="coefficients", s=lasso.lambda)
+
+# Display the coefficients and selected variables
+print("LASSO coefficients:")
+print(as.matrix(lasso.coefficients)) # the absolute coefficent values influenced by the scale of the individual variables, nox has a small scale
+print(as.matrix(lasso.coefficients)[seq(2,length(Boston)-1),] != 0) # removes indus and age too
+```
+
+## Summary
+
+To avoid overfitting and increase simplicity and understandability of the model, only relevant features should be used. We have shown four different approaches to feature selection: pairwise correlations, p-values, stepwise regression and lasso. The method based on *pairwise correlations* recommends to keep all the variables, but it fails to control correlation between predictors. All of the rest came to the same conclusion: *two features should be removed from the model.* Using *coefficient p-values* for variable selection worked well in our case, however, it is not considered a standard or recommended practice. Significance of a variable in this context does not necessarily imply practical importance. A small p-value may indicate statistical significance, but the effect size might be trivial in a real-world context and vice versa. Multiple comparisons may lead to false positives (Type I errors) due to the problem of multiple comparisons (you might mistakenly include variables that have a low p-value by chance alone). Similarly, *stepwise variable selection* has to be used judiciously as it often suffers from overfitting. Stepwise procedures are data-driven and can lead to the selection of variables that happen to perform well on the specific dataset used for modeling but do not generalize well to new, unseen data. *Lasso* with the properly tuned regularization strength using techniques like cross-validation generally achieves an optimal balance between model complexity and performance.

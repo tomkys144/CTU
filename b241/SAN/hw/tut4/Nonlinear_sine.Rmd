@@ -1,0 +1,142 @@
+---
+title: "Moving beyond linearity -- fitting sine function"
+output:
+  html_document:
+    df_print: paged
+---
+
+Let us work with a noisy trigonometric **sine** function. It is obvious that it is non-linear and we will try to fit it with models of various complexity. In the beginning, we will explain how far the linear model works. Then, we will propose a suitable alternative model. Before you start with this script, think about the best model yourself.
+
+```{r prepare, echo=FALSE, message=FALSE, warning=FALSE, paged.print=FALSE}
+library(splines)
+library(gam)
+
+# root mean squared error function for later evaluation
+myRMSE = function(m, o){
+  sqrt(mean((m - o)^2))
+}
+```
+
+
+```{r sine generation}
+x <- seq(0, pi * 2, 0.1)
+#y <- sin(x)
+y <- sin(x) + rnorm(n = length(x), mean = 0, sd = sd(sin(x) / 2))
+sin.data <- data.frame(y,x)
+plot(sin.data$x,sin.data$y)
+lines(sin.data$x,sin(sin.data$x),col="green")
+```
+
+How far the linear model works?
+
+```{r sine with linear model}
+lm.sin <- lm(y ~ x, data = sin.data) # learn the linear model
+lm.sin.pred <- predict(lm.sin, interval="confidence") # make predictions at testing points
+summary(lm.sin) # the model works somehow, explains more than 40% of the variance, much better than averaging
+myRMSE(predict(lm.sin,sin.data),sin.data$y) # RMSE on train data
+myRMSE(0,sin.data$y) # RMSE of the zero model on train data
+plot(sin.data$x,sin.data$y)
+abline(lm.sin,col="red")
+
+lines(sin.data$x,lm.sin.pred[,"lwr"],col="blue",lty=2)
+lines(sin.data$x,lm.sin.pred[,"upr"],col="blue",lty=2)
+lines(sin.data$x,sin(sin.data$x),col="green")
+plot(lm.sin,which=1) # however, the assumptions violated, unreliable confidence intervals, the model underfits the data
+
+sin.test <- data.frame(x=seq(0, pi * 2, 0.1),y=sin(x) + rnorm(n = length(x), mean = 0, sd = sd(sin(x) / 2)))
+myRMSE(predict(lm.sin,sin.test),sin.test$y) # RMSE on test data
+myRMSE(0,sin.test$y) # RMSE of the zero model on test data
+```
+The linear model underfits the data. It is unable to capture the relationship between the dependent and independent variable, it has a high error rate both on training as well as testing data. For one sine period, the linear model overcomes the zero model, but we definitely need a more complex model. The cubic polynomial could be the first choice, its S shape with two inflection points resembles sine, although it will never fit the sine function perfectly for shape differences. 
+
+```{r sine with cubic model}
+lm.sin.cub <- lm(y ~ poly(x,3), data = sin.data) # learn the linear model
+lm.sin.pred <- predict(lm.sin.cub, interval="confidence") # make predictions at testing points
+summary(lm.sin.cub) # the model works even better, explains nearly 80% of the variance, much better than linear model
+myRMSE(predict(lm.sin.cub,sin.data),sin.data$y) # RMSE on train data
+myRMSE(0,sin.data$y) # RMSE of the zero model on train data
+plot(sin.data$x,sin.data$y)
+
+lines(sin.data$x,lm.sin.pred[,"fit"],col="blue")
+lines(sin.data$x,lm.sin.pred[,"lwr"],col="blue",lty=2)
+lines(sin.data$x,lm.sin.pred[,"upr"],col="blue",lty=2)
+lines(sin.data$x,sin(sin.data$x),col="green")
+plot(lm.sin.cub,which=1) # much better residuals
+
+myRMSE(predict(lm.sin.cub,sin.test),sin.test$y) # RMSE on test data
+myRMSE(0,sin.test$y) # RMSE of the zero model on test data
+```
+
+In order to reach a better fit, we will demonstrate the application of simple splines. The quadratic spline with one knot is the simplest choice with the desired S shape with two inflection points, we will also play with the cubic spline and a large-degree spline. 
+
+```{r sine with quadratic and cubic splines}
+gam.lin<-gam(y~x,data=sin.data) # simple gam, matches lm
+summary(gam.lin)
+coefficients(gam.lin) # the same as in lm.sin
+plot(sin.data$x,sin.data$y)
+lines(sin.data$x,sin(sin.data$x),col="green") # plot the true model
+legend("topright",legend=c("sine","linear GAM"),lty=c("solid"),col=c("green","red"),bty="n")
+
+abline(gam.lin,col="red")
+gam.quad<-gam(y~bs(x,degree=2,knots=c(3)),data=sin.data) # gam with a quadratic spline with one knot
+summary(gam.quad)
+coefficients(gam.quad)
+gam.quad.pred <- predict(gam.quad, se.fit=T) # make predictions at testing points
+plot(sin.data$x,sin.data$y) # plot the original data
+lines(sin.data$x,sin(sin.data$x),col="green") # plot the true model
+lines(sin.data$x,gam.quad.pred$fit,col="blue")
+gam.cub<-gam(y~bs(x,degree=3,knots=c(3)),data=sin.data) # increase the degree, cubic spline with one knot
+lines(sin.data$x,predict(gam.cub),col="red")
+gam.overfit<-gam(y~bs(x,degree=10,knots=quantile(sin.data$x,c(0.25,0.5,0.75))),data=sin.data) # overfit the data
+lines(sin.data$x,predict(gam.overfit),col="orange")
+legend("topright",legend=c("sine","quadratic spline","cubic spline","degree-10 spline"),lty=c("solid"),col=c("green","blue","red","orange"),bty="n")
+
+```
+
+How well does it compare with smoothing splines?
+```{r sine with smoothing spline}
+gam.smooth<-gam(y~s(x),data=sin.data) # gam with a smoothing spline, the default flexibility is df=4 (df=1 corresponds to linear fit)
+#gam.smooth<-gam(y~s(x,df=nrow(sin.data)),data=sin.data) # smoothing spline, exact fit
+summary(gam.smooth)
+coefficients(gam.smooth)
+gam.smooth.pred <- predict(gam.smooth, se.fit=T) # make predictions at testing points
+plot(sin.data$x,sin.data$y) # plot the smoothing spline
+lines(sin.data$x,sin(sin.data$x),col="green") # plot the true model
+lines(sin.data$x,gam.smooth.pred$fit,col="blue")
+lines(sin.data$x,gam.smooth.pred$fit+2*gam.smooth.pred$se.fit[,1],col="blue",lty=2)
+lines(sin.data$x,gam.smooth.pred$fit-2*gam.smooth.pred$se.fit[,1],col="blue",lty=2)
+legend("topright",legend=c("sine","degree-4 smoothing"),lty=c("solid"),col=c("green","blue"),bty="n")
+# the above plot suggests that the smoothing spline has about the right flexibility, however learn the best df value with CV
+gam.smooth.opt<-smooth.spline(sin.data$x, sin.data$y, cv = TRUE) # the best df seems to be a bit larger, around 6
+plot(sin.data$x,sin.data$y) # plot the smoothing spline
+lines(sin.data$x,sin(sin.data$x),col="green") # plot the true model
+lines(sin.data$x,gam.smooth.pred$fit,col="blue")
+lines(sin.data$x,predict(gam.smooth.opt)$y,col="red")
+legend("topright",legend=c("sine","degree-4 smoothing","degree-opt smoothing"),lty=c("solid"),col=c("green","blue","red"),bty="n")
+```
+
+**Summary:**
+
+Let us compute the errors of the individual models in one place. We will start with **testing** (noisy) data:
+
+| The model | linear | cubic | quadratic spline | cubic spline | overfitted spline | smoothing spline | opt smoothing |
+|:-----------:|:---------:|:----------:|:----------:|:----------:|:----------:|:----------:|:----------:|
+| RMSE | `r myRMSE(predict(lm.sin,sin.test),sin.test$y)`| `r myRMSE(predict(lm.sin.cub,sin.test),sin.test$y)` | `r myRMSE(predict(gam.quad,sin.test),sin.test$y)` | `r myRMSE(predict(gam.cub,sin.test),sin.test$y)` | `r myRMSE(predict(gam.overfit,sin.test),sin.test$y)` | `r myRMSE(predict(gam.smooth,sin.test),sin.test$y)` | `r myRMSE(predict(gam.overfit,sin.test),sin.test$y)` |
+
+Note, that there is a certain irreducible error in this data: `r myRMSE(sin(sin.test$x),sin.test$y)`. The errors shown above should only be larger than this margin.
+
+Let us also see the training errors. If they are significantly smaller than the figures above, the given model overfits the **training** data:
+
+| The model | linear | cubic | quadratic spline | cubic spline | overfitted spline | smoothing spline | opt smoothing |
+|:-----------:|:---------:|:----------:|:----------:|:----------:|:----------:|:----------:|:----------:|
+| RMSE | `r myRMSE(predict(lm.sin,sin.data),sin.data$y)`| `r myRMSE(predict(lm.sin.cub,sin.data),sin.data$y)` | `r myRMSE(predict(gam.quad,sin.data),sin.data$y)` | `r myRMSE(predict(gam.cub,sin.data),sin.data$y)` | `r myRMSE(predict(gam.overfit,sin.data),sin.data$y)` | `r myRMSE(predict(gam.smooth,sin.data),sin.data$y)` | `r myRMSE(predict(gam.overfit,sin.data),sin.data$y)` |
+
+
+Now, we will compute the root mean square error of the individual models against the **ideal sine** function to see how well they reconstruct the original function:
+
+| The model | linear | cubic | quadratic spline | cubic spline | overfitted spline | smoothing spline | opt smoothing |
+|:-----------:|:---------:|:----------:|:----------:|:----------:|:----------:|:----------:|:----------:|
+| RMSE | `r myRMSE(sin(sin.data$x),predict(gam.lin))`| `r myRMSE(sin(sin.data$x),predict(lm.sin.cub))` | `r myRMSE(sin(sin.data$x),predict(gam.quad))` | `r myRMSE(sin(sin.data$x),predict(gam.cub))` | `r myRMSE(sin(sin.data$x),predict(gam.overfit))` | `r myRMSE(sin(sin.data$x),predict(gam.smooth))` | `r myRMSE(sin(sin.data$x),predict(gam.smooth.opt)$y)` |
+
+
+The quadratic spline with single knot worked pretty well in our scenario. This spline has a sufficient complexity to fit the sine function and does not overfit. The other simple non-linear functions work well as well (the degree-3 polynomial, cubic spline, smoothing spline). More complex models may overfit the data. The amount of noise has also to be considered when comparing models. Our default setting shows relatively large amount of noise which encourages overfitting. If learning from less noisy data, more complex models can be more advantageous.
