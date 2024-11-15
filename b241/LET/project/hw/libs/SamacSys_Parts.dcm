@@ -6,4 +6,22 @@ K
 F http://www.ti.com/lit/ds/symlink/ne555.pdf
 $ENDCMP
 #
+$CMP ABM11W-40.0000MHZ-7-D1X-T3
+D IoT OPTIMIZED LOW PROFILE QUARTZ CRYSTAL
+K
+F https://abracon.com/Resonators/ABM11W.pdf
+$ENDCMP
+#
+$CMP ECS-.327-12.5-34B-C-TR
+D Crystal 0.032768MHz +/-10ppm (Tol) 12.5pF Flexural 70000Ohm 2-Pin Ultra Mini-CSMD T/R
+K
+F https://componentsearchengine.com/Datasheets/2/ECS-.327-12.5-34B-C-TR.pdf
+$ENDCMP
+#
+$CMP USBLC62P6
+D STMICROELECTRONICS - USBLC62P6 - ESD Protection Device, 17 V, SOT-666, 6 Pins, 1.1 V, USBLC Series
+K
+F https://datasheet.lcsc.com/szlcsc/STMicroelectronics-USBLC6-2P6_C15999.pdf
+$ENDCMP
+#
 #End Doc Library

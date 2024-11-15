@@ -224,7 +224,7 @@
       "no_connect_dangling": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
-      "pin_to_pin": "warning",
+      "pin_to_pin": "error",
       "power_pin_not_driven": "error",
       "similar_labels": "warning",
       "simulation_model_issue": "ignore",
@@ -371,8 +371,8 @@
       "version": 1
     },
     "net_format_name": "",
-    "page_layout_descr_file": "",
-    "plot_directory": "",
+    "page_layout_descr_file": "drawingsheet\\A4_template.ki8.kicad_wks",
+    "plot_directory": "./",
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
     "spice_model_current_sheet_as_root": true,
@@ -386,10 +386,6 @@
     [
       "842b1653-7ee6-465b-adee-3de91196172c",
       "Root"
-    ],
-    [
-      "862994a4-e692-435c-99c6-9373401b5a98",
-      "SOC"
     ]
   ],
   "text_variables": {}
