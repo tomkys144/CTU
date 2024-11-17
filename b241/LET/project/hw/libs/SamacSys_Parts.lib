@@ -118,4 +118,98 @@ P 4 0 1 5 1300 600 1200 500 1200 700 1300 600 F
 ENDDRAW
 ENDDEF
 #
+#SamacSys ECAD Model ESD7002WTT1G
+#/1017606/475221/2.50/3/4/Diode
+DEF ESD7002WTT1G D 0 30 Y Y 1 F N
+F0 "D" 1250 300 50 H V L CNN
+F1 "ESD7002WTT1G" 1250 200 50 H V L CNN
+F2 "SOT65P220X100-3N" 1250 100 50 H I L CNN
+F3 "http://www.onsemi.com/pub/Collateral/ESD7002-D.PDF" 1250 0 50 H I L CNN
+F4 "ESD Suppressors / TVS Diodes 2LINE HIGHSPEED PROTECTION" 1250 -100 50 H I L CNN "Description"
+F5 "1" 1250 -200 50 H I L CNN "Height"
+F6 "onsemi" 1250 -300 50 H I L CNN "Manufacturer_Name"
+F7 "ESD7002WTT1G" 1250 -400 50 H I L CNN "Manufacturer_Part_Number"
+F8 "ESD7002WTT1G" 1250 -500 50 H I L CNN "Arrow Part Number"
+F9 "https://www.arrow.com/en/products/esd7002wtt1g/on-semiconductor?region=nac" 1250 -600 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X CATHODE_1 1 0 0 200 R 50 50 0 0 P
+X CATHODE_2 2 0 -100 200 R 50 50 0 0 P
+X ANODE 3 1400 0 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 1200 100 1200 -200 200 -200 200 100 N
+ENDDRAW
+ENDDEF
+#
+#SamacSys ECAD Model 1SMB5934BT3G
+#/410613/475221/2.50/2/2/Zener Diode
+DEF 1SMB5934BT3G Z 0 30 Y Y 1 F N
+F0 "Z" 400 350 50 H V L CNN
+F1 "1SMB5934BT3G" 400 250 50 H V L CNN
+F2 "DIOM5436X247N" 400 150 50 H I L CNN
+F3 "http://www.onsemi.com/pub/Collateral/1SMB5913BT3-D.PDF" 400 50 50 H I L CNN
+F4 "ON Semiconductor 1SMB5934BT3G Zener Diode, 24V 5% 0.55 W SMT 2-Pin SMB" 400 -50 50 H I L CNN "Description"
+F5 "2.47" 400 -150 50 H I L CNN "Height"
+F6 "onsemi" 400 -250 50 H I L CNN "Manufacturer_Name"
+F7 "1SMB5934BT3G" 400 -350 50 H I L CNN "Manufacturer_Part_Number"
+F8 "1SMB5934BT3G" 400 -450 50 H I L CNN "Arrow Part Number"
+F9 "https://www.arrow.com/en/products/1smb5934bt3g/on-semiconductor?region=nac" 400 -550 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X ~ 1 0 0 100 R 50 50 0 0 P
+X ~ 2 600 0 100 L 50 50 0 0 P
+P 2 0 1 6 200 80 200 -80 N
+P 2 0 1 6 200 80 240 100 N
+P 2 0 1 6 160 -100 200 -80 N
+P 2 0 1 6 100 0 200 0 N
+P 2 0 1 6 500 0 400 0 N
+P 4 0 1 10 200 0 400 100 400 -100 200 0 F
+ENDDRAW
+ENDDEF
+#
+#SamacSys ECAD Model MBRAF260T3G
+#/1124882/475221/2.50/2/3/Diode
+DEF MBRAF260T3G D 0 30 Y Y 1 F N
+F0 "D" 450 200 50 H V L CNN
+F1 "MBRAF260T3G" 450 100 50 H V L CNN
+F2 "SODFL5126X110N" 450 0 50 H I L CNN
+F3 "https://componentsearchengine.com/Datasheets/2/MBRAF260T3G.pdf" 450 -100 50 H I L CNN
+F4 "ON SEMICONDUCTOR - MBRAF260T3G - Schottky Rectifier, 60 V, 2 A, Single, SMAF, 2 Pins, 630 mV" 450 -200 50 H I L CNN "Description"
+F5 "1.1" 450 -300 50 H I L CNN "Height"
+F6 "onsemi" 450 -400 50 H I L CNN "Manufacturer_Name"
+F7 "MBRAF260T3G" 450 -500 50 H I L CNN "Manufacturer_Part_Number"
+F8 "MBRAF260T3G" 450 -600 50 H I L CNN "Arrow Part Number"
+F9 "https://www.arrow.com/en/products/mbraf260t3g/on-semiconductor?region=nac" 450 -700 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X ~ 1 0 0 100 R 50 50 0 0 P
+X ~ 2 600 0 100 L 50 50 0 0 P
+P 2 0 1 6 200 100 200 -100 N
+P 2 0 1 6 100 0 200 0 N
+P 2 0 1 6 400 0 500 0 N
+P 4 0 1 10 200 0 400 100 400 -100 200 0 F
+ENDDRAW
+ENDDEF
+#
+#SamacSys ECAD Model NCP187AMT330TAG
+#/2397900/475221/2.50/7/3/Integrated Circuit
+DEF NCP187AMT330TAG IC 0 30 Y Y 1 F N
+F0 "IC" 1050 300 50 H V L CNN
+F1 "NCP187AMT330TAG" 1050 200 50 H V L CNN
+F2 "SON65P200X200X80-7N" 1050 100 50 H I L CNN
+F3 "https://componentsearchengine.com/Datasheets/1/NCP187AMT330TAG.pdf" 1050 0 50 H I L CNN
+F4 "LDO Voltage Regulators 1.2A 3.3V Active discharge" 1050 -100 50 H I L CNN "Description"
+F5 "0.8" 1050 -200 50 H I L CNN "Height"
+F6 "onsemi" 1050 -300 50 H I L CNN "Manufacturer_Name"
+F7 "NCP187AMT330TAG" 1050 -400 50 H I L CNN "Manufacturer_Part_Number"
+F8 "NCP187AMT330TAG" 1050 -500 50 H I L CNN "Arrow Part Number"
+F9 "https://www.arrow.com/en/products/ncp187amt330tag/on-semiconductor?region=europe" 1050 -600 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X IN 1 0 0 200 R 50 50 0 0 P
+X EN 2 0 -100 200 R 50 50 0 0 P
+X GND_1 3 0 -200 200 R 50 50 0 0 P
+X GND_2 7 600 -900 200 U 50 50 0 0 P
+X OUT 6 1200 0 200 L 50 50 0 0 P
+X SNS 5 1200 -100 200 L 50 50 0 0 P
+X PG 4 1200 -200 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 1000 100 1000 -700 200 -700 200 100 N
+ENDDRAW
+ENDDEF
+#
 #End Library
