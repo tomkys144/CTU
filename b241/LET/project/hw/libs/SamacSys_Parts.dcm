@@ -48,4 +48,16 @@ K
 F https://componentsearchengine.com/Datasheets/1/NCP187AMT330TAG.pdf
 $ENDCMP
 #
+$CMP CRCW12105K10FKEA
+D RESISTOR, 1210 5.1K Ohm +/-1% 0.5W
+K
+F 
+$ENDCMP
+#
+$CMP CRCW12101K00FKTA
+D Thick Film Resistors - SMD 1/2watt 1Kohms 1%
+K
+F http://componentsearchengine.com/Datasheets/1/CRCW12101K00FKTA.pdf
+$ENDCMP
+#
 #End Doc Library
