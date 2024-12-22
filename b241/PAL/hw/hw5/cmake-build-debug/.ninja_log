@@ -1,0 +1,17 @@
+# ninja log v6
+2	114	1734814686739415727	CMakeFiles/hw5.dir/data/main_new.cpp.o.ddi	e474ee5ba5184ddd
+123	938	1734814686859415157	CMakeFiles/hw5.dir/data/main_new.cpp.o	975bccdc6f711d7d
+136	941	1734814190768435562	CMakeFiles/hw5.dir/main.cpp.o	e0349db7a049b3a9
+114	123	1734814686852748522	CMakeFiles/hw5.dir/main.cpp.o.modmap	2fc119ee78559ee3
+941	1039	1734814191575098414	hw5	bb9663eee779be3a
+114	123	1734814686852748522	/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/cmake-build-debug/CMakeFiles/hw5.dir/CXXModules.json	2fc119ee78559ee3
+114	123	1734814686852748522	CMakeFiles/hw5.dir/data/main_new.cpp.o.modmap	2fc119ee78559ee3
+114	123	1734814686852748522	CMakeFiles/hw5.dir/CXX.dd	2fc119ee78559ee3
+2	127	1734814190635102860	CMakeFiles/hw5.dir/main.cpp.o.ddi	cd11cbaa6e3910b2
+1	27	1734814721932581794	build.ninja	4cae6225c3534978
+1	115	1734814721942581746	CMakeFiles/hw5.dir/main_new.cpp.o.ddi	65067a00cb95e80
+115	123	1734814722055914541	CMakeFiles/hw5.dir/CXX.dd	c7b0844dd60d451b
+115	123	1734814722055914541	/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/cmake-build-debug/CMakeFiles/hw5.dir/CXXModules.json	c7b0844dd60d451b
+115	123	1734814722055914541	CMakeFiles/hw5.dir/main_new.cpp.o.modmap	c7b0844dd60d451b
+123	954	1734814722065914493	CMakeFiles/hw5.dir/main_new.cpp.o	a01d25db92165388
+954	1047	1734814722895910548	hw5	86ac957b1e928f45
