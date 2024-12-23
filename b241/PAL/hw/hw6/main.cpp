@@ -64,7 +64,8 @@ void SplayTree::zig(Node *A) {
                 A->parent->left = A;
             else
                 A->parent->right = A;
-        }
+        } else
+            this->root = A;
 
         if (A_right != nullptr)
             A_right->parent = B;
@@ -84,7 +85,8 @@ void SplayTree::zig(Node *A) {
                 A->parent->left = A;
             else
                 A->parent->right = A;
-        }
+        } else
+            this->root = A;
 
         if (A_left != nullptr)
             A_left->parent = B;
@@ -115,7 +117,8 @@ void SplayTree::zig_zig(Node *A) {
                 A->parent->left = A;
             else
                 A->parent->right = A;
-        }
+        } else
+            this->root = A;
 
         if (A_right != nullptr)
             A_right->parent = B;
@@ -143,7 +146,8 @@ void SplayTree::zig_zig(Node *A) {
                 A->parent->left = A;
             else
                 A->parent->right = A;
-        }
+        } else
+            this->root = A;
 
         if (A_left != nullptr)
             A_left->parent = B;
@@ -178,7 +182,8 @@ void SplayTree::zig_zag(Node *B) {
                 B->parent->left = B;
             else
                 B->parent->right = B;
-        }
+        } else
+            this->root = B;
 
         if (B_left != nullptr)
             B_left->parent = A;
@@ -206,7 +211,8 @@ void SplayTree::zig_zag(Node *B) {
                 B->parent->left = B;
             else
                 B->parent->right = B;
-        }
+        } else
+            this->root = B;
 
         if (B_left != nullptr)
             B_left->parent = C;
@@ -280,7 +286,7 @@ Node *SplayTree::find(int key) {
 
     if (res != nullptr)
         splay(res);
-    else if (prevNode == nullptr)
+    else if (prevNode != nullptr)
         splay(prevNode);
 
     return res;
@@ -314,8 +320,8 @@ void SplayTree::insert(int key) {
             currNode = currNode->right;
         }
     }
-
-    splay(currNode);
+    if (currNode != nullptr)
+        splay(currNode);
 }
 
 void SplayTree::remove(int key) {
@@ -330,8 +336,8 @@ void SplayTree::remove(int key) {
     if (leftChild == nullptr && rightChild == nullptr) {
         this->root = nullptr;
     } else if (leftChild == nullptr) {
-        Node *newRoot = find_min(rightChild);
-        splay(newRoot);
+        this->root = rightChild;
+        rightChild->parent = nullptr;
     } else if (rightChild == nullptr) {
         Node *newRoot = find_max(leftChild);
         splay(newRoot);
@@ -348,6 +354,8 @@ void SplayTree::remove(int key) {
         if (delNode->parent->right == delNode)
             delNode->parent->right = nullptr;
     }
+
+
     delete delNode;
 }
 
