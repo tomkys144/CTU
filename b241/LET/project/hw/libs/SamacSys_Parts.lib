@@ -1,0 +1,415 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model NE555DR
+#/6648/2/2.37/8/4/Integrated Circuit
+DEF NE555DR IC 0 30 Y Y 1 F N
+F0 "IC" 1050 600 50 H V L CNN
+F1 "NE555DR" 1050 500 50 H V L CNN
+F2 "SOIC127P600X175-8N" 1050 400 50 H I L CNN
+F3 "http://www.ti.com/lit/ds/symlink/ne555.pdf" 1050 300 50 H I L CNN
+F4 "Single Precision Timer" 1050 200 50 H I L CNN "Description"
+F5 "1.75" 1050 100 50 H I L CNN "Height"
+F6 "Texas Instruments" 1050 0 50 H I L CNN "Manufacturer_Name"
+F7 "NE555DR" 1050 -100 50 H I L CNN "Manufacturer_Part_Number"
+F8 "595-NE555DR" 1050 -200 50 H I L CNN "Mouser Part Number"
+F9 "https://www.mouser.com/Search/Refine.aspx?Keyword=595-NE555DR" 1050 -300 50 H I L CNN "Mouser Price/Stock"
+F10 "1218414" 1050 -400 50 H I L CNN "RS Part Number"
+F11 "http//uk.rs-online.com/web/p/products/1218414" 1050 -500 50 H I L CNN "RS Price/Stock"
+DRAW
+X GND 1 600 -1000 200 U 50 50 0 0 B
+X TRIG 2 0 -400 200 R 50 50 0 0 B
+X OUT 3 1200 -200 200 L 50 50 0 0 B
+X ~RESET 4 0 0 200 R 50 50 0 0 B
+X CONT 5 500 600 200 D 50 50 0 0 B
+X THRES 6 0 -300 200 R 50 50 0 0 B
+X DISCH 7 0 -100 200 R 50 50 0 0 B
+X VCC 8 700 600 200 D 50 50 0 0 B
+P 5 0 1 6 200 400 1000 400 1000 -800 200 -800 200 400 N
+ENDDRAW
+ENDDEF
+#
+#SamacSys ECAD Model ABM11W-40.0000MHZ-7-D1X-T3
+#/1380355/475221/2.50/4/2/Crystal or Oscillator
+DEF ABM11W-40.0000MHZ-7-D1X-T3 Y 0 30 Y Y 1 F N
+F0 "Y" 1050 300 50 H V L CNN
+F1 "ABM11W-40.0000MHZ-7-D1X-T3" 1050 200 50 H V L CNN
+F2 "ABM11W300000MHZ4B1UT3" 1050 100 50 H I L CNN
+F3 "https://abracon.com/Resonators/ABM11W.pdf" 1050 0 50 H I L CNN
+F4 "IoT OPTIMIZED LOW PROFILE QUARTZ CRYSTAL" 1050 -100 50 H I L CNN "Description"
+F5 "0.5" 1050 -200 50 H I L CNN "Height"
+F6 "ABRACON" 1050 -300 50 H I L CNN "Manufacturer_Name"
+F7 "ABM11W-40.0000MHZ-7-D1X-T3" 1050 -400 50 H I L CNN "Manufacturer_Part_Number"
+F8 "" 1050 -500 50 H I L CNN "Arrow Part Number"
+F9 "" 1050 -600 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X X1 1 0 -100 200 R 50 50 0 0 P
+X GND_1 2 1200 -100 200 L 50 50 0 0 P
+X X2 3 1200 0 200 L 50 50 0 0 P
+X GND_2 4 0 0 200 R 50 50 0 0 P
+P 5 0 1 6 200 100 1000 100 1000 -200 200 -200 200 100 N
+ENDDRAW
+ENDDEF
+#
+#SamacSys ECAD Model ECS-.327-12.5-34B-C-TR
+#/13676354/475221/2.50/2/3/Crystal or Oscillator
+DEF ECS-.327-12.5-34B-C-TR Y 0 30 Y Y 1 F N
+F0 "Y" 350 250 50 H V L CNN
+F1 "ECS-.327-12.5-34B-C-TR" 350 150 50 H V L CNN
+F2 "ECS32712534BCTR" 350 50 50 H I L CNN
+F3 "https://componentsearchengine.com/Datasheets/2/ECS-.327-12.5-34B-C-TR.pdf" 350 -50 50 H I L CNN
+F4 "Crystal 0.032768MHz +/-10ppm (Tol) 12.5pF Flexural 70000Ohm 2-Pin Ultra Mini-CSMD T/R" 350 -150 50 H I L CNN "Description"
+F5 "0.9" 350 -250 50 H I L CNN "Height"
+F6 "ECS" 350 -350 50 H I L CNN "Manufacturer_Name"
+F7 "ECS-.327-12.5-34B-C-TR" 350 -450 50 H I L CNN "Manufacturer_Part_Number"
+F8 "ECS-.327-12.5-34B-C-TR" 350 -550 50 H I L CNN "Arrow Part Number"
+F9 "https://www.arrow.com/en/products/ecs-.327-12.5-34b-c-tr/ecs-international?region=nac" 350 -650 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X ~ 2 0 0 100 R 50 50 0 0 P
+X ~  400 0 100 L 50 50 0 0 P
+P 2 0 1 6 120 100 120 -100 N
+P 2 0 1 6 280 100 280 -100 N
+P 5 0 1 6 160 140 160 -140 240 -140 240 140 160 140 N
+P 2 0 1 6 280 0 300 0 N
+P 2 0 1 6 120 0 100 0 N
+ENDDRAW
+ENDDEF
+#
+#SamacSys ECAD Model USBLC62P6
+#/914957/475221/2.50/6/4/Integrated Circuit
+DEF USBLC62P6 IC 0 30 Y Y 1 F N
+F0 "IC" 1010 80 50 H V C BNN
+F1 "USBLC62P6" 1000 500 50 H V L CNN
+F2 "USBLC62P6" 1000 400 50 H I L CNN
+F3 "https://datasheet.lcsc.com/szlcsc/STMicroelectronics-USBLC6-2P6_C15999.pdf" 1000 300 50 H I L CNN
+F4 "STMICROELECTRONICS - USBLC62P6 - ESD Protection Device, 17 V, SOT-666, 6 Pins, 1.1 V, USBLC Series" 1000 200 50 H I L CNN "Description"
+F5 "0.6" 1000 100 50 H I L CNN "Height"
+F6 "STMicroelectronics" 1000 0 50 H I L CNN "Manufacturer_Name"
+F7 "USBLC62P6" 1000 -100 50 H I L CNN "Manufacturer_Part_Number"
+F8 "" 1000 -200 50 H I L CNN "Arrow Part Number"
+F9 "" 1000 -300 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X ~ 1 300 800 200 R 50 50 0 0 P
+X ~ 2 300 300 200 R 50 50 0 0 P
+X ~ 3 300 -200 200 R 50 50 0 0 P
+X ~ 4 1700 -200 200 L 50 50 0 0 P
+X ~ 5 1700 300 200 L 50 50 0 0 P
+X ~ 6 1700 800 200 L 50 50 0 0 P
+P 4 0 1 5 1000 200 1050 250 1050 350 1100 400 N
+P 2 0 1 5 800 700 800 500 N
+P 2 0 1 5 800 100 800 -100 N
+P 2 0 1 5 1300 100 1300 -100 N
+P 2 0 1 5 1300 700 1300 500 N
+P 4 0 1 5 700 600 600 600 600 0 700 0 N
+P 4 0 1 5 1300 600 1400 600 1400 0 1300 0 N
+P 2 0 1 5 600 300 1400 300 N
+P 2 0 1 5 800 600 1200 600 N
+P 2 0 1 5 800 0 1200 0 N
+P 2 0 1 5 1000 0 1000 -200 N
+P 2 0 1 5 1000 600 1000 800 N
+P 2 0 1 5 500 800 1500 800 N
+P 2 0 1 5 500 -200 1500 -200 N
+P 2 0 1 5 600 300 500 300 N
+P 2 0 1 5 1400 300 1500 300 N
+P 4 0 1 5 1050 300 950 200 950 400 1050 300 F
+P 4 0 1 5 800 600 700 500 700 700 800 600 F
+P 4 0 1 5 800 0 700 -100 700 100 800 0 F
+P 4 0 1 5 1300 0 1200 -100 1200 100 1300 0 F
+P 4 0 1 5 1300 600 1200 500 1200 700 1300 600 F
+ENDDRAW
+ENDDEF
+#
+#SamacSys ECAD Model ESD7002WTT1G
+#/1017606/475221/2.50/3/4/Diode
+DEF ESD7002WTT1G D 0 30 Y Y 1 F N
+F0 "D" 1250 300 50 H V L CNN
+F1 "ESD7002WTT1G" 1250 200 50 H V L CNN
+F2 "SOT65P220X100-3N" 1250 100 50 H I L CNN
+F3 "http://www.onsemi.com/pub/Collateral/ESD7002-D.PDF" 1250 0 50 H I L CNN
+F4 "ESD Suppressors / TVS Diodes 2LINE HIGHSPEED PROTECTION" 1250 -100 50 H I L CNN "Description"
+F5 "1" 1250 -200 50 H I L CNN "Height"
+F6 "onsemi" 1250 -300 50 H I L CNN "Manufacturer_Name"
+F7 "ESD7002WTT1G" 1250 -400 50 H I L CNN "Manufacturer_Part_Number"
+F8 "ESD7002WTT1G" 1250 -500 50 H I L CNN "Arrow Part Number"
+F9 "https://www.arrow.com/en/products/esd7002wtt1g/on-semiconductor?region=nac" 1250 -600 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X CATHODE_1 1 0 0 200 R 50 50 0 0 P
+X CATHODE_2 2 0 -100 200 R 50 50 0 0 P
+X ANODE 3 1400 0 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 1200 100 1200 -200 200 -200 200 100 N
+ENDDRAW
+ENDDEF
+#
+#SamacSys ECAD Model 1SMB5934BT3G
+#/410613/475221/2.50/2/2/Zener Diode
+DEF 1SMB5934BT3G Z 0 30 Y Y 1 F N
+F0 "Z" 400 350 50 H V L CNN
+F1 "1SMB5934BT3G" 400 250 50 H V L CNN
+F2 "DIOM5436X247N" 400 150 50 H I L CNN
+F3 "http://www.onsemi.com/pub/Collateral/1SMB5913BT3-D.PDF" 400 50 50 H I L CNN
+F4 "ON Semiconductor 1SMB5934BT3G Zener Diode, 24V 5% 0.55 W SMT 2-Pin SMB" 400 -50 50 H I L CNN "Description"
+F5 "2.47" 400 -150 50 H I L CNN "Height"
+F6 "onsemi" 400 -250 50 H I L CNN "Manufacturer_Name"
+F7 "1SMB5934BT3G" 400 -350 50 H I L CNN "Manufacturer_Part_Number"
+F8 "1SMB5934BT3G" 400 -450 50 H I L CNN "Arrow Part Number"
+F9 "https://www.arrow.com/en/products/1smb5934bt3g/on-semiconductor?region=nac" 400 -550 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X ~ 1 0 0 100 R 50 50 0 0 P
+X ~ 2 600 0 100 L 50 50 0 0 P
+P 2 0 1 6 200 80 200 -80 N
+P 2 0 1 6 200 80 240 100 N
+P 2 0 1 6 160 -100 200 -80 N
+P 2 0 1 6 100 0 200 0 N
+P 2 0 1 6 500 0 400 0 N
+P 4 0 1 10 200 0 400 100 400 -100 200 0 F
+ENDDRAW
+ENDDEF
+#
+#SamacSys ECAD Model MBRAF260T3G
+#/1124882/475221/2.50/2/3/Diode
+DEF MBRAF260T3G D 0 30 Y Y 1 F N
+F0 "D" 450 200 50 H V L CNN
+F1 "MBRAF260T3G" 450 100 50 H V L CNN
+F2 "SODFL5126X110N" 450 0 50 H I L CNN
+F3 "https://componentsearchengine.com/Datasheets/2/MBRAF260T3G.pdf" 450 -100 50 H I L CNN
+F4 "ON SEMICONDUCTOR - MBRAF260T3G - Schottky Rectifier, 60 V, 2 A, Single, SMAF, 2 Pins, 630 mV" 450 -200 50 H I L CNN "Description"
+F5 "1.1" 450 -300 50 H I L CNN "Height"
+F6 "onsemi" 450 -400 50 H I L CNN "Manufacturer_Name"
+F7 "MBRAF260T3G" 450 -500 50 H I L CNN "Manufacturer_Part_Number"
+F8 "MBRAF260T3G" 450 -600 50 H I L CNN "Arrow Part Number"
+F9 "https://www.arrow.com/en/products/mbraf260t3g/on-semiconductor?region=nac" 450 -700 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X ~ 1 0 0 100 R 50 50 0 0 P
+X ~ 2 600 0 100 L 50 50 0 0 P
+P 2 0 1 6 200 100 200 -100 N
+P 2 0 1 6 100 0 200 0 N
+P 2 0 1 6 400 0 500 0 N
+P 4 0 1 10 200 0 400 100 400 -100 200 0 F
+ENDDRAW
+ENDDEF
+#
+#SamacSys ECAD Model NCP187AMT330TAG
+#/2397900/475221/2.50/7/3/Integrated Circuit
+DEF NCP187AMT330TAG IC 0 30 Y Y 1 F N
+F0 "IC" 1050 300 50 H V L CNN
+F1 "NCP187AMT330TAG" 1050 200 50 H V L CNN
+F2 "SON65P200X200X80-7N" 1050 100 50 H I L CNN
+F3 "https://componentsearchengine.com/Datasheets/1/NCP187AMT330TAG.pdf" 1050 0 50 H I L CNN
+F4 "LDO Voltage Regulators 1.2A 3.3V Active discharge" 1050 -100 50 H I L CNN "Description"
+F5 "0.8" 1050 -200 50 H I L CNN "Height"
+F6 "onsemi" 1050 -300 50 H I L CNN "Manufacturer_Name"
+F7 "NCP187AMT330TAG" 1050 -400 50 H I L CNN "Manufacturer_Part_Number"
+F8 "NCP187AMT330TAG" 1050 -500 50 H I L CNN "Arrow Part Number"
+F9 "https://www.arrow.com/en/products/ncp187amt330tag/on-semiconductor?region=europe" 1050 -600 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X IN 1 0 0 200 R 50 50 0 0 P
+X EN 2 0 -100 200 R 50 50 0 0 P
+X GND_1 3 0 -200 200 R 50 50 0 0 P
+X GND_2 7 600 -900 200 U 50 50 0 0 P
+X OUT 6 1200 0 200 L 50 50 0 0 P
+X SNS 5 1200 -100 200 L 50 50 0 0 P
+X PG 4 1200 -200 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 1000 100 1000 -700 200 -700 200 100 N
+ENDDRAW
+ENDDEF
+#
+#SamacSys ECAD Model CRCW12105K10FKEA
+#/602820/475221/2.50/2/0/Resistor
+DEF CRCW12105K10FKEA R 0 30 Y Y 1 F N
+F0 "R" 550 250 50 H V L CNN
+F1 "CRCW12105K10FKEA" 550 150 50 H V L CNN
+F2 "RESC3225X60N" 550 50 50 H I L CNN
+F3 "" 550 -50 50 H I L CNN
+F4 "RESISTOR, 1210 5.1K Ohm +/-1% 0.5W" 550 -150 50 H I L CNN "Description"
+F5 "0.6" 550 -250 50 H I L CNN "Height"
+F6 "Vishay" 550 -350 50 H I L CNN "Manufacturer_Name"
+F7 "CRCW12105K10FKEA" 550 -450 50 H I L CNN "Manufacturer_Part_Number"
+F8 "" 550 -550 50 H I L CNN "Mouser Part Number"
+F9 "" 550 -650 50 H I L CNN "Mouser Price/Stock"
+F10 "" 550 -750 50 H I L CNN "Arrow Part Number"
+F11 "" 550 -850 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X ~ 1 0 0 200 R 50 50 0 0 P
+X ~ 2 700 0 200 L 50 50 0 0 P
+P 5 0 1 6 200 50 500 50 500 -50 200 -50 200 50 N
+ENDDRAW
+ENDDEF
+#
+#SamacSys ECAD Model CRCW12101K00FKTA
+#/1028123/475221/2.50/2/5/Resistor
+DEF CRCW12101K00FKTA R 0 30 Y Y 1 F N
+F0 "R" 550 250 50 H V L CNN
+F1 "CRCW12101K00FKTA" 550 150 50 H V L CNN
+F2 "RESC3225X60N" 550 50 50 H I L CNN
+F3 "http://componentsearchengine.com/Datasheets/1/CRCW12101K00FKTA.pdf" 550 -50 50 H I L CNN
+F4 "Thick Film Resistors - SMD 1/2watt 1Kohms 1%" 550 -150 50 H I L CNN "Description"
+F5 "0.6" 550 -250 50 H I L CNN "Height"
+F6 "Vishay" 550 -350 50 H I L CNN "Manufacturer_Name"
+F7 "CRCW12101K00FKTA" 550 -450 50 H I L CNN "Manufacturer_Part_Number"
+F8 "71-CRCW1210-1.0K" 550 -550 50 H I L CNN "Mouser Part Number"
+F9 "https://www.mouser.co.uk/ProductDetail/Vishay-Dale/CRCW12101K00FKTA?qs=9VyI4qLX4NR85PQdEOy0Lg%3D%3D" 550 -650 50 H I L CNN "Mouser Price/Stock"
+F10 "" 550 -750 50 H I L CNN "Arrow Part Number"
+F11 "" 550 -850 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X ~ 1 0 0 200 R 50 50 0 0 P
+X ~ 2 700 0 200 L 50 50 0 0 P
+P 5 0 1 6 200 50 500 50 500 -50 200 -50 200 50 N
+ENDDRAW
+ENDDEF
+#
+#SamacSys ECAD Model CRCW1210100KFKEA
+#/602724/475221/2.50/2/0/Resistor
+DEF CRCW1210100KFKEA R 0 30 Y Y 1 F N
+F0 "R" 550 250 50 H V L CNN
+F1 "CRCW1210100KFKEA" 550 150 50 H V L CNN
+F2 "RESC3225X60N" 550 50 50 H I L CNN
+F3 "" 550 -50 50 H I L CNN
+F4 "RESISTOR, 1210 100K Ohm +/-1% 0.5W" 550 -150 50 H I L CNN "Description"
+F5 "0.6" 550 -250 50 H I L CNN "Height"
+F6 "Vishay" 550 -350 50 H I L CNN "Manufacturer_Name"
+F7 "CRCW1210100KFKEA" 550 -450 50 H I L CNN "Manufacturer_Part_Number"
+F8 "71-CRCW1210-100K-E3" 550 -550 50 H I L CNN "Mouser Part Number"
+F9 "https://www.mouser.co.uk/ProductDetail/Vishay-Dale/CRCW1210100KFKEA?qs=%252BG202Oif1TFK3m4P96S5MA%3D%3D" 550 -650 50 H I L CNN "Mouser Price/Stock"
+F10 "CRCW1210100KFKEA" 550 -750 50 H I L CNN "Arrow Part Number"
+F11 "https://www.arrow.com/en/products/crcw1210100kfkea/vishay?region=nac" 550 -850 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X ~ 1 0 0 200 R 50 50 0 0 P
+X ~ 2 700 0 200 L 50 50 0 0 P
+P 5 0 1 6 200 50 500 50 500 -50 200 -50 200 50 N
+ENDDRAW
+ENDDEF
+#
+#SamacSys ECAD Model CRCW121010K0FKEA
+#/186323/475221/2.50/2/5/Resistor
+DEF CRCW121010K0FKEA R 0 30 Y Y 1 F N
+F0 "R" 550 250 50 H V L CNN
+F1 "CRCW121010K0FKEA" 550 150 50 H V L CNN
+F2 "RESC3225X60N" 550 50 50 H I L CNN
+F3 "" 550 -50 50 H I L CNN
+F4 "Vishay CRCW Series Thick Film Surface Mount Resistor 1210 Case 10k +/-1% 0.33W +/-100ppm/C" 550 -150 50 H I L CNN "Description"
+F5 "0.6" 550 -250 50 H I L CNN "Height"
+F6 "Vishay" 550 -350 50 H I L CNN "Manufacturer_Name"
+F7 "CRCW121010K0FKEA" 550 -450 50 H I L CNN "Manufacturer_Part_Number"
+F8 "71-CRCW1210-10K-E3" 550 -550 50 H I L CNN "Mouser Part Number"
+F9 "https://www.mouser.co.uk/ProductDetail/Vishay-Dale/CRCW121010K0FKEA?qs=%252BG202Oif1TGDkj5WRkDodg%3D%3D" 550 -650 50 H I L CNN "Mouser Price/Stock"
+F10 "CRCW121010K0FKEA" 550 -750 50 H I L CNN "Arrow Part Number"
+F11 "https://www.arrow.com/en/products/crcw121010k0fkea/vishay?utm_currency=USD&region=nac" 550 -850 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X ~ 1 0 0 200 R 50 50 0 0 P
+X ~ 2 700 0 200 L 50 50 0 0 P
+P 5 0 1 6 200 50 500 50 500 -50 200 -50 200 50 N
+ENDDRAW
+ENDDEF
+#
+#SamacSys ECAD Model LQW18AS2N0J00D
+#/3453788/475221/2.50/2/2/Inductor
+DEF LQW18AS2N0J00D L 0 30 Y Y 1 F N
+F0 "L" 650 250 50 H V L CNN
+F1 "LQW18AS2N0J00D" 650 150 50 H V L CNN
+F2 "LQW18AS10NG0CD" 650 50 50 H I L CNN
+F3 "https://psearch.en.murata.com/inductor/product/LQW18AS2N0J00%23.html" 650 -50 50 H I L CNN
+F4 "LQW18AS_00 Series Inductor 2.0nH +/-5% 0603 (1608)" 650 -150 50 H I L CNN "Description"
+F5 "1" 650 -250 50 H I L CNN "Height"
+F6 "Murata Electronics" 650 -350 50 H I L CNN "Manufacturer_Name"
+F7 "LQW18AS2N0J00D" 650 -450 50 H I L CNN "Manufacturer_Part_Number"
+F8 "81-LQW18AS2N0J00D" 650 -550 50 H I L CNN "Mouser Part Number"
+F9 "https://www.mouser.co.uk/ProductDetail/Murata-Electronics/LQW18AS2N0J00D?qs=xZ%2FP%252Ba9zWqakkU1%252BUaLiyA%3D%3D" 650 -650 50 H I L CNN "Mouser Price/Stock"
+F10 "" 650 -750 50 H I L CNN "Arrow Part Number"
+F11 "" 650 -850 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X ~ 1 0 0 200 R 50 50 0 0 P
+X ~ 2 800 0 200 L 50 50 0 0 P
+A 250 -2 50 1777 -23 0 1 6 N 300 0 200 0
+A 350 -2 50 1777 -23 0 1 6 N 400 0 300 0
+A 450 -2 50 1777 -23 0 1 6 N 500 0 400 0
+A 550 -2 50 1777 -23 0 1 6 N 600 0 500 0
+ENDDRAW
+ENDDEF
+#
+#SamacSys ECAD Model LQW18AN24NJ00D
+#/409343/475221/2.50/2/2/Inductor
+DEF LQW18AN24NJ00D L 0 30 Y Y 1 F N
+F0 "L" 650 250 50 H V L CNN
+F1 "LQW18AN24NJ00D" 650 150 50 H V L CNN
+F2 "LQW18AS10NG0CD" 650 50 50 H I L CNN
+F3 "https://psearch.en.murata.com/inductor/product/LQW18AN24NJ00%23.html" 650 -50 50 H I L CNN
+F4 "Murata LQQ18A Series Wire-wound SMD Inductor with a Ferrite Core, 0.024 uH +/-5% 500mA Idc Q:40" 650 -150 50 H I L CNN "Description"
+F5 "1" 650 -250 50 H I L CNN "Height"
+F6 "Murata Electronics" 650 -350 50 H I L CNN "Manufacturer_Name"
+F7 "LQW18AN24NJ00D" 650 -450 50 H I L CNN "Manufacturer_Part_Number"
+F8 "81-LQW18AN24NJ00D" 650 -550 50 H I L CNN "Mouser Part Number"
+F9 "https://www.mouser.com/Search/Refine.aspx?Keyword=81-LQW18AN24NJ00D" 650 -650 50 H I L CNN "Mouser Price/Stock"
+F10 "LQW18AN24NJ00D" 650 -750 50 H I L CNN "Arrow Part Number"
+F11 "https://www.arrow.com/en/products/lqw18an24nj00d/murata-manufacturing" 650 -850 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X ~ 1 0 0 200 R 50 50 0 0 P
+X ~ 2 800 0 200 L 50 50 0 0 P
+A 250 -2 50 1777 -23 0 1 6 N 300 0 200 0
+A 350 -2 50 1777 -23 0 1 6 N 400 0 300 0
+A 450 -2 50 1777 -23 0 1 6 N 500 0 400 0
+A 550 -2 50 1777 -23 0 1 6 N 600 0 500 0
+ENDDRAW
+ENDDEF
+#
+#SamacSys ECAD Model CRCW12104K70FKEA
+#/602807/475221/2.50/2/0/Resistor
+DEF CRCW12104K70FKEA R 0 30 Y Y 1 F N
+F0 "R" 550 250 50 H V L CNN
+F1 "CRCW12104K70FKEA" 550 150 50 H V L CNN
+F2 "RESC3225X60N" 550 50 50 H I L CNN
+F3 "" 550 -50 50 H I L CNN
+F4 "RESISTOR, 1210 4.7K Ohm +/-1% 0.33W" 550 -150 50 H I L CNN "Description"
+F5 "0.6" 550 -250 50 H I L CNN "Height"
+F6 "Vishay" 550 -350 50 H I L CNN "Manufacturer_Name"
+F7 "CRCW12104K70FKEA" 550 -450 50 H I L CNN "Manufacturer_Part_Number"
+F8 "71-CRCW1210-4.7K-E3" 550 -550 50 H I L CNN "Mouser Part Number"
+F9 "https://www.mouser.co.uk/ProductDetail/Vishay-Dale/CRCW12104K70FKEA?qs=%2FqQFlUriJiyxqhcGPnY%252BUg%3D%3D" 550 -650 50 H I L CNN "Mouser Price/Stock"
+F10 "CRCW12104K70FKEA" 550 -750 50 H I L CNN "Arrow Part Number"
+F11 "https://www.arrow.com/en/products/crcw12104k70fkea/vishay" 550 -850 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X ~ 1 0 0 200 R 50 50 0 0 P
+X ~ 2 700 0 200 L 50 50 0 0 P
+P 5 0 1 6 200 50 500 50 500 -50 200 -50 200 50 N
+ENDDRAW
+ENDDEF
+#
+#SamacSys ECAD Model 219320-0001
+#/18515975/475221/2.50/20/3/Connector
+DEF 219320-0001 J 0 30 Y Y 1 F N
+F0 "J" 1150 300 50 H V L CNN
+F1 "219320-0001" 1150 200 50 H V L CNN
+F2 "2193200001" 1150 100 50 H I L CNN
+F3 "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/salesdrawingpdf/219/219320/2193200001_sd.pdf?inline" 1150 0 50 H I L CNN
+F4 "Universal Serial Bus (USB) Shielded I/O Receptacle, Type C, Vertical, Surface Mount, Height 8.8mm, 16 Circuits, Gold (Au) Flash Plating" 1150 -100 50 H I L CNN "Description"
+F5 "9.05" 1150 -200 50 H I L CNN "Height"
+F6 "Molex" 1150 -300 50 H I L CNN "Manufacturer_Name"
+F7 "219320-0001" 1150 -400 50 H I L CNN "Manufacturer_Part_Number"
+F8 "538-219320-0001" 1150 -500 50 H I L CNN "Mouser Part Number"
+F9 "https://www.mouser.co.uk/ProductDetail/Molex/219320-0001?qs=rQFj71Wb1eXha8qVBIXu3A%3D%3D" 1150 -600 50 H I L CNN "Mouser Price/Stock"
+F10 "" 1150 -700 50 H I L CNN "Arrow Part Number"
+F11 "" 1150 -800 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X GND_1 A1 0 0 200 R 50 50 0 0 P
+X VBUS_1 A4 0 -100 200 R 50 50 0 0 P
+X CC1 A5 0 -200 200 R 50 50 0 0 P
+X [DP1 A6 0 -300 200 R 50 50 0 0 P
+X DN1 A7 0 -400 200 R 50 50 0 0 P
+X SBU1 A8 0 -500 200 R 50 50 0 0 P
+X VBUS_2 A9 0 -600 200 R 50 50 0 0 P
+X GND_2 A12 0 -700 200 R 50 50 0 0 P
+X GND_3 B1 0 -800 200 R 50 50 0 0 P
+X VBUS_3 B4 0 -900 200 R 50 50 0 0 P
+X CC2 B5 1300 0 200 L 50 50 0 0 P
+X DP2 B6 1300 -100 200 L 50 50 0 0 P
+X DN2 B7 1300 -200 200 L 50 50 0 0 P
+X SBU2 B8 1300 -300 200 L 50 50 0 0 P
+X VBUS_4 B9 1300 -400 200 L 50 50 0 0 P
+X GND_4 B12 1300 -500 200 L 50 50 0 0 P
+X MH3 MH3 1300 -600 200 L 50 50 0 0 P
+X MH4 MH4 1300 -700 200 L 50 50 0 0 P
+X MH5 MH5 1300 -800 200 L 50 50 0 0 P
+X MH6 MH6 1300 -900 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 1100 100 1100 -1000 200 -1000 200 100 N
+ENDDRAW
+ENDDEF
+#
+#End Library

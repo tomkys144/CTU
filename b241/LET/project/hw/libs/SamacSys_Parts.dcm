@@ -1,0 +1,99 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP NE555DR
+D Single Precision Timer
+K
+F http://www.ti.com/lit/ds/symlink/ne555.pdf
+$ENDCMP
+#
+$CMP ABM11W-40.0000MHZ-7-D1X-T3
+D IoT OPTIMIZED LOW PROFILE QUARTZ CRYSTAL
+K
+F https://abracon.com/Resonators/ABM11W.pdf
+$ENDCMP
+#
+$CMP ECS-.327-12.5-34B-C-TR
+D Crystal 0.032768MHz +/-10ppm (Tol) 12.5pF Flexural 70000Ohm 2-Pin Ultra Mini-CSMD T/R
+K
+F https://componentsearchengine.com/Datasheets/2/ECS-.327-12.5-34B-C-TR.pdf
+$ENDCMP
+#
+$CMP USBLC62P6
+D STMICROELECTRONICS - USBLC62P6 - ESD Protection Device, 17 V, SOT-666, 6 Pins, 1.1 V, USBLC Series
+K
+F https://datasheet.lcsc.com/szlcsc/STMicroelectronics-USBLC6-2P6_C15999.pdf
+$ENDCMP
+#
+$CMP ESD7002WTT1G
+D ESD Suppressors / TVS Diodes 2LINE HIGHSPEED PROTECTION
+K
+F http://www.onsemi.com/pub/Collateral/ESD7002-D.PDF
+$ENDCMP
+#
+$CMP 1SMB5934BT3G
+D ON Semiconductor 1SMB5934BT3G Zener Diode, 24V 5% 0.55 W SMT 2-Pin SMB
+K
+F http://www.onsemi.com/pub/Collateral/1SMB5913BT3-D.PDF
+$ENDCMP
+#
+$CMP MBRAF260T3G
+D ON SEMICONDUCTOR - MBRAF260T3G - Schottky Rectifier, 60 V, 2 A, Single, SMAF, 2 Pins, 630 mV
+K
+F https://componentsearchengine.com/Datasheets/2/MBRAF260T3G.pdf
+$ENDCMP
+#
+$CMP NCP187AMT330TAG
+D LDO Voltage Regulators 1.2A 3.3V Active discharge
+K
+F https://componentsearchengine.com/Datasheets/1/NCP187AMT330TAG.pdf
+$ENDCMP
+#
+$CMP CRCW12105K10FKEA
+D RESISTOR, 1210 5.1K Ohm +/-1% 0.5W
+K
+F 
+$ENDCMP
+#
+$CMP CRCW12101K00FKTA
+D Thick Film Resistors - SMD 1/2watt 1Kohms 1%
+K
+F http://componentsearchengine.com/Datasheets/1/CRCW12101K00FKTA.pdf
+$ENDCMP
+#
+$CMP CRCW1210100KFKEA
+D RESISTOR, 1210 100K Ohm +/-1% 0.5W
+K
+F 
+$ENDCMP
+#
+$CMP CRCW121010K0FKEA
+D Vishay CRCW Series Thick Film Surface Mount Resistor 1210 Case 10k +/-1% 0.33W +/-100ppm/C
+K
+F 
+$ENDCMP
+#
+$CMP LQW18AS2N0J00D
+D LQW18AS_00 Series Inductor 2.0nH +/-5% 0603 (1608)
+K
+F https://psearch.en.murata.com/inductor/product/LQW18AS2N0J00%23.html
+$ENDCMP
+#
+$CMP LQW18AN24NJ00D
+D Murata LQQ18A Series Wire-wound SMD Inductor with a Ferrite Core, 0.024 uH +/-5% 500mA Idc Q:40
+K
+F https://psearch.en.murata.com/inductor/product/LQW18AN24NJ00%23.html
+$ENDCMP
+#
+$CMP CRCW12104K70FKEA
+D RESISTOR, 1210 4.7K Ohm +/-1% 0.33W
+K
+F 
+$ENDCMP
+#
+$CMP 219320-0001
+D Universal Serial Bus (USB) Shielded I/O Receptacle, Type C, Vertical, Surface Mount, Height 8.8mm, 16 Circuits, Gold (Au) Flash Plating
+K
+F https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/salesdrawingpdf/219/219320/2193200001_sd.pdf?inline
+$ENDCMP
+#
+#End Doc Library
