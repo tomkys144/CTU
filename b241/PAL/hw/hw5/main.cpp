@@ -1,3 +1,4 @@
+#include <array>
 #include <iostream>
 #include <math.h>
 #include <numeric>
@@ -7,27 +8,54 @@
 #include <set>
 #include <tuple>
 
+#define MAXPRIME    503
+#define MAXMOD      2000000000000000000
+
 using namespace std;
 
-int input(long long int numbers[], int N);
+constexpr bool isPrime(size_t n) noexcept {
+    if (n <= 1) return false;
+    for (size_t i = 2; i * i <= n; i++) if (n % i == 0) return false;
+    return true;
+}
 
-int findPrimes(set<int> &primes, int Pmax);
+constexpr unsigned int primeAtIndex(size_t i) noexcept {
+    size_t k{3};
+    for (size_t counter{}; counter < i; ++k)
+        if (isPrime(k)) ++counter;
+    return (k - 1) * (k - 1);
+}
 
-int findMod(long long int numbers[], int N);
+template<typename Generator, size_t ... Indices>
+constexpr array<unsigned int, sizeof...(Indices)> generateArrayHelper(Generator generator,
+                                                                      std::index_sequence<Indices...>) {
+    return array<unsigned int, sizeof...(Indices)>{generator(Indices)...};
+}
 
-int findMods(set<int> &primes, set<long long int> &mods, long long int Mmax);
+template<size_t Size, typename Generator>
+constexpr auto generateArray(Generator generator) {
+    return generateArrayHelper(generator, std::make_index_sequence<Size>());
+}
 
-long long int findMultiplier(long long int numbers[], long long int M);
+int input(long long numbers[], int N);
 
-long long int findIncrement(long long int numbers[], long long int M, long long int A);
+tuple<long long, long long, long long> findMods(set<long long> &mods, long long numbers[], int Pmax, long long Mmax,
+                                                long long maxN, int N, int idx, long long M);
 
-bool verify(long long int numbers[], long long int M, long long int A, long long int C, int N, long long int Mmax);
+long long findMultiplier(long long numbers[], long long M);
 
-long long int modInverse(long long int a, long long int m);
+long long findIncrement(long long numbers[], long long M, long long A);
+
+bool verify(long long numbers[], long long M, long long A, long long C, int N, long long Mmax);
+
+long long modInverse(long long a, long long m);
+
+
+constexpr array<unsigned int, MAXPRIME> Primes = generateArray<MAXPRIME>(primeAtIndex);
 
 int main() {
     int Pmax, N;
-    long long int Mmax;
+    long long Mmax;
 
     if (scanf("%i %lli %i", &Pmax, &Mmax, &N) != 3) return EXIT_FAILURE;
 
@@ -35,47 +63,34 @@ int main() {
     if (Mmax < 25 || Mmax > 2 * pow(10, 18)) return EXIT_FAILURE;
     if (N < 10 || N > 30) return EXIT_FAILURE;
 
-    long long int numbers[N];
+    long long numbers[N];
 
     if (input(numbers, N) != EXIT_SUCCESS) return EXIT_FAILURE;
 
-    set<int> primes;
+    long long maxN = 0;
+    for (long long number: numbers) {
+        if (number > maxN)
+            maxN = number;
+    }
 
-    findPrimes(primes, Pmax);
+    set<long long> mods;
 
-    // set<long long int> mods;
+    long long A, C, M;
 
-    // findMods(primes, mods, Mmax);
+    auto res = findMods(mods, numbers, Pmax, Mmax, maxN, N, 0, 1);
 
-    long long int A, C, M;
-    // bool finished = false;
-    // for (long long int m: mods) {
-    //     long long int a = findMultiplier(numbers, m);
-    //     long long int c = findIncrement(numbers, m, a);
-    //
-    //     if (verify(numbers, m, a, c, N, Mmax)) {
-    //         A = a;
-    //         C = c;
-    //         M = m;
-    //
-    //         finished = true;
-    //
-    //         break;
-    //     }
-    // }
+    A = get<0>(res), C = get<1>(res), M = get<2>(res);
 
-    // if (!finished) return EXIT_FAILURE;
-
-    M = findMod(numbers, N);
-    A = findMultiplier(numbers, M);
-    C = findIncrement(numbers, M, A);
+    //    M = findMod(numbers, N);
+    //    A = findMultiplier(numbers, M);
+    //    C = findIncrement(numbers, M, A);
 
     printf("%lli %lli %lli\n", A, C, M);
 
     return EXIT_SUCCESS;
 }
 
-int input(long long int numbers[], int N) {
+int input(long long numbers[], int N) {
     for (int i = 0; i < N; i++) {
         if (scanf("%lli", &numbers[i]) != 1) return EXIT_FAILURE;
     }
@@ -83,113 +98,88 @@ int input(long long int numbers[], int N) {
     return EXIT_SUCCESS;
 }
 
-int findPrimes(set<int> &primes, int Pmax) {
-    vector<bool> isPrime(Pmax + 1, true);
+tuple<long long, long long, long long> findMods(set<long long> &mods, long long numbers[], int Pmax, long long Mmax,
+                                                long long maxN, int N, int idx, long long M) {
+    if (Primes[idx] > Pmax * Pmax)
+        return make_tuple(-1, -1, -1);
 
-    isPrime[0] = isPrime[1] = false;
+    if (M > maxN) {
+        long long a = findMultiplier(numbers, M);
+        long long c = findIncrement(numbers, M, a);
 
-    for (int i = 2; i * i <= Pmax; i++) {
-        if (isPrime[i]) {
-            for (int j = i * i; j <= Pmax; j += i) {
-                isPrime[j] = false;
-            }
+        if (verify(numbers, M, a, c, N, Mmax)) {
+            return make_tuple(a, c, M);
         }
     }
 
-    for (int i = 5; i <= Pmax; i++) {
-        if (isPrime[i]) {
-            primes.insert(i);
-        }
+    auto res = findMods(mods, numbers, Pmax, Mmax, maxN, N, idx + 1, M);
+    if (get<0>(res) != -1) return res;
+
+    if (M <= Mmax / Primes[idx]) {
+        res = findMods(mods, numbers, Pmax, Mmax, maxN, N, idx + 1, M * Primes[idx]);
+        if (get<0>(res) != -1) return res;
     }
 
-    return EXIT_SUCCESS;
+    return make_tuple(-1, -1, -1);
 }
 
-int findMod(long long int numbers[], int N) {
-    long long int diffs[N - 1];
-    for (int i = 0; i < N - 1; i++) {
-        diffs[i] = numbers[i + 1] - numbers[i];
-    }
+long long findMultiplier(long long numbers[], long long M) {
+    long long diff1 = (numbers[2] - numbers[1] + M) % M;
+    long long diff2 = (numbers[1] - numbers[0] + M) % M;
+    long long diff2Inverse = modInverse(diff2, M);
+    long long A = ((__int128)diff1 * diff2Inverse) % M;
 
-    long long int zeros[N - 3];
-    for (int i = 0; i < N - 3; i++) {
-        zeros[i] = (diffs[i + 2] * diffs[i]) - (diffs[i + 1] * diffs[i + 1]);
-    }
-
-    long long int gcdAll = zeros[0];
-    for (int i = 1; i < N - 3; i++) {
-        gcdAll =  __gcd(gcdAll, zeros[i]);
-    }
-    long long int M = abs(gcdAll);
-    return M;
-}
-
-int findMods(set<int> &primes, set<long long int> &mods, long long int Mmax) {
-    vector<long long int> currentMods;
-
-    for (int prime: primes) {
-        currentMods.push_back(prime);
-
-        for (const int e: primes) {
-            if (e == prime) continue;
-
-            const size_t cmSize = currentMods.size();
-
-            for (int i = 0; i < cmSize; i++) {
-                long long int p = e * currentMods[i];
-                currentMods.push_back(p);
-            }
-        }
-
-        for (long long int m: currentMods) {
-            if (m * m <= Mmax && m * m > 0) {
-                mods.insert(m * m);
-            }
-        }
-
-        currentMods.clear();
-    }
-
-    return EXIT_SUCCESS;
-}
-
-long long int findMultiplier(long long int numbers[], long long int M) {
-    long long int A = (numbers[2] - numbers[1]) * modInverse(numbers[1] - numbers[0], M) % M;
-    if (A < 0) A += M;
-    if (A > M) A -= M;
+    A = (A + M) % M;
     return A;
 }
 
-long long int findIncrement(long long int numbers[], long long int M, long long int A) {
-    long long int C = (numbers[1] - numbers[0] * A) % M;
-    if (C < 1) C += M;
-    if (C > M) C -= M;
+long long findIncrement(long long numbers[], long long M, long long A) {
+
+    long long C = (numbers[1] - ((__int128) numbers[0] * A % M)) % M;
+
+    C = (C + M) % M;
     return C;
 }
 
-bool verify(long long int numbers[], long long int M, long long int A, long long int C, int N, long long int Mmax) {
+bool verify(long long numbers[], long long M, long long A, long long C, int N, long long Mmax) {
     if (M < 1 || M > Mmax) return false;
     if (A < 1 || A >= M) return false;
     if (C < 1 || C >= M) return false;
 
     for (int i = 1; i < N; i++) {
-        long long int x = (A * numbers[i - 1] + C) % M;
+        long long x = ((__int128)A * numbers[i - 1] + C) % M;
         if (numbers[i] != x) return false;
     }
     return true;
 }
 
-tuple<long long int, long long int, long long int> egcd(long long int a, long long int b) {
-    if (a == 0) return {b, 0, 1};
+long long egcd(long long a, long long b, long long *x, long long *y) {
+    if (a == 0) {
+        *x = 0;
+        *y = 1;
+        return b;
+    }
 
-    auto [g, x, y] = egcd(b % a, a);
+    long long x1, y1;
+    long long gcd = egcd(b % a, a, &x1, &y1);
 
-    return {g, y - (b / a) * x, x};
+    *x = y1 - (b / a) * x1;
+    *y = x1;
+
+    return gcd;
 }
 
-long long int modInverse(long long int a, long long int m) {
-    auto [g, x, y] = egcd(a, m);
-    if (g == 1) return x % m;
+long long modInverse(long long a, long long m) {
+    long long x, y;
 
-    return NULL;
+    a = (a + m) % m;
+
+    long long g = egcd(a, m, &x, &y);
+
+    if (g != 1)
+        return -1;
+
+    long long res = (x % m + m) % m;
+
+    return res;
 }

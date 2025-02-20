@@ -5,13 +5,26 @@
 # 1 "/usr/include/stdc-predef.h" 1 3 4
 # 0 "<command-line>" 2
 # 1 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp"
-# 1 "/usr/include/c++/14/iostream" 1 3
-# 36 "/usr/include/c++/14/iostream" 3
+# 1 "/usr/include/c++/14/array" 1 3
+# 32 "/usr/include/c++/14/array" 3
        
-# 37 "/usr/include/c++/14/iostream" 3
+# 33 "/usr/include/c++/14/array" 3
 
-# 1 "/usr/include/c++/14/bits/requires_hosted.h" 1 3
-# 31 "/usr/include/c++/14/bits/requires_hosted.h" 3
+
+
+
+
+# 1 "/usr/include/c++/14/compare" 1 3
+# 33 "/usr/include/c++/14/compare" 3
+       
+# 34 "/usr/include/c++/14/compare" 3
+
+
+# 1 "/usr/include/c++/14/bits/version.h" 1 3
+# 47 "/usr/include/c++/14/bits/version.h" 3
+       
+# 48 "/usr/include/c++/14/bits/version.h" 3
+
 # 1 "/usr/include/c++/14/x86_64-suse-linux/bits/c++config.h" 1 3
 
 
@@ -140,1976 +153,23 @@ namespace __gnu_cxx
 # 2731 "/usr/include/c++/14/x86_64-suse-linux/bits/c++config.h" 3
 # 1 "/usr/include/c++/14/pstl/pstl_config.h" 1 3
 # 2732 "/usr/include/c++/14/x86_64-suse-linux/bits/c++config.h" 2 3
-# 32 "/usr/include/c++/14/bits/requires_hosted.h" 2 3
-# 39 "/usr/include/c++/14/iostream" 2 3
+# 50 "/usr/include/c++/14/bits/version.h" 2 3
+# 37 "/usr/include/c++/14/compare" 2 3
 
 
-# 1 "/usr/include/c++/14/ostream" 1 3
-# 36 "/usr/include/c++/14/ostream" 3
+
+# 1 "/usr/include/c++/14/concepts" 1 3
+# 33 "/usr/include/c++/14/concepts" 3
        
-# 37 "/usr/include/c++/14/ostream" 3
-
-
-
-# 1 "/usr/include/c++/14/ios" 1 3
-# 36 "/usr/include/c++/14/ios" 3
-       
-# 37 "/usr/include/c++/14/ios" 3
-
-
-
-# 1 "/usr/include/c++/14/iosfwd" 1 3
-# 36 "/usr/include/c++/14/iosfwd" 3
-       
-# 37 "/usr/include/c++/14/iosfwd" 3
-
-
-
-
-# 1 "/usr/include/c++/14/bits/stringfwd.h" 1 3
-# 37 "/usr/include/c++/14/bits/stringfwd.h" 3
-       
-# 38 "/usr/include/c++/14/bits/stringfwd.h" 3
-
-
-# 1 "/usr/include/c++/14/bits/memoryfwd.h" 1 3
-# 46 "/usr/include/c++/14/bits/memoryfwd.h" 3
-       
-# 47 "/usr/include/c++/14/bits/memoryfwd.h" 3
-
-
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-# 64 "/usr/include/c++/14/bits/memoryfwd.h" 3
-  template<typename>
-    class allocator;
-
-  template<>
-    class allocator<void>;
-
-
-
-  template<typename, typename>
-    struct uses_allocator;
-
-  template<typename>
-    struct allocator_traits;
-
-
-
-
-
-}
-# 41 "/usr/include/c++/14/bits/stringfwd.h" 2 3
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-
-
-
-
-
-
-
-  template<class _CharT>
-    struct char_traits;
-
-  template<> struct char_traits<char>;
-
-  template<> struct char_traits<wchar_t>;
-
-
-  template<> struct char_traits<char8_t>;
-
-
-
-  template<> struct char_traits<char16_t>;
-  template<> struct char_traits<char32_t>;
-
-
-namespace __cxx11 {
-
-  template<typename _CharT, typename _Traits = char_traits<_CharT>,
-           typename _Alloc = allocator<_CharT> >
-    class basic_string;
-
-}
-
-
-  typedef basic_string<char> string;
-
-
-  typedef basic_string<wchar_t> wstring;
-
-
-
-  typedef basic_string<char8_t> u8string;
-
-
-
-
-  typedef basic_string<char16_t> u16string;
-
-
-  typedef basic_string<char32_t> u32string;
-
-
-
-
-
-}
-# 42 "/usr/include/c++/14/iosfwd" 2 3
-# 1 "/usr/include/c++/14/bits/postypes.h" 1 3
-# 38 "/usr/include/c++/14/bits/postypes.h" 3
-       
-# 39 "/usr/include/c++/14/bits/postypes.h" 3
-
-# 1 "/usr/include/c++/14/cwchar" 1 3
-# 39 "/usr/include/c++/14/cwchar" 3
-       
-# 40 "/usr/include/c++/14/cwchar" 3
-
-
-
-
-# 1 "/usr/include/wchar.h" 1 3 4
-# 27 "/usr/include/wchar.h" 3 4
-# 1 "/usr/include/bits/libc-header-start.h" 1 3 4
-# 28 "/usr/include/wchar.h" 2 3 4
-
-
-# 1 "/usr/include/bits/floatn.h" 1 3 4
-# 119 "/usr/include/bits/floatn.h" 3 4
-# 1 "/usr/include/bits/floatn-common.h" 1 3 4
-# 24 "/usr/include/bits/floatn-common.h" 3 4
-# 1 "/usr/include/bits/long-double.h" 1 3 4
-# 25 "/usr/include/bits/floatn-common.h" 2 3 4
-# 120 "/usr/include/bits/floatn.h" 2 3 4
-# 31 "/usr/include/wchar.h" 2 3 4
-
-
-
-
-# 1 "/usr/lib64/gcc/x86_64-suse-linux/14/include/stddef.h" 1 3 4
-# 214 "/usr/lib64/gcc/x86_64-suse-linux/14/include/stddef.h" 3 4
-typedef long unsigned int size_t;
-# 36 "/usr/include/wchar.h" 2 3 4
-
-
-# 1 "/usr/lib64/gcc/x86_64-suse-linux/14/include/stdarg.h" 1 3 4
-# 40 "/usr/lib64/gcc/x86_64-suse-linux/14/include/stdarg.h" 3 4
-typedef __builtin_va_list __gnuc_va_list;
-# 39 "/usr/include/wchar.h" 2 3 4
-
-
-
-
-typedef __gnuc_va_list va_list;
-
-
-
-
-
-
-
-# 1 "/usr/include/bits/wchar.h" 1 3 4
-# 52 "/usr/include/wchar.h" 2 3 4
-# 1 "/usr/include/bits/types/wint_t.h" 1 3 4
-# 20 "/usr/include/bits/types/wint_t.h" 3 4
-typedef unsigned int wint_t;
-# 53 "/usr/include/wchar.h" 2 3 4
-# 1 "/usr/include/bits/types/mbstate_t.h" 1 3 4
-
-
-
-# 1 "/usr/include/bits/types/__mbstate_t.h" 1 3 4
-# 13 "/usr/include/bits/types/__mbstate_t.h" 3 4
-typedef struct
-{
-  int __count;
-  union
-  {
-    unsigned int __wch;
-    char __wchb[4];
-  } __value;
-} __mbstate_t;
-# 5 "/usr/include/bits/types/mbstate_t.h" 2 3 4
-
-typedef __mbstate_t mbstate_t;
-# 54 "/usr/include/wchar.h" 2 3 4
-# 1 "/usr/include/bits/types/__FILE.h" 1 3 4
-
-
-
-struct _IO_FILE;
-typedef struct _IO_FILE __FILE;
-# 55 "/usr/include/wchar.h" 2 3 4
-
-
-# 1 "/usr/include/bits/types/FILE.h" 1 3 4
-
-
-
-struct _IO_FILE;
-
-
-typedef struct _IO_FILE FILE;
-# 58 "/usr/include/wchar.h" 2 3 4
-
-
-# 1 "/usr/include/bits/types/locale_t.h" 1 3 4
-# 22 "/usr/include/bits/types/locale_t.h" 3 4
-# 1 "/usr/include/bits/types/__locale_t.h" 1 3 4
-# 27 "/usr/include/bits/types/__locale_t.h" 3 4
-struct __locale_struct
-{
-
-  struct __locale_data *__locales[13];
-
-
-  const unsigned short int *__ctype_b;
-  const int *__ctype_tolower;
-  const int *__ctype_toupper;
-
-
-  const char *__names[13];
-};
-
-typedef struct __locale_struct *__locale_t;
-# 23 "/usr/include/bits/types/locale_t.h" 2 3 4
-
-typedef __locale_t locale_t;
-# 61 "/usr/include/wchar.h" 2 3 4
-# 90 "/usr/include/wchar.h" 3 4
-extern "C" {
-
-
-
-struct tm;
-
-
-
-extern wchar_t *wcscpy (wchar_t *__restrict __dest,
-   const wchar_t *__restrict __src)
-     noexcept (true) __attribute__ ((__nonnull__ (1, 2)));
-
-
-extern wchar_t *wcsncpy (wchar_t *__restrict __dest,
-    const wchar_t *__restrict __src, size_t __n)
-     noexcept (true) __attribute__ ((__nonnull__ (1, 2)));
-
-
-
-extern size_t wcslcpy (wchar_t *__restrict __dest,
-         const wchar_t *__restrict __src, size_t __n)
-  noexcept (true) __attribute__ ((__nonnull__ (1, 2))) __attribute__ ((__access__ (__write_only__, 1, 3)));
-
-
-
-extern size_t wcslcat (wchar_t *__restrict __dest,
-         const wchar_t *__restrict __src, size_t __n)
-  noexcept (true) __attribute__ ((__nonnull__ (1, 2))) __attribute__ ((__access__ (__read_write__, 1, 3)));
-
-
-
-extern wchar_t *wcscat (wchar_t *__restrict __dest,
-   const wchar_t *__restrict __src)
-     noexcept (true) __attribute__ ((__nonnull__ (1, 2)));
-
-extern wchar_t *wcsncat (wchar_t *__restrict __dest,
-    const wchar_t *__restrict __src, size_t __n)
-     noexcept (true) __attribute__ ((__nonnull__ (1, 2)));
-
-
-extern int wcscmp (const wchar_t *__s1, const wchar_t *__s2)
-     noexcept (true) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
-
-extern int wcsncmp (const wchar_t *__s1, const wchar_t *__s2, size_t __n)
-     noexcept (true) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
-
-
-
-extern int wcscasecmp (const wchar_t *__s1, const wchar_t *__s2) noexcept (true);
-
-
-extern int wcsncasecmp (const wchar_t *__s1, const wchar_t *__s2,
-   size_t __n) noexcept (true);
-
-
-
-extern int wcscasecmp_l (const wchar_t *__s1, const wchar_t *__s2,
-    locale_t __loc) noexcept (true);
-
-extern int wcsncasecmp_l (const wchar_t *__s1, const wchar_t *__s2,
-     size_t __n, locale_t __loc) noexcept (true);
-
-
-
-
-extern int wcscoll (const wchar_t *__s1, const wchar_t *__s2) noexcept (true);
-
-
-
-extern size_t wcsxfrm (wchar_t *__restrict __s1,
-         const wchar_t *__restrict __s2, size_t __n) noexcept (true);
-
-
-
-
-
-
-
-extern int wcscoll_l (const wchar_t *__s1, const wchar_t *__s2,
-        locale_t __loc) noexcept (true);
-
-
-
-
-extern size_t wcsxfrm_l (wchar_t *__s1, const wchar_t *__s2,
-    size_t __n, locale_t __loc) noexcept (true);
-
-
-extern wchar_t *wcsdup (const wchar_t *__s) noexcept (true)
-  __attribute__ ((__malloc__)) __attribute__ ((__malloc__ (__builtin_free, 1)));
-
-
-
-
-extern "C++" wchar_t *wcschr (wchar_t *__wcs, wchar_t __wc)
-     noexcept (true) __asm ("wcschr") __attribute__ ((__pure__));
-extern "C++" const wchar_t *wcschr (const wchar_t *__wcs, wchar_t __wc)
-     noexcept (true) __asm ("wcschr") __attribute__ ((__pure__));
-
-
-
-
-
-
-extern "C++" wchar_t *wcsrchr (wchar_t *__wcs, wchar_t __wc)
-     noexcept (true) __asm ("wcsrchr") __attribute__ ((__pure__));
-extern "C++" const wchar_t *wcsrchr (const wchar_t *__wcs, wchar_t __wc)
-     noexcept (true) __asm ("wcsrchr") __attribute__ ((__pure__));
-# 206 "/usr/include/wchar.h" 3 4
-extern wchar_t *wcschrnul (const wchar_t *__s, wchar_t __wc)
-     noexcept (true) __attribute__ ((__pure__));
-
-
-
-
-extern size_t wcscspn (const wchar_t *__wcs, const wchar_t *__reject)
-     noexcept (true) __attribute__ ((__pure__));
-
-
-extern size_t wcsspn (const wchar_t *__wcs, const wchar_t *__accept)
-     noexcept (true) __attribute__ ((__pure__));
-
-
-extern "C++" wchar_t *wcspbrk (wchar_t *__wcs, const wchar_t *__accept)
-     noexcept (true) __asm ("wcspbrk") __attribute__ ((__pure__));
-extern "C++" const wchar_t *wcspbrk (const wchar_t *__wcs,
-         const wchar_t *__accept)
-     noexcept (true) __asm ("wcspbrk") __attribute__ ((__pure__));
-
-
-
-
-
-
-extern "C++" wchar_t *wcsstr (wchar_t *__haystack, const wchar_t *__needle)
-     noexcept (true) __asm ("wcsstr") __attribute__ ((__pure__));
-extern "C++" const wchar_t *wcsstr (const wchar_t *__haystack,
-        const wchar_t *__needle)
-     noexcept (true) __asm ("wcsstr") __attribute__ ((__pure__));
-
-
-
-
-
-
-extern wchar_t *wcstok (wchar_t *__restrict __s,
-   const wchar_t *__restrict __delim,
-   wchar_t **__restrict __ptr) noexcept (true);
-
-
-extern size_t wcslen (const wchar_t *__s) noexcept (true) __attribute__ ((__pure__));
-
-
-
-
-extern "C++" wchar_t *wcswcs (wchar_t *__haystack, const wchar_t *__needle)
-     noexcept (true) __asm ("wcswcs") __attribute__ ((__pure__));
-extern "C++" const wchar_t *wcswcs (const wchar_t *__haystack,
-        const wchar_t *__needle)
-     noexcept (true) __asm ("wcswcs") __attribute__ ((__pure__));
-# 265 "/usr/include/wchar.h" 3 4
-extern size_t wcsnlen (const wchar_t *__s, size_t __maxlen)
-     noexcept (true) __attribute__ ((__pure__));
-
-
-
-
-
-extern "C++" wchar_t *wmemchr (wchar_t *__s, wchar_t __c, size_t __n)
-     noexcept (true) __asm ("wmemchr") __attribute__ ((__pure__));
-extern "C++" const wchar_t *wmemchr (const wchar_t *__s, wchar_t __c,
-         size_t __n)
-     noexcept (true) __asm ("wmemchr") __attribute__ ((__pure__));
-
-
-
-
-
-
-extern int wmemcmp (const wchar_t *__s1, const wchar_t *__s2, size_t __n)
-     noexcept (true) __attribute__ ((__pure__));
-
-
-extern wchar_t *wmemcpy (wchar_t *__restrict __s1,
-    const wchar_t *__restrict __s2, size_t __n) noexcept (true);
-
-
-
-extern wchar_t *wmemmove (wchar_t *__s1, const wchar_t *__s2, size_t __n)
-     noexcept (true);
-
-
-extern wchar_t *wmemset (wchar_t *__s, wchar_t __c, size_t __n) noexcept (true);
-
-
-
-
-extern wchar_t *wmempcpy (wchar_t *__restrict __s1,
-     const wchar_t *__restrict __s2, size_t __n)
-     noexcept (true);
-
-
-
-
-
-extern wint_t btowc (int __c) noexcept (true);
-
-
-
-extern int wctob (wint_t __c) noexcept (true);
-
-
-
-extern int mbsinit (const mbstate_t *__ps) noexcept (true) __attribute__ ((__pure__));
-
-
-
-extern size_t mbrtowc (wchar_t *__restrict __pwc,
-         const char *__restrict __s, size_t __n,
-         mbstate_t *__restrict __p) noexcept (true);
-
-
-extern size_t wcrtomb (char *__restrict __s, wchar_t __wc,
-         mbstate_t *__restrict __ps) noexcept (true);
-
-
-extern size_t __mbrlen (const char *__restrict __s, size_t __n,
-   mbstate_t *__restrict __ps) noexcept (true);
-extern size_t mbrlen (const char *__restrict __s, size_t __n,
-        mbstate_t *__restrict __ps) noexcept (true);
-# 362 "/usr/include/wchar.h" 3 4
-extern size_t mbsrtowcs (wchar_t *__restrict __dst,
-    const char **__restrict __src, size_t __len,
-    mbstate_t *__restrict __ps) noexcept (true);
-
-
-
-extern size_t wcsrtombs (char *__restrict __dst,
-    const wchar_t **__restrict __src, size_t __len,
-    mbstate_t *__restrict __ps) noexcept (true);
-
-
-
-
-
-extern size_t mbsnrtowcs (wchar_t *__restrict __dst,
-     const char **__restrict __src, size_t __nmc,
-     size_t __len, mbstate_t *__restrict __ps) noexcept (true);
-
-
-
-extern size_t wcsnrtombs (char *__restrict __dst,
-     const wchar_t **__restrict __src,
-     size_t __nwc, size_t __len,
-     mbstate_t *__restrict __ps) noexcept (true);
-
-
-
-
-
-
-extern int wcwidth (wchar_t __c) noexcept (true);
-
-
-
-extern int wcswidth (const wchar_t *__s, size_t __n) noexcept (true);
-
-
-
-
-
-extern double wcstod (const wchar_t *__restrict __nptr,
-        wchar_t **__restrict __endptr) noexcept (true);
-
-
-
-extern float wcstof (const wchar_t *__restrict __nptr,
-       wchar_t **__restrict __endptr) noexcept (true);
-extern long double wcstold (const wchar_t *__restrict __nptr,
-       wchar_t **__restrict __endptr) noexcept (true);
-# 422 "/usr/include/wchar.h" 3 4
-extern _Float32 wcstof32 (const wchar_t *__restrict __nptr,
-     wchar_t **__restrict __endptr) noexcept (true);
-
-
-
-extern _Float64 wcstof64 (const wchar_t *__restrict __nptr,
-     wchar_t **__restrict __endptr) noexcept (true);
-
-
-
-extern _Float128 wcstof128 (const wchar_t *__restrict __nptr,
-       wchar_t **__restrict __endptr) noexcept (true);
-
-
-
-extern _Float32x wcstof32x (const wchar_t *__restrict __nptr,
-       wchar_t **__restrict __endptr) noexcept (true);
-
-
-
-extern _Float64x wcstof64x (const wchar_t *__restrict __nptr,
-       wchar_t **__restrict __endptr) noexcept (true);
-# 455 "/usr/include/wchar.h" 3 4
-extern long int wcstol (const wchar_t *__restrict __nptr,
-   wchar_t **__restrict __endptr, int __base) noexcept (true);
-
-
-
-extern unsigned long int wcstoul (const wchar_t *__restrict __nptr,
-      wchar_t **__restrict __endptr, int __base)
-     noexcept (true);
-
-
-
-
-__extension__
-extern long long int wcstoll (const wchar_t *__restrict __nptr,
-         wchar_t **__restrict __endptr, int __base)
-     noexcept (true);
-
-
-
-__extension__
-extern unsigned long long int wcstoull (const wchar_t *__restrict __nptr,
-     wchar_t **__restrict __endptr,
-     int __base) noexcept (true);
-
-
-
-
-
-__extension__
-extern long long int wcstoq (const wchar_t *__restrict __nptr,
-        wchar_t **__restrict __endptr, int __base)
-     noexcept (true);
-
-
-
-__extension__
-extern unsigned long long int wcstouq (const wchar_t *__restrict __nptr,
-           wchar_t **__restrict __endptr,
-           int __base) noexcept (true);
-
-
-
-
-
-
-extern long int wcstol (const wchar_t *__restrict __nptr, wchar_t **__restrict __endptr, int __base) noexcept (true) __asm__ ("" "__isoc23_wcstol")
-
-                                   ;
-extern unsigned long int wcstoul (const wchar_t *__restrict __nptr, wchar_t **__restrict __endptr, int __base) noexcept (true) __asm__ ("" "__isoc23_wcstoul")
-
-
-                                     ;
-__extension__
-extern long long int wcstoll (const wchar_t *__restrict __nptr, wchar_t **__restrict __endptr, int __base) noexcept (true) __asm__ ("" "__isoc23_wcstoll")
-
-
-                                        ;
-__extension__
-extern unsigned long long int wcstoull (const wchar_t *__restrict __nptr, wchar_t **__restrict __endptr, int __base) noexcept (true) __asm__ ("" "__isoc23_wcstoull")
-
-
-                                           ;
-
-__extension__
-extern long long int wcstoq (const wchar_t *__restrict __nptr, wchar_t **__restrict __endptr, int __base) noexcept (true) __asm__ ("" "__isoc23_wcstoll")
-
-                                         ;
-__extension__
-extern unsigned long long int wcstouq (const wchar_t *__restrict __nptr, wchar_t **__restrict __endptr, int __base) noexcept (true) __asm__ ("" "__isoc23_wcstoull")
-
-
-                                           ;
-# 561 "/usr/include/wchar.h" 3 4
-extern long int wcstol_l (const wchar_t *__restrict __nptr,
-     wchar_t **__restrict __endptr, int __base,
-     locale_t __loc) noexcept (true);
-
-extern unsigned long int wcstoul_l (const wchar_t *__restrict __nptr,
-        wchar_t **__restrict __endptr,
-        int __base, locale_t __loc) noexcept (true);
-
-__extension__
-extern long long int wcstoll_l (const wchar_t *__restrict __nptr,
-    wchar_t **__restrict __endptr,
-    int __base, locale_t __loc) noexcept (true);
-
-__extension__
-extern unsigned long long int wcstoull_l (const wchar_t *__restrict __nptr,
-       wchar_t **__restrict __endptr,
-       int __base, locale_t __loc)
-     noexcept (true);
-
-
-
-
-
-extern long int wcstol_l (const wchar_t *__restrict __nptr, wchar_t **__restrict __endptr, int __base, locale_t __loc) noexcept (true) __asm__ ("" "__isoc23_wcstol_l")
-
-
-                      ;
-extern unsigned long int wcstoul_l (const wchar_t *__restrict __nptr, wchar_t **__restrict __endptr, int __base, locale_t __loc) noexcept (true) __asm__ ("" "__isoc23_wcstoul_l")
-
-
-
-                         ;
-__extension__
-extern long long int wcstoll_l (const wchar_t *__restrict __nptr, wchar_t **__restrict __endptr, int __base, locale_t __loc) noexcept (true) __asm__ ("" "__isoc23_wcstoll_l")
-
-
-
-                            ;
-__extension__
-extern unsigned long long int wcstoull_l (const wchar_t *__restrict __nptr, wchar_t **__restrict __endptr, int __base, locale_t __loc) noexcept (true) __asm__ ("" "__isoc23_wcstoull_l")
-
-
-
-                               ;
-# 630 "/usr/include/wchar.h" 3 4
-extern double wcstod_l (const wchar_t *__restrict __nptr,
-   wchar_t **__restrict __endptr, locale_t __loc)
-     noexcept (true);
-
-extern float wcstof_l (const wchar_t *__restrict __nptr,
-         wchar_t **__restrict __endptr, locale_t __loc)
-     noexcept (true);
-
-extern long double wcstold_l (const wchar_t *__restrict __nptr,
-         wchar_t **__restrict __endptr,
-         locale_t __loc) noexcept (true);
-# 649 "/usr/include/wchar.h" 3 4
-extern _Float32 wcstof32_l (const wchar_t *__restrict __nptr,
-       wchar_t **__restrict __endptr,
-       locale_t __loc) noexcept (true);
-
-
-
-extern _Float64 wcstof64_l (const wchar_t *__restrict __nptr,
-       wchar_t **__restrict __endptr,
-       locale_t __loc) noexcept (true);
-
-
-
-extern _Float128 wcstof128_l (const wchar_t *__restrict __nptr,
-         wchar_t **__restrict __endptr,
-         locale_t __loc) noexcept (true);
-
-
-
-extern _Float32x wcstof32x_l (const wchar_t *__restrict __nptr,
-         wchar_t **__restrict __endptr,
-         locale_t __loc) noexcept (true);
-
-
-
-extern _Float64x wcstof64x_l (const wchar_t *__restrict __nptr,
-         wchar_t **__restrict __endptr,
-         locale_t __loc) noexcept (true);
-# 689 "/usr/include/wchar.h" 3 4
-extern wchar_t *wcpcpy (wchar_t *__restrict __dest,
-   const wchar_t *__restrict __src) noexcept (true);
-
-
-
-extern wchar_t *wcpncpy (wchar_t *__restrict __dest,
-    const wchar_t *__restrict __src, size_t __n)
-     noexcept (true);
-# 718 "/usr/include/wchar.h" 3 4
-extern __FILE *open_wmemstream (wchar_t **__bufloc, size_t *__sizeloc) noexcept (true)
-  __attribute__ ((__malloc__)) ;
-
-
-
-
-
-extern int fwide (__FILE *__fp, int __mode) noexcept (true);
-
-
-
-
-
-
-extern int fwprintf (__FILE *__restrict __stream,
-       const wchar_t *__restrict __format, ...)
-                                                           ;
-
-
-
-
-extern int wprintf (const wchar_t *__restrict __format, ...)
-                                                           ;
-
-extern int swprintf (wchar_t *__restrict __s, size_t __n,
-       const wchar_t *__restrict __format, ...)
-     noexcept (true) ;
-
-
-
-
-
-extern int vfwprintf (__FILE *__restrict __s,
-        const wchar_t *__restrict __format,
-        __gnuc_va_list __arg)
-                                                           ;
-
-
-
-
-extern int vwprintf (const wchar_t *__restrict __format,
-       __gnuc_va_list __arg)
-                                                           ;
-
-
-extern int vswprintf (wchar_t *__restrict __s, size_t __n,
-        const wchar_t *__restrict __format,
-        __gnuc_va_list __arg)
-     noexcept (true) ;
-
-
-
-
-
-
-extern int fwscanf (__FILE *__restrict __stream,
-      const wchar_t *__restrict __format, ...)
-                                                          ;
-
-
-
-
-extern int wscanf (const wchar_t *__restrict __format, ...)
-                                                          ;
-
-extern int swscanf (const wchar_t *__restrict __s,
-      const wchar_t *__restrict __format, ...)
-     noexcept (true) ;
-# 795 "/usr/include/wchar.h" 3 4
-extern int fwscanf (__FILE *__restrict __stream, const wchar_t *__restrict __format, ...) __asm__ ("" "__isoc23_fwscanf")
-
-
-                                                          ;
-extern int wscanf (const wchar_t *__restrict __format, ...) __asm__ ("" "__isoc23_wscanf")
-
-                                                          ;
-extern int swscanf (const wchar_t *__restrict __s, const wchar_t *__restrict __format, ...) noexcept (true) __asm__ ("" "__isoc23_swscanf")
-
-
-                                                          ;
-# 851 "/usr/include/wchar.h" 3 4
-extern int vfwscanf (__FILE *__restrict __s,
-       const wchar_t *__restrict __format,
-       __gnuc_va_list __arg)
-                                                          ;
-
-
-
-
-extern int vwscanf (const wchar_t *__restrict __format,
-      __gnuc_va_list __arg)
-                                                          ;
-
-extern int vswscanf (const wchar_t *__restrict __s,
-       const wchar_t *__restrict __format,
-       __gnuc_va_list __arg)
-     noexcept (true) ;
-# 875 "/usr/include/wchar.h" 3 4
-extern int vfwscanf (__FILE *__restrict __s, const wchar_t *__restrict __format, __gnuc_va_list __arg) __asm__ ("" "__isoc23_vfwscanf")
-
-
-                                                          ;
-extern int vwscanf (const wchar_t *__restrict __format, __gnuc_va_list __arg) __asm__ ("" "__isoc23_vwscanf")
-
-                                                          ;
-extern int vswscanf (const wchar_t *__restrict __s, const wchar_t *__restrict __format, __gnuc_va_list __arg) noexcept (true) __asm__ ("" "__isoc23_vswscanf")
-
-
-                                                          ;
-# 935 "/usr/include/wchar.h" 3 4
-extern wint_t fgetwc (__FILE *__stream);
-extern wint_t getwc (__FILE *__stream);
-
-
-
-
-
-extern wint_t getwchar (void);
-
-
-
-
-
-
-extern wint_t fputwc (wchar_t __wc, __FILE *__stream);
-extern wint_t putwc (wchar_t __wc, __FILE *__stream);
-
-
-
-
-
-extern wint_t putwchar (wchar_t __wc);
-
-
-
-
-
-
-
-extern wchar_t *fgetws (wchar_t *__restrict __ws, int __n,
-   __FILE *__restrict __stream);
-
-
-
-
-
-extern int fputws (const wchar_t *__restrict __ws,
-     __FILE *__restrict __stream);
-
-
-
-
-
-
-extern wint_t ungetwc (wint_t __wc, __FILE *__stream);
-# 990 "/usr/include/wchar.h" 3 4
-extern wint_t getwc_unlocked (__FILE *__stream);
-extern wint_t getwchar_unlocked (void);
-
-
-
-
-
-
-
-extern wint_t fgetwc_unlocked (__FILE *__stream);
-
-
-
-
-
-
-
-extern wint_t fputwc_unlocked (wchar_t __wc, __FILE *__stream);
-# 1016 "/usr/include/wchar.h" 3 4
-extern wint_t putwc_unlocked (wchar_t __wc, __FILE *__stream);
-extern wint_t putwchar_unlocked (wchar_t __wc);
-# 1026 "/usr/include/wchar.h" 3 4
-extern wchar_t *fgetws_unlocked (wchar_t *__restrict __ws, int __n,
-     __FILE *__restrict __stream);
-
-
-
-
-
-
-
-extern int fputws_unlocked (const wchar_t *__restrict __ws,
-       __FILE *__restrict __stream);
-
-
-
-
-
-
-extern size_t wcsftime (wchar_t *__restrict __s, size_t __maxsize,
-   const wchar_t *__restrict __format,
-   const struct tm *__restrict __tp) noexcept (true);
-
-
-
-
-extern size_t wcsftime_l (wchar_t *__restrict __s, size_t __maxsize,
-     const wchar_t *__restrict __format,
-     const struct tm *__restrict __tp,
-     locale_t __loc) noexcept (true);
-# 1073 "/usr/include/wchar.h" 3 4
-}
-# 45 "/usr/include/c++/14/cwchar" 2 3
-# 62 "/usr/include/c++/14/cwchar" 3
-namespace std
-{
-  using ::mbstate_t;
-}
-# 135 "/usr/include/c++/14/cwchar" 3
-extern "C++"
-{
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-
-  using ::wint_t;
-
-  using ::btowc;
-  using ::fgetwc;
-  using ::fgetws;
-  using ::fputwc;
-  using ::fputws;
-  using ::fwide;
-  using ::fwprintf;
-  using ::fwscanf;
-  using ::getwc;
-  using ::getwchar;
-  using ::mbrlen;
-  using ::mbrtowc;
-  using ::mbsinit;
-  using ::mbsrtowcs;
-  using ::putwc;
-  using ::putwchar;
-
-  using ::swprintf;
-
-  using ::swscanf;
-  using ::ungetwc;
-  using ::vfwprintf;
-
-  using ::vfwscanf;
-
-
-  using ::vswprintf;
-
-
-  using ::vswscanf;
-
-  using ::vwprintf;
-
-  using ::vwscanf;
-
-  using ::wcrtomb;
-  using ::wcscat;
-  using ::wcscmp;
-  using ::wcscoll;
-  using ::wcscpy;
-  using ::wcscspn;
-  using ::wcsftime;
-  using ::wcslen;
-  using ::wcsncat;
-  using ::wcsncmp;
-  using ::wcsncpy;
-  using ::wcsrtombs;
-  using ::wcsspn;
-  using ::wcstod;
-
-  using ::wcstof;
-
-  using ::wcstok;
-  using ::wcstol;
-  using ::wcstoul;
-  using ::wcsxfrm;
-  using ::wctob;
-  using ::wmemcmp;
-  using ::wmemcpy;
-  using ::wmemmove;
-  using ::wmemset;
-  using ::wprintf;
-  using ::wscanf;
-  using ::wcschr;
-  using ::wcspbrk;
-  using ::wcsrchr;
-  using ::wcsstr;
-  using ::wmemchr;
-# 234 "/usr/include/c++/14/cwchar" 3
-
-}
-}
-
-
-
-
-
-
-
-namespace __gnu_cxx
-{
-
-
-
-
-
-  using ::wcstold;
-# 260 "/usr/include/c++/14/cwchar" 3
-  using ::wcstoll;
-  using ::wcstoull;
-
-}
-
-namespace std
-{
-  using ::__gnu_cxx::wcstold;
-  using ::__gnu_cxx::wcstoll;
-  using ::__gnu_cxx::wcstoull;
-}
-# 280 "/usr/include/c++/14/cwchar" 3
-namespace std
-{
-
-  using std::wcstof;
-
-
-  using std::vfwscanf;
-
-
-  using std::vswscanf;
-
-
-  using std::vwscanf;
-
-
-
-  using std::wcstold;
-  using std::wcstoll;
-  using std::wcstoull;
-
-}
-# 41 "/usr/include/c++/14/bits/postypes.h" 2 3
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-# 62 "/usr/include/c++/14/bits/postypes.h" 3
-  typedef long int streamoff;
-
-
-
-
-
-  typedef ptrdiff_t streamsize;
-# 81 "/usr/include/c++/14/bits/postypes.h" 3
-  template<typename _StateT>
-    class fpos
-    {
-    private:
-      streamoff _M_off;
-      _StateT _M_state;
-
-    public:
-
-
-
-
-      fpos()
-      : _M_off(0), _M_state() { }
-# 103 "/usr/include/c++/14/bits/postypes.h" 3
-      fpos(streamoff __off)
-      : _M_off(__off), _M_state() { }
-
-
-      fpos(const fpos&) = default;
-      fpos& operator=(const fpos&) = default;
-      ~fpos() = default;
-
-
-
-      operator streamoff() const { return _M_off; }
-
-
-      void
-      state(_StateT __st)
-      { _M_state = __st; }
-
-
-      _StateT
-      state() const
-      { return _M_state; }
-
-
-
-
-
-      fpos&
-      operator+=(streamoff __off)
-      {
- _M_off += __off;
- return *this;
-      }
-
-
-
-
-
-      fpos&
-      operator-=(streamoff __off)
-      {
- _M_off -= __off;
- return *this;
-      }
-
-
-
-
-
-
-
-      fpos
-      operator+(streamoff __off) const
-      {
- fpos __pos(*this);
- __pos += __off;
- return __pos;
-      }
-
-
-
-
-
-
-
-      fpos
-      operator-(streamoff __off) const
-      {
- fpos __pos(*this);
- __pos -= __off;
- return __pos;
-      }
-
-
-
-
-
-
-      streamoff
-      operator-(const fpos& __other) const
-      { return _M_off - __other._M_off; }
-    };
-
-
-
-
-
-
-  template<typename _StateT>
-    inline bool
-    operator==(const fpos<_StateT>& __lhs, const fpos<_StateT>& __rhs)
-    { return streamoff(__lhs) == streamoff(__rhs); }
-
-  template<typename _StateT>
-    inline bool
-    operator!=(const fpos<_StateT>& __lhs, const fpos<_StateT>& __rhs)
-    { return streamoff(__lhs) != streamoff(__rhs); }
-
-
-
-
-
-  typedef fpos<mbstate_t> streampos;
-
-  typedef fpos<mbstate_t> wstreampos;
-
-
-
-  typedef fpos<mbstate_t> u8streampos;
-
-
-
-
-  typedef fpos<mbstate_t> u16streampos;
-
-  typedef fpos<mbstate_t> u32streampos;
-
-
-
-}
-# 43 "/usr/include/c++/14/iosfwd" 2 3
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-# 76 "/usr/include/c++/14/iosfwd" 3
-  class ios_base;
-
-  template<typename _CharT, typename _Traits = char_traits<_CharT> >
-    class basic_ios;
-
-  template<typename _CharT, typename _Traits = char_traits<_CharT> >
-    class basic_streambuf;
-
-  template<typename _CharT, typename _Traits = char_traits<_CharT> >
-    class basic_istream;
-
-  template<typename _CharT, typename _Traits = char_traits<_CharT> >
-    class basic_ostream;
-
-  template<typename _CharT, typename _Traits = char_traits<_CharT> >
-    class basic_iostream;
-
-
-namespace __cxx11 {
-
-  template<typename _CharT, typename _Traits = char_traits<_CharT>,
-     typename _Alloc = allocator<_CharT> >
-    class basic_stringbuf;
-
-  template<typename _CharT, typename _Traits = char_traits<_CharT>,
-    typename _Alloc = allocator<_CharT> >
-    class basic_istringstream;
-
-  template<typename _CharT, typename _Traits = char_traits<_CharT>,
-    typename _Alloc = allocator<_CharT> >
-    class basic_ostringstream;
-
-  template<typename _CharT, typename _Traits = char_traits<_CharT>,
-    typename _Alloc = allocator<_CharT> >
-    class basic_stringstream;
-
-}
-
-  template<typename _CharT, typename _Traits = char_traits<_CharT> >
-    class basic_filebuf;
-
-  template<typename _CharT, typename _Traits = char_traits<_CharT> >
-    class basic_ifstream;
-
-  template<typename _CharT, typename _Traits = char_traits<_CharT> >
-    class basic_ofstream;
-
-  template<typename _CharT, typename _Traits = char_traits<_CharT> >
-    class basic_fstream;
-
-  template<typename _CharT, typename _Traits = char_traits<_CharT> >
-    class istreambuf_iterator;
-
-  template<typename _CharT, typename _Traits = char_traits<_CharT> >
-    class ostreambuf_iterator;
-
-
-
-  typedef basic_ios<char> ios;
-
-
-  typedef basic_streambuf<char> streambuf;
-
-
-  typedef basic_istream<char> istream;
-
-
-  typedef basic_ostream<char> ostream;
-
-
-  typedef basic_iostream<char> iostream;
-
-
-  typedef basic_stringbuf<char> stringbuf;
-
-
-  typedef basic_istringstream<char> istringstream;
-
-
-  typedef basic_ostringstream<char> ostringstream;
-
-
-  typedef basic_stringstream<char> stringstream;
-
-
-  typedef basic_filebuf<char> filebuf;
-
-
-  typedef basic_ifstream<char> ifstream;
-
-
-  typedef basic_ofstream<char> ofstream;
-
-
-  typedef basic_fstream<char> fstream;
-
-
-
-  typedef basic_ios<wchar_t> wios;
-
-
-  typedef basic_streambuf<wchar_t> wstreambuf;
-
-
-  typedef basic_istream<wchar_t> wistream;
-
-
-  typedef basic_ostream<wchar_t> wostream;
-
-
-  typedef basic_iostream<wchar_t> wiostream;
-
-
-  typedef basic_stringbuf<wchar_t> wstringbuf;
-
-
-  typedef basic_istringstream<wchar_t> wistringstream;
-
-
-  typedef basic_ostringstream<wchar_t> wostringstream;
-
-
-  typedef basic_stringstream<wchar_t> wstringstream;
-
-
-  typedef basic_filebuf<wchar_t> wfilebuf;
-
-
-  typedef basic_ifstream<wchar_t> wifstream;
-
-
-  typedef basic_ofstream<wchar_t> wofstream;
-
-
-  typedef basic_fstream<wchar_t> wfstream;
-
-
-
-  template<typename _CharT, typename _Traits = char_traits<_CharT>,
-           typename _Allocator = allocator<_CharT>>
-    class basic_syncbuf;
-  template<typename _CharT, typename _Traits = char_traits<_CharT>,
-           typename _Allocator = allocator<_CharT>>
-    class basic_osyncstream;
-
-  using syncbuf = basic_syncbuf<char>;
-  using osyncstream = basic_osyncstream<char>;
-
-
-  using wsyncbuf = basic_syncbuf<wchar_t>;
-  using wosyncstream = basic_osyncstream<wchar_t>;
-# 255 "/usr/include/c++/14/iosfwd" 3
-
-}
-# 41 "/usr/include/c++/14/ios" 2 3
-# 1 "/usr/include/c++/14/exception" 1 3
-# 33 "/usr/include/c++/14/exception" 3
-       
-# 34 "/usr/include/c++/14/exception" 3
-
-
-# 1 "/usr/include/c++/14/bits/exception.h" 1 3
-# 34 "/usr/include/c++/14/bits/exception.h" 3
-       
-# 35 "/usr/include/c++/14/bits/exception.h" 3
-
-
-
-extern "C++" {
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-# 59 "/usr/include/c++/14/bits/exception.h" 3
-  class exception
-  {
-  public:
-    exception() noexcept { }
-    virtual ~exception() noexcept;
-
-    exception(const exception&) = default;
-    exception& operator=(const exception&) = default;
-    exception(exception&&) = default;
-    exception& operator=(exception&&) = default;
-
-
-
-
-    virtual const char*
-    what() const noexcept;
-  };
-
-
-
-}
-
-}
-# 37 "/usr/include/c++/14/exception" 2 3
+# 34 "/usr/include/c++/14/concepts" 3
 
 
 # 1 "/usr/include/c++/14/bits/version.h" 1 3
 # 47 "/usr/include/c++/14/bits/version.h" 3
        
 # 48 "/usr/include/c++/14/bits/version.h" 3
-# 40 "/usr/include/c++/14/exception" 2 3
-
-extern "C++" {
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-# 54 "/usr/include/c++/14/exception" 3
-  class bad_exception : public exception
-  {
-  public:
-    bad_exception() noexcept { }
-
-
-
-    virtual ~bad_exception() noexcept;
-
-
-    virtual const char*
-    what() const noexcept;
-  };
-
-
-  typedef void (*terminate_handler) ();
-
-
-  terminate_handler set_terminate(terminate_handler) noexcept;
-
-
-
-  terminate_handler get_terminate() noexcept;
-
-
-
-
-  void terminate() noexcept __attribute__ ((__noreturn__,__cold__));
-
-
-
-  typedef void (*__attribute__ ((__deprecated__)) unexpected_handler) ();
-
-
-
-
-
-  __attribute__ ((__deprecated__))
-  unexpected_handler set_unexpected(unexpected_handler) noexcept;
-
-
-
-
-
-
-
-  __attribute__ ((__deprecated__))
-  unexpected_handler get_unexpected() noexcept;
-
-
-
-
-
-
-
-  __attribute__ ((__deprecated__))
-  void unexpected() __attribute__ ((__noreturn__,__cold__));
-# 124 "/usr/include/c++/14/exception" 3
-  __attribute__ ((__deprecated__ ("use '" "std::uncaught_exceptions()" "' instead")))
-  bool uncaught_exception() noexcept __attribute__ ((__pure__));
-
-
-
-
-
-
-  int uncaught_exceptions() noexcept __attribute__ ((__pure__));
-
-
-
-}
-
-namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
-{
-
-# 158 "/usr/include/c++/14/exception" 3
-  void __verbose_terminate_handler();
-
-
-}
-
-}
-
-
-# 1 "/usr/include/c++/14/bits/exception_ptr.h" 1 3
-# 35 "/usr/include/c++/14/bits/exception_ptr.h" 3
-# 1 "/usr/include/c++/14/bits/exception_defines.h" 1 3
-# 36 "/usr/include/c++/14/bits/exception_ptr.h" 2 3
-# 1 "/usr/include/c++/14/bits/cxxabi_init_exception.h" 1 3
-# 34 "/usr/include/c++/14/bits/cxxabi_init_exception.h" 3
-       
-# 35 "/usr/include/c++/14/bits/cxxabi_init_exception.h" 3
-
-#pragma GCC visibility push(default)
-
-# 1 "/usr/lib64/gcc/x86_64-suse-linux/14/include/stddef.h" 1 3 4
-# 145 "/usr/lib64/gcc/x86_64-suse-linux/14/include/stddef.h" 3 4
-typedef long int ptrdiff_t;
-# 425 "/usr/lib64/gcc/x86_64-suse-linux/14/include/stddef.h" 3 4
-typedef struct {
-  long long __max_align_ll __attribute__((__aligned__(__alignof__(long long))));
-  long double __max_align_ld __attribute__((__aligned__(__alignof__(long double))));
-# 436 "/usr/lib64/gcc/x86_64-suse-linux/14/include/stddef.h" 3 4
-} max_align_t;
-
-
-
-
-
-
-  typedef decltype(nullptr) nullptr_t;
-# 39 "/usr/include/c++/14/bits/cxxabi_init_exception.h" 2 3
-# 50 "/usr/include/c++/14/bits/cxxabi_init_exception.h" 3
-namespace std
-{
-  class type_info;
-}
-
-namespace __cxxabiv1
-{
-  struct __cxa_refcounted_exception;
-
-  extern "C"
-    {
-
-      void*
-      __cxa_allocate_exception(size_t) noexcept;
-
-      void
-      __cxa_free_exception(void*) noexcept;
-
-
-      __cxa_refcounted_exception*
-      __cxa_init_primary_exception(void *__object, std::type_info *__tinfo,
-                void ( *__dest) (void *))
- noexcept;
-
-    }
-}
-
-
-
-#pragma GCC visibility pop
-# 37 "/usr/include/c++/14/bits/exception_ptr.h" 2 3
-# 1 "/usr/include/c++/14/typeinfo" 1 3
-# 32 "/usr/include/c++/14/typeinfo" 3
-       
-# 33 "/usr/include/c++/14/typeinfo" 3
-
-
-
-# 1 "/usr/include/c++/14/bits/hash_bytes.h" 1 3
-# 33 "/usr/include/c++/14/bits/hash_bytes.h" 3
-       
-# 34 "/usr/include/c++/14/bits/hash_bytes.h" 3
-
-
-
-namespace std
-{
-
-
-
-
-
-
-
-  size_t
-  _Hash_bytes(const void* __ptr, size_t __len, size_t __seed);
-
-
-
-
-
-  size_t
-  _Fnv_hash_bytes(const void* __ptr, size_t __len, size_t __seed);
-
-
-}
-# 37 "/usr/include/c++/14/typeinfo" 2 3
-
-
-
-# 1 "/usr/include/c++/14/bits/version.h" 1 3
-# 47 "/usr/include/c++/14/bits/version.h" 3
-       
-# 48 "/usr/include/c++/14/bits/version.h" 3
-# 41 "/usr/include/c++/14/typeinfo" 2 3
-
-#pragma GCC visibility push(default)
-
-extern "C++" {
-
-namespace __cxxabiv1
-{
-  class __class_type_info;
-}
-# 83 "/usr/include/c++/14/typeinfo" 3
-namespace std
-{
-
-
-
-
-
-
-  class type_info
-  {
-  public:
-
-
-
-
-    virtual ~type_info();
-
-
-
-    const char* name() const noexcept
-    { return __name[0] == '*' ? __name + 1 : __name; }
-
-
-
-    bool before(const type_info& __arg) const noexcept;
-
-   
-    bool operator==(const type_info& __arg) const noexcept;
-
-
-
-
-
-
-
-    size_t hash_code() const noexcept
-    {
-
-      return _Hash_bytes(name(), __builtin_strlen(name()),
-    static_cast<size_t>(0xc70f6907UL));
-
-
-
-    }
-
-
-
-    virtual bool __is_pointer_p() const;
-
-
-    virtual bool __is_function_p() const;
-
-
-
-
-
-
-
-    virtual bool __do_catch(const type_info *__thr_type, void **__thr_obj,
-       unsigned __outer) const;
-
-
-    virtual bool __do_upcast(const __cxxabiv1::__class_type_info *__target,
-        void **__obj_ptr) const;
-
-  protected:
-    const char *__name;
-
-    explicit type_info(const char *__n): __name(__n) { }
-
-  private:
-
-
-    type_info& operator=(const type_info&) = delete;
-    type_info(const type_info&) = delete;
-# 166 "/usr/include/c++/14/typeinfo" 3
-  };
-
-
-  inline bool
-  type_info::before(const type_info& __arg) const noexcept
-  {
-
-
-
-
-    if (__name[0] != '*' || __arg.__name[0] != '*')
-      return __builtin_strcmp (__name, __arg.__name) < 0;
-# 186 "/usr/include/c++/14/typeinfo" 3
-    return __name < __arg.__name;
-  }
-
-
-
-  inline bool
-  type_info::operator==(const type_info& __arg) const noexcept
-  {
-    if (std::__is_constant_evaluated())
-      return this == &__arg;
-
-    if (__name == __arg.__name)
-      return true;
-
-
-
-
-
-
-    return __name[0] != '*' && __builtin_strcmp (__name, __arg.name()) == 0;
-
-
-
-  }
-# 219 "/usr/include/c++/14/typeinfo" 3
-  class bad_cast : public exception
-  {
-  public:
-    bad_cast() noexcept { }
-
-
-
-    virtual ~bad_cast() noexcept;
-
-
-    virtual const char* what() const noexcept;
-  };
-
-
-
-
-
-  class bad_typeid : public exception
-  {
-  public:
-    bad_typeid () noexcept { }
-
-
-
-    virtual ~bad_typeid() noexcept;
-
-
-    virtual const char* what() const noexcept;
-  };
-}
-
-}
-
-#pragma GCC visibility pop
-# 38 "/usr/include/c++/14/bits/exception_ptr.h" 2 3
-# 1 "/usr/include/c++/14/new" 1 3
-# 38 "/usr/include/c++/14/new" 3
-       
-# 39 "/usr/include/c++/14/new" 3
-
-
-
-
-
-
-
-# 1 "/usr/include/c++/14/bits/version.h" 1 3
-# 47 "/usr/include/c++/14/bits/version.h" 3
-       
-# 48 "/usr/include/c++/14/bits/version.h" 3
-# 47 "/usr/include/c++/14/new" 2 3
-
-#pragma GCC visibility push(default)
-
-extern "C++" {
-
-namespace std
-{
-
-
-
-
-
-
-  class bad_alloc : public exception
-  {
-  public:
-    bad_alloc() throw() { }
-
-
-    bad_alloc(const bad_alloc&) = default;
-    bad_alloc& operator=(const bad_alloc&) = default;
-
-
-
-
-    virtual ~bad_alloc() throw();
-
-
-    virtual const char* what() const throw();
-  };
-
-
-  class bad_array_new_length : public bad_alloc
-  {
-  public:
-    bad_array_new_length() throw() { }
-
-
-
-    virtual ~bad_array_new_length() throw();
-
-
-    virtual const char* what() const throw();
-  };
-
-
-
-  enum class align_val_t: size_t {};
-
-
-  struct nothrow_t
-  {
-
-    explicit nothrow_t() = default;
-
-  };
-
-  extern const nothrow_t nothrow;
-
-
-
-  typedef void (*new_handler)();
-
-
-
-  new_handler set_new_handler(new_handler) throw();
-
-
-
-  new_handler get_new_handler() noexcept;
-
-}
-# 131 "/usr/include/c++/14/new" 3
-[[__nodiscard__]] void* operator new(std::size_t)
-  __attribute__((__externally_visible__));
-[[__nodiscard__]] void* operator new[](std::size_t)
-  __attribute__((__externally_visible__));
-void operator delete(void*) noexcept
-  __attribute__((__externally_visible__));
-void operator delete[](void*) noexcept
-  __attribute__((__externally_visible__));
-
-void operator delete(void*, std::size_t) noexcept
-  __attribute__((__externally_visible__));
-void operator delete[](void*, std::size_t) noexcept
-  __attribute__((__externally_visible__));
-
-[[__nodiscard__]] void* operator new(std::size_t, const std::nothrow_t&) noexcept
-  __attribute__((__externally_visible__, __alloc_size__ (1), __malloc__));
-[[__nodiscard__]] void* operator new[](std::size_t, const std::nothrow_t&) noexcept
-  __attribute__((__externally_visible__, __alloc_size__ (1), __malloc__));
-void operator delete(void*, const std::nothrow_t&) noexcept
-  __attribute__((__externally_visible__));
-void operator delete[](void*, const std::nothrow_t&) noexcept
-  __attribute__((__externally_visible__));
-
-[[__nodiscard__]] void* operator new(std::size_t, std::align_val_t)
-  __attribute__((__externally_visible__, __alloc_size__ (1), __malloc__));
-[[__nodiscard__]] void* operator new(std::size_t, std::align_val_t, const std::nothrow_t&)
-  noexcept __attribute__((__externally_visible__, __alloc_size__ (1), __malloc__));
-void operator delete(void*, std::align_val_t)
-  noexcept __attribute__((__externally_visible__));
-void operator delete(void*, std::align_val_t, const std::nothrow_t&)
-  noexcept __attribute__((__externally_visible__));
-[[__nodiscard__]] void* operator new[](std::size_t, std::align_val_t)
-  __attribute__((__externally_visible__, __alloc_size__ (1), __malloc__));
-[[__nodiscard__]] void* operator new[](std::size_t, std::align_val_t, const std::nothrow_t&)
-  noexcept __attribute__((__externally_visible__, __alloc_size__ (1), __malloc__));
-void operator delete[](void*, std::align_val_t)
-  noexcept __attribute__((__externally_visible__));
-void operator delete[](void*, std::align_val_t, const std::nothrow_t&)
-  noexcept __attribute__((__externally_visible__));
-
-void operator delete(void*, std::size_t, std::align_val_t)
-  noexcept __attribute__((__externally_visible__));
-void operator delete[](void*, std::size_t, std::align_val_t)
-  noexcept __attribute__((__externally_visible__));
-
-
-
-
-[[__nodiscard__]] inline void* operator new(std::size_t, void* __p) noexcept
-{ return __p; }
-[[__nodiscard__]] inline void* operator new[](std::size_t, void* __p) noexcept
-{ return __p; }
-
-
-inline void operator delete (void*, void*) noexcept { }
-inline void operator delete[](void*, void*) noexcept { }
-
-}
-
-
-namespace std
-{
-
-
-  template<typename _Tp>
-    [[nodiscard]] constexpr _Tp*
-    launder(_Tp* __p) noexcept
-    { return __builtin_launder(__p); }
-
-
-
-
-  template<typename _Ret, typename... _Args , bool _NE>
-    void launder(_Ret (*)(_Args...) noexcept (_NE)) = delete;
-  template<typename _Ret, typename... _Args , bool _NE>
-    void launder(_Ret (*)(_Args......) noexcept (_NE)) = delete;
-
-  void launder(void*) = delete;
-  void launder(const void*) = delete;
-  void launder(volatile void*) = delete;
-  void launder(const volatile void*) = delete;
-
-
-
-  inline constexpr size_t hardware_destructive_interference_size = 64;
-  inline constexpr size_t hardware_constructive_interference_size = 64;
-
-}
-
-
-
-
-namespace std
-{
-
-
-  struct destroying_delete_t
-  {
-    explicit destroying_delete_t() = default;
-  };
-
-  inline constexpr destroying_delete_t destroying_delete{};
-}
-
-
-#pragma GCC visibility pop
-# 39 "/usr/include/c++/14/bits/exception_ptr.h" 2 3
-
-
-# 1 "/usr/include/c++/14/bits/move.h" 1 3
-# 37 "/usr/include/c++/14/bits/move.h" 3
+# 37 "/usr/include/c++/14/concepts" 2 3
+# 46 "/usr/include/c++/14/concepts" 3
 # 1 "/usr/include/c++/14/type_traits" 1 3
 # 32 "/usr/include/c++/14/type_traits" 3
        
@@ -5384,451 +3444,8 @@ template<typename _Ret, typename _Fn, typename... _Args>
 
 
 }
-# 38 "/usr/include/c++/14/bits/move.h" 2 3
+# 47 "/usr/include/c++/14/concepts" 2 3
 
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-
-
-
-
-
-
-  template<typename _Tp>
-    inline constexpr _Tp*
-    __addressof(_Tp& __r) noexcept
-    { return __builtin_addressof(__r); }
-# 67 "/usr/include/c++/14/bits/move.h" 3
-  template<typename _Tp>
-    [[__nodiscard__]]
-    constexpr _Tp&&
-    forward(typename std::remove_reference<_Tp>::type& __t) noexcept
-    { return static_cast<_Tp&&>(__t); }
-
-
-
-
-
-
-
-  template<typename _Tp>
-    [[__nodiscard__]]
-    constexpr _Tp&&
-    forward(typename std::remove_reference<_Tp>::type&& __t) noexcept
-    {
-      static_assert(!std::is_lvalue_reference<_Tp>::value,
-   "std::forward must not be used to convert an rvalue to an lvalue");
-      return static_cast<_Tp&&>(__t);
-    }
-# 124 "/usr/include/c++/14/bits/move.h" 3
-  template<typename _Tp>
-    [[__nodiscard__]]
-    constexpr typename std::remove_reference<_Tp>::type&&
-    move(_Tp&& __t) noexcept
-    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
-
-
-  template<typename _Tp>
-    struct __move_if_noexcept_cond
-    : public __and_<__not_<is_nothrow_move_constructible<_Tp>>,
-                    is_copy_constructible<_Tp>>::type { };
-# 144 "/usr/include/c++/14/bits/move.h" 3
-  template<typename _Tp>
-    [[__nodiscard__]]
-    constexpr
-    __conditional_t<__move_if_noexcept_cond<_Tp>::value, const _Tp&, _Tp&&>
-    move_if_noexcept(_Tp& __x) noexcept
-    { return std::move(__x); }
-# 160 "/usr/include/c++/14/bits/move.h" 3
-  template<typename _Tp>
-    [[__nodiscard__]]
-    inline constexpr _Tp*
-    addressof(_Tp& __r) noexcept
-    { return std::__addressof(__r); }
-
-
-
-  template<typename _Tp>
-    const _Tp* addressof(const _Tp&&) = delete;
-
-
-  template <typename _Tp, typename _Up = _Tp>
-    constexpr
-    inline _Tp
-    __exchange(_Tp& __obj, _Up&& __new_val)
-    {
-      _Tp __old_val = std::move(__obj);
-      __obj = std::forward<_Up>(__new_val);
-      return __old_val;
-    }
-# 204 "/usr/include/c++/14/bits/move.h" 3
-  template<typename _Tp>
-    constexpr
-    inline
-
-    typename enable_if<__and_<__not_<__is_tuple_like<_Tp>>,
-         is_move_constructible<_Tp>,
-         is_move_assignable<_Tp>>::value>::type
-
-
-
-    swap(_Tp& __a, _Tp& __b)
-    noexcept(__and_<is_nothrow_move_constructible<_Tp>, is_nothrow_move_assignable<_Tp>>::value)
-
-    {
-
-
-
-
-      _Tp __tmp = std::move(__a);
-      __a = std::move(__b);
-      __b = std::move(__tmp);
-    }
-
-
-
-
-  template<typename _Tp, size_t _Nm>
-    constexpr
-    inline
-
-    typename enable_if<__is_swappable<_Tp>::value>::type
-
-
-
-    swap(_Tp (&__a)[_Nm], _Tp (&__b)[_Nm])
-    noexcept(__is_nothrow_swappable<_Tp>::value)
-    {
-      for (size_t __n = 0; __n < _Nm; ++__n)
- swap(__a[__n], __b[__n]);
-    }
-
-
-
-}
-# 42 "/usr/include/c++/14/bits/exception_ptr.h" 2 3
-# 50 "/usr/include/c++/14/bits/exception_ptr.h" 3
-extern "C++" {
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-  class type_info;
-
-
-
-
-
-
-  namespace __exception_ptr
-  {
-    class exception_ptr;
-  }
-
-  using __exception_ptr::exception_ptr;
-# 75 "/usr/include/c++/14/bits/exception_ptr.h" 3
-  exception_ptr current_exception() noexcept;
-
-  template<typename _Ex>
-  exception_ptr make_exception_ptr(_Ex) noexcept;
-
-
-  void rethrow_exception(exception_ptr) __attribute__ ((__noreturn__));
-
-  namespace __exception_ptr
-  {
-    using std::rethrow_exception;
-# 97 "/usr/include/c++/14/bits/exception_ptr.h" 3
-    class exception_ptr
-    {
-      void* _M_exception_object;
-
-      explicit exception_ptr(void* __e) noexcept;
-
-      void _M_addref() noexcept;
-      void _M_release() noexcept;
-
-      void *_M_get() const noexcept __attribute__ ((__pure__));
-
-      friend exception_ptr std::current_exception() noexcept;
-      friend void std::rethrow_exception(exception_ptr);
-      template<typename _Ex>
-      friend exception_ptr std::make_exception_ptr(_Ex) noexcept;
-
-    public:
-      exception_ptr() noexcept;
-
-      exception_ptr(const exception_ptr&) noexcept;
-
-
-      exception_ptr(nullptr_t) noexcept
-      : _M_exception_object(nullptr)
-      { }
-
-      exception_ptr(exception_ptr&& __o) noexcept
-      : _M_exception_object(__o._M_exception_object)
-      { __o._M_exception_object = nullptr; }
-# 135 "/usr/include/c++/14/bits/exception_ptr.h" 3
-      exception_ptr&
-      operator=(const exception_ptr&) noexcept;
-
-
-      exception_ptr&
-      operator=(exception_ptr&& __o) noexcept
-      {
-        exception_ptr(static_cast<exception_ptr&&>(__o)).swap(*this);
-        return *this;
-      }
-
-
-      ~exception_ptr() noexcept;
-
-      void
-      swap(exception_ptr&) noexcept;
-# 162 "/usr/include/c++/14/bits/exception_ptr.h" 3
-      explicit operator bool() const noexcept
-      { return _M_exception_object; }
-
-
-
-
-      friend bool
-      operator==(const exception_ptr&, const exception_ptr&) noexcept = default;
-# 182 "/usr/include/c++/14/bits/exception_ptr.h" 3
-      const class std::type_info*
-      __cxa_exception_type() const noexcept
- __attribute__ ((__pure__));
-    };
-
-   
-    inline
-    exception_ptr::exception_ptr() noexcept
-    : _M_exception_object(0)
-    { }
-
-   
-    inline
-    exception_ptr::exception_ptr(const exception_ptr& __other)
-    noexcept
-    : _M_exception_object(__other._M_exception_object)
-    {
-      if (_M_exception_object)
- _M_addref();
-    }
-
-   
-    inline
-    exception_ptr::~exception_ptr() noexcept
-    {
-      if (_M_exception_object)
- _M_release();
-    }
-
-   
-    inline exception_ptr&
-    exception_ptr::operator=(const exception_ptr& __other) noexcept
-    {
-      exception_ptr(__other).swap(*this);
-      return *this;
-    }
-
-   
-    inline void
-    exception_ptr::swap(exception_ptr &__other) noexcept
-    {
-      void *__tmp = _M_exception_object;
-      _M_exception_object = __other._M_exception_object;
-      __other._M_exception_object = __tmp;
-    }
-
-
-    inline void
-    swap(exception_ptr& __lhs, exception_ptr& __rhs)
-    { __lhs.swap(__rhs); }
-
-
-    template<typename _Ex>
-     
-      inline void
-      __dest_thunk(void* __x)
-      { static_cast<_Ex*>(__x)->~_Ex(); }
-
-
-  }
-
-  using __exception_ptr::swap;
-
-
-
-  template<typename _Ex>
-    exception_ptr
-    make_exception_ptr(_Ex __ex) noexcept
-    {
-
-      using _Ex2 = typename decay<_Ex>::type;
-      void* __e = __cxxabiv1::__cxa_allocate_exception(sizeof(_Ex));
-      (void) __cxxabiv1::__cxa_init_primary_exception(
-   __e, const_cast<std::type_info*>(&typeid(_Ex)),
-   __exception_ptr::__dest_thunk<_Ex2>);
-      try
- {
-   ::new (__e) _Ex2(__ex);
-   return exception_ptr(__e);
- }
-      catch(...)
- {
-   __cxxabiv1::__cxa_free_exception(__e);
-   return current_exception();
- }
-# 277 "/usr/include/c++/14/bits/exception_ptr.h" 3
-    }
-# 291 "/usr/include/c++/14/bits/exception_ptr.h" 3
-}
-
-}
-# 167 "/usr/include/c++/14/exception" 2 3
-# 1 "/usr/include/c++/14/bits/nested_exception.h" 1 3
-# 40 "/usr/include/c++/14/bits/nested_exception.h" 3
-extern "C++" {
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-# 59 "/usr/include/c++/14/bits/nested_exception.h" 3
-  class nested_exception
-  {
-    exception_ptr _M_ptr;
-
-  public:
-
-    nested_exception() noexcept : _M_ptr(current_exception()) { }
-
-    nested_exception(const nested_exception&) noexcept = default;
-
-    nested_exception& operator=(const nested_exception&) noexcept = default;
-
-    virtual ~nested_exception() noexcept;
-
-
-    [[noreturn]]
-    void
-    rethrow_nested() const
-    {
-      if (_M_ptr)
- rethrow_exception(_M_ptr);
-      std::terminate();
-    }
-
-
-    exception_ptr
-    nested_ptr() const noexcept
-    { return _M_ptr; }
-  };
-
-
-
-  template<typename _Except>
-    struct _Nested_exception : public _Except, public nested_exception
-    {
-      explicit _Nested_exception(const _Except& __ex)
-      : _Except(__ex)
-      { }
-
-      explicit _Nested_exception(_Except&& __ex)
-      : _Except(static_cast<_Except&&>(__ex))
-      { }
-    };
-# 145 "/usr/include/c++/14/bits/nested_exception.h" 3
-  template<typename _Tp>
-    [[noreturn]]
-    inline void
-    throw_with_nested(_Tp&& __t)
-    {
-      using _Up = typename decay<_Tp>::type;
-      using _CopyConstructible
- = __and_<is_copy_constructible<_Up>, is_move_constructible<_Up>>;
-      static_assert(_CopyConstructible::value,
-   "throw_with_nested argument must be CopyConstructible");
-
-
-      if constexpr (is_class_v<_Up>)
- if constexpr (!is_final_v<_Up>)
-   if constexpr (!is_base_of_v<nested_exception, _Up>)
-     throw _Nested_exception<_Up>{std::forward<_Tp>(__t)};
-      throw std::forward<_Tp>(__t);
-
-
-
-
-
-    }
-# 203 "/usr/include/c++/14/bits/nested_exception.h" 3
-  template<typename _Ex>
-
-
-
-    inline void
-    rethrow_if_nested(const _Ex& __ex)
-    {
-      const _Ex* __ptr = __builtin_addressof(__ex);
-# 223 "/usr/include/c++/14/bits/nested_exception.h" 3
-      if constexpr (!is_polymorphic_v<_Ex>)
- return;
-      else if constexpr (is_base_of_v<nested_exception, _Ex>
-    && !is_convertible_v<_Ex*, nested_exception*>)
- return;
-
-
-
-
-      else if (auto __ne_ptr = dynamic_cast<const nested_exception*>(__ptr))
- __ne_ptr->rethrow_nested();
-
-    }
-
-
-}
-
-}
-# 168 "/usr/include/c++/14/exception" 2 3
-# 42 "/usr/include/c++/14/ios" 2 3
-# 1 "/usr/include/c++/14/bits/char_traits.h" 1 3
-# 37 "/usr/include/c++/14/bits/char_traits.h" 3
-       
-# 38 "/usr/include/c++/14/bits/char_traits.h" 3
-# 46 "/usr/include/c++/14/bits/char_traits.h" 3
-# 1 "/usr/include/c++/14/cwchar" 1 3
-# 39 "/usr/include/c++/14/cwchar" 3
-       
-# 40 "/usr/include/c++/14/cwchar" 3
-# 47 "/usr/include/c++/14/bits/char_traits.h" 2 3
-# 56 "/usr/include/c++/14/bits/char_traits.h" 3
-# 1 "/usr/include/c++/14/compare" 1 3
-# 33 "/usr/include/c++/14/compare" 3
-       
-# 34 "/usr/include/c++/14/compare" 3
-
-
-# 1 "/usr/include/c++/14/bits/version.h" 1 3
-# 47 "/usr/include/c++/14/bits/version.h" 3
-       
-# 48 "/usr/include/c++/14/bits/version.h" 3
-# 37 "/usr/include/c++/14/compare" 2 3
-
-
-
-# 1 "/usr/include/c++/14/concepts" 1 3
-# 33 "/usr/include/c++/14/concepts" 3
-       
-# 34 "/usr/include/c++/14/concepts" 3
-
-
-# 1 "/usr/include/c++/14/bits/version.h" 1 3
-# 47 "/usr/include/c++/14/bits/version.h" 3
-       
-# 48 "/usr/include/c++/14/bits/version.h" 3
-# 37 "/usr/include/c++/14/concepts" 2 3
-# 48 "/usr/include/c++/14/concepts" 3
 namespace std __attribute__ ((__visibility__ ("default")))
 {
 
@@ -7321,9 +4938,1797 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 57 "/usr/include/c++/14/bits/char_traits.h" 2 3
-# 1 "/usr/include/c++/14/bits/stl_construct.h" 1 3
-# 61 "/usr/include/c++/14/bits/stl_construct.h" 3
+# 39 "/usr/include/c++/14/array" 2 3
+# 1 "/usr/include/c++/14/initializer_list" 1 3
+# 33 "/usr/include/c++/14/initializer_list" 3
+       
+# 34 "/usr/include/c++/14/initializer_list" 3
+
+
+
+
+
+
+
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+  template<class _E>
+    class initializer_list
+    {
+    public:
+      typedef _E value_type;
+      typedef const _E& reference;
+      typedef const _E& const_reference;
+      typedef size_t size_type;
+      typedef const _E* iterator;
+      typedef const _E* const_iterator;
+
+    private:
+      iterator _M_array;
+      size_type _M_len;
+
+
+      constexpr initializer_list(const_iterator __a, size_type __l)
+      : _M_array(__a), _M_len(__l) { }
+
+    public:
+      constexpr initializer_list() noexcept
+      : _M_array(0), _M_len(0) { }
+
+
+      constexpr size_type
+      size() const noexcept { return _M_len; }
+
+
+      constexpr const_iterator
+      begin() const noexcept { return _M_array; }
+
+
+      constexpr const_iterator
+      end() const noexcept { return begin() + size(); }
+    };
+
+
+
+
+
+
+
+  template<class _Tp>
+    constexpr const _Tp*
+    begin(initializer_list<_Tp> __ils) noexcept
+    { return __ils.begin(); }
+
+
+
+
+
+
+
+  template<class _Tp>
+    constexpr const _Tp*
+    end(initializer_list<_Tp> __ils) noexcept
+    { return __ils.end(); }
+}
+# 40 "/usr/include/c++/14/array" 2 3
+
+
+# 1 "/usr/include/c++/14/bits/functexcept.h" 1 3
+# 40 "/usr/include/c++/14/bits/functexcept.h" 3
+# 1 "/usr/include/c++/14/bits/exception_defines.h" 1 3
+# 41 "/usr/include/c++/14/bits/functexcept.h" 2 3
+
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+
+
+
+  void
+  __throw_bad_exception(void) __attribute__((__noreturn__));
+
+
+  void
+  __throw_bad_alloc(void) __attribute__((__noreturn__));
+
+  void
+  __throw_bad_array_new_length(void) __attribute__((__noreturn__));
+
+
+  void
+  __throw_bad_cast(void) __attribute__((__noreturn__,__cold__));
+
+  void
+  __throw_bad_typeid(void) __attribute__((__noreturn__,__cold__));
+
+
+  void
+  __throw_logic_error(const char*) __attribute__((__noreturn__,__cold__));
+
+  void
+  __throw_domain_error(const char*) __attribute__((__noreturn__,__cold__));
+
+  void
+  __throw_invalid_argument(const char*) __attribute__((__noreturn__,__cold__));
+
+  void
+  __throw_length_error(const char*) __attribute__((__noreturn__,__cold__));
+
+  void
+  __throw_out_of_range(const char*) __attribute__((__noreturn__,__cold__));
+
+  void
+  __throw_out_of_range_fmt(const char*, ...) __attribute__((__noreturn__,__cold__))
+    __attribute__((__format__(__gnu_printf__, 1, 2)));
+
+  void
+  __throw_runtime_error(const char*) __attribute__((__noreturn__,__cold__));
+
+  void
+  __throw_range_error(const char*) __attribute__((__noreturn__,__cold__));
+
+  void
+  __throw_overflow_error(const char*) __attribute__((__noreturn__,__cold__));
+
+  void
+  __throw_underflow_error(const char*) __attribute__((__noreturn__,__cold__));
+
+
+  void
+  __throw_ios_failure(const char*) __attribute__((__noreturn__,__cold__));
+
+  void
+  __throw_ios_failure(const char*, int) __attribute__((__noreturn__,__cold__));
+
+
+  void
+  __throw_system_error(int) __attribute__((__noreturn__,__cold__));
+
+
+  void
+  __throw_future_error(int) __attribute__((__noreturn__,__cold__));
+
+
+  void
+  __throw_bad_function_call() __attribute__((__noreturn__,__cold__));
+# 140 "/usr/include/c++/14/bits/functexcept.h" 3
+
+}
+# 43 "/usr/include/c++/14/array" 2 3
+# 1 "/usr/include/c++/14/bits/stl_algobase.h" 1 3
+# 61 "/usr/include/c++/14/bits/stl_algobase.h" 3
+# 1 "/usr/include/c++/14/bits/cpp_type_traits.h" 1 3
+# 35 "/usr/include/c++/14/bits/cpp_type_traits.h" 3
+       
+# 36 "/usr/include/c++/14/bits/cpp_type_traits.h" 3
+# 67 "/usr/include/c++/14/bits/cpp_type_traits.h" 3
+extern "C++" {
+
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+
+  struct __true_type { };
+  struct __false_type { };
+
+  template<bool>
+    struct __truth_type
+    { typedef __false_type __type; };
+
+  template<>
+    struct __truth_type<true>
+    { typedef __true_type __type; };
+
+
+
+  template<class _Sp, class _Tp>
+    struct __traitor
+    {
+      enum { __value = bool(_Sp::__value) || bool(_Tp::__value) };
+      typedef typename __truth_type<__value>::__type __type;
+    };
+
+
+  template<typename, typename>
+    struct __are_same
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+
+  template<typename _Tp>
+    struct __are_same<_Tp, _Tp>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+
+  template<typename _Tp>
+    struct __is_void
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+
+  template<>
+    struct __is_void<void>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+
+
+
+  template<typename _Tp>
+    struct __is_integer
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+
+
+
+
+
+  template<>
+    struct __is_integer<bool>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_integer<char>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_integer<signed char>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_integer<unsigned char>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+
+  template<>
+    struct __is_integer<wchar_t>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+
+
+  template<>
+    struct __is_integer<char8_t>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+
+
+  template<>
+    struct __is_integer<char16_t>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_integer<char32_t>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+
+  template<>
+    struct __is_integer<short>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_integer<unsigned short>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_integer<int>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_integer<unsigned int>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_integer<long>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_integer<unsigned long>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_integer<long long>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_integer<unsigned long long>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+# 272 "/usr/include/c++/14/bits/cpp_type_traits.h" 3
+__extension__ template<> struct __is_integer<__int128> { enum { __value = 1 }; typedef __true_type __type; }; __extension__ template<> struct __is_integer<unsigned __int128> { enum { __value = 1 }; typedef __true_type __type; };
+# 289 "/usr/include/c++/14/bits/cpp_type_traits.h" 3
+  template<typename _Tp>
+    struct __is_floating
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+
+
+  template<>
+    struct __is_floating<float>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_floating<double>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_floating<long double>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+# 366 "/usr/include/c++/14/bits/cpp_type_traits.h" 3
+  template<typename _Tp>
+    struct __is_pointer
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+
+  template<typename _Tp>
+    struct __is_pointer<_Tp*>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+
+
+
+  template<typename _Tp>
+    struct __is_arithmetic
+    : public __traitor<__is_integer<_Tp>, __is_floating<_Tp> >
+    { };
+
+
+
+
+  template<typename _Tp>
+    struct __is_scalar
+    : public __traitor<__is_arithmetic<_Tp>, __is_pointer<_Tp> >
+    { };
+
+
+
+
+  template<typename _Tp>
+    struct __is_char
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+
+  template<>
+    struct __is_char<char>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+
+  template<>
+    struct __is_char<wchar_t>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+
+  template<typename _Tp>
+    struct __is_byte
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+
+  template<>
+    struct __is_byte<char>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_byte<signed char>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<>
+    struct __is_byte<unsigned char>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+
+  enum class byte : unsigned char;
+
+  template<>
+    struct __is_byte<byte>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+
+
+  template<>
+    struct __is_byte<char8_t>
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+
+  template<typename> struct iterator_traits;
+
+
+  template<typename _Tp>
+    struct __is_nonvolatile_trivially_copyable
+    {
+      enum { __value = __is_trivially_copyable(_Tp) };
+    };
+
+
+
+
+  template<typename _Tp>
+    struct __is_nonvolatile_trivially_copyable<volatile _Tp>
+    {
+      enum { __value = 0 };
+    };
+
+
+  template<typename _OutputIter, typename _InputIter>
+    struct __memcpyable
+    {
+      enum { __value = 0 };
+    };
+
+  template<typename _Tp>
+    struct __memcpyable<_Tp*, _Tp*>
+    : __is_nonvolatile_trivially_copyable<_Tp>
+    { };
+
+  template<typename _Tp>
+    struct __memcpyable<_Tp*, const _Tp*>
+    : __is_nonvolatile_trivially_copyable<_Tp>
+    { };
+
+
+
+
+
+
+  template<typename _Iter1, typename _Iter2>
+    struct __memcmpable
+    {
+      enum { __value = 0 };
+    };
+
+
+  template<typename _Tp>
+    struct __memcmpable<_Tp*, _Tp*>
+    : __is_nonvolatile_trivially_copyable<_Tp>
+    { };
+
+  template<typename _Tp>
+    struct __memcmpable<const _Tp*, _Tp*>
+    : __is_nonvolatile_trivially_copyable<_Tp>
+    { };
+
+  template<typename _Tp>
+    struct __memcmpable<_Tp*, const _Tp*>
+    : __is_nonvolatile_trivially_copyable<_Tp>
+    { };
+
+
+
+
+
+
+
+  template<typename _Tp, bool _TreatAsBytes =
+
+
+
+ __is_byte<_Tp>::__value
+
+    >
+    struct __is_memcmp_ordered
+    {
+      static const bool __value = _Tp(-1) > _Tp(1);
+    };
+
+  template<typename _Tp>
+    struct __is_memcmp_ordered<_Tp, false>
+    {
+      static const bool __value = false;
+    };
+
+
+  template<typename _Tp, typename _Up, bool = sizeof(_Tp) == sizeof(_Up)>
+    struct __is_memcmp_ordered_with
+    {
+      static const bool __value = __is_memcmp_ordered<_Tp>::__value
+ && __is_memcmp_ordered<_Up>::__value;
+    };
+
+  template<typename _Tp, typename _Up>
+    struct __is_memcmp_ordered_with<_Tp, _Up, false>
+    {
+      static const bool __value = false;
+    };
+# 579 "/usr/include/c++/14/bits/cpp_type_traits.h" 3
+  template<>
+    struct __is_memcmp_ordered_with<std::byte, std::byte, true>
+    { static constexpr bool __value = true; };
+
+  template<typename _Tp, bool _SameSize>
+    struct __is_memcmp_ordered_with<_Tp, std::byte, _SameSize>
+    { static constexpr bool __value = false; };
+
+  template<typename _Up, bool _SameSize>
+    struct __is_memcmp_ordered_with<std::byte, _Up, _SameSize>
+    { static constexpr bool __value = false; };
+
+
+
+
+
+  template<typename _Tp>
+    struct __is_move_iterator
+    {
+      enum { __value = 0 };
+      typedef __false_type __type;
+    };
+
+
+
+  template<typename _Iterator>
+    constexpr
+    inline _Iterator
+    __miter_base(_Iterator __it)
+    { return __it; }
+
+
+}
+}
+# 62 "/usr/include/c++/14/bits/stl_algobase.h" 2 3
+# 1 "/usr/include/c++/14/ext/type_traits.h" 1 3
+# 32 "/usr/include/c++/14/ext/type_traits.h" 3
+       
+# 33 "/usr/include/c++/14/ext/type_traits.h" 3
+
+
+
+
+extern "C++" {
+
+namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
+{
+
+
+
+  template<bool, typename>
+    struct __enable_if
+    { };
+
+  template<typename _Tp>
+    struct __enable_if<true, _Tp>
+    { typedef _Tp __type; };
+
+
+
+  template<bool _Cond, typename _Iftrue, typename _Iffalse>
+    struct __conditional_type
+    { typedef _Iftrue __type; };
+
+  template<typename _Iftrue, typename _Iffalse>
+    struct __conditional_type<false, _Iftrue, _Iffalse>
+    { typedef _Iffalse __type; };
+
+
+
+  template<typename _Tp>
+    struct __add_unsigned
+    {
+    private:
+      typedef __enable_if<std::__is_integer<_Tp>::__value, _Tp> __if_type;
+
+    public:
+      typedef typename __if_type::__type __type;
+    };
+
+  template<>
+    struct __add_unsigned<char>
+    { typedef unsigned char __type; };
+
+  template<>
+    struct __add_unsigned<signed char>
+    { typedef unsigned char __type; };
+
+  template<>
+    struct __add_unsigned<short>
+    { typedef unsigned short __type; };
+
+  template<>
+    struct __add_unsigned<int>
+    { typedef unsigned int __type; };
+
+  template<>
+    struct __add_unsigned<long>
+    { typedef unsigned long __type; };
+
+  template<>
+    struct __add_unsigned<long long>
+    { typedef unsigned long long __type; };
+
+
+  template<>
+    struct __add_unsigned<bool>;
+
+  template<>
+    struct __add_unsigned<wchar_t>;
+
+
+
+  template<typename _Tp>
+    struct __remove_unsigned
+    {
+    private:
+      typedef __enable_if<std::__is_integer<_Tp>::__value, _Tp> __if_type;
+
+    public:
+      typedef typename __if_type::__type __type;
+    };
+
+  template<>
+    struct __remove_unsigned<char>
+    { typedef signed char __type; };
+
+  template<>
+    struct __remove_unsigned<unsigned char>
+    { typedef signed char __type; };
+
+  template<>
+    struct __remove_unsigned<unsigned short>
+    { typedef short __type; };
+
+  template<>
+    struct __remove_unsigned<unsigned int>
+    { typedef int __type; };
+
+  template<>
+    struct __remove_unsigned<unsigned long>
+    { typedef long __type; };
+
+  template<>
+    struct __remove_unsigned<unsigned long long>
+    { typedef long long __type; };
+
+
+  template<>
+    struct __remove_unsigned<bool>;
+
+  template<>
+    struct __remove_unsigned<wchar_t>;
+
+
+
+  template<typename _Type>
+    constexpr
+    inline bool
+    __is_null_pointer(_Type* __ptr)
+    { return __ptr == 0; }
+
+  template<typename _Type>
+    constexpr
+    inline bool
+    __is_null_pointer(_Type)
+    { return false; }
+
+
+  constexpr bool
+  __is_null_pointer(std::nullptr_t)
+  { return true; }
+
+
+
+
+  template<typename _Tp, bool = std::__is_integer<_Tp>::__value>
+    struct __promote
+    { typedef double __type; };
+
+
+
+
+  template<typename _Tp>
+    struct __promote<_Tp, false>
+    { };
+
+  template<>
+    struct __promote<long double>
+    { typedef long double __type; };
+
+  template<>
+    struct __promote<double>
+    { typedef double __type; };
+
+  template<>
+    struct __promote<float>
+    { typedef float __type; };
+# 225 "/usr/include/c++/14/ext/type_traits.h" 3
+  template<typename... _Tp>
+    using __promoted_t = decltype((typename __promote<_Tp>::__type(0) + ...));
+
+
+
+  template<typename _Tp, typename _Up>
+    using __promote_2 = __promote<__promoted_t<_Tp, _Up>>;
+
+  template<typename _Tp, typename _Up, typename _Vp>
+    using __promote_3 = __promote<__promoted_t<_Tp, _Up, _Vp>>;
+
+  template<typename _Tp, typename _Up, typename _Vp, typename _Wp>
+    using __promote_4 = __promote<__promoted_t<_Tp, _Up, _Vp, _Wp>>;
+# 269 "/usr/include/c++/14/ext/type_traits.h" 3
+
+}
+}
+# 63 "/usr/include/c++/14/bits/stl_algobase.h" 2 3
+# 1 "/usr/include/c++/14/ext/numeric_traits.h" 1 3
+# 32 "/usr/include/c++/14/ext/numeric_traits.h" 3
+       
+# 33 "/usr/include/c++/14/ext/numeric_traits.h" 3
+
+
+
+
+namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
+{
+
+# 50 "/usr/include/c++/14/ext/numeric_traits.h" 3
+  template<typename _Tp>
+    struct __is_integer_nonstrict
+    : public std::__is_integer<_Tp>
+    {
+      using std::__is_integer<_Tp>::__value;
+
+
+      enum { __width = __value ? sizeof(_Tp) * 8 : 0 };
+    };
+
+  template<typename _Value>
+    struct __numeric_traits_integer
+    {
+
+      static_assert(__is_integer_nonstrict<_Value>::__value,
+      "invalid specialization");
+
+
+
+
+      static const bool __is_signed = (_Value)(-1) < 0;
+      static const int __digits
+ = __is_integer_nonstrict<_Value>::__width - __is_signed;
+
+
+      static const _Value __max = __is_signed
+ ? (((((_Value)1 << (__digits - 1)) - 1) << 1) + 1)
+ : ~(_Value)0;
+      static const _Value __min = __is_signed ? -__max - 1 : (_Value)0;
+    };
+
+  template<typename _Value>
+    const _Value __numeric_traits_integer<_Value>::__min;
+
+  template<typename _Value>
+    const _Value __numeric_traits_integer<_Value>::__max;
+
+  template<typename _Value>
+    const bool __numeric_traits_integer<_Value>::__is_signed;
+
+  template<typename _Value>
+    const int __numeric_traits_integer<_Value>::__digits;
+# 137 "/usr/include/c++/14/ext/numeric_traits.h" 3
+  template<typename _Tp>
+    using __int_traits = __numeric_traits_integer<_Tp>;
+# 157 "/usr/include/c++/14/ext/numeric_traits.h" 3
+  template<typename _Value>
+    struct __numeric_traits_floating
+    {
+
+      static const int __max_digits10 = (2 + (std::__are_same<_Value, float>::__value ? 24 : std::__are_same<_Value, double>::__value ? 53 : 64) * 643L / 2136);
+
+
+      static const bool __is_signed = true;
+      static const int __digits10 = (std::__are_same<_Value, float>::__value ? 6 : std::__are_same<_Value, double>::__value ? 15 : 18);
+      static const int __max_exponent10 = (std::__are_same<_Value, float>::__value ? 38 : std::__are_same<_Value, double>::__value ? 308 : 4932);
+    };
+
+  template<typename _Value>
+    const int __numeric_traits_floating<_Value>::__max_digits10;
+
+  template<typename _Value>
+    const bool __numeric_traits_floating<_Value>::__is_signed;
+
+  template<typename _Value>
+    const int __numeric_traits_floating<_Value>::__digits10;
+
+  template<typename _Value>
+    const int __numeric_traits_floating<_Value>::__max_exponent10;
+
+
+
+
+
+
+  template<typename _Value>
+    struct __numeric_traits
+    : public __numeric_traits_integer<_Value>
+    { };
+
+  template<>
+    struct __numeric_traits<float>
+    : public __numeric_traits_floating<float>
+    { };
+
+  template<>
+    struct __numeric_traits<double>
+    : public __numeric_traits_floating<double>
+    { };
+
+  template<>
+    struct __numeric_traits<long double>
+    : public __numeric_traits_floating<long double>
+    { };
+# 238 "/usr/include/c++/14/ext/numeric_traits.h" 3
+
+}
+# 64 "/usr/include/c++/14/bits/stl_algobase.h" 2 3
+# 1 "/usr/include/c++/14/bits/stl_pair.h" 1 3
+# 61 "/usr/include/c++/14/bits/stl_pair.h" 3
+# 1 "/usr/include/c++/14/bits/move.h" 1 3
+# 40 "/usr/include/c++/14/bits/move.h" 3
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+
+
+
+
+
+
+  template<typename _Tp>
+    inline constexpr _Tp*
+    __addressof(_Tp& __r) noexcept
+    { return __builtin_addressof(__r); }
+# 67 "/usr/include/c++/14/bits/move.h" 3
+  template<typename _Tp>
+    [[__nodiscard__]]
+    constexpr _Tp&&
+    forward(typename std::remove_reference<_Tp>::type& __t) noexcept
+    { return static_cast<_Tp&&>(__t); }
+
+
+
+
+
+
+
+  template<typename _Tp>
+    [[__nodiscard__]]
+    constexpr _Tp&&
+    forward(typename std::remove_reference<_Tp>::type&& __t) noexcept
+    {
+      static_assert(!std::is_lvalue_reference<_Tp>::value,
+   "std::forward must not be used to convert an rvalue to an lvalue");
+      return static_cast<_Tp&&>(__t);
+    }
+# 124 "/usr/include/c++/14/bits/move.h" 3
+  template<typename _Tp>
+    [[__nodiscard__]]
+    constexpr typename std::remove_reference<_Tp>::type&&
+    move(_Tp&& __t) noexcept
+    { return static_cast<typename std::remove_reference<_Tp>::type&&>(__t); }
+
+
+  template<typename _Tp>
+    struct __move_if_noexcept_cond
+    : public __and_<__not_<is_nothrow_move_constructible<_Tp>>,
+                    is_copy_constructible<_Tp>>::type { };
+# 144 "/usr/include/c++/14/bits/move.h" 3
+  template<typename _Tp>
+    [[__nodiscard__]]
+    constexpr
+    __conditional_t<__move_if_noexcept_cond<_Tp>::value, const _Tp&, _Tp&&>
+    move_if_noexcept(_Tp& __x) noexcept
+    { return std::move(__x); }
+# 160 "/usr/include/c++/14/bits/move.h" 3
+  template<typename _Tp>
+    [[__nodiscard__]]
+    inline constexpr _Tp*
+    addressof(_Tp& __r) noexcept
+    { return std::__addressof(__r); }
+
+
+
+  template<typename _Tp>
+    const _Tp* addressof(const _Tp&&) = delete;
+
+
+  template <typename _Tp, typename _Up = _Tp>
+    constexpr
+    inline _Tp
+    __exchange(_Tp& __obj, _Up&& __new_val)
+    {
+      _Tp __old_val = std::move(__obj);
+      __obj = std::forward<_Up>(__new_val);
+      return __old_val;
+    }
+# 204 "/usr/include/c++/14/bits/move.h" 3
+  template<typename _Tp>
+    constexpr
+    inline
+
+    typename enable_if<__and_<__not_<__is_tuple_like<_Tp>>,
+         is_move_constructible<_Tp>,
+         is_move_assignable<_Tp>>::value>::type
+
+
+
+    swap(_Tp& __a, _Tp& __b)
+    noexcept(__and_<is_nothrow_move_constructible<_Tp>, is_nothrow_move_assignable<_Tp>>::value)
+
+    {
+
+
+
+
+      _Tp __tmp = std::move(__a);
+      __a = std::move(__b);
+      __b = std::move(__tmp);
+    }
+
+
+
+
+  template<typename _Tp, size_t _Nm>
+    constexpr
+    inline
+
+    typename enable_if<__is_swappable<_Tp>::value>::type
+
+
+
+    swap(_Tp (&__a)[_Nm], _Tp (&__b)[_Nm])
+    noexcept(__is_nothrow_swappable<_Tp>::value)
+    {
+      for (size_t __n = 0; __n < _Nm; ++__n)
+ swap(__a[__n], __b[__n]);
+    }
+
+
+
+}
+# 62 "/usr/include/c++/14/bits/stl_pair.h" 2 3
+# 1 "/usr/include/c++/14/bits/utility.h" 1 3
+# 36 "/usr/include/c++/14/bits/utility.h" 3
+       
+# 37 "/usr/include/c++/14/bits/utility.h" 3
+
+
+
+
+
+
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+
+
+  template<typename _Tp>
+    struct tuple_size;
+
+
+
+
+
+  template<typename _Tp,
+    typename _Up = typename remove_cv<_Tp>::type,
+    typename = typename enable_if<is_same<_Tp, _Up>::value>::type,
+    size_t = tuple_size<_Tp>::value>
+    using __enable_if_has_tuple_size = _Tp;
+
+  template<typename _Tp>
+    struct tuple_size<const __enable_if_has_tuple_size<_Tp>>
+    : public tuple_size<_Tp> { };
+
+  template<typename _Tp>
+    struct tuple_size<volatile __enable_if_has_tuple_size<_Tp>>
+    : public tuple_size<_Tp> { };
+
+  template<typename _Tp>
+    struct tuple_size<const volatile __enable_if_has_tuple_size<_Tp>>
+    : public tuple_size<_Tp> { };
+
+
+  template<typename _Tp>
+    inline constexpr size_t tuple_size_v = tuple_size<_Tp>::value;
+
+
+
+  template<size_t __i, typename _Tp>
+    struct tuple_element;
+
+
+  template<size_t __i, typename _Tp>
+    using __tuple_element_t = typename tuple_element<__i, _Tp>::type;
+
+  template<size_t __i, typename _Tp>
+    struct tuple_element<__i, const _Tp>
+    {
+      using type = const __tuple_element_t<__i, _Tp>;
+    };
+
+  template<size_t __i, typename _Tp>
+    struct tuple_element<__i, volatile _Tp>
+    {
+      using type = volatile __tuple_element_t<__i, _Tp>;
+    };
+
+  template<size_t __i, typename _Tp>
+    struct tuple_element<__i, const volatile _Tp>
+    {
+      using type = const volatile __tuple_element_t<__i, _Tp>;
+    };
+
+
+
+
+
+  template<typename _Tp, typename... _Types>
+    constexpr size_t
+    __find_uniq_type_in_pack()
+    {
+      constexpr size_t __sz = sizeof...(_Types);
+      constexpr bool __found[__sz] = { __is_same(_Tp, _Types) ... };
+      size_t __n = __sz;
+      for (size_t __i = 0; __i < __sz; ++__i)
+ {
+   if (__found[__i])
+     {
+       if (__n < __sz)
+  return __sz;
+       __n = __i;
+     }
+ }
+      return __n;
+    }
+# 134 "/usr/include/c++/14/bits/utility.h" 3
+  template<size_t __i, typename _Tp>
+    using tuple_element_t = typename tuple_element<__i, _Tp>::type;
+
+
+
+
+  template<size_t... _Indexes> struct _Index_tuple { };
+
+
+  template<size_t _Num>
+    struct _Build_index_tuple
+    {
+# 154 "/usr/include/c++/14/bits/utility.h" 3
+      using __type = _Index_tuple<__integer_pack(_Num)...>;
+
+    };
+
+
+
+
+  template<typename _Tp, _Tp... _Idx>
+    struct integer_sequence
+    {
+
+      static_assert(is_integral_v<_Tp>);
+
+      typedef _Tp value_type;
+      static constexpr size_t size() noexcept { return sizeof...(_Idx); }
+    };
+
+
+  template<typename _Tp, _Tp _Num>
+    using make_integer_sequence
+
+
+
+      = integer_sequence<_Tp, __integer_pack(_Num)...>;
+
+
+
+  template<size_t... _Idx>
+    using index_sequence = integer_sequence<size_t, _Idx...>;
+
+
+  template<size_t _Num>
+    using make_index_sequence = make_integer_sequence<size_t, _Num>;
+
+
+  template<typename... _Types>
+    using index_sequence_for = make_index_sequence<sizeof...(_Types)>;
+
+
+
+
+  struct in_place_t {
+    explicit in_place_t() = default;
+  };
+
+  inline constexpr in_place_t in_place{};
+
+  template<typename _Tp> struct in_place_type_t
+  {
+    explicit in_place_type_t() = default;
+  };
+
+  template<typename _Tp>
+    inline constexpr in_place_type_t<_Tp> in_place_type{};
+
+  template<size_t _Idx> struct in_place_index_t
+  {
+    explicit in_place_index_t() = default;
+  };
+
+  template<size_t _Idx>
+    inline constexpr in_place_index_t<_Idx> in_place_index{};
+
+  template<typename>
+    inline constexpr bool __is_in_place_type_v = false;
+
+  template<typename _Tp>
+    inline constexpr bool __is_in_place_type_v<in_place_type_t<_Tp>> = true;
+
+  template<typename _Tp>
+    using __is_in_place_type = bool_constant<__is_in_place_type_v<_Tp>>;
+
+  template<typename>
+    inline constexpr bool __is_in_place_index_v = false;
+
+  template<size_t _Nm>
+    inline constexpr bool __is_in_place_index_v<in_place_index_t<_Nm>> = true;
+
+
+
+
+  template<size_t _Np, typename... _Types>
+    struct _Nth_type
+    { using type = __type_pack_element<_Np, _Types...>; };
+# 276 "/usr/include/c++/14/bits/utility.h" 3
+  namespace ranges::__detail
+  {
+    template<typename _Range>
+      inline constexpr bool __is_subrange = false;
+  }
+
+
+
+}
+# 63 "/usr/include/c++/14/bits/stl_pair.h" 2 3
+
+
+
+
+
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+# 79 "/usr/include/c++/14/bits/stl_pair.h" 3
+  struct piecewise_construct_t { explicit piecewise_construct_t() = default; };
+
+
+  inline constexpr piecewise_construct_t piecewise_construct =
+    piecewise_construct_t();
+
+
+
+
+  template<typename _T1, typename _T2>
+    struct pair;
+
+  template<typename...>
+    class tuple;
+
+
+
+
+
+  template<typename _Tp, size_t _Nm>
+    struct array;
+
+  template<size_t...>
+    struct _Index_tuple;
+
+  template<size_t _Int, class _Tp1, class _Tp2>
+    constexpr typename tuple_element<_Int, pair<_Tp1, _Tp2>>::type&
+    get(pair<_Tp1, _Tp2>& __in) noexcept;
+
+  template<size_t _Int, class _Tp1, class _Tp2>
+    constexpr typename tuple_element<_Int, pair<_Tp1, _Tp2>>::type&&
+    get(pair<_Tp1, _Tp2>&& __in) noexcept;
+
+  template<size_t _Int, class _Tp1, class _Tp2>
+    constexpr const typename tuple_element<_Int, pair<_Tp1, _Tp2>>::type&
+    get(const pair<_Tp1, _Tp2>& __in) noexcept;
+
+  template<size_t _Int, class _Tp1, class _Tp2>
+    constexpr const typename tuple_element<_Int, pair<_Tp1, _Tp2>>::type&&
+    get(const pair<_Tp1, _Tp2>&& __in) noexcept;
+
+  template<size_t __i, typename... _Elements>
+    constexpr __tuple_element_t<__i, tuple<_Elements...>>&
+    get(tuple<_Elements...>& __t) noexcept;
+
+  template<size_t __i, typename... _Elements>
+    constexpr const __tuple_element_t<__i, tuple<_Elements...>>&
+    get(const tuple<_Elements...>& __t) noexcept;
+
+  template<size_t __i, typename... _Elements>
+    constexpr __tuple_element_t<__i, tuple<_Elements...>>&&
+    get(tuple<_Elements...>&& __t) noexcept;
+
+  template<size_t __i, typename... _Elements>
+    constexpr const __tuple_element_t<__i, tuple<_Elements...>>&&
+    get(const tuple<_Elements...>&& __t) noexcept;
+
+  template<size_t _Int, typename _Tp, size_t _Nm>
+    constexpr _Tp&
+    get(array<_Tp, _Nm>&) noexcept;
+
+  template<size_t _Int, typename _Tp, size_t _Nm>
+    constexpr _Tp&&
+    get(array<_Tp, _Nm>&&) noexcept;
+
+  template<size_t _Int, typename _Tp, size_t _Nm>
+    constexpr const _Tp&
+    get(const array<_Tp, _Nm>&) noexcept;
+
+  template<size_t _Int, typename _Tp, size_t _Nm>
+    constexpr const _Tp&&
+    get(const array<_Tp, _Nm>&&) noexcept;
+# 260 "/usr/include/c++/14/bits/stl_pair.h" 3
+  template<typename _U1, typename _U2> class __pair_base
+  {
+
+
+
+
+
+
+
+  };
+# 283 "/usr/include/c++/14/bits/stl_pair.h" 3
+  template<typename _T1, typename _T2>
+    struct pair
+    : public __pair_base<_T1, _T2>
+    {
+      typedef _T1 first_type;
+      typedef _T2 second_type;
+
+      _T1 first;
+      _T2 second;
+
+
+      constexpr pair(const pair&) = default;
+      constexpr pair(pair&&) = default;
+
+      template<typename... _Args1, typename... _Args2>
+ constexpr
+ pair(piecewise_construct_t, tuple<_Args1...>, tuple<_Args2...>);
+
+
+      constexpr void
+      swap(pair& __p)
+      noexcept(__and_<__is_nothrow_swappable<_T1>,
+        __is_nothrow_swappable<_T2>>::value)
+      {
+ using std::swap;
+ swap(first, __p.first);
+ swap(second, __p.second);
+      }
+# 331 "/usr/include/c++/14/bits/stl_pair.h" 3
+    private:
+      template<typename... _Args1, size_t... _Indexes1,
+        typename... _Args2, size_t... _Indexes2>
+ constexpr
+ pair(tuple<_Args1...>&, tuple<_Args2...>&,
+      _Index_tuple<_Indexes1...>, _Index_tuple<_Indexes2...>);
+    public:
+
+
+
+
+
+      constexpr
+      explicit(__not_<__and_<__is_implicitly_default_constructible<_T1>,
+        __is_implicitly_default_constructible<_T2>>>())
+      pair()
+      requires is_default_constructible_v<_T1>
+        && is_default_constructible_v<_T2>
+      : first(), second()
+      { }
+
+    private:
+
+
+      template<typename _U1, typename _U2>
+ static constexpr bool
+ _S_constructible()
+ {
+   if constexpr (is_constructible_v<_T1, _U1>)
+     return is_constructible_v<_T2, _U2>;
+   return false;
+ }
+
+      template<typename _U1, typename _U2>
+ static constexpr bool
+ _S_nothrow_constructible()
+ {
+   if constexpr (is_nothrow_constructible_v<_T1, _U1>)
+     return is_nothrow_constructible_v<_T2, _U2>;
+   return false;
+ }
+
+      template<typename _U1, typename _U2>
+ static constexpr bool
+ _S_convertible()
+ {
+   if constexpr (is_convertible_v<_U1, _T1>)
+     return is_convertible_v<_U2, _T2>;
+   return false;
+ }
+
+
+      template<typename _U1, typename _U2>
+ static constexpr bool
+ _S_dangles()
+ {
+
+   if constexpr (__reference_constructs_from_temporary(_T1, _U1&&))
+     return true;
+   else
+     return __reference_constructs_from_temporary(_T2, _U2&&);
+
+
+
+ }
+# 424 "/usr/include/c++/14/bits/stl_pair.h" 3
+    public:
+
+
+      constexpr explicit(!_S_convertible<const _T1&, const _T2&>())
+      pair(const _T1& __x, const _T2& __y)
+      noexcept(_S_nothrow_constructible<const _T1&, const _T2&>())
+      requires (_S_constructible<const _T1&, const _T2&>())
+      : first(__x), second(__y)
+      { }
+
+
+
+
+
+      template<typename _U1, typename _U2>
+
+ requires (_S_constructible<_U1, _U2>()) && (!_S_dangles<_U1, _U2>())
+ constexpr explicit(!_S_convertible<_U1, _U2>())
+ pair(_U1&& __x, _U2&& __y)
+ noexcept(_S_nothrow_constructible<_U1, _U2>())
+ : first(std::forward<_U1>(__x)), second(std::forward<_U2>(__y))
+ { }
+
+
+
+
+      template<typename _U1, typename _U2>
+
+ requires (_S_constructible<_U1, _U2>()) && (_S_dangles<_U1, _U2>())
+ constexpr explicit(!_S_convertible<_U1, _U2>())
+ pair(_U1&&, _U2&&) = delete;
+
+
+      template<typename _U1, typename _U2>
+ requires (_S_constructible<const _U1&, const _U2&>())
+   && (!_S_dangles<_U1, _U2>())
+ constexpr explicit(!_S_convertible<const _U1&, const _U2&>())
+ pair(const pair<_U1, _U2>& __p)
+ noexcept(_S_nothrow_constructible<const _U1&, const _U2&>())
+ : first(__p.first), second(__p.second)
+ { }
+
+      template<typename _U1, typename _U2>
+ requires (_S_constructible<const _U1&, const _U2&>())
+       && (_S_dangles<const _U1&, const _U2&>())
+ constexpr explicit(!_S_convertible<const _U1&, const _U2&>())
+ pair(const pair<_U1, _U2>&) = delete;
+
+
+      template<typename _U1, typename _U2>
+ requires (_S_constructible<_U1, _U2>()) && (!_S_dangles<_U1, _U2>())
+ constexpr explicit(!_S_convertible<_U1, _U2>())
+ pair(pair<_U1, _U2>&& __p)
+ noexcept(_S_nothrow_constructible<_U1, _U2>())
+ : first(std::forward<_U1>(__p.first)),
+   second(std::forward<_U2>(__p.second))
+ { }
+
+      template<typename _U1, typename _U2>
+ requires (_S_constructible<_U1, _U2>()) && (_S_dangles<_U1, _U2>())
+ constexpr explicit(!_S_convertible<_U1, _U2>())
+ pair(pair<_U1, _U2>&&) = delete;
+# 537 "/usr/include/c++/14/bits/stl_pair.h" 3
+  private:
+
+      template<typename _U1, typename _U2>
+ static constexpr bool
+ _S_assignable()
+ {
+   if constexpr (is_assignable_v<_T1&, _U1>)
+     return is_assignable_v<_T2&, _U2>;
+   return false;
+ }
+
+      template<typename _U1, typename _U2>
+ static constexpr bool
+ _S_const_assignable()
+ {
+   if constexpr (is_assignable_v<const _T1&, _U1>)
+     return is_assignable_v<const _T2&, _U2>;
+   return false;
+ }
+
+      template<typename _U1, typename _U2>
+ static constexpr bool
+ _S_nothrow_assignable()
+ {
+   if constexpr (is_nothrow_assignable_v<_T1&, _U1>)
+     return is_nothrow_assignable_v<_T2&, _U2>;
+   return false;
+ }
+# 585 "/usr/include/c++/14/bits/stl_pair.h" 3
+  public:
+
+      pair& operator=(const pair&) = delete;
+
+
+      constexpr pair&
+      operator=(const pair& __p)
+      noexcept(_S_nothrow_assignable<const _T1&, const _T2&>())
+      requires (_S_assignable<const _T1&, const _T2&>())
+      {
+ first = __p.first;
+ second = __p.second;
+ return *this;
+      }
+
+
+      constexpr pair&
+      operator=(pair&& __p)
+      noexcept(_S_nothrow_assignable<_T1, _T2>())
+      requires (_S_assignable<_T1, _T2>())
+      {
+ first = std::forward<first_type>(__p.first);
+ second = std::forward<second_type>(__p.second);
+ return *this;
+      }
+
+
+      template<typename _U1, typename _U2>
+ constexpr pair&
+ operator=(const pair<_U1, _U2>& __p)
+ noexcept(_S_nothrow_assignable<const _U1&, const _U2&>())
+ requires (_S_assignable<const _U1&, const _U2&>())
+ {
+   first = __p.first;
+   second = __p.second;
+   return *this;
+ }
+
+
+      template<typename _U1, typename _U2>
+ constexpr pair&
+ operator=(pair<_U1, _U2>&& __p)
+ noexcept(_S_nothrow_assignable<_U1, _U2>())
+ requires (_S_assignable<_U1, _U2>())
+ {
+   first = std::forward<_U1>(__p.first);
+   second = std::forward<_U2>(__p.second);
+   return *this;
+ }
+# 995 "/usr/include/c++/14/bits/stl_pair.h" 3
+    };
+
+
+
+
+  template<typename _T1, typename _T2> pair(_T1, _T2) -> pair<_T1, _T2>;
+
+
+
+
+
+
+
+  template<typename _T1, typename _T2, typename _U1, typename _U2>
+    inline constexpr bool
+    operator==(const pair<_T1, _T2>& __x, const pair<_U1, _U2>& __y)
+    { return __x.first == __y.first && __x.second == __y.second; }
+# 1020 "/usr/include/c++/14/bits/stl_pair.h" 3
+  template<typename _T1, typename _T2, typename _U1, typename _U2>
+    constexpr common_comparison_category_t<__detail::__synth3way_t<_T1, _U1>,
+        __detail::__synth3way_t<_T2, _U2>>
+    operator<=>(const pair<_T1, _T2>& __x, const pair<_U1, _U2>& __y)
+    {
+      if (auto __c = __detail::__synth3way(__x.first, __y.first); __c != 0)
+ return __c;
+      return __detail::__synth3way(__x.second, __y.second);
+    }
+# 1080 "/usr/include/c++/14/bits/stl_pair.h" 3
+  template<typename _T1, typename _T2>
+    constexpr inline
+
+
+    typename enable_if<__and_<__is_swappable<_T1>,
+                              __is_swappable<_T2>>::value>::type
+
+
+
+    swap(pair<_T1, _T2>& __x, pair<_T1, _T2>& __y)
+    noexcept(noexcept(__x.swap(__y)))
+    { __x.swap(__y); }
+# 1103 "/usr/include/c++/14/bits/stl_pair.h" 3
+  template<typename _T1, typename _T2>
+    typename enable_if<!__and_<__is_swappable<_T1>,
+          __is_swappable<_T2>>::value>::type
+    swap(pair<_T1, _T2>&, pair<_T1, _T2>&) = delete;
+# 1129 "/usr/include/c++/14/bits/stl_pair.h" 3
+  template<typename _T1, typename _T2>
+    constexpr pair<typename __decay_and_strip<_T1>::__type,
+                   typename __decay_and_strip<_T2>::__type>
+    make_pair(_T1&& __x, _T2&& __y)
+    {
+      typedef typename __decay_and_strip<_T1>::__type __ds_type1;
+      typedef typename __decay_and_strip<_T2>::__type __ds_type2;
+      typedef pair<__ds_type1, __ds_type2> __pair_type;
+      return __pair_type(std::forward<_T1>(__x), std::forward<_T2>(__y));
+    }
+# 1152 "/usr/include/c++/14/bits/stl_pair.h" 3
+  template<typename _T1, typename _T2>
+    struct __is_tuple_like_impl<pair<_T1, _T2>> : true_type
+    { };
+
+
+
+  template<class _Tp1, class _Tp2>
+    struct tuple_size<pair<_Tp1, _Tp2>>
+    : public integral_constant<size_t, 2> { };
+
+
+  template<class _Tp1, class _Tp2>
+    struct tuple_element<0, pair<_Tp1, _Tp2>>
+    { typedef _Tp1 type; };
+
+
+  template<class _Tp1, class _Tp2>
+    struct tuple_element<1, pair<_Tp1, _Tp2>>
+    { typedef _Tp2 type; };
+
+
+
+  template<size_t __i, typename... _Types>
+    struct tuple_element<__i, tuple<_Types...>>;
+
+
+  template<typename _Tp1, typename _Tp2>
+    inline constexpr size_t tuple_size_v<pair<_Tp1, _Tp2>> = 2;
+
+  template<typename _Tp1, typename _Tp2>
+    inline constexpr size_t tuple_size_v<const pair<_Tp1, _Tp2>> = 2;
+
+  template<typename _Tp>
+    inline constexpr bool __is_pair = false;
+
+  template<typename _Tp, typename _Up>
+    inline constexpr bool __is_pair<pair<_Tp, _Up>> = true;
+
+
+
+  template<size_t _Int>
+    struct __pair_get;
+
+  template<>
+    struct __pair_get<0>
+    {
+      template<typename _Tp1, typename _Tp2>
+ static constexpr _Tp1&
+ __get(pair<_Tp1, _Tp2>& __pair) noexcept
+ { return __pair.first; }
+
+      template<typename _Tp1, typename _Tp2>
+ static constexpr _Tp1&&
+ __move_get(pair<_Tp1, _Tp2>&& __pair) noexcept
+ { return std::forward<_Tp1>(__pair.first); }
+
+      template<typename _Tp1, typename _Tp2>
+ static constexpr const _Tp1&
+ __const_get(const pair<_Tp1, _Tp2>& __pair) noexcept
+ { return __pair.first; }
+
+      template<typename _Tp1, typename _Tp2>
+ static constexpr const _Tp1&&
+ __const_move_get(const pair<_Tp1, _Tp2>&& __pair) noexcept
+ { return std::forward<const _Tp1>(__pair.first); }
+    };
+
+  template<>
+    struct __pair_get<1>
+    {
+      template<typename _Tp1, typename _Tp2>
+ static constexpr _Tp2&
+ __get(pair<_Tp1, _Tp2>& __pair) noexcept
+ { return __pair.second; }
+
+      template<typename _Tp1, typename _Tp2>
+ static constexpr _Tp2&&
+ __move_get(pair<_Tp1, _Tp2>&& __pair) noexcept
+ { return std::forward<_Tp2>(__pair.second); }
+
+      template<typename _Tp1, typename _Tp2>
+ static constexpr const _Tp2&
+ __const_get(const pair<_Tp1, _Tp2>& __pair) noexcept
+ { return __pair.second; }
+
+      template<typename _Tp1, typename _Tp2>
+ static constexpr const _Tp2&&
+ __const_move_get(const pair<_Tp1, _Tp2>&& __pair) noexcept
+ { return std::forward<const _Tp2>(__pair.second); }
+    };
+
+
+
+
+
+
+  template<size_t _Int, class _Tp1, class _Tp2>
+    constexpr typename tuple_element<_Int, pair<_Tp1, _Tp2>>::type&
+    get(pair<_Tp1, _Tp2>& __in) noexcept
+    { return __pair_get<_Int>::__get(__in); }
+
+  template<size_t _Int, class _Tp1, class _Tp2>
+    constexpr typename tuple_element<_Int, pair<_Tp1, _Tp2>>::type&&
+    get(pair<_Tp1, _Tp2>&& __in) noexcept
+    { return __pair_get<_Int>::__move_get(std::move(__in)); }
+
+  template<size_t _Int, class _Tp1, class _Tp2>
+    constexpr const typename tuple_element<_Int, pair<_Tp1, _Tp2>>::type&
+    get(const pair<_Tp1, _Tp2>& __in) noexcept
+    { return __pair_get<_Int>::__const_get(__in); }
+
+  template<size_t _Int, class _Tp1, class _Tp2>
+    constexpr const typename tuple_element<_Int, pair<_Tp1, _Tp2>>::type&&
+    get(const pair<_Tp1, _Tp2>&& __in) noexcept
+    { return __pair_get<_Int>::__const_move_get(std::move(__in)); }
+
+
+
+  template <typename _Tp, typename _Up>
+    constexpr _Tp&
+    get(pair<_Tp, _Up>& __p) noexcept
+    { return __p.first; }
+
+  template <typename _Tp, typename _Up>
+    constexpr const _Tp&
+    get(const pair<_Tp, _Up>& __p) noexcept
+    { return __p.first; }
+
+  template <typename _Tp, typename _Up>
+    constexpr _Tp&&
+    get(pair<_Tp, _Up>&& __p) noexcept
+    { return std::move(__p.first); }
+
+  template <typename _Tp, typename _Up>
+    constexpr const _Tp&&
+    get(const pair<_Tp, _Up>&& __p) noexcept
+    { return std::move(__p.first); }
+
+  template <typename _Tp, typename _Up>
+    constexpr _Tp&
+    get(pair<_Up, _Tp>& __p) noexcept
+    { return __p.second; }
+
+  template <typename _Tp, typename _Up>
+    constexpr const _Tp&
+    get(const pair<_Up, _Tp>& __p) noexcept
+    { return __p.second; }
+
+  template <typename _Tp, typename _Up>
+    constexpr _Tp&&
+    get(pair<_Up, _Tp>&& __p) noexcept
+    { return std::move(__p.second); }
+
+  template <typename _Tp, typename _Up>
+    constexpr const _Tp&&
+    get(const pair<_Up, _Tp>&& __p) noexcept
+    { return std::move(__p.second); }
+# 1332 "/usr/include/c++/14/bits/stl_pair.h" 3
+
+}
+# 65 "/usr/include/c++/14/bits/stl_algobase.h" 2 3
 # 1 "/usr/include/c++/14/bits/stl_iterator_base_types.h" 1 3
 # 62 "/usr/include/c++/14/bits/stl_iterator_base_types.h" 3
        
@@ -8758,7 +8163,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 62 "/usr/include/c++/14/bits/stl_construct.h" 2 3
+# 66 "/usr/include/c++/14/bits/stl_algobase.h" 2 3
 # 1 "/usr/include/c++/14/bits/stl_iterator_base_funcs.h" 1 3
 # 62 "/usr/include/c++/14/bits/stl_iterator_base_funcs.h" 3
        
@@ -8936,7 +8341,243 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 63 "/usr/include/c++/14/bits/stl_construct.h" 2 3
+# 67 "/usr/include/c++/14/bits/stl_algobase.h" 2 3
+# 1 "/usr/include/c++/14/bits/stl_iterator.h" 1 3
+# 75 "/usr/include/c++/14/bits/stl_iterator.h" 3
+# 1 "/usr/include/c++/14/new" 1 3
+# 38 "/usr/include/c++/14/new" 3
+       
+# 39 "/usr/include/c++/14/new" 3
+
+
+# 1 "/usr/include/c++/14/bits/exception.h" 1 3
+# 34 "/usr/include/c++/14/bits/exception.h" 3
+       
+# 35 "/usr/include/c++/14/bits/exception.h" 3
+
+
+
+extern "C++" {
+
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+# 59 "/usr/include/c++/14/bits/exception.h" 3
+  class exception
+  {
+  public:
+    exception() noexcept { }
+    virtual ~exception() noexcept;
+
+    exception(const exception&) = default;
+    exception& operator=(const exception&) = default;
+    exception(exception&&) = default;
+    exception& operator=(exception&&) = default;
+
+
+
+
+    virtual const char*
+    what() const noexcept;
+  };
+
+
+
+}
+
+}
+# 42 "/usr/include/c++/14/new" 2 3
+
+
+
+
+# 1 "/usr/include/c++/14/bits/version.h" 1 3
+# 47 "/usr/include/c++/14/bits/version.h" 3
+       
+# 48 "/usr/include/c++/14/bits/version.h" 3
+# 47 "/usr/include/c++/14/new" 2 3
+
+#pragma GCC visibility push(default)
+
+extern "C++" {
+
+namespace std
+{
+
+
+
+
+
+
+  class bad_alloc : public exception
+  {
+  public:
+    bad_alloc() throw() { }
+
+
+    bad_alloc(const bad_alloc&) = default;
+    bad_alloc& operator=(const bad_alloc&) = default;
+
+
+
+
+    virtual ~bad_alloc() throw();
+
+
+    virtual const char* what() const throw();
+  };
+
+
+  class bad_array_new_length : public bad_alloc
+  {
+  public:
+    bad_array_new_length() throw() { }
+
+
+
+    virtual ~bad_array_new_length() throw();
+
+
+    virtual const char* what() const throw();
+  };
+
+
+
+  enum class align_val_t: size_t {};
+
+
+  struct nothrow_t
+  {
+
+    explicit nothrow_t() = default;
+
+  };
+
+  extern const nothrow_t nothrow;
+
+
+
+  typedef void (*new_handler)();
+
+
+
+  new_handler set_new_handler(new_handler) throw();
+
+
+
+  new_handler get_new_handler() noexcept;
+
+}
+# 131 "/usr/include/c++/14/new" 3
+[[__nodiscard__]] void* operator new(std::size_t)
+  __attribute__((__externally_visible__));
+[[__nodiscard__]] void* operator new[](std::size_t)
+  __attribute__((__externally_visible__));
+void operator delete(void*) noexcept
+  __attribute__((__externally_visible__));
+void operator delete[](void*) noexcept
+  __attribute__((__externally_visible__));
+
+void operator delete(void*, std::size_t) noexcept
+  __attribute__((__externally_visible__));
+void operator delete[](void*, std::size_t) noexcept
+  __attribute__((__externally_visible__));
+
+[[__nodiscard__]] void* operator new(std::size_t, const std::nothrow_t&) noexcept
+  __attribute__((__externally_visible__, __alloc_size__ (1), __malloc__));
+[[__nodiscard__]] void* operator new[](std::size_t, const std::nothrow_t&) noexcept
+  __attribute__((__externally_visible__, __alloc_size__ (1), __malloc__));
+void operator delete(void*, const std::nothrow_t&) noexcept
+  __attribute__((__externally_visible__));
+void operator delete[](void*, const std::nothrow_t&) noexcept
+  __attribute__((__externally_visible__));
+
+[[__nodiscard__]] void* operator new(std::size_t, std::align_val_t)
+  __attribute__((__externally_visible__, __alloc_size__ (1), __malloc__));
+[[__nodiscard__]] void* operator new(std::size_t, std::align_val_t, const std::nothrow_t&)
+  noexcept __attribute__((__externally_visible__, __alloc_size__ (1), __malloc__));
+void operator delete(void*, std::align_val_t)
+  noexcept __attribute__((__externally_visible__));
+void operator delete(void*, std::align_val_t, const std::nothrow_t&)
+  noexcept __attribute__((__externally_visible__));
+[[__nodiscard__]] void* operator new[](std::size_t, std::align_val_t)
+  __attribute__((__externally_visible__, __alloc_size__ (1), __malloc__));
+[[__nodiscard__]] void* operator new[](std::size_t, std::align_val_t, const std::nothrow_t&)
+  noexcept __attribute__((__externally_visible__, __alloc_size__ (1), __malloc__));
+void operator delete[](void*, std::align_val_t)
+  noexcept __attribute__((__externally_visible__));
+void operator delete[](void*, std::align_val_t, const std::nothrow_t&)
+  noexcept __attribute__((__externally_visible__));
+
+void operator delete(void*, std::size_t, std::align_val_t)
+  noexcept __attribute__((__externally_visible__));
+void operator delete[](void*, std::size_t, std::align_val_t)
+  noexcept __attribute__((__externally_visible__));
+
+
+
+
+[[__nodiscard__]] inline void* operator new(std::size_t, void* __p) noexcept
+{ return __p; }
+[[__nodiscard__]] inline void* operator new[](std::size_t, void* __p) noexcept
+{ return __p; }
+
+
+inline void operator delete (void*, void*) noexcept { }
+inline void operator delete[](void*, void*) noexcept { }
+
+}
+
+
+namespace std
+{
+
+
+  template<typename _Tp>
+    [[nodiscard]] constexpr _Tp*
+    launder(_Tp* __p) noexcept
+    { return __builtin_launder(__p); }
+
+
+
+
+  template<typename _Ret, typename... _Args , bool _NE>
+    void launder(_Ret (*)(_Args...) noexcept (_NE)) = delete;
+  template<typename _Ret, typename... _Args , bool _NE>
+    void launder(_Ret (*)(_Args......) noexcept (_NE)) = delete;
+
+  void launder(void*) = delete;
+  void launder(const void*) = delete;
+  void launder(volatile void*) = delete;
+  void launder(const volatile void*) = delete;
+
+
+
+  inline constexpr size_t hardware_destructive_interference_size = 64;
+  inline constexpr size_t hardware_constructive_interference_size = 64;
+
+}
+
+
+
+
+namespace std
+{
+
+
+  struct destroying_delete_t
+  {
+    explicit destroying_delete_t() = default;
+  };
+
+  inline constexpr destroying_delete_t destroying_delete{};
+}
+
+
+#pragma GCC visibility pop
+# 76 "/usr/include/c++/14/bits/stl_iterator.h" 2 3
+
+
+# 1 "/usr/include/c++/14/bits/stl_construct.h" 1 3
 # 73 "/usr/include/c++/14/bits/stl_construct.h" 3
 namespace std __attribute__ ((__visibility__ ("default")))
 {
@@ -9114,13 +8755,7378 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 58 "/usr/include/c++/14/bits/char_traits.h" 2 3
+# 79 "/usr/include/c++/14/bits/stl_iterator.h" 2 3
 
 
 
 
 
 
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+
+
+
+
+
+
+
+  namespace __detail
+  {
+
+
+    template<typename _Cat, typename _Limit, typename _Otherwise = _Cat>
+      using __clamp_iter_cat
+ = __conditional_t<derived_from<_Cat, _Limit>, _Limit, _Otherwise>;
+  }
+
+
+
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+# 128 "/usr/include/c++/14/bits/stl_iterator.h" 3
+  template<typename _Iterator>
+    class reverse_iterator
+    : public iterator<typename iterator_traits<_Iterator>::iterator_category,
+        typename iterator_traits<_Iterator>::value_type,
+        typename iterator_traits<_Iterator>::difference_type,
+        typename iterator_traits<_Iterator>::pointer,
+                      typename iterator_traits<_Iterator>::reference>
+    {
+      template<typename _Iter>
+ friend class reverse_iterator;
+
+
+
+
+      template<typename _Iter>
+ static constexpr bool __convertible = !is_same_v<_Iter, _Iterator>
+     && convertible_to<const _Iter&, _Iterator>;
+
+
+    protected:
+      _Iterator current;
+
+      typedef iterator_traits<_Iterator> __traits_type;
+
+    public:
+      typedef _Iterator iterator_type;
+      typedef typename __traits_type::pointer pointer;
+
+
+
+
+      using iterator_concept
+ = __conditional_t<random_access_iterator<_Iterator>,
+     random_access_iterator_tag,
+     bidirectional_iterator_tag>;
+      using iterator_category
+ = __detail::__clamp_iter_cat<typename __traits_type::iterator_category,
+         random_access_iterator_tag>;
+      using value_type = iter_value_t<_Iterator>;
+      using difference_type = iter_difference_t<_Iterator>;
+      using reference = iter_reference_t<_Iterator>;
+# 178 "/usr/include/c++/14/bits/stl_iterator.h" 3
+      constexpr
+      reverse_iterator()
+      noexcept(noexcept(_Iterator()))
+      : current()
+      { }
+
+
+
+
+      explicit constexpr
+      reverse_iterator(iterator_type __x)
+      noexcept(noexcept(_Iterator(__x)))
+      : current(__x)
+      { }
+
+
+
+
+      constexpr
+      reverse_iterator(const reverse_iterator& __x)
+      noexcept(noexcept(_Iterator(__x.current)))
+      : current(__x.current)
+      { }
+
+
+      reverse_iterator& operator=(const reverse_iterator&) = default;
+
+
+
+
+
+
+      template<typename _Iter>
+
+ requires __convertible<_Iter>
+
+ constexpr
+        reverse_iterator(const reverse_iterator<_Iter>& __x)
+ noexcept(noexcept(_Iterator(__x.current)))
+ : current(__x.current)
+ { }
+
+
+      template<typename _Iter>
+
+ requires __convertible<_Iter>
+   && assignable_from<_Iterator&, const _Iter&>
+
+ constexpr
+ reverse_iterator&
+ operator=(const reverse_iterator<_Iter>& __x)
+ noexcept(noexcept(current = __x.current))
+ {
+   current = __x.current;
+   return *this;
+ }
+
+
+
+
+
+      [[__nodiscard__]]
+      constexpr iterator_type
+      base() const
+      noexcept(noexcept(_Iterator(current)))
+      { return current; }
+# 255 "/usr/include/c++/14/bits/stl_iterator.h" 3
+      [[__nodiscard__]]
+      constexpr reference
+      operator*() const
+      {
+ _Iterator __tmp = current;
+ return *--__tmp;
+      }
+
+
+
+
+
+
+      [[__nodiscard__]]
+      constexpr pointer
+      operator->() const
+
+      requires is_pointer_v<_Iterator>
+ || requires(const _Iterator __i) { __i.operator->(); }
+
+      {
+
+
+ _Iterator __tmp = current;
+ --__tmp;
+ return _S_to_pointer(__tmp);
+      }
+
+
+
+
+
+
+      constexpr reverse_iterator&
+      operator++()
+      {
+ --current;
+ return *this;
+      }
+
+
+
+
+
+
+      constexpr reverse_iterator
+      operator++(int)
+      {
+ reverse_iterator __tmp = *this;
+ --current;
+ return __tmp;
+      }
+
+
+
+
+
+
+      constexpr reverse_iterator&
+      operator--()
+      {
+ ++current;
+ return *this;
+      }
+
+
+
+
+
+
+      constexpr reverse_iterator
+      operator--(int)
+      {
+ reverse_iterator __tmp = *this;
+ ++current;
+ return __tmp;
+      }
+
+
+
+
+
+
+      [[__nodiscard__]]
+      constexpr reverse_iterator
+      operator+(difference_type __n) const
+      { return reverse_iterator(current - __n); }
+
+
+
+
+
+
+
+      constexpr reverse_iterator&
+      operator+=(difference_type __n)
+      {
+ current -= __n;
+ return *this;
+      }
+
+
+
+
+
+
+      [[__nodiscard__]]
+      constexpr reverse_iterator
+      operator-(difference_type __n) const
+      { return reverse_iterator(current + __n); }
+
+
+
+
+
+
+
+      constexpr reverse_iterator&
+      operator-=(difference_type __n)
+      {
+ current += __n;
+ return *this;
+      }
+
+
+
+
+
+
+      [[__nodiscard__]]
+      constexpr reference
+      operator[](difference_type __n) const
+      { return *(*this + __n); }
+
+
+      [[nodiscard]]
+      friend constexpr iter_rvalue_reference_t<_Iterator>
+      iter_move(const reverse_iterator& __i)
+      noexcept(is_nothrow_copy_constructible_v<_Iterator>
+        && noexcept(ranges::iter_move(--std::declval<_Iterator&>())))
+      {
+ auto __tmp = __i.base();
+ return ranges::iter_move(--__tmp);
+      }
+
+      template<indirectly_swappable<_Iterator> _Iter2>
+ friend constexpr void
+ iter_swap(const reverse_iterator& __x,
+    const reverse_iterator<_Iter2>& __y)
+ noexcept(is_nothrow_copy_constructible_v<_Iterator>
+   && is_nothrow_copy_constructible_v<_Iter2>
+   && noexcept(ranges::iter_swap(--std::declval<_Iterator&>(),
+            --std::declval<_Iter2&>())))
+ {
+   auto __xtmp = __x.base();
+   auto __ytmp = __y.base();
+   ranges::iter_swap(--__xtmp, --__ytmp);
+ }
+
+
+    private:
+      template<typename _Tp>
+ static constexpr _Tp*
+ _S_to_pointer(_Tp* __p)
+        { return __p; }
+
+      template<typename _Tp>
+ static constexpr pointer
+ _S_to_pointer(_Tp __t)
+        { return __t.operator->(); }
+    };
+# 524 "/usr/include/c++/14/bits/stl_iterator.h" 3
+  template<typename _IteratorL, typename _IteratorR>
+    [[nodiscard]]
+    constexpr bool
+    operator==(const reverse_iterator<_IteratorL>& __x,
+        const reverse_iterator<_IteratorR>& __y)
+    requires requires { { __x.base() == __y.base() } -> convertible_to<bool>; }
+    { return __x.base() == __y.base(); }
+
+  template<typename _IteratorL, typename _IteratorR>
+    [[nodiscard]]
+    constexpr bool
+    operator!=(const reverse_iterator<_IteratorL>& __x,
+        const reverse_iterator<_IteratorR>& __y)
+    requires requires { { __x.base() != __y.base() } -> convertible_to<bool>; }
+    { return __x.base() != __y.base(); }
+
+  template<typename _IteratorL, typename _IteratorR>
+    [[nodiscard]]
+    constexpr bool
+    operator<(const reverse_iterator<_IteratorL>& __x,
+       const reverse_iterator<_IteratorR>& __y)
+    requires requires { { __x.base() > __y.base() } -> convertible_to<bool>; }
+    { return __x.base() > __y.base(); }
+
+  template<typename _IteratorL, typename _IteratorR>
+    [[nodiscard]]
+    constexpr bool
+    operator>(const reverse_iterator<_IteratorL>& __x,
+       const reverse_iterator<_IteratorR>& __y)
+    requires requires { { __x.base() < __y.base() } -> convertible_to<bool>; }
+    { return __x.base() < __y.base(); }
+
+  template<typename _IteratorL, typename _IteratorR>
+    [[nodiscard]]
+    constexpr bool
+    operator<=(const reverse_iterator<_IteratorL>& __x,
+        const reverse_iterator<_IteratorR>& __y)
+    requires requires { { __x.base() >= __y.base() } -> convertible_to<bool>; }
+    { return __x.base() >= __y.base(); }
+
+  template<typename _IteratorL, typename _IteratorR>
+    [[nodiscard]]
+    constexpr bool
+    operator>=(const reverse_iterator<_IteratorL>& __x,
+        const reverse_iterator<_IteratorR>& __y)
+    requires requires { { __x.base() <= __y.base() } -> convertible_to<bool>; }
+    { return __x.base() <= __y.base(); }
+
+  template<typename _IteratorL,
+    three_way_comparable_with<_IteratorL> _IteratorR>
+    [[nodiscard]]
+    constexpr compare_three_way_result_t<_IteratorL, _IteratorR>
+    operator<=>(const reverse_iterator<_IteratorL>& __x,
+  const reverse_iterator<_IteratorR>& __y)
+    { return __y.base() <=> __x.base(); }
+
+
+
+
+  template<typename _Iterator>
+    [[nodiscard]]
+    constexpr bool
+    operator==(const reverse_iterator<_Iterator>& __x,
+        const reverse_iterator<_Iterator>& __y)
+    requires requires { { __x.base() == __y.base() } -> convertible_to<bool>; }
+    { return __x.base() == __y.base(); }
+
+  template<three_way_comparable _Iterator>
+    [[nodiscard]]
+    constexpr compare_three_way_result_t<_Iterator, _Iterator>
+    operator<=>(const reverse_iterator<_Iterator>& __x,
+  const reverse_iterator<_Iterator>& __y)
+    { return __y.base() <=> __x.base(); }
+# 615 "/usr/include/c++/14/bits/stl_iterator.h" 3
+  template<typename _IteratorL, typename _IteratorR>
+    [[__nodiscard__]]
+    inline constexpr auto
+    operator-(const reverse_iterator<_IteratorL>& __x,
+       const reverse_iterator<_IteratorR>& __y)
+    -> decltype(__y.base() - __x.base())
+    { return __y.base() - __x.base(); }
+
+
+  template<typename _Iterator>
+    [[__nodiscard__]]
+    inline constexpr reverse_iterator<_Iterator>
+    operator+(typename reverse_iterator<_Iterator>::difference_type __n,
+       const reverse_iterator<_Iterator>& __x)
+    { return reverse_iterator<_Iterator>(__x.base() - __n); }
+
+
+
+  template<typename _Iterator>
+    inline constexpr reverse_iterator<_Iterator>
+    __make_reverse_iterator(_Iterator __i)
+    { return reverse_iterator<_Iterator>(__i); }
+
+
+
+
+
+  template<typename _Iterator>
+    [[__nodiscard__]]
+    inline constexpr reverse_iterator<_Iterator>
+    make_reverse_iterator(_Iterator __i)
+    { return reverse_iterator<_Iterator>(__i); }
+
+
+  template<typename _Iterator1, typename _Iterator2>
+    requires (!sized_sentinel_for<_Iterator1, _Iterator2>)
+    inline constexpr bool
+    disable_sized_sentinel_for<reverse_iterator<_Iterator1>,
+          reverse_iterator<_Iterator2>> = true;
+
+
+
+  template<typename _Iterator>
+    constexpr
+    auto
+    __niter_base(reverse_iterator<_Iterator> __it)
+    -> decltype(__make_reverse_iterator(__niter_base(__it.base())))
+    { return __make_reverse_iterator(__niter_base(__it.base())); }
+
+  template<typename _Iterator>
+    struct __is_move_iterator<reverse_iterator<_Iterator> >
+      : __is_move_iterator<_Iterator>
+    { };
+
+  template<typename _Iterator>
+    constexpr
+    auto
+    __miter_base(reverse_iterator<_Iterator> __it)
+    -> decltype(__make_reverse_iterator(__miter_base(__it.base())))
+    { return __make_reverse_iterator(__miter_base(__it.base())); }
+# 688 "/usr/include/c++/14/bits/stl_iterator.h" 3
+  template<typename _Container>
+    class back_insert_iterator
+    : public iterator<output_iterator_tag, void, void, void, void>
+    {
+    protected:
+      _Container* container;
+
+    public:
+
+      typedef _Container container_type;
+
+      using difference_type = ptrdiff_t;
+
+
+
+      explicit constexpr
+      back_insert_iterator(_Container& __x)
+      : container(std::__addressof(__x)) { }
+# 726 "/usr/include/c++/14/bits/stl_iterator.h" 3
+      constexpr
+      back_insert_iterator&
+      operator=(const typename _Container::value_type& __value)
+      {
+ container->push_back(__value);
+ return *this;
+      }
+
+      constexpr
+      back_insert_iterator&
+      operator=(typename _Container::value_type&& __value)
+      {
+ container->push_back(std::move(__value));
+ return *this;
+      }
+
+
+
+      [[__nodiscard__]] constexpr
+      back_insert_iterator&
+      operator*()
+      { return *this; }
+
+
+      constexpr
+      back_insert_iterator&
+      operator++()
+      { return *this; }
+
+
+      constexpr
+      back_insert_iterator
+      operator++(int)
+      { return *this; }
+    };
+# 773 "/usr/include/c++/14/bits/stl_iterator.h" 3
+  template<typename _Container>
+    [[__nodiscard__]] constexpr
+    inline back_insert_iterator<_Container>
+    back_inserter(_Container& __x)
+    { return back_insert_iterator<_Container>(__x); }
+# 789 "/usr/include/c++/14/bits/stl_iterator.h" 3
+  template<typename _Container>
+    class front_insert_iterator
+    : public iterator<output_iterator_tag, void, void, void, void>
+    {
+    protected:
+      _Container* container;
+
+    public:
+
+      typedef _Container container_type;
+
+      using difference_type = ptrdiff_t;
+
+
+
+      explicit constexpr
+      front_insert_iterator(_Container& __x)
+      : container(std::__addressof(__x)) { }
+# 827 "/usr/include/c++/14/bits/stl_iterator.h" 3
+      constexpr
+      front_insert_iterator&
+      operator=(const typename _Container::value_type& __value)
+      {
+ container->push_front(__value);
+ return *this;
+      }
+
+      constexpr
+      front_insert_iterator&
+      operator=(typename _Container::value_type&& __value)
+      {
+ container->push_front(std::move(__value));
+ return *this;
+      }
+
+
+
+      [[__nodiscard__]] constexpr
+      front_insert_iterator&
+      operator*()
+      { return *this; }
+
+
+      constexpr
+      front_insert_iterator&
+      operator++()
+      { return *this; }
+
+
+      constexpr
+      front_insert_iterator
+      operator++(int)
+      { return *this; }
+    };
+# 874 "/usr/include/c++/14/bits/stl_iterator.h" 3
+  template<typename _Container>
+    [[__nodiscard__]] constexpr
+    inline front_insert_iterator<_Container>
+    front_inserter(_Container& __x)
+    { return front_insert_iterator<_Container>(__x); }
+# 894 "/usr/include/c++/14/bits/stl_iterator.h" 3
+  template<typename _Container>
+    class insert_iterator
+    : public iterator<output_iterator_tag, void, void, void, void>
+    {
+
+      using _Iter = std::__detail::__range_iter_t<_Container>;
+
+
+
+    protected:
+      _Container* container;
+      _Iter iter;
+
+    public:
+
+      typedef _Container container_type;
+
+
+      using difference_type = ptrdiff_t;
+
+
+
+
+
+
+      constexpr
+      insert_iterator(_Container& __x, _Iter __i)
+      : container(std::__addressof(__x)), iter(__i) {}
+# 955 "/usr/include/c++/14/bits/stl_iterator.h" 3
+      constexpr
+      insert_iterator&
+      operator=(const typename _Container::value_type& __value)
+      {
+ iter = container->insert(iter, __value);
+ ++iter;
+ return *this;
+      }
+
+      constexpr
+      insert_iterator&
+      operator=(typename _Container::value_type&& __value)
+      {
+ iter = container->insert(iter, std::move(__value));
+ ++iter;
+ return *this;
+      }
+
+
+
+      [[__nodiscard__]] constexpr
+      insert_iterator&
+      operator*()
+      { return *this; }
+
+
+      constexpr
+      insert_iterator&
+      operator++()
+      { return *this; }
+
+
+      constexpr
+      insert_iterator&
+      operator++(int)
+      { return *this; }
+    };
+
+#pragma GCC diagnostic pop
+# 1008 "/usr/include/c++/14/bits/stl_iterator.h" 3
+  template<typename _Container>
+    [[nodiscard]]
+    constexpr insert_iterator<_Container>
+    inserter(_Container& __x, std::__detail::__range_iter_t<_Container> __i)
+    { return insert_iterator<_Container>(__x, __i); }
+# 1023 "/usr/include/c++/14/bits/stl_iterator.h" 3
+
+}
+
+namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
+{
+
+# 1037 "/usr/include/c++/14/bits/stl_iterator.h" 3
+  template<typename _Iterator, typename _Container>
+    class __normal_iterator
+    {
+    protected:
+      _Iterator _M_current;
+
+      typedef std::iterator_traits<_Iterator> __traits_type;
+
+
+      template<typename _Iter>
+ using __convertible_from
+   = std::__enable_if_t<std::is_convertible<_Iter, _Iterator>::value>;
+
+
+    public:
+      typedef _Iterator iterator_type;
+      typedef typename __traits_type::iterator_category iterator_category;
+      typedef typename __traits_type::value_type value_type;
+      typedef typename __traits_type::difference_type difference_type;
+      typedef typename __traits_type::reference reference;
+      typedef typename __traits_type::pointer pointer;
+
+
+      using iterator_concept = std::__detail::__iter_concept<_Iterator>;
+
+
+      constexpr __normal_iterator() noexcept
+      : _M_current(_Iterator()) { }
+
+      explicit constexpr
+      __normal_iterator(const _Iterator& __i) noexcept
+      : _M_current(__i) { }
+
+
+
+      template<typename _Iter, typename = __convertible_from<_Iter>>
+ constexpr
+ __normal_iterator(const __normal_iterator<_Iter, _Container>& __i)
+ noexcept
+# 1085 "/usr/include/c++/14/bits/stl_iterator.h" 3
+        : _M_current(__i.base()) { }
+
+
+      constexpr
+      reference
+      operator*() const noexcept
+      { return *_M_current; }
+
+      constexpr
+      pointer
+      operator->() const noexcept
+      { return _M_current; }
+
+      constexpr
+      __normal_iterator&
+      operator++() noexcept
+      {
+ ++_M_current;
+ return *this;
+      }
+
+      constexpr
+      __normal_iterator
+      operator++(int) noexcept
+      { return __normal_iterator(_M_current++); }
+
+
+      constexpr
+      __normal_iterator&
+      operator--() noexcept
+      {
+ --_M_current;
+ return *this;
+      }
+
+      constexpr
+      __normal_iterator
+      operator--(int) noexcept
+      { return __normal_iterator(_M_current--); }
+
+
+      constexpr
+      reference
+      operator[](difference_type __n) const noexcept
+      { return _M_current[__n]; }
+
+      constexpr
+      __normal_iterator&
+      operator+=(difference_type __n) noexcept
+      { _M_current += __n; return *this; }
+
+      constexpr
+      __normal_iterator
+      operator+(difference_type __n) const noexcept
+      { return __normal_iterator(_M_current + __n); }
+
+      constexpr
+      __normal_iterator&
+      operator-=(difference_type __n) noexcept
+      { _M_current -= __n; return *this; }
+
+      constexpr
+      __normal_iterator
+      operator-(difference_type __n) const noexcept
+      { return __normal_iterator(_M_current - __n); }
+
+      constexpr
+      const _Iterator&
+      base() const noexcept
+      { return _M_current; }
+    };
+# 1166 "/usr/include/c++/14/bits/stl_iterator.h" 3
+  template<typename _IteratorL, typename _IteratorR, typename _Container>
+    [[nodiscard]]
+    constexpr bool
+    operator==(const __normal_iterator<_IteratorL, _Container>& __lhs,
+        const __normal_iterator<_IteratorR, _Container>& __rhs)
+    noexcept(noexcept(__lhs.base() == __rhs.base()))
+    requires requires {
+      { __lhs.base() == __rhs.base() } -> std::convertible_to<bool>;
+    }
+    { return __lhs.base() == __rhs.base(); }
+
+  template<typename _IteratorL, typename _IteratorR, typename _Container>
+    [[nodiscard]]
+    constexpr std::__detail::__synth3way_t<_IteratorR, _IteratorL>
+    operator<=>(const __normal_iterator<_IteratorL, _Container>& __lhs,
+  const __normal_iterator<_IteratorR, _Container>& __rhs)
+    noexcept(noexcept(std::__detail::__synth3way(__lhs.base(), __rhs.base())))
+    { return std::__detail::__synth3way(__lhs.base(), __rhs.base()); }
+
+  template<typename _Iterator, typename _Container>
+    [[nodiscard]]
+    constexpr bool
+    operator==(const __normal_iterator<_Iterator, _Container>& __lhs,
+        const __normal_iterator<_Iterator, _Container>& __rhs)
+    noexcept(noexcept(__lhs.base() == __rhs.base()))
+    requires requires {
+      { __lhs.base() == __rhs.base() } -> std::convertible_to<bool>;
+    }
+    { return __lhs.base() == __rhs.base(); }
+
+  template<typename _Iterator, typename _Container>
+    [[nodiscard]]
+    constexpr std::__detail::__synth3way_t<_Iterator>
+    operator<=>(const __normal_iterator<_Iterator, _Container>& __lhs,
+  const __normal_iterator<_Iterator, _Container>& __rhs)
+    noexcept(noexcept(std::__detail::__synth3way(__lhs.base(), __rhs.base())))
+    { return std::__detail::__synth3way(__lhs.base(), __rhs.base()); }
+# 1307 "/usr/include/c++/14/bits/stl_iterator.h" 3
+  template<typename _IteratorL, typename _IteratorR, typename _Container>
+
+
+    [[__nodiscard__]] constexpr
+    inline auto
+    operator-(const __normal_iterator<_IteratorL, _Container>& __lhs,
+       const __normal_iterator<_IteratorR, _Container>& __rhs) noexcept
+    -> decltype(__lhs.base() - __rhs.base())
+
+
+
+
+
+    { return __lhs.base() - __rhs.base(); }
+
+  template<typename _Iterator, typename _Container>
+    [[__nodiscard__]] constexpr
+    inline typename __normal_iterator<_Iterator, _Container>::difference_type
+    operator-(const __normal_iterator<_Iterator, _Container>& __lhs,
+       const __normal_iterator<_Iterator, _Container>& __rhs)
+    noexcept
+    { return __lhs.base() - __rhs.base(); }
+
+  template<typename _Iterator, typename _Container>
+    [[__nodiscard__]] constexpr
+    inline __normal_iterator<_Iterator, _Container>
+    operator+(typename __normal_iterator<_Iterator, _Container>::difference_type
+       __n, const __normal_iterator<_Iterator, _Container>& __i)
+    noexcept
+    { return __normal_iterator<_Iterator, _Container>(__i.base() + __n); }
+
+
+}
+
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+
+  template<typename _Iterator, typename _Container>
+    constexpr
+    _Iterator
+    __niter_base(__gnu_cxx::__normal_iterator<_Iterator, _Container> __it)
+    noexcept(std::is_nothrow_copy_constructible<_Iterator>::value)
+    { return __it.base(); }
+# 1371 "/usr/include/c++/14/bits/stl_iterator.h" 3
+  template<semiregular _Sent>
+    class move_sentinel
+    {
+    public:
+      constexpr
+      move_sentinel()
+      noexcept(is_nothrow_default_constructible_v<_Sent>)
+      : _M_last() { }
+
+      constexpr explicit
+      move_sentinel(_Sent __s)
+      noexcept(is_nothrow_move_constructible_v<_Sent>)
+      : _M_last(std::move(__s)) { }
+
+      template<typename _S2> requires convertible_to<const _S2&, _Sent>
+ constexpr
+ move_sentinel(const move_sentinel<_S2>& __s)
+ noexcept(is_nothrow_constructible_v<_Sent, const _S2&>)
+ : _M_last(__s.base())
+ { }
+
+      template<typename _S2> requires assignable_from<_Sent&, const _S2&>
+ constexpr move_sentinel&
+ operator=(const move_sentinel<_S2>& __s)
+ noexcept(is_nothrow_assignable_v<_Sent, const _S2&>)
+ {
+   _M_last = __s.base();
+   return *this;
+ }
+
+      [[nodiscard]]
+      constexpr _Sent
+      base() const
+      noexcept(is_nothrow_copy_constructible_v<_Sent>)
+      { return _M_last; }
+
+    private:
+      _Sent _M_last;
+    };
+
+
+  namespace __detail
+  {
+
+    template<typename _Iterator>
+      struct __move_iter_cat
+      { };
+
+    template<typename _Iterator>
+      requires requires { typename __iter_category_t<_Iterator>; }
+      struct __move_iter_cat<_Iterator>
+      {
+ using iterator_category
+   = __clamp_iter_cat<__iter_category_t<_Iterator>,
+        random_access_iterator_tag>;
+      };
+
+  }
+# 1439 "/usr/include/c++/14/bits/stl_iterator.h" 3
+  template<typename _Iterator>
+    class move_iterator
+
+      : public __detail::__move_iter_cat<_Iterator>
+
+    {
+      _Iterator _M_current;
+
+      using __traits_type = iterator_traits<_Iterator>;
+
+
+
+
+      template<typename _Iter2>
+ friend class move_iterator;
+
+
+
+
+      template<typename _Iter2>
+ static constexpr bool __convertible = !is_same_v<_Iter2, _Iterator>
+     && convertible_to<const _Iter2&, _Iterator>;
+
+
+
+      static auto
+      _S_iter_concept()
+      {
+ if constexpr (random_access_iterator<_Iterator>)
+   return random_access_iterator_tag{};
+ else if constexpr (bidirectional_iterator<_Iterator>)
+   return bidirectional_iterator_tag{};
+ else if constexpr (forward_iterator<_Iterator>)
+   return forward_iterator_tag{};
+ else
+   return input_iterator_tag{};
+      }
+
+
+    public:
+      using iterator_type = _Iterator;
+
+
+      using iterator_concept = decltype(_S_iter_concept());
+
+
+      using value_type = iter_value_t<_Iterator>;
+      using difference_type = iter_difference_t<_Iterator>;
+      using pointer = _Iterator;
+      using reference = iter_rvalue_reference_t<_Iterator>;
+# 1503 "/usr/include/c++/14/bits/stl_iterator.h" 3
+      constexpr
+      move_iterator()
+      : _M_current() { }
+
+      explicit constexpr
+      move_iterator(iterator_type __i)
+      : _M_current(std::move(__i)) { }
+
+      template<typename _Iter>
+
+ requires __convertible<_Iter>
+
+ constexpr
+ move_iterator(const move_iterator<_Iter>& __i)
+ : _M_current(__i._M_current) { }
+
+      template<typename _Iter>
+
+ requires __convertible<_Iter>
+   && assignable_from<_Iterator&, const _Iter&>
+
+ constexpr
+ move_iterator& operator=(const move_iterator<_Iter>& __i)
+ {
+   _M_current = __i._M_current;
+   return *this;
+ }
+
+
+
+
+
+
+
+      [[nodiscard]]
+      constexpr const iterator_type&
+      base() const & noexcept
+      { return _M_current; }
+
+      [[nodiscard]]
+      constexpr iterator_type
+      base() &&
+      { return std::move(_M_current); }
+
+
+      [[__nodiscard__]]
+      constexpr reference
+      operator*() const
+
+      { return ranges::iter_move(_M_current); }
+
+
+
+
+      [[__nodiscard__]]
+      constexpr pointer
+      operator->() const
+      { return _M_current; }
+
+      constexpr move_iterator&
+      operator++()
+      {
+ ++_M_current;
+ return *this;
+      }
+
+      constexpr move_iterator
+      operator++(int)
+      {
+ move_iterator __tmp = *this;
+ ++_M_current;
+ return __tmp;
+      }
+
+
+      constexpr void
+      operator++(int) requires (!forward_iterator<_Iterator>)
+      { ++_M_current; }
+
+
+      constexpr move_iterator&
+      operator--()
+      {
+ --_M_current;
+ return *this;
+      }
+
+      constexpr move_iterator
+      operator--(int)
+      {
+ move_iterator __tmp = *this;
+ --_M_current;
+ return __tmp;
+      }
+
+      [[__nodiscard__]]
+      constexpr move_iterator
+      operator+(difference_type __n) const
+      { return move_iterator(_M_current + __n); }
+
+      constexpr move_iterator&
+      operator+=(difference_type __n)
+      {
+ _M_current += __n;
+ return *this;
+      }
+
+      [[__nodiscard__]]
+      constexpr move_iterator
+      operator-(difference_type __n) const
+      { return move_iterator(_M_current - __n); }
+
+      constexpr move_iterator&
+      operator-=(difference_type __n)
+      {
+ _M_current -= __n;
+ return *this;
+      }
+
+      [[__nodiscard__]]
+      constexpr reference
+      operator[](difference_type __n) const
+
+      { return ranges::iter_move(_M_current + __n); }
+
+
+
+
+
+      template<sentinel_for<_Iterator> _Sent>
+ [[nodiscard]]
+ friend constexpr bool
+ operator==(const move_iterator& __x, const move_sentinel<_Sent>& __y)
+ { return __x.base() == __y.base(); }
+
+      template<sized_sentinel_for<_Iterator> _Sent>
+ [[nodiscard]]
+ friend constexpr iter_difference_t<_Iterator>
+ operator-(const move_sentinel<_Sent>& __x, const move_iterator& __y)
+ { return __x.base() - __y.base(); }
+
+      template<sized_sentinel_for<_Iterator> _Sent>
+ [[nodiscard]]
+ friend constexpr iter_difference_t<_Iterator>
+ operator-(const move_iterator& __x, const move_sentinel<_Sent>& __y)
+ { return __x.base() - __y.base(); }
+
+      [[nodiscard]]
+      friend constexpr iter_rvalue_reference_t<_Iterator>
+      iter_move(const move_iterator& __i)
+      noexcept(noexcept(ranges::iter_move(__i._M_current)))
+      { return ranges::iter_move(__i._M_current); }
+
+      template<indirectly_swappable<_Iterator> _Iter2>
+ friend constexpr void
+ iter_swap(const move_iterator& __x, const move_iterator<_Iter2>& __y)
+ noexcept(noexcept(ranges::iter_swap(__x._M_current, __y._M_current)))
+ { return ranges::iter_swap(__x._M_current, __y._M_current); }
+
+    };
+
+  template<typename _IteratorL, typename _IteratorR>
+    [[__nodiscard__]]
+    inline constexpr bool
+    operator==(const move_iterator<_IteratorL>& __x,
+        const move_iterator<_IteratorR>& __y)
+
+    requires requires { { __x.base() == __y.base() } -> convertible_to<bool>; }
+
+    { return __x.base() == __y.base(); }
+
+
+  template<typename _IteratorL,
+    three_way_comparable_with<_IteratorL> _IteratorR>
+    [[__nodiscard__]]
+    constexpr compare_three_way_result_t<_IteratorL, _IteratorR>
+    operator<=>(const move_iterator<_IteratorL>& __x,
+  const move_iterator<_IteratorR>& __y)
+    { return __x.base() <=> __y.base(); }
+# 1691 "/usr/include/c++/14/bits/stl_iterator.h" 3
+  template<typename _IteratorL, typename _IteratorR>
+    [[__nodiscard__]]
+    inline constexpr bool
+    operator<(const move_iterator<_IteratorL>& __x,
+       const move_iterator<_IteratorR>& __y)
+
+    requires requires { { __x.base() < __y.base() } -> convertible_to<bool>; }
+
+    { return __x.base() < __y.base(); }
+
+  template<typename _IteratorL, typename _IteratorR>
+    [[__nodiscard__]]
+    inline constexpr bool
+    operator<=(const move_iterator<_IteratorL>& __x,
+        const move_iterator<_IteratorR>& __y)
+
+    requires requires { { __y.base() < __x.base() } -> convertible_to<bool>; }
+
+    { return !(__y < __x); }
+
+  template<typename _IteratorL, typename _IteratorR>
+    [[__nodiscard__]]
+    inline constexpr bool
+    operator>(const move_iterator<_IteratorL>& __x,
+       const move_iterator<_IteratorR>& __y)
+
+    requires requires { { __y.base() < __x.base() } -> convertible_to<bool>; }
+
+    { return __y < __x; }
+
+  template<typename _IteratorL, typename _IteratorR>
+    [[__nodiscard__]]
+    inline constexpr bool
+    operator>=(const move_iterator<_IteratorL>& __x,
+        const move_iterator<_IteratorR>& __y)
+
+    requires requires { { __x.base() < __y.base() } -> convertible_to<bool>; }
+
+    { return !(__x < __y); }
+
+
+
+
+  template<typename _Iterator>
+    [[__nodiscard__]]
+    inline constexpr bool
+    operator==(const move_iterator<_Iterator>& __x,
+        const move_iterator<_Iterator>& __y)
+    { return __x.base() == __y.base(); }
+
+
+  template<three_way_comparable _Iterator>
+    [[__nodiscard__]]
+    constexpr compare_three_way_result_t<_Iterator>
+    operator<=>(const move_iterator<_Iterator>& __x,
+  const move_iterator<_Iterator>& __y)
+    { return __x.base() <=> __y.base(); }
+# 1786 "/usr/include/c++/14/bits/stl_iterator.h" 3
+  template<typename _IteratorL, typename _IteratorR>
+    [[__nodiscard__]]
+    inline constexpr auto
+    operator-(const move_iterator<_IteratorL>& __x,
+       const move_iterator<_IteratorR>& __y)
+    -> decltype(__x.base() - __y.base())
+    { return __x.base() - __y.base(); }
+
+  template<typename _Iterator>
+    [[__nodiscard__]]
+    inline constexpr move_iterator<_Iterator>
+    operator+(typename move_iterator<_Iterator>::difference_type __n,
+       const move_iterator<_Iterator>& __x)
+    { return __x + __n; }
+
+  template<typename _Iterator>
+    [[__nodiscard__]]
+    inline constexpr move_iterator<_Iterator>
+    make_move_iterator(_Iterator __i)
+    { return move_iterator<_Iterator>(std::move(__i)); }
+
+  template<typename _Iterator, typename _ReturnType
+    = __conditional_t<__move_if_noexcept_cond
+      <typename iterator_traits<_Iterator>::value_type>::value,
+  _Iterator, move_iterator<_Iterator>>>
+    inline constexpr _ReturnType
+    __make_move_if_noexcept_iterator(_Iterator __i)
+    { return _ReturnType(__i); }
+
+
+
+  template<typename _Tp, typename _ReturnType
+    = __conditional_t<__move_if_noexcept_cond<_Tp>::value,
+        const _Tp*, move_iterator<_Tp*>>>
+    inline constexpr _ReturnType
+    __make_move_if_noexcept_iterator(_Tp* __i)
+    { return _ReturnType(__i); }
+
+
+
+
+  template<typename _Iterator1, typename _Iterator2>
+    requires (!sized_sentinel_for<_Iterator1, _Iterator2>)
+    inline constexpr bool
+    disable_sized_sentinel_for<move_iterator<_Iterator1>,
+          move_iterator<_Iterator2>> = true;
+
+
+
+  namespace __detail
+  {
+    template<typename _It>
+      concept __common_iter_has_arrow = indirectly_readable<const _It>
+ && (requires(const _It& __it) { __it.operator->(); }
+     || is_reference_v<iter_reference_t<_It>>
+     || constructible_from<iter_value_t<_It>, iter_reference_t<_It>>);
+
+    template<typename _It>
+      concept __common_iter_use_postfix_proxy
+ = (!requires (_It& __i) { { *__i++ } -> __can_reference; })
+   && constructible_from<iter_value_t<_It>, iter_reference_t<_It>>
+   && move_constructible<iter_value_t<_It>>;
+  }
+
+
+  template<input_or_output_iterator _It, sentinel_for<_It> _Sent>
+    requires (!same_as<_It, _Sent>) && copyable<_It>
+  class common_iterator
+  {
+    template<typename _Tp, typename _Up>
+      static constexpr bool
+      _S_noexcept1()
+      {
+ if constexpr (is_trivially_default_constructible_v<_Tp>)
+   return is_nothrow_assignable_v<_Tp&, _Up>;
+ else
+   return is_nothrow_constructible_v<_Tp, _Up>;
+      }
+
+    template<typename _It2, typename _Sent2>
+      static constexpr bool
+      _S_noexcept()
+      { return _S_noexcept1<_It, _It2>() && _S_noexcept1<_Sent, _Sent2>(); }
+
+    class __arrow_proxy
+    {
+      iter_value_t<_It> _M_keep;
+
+      constexpr
+      __arrow_proxy(iter_reference_t<_It>&& __x)
+      : _M_keep(std::move(__x)) { }
+
+      friend class common_iterator;
+
+    public:
+      constexpr const iter_value_t<_It>*
+      operator->() const noexcept
+      { return std::__addressof(_M_keep); }
+    };
+
+    class __postfix_proxy
+    {
+      iter_value_t<_It> _M_keep;
+
+      constexpr
+      __postfix_proxy(iter_reference_t<_It>&& __x)
+      : _M_keep(std::forward<iter_reference_t<_It>>(__x)) { }
+
+      friend class common_iterator;
+
+    public:
+      constexpr const iter_value_t<_It>&
+      operator*() const noexcept
+      { return _M_keep; }
+    };
+
+  public:
+    constexpr
+    common_iterator()
+    noexcept(is_nothrow_default_constructible_v<_It>)
+    requires default_initializable<_It>
+    : _M_it(), _M_index(0)
+    { }
+
+    constexpr
+    common_iterator(_It __i)
+    noexcept(is_nothrow_move_constructible_v<_It>)
+    : _M_it(std::move(__i)), _M_index(0)
+    { }
+
+    constexpr
+    common_iterator(_Sent __s)
+    noexcept(is_nothrow_move_constructible_v<_Sent>)
+    : _M_sent(std::move(__s)), _M_index(1)
+    { }
+
+    template<typename _It2, typename _Sent2>
+      requires convertible_to<const _It2&, _It>
+ && convertible_to<const _Sent2&, _Sent>
+      constexpr
+      common_iterator(const common_iterator<_It2, _Sent2>& __x)
+      noexcept(_S_noexcept<const _It2&, const _Sent2&>())
+      : _M_valueless(), _M_index(__x._M_index)
+      {
+ do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__x._M_has_value()), false)) std::__glibcxx_assert_fail(); } while (false);
+ if (_M_index == 0)
+   {
+     if constexpr (is_trivially_default_constructible_v<_It>)
+       _M_it = std::move(__x._M_it);
+     else
+       std::construct_at(std::__addressof(_M_it), __x._M_it);
+   }
+ else if (_M_index == 1)
+   {
+     if constexpr (is_trivially_default_constructible_v<_Sent>)
+       _M_sent = std::move(__x._M_sent);
+     else
+       std::construct_at(std::__addressof(_M_sent), __x._M_sent);
+   }
+      }
+
+    common_iterator(const common_iterator&) = default;
+
+    constexpr
+    common_iterator(const common_iterator& __x)
+    noexcept(_S_noexcept<const _It&, const _Sent&>())
+    requires (!is_trivially_copyable_v<_It> || !is_trivially_copyable_v<_Sent>)
+    : _M_valueless(), _M_index(__x._M_index)
+    {
+      if (_M_index == 0)
+ {
+   if constexpr (is_trivially_default_constructible_v<_It>)
+     _M_it = __x._M_it;
+   else
+     std::construct_at(std::__addressof(_M_it), __x._M_it);
+ }
+      else if (_M_index == 1)
+ {
+   if constexpr (is_trivially_default_constructible_v<_Sent>)
+     _M_sent = __x._M_sent;
+   else
+     std::construct_at(std::__addressof(_M_sent), __x._M_sent);
+ }
+    }
+
+    common_iterator(common_iterator&&) = default;
+
+    constexpr
+    common_iterator(common_iterator&& __x)
+    noexcept(_S_noexcept<_It, _Sent>())
+    requires (!is_trivially_copyable_v<_It> || !is_trivially_copyable_v<_Sent>)
+    : _M_valueless(), _M_index(__x._M_index)
+    {
+      if (_M_index == 0)
+ {
+   if constexpr (is_trivially_default_constructible_v<_It>)
+     _M_it = std::move(__x._M_it);
+   else
+     std::construct_at(std::__addressof(_M_it), std::move(__x._M_it));
+ }
+      else if (_M_index == 1)
+ {
+   if constexpr (is_trivially_default_constructible_v<_Sent>)
+     _M_sent = std::move(__x._M_sent);
+   else
+     std::construct_at(std::__addressof(_M_sent),
+         std::move(__x._M_sent));
+ }
+    }
+
+    constexpr common_iterator&
+    operator=(const common_iterator&) = default;
+
+    constexpr common_iterator&
+    operator=(const common_iterator& __x)
+    noexcept(is_nothrow_copy_assignable_v<_It>
+      && is_nothrow_copy_assignable_v<_Sent>
+      && is_nothrow_copy_constructible_v<_It>
+      && is_nothrow_copy_constructible_v<_Sent>)
+    requires (!is_trivially_copy_assignable_v<_It>
+  || !is_trivially_copy_assignable_v<_Sent>)
+    {
+      _M_assign(__x);
+      return *this;
+    }
+
+    constexpr common_iterator&
+    operator=(common_iterator&&) = default;
+
+    constexpr common_iterator&
+    operator=(common_iterator&& __x)
+    noexcept(is_nothrow_move_assignable_v<_It>
+      && is_nothrow_move_assignable_v<_Sent>
+      && is_nothrow_move_constructible_v<_It>
+      && is_nothrow_move_constructible_v<_Sent>)
+    requires (!is_trivially_move_assignable_v<_It>
+  || !is_trivially_move_assignable_v<_Sent>)
+    {
+      _M_assign(std::move(__x));
+      return *this;
+    }
+
+    template<typename _It2, typename _Sent2>
+      requires convertible_to<const _It2&, _It>
+ && convertible_to<const _Sent2&, _Sent>
+ && assignable_from<_It&, const _It2&>
+ && assignable_from<_Sent&, const _Sent2&>
+      constexpr common_iterator&
+      operator=(const common_iterator<_It2, _Sent2>& __x)
+      noexcept(is_nothrow_constructible_v<_It, const _It2&>
+        && is_nothrow_constructible_v<_Sent, const _Sent2&>
+        && is_nothrow_assignable_v<_It&, const _It2&>
+        && is_nothrow_assignable_v<_Sent&, const _Sent2&>)
+      {
+ do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__x._M_has_value()), false)) std::__glibcxx_assert_fail(); } while (false);
+ _M_assign(__x);
+ return *this;
+      }
+
+
+    ~common_iterator() = default;
+
+    constexpr
+    ~common_iterator()
+      requires (!is_trivially_destructible_v<_It>
+    || !is_trivially_destructible_v<_Sent>)
+
+
+
+
+    {
+      if (_M_index == 0)
+ _M_it.~_It();
+      else if (_M_index == 1)
+ _M_sent.~_Sent();
+    }
+
+    [[nodiscard]]
+    constexpr decltype(auto)
+    operator*()
+    {
+      do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(_M_index == 0), false)) std::__glibcxx_assert_fail(); } while (false);
+      return *_M_it;
+    }
+
+    [[nodiscard]]
+    constexpr decltype(auto)
+    operator*() const requires __detail::__dereferenceable<const _It>
+    {
+      do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(_M_index == 0), false)) std::__glibcxx_assert_fail(); } while (false);
+      return *_M_it;
+    }
+
+    [[nodiscard]]
+    constexpr auto
+    operator->() const requires __detail::__common_iter_has_arrow<_It>
+    {
+      do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(_M_index == 0), false)) std::__glibcxx_assert_fail(); } while (false);
+      if constexpr (is_pointer_v<_It> || requires { _M_it.operator->(); })
+ return _M_it;
+      else if constexpr (is_reference_v<iter_reference_t<_It>>)
+ {
+   auto&& __tmp = *_M_it;
+   return std::__addressof(__tmp);
+ }
+      else
+ return __arrow_proxy{*_M_it};
+    }
+
+    constexpr common_iterator&
+    operator++()
+    {
+      do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(_M_index == 0), false)) std::__glibcxx_assert_fail(); } while (false);
+      ++_M_it;
+      return *this;
+    }
+
+    constexpr decltype(auto)
+    operator++(int)
+    {
+      do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(_M_index == 0), false)) std::__glibcxx_assert_fail(); } while (false);
+      if constexpr (forward_iterator<_It>)
+ {
+   common_iterator __tmp = *this;
+   ++*this;
+   return __tmp;
+ }
+      else if constexpr (!__detail::__common_iter_use_postfix_proxy<_It>)
+ return _M_it++;
+      else
+ {
+   __postfix_proxy __p(**this);
+   ++*this;
+   return __p;
+ }
+    }
+
+    template<typename _It2, sentinel_for<_It> _Sent2>
+      requires sentinel_for<_Sent, _It2>
+      friend constexpr bool
+      operator== [[nodiscard]] (const common_iterator& __x,
+    const common_iterator<_It2, _Sent2>& __y)
+      {
+ switch(__x._M_index << 2 | __y._M_index)
+   {
+   case 0b0000:
+   case 0b0101:
+     return true;
+   case 0b0001:
+     return __x._M_it == __y._M_sent;
+   case 0b0100:
+     return __x._M_sent == __y._M_it;
+   default:
+     do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__x._M_has_value()), false)) std::__glibcxx_assert_fail(); } while (false);
+     do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__y._M_has_value()), false)) std::__glibcxx_assert_fail(); } while (false);
+     __builtin_unreachable();
+   }
+      }
+
+    template<typename _It2, sentinel_for<_It> _Sent2>
+      requires sentinel_for<_Sent, _It2> && equality_comparable_with<_It, _It2>
+      friend constexpr bool
+      operator== [[nodiscard]] (const common_iterator& __x,
+    const common_iterator<_It2, _Sent2>& __y)
+      {
+ switch(__x._M_index << 2 | __y._M_index)
+   {
+   case 0b0101:
+     return true;
+   case 0b0000:
+     return __x._M_it == __y._M_it;
+   case 0b0001:
+     return __x._M_it == __y._M_sent;
+   case 0b0100:
+     return __x._M_sent == __y._M_it;
+   default:
+     do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__x._M_has_value()), false)) std::__glibcxx_assert_fail(); } while (false);
+     do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__y._M_has_value()), false)) std::__glibcxx_assert_fail(); } while (false);
+     __builtin_unreachable();
+   }
+      }
+
+    template<sized_sentinel_for<_It> _It2, sized_sentinel_for<_It> _Sent2>
+      requires sized_sentinel_for<_Sent, _It2>
+      friend constexpr iter_difference_t<_It2>
+      operator- [[nodiscard]] (const common_iterator& __x,
+          const common_iterator<_It2, _Sent2>& __y)
+      {
+ switch(__x._M_index << 2 | __y._M_index)
+   {
+   case 0b0101:
+     return 0;
+   case 0b0000:
+     return __x._M_it - __y._M_it;
+   case 0b0001:
+     return __x._M_it - __y._M_sent;
+   case 0b0100:
+     return __x._M_sent - __y._M_it;
+   default:
+     do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__x._M_has_value()), false)) std::__glibcxx_assert_fail(); } while (false);
+     do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__y._M_has_value()), false)) std::__glibcxx_assert_fail(); } while (false);
+     __builtin_unreachable();
+   }
+      }
+
+    [[nodiscard]]
+    friend constexpr iter_rvalue_reference_t<_It>
+    iter_move(const common_iterator& __i)
+    noexcept(noexcept(ranges::iter_move(std::declval<const _It&>())))
+    requires input_iterator<_It>
+    {
+      do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__i._M_index == 0), false)) std::__glibcxx_assert_fail(); } while (false);
+      return ranges::iter_move(__i._M_it);
+    }
+
+    template<indirectly_swappable<_It> _It2, typename _Sent2>
+      friend constexpr void
+      iter_swap(const common_iterator& __x,
+  const common_iterator<_It2, _Sent2>& __y)
+      noexcept(noexcept(ranges::iter_swap(std::declval<const _It&>(),
+       std::declval<const _It2&>())))
+      {
+ do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__x._M_index == 0), false)) std::__glibcxx_assert_fail(); } while (false);
+ do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__y._M_index == 0), false)) std::__glibcxx_assert_fail(); } while (false);
+ return ranges::iter_swap(__x._M_it, __y._M_it);
+      }
+
+  private:
+    template<input_or_output_iterator _It2, sentinel_for<_It2> _Sent2>
+      requires (!same_as<_It2, _Sent2>) && copyable<_It2>
+      friend class common_iterator;
+
+    constexpr bool
+    _M_has_value() const noexcept { return _M_index != _S_valueless; }
+
+    template<typename _CIt>
+      constexpr void
+      _M_assign(_CIt&& __x)
+      {
+ if (_M_index == __x._M_index)
+   {
+     if (_M_index == 0)
+       _M_it = std::forward<_CIt>(__x)._M_it;
+     else if (_M_index == 1)
+       _M_sent = std::forward<_CIt>(__x)._M_sent;
+   }
+ else
+   {
+     if (_M_index == 0)
+       _M_it.~_It();
+     else if (_M_index == 1)
+       _M_sent.~_Sent();
+     _M_index = _S_valueless;
+
+     if (__x._M_index == 0)
+       std::construct_at(std::__addressof(_M_it),
+    std::forward<_CIt>(__x)._M_it);
+     else if (__x._M_index == 1)
+       std::construct_at(std::__addressof(_M_sent),
+    std::forward<_CIt>(__x)._M_sent);
+     _M_index = __x._M_index;
+   }
+      }
+
+    union
+    {
+      _It _M_it;
+      _Sent _M_sent;
+      unsigned char _M_valueless;
+    };
+    unsigned char _M_index;
+
+    static constexpr unsigned char _S_valueless{2};
+  };
+
+  template<typename _It, typename _Sent>
+    struct incrementable_traits<common_iterator<_It, _Sent>>
+    {
+      using difference_type = iter_difference_t<_It>;
+    };
+
+  template<input_iterator _It, typename _Sent>
+    struct iterator_traits<common_iterator<_It, _Sent>>
+    {
+    private:
+      template<typename _Iter>
+ struct __ptr
+ {
+   using type = void;
+ };
+
+      template<typename _Iter>
+ requires __detail::__common_iter_has_arrow<_Iter>
+ struct __ptr<_Iter>
+ {
+   using _CIter = common_iterator<_Iter, _Sent>;
+   using type = decltype(std::declval<const _CIter&>().operator->());
+ };
+
+      static auto
+      _S_iter_cat()
+      {
+ if constexpr (requires { requires derived_from<__iter_category_t<_It>,
+             forward_iterator_tag>; })
+   return forward_iterator_tag{};
+ else
+   return input_iterator_tag{};
+      }
+
+    public:
+      using iterator_concept = __conditional_t<forward_iterator<_It>,
+            forward_iterator_tag,
+            input_iterator_tag>;
+      using iterator_category = decltype(_S_iter_cat());
+      using value_type = iter_value_t<_It>;
+      using difference_type = iter_difference_t<_It>;
+      using pointer = typename __ptr<_It>::type;
+      using reference = iter_reference_t<_It>;
+    };
+
+
+
+  namespace __detail
+  {
+    template<typename _It>
+      struct __counted_iter_value_type
+      { };
+
+    template<indirectly_readable _It>
+      struct __counted_iter_value_type<_It>
+      { using value_type = iter_value_t<_It>; };
+
+    template<typename _It>
+      struct __counted_iter_concept
+      { };
+
+    template<typename _It>
+      requires requires { typename _It::iterator_concept; }
+      struct __counted_iter_concept<_It>
+      { using iterator_concept = typename _It::iterator_concept; };
+
+    template<typename _It>
+      struct __counted_iter_cat
+      { };
+
+    template<typename _It>
+      requires requires { typename _It::iterator_category; }
+      struct __counted_iter_cat<_It>
+      { using iterator_category = typename _It::iterator_category; };
+  }
+
+
+  template<input_or_output_iterator _It>
+    class counted_iterator
+      : public __detail::__counted_iter_value_type<_It>,
+ public __detail::__counted_iter_concept<_It>,
+ public __detail::__counted_iter_cat<_It>
+    {
+    public:
+      using iterator_type = _It;
+
+      using difference_type = iter_difference_t<_It>;
+
+
+
+      constexpr counted_iterator() requires default_initializable<_It> = default;
+
+      constexpr
+      counted_iterator(_It __i, iter_difference_t<_It> __n)
+      : _M_current(std::move(__i)), _M_length(__n)
+      { do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__n >= 0), false)) std::__glibcxx_assert_fail(); } while (false); }
+
+      template<typename _It2>
+ requires convertible_to<const _It2&, _It>
+ constexpr
+ counted_iterator(const counted_iterator<_It2>& __x)
+ : _M_current(__x._M_current), _M_length(__x._M_length)
+ { }
+
+      template<typename _It2>
+ requires assignable_from<_It&, const _It2&>
+ constexpr counted_iterator&
+ operator=(const counted_iterator<_It2>& __x)
+ {
+   _M_current = __x._M_current;
+   _M_length = __x._M_length;
+   return *this;
+ }
+
+      [[nodiscard]]
+      constexpr const _It&
+      base() const & noexcept
+      { return _M_current; }
+
+      [[nodiscard]]
+      constexpr _It
+      base() &&
+      noexcept(is_nothrow_move_constructible_v<_It>)
+      { return std::move(_M_current); }
+
+      [[nodiscard]]
+      constexpr iter_difference_t<_It>
+      count() const noexcept { return _M_length; }
+
+      [[nodiscard]]
+      constexpr decltype(auto)
+      operator*()
+      noexcept(noexcept(*_M_current))
+      {
+ do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(_M_length > 0), false)) std::__glibcxx_assert_fail(); } while (false);
+ return *_M_current;
+      }
+
+      [[nodiscard]]
+      constexpr decltype(auto)
+      operator*() const
+      noexcept(noexcept(*_M_current))
+      requires __detail::__dereferenceable<const _It>
+      {
+ do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(_M_length > 0), false)) std::__glibcxx_assert_fail(); } while (false);
+ return *_M_current;
+      }
+
+      [[nodiscard]]
+      constexpr auto
+      operator->() const noexcept
+      requires contiguous_iterator<_It>
+      { return std::to_address(_M_current); }
+
+      constexpr counted_iterator&
+      operator++()
+      {
+ do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(_M_length > 0), false)) std::__glibcxx_assert_fail(); } while (false);
+ ++_M_current;
+ --_M_length;
+ return *this;
+      }
+
+      constexpr decltype(auto)
+      operator++(int)
+      {
+ do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(_M_length > 0), false)) std::__glibcxx_assert_fail(); } while (false);
+ --_M_length;
+ try
+   {
+     return _M_current++;
+   } catch(...) {
+     ++_M_length;
+     throw;
+   }
+      }
+
+      constexpr counted_iterator
+      operator++(int) requires forward_iterator<_It>
+      {
+ auto __tmp = *this;
+ ++*this;
+ return __tmp;
+      }
+
+      constexpr counted_iterator&
+      operator--() requires bidirectional_iterator<_It>
+      {
+ --_M_current;
+ ++_M_length;
+ return *this;
+      }
+
+      constexpr counted_iterator
+      operator--(int) requires bidirectional_iterator<_It>
+      {
+ auto __tmp = *this;
+ --*this;
+ return __tmp;
+      }
+
+      [[nodiscard]]
+      constexpr counted_iterator
+      operator+(iter_difference_t<_It> __n) const
+ requires random_access_iterator<_It>
+      { return counted_iterator(_M_current + __n, _M_length - __n); }
+
+      [[nodiscard]]
+      friend constexpr counted_iterator
+      operator+(iter_difference_t<_It> __n, const counted_iterator& __x)
+      requires random_access_iterator<_It>
+      { return __x + __n; }
+
+      constexpr counted_iterator&
+      operator+=(iter_difference_t<_It> __n)
+      requires random_access_iterator<_It>
+      {
+ do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__n <= _M_length), false)) std::__glibcxx_assert_fail(); } while (false);
+ _M_current += __n;
+ _M_length -= __n;
+ return *this;
+      }
+
+      [[nodiscard]]
+      constexpr counted_iterator
+      operator-(iter_difference_t<_It> __n) const
+      requires random_access_iterator<_It>
+      { return counted_iterator(_M_current - __n, _M_length + __n); }
+
+      template<common_with<_It> _It2>
+ [[nodiscard]]
+ friend constexpr iter_difference_t<_It2>
+ operator-(const counted_iterator& __x,
+    const counted_iterator<_It2>& __y)
+ { return __y._M_length - __x._M_length; }
+
+      [[nodiscard]]
+      friend constexpr iter_difference_t<_It>
+      operator-(const counted_iterator& __x, default_sentinel_t)
+      { return -__x._M_length; }
+
+      [[nodiscard]]
+      friend constexpr iter_difference_t<_It>
+      operator-(default_sentinel_t, const counted_iterator& __y)
+      { return __y._M_length; }
+
+      constexpr counted_iterator&
+      operator-=(iter_difference_t<_It> __n)
+      requires random_access_iterator<_It>
+      {
+ do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(-__n <= _M_length), false)) std::__glibcxx_assert_fail(); } while (false);
+ _M_current -= __n;
+ _M_length += __n;
+ return *this;
+      }
+
+      [[nodiscard]]
+      constexpr decltype(auto)
+      operator[](iter_difference_t<_It> __n) const
+      noexcept(noexcept(_M_current[__n]))
+      requires random_access_iterator<_It>
+      {
+ do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__n < _M_length), false)) std::__glibcxx_assert_fail(); } while (false);
+ return _M_current[__n];
+      }
+
+      template<common_with<_It> _It2>
+ [[nodiscard]]
+ friend constexpr bool
+ operator==(const counted_iterator& __x,
+     const counted_iterator<_It2>& __y)
+ { return __x._M_length == __y._M_length; }
+
+      [[nodiscard]]
+      friend constexpr bool
+      operator==(const counted_iterator& __x, default_sentinel_t)
+      { return __x._M_length == 0; }
+
+      template<common_with<_It> _It2>
+ [[nodiscard]]
+ friend constexpr strong_ordering
+ operator<=>(const counted_iterator& __x,
+      const counted_iterator<_It2>& __y)
+ { return __y._M_length <=> __x._M_length; }
+
+      [[nodiscard]]
+      friend constexpr iter_rvalue_reference_t<_It>
+      iter_move(const counted_iterator& __i)
+      noexcept(noexcept(ranges::iter_move(__i._M_current)))
+      requires input_iterator<_It>
+      {
+ do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__i._M_length > 0), false)) std::__glibcxx_assert_fail(); } while (false);
+ return ranges::iter_move(__i._M_current);
+      }
+
+      template<indirectly_swappable<_It> _It2>
+ friend constexpr void
+ iter_swap(const counted_iterator& __x,
+    const counted_iterator<_It2>& __y)
+ noexcept(noexcept(ranges::iter_swap(__x._M_current, __y._M_current)))
+ {
+   do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__x._M_length > 0 && __y._M_length > 0), false)) std::__glibcxx_assert_fail(); } while (false);
+   ranges::iter_swap(__x._M_current, __y._M_current);
+ }
+
+    private:
+      template<input_or_output_iterator _It2> friend class counted_iterator;
+
+      _It _M_current = _It();
+      iter_difference_t<_It> _M_length = 0;
+    };
+
+  template<input_iterator _It>
+    requires same_as<__detail::__iter_traits<_It>, iterator_traits<_It>>
+    struct iterator_traits<counted_iterator<_It>> : iterator_traits<_It>
+    {
+      using pointer = __conditional_t<contiguous_iterator<_It>,
+          add_pointer_t<iter_reference_t<_It>>,
+          void>;
+    };
+# 2960 "/usr/include/c++/14/bits/stl_iterator.h" 3
+  template<typename _Iterator>
+    constexpr
+    auto
+    __niter_base(move_iterator<_Iterator> __it)
+    -> decltype(make_move_iterator(__niter_base(__it.base())))
+    { return make_move_iterator(__niter_base(__it.base())); }
+
+  template<typename _Iterator>
+    struct __is_move_iterator<move_iterator<_Iterator> >
+    {
+      enum { __value = 1 };
+      typedef __true_type __type;
+    };
+
+  template<typename _Iterator>
+    constexpr
+    auto
+    __miter_base(move_iterator<_Iterator> __it)
+    -> decltype(__miter_base(__it.base()))
+    { return __miter_base(__it.base()); }
+# 2992 "/usr/include/c++/14/bits/stl_iterator.h" 3
+  template<typename _InputIterator>
+    using __iter_key_t = remove_const_t<
+
+
+
+      typename iterator_traits<_InputIterator>::value_type::first_type>;
+
+
+  template<typename _InputIterator>
+    using __iter_val_t
+
+
+
+      = typename iterator_traits<_InputIterator>::value_type::second_type;
+
+
+  template<typename _T1, typename _T2>
+    struct pair;
+
+  template<typename _InputIterator>
+    using __iter_to_alloc_t
+      = pair<const __iter_key_t<_InputIterator>, __iter_val_t<_InputIterator>>;
+
+
+
+}
+# 68 "/usr/include/c++/14/bits/stl_algobase.h" 2 3
+
+# 1 "/usr/include/c++/14/debug/debug.h" 1 3
+# 48 "/usr/include/c++/14/debug/debug.h" 3
+namespace std
+{
+  namespace __debug { }
+}
+
+
+
+
+namespace __gnu_debug
+{
+  using namespace std::__debug;
+
+  template<typename _Ite, typename _Seq, typename _Cat>
+    struct _Safe_iterator;
+}
+# 70 "/usr/include/c++/14/bits/stl_algobase.h" 2 3
+
+# 1 "/usr/include/c++/14/bits/predefined_ops.h" 1 3
+# 35 "/usr/include/c++/14/bits/predefined_ops.h" 3
+namespace __gnu_cxx
+{
+namespace __ops
+{
+  struct _Iter_less_iter
+  {
+    template<typename _Iterator1, typename _Iterator2>
+      constexpr
+      bool
+      operator()(_Iterator1 __it1, _Iterator2 __it2) const
+      { return *__it1 < *__it2; }
+  };
+
+  constexpr
+  inline _Iter_less_iter
+  __iter_less_iter()
+  { return _Iter_less_iter(); }
+
+  struct _Iter_less_val
+  {
+
+    constexpr _Iter_less_val() = default;
+
+
+
+
+    constexpr
+    explicit
+    _Iter_less_val(_Iter_less_iter) { }
+
+    template<typename _Iterator, typename _Value>
+      constexpr
+      bool
+      operator()(_Iterator __it, _Value& __val) const
+      { return *__it < __val; }
+  };
+
+  constexpr
+  inline _Iter_less_val
+  __iter_less_val()
+  { return _Iter_less_val(); }
+
+  constexpr
+  inline _Iter_less_val
+  __iter_comp_val(_Iter_less_iter)
+  { return _Iter_less_val(); }
+
+  struct _Val_less_iter
+  {
+
+    constexpr _Val_less_iter() = default;
+
+
+
+
+    constexpr
+    explicit
+    _Val_less_iter(_Iter_less_iter) { }
+
+    template<typename _Value, typename _Iterator>
+      constexpr
+      bool
+      operator()(_Value& __val, _Iterator __it) const
+      { return __val < *__it; }
+  };
+
+  constexpr
+  inline _Val_less_iter
+  __val_less_iter()
+  { return _Val_less_iter(); }
+
+  constexpr
+  inline _Val_less_iter
+  __val_comp_iter(_Iter_less_iter)
+  { return _Val_less_iter(); }
+
+  struct _Iter_equal_to_iter
+  {
+    template<typename _Iterator1, typename _Iterator2>
+      constexpr
+      bool
+      operator()(_Iterator1 __it1, _Iterator2 __it2) const
+      { return *__it1 == *__it2; }
+  };
+
+  constexpr
+  inline _Iter_equal_to_iter
+  __iter_equal_to_iter()
+  { return _Iter_equal_to_iter(); }
+
+  struct _Iter_equal_to_val
+  {
+    template<typename _Iterator, typename _Value>
+      constexpr
+      bool
+      operator()(_Iterator __it, _Value& __val) const
+      { return *__it == __val; }
+  };
+
+  constexpr
+  inline _Iter_equal_to_val
+  __iter_equal_to_val()
+  { return _Iter_equal_to_val(); }
+
+  constexpr
+  inline _Iter_equal_to_val
+  __iter_comp_val(_Iter_equal_to_iter)
+  { return _Iter_equal_to_val(); }
+
+  template<typename _Compare>
+    struct _Iter_comp_iter
+    {
+      _Compare _M_comp;
+
+      explicit constexpr
+      _Iter_comp_iter(_Compare __comp)
+ : _M_comp(std::move(__comp))
+      { }
+
+      template<typename _Iterator1, typename _Iterator2>
+        constexpr
+        bool
+        operator()(_Iterator1 __it1, _Iterator2 __it2)
+        { return bool(_M_comp(*__it1, *__it2)); }
+    };
+
+  template<typename _Compare>
+    constexpr
+    inline _Iter_comp_iter<_Compare>
+    __iter_comp_iter(_Compare __comp)
+    { return _Iter_comp_iter<_Compare>(std::move(__comp)); }
+
+  template<typename _Compare>
+    struct _Iter_comp_val
+    {
+      _Compare _M_comp;
+
+      constexpr
+      explicit
+      _Iter_comp_val(_Compare __comp)
+ : _M_comp(std::move(__comp))
+      { }
+
+      constexpr
+      explicit
+      _Iter_comp_val(const _Iter_comp_iter<_Compare>& __comp)
+ : _M_comp(__comp._M_comp)
+      { }
+
+
+      constexpr
+      explicit
+      _Iter_comp_val(_Iter_comp_iter<_Compare>&& __comp)
+ : _M_comp(std::move(__comp._M_comp))
+      { }
+
+
+      template<typename _Iterator, typename _Value>
+ constexpr
+ bool
+ operator()(_Iterator __it, _Value& __val)
+ { return bool(_M_comp(*__it, __val)); }
+    };
+
+  template<typename _Compare>
+    constexpr
+    inline _Iter_comp_val<_Compare>
+    __iter_comp_val(_Compare __comp)
+    { return _Iter_comp_val<_Compare>(std::move(__comp)); }
+
+  template<typename _Compare>
+    constexpr
+    inline _Iter_comp_val<_Compare>
+    __iter_comp_val(_Iter_comp_iter<_Compare> __comp)
+    { return _Iter_comp_val<_Compare>(std::move(__comp)); }
+
+  template<typename _Compare>
+    struct _Val_comp_iter
+    {
+      _Compare _M_comp;
+
+      constexpr
+      explicit
+      _Val_comp_iter(_Compare __comp)
+ : _M_comp(std::move(__comp))
+      { }
+
+      constexpr
+      explicit
+      _Val_comp_iter(const _Iter_comp_iter<_Compare>& __comp)
+ : _M_comp(__comp._M_comp)
+      { }
+
+
+      constexpr
+      explicit
+      _Val_comp_iter(_Iter_comp_iter<_Compare>&& __comp)
+ : _M_comp(std::move(__comp._M_comp))
+      { }
+
+
+      template<typename _Value, typename _Iterator>
+ constexpr
+ bool
+ operator()(_Value& __val, _Iterator __it)
+ { return bool(_M_comp(__val, *__it)); }
+    };
+
+  template<typename _Compare>
+    constexpr
+    inline _Val_comp_iter<_Compare>
+    __val_comp_iter(_Compare __comp)
+    { return _Val_comp_iter<_Compare>(std::move(__comp)); }
+
+  template<typename _Compare>
+    constexpr
+    inline _Val_comp_iter<_Compare>
+    __val_comp_iter(_Iter_comp_iter<_Compare> __comp)
+    { return _Val_comp_iter<_Compare>(std::move(__comp)); }
+
+  template<typename _Value>
+    struct _Iter_equals_val
+    {
+      _Value& _M_value;
+
+      constexpr
+      explicit
+      _Iter_equals_val(_Value& __value)
+ : _M_value(__value)
+      { }
+
+      template<typename _Iterator>
+ constexpr
+ bool
+ operator()(_Iterator __it)
+ { return *__it == _M_value; }
+    };
+
+  template<typename _Value>
+    constexpr
+    inline _Iter_equals_val<_Value>
+    __iter_equals_val(_Value& __val)
+    { return _Iter_equals_val<_Value>(__val); }
+
+  template<typename _Iterator1>
+    struct _Iter_equals_iter
+    {
+      _Iterator1 _M_it1;
+
+      constexpr
+      explicit
+      _Iter_equals_iter(_Iterator1 __it1)
+ : _M_it1(__it1)
+      { }
+
+      template<typename _Iterator2>
+ constexpr
+ bool
+ operator()(_Iterator2 __it2)
+ { return *__it2 == *_M_it1; }
+    };
+
+  template<typename _Iterator>
+    constexpr
+    inline _Iter_equals_iter<_Iterator>
+    __iter_comp_iter(_Iter_equal_to_iter, _Iterator __it)
+    { return _Iter_equals_iter<_Iterator>(__it); }
+
+  template<typename _Predicate>
+    struct _Iter_pred
+    {
+      _Predicate _M_pred;
+
+      constexpr
+      explicit
+      _Iter_pred(_Predicate __pred)
+ : _M_pred(std::move(__pred))
+      { }
+
+      template<typename _Iterator>
+ constexpr
+ bool
+ operator()(_Iterator __it)
+ { return bool(_M_pred(*__it)); }
+    };
+
+  template<typename _Predicate>
+    constexpr
+    inline _Iter_pred<_Predicate>
+    __pred_iter(_Predicate __pred)
+    { return _Iter_pred<_Predicate>(std::move(__pred)); }
+
+  template<typename _Compare, typename _Value>
+    struct _Iter_comp_to_val
+    {
+      _Compare _M_comp;
+      _Value& _M_value;
+
+      constexpr
+      _Iter_comp_to_val(_Compare __comp, _Value& __value)
+ : _M_comp(std::move(__comp)), _M_value(__value)
+      { }
+
+      template<typename _Iterator>
+ constexpr
+ bool
+ operator()(_Iterator __it)
+ { return bool(_M_comp(*__it, _M_value)); }
+    };
+
+  template<typename _Compare, typename _Value>
+    _Iter_comp_to_val<_Compare, _Value>
+    constexpr
+    __iter_comp_val(_Compare __comp, _Value &__val)
+    {
+      return _Iter_comp_to_val<_Compare, _Value>(std::move(__comp), __val);
+    }
+
+  template<typename _Compare, typename _Iterator1>
+    struct _Iter_comp_to_iter
+    {
+      _Compare _M_comp;
+      _Iterator1 _M_it1;
+
+      constexpr
+      _Iter_comp_to_iter(_Compare __comp, _Iterator1 __it1)
+ : _M_comp(std::move(__comp)), _M_it1(__it1)
+      { }
+
+      template<typename _Iterator2>
+ constexpr
+ bool
+ operator()(_Iterator2 __it2)
+ { return bool(_M_comp(*__it2, *_M_it1)); }
+    };
+
+  template<typename _Compare, typename _Iterator>
+    constexpr
+    inline _Iter_comp_to_iter<_Compare, _Iterator>
+    __iter_comp_iter(_Iter_comp_iter<_Compare> __comp, _Iterator __it)
+    {
+      return _Iter_comp_to_iter<_Compare, _Iterator>(
+   std::move(__comp._M_comp), __it);
+    }
+
+  template<typename _Predicate>
+    struct _Iter_negate
+    {
+      _Predicate _M_pred;
+
+      constexpr
+      explicit
+      _Iter_negate(_Predicate __pred)
+ : _M_pred(std::move(__pred))
+      { }
+
+      template<typename _Iterator>
+ constexpr
+ bool
+ operator()(_Iterator __it)
+ { return !bool(_M_pred(*__it)); }
+    };
+
+  template<typename _Predicate>
+    constexpr
+    inline _Iter_negate<_Predicate>
+    __negate(_Iter_pred<_Predicate> __pred)
+    { return _Iter_negate<_Predicate>(std::move(__pred._M_pred)); }
+
+}
+}
+# 72 "/usr/include/c++/14/bits/stl_algobase.h" 2 3
+
+
+
+
+# 1 "/usr/include/c++/14/bit" 1 3
+# 32 "/usr/include/c++/14/bit" 3
+       
+# 33 "/usr/include/c++/14/bit" 3
+# 61 "/usr/include/c++/14/bit" 3
+# 1 "/usr/include/c++/14/bits/version.h" 1 3
+# 47 "/usr/include/c++/14/bits/version.h" 3
+       
+# 48 "/usr/include/c++/14/bits/version.h" 3
+# 62 "/usr/include/c++/14/bit" 2 3
+
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+# 85 "/usr/include/c++/14/bit" 3
+  template<typename _To, typename _From>
+    [[nodiscard]]
+    constexpr _To
+    bit_cast(const _From& __from) noexcept
+
+    requires (sizeof(_To) == sizeof(_From))
+      && is_trivially_copyable_v<_To> && is_trivially_copyable_v<_From>
+
+    {
+      return __builtin_bit_cast(_To, __from);
+    }
+# 155 "/usr/include/c++/14/bit" 3
+  template<typename _Tp>
+    constexpr _Tp
+    __rotl(_Tp __x, int __s) noexcept
+    {
+      constexpr auto _Nd = __gnu_cxx::__int_traits<_Tp>::__digits;
+      if constexpr ((_Nd & (_Nd - 1)) == 0)
+ {
+
+
+   constexpr unsigned __uNd = _Nd;
+   const unsigned __r = __s;
+   return (__x << (__r % __uNd)) | (__x >> ((-__r) % __uNd));
+ }
+      const int __r = __s % _Nd;
+      if (__r == 0)
+ return __x;
+      else if (__r > 0)
+ return (__x << __r) | (__x >> ((_Nd - __r) % _Nd));
+      else
+ return (__x >> -__r) | (__x << ((_Nd + __r) % _Nd));
+    }
+
+  template<typename _Tp>
+    constexpr _Tp
+    __rotr(_Tp __x, int __s) noexcept
+    {
+      constexpr auto _Nd = __gnu_cxx::__int_traits<_Tp>::__digits;
+      if constexpr ((_Nd & (_Nd - 1)) == 0)
+ {
+
+
+   constexpr unsigned __uNd = _Nd;
+   const unsigned __r = __s;
+   return (__x >> (__r % __uNd)) | (__x << ((-__r) % __uNd));
+ }
+      const int __r = __s % _Nd;
+      if (__r == 0)
+ return __x;
+      else if (__r > 0)
+ return (__x >> __r) | (__x << ((_Nd - __r) % _Nd));
+      else
+ return (__x << -__r) | (__x >> ((_Nd + __r) % _Nd));
+    }
+
+  template<typename _Tp>
+    constexpr int
+    __countl_zero(_Tp __x) noexcept
+    {
+      using __gnu_cxx::__int_traits;
+      constexpr auto _Nd = __int_traits<_Tp>::__digits;
+
+      if (__x == 0)
+        return _Nd;
+
+      constexpr auto _Nd_ull = __int_traits<unsigned long long>::__digits;
+      constexpr auto _Nd_ul = __int_traits<unsigned long>::__digits;
+      constexpr auto _Nd_u = __int_traits<unsigned>::__digits;
+
+      if constexpr (_Nd <= _Nd_u)
+ {
+   constexpr int __diff = _Nd_u - _Nd;
+   return __builtin_clz(__x) - __diff;
+ }
+      else if constexpr (_Nd <= _Nd_ul)
+ {
+   constexpr int __diff = _Nd_ul - _Nd;
+   return __builtin_clzl(__x) - __diff;
+ }
+      else if constexpr (_Nd <= _Nd_ull)
+ {
+   constexpr int __diff = _Nd_ull - _Nd;
+   return __builtin_clzll(__x) - __diff;
+ }
+      else
+ {
+   static_assert(_Nd <= (2 * _Nd_ull),
+   "Maximum supported integer size is 128-bit");
+
+   unsigned long long __high = __x >> _Nd_ull;
+   if (__high != 0)
+     {
+       constexpr int __diff = (2 * _Nd_ull) - _Nd;
+       return __builtin_clzll(__high) - __diff;
+     }
+   constexpr auto __max_ull = __int_traits<unsigned long long>::__max;
+   unsigned long long __low = __x & __max_ull;
+   return (_Nd - _Nd_ull) + __builtin_clzll(__low);
+ }
+    }
+
+  template<typename _Tp>
+    constexpr int
+    __countl_one(_Tp __x) noexcept
+    {
+      return std::__countl_zero<_Tp>((_Tp)~__x);
+    }
+
+  template<typename _Tp>
+    constexpr int
+    __countr_zero(_Tp __x) noexcept
+    {
+      using __gnu_cxx::__int_traits;
+      constexpr auto _Nd = __int_traits<_Tp>::__digits;
+
+      if (__x == 0)
+        return _Nd;
+
+      constexpr auto _Nd_ull = __int_traits<unsigned long long>::__digits;
+      constexpr auto _Nd_ul = __int_traits<unsigned long>::__digits;
+      constexpr auto _Nd_u = __int_traits<unsigned>::__digits;
+
+      if constexpr (_Nd <= _Nd_u)
+ return __builtin_ctz(__x);
+      else if constexpr (_Nd <= _Nd_ul)
+ return __builtin_ctzl(__x);
+      else if constexpr (_Nd <= _Nd_ull)
+ return __builtin_ctzll(__x);
+      else
+ {
+   static_assert(_Nd <= (2 * _Nd_ull),
+   "Maximum supported integer size is 128-bit");
+
+   constexpr auto __max_ull = __int_traits<unsigned long long>::__max;
+   unsigned long long __low = __x & __max_ull;
+   if (__low != 0)
+     return __builtin_ctzll(__low);
+   unsigned long long __high = __x >> _Nd_ull;
+   return __builtin_ctzll(__high) + _Nd_ull;
+ }
+    }
+
+  template<typename _Tp>
+    constexpr int
+    __countr_one(_Tp __x) noexcept
+    {
+      return std::__countr_zero((_Tp)~__x);
+    }
+
+  template<typename _Tp>
+    constexpr int
+    __popcount(_Tp __x) noexcept
+    {
+      using __gnu_cxx::__int_traits;
+      constexpr auto _Nd = __int_traits<_Tp>::__digits;
+
+      constexpr auto _Nd_ull = __int_traits<unsigned long long>::__digits;
+      constexpr auto _Nd_ul = __int_traits<unsigned long>::__digits;
+      constexpr auto _Nd_u = __int_traits<unsigned>::__digits;
+
+      if constexpr (_Nd <= _Nd_u)
+ return __builtin_popcount(__x);
+      else if constexpr (_Nd <= _Nd_ul)
+ return __builtin_popcountl(__x);
+      else if constexpr (_Nd <= _Nd_ull)
+ return __builtin_popcountll(__x);
+      else
+ {
+   static_assert(_Nd <= (2 * _Nd_ull),
+   "Maximum supported integer size is 128-bit");
+
+   constexpr auto __max_ull = __int_traits<unsigned long long>::__max;
+   unsigned long long __low = __x & __max_ull;
+   unsigned long long __high = __x >> _Nd_ull;
+   return __builtin_popcountll(__low) + __builtin_popcountll(__high);
+ }
+    }
+
+  template<typename _Tp>
+    constexpr bool
+    __has_single_bit(_Tp __x) noexcept
+    { return std::__popcount(__x) == 1; }
+
+  template<typename _Tp>
+    constexpr _Tp
+    __bit_ceil(_Tp __x) noexcept
+    {
+      using __gnu_cxx::__int_traits;
+      constexpr auto _Nd = __int_traits<_Tp>::__digits;
+      if (__x == 0 || __x == 1)
+        return 1;
+      auto __shift_exponent = _Nd - std::__countl_zero((_Tp)(__x - 1u));
+
+
+
+
+      if (!std::__is_constant_evaluated())
+ {
+   do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__shift_exponent != __int_traits<_Tp>::__digits), false)) std::__glibcxx_assert_fail(); } while (false);
+ }
+
+      using __promoted_type = decltype(__x << 1);
+      if constexpr (!is_same<__promoted_type, _Tp>::value)
+ {
+
+
+
+
+
+   const int __extra_exp = sizeof(__promoted_type) / sizeof(_Tp) / 2;
+   __shift_exponent |= (__shift_exponent & _Nd) << __extra_exp;
+ }
+      return (_Tp)1u << __shift_exponent;
+    }
+
+  template<typename _Tp>
+    constexpr _Tp
+    __bit_floor(_Tp __x) noexcept
+    {
+      constexpr auto _Nd = __gnu_cxx::__int_traits<_Tp>::__digits;
+      if (__x == 0)
+        return 0;
+      return (_Tp)1u << (_Nd - std::__countl_zero((_Tp)(__x >> 1)));
+    }
+
+  template<typename _Tp>
+    constexpr int
+    __bit_width(_Tp __x) noexcept
+    {
+      constexpr auto _Nd = __gnu_cxx::__int_traits<_Tp>::__digits;
+      return _Nd - std::__countl_zero(__x);
+    }
+
+
+
+
+
+
+  template<typename _Tp>
+    concept __unsigned_integer = __is_unsigned_integer<_Tp>::value;
+
+
+
+
+
+  template<__unsigned_integer _Tp>
+    [[nodiscard]] constexpr _Tp
+    rotl(_Tp __x, int __s) noexcept
+    { return std::__rotl(__x, __s); }
+
+
+  template<__unsigned_integer _Tp>
+    [[nodiscard]] constexpr _Tp
+    rotr(_Tp __x, int __s) noexcept
+    { return std::__rotr(__x, __s); }
+
+
+
+
+  template<__unsigned_integer _Tp>
+    constexpr int
+    countl_zero(_Tp __x) noexcept
+    { return std::__countl_zero(__x); }
+
+
+  template<__unsigned_integer _Tp>
+    constexpr int
+    countl_one(_Tp __x) noexcept
+    { return std::__countl_one(__x); }
+
+
+  template<__unsigned_integer _Tp>
+    constexpr int
+    countr_zero(_Tp __x) noexcept
+    { return std::__countr_zero(__x); }
+
+
+  template<__unsigned_integer _Tp>
+    constexpr int
+    countr_one(_Tp __x) noexcept
+    { return std::__countr_one(__x); }
+
+
+  template<__unsigned_integer _Tp>
+    constexpr int
+    popcount(_Tp __x) noexcept
+    { return std::__popcount(__x); }
+
+
+
+
+
+
+  template<__unsigned_integer _Tp>
+    constexpr bool
+    has_single_bit(_Tp __x) noexcept
+    { return std::__has_single_bit(__x); }
+
+
+  template<__unsigned_integer _Tp>
+    constexpr _Tp
+    bit_ceil(_Tp __x) noexcept
+    { return std::__bit_ceil(__x); }
+
+
+  template<__unsigned_integer _Tp>
+    constexpr _Tp
+    bit_floor(_Tp __x) noexcept
+    { return std::__bit_floor(__x); }
+
+
+
+
+  template<__unsigned_integer _Tp>
+    constexpr int
+    bit_width(_Tp __x) noexcept
+    { return std::__bit_width(__x); }
+# 472 "/usr/include/c++/14/bit" 3
+  enum class endian
+  {
+    little = 1234,
+    big = 4321,
+    native = 1234
+  };
+
+
+
+
+
+}
+# 77 "/usr/include/c++/14/bits/stl_algobase.h" 2 3
+
+
+
+
+
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+
+
+
+
+
+  template<typename _Tp, typename _Up>
+    constexpr
+    inline int
+    __memcmp(const _Tp* __first1, const _Up* __first2, size_t __num)
+    {
+
+      static_assert(sizeof(_Tp) == sizeof(_Up), "can be compared with memcmp");
+
+
+      if (std::is_constant_evaluated())
+ {
+   for(; __num > 0; ++__first1, ++__first2, --__num)
+     if (*__first1 != *__first2)
+       return *__first1 < *__first2 ? -1 : 1;
+   return 0;
+ }
+      else
+
+ return __builtin_memcmp(__first1, __first2, sizeof(_Tp) * __num);
+    }
+# 152 "/usr/include/c++/14/bits/stl_algobase.h" 3
+  template<typename _ForwardIterator1, typename _ForwardIterator2>
+    constexpr
+    inline void
+    iter_swap(_ForwardIterator1 __a, _ForwardIterator2 __b)
+    {
+
+     
+
+     
+# 185 "/usr/include/c++/14/bits/stl_algobase.h" 3
+      swap(*__a, *__b);
+
+    }
+# 201 "/usr/include/c++/14/bits/stl_algobase.h" 3
+  template<typename _ForwardIterator1, typename _ForwardIterator2>
+    constexpr
+    _ForwardIterator2
+    swap_ranges(_ForwardIterator1 __first1, _ForwardIterator1 __last1,
+  _ForwardIterator2 __first2)
+    {
+
+     
+
+     
+
+      ;
+
+      for (; __first1 != __last1; ++__first1, (void)++__first2)
+ std::iter_swap(__first1, __first2);
+      return __first2;
+    }
+# 230 "/usr/include/c++/14/bits/stl_algobase.h" 3
+  template<typename _Tp>
+    [[__nodiscard__]] constexpr
+    inline const _Tp&
+    min(const _Tp& __a, const _Tp& __b)
+    {
+
+     
+
+      if (__b < __a)
+ return __b;
+      return __a;
+    }
+# 254 "/usr/include/c++/14/bits/stl_algobase.h" 3
+  template<typename _Tp>
+    [[__nodiscard__]] constexpr
+    inline const _Tp&
+    max(const _Tp& __a, const _Tp& __b)
+    {
+
+     
+
+      if (__a < __b)
+ return __b;
+      return __a;
+    }
+# 278 "/usr/include/c++/14/bits/stl_algobase.h" 3
+  template<typename _Tp, typename _Compare>
+    [[__nodiscard__]] constexpr
+    inline const _Tp&
+    min(const _Tp& __a, const _Tp& __b, _Compare __comp)
+    {
+
+      if (__comp(__b, __a))
+ return __b;
+      return __a;
+    }
+# 300 "/usr/include/c++/14/bits/stl_algobase.h" 3
+  template<typename _Tp, typename _Compare>
+    [[__nodiscard__]] constexpr
+    inline const _Tp&
+    max(const _Tp& __a, const _Tp& __b, _Compare __comp)
+    {
+
+      if (__comp(__a, __b))
+ return __b;
+      return __a;
+    }
+
+
+
+  template<typename _Iterator>
+    constexpr
+    inline _Iterator
+    __niter_base(_Iterator __it)
+    noexcept(std::is_nothrow_copy_constructible<_Iterator>::value)
+    { return __it; }
+# 332 "/usr/include/c++/14/bits/stl_algobase.h" 3
+  template<typename _Ite, typename _Seq>
+    constexpr
+    decltype(std::__niter_base(std::declval<_Ite>()))
+    __niter_base(const ::__gnu_debug::_Safe_iterator<_Ite, _Seq,
+   std::random_access_iterator_tag>&)
+    noexcept(std::is_nothrow_copy_constructible<_Ite>::value);
+
+
+
+
+
+  template<typename _From, typename _To>
+    constexpr
+    inline _From
+    __niter_wrap(_From __from, _To __res)
+    { return __from + (std::__niter_base(__res) - std::__niter_base(__from)); }
+
+
+  template<typename _Iterator>
+    constexpr
+    inline _Iterator
+    __niter_wrap(const _Iterator&, _Iterator __res)
+    { return __res; }
+
+
+
+
+
+
+
+  template<bool _IsMove, bool _IsSimple, typename _Category>
+    struct __copy_move
+    {
+      template<typename _II, typename _OI>
+ constexpr
+ static _OI
+ __copy_m(_II __first, _II __last, _OI __result)
+ {
+   for (; __first != __last; ++__result, (void)++__first)
+     *__result = *__first;
+   return __result;
+ }
+    };
+
+
+  template<typename _Category>
+    struct __copy_move<true, false, _Category>
+    {
+      template<typename _II, typename _OI>
+ constexpr
+ static _OI
+ __copy_m(_II __first, _II __last, _OI __result)
+ {
+   for (; __first != __last; ++__result, (void)++__first)
+     *__result = std::move(*__first);
+   return __result;
+ }
+    };
+
+
+  template<>
+    struct __copy_move<false, false, random_access_iterator_tag>
+    {
+      template<typename _II, typename _OI>
+ constexpr
+ static _OI
+ __copy_m(_II __first, _II __last, _OI __result)
+ {
+   typedef typename iterator_traits<_II>::difference_type _Distance;
+   for(_Distance __n = __last - __first; __n > 0; --__n)
+     {
+       *__result = *__first;
+       ++__first;
+       ++__result;
+     }
+   return __result;
+ }
+
+      template<typename _Tp, typename _Up>
+ static void
+ __assign_one(_Tp* __to, _Up* __from)
+ { *__to = *__from; }
+    };
+
+
+  template<>
+    struct __copy_move<true, false, random_access_iterator_tag>
+    {
+      template<typename _II, typename _OI>
+ constexpr
+ static _OI
+ __copy_m(_II __first, _II __last, _OI __result)
+ {
+   typedef typename iterator_traits<_II>::difference_type _Distance;
+   for(_Distance __n = __last - __first; __n > 0; --__n)
+     {
+       *__result = std::move(*__first);
+       ++__first;
+       ++__result;
+     }
+   return __result;
+ }
+
+      template<typename _Tp, typename _Up>
+ static void
+ __assign_one(_Tp* __to, _Up* __from)
+ { *__to = std::move(*__from); }
+    };
+
+
+  template<bool _IsMove>
+    struct __copy_move<_IsMove, true, random_access_iterator_tag>
+    {
+      template<typename _Tp, typename _Up>
+ constexpr
+ static _Up*
+ __copy_m(_Tp* __first, _Tp* __last, _Up* __result)
+ {
+   const ptrdiff_t _Num = __last - __first;
+   if (__builtin_expect(_Num > 1, true))
+     __builtin_memmove(__result, __first, sizeof(_Tp) * _Num);
+   else if (_Num == 1)
+     std::__copy_move<_IsMove, false, random_access_iterator_tag>::
+       __assign_one(__result, __first);
+   return __result + _Num;
+ }
+    };
+
+
+
+  template<typename _Tp, typename _Ref, typename _Ptr>
+    struct _Deque_iterator;
+
+  struct _Bit_iterator;
+
+
+
+
+
+
+  template<typename _CharT>
+    struct char_traits;
+
+  template<typename _CharT, typename _Traits>
+    class istreambuf_iterator;
+
+  template<typename _CharT, typename _Traits>
+    class ostreambuf_iterator;
+
+  template<bool _IsMove, typename _CharT>
+    typename __gnu_cxx::__enable_if<__is_char<_CharT>::__value,
+      ostreambuf_iterator<_CharT, char_traits<_CharT> > >::__type
+    __copy_move_a2(_CharT*, _CharT*,
+     ostreambuf_iterator<_CharT, char_traits<_CharT> >);
+
+  template<bool _IsMove, typename _CharT>
+    typename __gnu_cxx::__enable_if<__is_char<_CharT>::__value,
+      ostreambuf_iterator<_CharT, char_traits<_CharT> > >::__type
+    __copy_move_a2(const _CharT*, const _CharT*,
+     ostreambuf_iterator<_CharT, char_traits<_CharT> >);
+
+  template<bool _IsMove, typename _CharT>
+    typename __gnu_cxx::__enable_if<__is_char<_CharT>::__value,
+        _CharT*>::__type
+    __copy_move_a2(istreambuf_iterator<_CharT, char_traits<_CharT> >,
+     istreambuf_iterator<_CharT, char_traits<_CharT> >, _CharT*);
+
+  template<bool _IsMove, typename _CharT>
+    typename __gnu_cxx::__enable_if<
+      __is_char<_CharT>::__value,
+      std::_Deque_iterator<_CharT, _CharT&, _CharT*> >::__type
+    __copy_move_a2(
+ istreambuf_iterator<_CharT, char_traits<_CharT> >,
+ istreambuf_iterator<_CharT, char_traits<_CharT> >,
+ std::_Deque_iterator<_CharT, _CharT&, _CharT*>);
+
+
+  template<bool _IsMove, typename _II, typename _OI>
+    constexpr
+    inline _OI
+    __copy_move_a2(_II __first, _II __last, _OI __result)
+    {
+      typedef typename iterator_traits<_II>::iterator_category _Category;
+
+      if (std::is_constant_evaluated())
+ return std::__copy_move<_IsMove, false, _Category>::
+   __copy_m(__first, __last, __result);
+
+      return std::__copy_move<_IsMove, __memcpyable<_OI, _II>::__value,
+         _Category>::__copy_m(__first, __last, __result);
+    }
+
+  template<bool _IsMove,
+    typename _Tp, typename _Ref, typename _Ptr, typename _OI>
+    _OI
+    __copy_move_a1(std::_Deque_iterator<_Tp, _Ref, _Ptr>,
+     std::_Deque_iterator<_Tp, _Ref, _Ptr>,
+     _OI);
+
+  template<bool _IsMove,
+    typename _ITp, typename _IRef, typename _IPtr, typename _OTp>
+    std::_Deque_iterator<_OTp, _OTp&, _OTp*>
+    __copy_move_a1(std::_Deque_iterator<_ITp, _IRef, _IPtr>,
+     std::_Deque_iterator<_ITp, _IRef, _IPtr>,
+     std::_Deque_iterator<_OTp, _OTp&, _OTp*>);
+
+  template<bool _IsMove, typename _II, typename _Tp>
+    typename __gnu_cxx::__enable_if<
+      __is_random_access_iter<_II>::__value,
+      std::_Deque_iterator<_Tp, _Tp&, _Tp*> >::__type
+    __copy_move_a1(_II, _II, std::_Deque_iterator<_Tp, _Tp&, _Tp*>);
+
+  template<bool _IsMove, typename _II, typename _OI>
+    constexpr
+    inline _OI
+    __copy_move_a1(_II __first, _II __last, _OI __result)
+    { return std::__copy_move_a2<_IsMove>(__first, __last, __result); }
+
+  template<bool _IsMove, typename _II, typename _OI>
+    constexpr
+    inline _OI
+    __copy_move_a(_II __first, _II __last, _OI __result)
+    {
+      return std::__niter_wrap(__result,
+  std::__copy_move_a1<_IsMove>(std::__niter_base(__first),
+          std::__niter_base(__last),
+          std::__niter_base(__result)));
+    }
+
+  template<bool _IsMove,
+    typename _Ite, typename _Seq, typename _Cat, typename _OI>
+    constexpr
+    _OI
+    __copy_move_a(const ::__gnu_debug::_Safe_iterator<_Ite, _Seq, _Cat>&,
+    const ::__gnu_debug::_Safe_iterator<_Ite, _Seq, _Cat>&,
+    _OI);
+
+  template<bool _IsMove,
+    typename _II, typename _Ite, typename _Seq, typename _Cat>
+    constexpr
+    __gnu_debug::_Safe_iterator<_Ite, _Seq, _Cat>
+    __copy_move_a(_II, _II,
+    const ::__gnu_debug::_Safe_iterator<_Ite, _Seq, _Cat>&);
+
+  template<bool _IsMove,
+    typename _IIte, typename _ISeq, typename _ICat,
+    typename _OIte, typename _OSeq, typename _OCat>
+    constexpr
+    ::__gnu_debug::_Safe_iterator<_OIte, _OSeq, _OCat>
+    __copy_move_a(const ::__gnu_debug::_Safe_iterator<_IIte, _ISeq, _ICat>&,
+    const ::__gnu_debug::_Safe_iterator<_IIte, _ISeq, _ICat>&,
+    const ::__gnu_debug::_Safe_iterator<_OIte, _OSeq, _OCat>&);
+
+  template<typename _InputIterator, typename _Size, typename _OutputIterator>
+    constexpr
+    _OutputIterator
+    __copy_n_a(_InputIterator __first, _Size __n, _OutputIterator __result,
+        bool)
+    {
+      if (__n > 0)
+ {
+   while (true)
+     {
+       *__result = *__first;
+       ++__result;
+       if (--__n > 0)
+  ++__first;
+       else
+  break;
+     }
+ }
+      return __result;
+    }
+
+
+  template<typename _CharT, typename _Size>
+    typename __gnu_cxx::__enable_if<
+      __is_char<_CharT>::__value, _CharT*>::__type
+    __copy_n_a(istreambuf_iterator<_CharT, char_traits<_CharT> >,
+        _Size, _CharT*, bool);
+
+  template<typename _CharT, typename _Size>
+    typename __gnu_cxx::__enable_if<
+      __is_char<_CharT>::__value,
+      std::_Deque_iterator<_CharT, _CharT&, _CharT*> >::__type
+    __copy_n_a(istreambuf_iterator<_CharT, char_traits<_CharT> >, _Size,
+        std::_Deque_iterator<_CharT, _CharT&, _CharT*>,
+        bool);
+# 639 "/usr/include/c++/14/bits/stl_algobase.h" 3
+  template<typename _II, typename _OI>
+    constexpr
+    inline _OI
+    copy(_II __first, _II __last, _OI __result)
+    {
+
+     
+     
+
+      ;
+
+      return std::__copy_move_a<__is_move_iterator<_II>::__value>
+      (std::__miter_base(__first), std::__miter_base(__last), __result);
+    }
+# 672 "/usr/include/c++/14/bits/stl_algobase.h" 3
+  template<typename _II, typename _OI>
+    constexpr
+    inline _OI
+    move(_II __first, _II __last, _OI __result)
+    {
+
+     
+     
+
+      ;
+
+      return std::__copy_move_a<true>(std::__miter_base(__first),
+          std::__miter_base(__last), __result);
+    }
+
+
+
+
+
+
+  template<bool _IsMove, bool _IsSimple, typename _Category>
+    struct __copy_move_backward
+    {
+      template<typename _BI1, typename _BI2>
+ constexpr
+ static _BI2
+ __copy_move_b(_BI1 __first, _BI1 __last, _BI2 __result)
+ {
+   while (__first != __last)
+     *--__result = *--__last;
+   return __result;
+ }
+    };
+
+
+  template<typename _Category>
+    struct __copy_move_backward<true, false, _Category>
+    {
+      template<typename _BI1, typename _BI2>
+ constexpr
+ static _BI2
+ __copy_move_b(_BI1 __first, _BI1 __last, _BI2 __result)
+ {
+   while (__first != __last)
+     *--__result = std::move(*--__last);
+   return __result;
+ }
+    };
+
+
+  template<>
+    struct __copy_move_backward<false, false, random_access_iterator_tag>
+    {
+      template<typename _BI1, typename _BI2>
+ constexpr
+ static _BI2
+ __copy_move_b(_BI1 __first, _BI1 __last, _BI2 __result)
+ {
+   typename iterator_traits<_BI1>::difference_type
+     __n = __last - __first;
+   for (; __n > 0; --__n)
+     *--__result = *--__last;
+   return __result;
+ }
+    };
+
+
+  template<>
+    struct __copy_move_backward<true, false, random_access_iterator_tag>
+    {
+      template<typename _BI1, typename _BI2>
+ constexpr
+ static _BI2
+ __copy_move_b(_BI1 __first, _BI1 __last, _BI2 __result)
+ {
+   typename iterator_traits<_BI1>::difference_type
+     __n = __last - __first;
+   for (; __n > 0; --__n)
+     *--__result = std::move(*--__last);
+   return __result;
+ }
+    };
+
+
+  template<bool _IsMove>
+    struct __copy_move_backward<_IsMove, true, random_access_iterator_tag>
+    {
+      template<typename _Tp, typename _Up>
+ constexpr
+ static _Up*
+ __copy_move_b(_Tp* __first, _Tp* __last, _Up* __result)
+ {
+   const ptrdiff_t _Num = __last - __first;
+   if (__builtin_expect(_Num > 1, true))
+     __builtin_memmove(__result - _Num, __first, sizeof(_Tp) * _Num);
+   else if (_Num == 1)
+     std::__copy_move<_IsMove, false, random_access_iterator_tag>::
+       __assign_one(__result - 1, __first);
+   return __result - _Num;
+ }
+    };
+
+  template<bool _IsMove, typename _BI1, typename _BI2>
+    constexpr
+    inline _BI2
+    __copy_move_backward_a2(_BI1 __first, _BI1 __last, _BI2 __result)
+    {
+      typedef typename iterator_traits<_BI1>::iterator_category _Category;
+
+      if (std::is_constant_evaluated())
+ return std::__copy_move_backward<_IsMove, false, _Category>::
+   __copy_move_b(__first, __last, __result);
+
+      return std::__copy_move_backward<_IsMove,
+           __memcpyable<_BI2, _BI1>::__value,
+           _Category>::__copy_move_b(__first,
+         __last,
+         __result);
+    }
+
+  template<bool _IsMove, typename _BI1, typename _BI2>
+    constexpr
+    inline _BI2
+    __copy_move_backward_a1(_BI1 __first, _BI1 __last, _BI2 __result)
+    { return std::__copy_move_backward_a2<_IsMove>(__first, __last, __result); }
+
+  template<bool _IsMove,
+    typename _Tp, typename _Ref, typename _Ptr, typename _OI>
+    _OI
+    __copy_move_backward_a1(std::_Deque_iterator<_Tp, _Ref, _Ptr>,
+       std::_Deque_iterator<_Tp, _Ref, _Ptr>,
+       _OI);
+
+  template<bool _IsMove,
+    typename _ITp, typename _IRef, typename _IPtr, typename _OTp>
+    std::_Deque_iterator<_OTp, _OTp&, _OTp*>
+    __copy_move_backward_a1(
+   std::_Deque_iterator<_ITp, _IRef, _IPtr>,
+   std::_Deque_iterator<_ITp, _IRef, _IPtr>,
+   std::_Deque_iterator<_OTp, _OTp&, _OTp*>);
+
+  template<bool _IsMove, typename _II, typename _Tp>
+    typename __gnu_cxx::__enable_if<
+      __is_random_access_iter<_II>::__value,
+      std::_Deque_iterator<_Tp, _Tp&, _Tp*> >::__type
+    __copy_move_backward_a1(_II, _II,
+       std::_Deque_iterator<_Tp, _Tp&, _Tp*>);
+
+  template<bool _IsMove, typename _II, typename _OI>
+    constexpr
+    inline _OI
+    __copy_move_backward_a(_II __first, _II __last, _OI __result)
+    {
+      return std::__niter_wrap(__result,
+  std::__copy_move_backward_a1<_IsMove>
+    (std::__niter_base(__first), std::__niter_base(__last),
+     std::__niter_base(__result)));
+    }
+
+  template<bool _IsMove,
+    typename _Ite, typename _Seq, typename _Cat, typename _OI>
+    constexpr
+    _OI
+    __copy_move_backward_a(
+  const ::__gnu_debug::_Safe_iterator<_Ite, _Seq, _Cat>&,
+  const ::__gnu_debug::_Safe_iterator<_Ite, _Seq, _Cat>&,
+  _OI);
+
+  template<bool _IsMove,
+    typename _II, typename _Ite, typename _Seq, typename _Cat>
+    constexpr
+    __gnu_debug::_Safe_iterator<_Ite, _Seq, _Cat>
+    __copy_move_backward_a(_II, _II,
+  const ::__gnu_debug::_Safe_iterator<_Ite, _Seq, _Cat>&);
+
+  template<bool _IsMove,
+    typename _IIte, typename _ISeq, typename _ICat,
+    typename _OIte, typename _OSeq, typename _OCat>
+    constexpr
+    ::__gnu_debug::_Safe_iterator<_OIte, _OSeq, _OCat>
+    __copy_move_backward_a(
+  const ::__gnu_debug::_Safe_iterator<_IIte, _ISeq, _ICat>&,
+  const ::__gnu_debug::_Safe_iterator<_IIte, _ISeq, _ICat>&,
+  const ::__gnu_debug::_Safe_iterator<_OIte, _OSeq, _OCat>&);
+# 875 "/usr/include/c++/14/bits/stl_algobase.h" 3
+  template<typename _BI1, typename _BI2>
+    constexpr
+    inline _BI2
+    copy_backward(_BI1 __first, _BI1 __last, _BI2 __result)
+    {
+
+     
+     
+     
+
+      ;
+
+      return std::__copy_move_backward_a<__is_move_iterator<_BI1>::__value>
+      (std::__miter_base(__first), std::__miter_base(__last), __result);
+    }
+# 910 "/usr/include/c++/14/bits/stl_algobase.h" 3
+  template<typename _BI1, typename _BI2>
+    constexpr
+    inline _BI2
+    move_backward(_BI1 __first, _BI1 __last, _BI2 __result)
+    {
+
+     
+     
+     
+
+      ;
+
+      return std::__copy_move_backward_a<true>(std::__miter_base(__first),
+            std::__miter_base(__last),
+            __result);
+    }
+
+
+
+
+
+
+  template<typename _ForwardIterator, typename _Tp>
+    constexpr
+    inline typename
+    __gnu_cxx::__enable_if<!__is_scalar<_Tp>::__value, void>::__type
+    __fill_a1(_ForwardIterator __first, _ForwardIterator __last,
+       const _Tp& __value)
+    {
+      for (; __first != __last; ++__first)
+ *__first = __value;
+    }
+
+  template<typename _ForwardIterator, typename _Tp>
+    constexpr
+    inline typename
+    __gnu_cxx::__enable_if<__is_scalar<_Tp>::__value, void>::__type
+    __fill_a1(_ForwardIterator __first, _ForwardIterator __last,
+       const _Tp& __value)
+    {
+      const _Tp __tmp = __value;
+      for (; __first != __last; ++__first)
+ *__first = __tmp;
+    }
+
+
+  template<typename _Tp>
+    constexpr
+    inline typename
+    __gnu_cxx::__enable_if<__is_byte<_Tp>::__value, void>::__type
+    __fill_a1(_Tp* __first, _Tp* __last, const _Tp& __c)
+    {
+      const _Tp __tmp = __c;
+
+      if (std::is_constant_evaluated())
+ {
+   for (; __first != __last; ++__first)
+     *__first = __tmp;
+   return;
+ }
+
+      if (const size_t __len = __last - __first)
+ __builtin_memset(__first, static_cast<unsigned char>(__tmp), __len);
+    }
+
+  template<typename _Ite, typename _Cont, typename _Tp>
+    constexpr
+    inline void
+    __fill_a1(::__gnu_cxx::__normal_iterator<_Ite, _Cont> __first,
+       ::__gnu_cxx::__normal_iterator<_Ite, _Cont> __last,
+       const _Tp& __value)
+    { std::__fill_a1(__first.base(), __last.base(), __value); }
+
+  template<typename _Tp, typename _VTp>
+    void
+    __fill_a1(const std::_Deque_iterator<_Tp, _Tp&, _Tp*>&,
+       const std::_Deque_iterator<_Tp, _Tp&, _Tp*>&,
+       const _VTp&);
+
+  constexpr
+  void
+  __fill_a1(std::_Bit_iterator, std::_Bit_iterator,
+     const bool&);
+
+  template<typename _FIte, typename _Tp>
+    constexpr
+    inline void
+    __fill_a(_FIte __first, _FIte __last, const _Tp& __value)
+    { std::__fill_a1(__first, __last, __value); }
+
+  template<typename _Ite, typename _Seq, typename _Cat, typename _Tp>
+    constexpr
+    void
+    __fill_a(const ::__gnu_debug::_Safe_iterator<_Ite, _Seq, _Cat>&,
+      const ::__gnu_debug::_Safe_iterator<_Ite, _Seq, _Cat>&,
+      const _Tp&);
+# 1019 "/usr/include/c++/14/bits/stl_algobase.h" 3
+  template<typename _ForwardIterator, typename _Tp>
+    constexpr
+    inline void
+    fill(_ForwardIterator __first, _ForwardIterator __last, const _Tp& __value)
+    {
+
+     
+
+      ;
+
+      std::__fill_a(__first, __last, __value);
+    }
+
+
+  inline constexpr int
+  __size_to_integer(int __n) { return __n; }
+  inline constexpr unsigned
+  __size_to_integer(unsigned __n) { return __n; }
+  inline constexpr long
+  __size_to_integer(long __n) { return __n; }
+  inline constexpr unsigned long
+  __size_to_integer(unsigned long __n) { return __n; }
+  inline constexpr long long
+  __size_to_integer(long long __n) { return __n; }
+  inline constexpr unsigned long long
+  __size_to_integer(unsigned long long __n) { return __n; }
+
+
+  __extension__ inline constexpr __int128
+  __size_to_integer(__int128 __n) { return __n; }
+  __extension__ inline constexpr unsigned __int128
+  __size_to_integer(unsigned __int128 __n) { return __n; }
+# 1071 "/usr/include/c++/14/bits/stl_algobase.h" 3
+  inline constexpr long long
+  __size_to_integer(float __n) { return (long long)__n; }
+  inline constexpr long long
+  __size_to_integer(double __n) { return (long long)__n; }
+  inline constexpr long long
+  __size_to_integer(long double __n) { return (long long)__n; }
+
+  __extension__ inline constexpr long long
+  __size_to_integer(__float128 __n) { return (long long)__n; }
+
+
+  template<typename _OutputIterator, typename _Size, typename _Tp>
+    constexpr
+    inline typename
+    __gnu_cxx::__enable_if<!__is_scalar<_Tp>::__value, _OutputIterator>::__type
+    __fill_n_a1(_OutputIterator __first, _Size __n, const _Tp& __value)
+    {
+      for (; __n > 0; --__n, (void) ++__first)
+ *__first = __value;
+      return __first;
+    }
+
+  template<typename _OutputIterator, typename _Size, typename _Tp>
+    constexpr
+    inline typename
+    __gnu_cxx::__enable_if<__is_scalar<_Tp>::__value, _OutputIterator>::__type
+    __fill_n_a1(_OutputIterator __first, _Size __n, const _Tp& __value)
+    {
+      const _Tp __tmp = __value;
+      for (; __n > 0; --__n, (void) ++__first)
+ *__first = __tmp;
+      return __first;
+    }
+
+  template<typename _Ite, typename _Seq, typename _Cat, typename _Size,
+    typename _Tp>
+    constexpr
+    ::__gnu_debug::_Safe_iterator<_Ite, _Seq, _Cat>
+    __fill_n_a(const ::__gnu_debug::_Safe_iterator<_Ite, _Seq, _Cat>& __first,
+        _Size __n, const _Tp& __value,
+        std::input_iterator_tag);
+
+  template<typename _OutputIterator, typename _Size, typename _Tp>
+    constexpr
+    inline _OutputIterator
+    __fill_n_a(_OutputIterator __first, _Size __n, const _Tp& __value,
+        std::output_iterator_tag)
+    {
+
+      static_assert(is_integral<_Size>{}, "fill_n must pass integral size");
+
+      return __fill_n_a1(__first, __n, __value);
+    }
+
+  template<typename _OutputIterator, typename _Size, typename _Tp>
+    constexpr
+    inline _OutputIterator
+    __fill_n_a(_OutputIterator __first, _Size __n, const _Tp& __value,
+        std::input_iterator_tag)
+    {
+
+      static_assert(is_integral<_Size>{}, "fill_n must pass integral size");
+
+      return __fill_n_a1(__first, __n, __value);
+    }
+
+  template<typename _OutputIterator, typename _Size, typename _Tp>
+    constexpr
+    inline _OutputIterator
+    __fill_n_a(_OutputIterator __first, _Size __n, const _Tp& __value,
+        std::random_access_iterator_tag)
+    {
+
+      static_assert(is_integral<_Size>{}, "fill_n must pass integral size");
+
+      if (__n <= 0)
+ return __first;
+
+      ;
+
+      std::__fill_a(__first, __first + __n, __value);
+      return __first + __n;
+    }
+# 1172 "/usr/include/c++/14/bits/stl_algobase.h" 3
+  template<typename _OI, typename _Size, typename _Tp>
+    constexpr
+    inline _OI
+    fill_n(_OI __first, _Size __n, const _Tp& __value)
+    {
+
+     
+
+      return std::__fill_n_a(__first, std::__size_to_integer(__n), __value,
+          std::__iterator_category(__first));
+    }
+
+  template<bool _BoolType>
+    struct __equal
+    {
+      template<typename _II1, typename _II2>
+ constexpr
+ static bool
+ equal(_II1 __first1, _II1 __last1, _II2 __first2)
+ {
+   for (; __first1 != __last1; ++__first1, (void) ++__first2)
+     if (!(*__first1 == *__first2))
+       return false;
+   return true;
+ }
+    };
+
+  template<>
+    struct __equal<true>
+    {
+      template<typename _Tp>
+ constexpr
+ static bool
+ equal(const _Tp* __first1, const _Tp* __last1, const _Tp* __first2)
+ {
+   if (const size_t __len = (__last1 - __first1))
+     return !std::__memcmp(__first1, __first2, __len);
+   return true;
+ }
+    };
+
+  template<typename _Tp, typename _Ref, typename _Ptr, typename _II>
+    typename __gnu_cxx::__enable_if<
+      __is_random_access_iter<_II>::__value, bool>::__type
+    __equal_aux1(std::_Deque_iterator<_Tp, _Ref, _Ptr>,
+   std::_Deque_iterator<_Tp, _Ref, _Ptr>,
+   _II);
+
+  template<typename _Tp1, typename _Ref1, typename _Ptr1,
+    typename _Tp2, typename _Ref2, typename _Ptr2>
+    bool
+    __equal_aux1(std::_Deque_iterator<_Tp1, _Ref1, _Ptr1>,
+   std::_Deque_iterator<_Tp1, _Ref1, _Ptr1>,
+   std::_Deque_iterator<_Tp2, _Ref2, _Ptr2>);
+
+  template<typename _II, typename _Tp, typename _Ref, typename _Ptr>
+    typename __gnu_cxx::__enable_if<
+      __is_random_access_iter<_II>::__value, bool>::__type
+    __equal_aux1(_II, _II,
+  std::_Deque_iterator<_Tp, _Ref, _Ptr>);
+
+  template<typename _II1, typename _II2>
+    constexpr
+    inline bool
+    __equal_aux1(_II1 __first1, _II1 __last1, _II2 __first2)
+    {
+      typedef typename iterator_traits<_II1>::value_type _ValueType1;
+      const bool __simple = ((__is_integer<_ValueType1>::__value
+         || __is_pointer<_ValueType1>::__value)
+        && __memcmpable<_II1, _II2>::__value);
+      return std::__equal<__simple>::equal(__first1, __last1, __first2);
+    }
+
+  template<typename _II1, typename _II2>
+    constexpr
+    inline bool
+    __equal_aux(_II1 __first1, _II1 __last1, _II2 __first2)
+    {
+      return std::__equal_aux1(std::__niter_base(__first1),
+          std::__niter_base(__last1),
+          std::__niter_base(__first2));
+    }
+
+  template<typename _II1, typename _Seq1, typename _Cat1, typename _II2>
+    constexpr
+    bool
+    __equal_aux(const ::__gnu_debug::_Safe_iterator<_II1, _Seq1, _Cat1>&,
+  const ::__gnu_debug::_Safe_iterator<_II1, _Seq1, _Cat1>&,
+  _II2);
+
+  template<typename _II1, typename _II2, typename _Seq2, typename _Cat2>
+    constexpr
+    bool
+    __equal_aux(_II1, _II1,
+  const ::__gnu_debug::_Safe_iterator<_II2, _Seq2, _Cat2>&);
+
+  template<typename _II1, typename _Seq1, typename _Cat1,
+    typename _II2, typename _Seq2, typename _Cat2>
+    constexpr
+    bool
+    __equal_aux(const ::__gnu_debug::_Safe_iterator<_II1, _Seq1, _Cat1>&,
+  const ::__gnu_debug::_Safe_iterator<_II1, _Seq1, _Cat1>&,
+  const ::__gnu_debug::_Safe_iterator<_II2, _Seq2, _Cat2>&);
+
+  template<typename, typename>
+    struct __lc_rai
+    {
+      template<typename _II1, typename _II2>
+ constexpr
+ static _II1
+ __newlast1(_II1, _II1 __last1, _II2, _II2)
+ { return __last1; }
+
+      template<typename _II>
+ constexpr
+ static bool
+ __cnd2(_II __first, _II __last)
+ { return __first != __last; }
+    };
+
+  template<>
+    struct __lc_rai<random_access_iterator_tag, random_access_iterator_tag>
+    {
+      template<typename _RAI1, typename _RAI2>
+ constexpr
+ static _RAI1
+ __newlast1(_RAI1 __first1, _RAI1 __last1,
+     _RAI2 __first2, _RAI2 __last2)
+ {
+   const typename iterator_traits<_RAI1>::difference_type
+     __diff1 = __last1 - __first1;
+   const typename iterator_traits<_RAI2>::difference_type
+     __diff2 = __last2 - __first2;
+   return __diff2 < __diff1 ? __first1 + __diff2 : __last1;
+ }
+
+      template<typename _RAI>
+ static constexpr bool
+ __cnd2(_RAI, _RAI)
+ { return true; }
+    };
+
+  template<typename _II1, typename _II2, typename _Compare>
+    constexpr
+    bool
+    __lexicographical_compare_impl(_II1 __first1, _II1 __last1,
+       _II2 __first2, _II2 __last2,
+       _Compare __comp)
+    {
+      typedef typename iterator_traits<_II1>::iterator_category _Category1;
+      typedef typename iterator_traits<_II2>::iterator_category _Category2;
+      typedef std::__lc_rai<_Category1, _Category2> __rai_type;
+
+      __last1 = __rai_type::__newlast1(__first1, __last1, __first2, __last2);
+      for (; __first1 != __last1 && __rai_type::__cnd2(__first2, __last2);
+    ++__first1, (void)++__first2)
+ {
+   if (__comp(__first1, __first2))
+     return true;
+   if (__comp(__first2, __first1))
+     return false;
+ }
+      return __first1 == __last1 && __first2 != __last2;
+    }
+
+  template<bool _BoolType>
+    struct __lexicographical_compare
+    {
+      template<typename _II1, typename _II2>
+ constexpr
+ static bool
+ __lc(_II1 __first1, _II1 __last1, _II2 __first2, _II2 __last2)
+ {
+   using __gnu_cxx::__ops::__iter_less_iter;
+   return std::__lexicographical_compare_impl(__first1, __last1,
+           __first2, __last2,
+           __iter_less_iter());
+ }
+
+      template<typename _II1, typename _II2>
+ constexpr
+ static int
+ __3way(_II1 __first1, _II1 __last1, _II2 __first2, _II2 __last2)
+ {
+   while (__first1 != __last1)
+     {
+       if (__first2 == __last2)
+  return +1;
+       if (*__first1 < *__first2)
+  return -1;
+       if (*__first2 < *__first1)
+  return +1;
+       ++__first1;
+       ++__first2;
+     }
+   return int(__first2 == __last2) - 1;
+ }
+    };
+
+  template<>
+    struct __lexicographical_compare<true>
+    {
+      template<typename _Tp, typename _Up>
+ constexpr
+ static bool
+ __lc(const _Tp* __first1, const _Tp* __last1,
+      const _Up* __first2, const _Up* __last2)
+ { return __3way(__first1, __last1, __first2, __last2) < 0; }
+
+      template<typename _Tp, typename _Up>
+ constexpr
+ static ptrdiff_t
+ __3way(const _Tp* __first1, const _Tp* __last1,
+        const _Up* __first2, const _Up* __last2)
+ {
+   const size_t __len1 = __last1 - __first1;
+   const size_t __len2 = __last2 - __first2;
+   if (const size_t __len = std::min(__len1, __len2))
+     if (int __result = std::__memcmp(__first1, __first2, __len))
+       return __result;
+   return ptrdiff_t(__len1 - __len2);
+ }
+    };
+
+  template<typename _II1, typename _II2>
+    constexpr
+    inline bool
+    __lexicographical_compare_aux1(_II1 __first1, _II1 __last1,
+       _II2 __first2, _II2 __last2)
+    {
+      typedef typename iterator_traits<_II1>::value_type _ValueType1;
+      typedef typename iterator_traits<_II2>::value_type _ValueType2;
+      const bool __simple =
+ (__is_memcmp_ordered_with<_ValueType1, _ValueType2>::__value
+  && __is_pointer<_II1>::__value
+  && __is_pointer<_II2>::__value
+
+
+
+
+  && !is_volatile_v<remove_reference_t<iter_reference_t<_II1>>>
+  && !is_volatile_v<remove_reference_t<iter_reference_t<_II2>>>
+
+  );
+
+      return std::__lexicographical_compare<__simple>::__lc(__first1, __last1,
+           __first2, __last2);
+    }
+
+  template<typename _Tp1, typename _Ref1, typename _Ptr1,
+    typename _Tp2>
+    bool
+    __lexicographical_compare_aux1(
+ std::_Deque_iterator<_Tp1, _Ref1, _Ptr1>,
+ std::_Deque_iterator<_Tp1, _Ref1, _Ptr1>,
+ _Tp2*, _Tp2*);
+
+  template<typename _Tp1,
+    typename _Tp2, typename _Ref2, typename _Ptr2>
+    bool
+    __lexicographical_compare_aux1(_Tp1*, _Tp1*,
+ std::_Deque_iterator<_Tp2, _Ref2, _Ptr2>,
+ std::_Deque_iterator<_Tp2, _Ref2, _Ptr2>);
+
+  template<typename _Tp1, typename _Ref1, typename _Ptr1,
+    typename _Tp2, typename _Ref2, typename _Ptr2>
+    bool
+    __lexicographical_compare_aux1(
+ std::_Deque_iterator<_Tp1, _Ref1, _Ptr1>,
+ std::_Deque_iterator<_Tp1, _Ref1, _Ptr1>,
+ std::_Deque_iterator<_Tp2, _Ref2, _Ptr2>,
+ std::_Deque_iterator<_Tp2, _Ref2, _Ptr2>);
+
+  template<typename _II1, typename _II2>
+    constexpr
+    inline bool
+    __lexicographical_compare_aux(_II1 __first1, _II1 __last1,
+      _II2 __first2, _II2 __last2)
+    {
+      return std::__lexicographical_compare_aux1(std::__niter_base(__first1),
+       std::__niter_base(__last1),
+       std::__niter_base(__first2),
+       std::__niter_base(__last2));
+    }
+
+  template<typename _Iter1, typename _Seq1, typename _Cat1,
+    typename _II2>
+    constexpr
+    bool
+    __lexicographical_compare_aux(
+  const ::__gnu_debug::_Safe_iterator<_Iter1, _Seq1, _Cat1>&,
+  const ::__gnu_debug::_Safe_iterator<_Iter1, _Seq1, _Cat1>&,
+  _II2, _II2);
+
+  template<typename _II1,
+    typename _Iter2, typename _Seq2, typename _Cat2>
+    constexpr
+    bool
+    __lexicographical_compare_aux(
+  _II1, _II1,
+  const ::__gnu_debug::_Safe_iterator<_Iter2, _Seq2, _Cat2>&,
+  const ::__gnu_debug::_Safe_iterator<_Iter2, _Seq2, _Cat2>&);
+
+  template<typename _Iter1, typename _Seq1, typename _Cat1,
+    typename _Iter2, typename _Seq2, typename _Cat2>
+    constexpr
+    bool
+    __lexicographical_compare_aux(
+  const ::__gnu_debug::_Safe_iterator<_Iter1, _Seq1, _Cat1>&,
+  const ::__gnu_debug::_Safe_iterator<_Iter1, _Seq1, _Cat1>&,
+  const ::__gnu_debug::_Safe_iterator<_Iter2, _Seq2, _Cat2>&,
+  const ::__gnu_debug::_Safe_iterator<_Iter2, _Seq2, _Cat2>&);
+
+  template<typename _ForwardIterator, typename _Tp, typename _Compare>
+    constexpr
+    _ForwardIterator
+    __lower_bound(_ForwardIterator __first, _ForwardIterator __last,
+    const _Tp& __val, _Compare __comp)
+    {
+      typedef typename iterator_traits<_ForwardIterator>::difference_type
+ _DistanceType;
+
+      _DistanceType __len = std::distance(__first, __last);
+
+      while (__len > 0)
+ {
+   _DistanceType __half = __len >> 1;
+   _ForwardIterator __middle = __first;
+   std::advance(__middle, __half);
+   if (__comp(__middle, __val))
+     {
+       __first = __middle;
+       ++__first;
+       __len = __len - __half - 1;
+     }
+   else
+     __len = __half;
+ }
+      return __first;
+    }
+# 1524 "/usr/include/c++/14/bits/stl_algobase.h" 3
+  template<typename _ForwardIterator, typename _Tp>
+    [[__nodiscard__]] constexpr
+    inline _ForwardIterator
+    lower_bound(_ForwardIterator __first, _ForwardIterator __last,
+  const _Tp& __val)
+    {
+
+     
+     
+
+      ;
+
+      return std::__lower_bound(__first, __last, __val,
+    __gnu_cxx::__ops::__iter_less_val());
+    }
+
+
+
+  template<typename _Tp>
+    inline constexpr _Tp
+    __lg(_Tp __n)
+    {
+
+      return std::__bit_width(make_unsigned_t<_Tp>(__n)) - 1;
+# 1557 "/usr/include/c++/14/bits/stl_algobase.h" 3
+    }
+
+
+# 1573 "/usr/include/c++/14/bits/stl_algobase.h" 3
+  template<typename _II1, typename _II2>
+    [[__nodiscard__]] constexpr
+    inline bool
+    equal(_II1 __first1, _II1 __last1, _II2 __first2)
+    {
+
+     
+     
+     
+
+
+      ;
+
+      return std::__equal_aux(__first1, __last1, __first2);
+    }
+# 1604 "/usr/include/c++/14/bits/stl_algobase.h" 3
+  template<typename _IIter1, typename _IIter2, typename _BinaryPredicate>
+    [[__nodiscard__]] constexpr
+    inline bool
+    equal(_IIter1 __first1, _IIter1 __last1,
+   _IIter2 __first2, _BinaryPredicate __binary_pred)
+    {
+
+     
+     
+      ;
+
+      for (; __first1 != __last1; ++__first1, (void)++__first2)
+ if (!bool(__binary_pred(*__first1, *__first2)))
+   return false;
+      return true;
+    }
+
+
+
+  template<typename _II1, typename _II2>
+    constexpr
+    inline bool
+    __equal4(_II1 __first1, _II1 __last1, _II2 __first2, _II2 __last2)
+    {
+      using _RATag = random_access_iterator_tag;
+      using _Cat1 = typename iterator_traits<_II1>::iterator_category;
+      using _Cat2 = typename iterator_traits<_II2>::iterator_category;
+      using _RAIters = __and_<is_same<_Cat1, _RATag>, is_same<_Cat2, _RATag>>;
+      if (_RAIters())
+ {
+   auto __d1 = std::distance(__first1, __last1);
+   auto __d2 = std::distance(__first2, __last2);
+   if (__d1 != __d2)
+     return false;
+   return std::equal(__first1, __last1, __first2);
+ }
+
+      for (; __first1 != __last1 && __first2 != __last2;
+   ++__first1, (void)++__first2)
+ if (!(*__first1 == *__first2))
+   return false;
+      return __first1 == __last1 && __first2 == __last2;
+    }
+
+
+  template<typename _II1, typename _II2, typename _BinaryPredicate>
+    constexpr
+    inline bool
+    __equal4(_II1 __first1, _II1 __last1, _II2 __first2, _II2 __last2,
+      _BinaryPredicate __binary_pred)
+    {
+      using _RATag = random_access_iterator_tag;
+      using _Cat1 = typename iterator_traits<_II1>::iterator_category;
+      using _Cat2 = typename iterator_traits<_II2>::iterator_category;
+      using _RAIters = __and_<is_same<_Cat1, _RATag>, is_same<_Cat2, _RATag>>;
+      if (_RAIters())
+ {
+   auto __d1 = std::distance(__first1, __last1);
+   auto __d2 = std::distance(__first2, __last2);
+   if (__d1 != __d2)
+     return false;
+   return std::equal(__first1, __last1, __first2,
+           __binary_pred);
+ }
+
+      for (; __first1 != __last1 && __first2 != __last2;
+   ++__first1, (void)++__first2)
+ if (!bool(__binary_pred(*__first1, *__first2)))
+   return false;
+      return __first1 == __last1 && __first2 == __last2;
+    }
+# 1691 "/usr/include/c++/14/bits/stl_algobase.h" 3
+  template<typename _II1, typename _II2>
+    [[__nodiscard__]] constexpr
+    inline bool
+    equal(_II1 __first1, _II1 __last1, _II2 __first2, _II2 __last2)
+    {
+
+     
+     
+     
+
+
+      ;
+      ;
+
+      return std::__equal4(__first1, __last1, __first2, __last2);
+    }
+# 1724 "/usr/include/c++/14/bits/stl_algobase.h" 3
+  template<typename _IIter1, typename _IIter2, typename _BinaryPredicate>
+    [[__nodiscard__]] constexpr
+    inline bool
+    equal(_IIter1 __first1, _IIter1 __last1,
+   _IIter2 __first2, _IIter2 __last2, _BinaryPredicate __binary_pred)
+    {
+
+     
+     
+      ;
+      ;
+
+      return std::__equal4(__first1, __last1, __first2, __last2,
+          __binary_pred);
+    }
+# 1756 "/usr/include/c++/14/bits/stl_algobase.h" 3
+  template<typename _II1, typename _II2>
+    [[__nodiscard__]] constexpr
+    inline bool
+    lexicographical_compare(_II1 __first1, _II1 __last1,
+       _II2 __first2, _II2 __last2)
+    {
+
+
+
+
+
+     
+     
+     
+     
+      ;
+      ;
+
+      return std::__lexicographical_compare_aux(__first1, __last1,
+      __first2, __last2);
+    }
+# 1791 "/usr/include/c++/14/bits/stl_algobase.h" 3
+  template<typename _II1, typename _II2, typename _Compare>
+    [[__nodiscard__]] constexpr
+    inline bool
+    lexicographical_compare(_II1 __first1, _II1 __last1,
+       _II2 __first2, _II2 __last2, _Compare __comp)
+    {
+
+     
+     
+      ;
+      ;
+
+      return std::__lexicographical_compare_impl
+ (__first1, __last1, __first2, __last2,
+  __gnu_cxx::__ops::__iter_comp_iter(__comp));
+    }
+
+
+
+
+
+  template<typename _Iter1, typename _Iter2>
+    concept __memcmp_ordered_with
+      = (__is_memcmp_ordered_with<iter_value_t<_Iter1>,
+      iter_value_t<_Iter2>>::__value)
+   && contiguous_iterator<_Iter1> && contiguous_iterator<_Iter2>;
+
+
+
+  template<typename _Tp>
+    constexpr auto
+    __min_cmp(_Tp __x, _Tp __y)
+    {
+      struct _Res {
+ _Tp _M_min;
+ decltype(__x <=> __y) _M_cmp;
+      };
+      auto __c = __x <=> __y;
+      if (__c > 0)
+ return _Res{__y, __c};
+      return _Res{__x, __c};
+    }
+# 1845 "/usr/include/c++/14/bits/stl_algobase.h" 3
+  template<typename _InputIter1, typename _InputIter2, typename _Comp>
+    [[nodiscard]] constexpr auto
+    lexicographical_compare_three_way(_InputIter1 __first1,
+          _InputIter1 __last1,
+          _InputIter2 __first2,
+          _InputIter2 __last2,
+          _Comp __comp)
+    -> decltype(__comp(*__first1, *__first2))
+    {
+
+     
+     
+      ;
+      ;
+
+      using _Cat = decltype(__comp(*__first1, *__first2));
+      static_assert(same_as<common_comparison_category_t<_Cat>, _Cat>);
+
+      if (!std::__is_constant_evaluated())
+ if constexpr (same_as<_Comp, __detail::_Synth3way>
+        || same_as<_Comp, compare_three_way>)
+   if constexpr (__memcmp_ordered_with<_InputIter1, _InputIter2>)
+     {
+       const auto [__len, __lencmp] = std::
+  __min_cmp(__last1 - __first1, __last2 - __first2);
+       if (__len)
+  {
+    const auto __blen = __len * sizeof(*__first1);
+    const auto __c
+      = __builtin_memcmp(&*__first1, &*__first2, __blen) <=> 0;
+    if (__c != 0)
+      return __c;
+  }
+       return __lencmp;
+     }
+
+      while (__first1 != __last1)
+ {
+   if (__first2 == __last2)
+     return strong_ordering::greater;
+   if (auto __cmp = __comp(*__first1, *__first2); __cmp != 0)
+     return __cmp;
+   ++__first1;
+   ++__first2;
+ }
+      return (__first2 == __last2) <=> true;
+    }
+
+  template<typename _InputIter1, typename _InputIter2>
+    constexpr auto
+    lexicographical_compare_three_way(_InputIter1 __first1,
+          _InputIter1 __last1,
+          _InputIter2 __first2,
+          _InputIter2 __last2)
+    {
+      return std::
+ lexicographical_compare_three_way(__first1, __last1, __first2, __last2,
+       compare_three_way{});
+    }
+
+
+  template<typename _InputIterator1, typename _InputIterator2,
+    typename _BinaryPredicate>
+    constexpr
+    pair<_InputIterator1, _InputIterator2>
+    __mismatch(_InputIterator1 __first1, _InputIterator1 __last1,
+        _InputIterator2 __first2, _BinaryPredicate __binary_pred)
+    {
+      while (__first1 != __last1 && __binary_pred(__first1, __first2))
+ {
+   ++__first1;
+   ++__first2;
+ }
+      return pair<_InputIterator1, _InputIterator2>(__first1, __first2);
+    }
+# 1934 "/usr/include/c++/14/bits/stl_algobase.h" 3
+  template<typename _InputIterator1, typename _InputIterator2>
+    [[__nodiscard__]] constexpr
+    inline pair<_InputIterator1, _InputIterator2>
+    mismatch(_InputIterator1 __first1, _InputIterator1 __last1,
+      _InputIterator2 __first2)
+    {
+
+     
+     
+     
+
+
+      ;
+
+      return std::__mismatch(__first1, __last1, __first2,
+        __gnu_cxx::__ops::__iter_equal_to_iter());
+    }
+# 1968 "/usr/include/c++/14/bits/stl_algobase.h" 3
+  template<typename _InputIterator1, typename _InputIterator2,
+    typename _BinaryPredicate>
+    [[__nodiscard__]] constexpr
+    inline pair<_InputIterator1, _InputIterator2>
+    mismatch(_InputIterator1 __first1, _InputIterator1 __last1,
+      _InputIterator2 __first2, _BinaryPredicate __binary_pred)
+    {
+
+     
+     
+      ;
+
+      return std::__mismatch(__first1, __last1, __first2,
+ __gnu_cxx::__ops::__iter_comp_iter(__binary_pred));
+    }
+
+
+  template<typename _InputIterator1, typename _InputIterator2,
+    typename _BinaryPredicate>
+    constexpr
+    pair<_InputIterator1, _InputIterator2>
+    __mismatch(_InputIterator1 __first1, _InputIterator1 __last1,
+        _InputIterator2 __first2, _InputIterator2 __last2,
+        _BinaryPredicate __binary_pred)
+    {
+      while (__first1 != __last1 && __first2 != __last2
+      && __binary_pred(__first1, __first2))
+ {
+   ++__first1;
+   ++__first2;
+ }
+      return pair<_InputIterator1, _InputIterator2>(__first1, __first2);
+    }
+# 2016 "/usr/include/c++/14/bits/stl_algobase.h" 3
+  template<typename _InputIterator1, typename _InputIterator2>
+    [[__nodiscard__]] constexpr
+    inline pair<_InputIterator1, _InputIterator2>
+    mismatch(_InputIterator1 __first1, _InputIterator1 __last1,
+      _InputIterator2 __first2, _InputIterator2 __last2)
+    {
+
+     
+     
+     
+
+
+      ;
+      ;
+
+      return std::__mismatch(__first1, __last1, __first2, __last2,
+        __gnu_cxx::__ops::__iter_equal_to_iter());
+    }
+# 2052 "/usr/include/c++/14/bits/stl_algobase.h" 3
+  template<typename _InputIterator1, typename _InputIterator2,
+    typename _BinaryPredicate>
+    [[__nodiscard__]] constexpr
+    inline pair<_InputIterator1, _InputIterator2>
+    mismatch(_InputIterator1 __first1, _InputIterator1 __last1,
+      _InputIterator2 __first2, _InputIterator2 __last2,
+      _BinaryPredicate __binary_pred)
+    {
+
+     
+     
+      ;
+      ;
+
+      return std::__mismatch(__first1, __last1, __first2, __last2,
+        __gnu_cxx::__ops::__iter_comp_iter(__binary_pred));
+    }
+
+
+
+
+
+  template<typename _InputIterator, typename _Predicate>
+    constexpr
+    inline _InputIterator
+    __find_if(_InputIterator __first, _InputIterator __last,
+       _Predicate __pred, input_iterator_tag)
+    {
+      while (__first != __last && !__pred(__first))
+ ++__first;
+      return __first;
+    }
+
+
+  template<typename _RandomAccessIterator, typename _Predicate>
+    constexpr
+    _RandomAccessIterator
+    __find_if(_RandomAccessIterator __first, _RandomAccessIterator __last,
+       _Predicate __pred, random_access_iterator_tag)
+    {
+      typename iterator_traits<_RandomAccessIterator>::difference_type
+ __trip_count = (__last - __first) >> 2;
+
+      for (; __trip_count > 0; --__trip_count)
+ {
+   if (__pred(__first))
+     return __first;
+   ++__first;
+
+   if (__pred(__first))
+     return __first;
+   ++__first;
+
+   if (__pred(__first))
+     return __first;
+   ++__first;
+
+   if (__pred(__first))
+     return __first;
+   ++__first;
+ }
+
+      switch (__last - __first)
+ {
+ case 3:
+   if (__pred(__first))
+     return __first;
+   ++__first;
+
+ case 2:
+   if (__pred(__first))
+     return __first;
+   ++__first;
+
+ case 1:
+   if (__pred(__first))
+     return __first;
+   ++__first;
+
+ case 0:
+ default:
+   return __last;
+ }
+    }
+
+  template<typename _Iterator, typename _Predicate>
+    constexpr
+    inline _Iterator
+    __find_if(_Iterator __first, _Iterator __last, _Predicate __pred)
+    {
+      return __find_if(__first, __last, __pred,
+         std::__iterator_category(__first));
+    }
+
+  template<typename _InputIterator, typename _Predicate>
+    constexpr
+    typename iterator_traits<_InputIterator>::difference_type
+    __count_if(_InputIterator __first, _InputIterator __last, _Predicate __pred)
+    {
+      typename iterator_traits<_InputIterator>::difference_type __n = 0;
+      for (; __first != __last; ++__first)
+ if (__pred(__first))
+   ++__n;
+      return __n;
+    }
+
+  template<typename _ForwardIterator, typename _Predicate>
+    constexpr
+    _ForwardIterator
+    __remove_if(_ForwardIterator __first, _ForwardIterator __last,
+  _Predicate __pred)
+    {
+      __first = std::__find_if(__first, __last, __pred);
+      if (__first == __last)
+ return __first;
+      _ForwardIterator __result = __first;
+      ++__first;
+      for (; __first != __last; ++__first)
+ if (!__pred(__first))
+   {
+     *__result = std::move(*__first);
+     ++__result;
+   }
+      return __result;
+    }
+
+  template<typename _ForwardIterator1, typename _ForwardIterator2,
+    typename _BinaryPredicate>
+    constexpr
+    _ForwardIterator1
+    __search(_ForwardIterator1 __first1, _ForwardIterator1 __last1,
+      _ForwardIterator2 __first2, _ForwardIterator2 __last2,
+      _BinaryPredicate __predicate)
+    {
+
+      if (__first1 == __last1 || __first2 == __last2)
+ return __first1;
+
+
+      _ForwardIterator2 __p1(__first2);
+      if (++__p1 == __last2)
+ return std::__find_if(__first1, __last1,
+  __gnu_cxx::__ops::__iter_comp_iter(__predicate, __first2));
+
+
+      _ForwardIterator1 __current = __first1;
+
+      for (;;)
+ {
+   __first1 =
+     std::__find_if(__first1, __last1,
+  __gnu_cxx::__ops::__iter_comp_iter(__predicate, __first2));
+
+   if (__first1 == __last1)
+     return __last1;
+
+   _ForwardIterator2 __p = __p1;
+   __current = __first1;
+   if (++__current == __last1)
+     return __last1;
+
+   while (__predicate(__current, __p))
+     {
+       if (++__p == __last2)
+  return __first1;
+       if (++__current == __last1)
+  return __last1;
+     }
+   ++__first1;
+ }
+      return __first1;
+    }
+
+
+  template<typename _ForwardIterator1, typename _ForwardIterator2,
+    typename _BinaryPredicate>
+    constexpr
+    bool
+    __is_permutation(_ForwardIterator1 __first1, _ForwardIterator1 __last1,
+       _ForwardIterator2 __first2, _BinaryPredicate __pred)
+    {
+
+
+      for (; __first1 != __last1; ++__first1, (void)++__first2)
+ if (!__pred(__first1, __first2))
+   break;
+
+      if (__first1 == __last1)
+ return true;
+
+
+
+      _ForwardIterator2 __last2 = __first2;
+      std::advance(__last2, std::distance(__first1, __last1));
+      for (_ForwardIterator1 __scan = __first1; __scan != __last1; ++__scan)
+ {
+   if (__scan != std::__find_if(__first1, __scan,
+     __gnu_cxx::__ops::__iter_comp_iter(__pred, __scan)))
+     continue;
+
+   auto __matches
+     = std::__count_if(__first2, __last2,
+   __gnu_cxx::__ops::__iter_comp_iter(__pred, __scan));
+   if (0 == __matches ||
+       std::__count_if(__scan, __last1,
+   __gnu_cxx::__ops::__iter_comp_iter(__pred, __scan))
+       != __matches)
+     return false;
+ }
+      return true;
+    }
+# 2276 "/usr/include/c++/14/bits/stl_algobase.h" 3
+  template<typename _ForwardIterator1, typename _ForwardIterator2>
+    constexpr
+    inline bool
+    is_permutation(_ForwardIterator1 __first1, _ForwardIterator1 __last1,
+     _ForwardIterator2 __first2)
+    {
+
+     
+     
+     
+
+
+      ;
+
+      return std::__is_permutation(__first1, __last1, __first2,
+       __gnu_cxx::__ops::__iter_equal_to_iter());
+    }
+
+
+
+# 2318 "/usr/include/c++/14/bits/stl_algobase.h" 3
+  template<typename _ForwardIterator1, typename _ForwardIterator2,
+    typename _BinaryPredicate>
+    constexpr
+    inline _ForwardIterator1
+    search(_ForwardIterator1 __first1, _ForwardIterator1 __last1,
+    _ForwardIterator2 __first2, _ForwardIterator2 __last2,
+    _BinaryPredicate __predicate)
+    {
+
+     
+     
+     
+
+
+      ;
+      ;
+
+      return std::__search(__first1, __last1, __first2, __last2,
+      __gnu_cxx::__ops::__iter_comp_iter(__predicate));
+    }
+
+
+
+}
+# 44 "/usr/include/c++/14/array" 2 3
+# 1 "/usr/include/c++/14/bits/range_access.h" 1 3
+# 33 "/usr/include/c++/14/bits/range_access.h" 3
+       
+# 34 "/usr/include/c++/14/bits/range_access.h" 3
+
+
+
+
+
+
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+
+
+
+
+
+
+  template<typename _Container>
+    [[__nodiscard__, __gnu__::__always_inline__]]
+    inline constexpr auto
+    begin(_Container& __cont) -> decltype(__cont.begin())
+    { return __cont.begin(); }
+
+
+
+
+
+
+  template<typename _Container>
+    [[__nodiscard__, __gnu__::__always_inline__]]
+    inline constexpr auto
+    begin(const _Container& __cont) -> decltype(__cont.begin())
+    { return __cont.begin(); }
+
+
+
+
+
+
+  template<typename _Container>
+    [[__nodiscard__, __gnu__::__always_inline__]]
+    inline constexpr auto
+    end(_Container& __cont) -> decltype(__cont.end())
+    { return __cont.end(); }
+
+
+
+
+
+
+  template<typename _Container>
+    [[__nodiscard__, __gnu__::__always_inline__]]
+    inline constexpr auto
+    end(const _Container& __cont) -> decltype(__cont.end())
+    { return __cont.end(); }
+
+
+
+
+
+  template<typename _Tp, size_t _Nm>
+    [[__nodiscard__, __gnu__::__always_inline__]]
+    inline constexpr _Tp*
+    begin(_Tp (&__arr)[_Nm]) noexcept
+    { return __arr; }
+
+
+
+
+
+
+  template<typename _Tp, size_t _Nm>
+    [[__nodiscard__, __gnu__::__always_inline__]]
+    inline constexpr _Tp*
+    end(_Tp (&__arr)[_Nm]) noexcept
+    { return __arr + _Nm; }
+
+
+
+  template<typename _Tp> class valarray;
+
+  template<typename _Tp> _Tp* begin(valarray<_Tp>&) noexcept;
+  template<typename _Tp> const _Tp* begin(const valarray<_Tp>&) noexcept;
+  template<typename _Tp> _Tp* end(valarray<_Tp>&) noexcept;
+  template<typename _Tp> const _Tp* end(const valarray<_Tp>&) noexcept;
+
+
+
+
+
+
+  template<typename _Container>
+    [[__nodiscard__, __gnu__::__always_inline__]]
+    constexpr auto
+    cbegin(const _Container& __cont) noexcept(noexcept(std::begin(__cont)))
+      -> decltype(std::begin(__cont))
+    { return std::begin(__cont); }
+
+
+
+
+
+
+  template<typename _Container>
+    [[__nodiscard__, __gnu__::__always_inline__]]
+    constexpr auto
+    cend(const _Container& __cont) noexcept(noexcept(std::end(__cont)))
+      -> decltype(std::end(__cont))
+    { return std::end(__cont); }
+
+
+
+
+
+
+  template<typename _Container>
+    [[__nodiscard__, __gnu__::__always_inline__]]
+    inline constexpr auto
+    rbegin(_Container& __cont) -> decltype(__cont.rbegin())
+    { return __cont.rbegin(); }
+
+
+
+
+
+
+  template<typename _Container>
+    [[__nodiscard__, __gnu__::__always_inline__]]
+    inline constexpr auto
+    rbegin(const _Container& __cont) -> decltype(__cont.rbegin())
+    { return __cont.rbegin(); }
+
+
+
+
+
+
+  template<typename _Container>
+    [[__nodiscard__, __gnu__::__always_inline__]]
+    inline constexpr auto
+    rend(_Container& __cont) -> decltype(__cont.rend())
+    { return __cont.rend(); }
+
+
+
+
+
+
+  template<typename _Container>
+    [[__nodiscard__, __gnu__::__always_inline__]]
+    inline constexpr auto
+    rend(const _Container& __cont) -> decltype(__cont.rend())
+    { return __cont.rend(); }
+
+
+
+
+
+
+  template<typename _Tp, size_t _Nm>
+    [[__nodiscard__]]
+    inline constexpr reverse_iterator<_Tp*>
+    rbegin(_Tp (&__arr)[_Nm]) noexcept
+    { return reverse_iterator<_Tp*>(__arr + _Nm); }
+
+
+
+
+
+
+  template<typename _Tp, size_t _Nm>
+    [[__nodiscard__]]
+    inline constexpr reverse_iterator<_Tp*>
+    rend(_Tp (&__arr)[_Nm]) noexcept
+    { return reverse_iterator<_Tp*>(__arr); }
+
+
+
+
+
+
+  template<typename _Tp>
+    [[__nodiscard__]]
+    inline constexpr reverse_iterator<const _Tp*>
+    rbegin(initializer_list<_Tp> __il) noexcept
+    { return reverse_iterator<const _Tp*>(__il.end()); }
+
+
+
+
+
+
+  template<typename _Tp>
+    [[__nodiscard__]]
+    inline constexpr reverse_iterator<const _Tp*>
+    rend(initializer_list<_Tp> __il) noexcept
+    { return reverse_iterator<const _Tp*>(__il.begin()); }
+
+
+
+
+
+
+  template<typename _Container>
+    [[__nodiscard__, __gnu__::__always_inline__]]
+    inline constexpr auto
+    crbegin(const _Container& __cont) -> decltype(std::rbegin(__cont))
+    { return std::rbegin(__cont); }
+
+
+
+
+
+
+  template<typename _Container>
+    [[__nodiscard__, __gnu__::__always_inline__]]
+    inline constexpr auto
+    crend(const _Container& __cont) -> decltype(std::rend(__cont))
+    { return std::rend(__cont); }
+# 259 "/usr/include/c++/14/bits/range_access.h" 3
+  template <typename _Container>
+    [[nodiscard, __gnu__::__always_inline__]]
+    constexpr auto
+    size(const _Container& __cont) noexcept(noexcept(__cont.size()))
+    -> decltype(__cont.size())
+    { return __cont.size(); }
+
+
+
+
+  template <typename _Tp, size_t _Nm>
+    [[nodiscard, __gnu__::__always_inline__]]
+    constexpr size_t
+    size(const _Tp (&)[_Nm]) noexcept
+    { return _Nm; }
+
+
+
+
+
+  template <typename _Container>
+    [[nodiscard, __gnu__::__always_inline__]]
+    constexpr auto
+    empty(const _Container& __cont) noexcept(noexcept(__cont.empty()))
+    -> decltype(__cont.empty())
+    { return __cont.empty(); }
+
+
+
+
+  template <typename _Tp, size_t _Nm>
+    [[nodiscard, __gnu__::__always_inline__]]
+    constexpr bool
+    empty(const _Tp (&)[_Nm]) noexcept
+    { return false; }
+
+
+
+
+
+  template <typename _Tp>
+    [[nodiscard, __gnu__::__always_inline__]]
+    constexpr bool
+    empty(initializer_list<_Tp> __il) noexcept
+    { return __il.size() == 0;}
+
+
+
+
+
+  template <typename _Container>
+    [[nodiscard, __gnu__::__always_inline__]]
+    constexpr auto
+    data(_Container& __cont) noexcept(noexcept(__cont.data()))
+    -> decltype(__cont.data())
+    { return __cont.data(); }
+
+
+
+
+
+  template <typename _Container>
+    [[nodiscard, __gnu__::__always_inline__]]
+    constexpr auto
+    data(const _Container& __cont) noexcept(noexcept(__cont.data()))
+    -> decltype(__cont.data())
+    { return __cont.data(); }
+
+
+
+
+
+  template <typename _Tp, size_t _Nm>
+    [[nodiscard, __gnu__::__always_inline__]]
+    constexpr _Tp*
+    data(_Tp (&__array)[_Nm]) noexcept
+    { return __array; }
+
+
+
+
+
+  template <typename _Tp>
+    [[nodiscard, __gnu__::__always_inline__]]
+    constexpr const _Tp*
+    data(initializer_list<_Tp> __il) noexcept
+    { return __il.begin(); }
+
+
+
+  template<typename _Container>
+    [[nodiscard, __gnu__::__always_inline__]]
+    constexpr auto
+    ssize(const _Container& __cont)
+    noexcept(noexcept(__cont.size()))
+    -> common_type_t<ptrdiff_t, make_signed_t<decltype(__cont.size())>>
+    {
+      using type = make_signed_t<decltype(__cont.size())>;
+      return static_cast<common_type_t<ptrdiff_t, type>>(__cont.size());
+    }
+
+  template<typename _Tp, ptrdiff_t _Num>
+    [[nodiscard, __gnu__::__always_inline__]]
+    constexpr ptrdiff_t
+    ssize(const _Tp (&)[_Num]) noexcept
+    { return _Num; }
+
+
+}
+# 45 "/usr/include/c++/14/array" 2 3
+
+
+
+
+
+
+
+# 1 "/usr/include/c++/14/bits/version.h" 1 3
+# 47 "/usr/include/c++/14/bits/version.h" 3
+       
+# 48 "/usr/include/c++/14/bits/version.h" 3
+# 53 "/usr/include/c++/14/array" 2 3
+
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+
+  template<typename _Tp, size_t _Nm>
+    struct __array_traits
+    {
+      using _Type = _Tp[_Nm];
+      using _Is_swappable = __is_swappable<_Tp>;
+      using _Is_nothrow_swappable = __is_nothrow_swappable<_Tp>;
+    };
+
+ template<typename _Tp>
+   struct __array_traits<_Tp, 0>
+   {
+
+     struct _Type
+     {
+
+       __attribute__((__always_inline__,__noreturn__))
+       _Tp& operator[](size_t) const noexcept { __builtin_trap(); }
+
+
+       __attribute__((__always_inline__))
+       constexpr explicit operator _Tp*() const noexcept { return nullptr; }
+     };
+
+     using _Is_swappable = true_type;
+     using _Is_nothrow_swappable = true_type;
+   };
+# 99 "/usr/include/c++/14/array" 3
+  template<typename _Tp, std::size_t _Nm>
+    struct array
+    {
+      typedef _Tp value_type;
+      typedef value_type* pointer;
+      typedef const value_type* const_pointer;
+      typedef value_type& reference;
+      typedef const value_type& const_reference;
+      typedef value_type* iterator;
+      typedef const value_type* const_iterator;
+      typedef std::size_t size_type;
+      typedef std::ptrdiff_t difference_type;
+      typedef std::reverse_iterator<iterator> reverse_iterator;
+      typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
+
+
+      typename __array_traits<_Tp, _Nm>::_Type _M_elems;
+
+
+
+
+      constexpr void
+      fill(const value_type& __u)
+      { std::fill_n(begin(), size(), __u); }
+
+      constexpr void
+      swap(array& __other)
+      noexcept(__array_traits<_Tp, _Nm>::_Is_nothrow_swappable::value)
+      { std::swap_ranges(begin(), end(), __other.begin()); }
+
+
+      [[__gnu__::__const__, __nodiscard__]]
+      constexpr iterator
+      begin() noexcept
+      { return iterator(data()); }
+
+      [[__nodiscard__]]
+      constexpr const_iterator
+      begin() const noexcept
+      { return const_iterator(data()); }
+
+      [[__gnu__::__const__, __nodiscard__]]
+      constexpr iterator
+      end() noexcept
+      { return iterator(data() + _Nm); }
+
+      [[__nodiscard__]]
+      constexpr const_iterator
+      end() const noexcept
+      { return const_iterator(data() + _Nm); }
+
+      [[__gnu__::__const__, __nodiscard__]]
+      constexpr reverse_iterator
+      rbegin() noexcept
+      { return reverse_iterator(end()); }
+
+      [[__nodiscard__]]
+      constexpr const_reverse_iterator
+      rbegin() const noexcept
+      { return const_reverse_iterator(end()); }
+
+      [[__gnu__::__const__, __nodiscard__]]
+      constexpr reverse_iterator
+      rend() noexcept
+      { return reverse_iterator(begin()); }
+
+      [[__nodiscard__]]
+      constexpr const_reverse_iterator
+      rend() const noexcept
+      { return const_reverse_iterator(begin()); }
+
+      [[__nodiscard__]]
+      constexpr const_iterator
+      cbegin() const noexcept
+      { return const_iterator(data()); }
+
+      [[__nodiscard__]]
+      constexpr const_iterator
+      cend() const noexcept
+      { return const_iterator(data() + _Nm); }
+
+      [[__nodiscard__]]
+      constexpr const_reverse_iterator
+      crbegin() const noexcept
+      { return const_reverse_iterator(end()); }
+
+      [[__nodiscard__]]
+      constexpr const_reverse_iterator
+      crend() const noexcept
+      { return const_reverse_iterator(begin()); }
+
+
+      [[__nodiscard__, __gnu__::__const__, __gnu__::__always_inline__]]
+      constexpr size_type
+      size() const noexcept { return _Nm; }
+
+      [[__nodiscard__, __gnu__::__const__, __gnu__::__always_inline__]]
+      constexpr size_type
+      max_size() const noexcept { return _Nm; }
+
+      [[__nodiscard__, __gnu__::__const__, __gnu__::__always_inline__]]
+      constexpr bool
+      empty() const noexcept { return size() == 0; }
+
+
+      [[__nodiscard__]]
+      constexpr reference
+      operator[](size_type __n) noexcept
+      {
+ ;
+ return _M_elems[__n];
+      }
+
+      [[__nodiscard__]]
+      constexpr const_reference
+      operator[](size_type __n) const noexcept
+      {
+
+ ;
+
+ return _M_elems[__n];
+      }
+
+      constexpr reference
+      at(size_type __n)
+      {
+ if (__n >= _Nm)
+   std::__throw_out_of_range_fmt(("array::at: __n (which is %zu) " ">= _Nm (which is %zu)")
+                                 ,
+     __n, _Nm);
+ return _M_elems[__n];
+      }
+
+      constexpr const_reference
+      at(size_type __n) const
+      {
+
+
+ return __n < _Nm ? _M_elems[__n]
+   : (std::__throw_out_of_range_fmt(("array::at: __n (which is %zu) " ">= _Nm (which is %zu)")
+                                    ,
+        __n, _Nm),
+      _M_elems[__n]);
+      }
+
+      [[__nodiscard__]]
+      constexpr reference
+      front() noexcept
+      {
+ ;
+ return _M_elems[(size_type)0];
+      }
+
+      [[__nodiscard__]]
+      constexpr const_reference
+      front() const noexcept
+      {
+
+ ;
+
+ return _M_elems[(size_type)0];
+      }
+
+      [[__nodiscard__]]
+      constexpr reference
+      back() noexcept
+      {
+ ;
+ return _M_elems[_Nm - 1];
+      }
+
+      [[__nodiscard__]]
+      constexpr const_reference
+      back() const noexcept
+      {
+
+ ;
+
+ return _M_elems[_Nm - 1];
+      }
+
+      [[__nodiscard__, __gnu__::__const__, __gnu__::__always_inline__]]
+      constexpr pointer
+      data() noexcept
+      { return static_cast<pointer>(_M_elems); }
+
+      [[__nodiscard__]]
+      constexpr const_pointer
+      data() const noexcept
+      { return static_cast<const_pointer>(_M_elems); }
+    };
+
+
+  template<typename _Tp, typename... _Up>
+    array(_Tp, _Up...)
+      -> array<enable_if_t<(is_same_v<_Tp, _Up> && ...), _Tp>,
+        1 + sizeof...(_Up)>;
+
+
+
+  template<typename _Tp, std::size_t _Nm>
+    [[__nodiscard__]]
+    constexpr
+    inline bool
+    operator==(const array<_Tp, _Nm>& __one, const array<_Tp, _Nm>& __two)
+    { return std::equal(__one.begin(), __one.end(), __two.begin()); }
+
+
+  template<typename _Tp, size_t _Nm>
+    [[nodiscard]]
+    constexpr __detail::__synth3way_t<_Tp>
+    operator<=>(const array<_Tp, _Nm>& __a, const array<_Tp, _Nm>& __b)
+    {
+      if constexpr (_Nm && __is_memcmp_ordered<_Tp>::__value)
+ if (!std::__is_constant_evaluated())
+   {
+     constexpr size_t __n = _Nm * sizeof(_Tp);
+     return __builtin_memcmp(__a.data(), __b.data(), __n) <=> 0;
+   }
+
+      for (size_t __i = 0; __i < _Nm; ++__i)
+ {
+   auto __c = __detail::__synth3way(__a[__i], __b[__i]);
+   if (__c != 0)
+     return __c;
+ }
+      return strong_ordering::equal;
+    }
+# 368 "/usr/include/c++/14/array" 3
+  template<typename _Tp, std::size_t _Nm>
+    constexpr
+    inline
+
+
+    __enable_if_t<__array_traits<_Tp, _Nm>::_Is_swappable::value>
+
+
+
+    swap(array<_Tp, _Nm>& __one, array<_Tp, _Nm>& __two)
+    noexcept(noexcept(__one.swap(__two)))
+    { __one.swap(__two); }
+
+
+  template<typename _Tp, std::size_t _Nm>
+    __enable_if_t<!__array_traits<_Tp, _Nm>::_Is_swappable::value>
+    swap(array<_Tp, _Nm>&, array<_Tp, _Nm>&) = delete;
+
+
+  template<std::size_t _Int, typename _Tp, std::size_t _Nm>
+    [[__nodiscard__]]
+    constexpr _Tp&
+    get(array<_Tp, _Nm>& __arr) noexcept
+    {
+      static_assert(_Int < _Nm, "array index is within bounds");
+      return __arr._M_elems[_Int];
+    }
+
+  template<std::size_t _Int, typename _Tp, std::size_t _Nm>
+    [[__nodiscard__]]
+    constexpr _Tp&&
+    get(array<_Tp, _Nm>&& __arr) noexcept
+    {
+      static_assert(_Int < _Nm, "array index is within bounds");
+      return std::move(std::get<_Int>(__arr));
+    }
+
+  template<std::size_t _Int, typename _Tp, std::size_t _Nm>
+    [[__nodiscard__]]
+    constexpr const _Tp&
+    get(const array<_Tp, _Nm>& __arr) noexcept
+    {
+      static_assert(_Int < _Nm, "array index is within bounds");
+      return __arr._M_elems[_Int];
+    }
+
+  template<std::size_t _Int, typename _Tp, std::size_t _Nm>
+    [[__nodiscard__]]
+    constexpr const _Tp&&
+    get(const array<_Tp, _Nm>&& __arr) noexcept
+    {
+      static_assert(_Int < _Nm, "array index is within bounds");
+      return std::move(std::get<_Int>(__arr));
+    }
+
+
+  template<typename _Tp, size_t _Nm>
+    [[nodiscard]]
+    constexpr array<remove_cv_t<_Tp>, _Nm>
+    to_array(_Tp (&__a)[_Nm])
+    noexcept(is_nothrow_constructible_v<_Tp, _Tp&>)
+    {
+      static_assert(!is_array_v<_Tp>);
+      static_assert(is_constructible_v<_Tp, _Tp&>);
+      if constexpr (is_constructible_v<_Tp, _Tp&>)
+ {
+   if constexpr (is_trivially_copyable_v<_Tp>
+     && is_trivially_default_constructible_v<_Tp>
+     && is_copy_assignable_v<_Tp>)
+     {
+       array<remove_cv_t<_Tp>, _Nm> __arr;
+       if (!__is_constant_evaluated() && _Nm != 0)
+  __builtin_memcpy((void*)__arr.data(), (void*)__a, sizeof(__a));
+       else
+  for (size_t __i = 0; __i < _Nm; ++__i)
+    __arr._M_elems[__i] = __a[__i];
+       return __arr;
+     }
+   else
+     return [&__a]<size_t... _Idx>(index_sequence<_Idx...>) {
+       return array<remove_cv_t<_Tp>, _Nm>{{ __a[_Idx]... }};
+     }(make_index_sequence<_Nm>{});
+ }
+      else
+ __builtin_unreachable();
+    }
+
+  template<typename _Tp, size_t _Nm>
+    [[nodiscard]]
+    constexpr array<remove_cv_t<_Tp>, _Nm>
+    to_array(_Tp (&&__a)[_Nm])
+    noexcept(is_nothrow_move_constructible_v<_Tp>)
+    {
+      static_assert(!is_array_v<_Tp>);
+      static_assert(is_move_constructible_v<_Tp>);
+      if constexpr (is_move_constructible_v<_Tp>)
+ {
+   if constexpr (is_trivially_copyable_v<_Tp>
+     && is_trivially_default_constructible_v<_Tp>
+     && is_copy_assignable_v<_Tp>)
+     {
+       array<remove_cv_t<_Tp>, _Nm> __arr;
+       if (!__is_constant_evaluated() && _Nm != 0)
+  __builtin_memcpy((void*)__arr.data(), (void*)__a, sizeof(__a));
+       else
+  for (size_t __i = 0; __i < _Nm; ++__i)
+    __arr._M_elems[__i] = __a[__i];
+       return __arr;
+     }
+   else
+     return [&__a]<size_t... _Idx>(index_sequence<_Idx...>) {
+       return array<remove_cv_t<_Tp>, _Nm>{{ std::move(__a[_Idx])... }};
+     }(make_index_sequence<_Nm>{});
+ }
+      else
+ __builtin_unreachable();
+    }
+
+
+
+
+
+  template<typename _Tp, size_t _Nm>
+    struct tuple_size<array<_Tp, _Nm>>
+    : public integral_constant<size_t, _Nm> { };
+
+
+  template<size_t _Ind, typename _Tp, size_t _Nm>
+    struct tuple_element<_Ind, array<_Tp, _Nm>>
+    {
+      static_assert(_Ind < _Nm, "array index is in range");
+      using type = _Tp;
+    };
+
+
+  template<typename _Tp, size_t _Nm>
+    inline constexpr size_t tuple_size_v<array<_Tp, _Nm>> = _Nm;
+
+  template<typename _Tp, size_t _Nm>
+    inline constexpr size_t tuple_size_v<const array<_Tp, _Nm>> = _Nm;
+
+
+  template<typename _Tp, size_t _Nm>
+    struct __is_tuple_like_impl<array<_Tp, _Nm>> : true_type
+    { };
+
+
+}
+# 2 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp" 2
+# 1 "/usr/include/c++/14/iostream" 1 3
+# 36 "/usr/include/c++/14/iostream" 3
+       
+# 37 "/usr/include/c++/14/iostream" 3
+
+# 1 "/usr/include/c++/14/bits/requires_hosted.h" 1 3
+# 39 "/usr/include/c++/14/iostream" 2 3
+
+
+# 1 "/usr/include/c++/14/ostream" 1 3
+# 36 "/usr/include/c++/14/ostream" 3
+       
+# 37 "/usr/include/c++/14/ostream" 3
+
+
+
+# 1 "/usr/include/c++/14/ios" 1 3
+# 36 "/usr/include/c++/14/ios" 3
+       
+# 37 "/usr/include/c++/14/ios" 3
+
+
+
+# 1 "/usr/include/c++/14/iosfwd" 1 3
+# 36 "/usr/include/c++/14/iosfwd" 3
+       
+# 37 "/usr/include/c++/14/iosfwd" 3
+
+
+
+
+# 1 "/usr/include/c++/14/bits/stringfwd.h" 1 3
+# 37 "/usr/include/c++/14/bits/stringfwd.h" 3
+       
+# 38 "/usr/include/c++/14/bits/stringfwd.h" 3
+
+
+# 1 "/usr/include/c++/14/bits/memoryfwd.h" 1 3
+# 46 "/usr/include/c++/14/bits/memoryfwd.h" 3
+       
+# 47 "/usr/include/c++/14/bits/memoryfwd.h" 3
+
+
+
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+# 64 "/usr/include/c++/14/bits/memoryfwd.h" 3
+  template<typename>
+    class allocator;
+
+  template<>
+    class allocator<void>;
+
+
+
+  template<typename, typename>
+    struct uses_allocator;
+
+  template<typename>
+    struct allocator_traits;
+
+
+
+
+
+}
+# 41 "/usr/include/c++/14/bits/stringfwd.h" 2 3
+
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+
+
+
+
+
+
+
+  template<class _CharT>
+    struct char_traits;
+
+  template<> struct char_traits<char>;
+
+  template<> struct char_traits<wchar_t>;
+
+
+  template<> struct char_traits<char8_t>;
+
+
+
+  template<> struct char_traits<char16_t>;
+  template<> struct char_traits<char32_t>;
+
+
+namespace __cxx11 {
+
+  template<typename _CharT, typename _Traits = char_traits<_CharT>,
+           typename _Alloc = allocator<_CharT> >
+    class basic_string;
+
+}
+
+
+  typedef basic_string<char> string;
+
+
+  typedef basic_string<wchar_t> wstring;
+
+
+
+  typedef basic_string<char8_t> u8string;
+
+
+
+
+  typedef basic_string<char16_t> u16string;
+
+
+  typedef basic_string<char32_t> u32string;
+
+
+
+
+
+}
+# 42 "/usr/include/c++/14/iosfwd" 2 3
+# 1 "/usr/include/c++/14/bits/postypes.h" 1 3
+# 38 "/usr/include/c++/14/bits/postypes.h" 3
+       
+# 39 "/usr/include/c++/14/bits/postypes.h" 3
+
+# 1 "/usr/include/c++/14/cwchar" 1 3
+# 39 "/usr/include/c++/14/cwchar" 3
+       
+# 40 "/usr/include/c++/14/cwchar" 3
+
+
+
+
+# 1 "/usr/include/wchar.h" 1 3 4
+# 27 "/usr/include/wchar.h" 3 4
+# 1 "/usr/include/bits/libc-header-start.h" 1 3 4
+# 28 "/usr/include/wchar.h" 2 3 4
+
+
+# 1 "/usr/include/bits/floatn.h" 1 3 4
+# 119 "/usr/include/bits/floatn.h" 3 4
+# 1 "/usr/include/bits/floatn-common.h" 1 3 4
+# 24 "/usr/include/bits/floatn-common.h" 3 4
+# 1 "/usr/include/bits/long-double.h" 1 3 4
+# 25 "/usr/include/bits/floatn-common.h" 2 3 4
+# 120 "/usr/include/bits/floatn.h" 2 3 4
+# 31 "/usr/include/wchar.h" 2 3 4
+
+
+
+
+# 1 "/usr/lib64/gcc/x86_64-suse-linux/14/include/stddef.h" 1 3 4
+# 214 "/usr/lib64/gcc/x86_64-suse-linux/14/include/stddef.h" 3 4
+typedef long unsigned int size_t;
+# 36 "/usr/include/wchar.h" 2 3 4
+
+
+# 1 "/usr/lib64/gcc/x86_64-suse-linux/14/include/stdarg.h" 1 3 4
+# 40 "/usr/lib64/gcc/x86_64-suse-linux/14/include/stdarg.h" 3 4
+typedef __builtin_va_list __gnuc_va_list;
+# 39 "/usr/include/wchar.h" 2 3 4
+
+
+
+
+typedef __gnuc_va_list va_list;
+
+
+
+
+
+
+
+# 1 "/usr/include/bits/wchar.h" 1 3 4
+# 52 "/usr/include/wchar.h" 2 3 4
+# 1 "/usr/include/bits/types/wint_t.h" 1 3 4
+# 20 "/usr/include/bits/types/wint_t.h" 3 4
+typedef unsigned int wint_t;
+# 53 "/usr/include/wchar.h" 2 3 4
+# 1 "/usr/include/bits/types/mbstate_t.h" 1 3 4
+
+
+
+# 1 "/usr/include/bits/types/__mbstate_t.h" 1 3 4
+# 13 "/usr/include/bits/types/__mbstate_t.h" 3 4
+typedef struct
+{
+  int __count;
+  union
+  {
+    unsigned int __wch;
+    char __wchb[4];
+  } __value;
+} __mbstate_t;
+# 5 "/usr/include/bits/types/mbstate_t.h" 2 3 4
+
+typedef __mbstate_t mbstate_t;
+# 54 "/usr/include/wchar.h" 2 3 4
+# 1 "/usr/include/bits/types/__FILE.h" 1 3 4
+
+
+
+struct _IO_FILE;
+typedef struct _IO_FILE __FILE;
+# 55 "/usr/include/wchar.h" 2 3 4
+
+
+# 1 "/usr/include/bits/types/FILE.h" 1 3 4
+
+
+
+struct _IO_FILE;
+
+
+typedef struct _IO_FILE FILE;
+# 58 "/usr/include/wchar.h" 2 3 4
+
+
+# 1 "/usr/include/bits/types/locale_t.h" 1 3 4
+# 22 "/usr/include/bits/types/locale_t.h" 3 4
+# 1 "/usr/include/bits/types/__locale_t.h" 1 3 4
+# 27 "/usr/include/bits/types/__locale_t.h" 3 4
+struct __locale_struct
+{
+
+  struct __locale_data *__locales[13];
+
+
+  const unsigned short int *__ctype_b;
+  const int *__ctype_tolower;
+  const int *__ctype_toupper;
+
+
+  const char *__names[13];
+};
+
+typedef struct __locale_struct *__locale_t;
+# 23 "/usr/include/bits/types/locale_t.h" 2 3 4
+
+typedef __locale_t locale_t;
+# 61 "/usr/include/wchar.h" 2 3 4
+# 90 "/usr/include/wchar.h" 3 4
+extern "C" {
+
+
+
+struct tm;
+
+
+
+extern wchar_t *wcscpy (wchar_t *__restrict __dest,
+   const wchar_t *__restrict __src)
+     noexcept (true) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern wchar_t *wcsncpy (wchar_t *__restrict __dest,
+    const wchar_t *__restrict __src, size_t __n)
+     noexcept (true) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+extern size_t wcslcpy (wchar_t *__restrict __dest,
+         const wchar_t *__restrict __src, size_t __n)
+  noexcept (true) __attribute__ ((__nonnull__ (1, 2))) __attribute__ ((__access__ (__write_only__, 1, 3)));
+
+
+
+extern size_t wcslcat (wchar_t *__restrict __dest,
+         const wchar_t *__restrict __src, size_t __n)
+  noexcept (true) __attribute__ ((__nonnull__ (1, 2))) __attribute__ ((__access__ (__read_write__, 1, 3)));
+
+
+
+extern wchar_t *wcscat (wchar_t *__restrict __dest,
+   const wchar_t *__restrict __src)
+     noexcept (true) __attribute__ ((__nonnull__ (1, 2)));
+
+extern wchar_t *wcsncat (wchar_t *__restrict __dest,
+    const wchar_t *__restrict __src, size_t __n)
+     noexcept (true) __attribute__ ((__nonnull__ (1, 2)));
+
+
+extern int wcscmp (const wchar_t *__s1, const wchar_t *__s2)
+     noexcept (true) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+
+extern int wcsncmp (const wchar_t *__s1, const wchar_t *__s2, size_t __n)
+     noexcept (true) __attribute__ ((__pure__)) __attribute__ ((__nonnull__ (1, 2)));
+
+
+
+extern int wcscasecmp (const wchar_t *__s1, const wchar_t *__s2) noexcept (true);
+
+
+extern int wcsncasecmp (const wchar_t *__s1, const wchar_t *__s2,
+   size_t __n) noexcept (true);
+
+
+
+extern int wcscasecmp_l (const wchar_t *__s1, const wchar_t *__s2,
+    locale_t __loc) noexcept (true);
+
+extern int wcsncasecmp_l (const wchar_t *__s1, const wchar_t *__s2,
+     size_t __n, locale_t __loc) noexcept (true);
+
+
+
+
+extern int wcscoll (const wchar_t *__s1, const wchar_t *__s2) noexcept (true);
+
+
+
+extern size_t wcsxfrm (wchar_t *__restrict __s1,
+         const wchar_t *__restrict __s2, size_t __n) noexcept (true);
+
+
+
+
+
+
+
+extern int wcscoll_l (const wchar_t *__s1, const wchar_t *__s2,
+        locale_t __loc) noexcept (true);
+
+
+
+
+extern size_t wcsxfrm_l (wchar_t *__s1, const wchar_t *__s2,
+    size_t __n, locale_t __loc) noexcept (true);
+
+
+extern wchar_t *wcsdup (const wchar_t *__s) noexcept (true)
+  __attribute__ ((__malloc__)) __attribute__ ((__malloc__ (__builtin_free, 1)));
+
+
+
+
+extern "C++" wchar_t *wcschr (wchar_t *__wcs, wchar_t __wc)
+     noexcept (true) __asm ("wcschr") __attribute__ ((__pure__));
+extern "C++" const wchar_t *wcschr (const wchar_t *__wcs, wchar_t __wc)
+     noexcept (true) __asm ("wcschr") __attribute__ ((__pure__));
+
+
+
+
+
+
+extern "C++" wchar_t *wcsrchr (wchar_t *__wcs, wchar_t __wc)
+     noexcept (true) __asm ("wcsrchr") __attribute__ ((__pure__));
+extern "C++" const wchar_t *wcsrchr (const wchar_t *__wcs, wchar_t __wc)
+     noexcept (true) __asm ("wcsrchr") __attribute__ ((__pure__));
+# 206 "/usr/include/wchar.h" 3 4
+extern wchar_t *wcschrnul (const wchar_t *__s, wchar_t __wc)
+     noexcept (true) __attribute__ ((__pure__));
+
+
+
+
+extern size_t wcscspn (const wchar_t *__wcs, const wchar_t *__reject)
+     noexcept (true) __attribute__ ((__pure__));
+
+
+extern size_t wcsspn (const wchar_t *__wcs, const wchar_t *__accept)
+     noexcept (true) __attribute__ ((__pure__));
+
+
+extern "C++" wchar_t *wcspbrk (wchar_t *__wcs, const wchar_t *__accept)
+     noexcept (true) __asm ("wcspbrk") __attribute__ ((__pure__));
+extern "C++" const wchar_t *wcspbrk (const wchar_t *__wcs,
+         const wchar_t *__accept)
+     noexcept (true) __asm ("wcspbrk") __attribute__ ((__pure__));
+
+
+
+
+
+
+extern "C++" wchar_t *wcsstr (wchar_t *__haystack, const wchar_t *__needle)
+     noexcept (true) __asm ("wcsstr") __attribute__ ((__pure__));
+extern "C++" const wchar_t *wcsstr (const wchar_t *__haystack,
+        const wchar_t *__needle)
+     noexcept (true) __asm ("wcsstr") __attribute__ ((__pure__));
+
+
+
+
+
+
+extern wchar_t *wcstok (wchar_t *__restrict __s,
+   const wchar_t *__restrict __delim,
+   wchar_t **__restrict __ptr) noexcept (true);
+
+
+extern size_t wcslen (const wchar_t *__s) noexcept (true) __attribute__ ((__pure__));
+
+
+
+
+extern "C++" wchar_t *wcswcs (wchar_t *__haystack, const wchar_t *__needle)
+     noexcept (true) __asm ("wcswcs") __attribute__ ((__pure__));
+extern "C++" const wchar_t *wcswcs (const wchar_t *__haystack,
+        const wchar_t *__needle)
+     noexcept (true) __asm ("wcswcs") __attribute__ ((__pure__));
+# 265 "/usr/include/wchar.h" 3 4
+extern size_t wcsnlen (const wchar_t *__s, size_t __maxlen)
+     noexcept (true) __attribute__ ((__pure__));
+
+
+
+
+
+extern "C++" wchar_t *wmemchr (wchar_t *__s, wchar_t __c, size_t __n)
+     noexcept (true) __asm ("wmemchr") __attribute__ ((__pure__));
+extern "C++" const wchar_t *wmemchr (const wchar_t *__s, wchar_t __c,
+         size_t __n)
+     noexcept (true) __asm ("wmemchr") __attribute__ ((__pure__));
+
+
+
+
+
+
+extern int wmemcmp (const wchar_t *__s1, const wchar_t *__s2, size_t __n)
+     noexcept (true) __attribute__ ((__pure__));
+
+
+extern wchar_t *wmemcpy (wchar_t *__restrict __s1,
+    const wchar_t *__restrict __s2, size_t __n) noexcept (true);
+
+
+
+extern wchar_t *wmemmove (wchar_t *__s1, const wchar_t *__s2, size_t __n)
+     noexcept (true);
+
+
+extern wchar_t *wmemset (wchar_t *__s, wchar_t __c, size_t __n) noexcept (true);
+
+
+
+
+extern wchar_t *wmempcpy (wchar_t *__restrict __s1,
+     const wchar_t *__restrict __s2, size_t __n)
+     noexcept (true);
+
+
+
+
+
+extern wint_t btowc (int __c) noexcept (true);
+
+
+
+extern int wctob (wint_t __c) noexcept (true);
+
+
+
+extern int mbsinit (const mbstate_t *__ps) noexcept (true) __attribute__ ((__pure__));
+
+
+
+extern size_t mbrtowc (wchar_t *__restrict __pwc,
+         const char *__restrict __s, size_t __n,
+         mbstate_t *__restrict __p) noexcept (true);
+
+
+extern size_t wcrtomb (char *__restrict __s, wchar_t __wc,
+         mbstate_t *__restrict __ps) noexcept (true);
+
+
+extern size_t __mbrlen (const char *__restrict __s, size_t __n,
+   mbstate_t *__restrict __ps) noexcept (true);
+extern size_t mbrlen (const char *__restrict __s, size_t __n,
+        mbstate_t *__restrict __ps) noexcept (true);
+# 362 "/usr/include/wchar.h" 3 4
+extern size_t mbsrtowcs (wchar_t *__restrict __dst,
+    const char **__restrict __src, size_t __len,
+    mbstate_t *__restrict __ps) noexcept (true);
+
+
+
+extern size_t wcsrtombs (char *__restrict __dst,
+    const wchar_t **__restrict __src, size_t __len,
+    mbstate_t *__restrict __ps) noexcept (true);
+
+
+
+
+
+extern size_t mbsnrtowcs (wchar_t *__restrict __dst,
+     const char **__restrict __src, size_t __nmc,
+     size_t __len, mbstate_t *__restrict __ps) noexcept (true);
+
+
+
+extern size_t wcsnrtombs (char *__restrict __dst,
+     const wchar_t **__restrict __src,
+     size_t __nwc, size_t __len,
+     mbstate_t *__restrict __ps) noexcept (true);
+
+
+
+
+
+
+extern int wcwidth (wchar_t __c) noexcept (true);
+
+
+
+extern int wcswidth (const wchar_t *__s, size_t __n) noexcept (true);
+
+
+
+
+
+extern double wcstod (const wchar_t *__restrict __nptr,
+        wchar_t **__restrict __endptr) noexcept (true);
+
+
+
+extern float wcstof (const wchar_t *__restrict __nptr,
+       wchar_t **__restrict __endptr) noexcept (true);
+extern long double wcstold (const wchar_t *__restrict __nptr,
+       wchar_t **__restrict __endptr) noexcept (true);
+# 422 "/usr/include/wchar.h" 3 4
+extern _Float32 wcstof32 (const wchar_t *__restrict __nptr,
+     wchar_t **__restrict __endptr) noexcept (true);
+
+
+
+extern _Float64 wcstof64 (const wchar_t *__restrict __nptr,
+     wchar_t **__restrict __endptr) noexcept (true);
+
+
+
+extern _Float128 wcstof128 (const wchar_t *__restrict __nptr,
+       wchar_t **__restrict __endptr) noexcept (true);
+
+
+
+extern _Float32x wcstof32x (const wchar_t *__restrict __nptr,
+       wchar_t **__restrict __endptr) noexcept (true);
+
+
+
+extern _Float64x wcstof64x (const wchar_t *__restrict __nptr,
+       wchar_t **__restrict __endptr) noexcept (true);
+# 455 "/usr/include/wchar.h" 3 4
+extern long int wcstol (const wchar_t *__restrict __nptr,
+   wchar_t **__restrict __endptr, int __base) noexcept (true);
+
+
+
+extern unsigned long int wcstoul (const wchar_t *__restrict __nptr,
+      wchar_t **__restrict __endptr, int __base)
+     noexcept (true);
+
+
+
+
+__extension__
+extern long long int wcstoll (const wchar_t *__restrict __nptr,
+         wchar_t **__restrict __endptr, int __base)
+     noexcept (true);
+
+
+
+__extension__
+extern unsigned long long int wcstoull (const wchar_t *__restrict __nptr,
+     wchar_t **__restrict __endptr,
+     int __base) noexcept (true);
+
+
+
+
+
+__extension__
+extern long long int wcstoq (const wchar_t *__restrict __nptr,
+        wchar_t **__restrict __endptr, int __base)
+     noexcept (true);
+
+
+
+__extension__
+extern unsigned long long int wcstouq (const wchar_t *__restrict __nptr,
+           wchar_t **__restrict __endptr,
+           int __base) noexcept (true);
+
+
+
+
+
+
+extern long int wcstol (const wchar_t *__restrict __nptr, wchar_t **__restrict __endptr, int __base) noexcept (true) __asm__ ("" "__isoc23_wcstol")
+
+                                   ;
+extern unsigned long int wcstoul (const wchar_t *__restrict __nptr, wchar_t **__restrict __endptr, int __base) noexcept (true) __asm__ ("" "__isoc23_wcstoul")
+
+
+                                     ;
+__extension__
+extern long long int wcstoll (const wchar_t *__restrict __nptr, wchar_t **__restrict __endptr, int __base) noexcept (true) __asm__ ("" "__isoc23_wcstoll")
+
+
+                                        ;
+__extension__
+extern unsigned long long int wcstoull (const wchar_t *__restrict __nptr, wchar_t **__restrict __endptr, int __base) noexcept (true) __asm__ ("" "__isoc23_wcstoull")
+
+
+                                           ;
+
+__extension__
+extern long long int wcstoq (const wchar_t *__restrict __nptr, wchar_t **__restrict __endptr, int __base) noexcept (true) __asm__ ("" "__isoc23_wcstoll")
+
+                                         ;
+__extension__
+extern unsigned long long int wcstouq (const wchar_t *__restrict __nptr, wchar_t **__restrict __endptr, int __base) noexcept (true) __asm__ ("" "__isoc23_wcstoull")
+
+
+                                           ;
+# 561 "/usr/include/wchar.h" 3 4
+extern long int wcstol_l (const wchar_t *__restrict __nptr,
+     wchar_t **__restrict __endptr, int __base,
+     locale_t __loc) noexcept (true);
+
+extern unsigned long int wcstoul_l (const wchar_t *__restrict __nptr,
+        wchar_t **__restrict __endptr,
+        int __base, locale_t __loc) noexcept (true);
+
+__extension__
+extern long long int wcstoll_l (const wchar_t *__restrict __nptr,
+    wchar_t **__restrict __endptr,
+    int __base, locale_t __loc) noexcept (true);
+
+__extension__
+extern unsigned long long int wcstoull_l (const wchar_t *__restrict __nptr,
+       wchar_t **__restrict __endptr,
+       int __base, locale_t __loc)
+     noexcept (true);
+
+
+
+
+
+extern long int wcstol_l (const wchar_t *__restrict __nptr, wchar_t **__restrict __endptr, int __base, locale_t __loc) noexcept (true) __asm__ ("" "__isoc23_wcstol_l")
+
+
+                      ;
+extern unsigned long int wcstoul_l (const wchar_t *__restrict __nptr, wchar_t **__restrict __endptr, int __base, locale_t __loc) noexcept (true) __asm__ ("" "__isoc23_wcstoul_l")
+
+
+
+                         ;
+__extension__
+extern long long int wcstoll_l (const wchar_t *__restrict __nptr, wchar_t **__restrict __endptr, int __base, locale_t __loc) noexcept (true) __asm__ ("" "__isoc23_wcstoll_l")
+
+
+
+                            ;
+__extension__
+extern unsigned long long int wcstoull_l (const wchar_t *__restrict __nptr, wchar_t **__restrict __endptr, int __base, locale_t __loc) noexcept (true) __asm__ ("" "__isoc23_wcstoull_l")
+
+
+
+                               ;
+# 630 "/usr/include/wchar.h" 3 4
+extern double wcstod_l (const wchar_t *__restrict __nptr,
+   wchar_t **__restrict __endptr, locale_t __loc)
+     noexcept (true);
+
+extern float wcstof_l (const wchar_t *__restrict __nptr,
+         wchar_t **__restrict __endptr, locale_t __loc)
+     noexcept (true);
+
+extern long double wcstold_l (const wchar_t *__restrict __nptr,
+         wchar_t **__restrict __endptr,
+         locale_t __loc) noexcept (true);
+# 649 "/usr/include/wchar.h" 3 4
+extern _Float32 wcstof32_l (const wchar_t *__restrict __nptr,
+       wchar_t **__restrict __endptr,
+       locale_t __loc) noexcept (true);
+
+
+
+extern _Float64 wcstof64_l (const wchar_t *__restrict __nptr,
+       wchar_t **__restrict __endptr,
+       locale_t __loc) noexcept (true);
+
+
+
+extern _Float128 wcstof128_l (const wchar_t *__restrict __nptr,
+         wchar_t **__restrict __endptr,
+         locale_t __loc) noexcept (true);
+
+
+
+extern _Float32x wcstof32x_l (const wchar_t *__restrict __nptr,
+         wchar_t **__restrict __endptr,
+         locale_t __loc) noexcept (true);
+
+
+
+extern _Float64x wcstof64x_l (const wchar_t *__restrict __nptr,
+         wchar_t **__restrict __endptr,
+         locale_t __loc) noexcept (true);
+# 689 "/usr/include/wchar.h" 3 4
+extern wchar_t *wcpcpy (wchar_t *__restrict __dest,
+   const wchar_t *__restrict __src) noexcept (true);
+
+
+
+extern wchar_t *wcpncpy (wchar_t *__restrict __dest,
+    const wchar_t *__restrict __src, size_t __n)
+     noexcept (true);
+# 718 "/usr/include/wchar.h" 3 4
+extern __FILE *open_wmemstream (wchar_t **__bufloc, size_t *__sizeloc) noexcept (true)
+  __attribute__ ((__malloc__)) ;
+
+
+
+
+
+extern int fwide (__FILE *__fp, int __mode) noexcept (true);
+
+
+
+
+
+
+extern int fwprintf (__FILE *__restrict __stream,
+       const wchar_t *__restrict __format, ...)
+                                                           ;
+
+
+
+
+extern int wprintf (const wchar_t *__restrict __format, ...)
+                                                           ;
+
+extern int swprintf (wchar_t *__restrict __s, size_t __n,
+       const wchar_t *__restrict __format, ...)
+     noexcept (true) ;
+
+
+
+
+
+extern int vfwprintf (__FILE *__restrict __s,
+        const wchar_t *__restrict __format,
+        __gnuc_va_list __arg)
+                                                           ;
+
+
+
+
+extern int vwprintf (const wchar_t *__restrict __format,
+       __gnuc_va_list __arg)
+                                                           ;
+
+
+extern int vswprintf (wchar_t *__restrict __s, size_t __n,
+        const wchar_t *__restrict __format,
+        __gnuc_va_list __arg)
+     noexcept (true) ;
+
+
+
+
+
+
+extern int fwscanf (__FILE *__restrict __stream,
+      const wchar_t *__restrict __format, ...)
+                                                          ;
+
+
+
+
+extern int wscanf (const wchar_t *__restrict __format, ...)
+                                                          ;
+
+extern int swscanf (const wchar_t *__restrict __s,
+      const wchar_t *__restrict __format, ...)
+     noexcept (true) ;
+# 795 "/usr/include/wchar.h" 3 4
+extern int fwscanf (__FILE *__restrict __stream, const wchar_t *__restrict __format, ...) __asm__ ("" "__isoc23_fwscanf")
+
+
+                                                          ;
+extern int wscanf (const wchar_t *__restrict __format, ...) __asm__ ("" "__isoc23_wscanf")
+
+                                                          ;
+extern int swscanf (const wchar_t *__restrict __s, const wchar_t *__restrict __format, ...) noexcept (true) __asm__ ("" "__isoc23_swscanf")
+
+
+                                                          ;
+# 851 "/usr/include/wchar.h" 3 4
+extern int vfwscanf (__FILE *__restrict __s,
+       const wchar_t *__restrict __format,
+       __gnuc_va_list __arg)
+                                                          ;
+
+
+
+
+extern int vwscanf (const wchar_t *__restrict __format,
+      __gnuc_va_list __arg)
+                                                          ;
+
+extern int vswscanf (const wchar_t *__restrict __s,
+       const wchar_t *__restrict __format,
+       __gnuc_va_list __arg)
+     noexcept (true) ;
+# 875 "/usr/include/wchar.h" 3 4
+extern int vfwscanf (__FILE *__restrict __s, const wchar_t *__restrict __format, __gnuc_va_list __arg) __asm__ ("" "__isoc23_vfwscanf")
+
+
+                                                          ;
+extern int vwscanf (const wchar_t *__restrict __format, __gnuc_va_list __arg) __asm__ ("" "__isoc23_vwscanf")
+
+                                                          ;
+extern int vswscanf (const wchar_t *__restrict __s, const wchar_t *__restrict __format, __gnuc_va_list __arg) noexcept (true) __asm__ ("" "__isoc23_vswscanf")
+
+
+                                                          ;
+# 935 "/usr/include/wchar.h" 3 4
+extern wint_t fgetwc (__FILE *__stream);
+extern wint_t getwc (__FILE *__stream);
+
+
+
+
+
+extern wint_t getwchar (void);
+
+
+
+
+
+
+extern wint_t fputwc (wchar_t __wc, __FILE *__stream);
+extern wint_t putwc (wchar_t __wc, __FILE *__stream);
+
+
+
+
+
+extern wint_t putwchar (wchar_t __wc);
+
+
+
+
+
+
+
+extern wchar_t *fgetws (wchar_t *__restrict __ws, int __n,
+   __FILE *__restrict __stream);
+
+
+
+
+
+extern int fputws (const wchar_t *__restrict __ws,
+     __FILE *__restrict __stream);
+
+
+
+
+
+
+extern wint_t ungetwc (wint_t __wc, __FILE *__stream);
+# 990 "/usr/include/wchar.h" 3 4
+extern wint_t getwc_unlocked (__FILE *__stream);
+extern wint_t getwchar_unlocked (void);
+
+
+
+
+
+
+
+extern wint_t fgetwc_unlocked (__FILE *__stream);
+
+
+
+
+
+
+
+extern wint_t fputwc_unlocked (wchar_t __wc, __FILE *__stream);
+# 1016 "/usr/include/wchar.h" 3 4
+extern wint_t putwc_unlocked (wchar_t __wc, __FILE *__stream);
+extern wint_t putwchar_unlocked (wchar_t __wc);
+# 1026 "/usr/include/wchar.h" 3 4
+extern wchar_t *fgetws_unlocked (wchar_t *__restrict __ws, int __n,
+     __FILE *__restrict __stream);
+
+
+
+
+
+
+
+extern int fputws_unlocked (const wchar_t *__restrict __ws,
+       __FILE *__restrict __stream);
+
+
+
+
+
+
+extern size_t wcsftime (wchar_t *__restrict __s, size_t __maxsize,
+   const wchar_t *__restrict __format,
+   const struct tm *__restrict __tp) noexcept (true);
+
+
+
+
+extern size_t wcsftime_l (wchar_t *__restrict __s, size_t __maxsize,
+     const wchar_t *__restrict __format,
+     const struct tm *__restrict __tp,
+     locale_t __loc) noexcept (true);
+# 1073 "/usr/include/wchar.h" 3 4
+}
+# 45 "/usr/include/c++/14/cwchar" 2 3
+# 62 "/usr/include/c++/14/cwchar" 3
+namespace std
+{
+  using ::mbstate_t;
+}
+# 135 "/usr/include/c++/14/cwchar" 3
+extern "C++"
+{
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+
+  using ::wint_t;
+
+  using ::btowc;
+  using ::fgetwc;
+  using ::fgetws;
+  using ::fputwc;
+  using ::fputws;
+  using ::fwide;
+  using ::fwprintf;
+  using ::fwscanf;
+  using ::getwc;
+  using ::getwchar;
+  using ::mbrlen;
+  using ::mbrtowc;
+  using ::mbsinit;
+  using ::mbsrtowcs;
+  using ::putwc;
+  using ::putwchar;
+
+  using ::swprintf;
+
+  using ::swscanf;
+  using ::ungetwc;
+  using ::vfwprintf;
+
+  using ::vfwscanf;
+
+
+  using ::vswprintf;
+
+
+  using ::vswscanf;
+
+  using ::vwprintf;
+
+  using ::vwscanf;
+
+  using ::wcrtomb;
+  using ::wcscat;
+  using ::wcscmp;
+  using ::wcscoll;
+  using ::wcscpy;
+  using ::wcscspn;
+  using ::wcsftime;
+  using ::wcslen;
+  using ::wcsncat;
+  using ::wcsncmp;
+  using ::wcsncpy;
+  using ::wcsrtombs;
+  using ::wcsspn;
+  using ::wcstod;
+
+  using ::wcstof;
+
+  using ::wcstok;
+  using ::wcstol;
+  using ::wcstoul;
+  using ::wcsxfrm;
+  using ::wctob;
+  using ::wmemcmp;
+  using ::wmemcpy;
+  using ::wmemmove;
+  using ::wmemset;
+  using ::wprintf;
+  using ::wscanf;
+  using ::wcschr;
+  using ::wcspbrk;
+  using ::wcsrchr;
+  using ::wcsstr;
+  using ::wmemchr;
+# 234 "/usr/include/c++/14/cwchar" 3
+
+}
+}
+
+
+
+
+
+
+
+namespace __gnu_cxx
+{
+
+
+
+
+
+  using ::wcstold;
+# 260 "/usr/include/c++/14/cwchar" 3
+  using ::wcstoll;
+  using ::wcstoull;
+
+}
+
+namespace std
+{
+  using ::__gnu_cxx::wcstold;
+  using ::__gnu_cxx::wcstoll;
+  using ::__gnu_cxx::wcstoull;
+}
+# 280 "/usr/include/c++/14/cwchar" 3
+namespace std
+{
+
+  using std::wcstof;
+
+
+  using std::vfwscanf;
+
+
+  using std::vswscanf;
+
+
+  using std::vwscanf;
+
+
+
+  using std::wcstold;
+  using std::wcstoll;
+  using std::wcstoull;
+
+}
+# 41 "/usr/include/c++/14/bits/postypes.h" 2 3
+
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+# 62 "/usr/include/c++/14/bits/postypes.h" 3
+  typedef long int streamoff;
+
+
+
+
+
+  typedef ptrdiff_t streamsize;
+# 81 "/usr/include/c++/14/bits/postypes.h" 3
+  template<typename _StateT>
+    class fpos
+    {
+    private:
+      streamoff _M_off;
+      _StateT _M_state;
+
+    public:
+
+
+
+
+      fpos()
+      : _M_off(0), _M_state() { }
+# 103 "/usr/include/c++/14/bits/postypes.h" 3
+      fpos(streamoff __off)
+      : _M_off(__off), _M_state() { }
+
+
+      fpos(const fpos&) = default;
+      fpos& operator=(const fpos&) = default;
+      ~fpos() = default;
+
+
+
+      operator streamoff() const { return _M_off; }
+
+
+      void
+      state(_StateT __st)
+      { _M_state = __st; }
+
+
+      _StateT
+      state() const
+      { return _M_state; }
+
+
+
+
+
+      fpos&
+      operator+=(streamoff __off)
+      {
+ _M_off += __off;
+ return *this;
+      }
+
+
+
+
+
+      fpos&
+      operator-=(streamoff __off)
+      {
+ _M_off -= __off;
+ return *this;
+      }
+
+
+
+
+
+
+
+      fpos
+      operator+(streamoff __off) const
+      {
+ fpos __pos(*this);
+ __pos += __off;
+ return __pos;
+      }
+
+
+
+
+
+
+
+      fpos
+      operator-(streamoff __off) const
+      {
+ fpos __pos(*this);
+ __pos -= __off;
+ return __pos;
+      }
+
+
+
+
+
+
+      streamoff
+      operator-(const fpos& __other) const
+      { return _M_off - __other._M_off; }
+    };
+
+
+
+
+
+
+  template<typename _StateT>
+    inline bool
+    operator==(const fpos<_StateT>& __lhs, const fpos<_StateT>& __rhs)
+    { return streamoff(__lhs) == streamoff(__rhs); }
+
+  template<typename _StateT>
+    inline bool
+    operator!=(const fpos<_StateT>& __lhs, const fpos<_StateT>& __rhs)
+    { return streamoff(__lhs) != streamoff(__rhs); }
+
+
+
+
+
+  typedef fpos<mbstate_t> streampos;
+
+  typedef fpos<mbstate_t> wstreampos;
+
+
+
+  typedef fpos<mbstate_t> u8streampos;
+
+
+
+
+  typedef fpos<mbstate_t> u16streampos;
+
+  typedef fpos<mbstate_t> u32streampos;
+
+
+
+}
+# 43 "/usr/include/c++/14/iosfwd" 2 3
+
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+
+# 76 "/usr/include/c++/14/iosfwd" 3
+  class ios_base;
+
+  template<typename _CharT, typename _Traits = char_traits<_CharT> >
+    class basic_ios;
+
+  template<typename _CharT, typename _Traits = char_traits<_CharT> >
+    class basic_streambuf;
+
+  template<typename _CharT, typename _Traits = char_traits<_CharT> >
+    class basic_istream;
+
+  template<typename _CharT, typename _Traits = char_traits<_CharT> >
+    class basic_ostream;
+
+  template<typename _CharT, typename _Traits = char_traits<_CharT> >
+    class basic_iostream;
+
+
+namespace __cxx11 {
+
+  template<typename _CharT, typename _Traits = char_traits<_CharT>,
+     typename _Alloc = allocator<_CharT> >
+    class basic_stringbuf;
+
+  template<typename _CharT, typename _Traits = char_traits<_CharT>,
+    typename _Alloc = allocator<_CharT> >
+    class basic_istringstream;
+
+  template<typename _CharT, typename _Traits = char_traits<_CharT>,
+    typename _Alloc = allocator<_CharT> >
+    class basic_ostringstream;
+
+  template<typename _CharT, typename _Traits = char_traits<_CharT>,
+    typename _Alloc = allocator<_CharT> >
+    class basic_stringstream;
+
+}
+
+  template<typename _CharT, typename _Traits = char_traits<_CharT> >
+    class basic_filebuf;
+
+  template<typename _CharT, typename _Traits = char_traits<_CharT> >
+    class basic_ifstream;
+
+  template<typename _CharT, typename _Traits = char_traits<_CharT> >
+    class basic_ofstream;
+
+  template<typename _CharT, typename _Traits = char_traits<_CharT> >
+    class basic_fstream;
+
+  template<typename _CharT, typename _Traits = char_traits<_CharT> >
+    class istreambuf_iterator;
+
+  template<typename _CharT, typename _Traits = char_traits<_CharT> >
+    class ostreambuf_iterator;
+
+
+
+  typedef basic_ios<char> ios;
+
+
+  typedef basic_streambuf<char> streambuf;
+
+
+  typedef basic_istream<char> istream;
+
+
+  typedef basic_ostream<char> ostream;
+
+
+  typedef basic_iostream<char> iostream;
+
+
+  typedef basic_stringbuf<char> stringbuf;
+
+
+  typedef basic_istringstream<char> istringstream;
+
+
+  typedef basic_ostringstream<char> ostringstream;
+
+
+  typedef basic_stringstream<char> stringstream;
+
+
+  typedef basic_filebuf<char> filebuf;
+
+
+  typedef basic_ifstream<char> ifstream;
+
+
+  typedef basic_ofstream<char> ofstream;
+
+
+  typedef basic_fstream<char> fstream;
+
+
+
+  typedef basic_ios<wchar_t> wios;
+
+
+  typedef basic_streambuf<wchar_t> wstreambuf;
+
+
+  typedef basic_istream<wchar_t> wistream;
+
+
+  typedef basic_ostream<wchar_t> wostream;
+
+
+  typedef basic_iostream<wchar_t> wiostream;
+
+
+  typedef basic_stringbuf<wchar_t> wstringbuf;
+
+
+  typedef basic_istringstream<wchar_t> wistringstream;
+
+
+  typedef basic_ostringstream<wchar_t> wostringstream;
+
+
+  typedef basic_stringstream<wchar_t> wstringstream;
+
+
+  typedef basic_filebuf<wchar_t> wfilebuf;
+
+
+  typedef basic_ifstream<wchar_t> wifstream;
+
+
+  typedef basic_ofstream<wchar_t> wofstream;
+
+
+  typedef basic_fstream<wchar_t> wfstream;
+
+
+
+  template<typename _CharT, typename _Traits = char_traits<_CharT>,
+           typename _Allocator = allocator<_CharT>>
+    class basic_syncbuf;
+  template<typename _CharT, typename _Traits = char_traits<_CharT>,
+           typename _Allocator = allocator<_CharT>>
+    class basic_osyncstream;
+
+  using syncbuf = basic_syncbuf<char>;
+  using osyncstream = basic_osyncstream<char>;
+
+
+  using wsyncbuf = basic_syncbuf<wchar_t>;
+  using wosyncstream = basic_osyncstream<wchar_t>;
+# 255 "/usr/include/c++/14/iosfwd" 3
+
+}
+# 41 "/usr/include/c++/14/ios" 2 3
+# 1 "/usr/include/c++/14/exception" 1 3
+# 33 "/usr/include/c++/14/exception" 3
+       
+# 34 "/usr/include/c++/14/exception" 3
+
+
+
+
+
+# 1 "/usr/include/c++/14/bits/version.h" 1 3
+# 47 "/usr/include/c++/14/bits/version.h" 3
+       
+# 48 "/usr/include/c++/14/bits/version.h" 3
+# 40 "/usr/include/c++/14/exception" 2 3
+
+extern "C++" {
+
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+# 54 "/usr/include/c++/14/exception" 3
+  class bad_exception : public exception
+  {
+  public:
+    bad_exception() noexcept { }
+
+
+
+    virtual ~bad_exception() noexcept;
+
+
+    virtual const char*
+    what() const noexcept;
+  };
+
+
+  typedef void (*terminate_handler) ();
+
+
+  terminate_handler set_terminate(terminate_handler) noexcept;
+
+
+
+  terminate_handler get_terminate() noexcept;
+
+
+
+
+  void terminate() noexcept __attribute__ ((__noreturn__,__cold__));
+
+
+
+  typedef void (*__attribute__ ((__deprecated__)) unexpected_handler) ();
+
+
+
+
+
+  __attribute__ ((__deprecated__))
+  unexpected_handler set_unexpected(unexpected_handler) noexcept;
+
+
+
+
+
+
+
+  __attribute__ ((__deprecated__))
+  unexpected_handler get_unexpected() noexcept;
+
+
+
+
+
+
+
+  __attribute__ ((__deprecated__))
+  void unexpected() __attribute__ ((__noreturn__,__cold__));
+# 124 "/usr/include/c++/14/exception" 3
+  __attribute__ ((__deprecated__ ("use '" "std::uncaught_exceptions()" "' instead")))
+  bool uncaught_exception() noexcept __attribute__ ((__pure__));
+
+
+
+
+
+
+  int uncaught_exceptions() noexcept __attribute__ ((__pure__));
+
+
+
+}
+
+namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
+{
+
+# 158 "/usr/include/c++/14/exception" 3
+  void __verbose_terminate_handler();
+
+
+}
+
+}
+
+
+# 1 "/usr/include/c++/14/bits/exception_ptr.h" 1 3
+# 36 "/usr/include/c++/14/bits/exception_ptr.h" 3
+# 1 "/usr/include/c++/14/bits/cxxabi_init_exception.h" 1 3
+# 34 "/usr/include/c++/14/bits/cxxabi_init_exception.h" 3
+       
+# 35 "/usr/include/c++/14/bits/cxxabi_init_exception.h" 3
+
+#pragma GCC visibility push(default)
+
+# 1 "/usr/lib64/gcc/x86_64-suse-linux/14/include/stddef.h" 1 3 4
+# 145 "/usr/lib64/gcc/x86_64-suse-linux/14/include/stddef.h" 3 4
+typedef long int ptrdiff_t;
+# 425 "/usr/lib64/gcc/x86_64-suse-linux/14/include/stddef.h" 3 4
+typedef struct {
+  long long __max_align_ll __attribute__((__aligned__(__alignof__(long long))));
+  long double __max_align_ld __attribute__((__aligned__(__alignof__(long double))));
+# 436 "/usr/lib64/gcc/x86_64-suse-linux/14/include/stddef.h" 3 4
+} max_align_t;
+
+
+
+
+
+
+  typedef decltype(nullptr) nullptr_t;
+# 39 "/usr/include/c++/14/bits/cxxabi_init_exception.h" 2 3
+# 50 "/usr/include/c++/14/bits/cxxabi_init_exception.h" 3
+namespace std
+{
+  class type_info;
+}
+
+namespace __cxxabiv1
+{
+  struct __cxa_refcounted_exception;
+
+  extern "C"
+    {
+
+      void*
+      __cxa_allocate_exception(size_t) noexcept;
+
+      void
+      __cxa_free_exception(void*) noexcept;
+
+
+      __cxa_refcounted_exception*
+      __cxa_init_primary_exception(void *__object, std::type_info *__tinfo,
+                void ( *__dest) (void *))
+ noexcept;
+
+    }
+}
+
+
+
+#pragma GCC visibility pop
+# 37 "/usr/include/c++/14/bits/exception_ptr.h" 2 3
+# 1 "/usr/include/c++/14/typeinfo" 1 3
+# 32 "/usr/include/c++/14/typeinfo" 3
+       
+# 33 "/usr/include/c++/14/typeinfo" 3
+
+
+
+# 1 "/usr/include/c++/14/bits/hash_bytes.h" 1 3
+# 33 "/usr/include/c++/14/bits/hash_bytes.h" 3
+       
+# 34 "/usr/include/c++/14/bits/hash_bytes.h" 3
+
+
+
+namespace std
+{
+
+
+
+
+
+
+
+  size_t
+  _Hash_bytes(const void* __ptr, size_t __len, size_t __seed);
+
+
+
+
+
+  size_t
+  _Fnv_hash_bytes(const void* __ptr, size_t __len, size_t __seed);
+
+
+}
+# 37 "/usr/include/c++/14/typeinfo" 2 3
+
+
+
+# 1 "/usr/include/c++/14/bits/version.h" 1 3
+# 47 "/usr/include/c++/14/bits/version.h" 3
+       
+# 48 "/usr/include/c++/14/bits/version.h" 3
+# 41 "/usr/include/c++/14/typeinfo" 2 3
+
+#pragma GCC visibility push(default)
+
+extern "C++" {
+
+namespace __cxxabiv1
+{
+  class __class_type_info;
+}
+# 83 "/usr/include/c++/14/typeinfo" 3
+namespace std
+{
+
+
+
+
+
+
+  class type_info
+  {
+  public:
+
+
+
+
+    virtual ~type_info();
+
+
+
+    const char* name() const noexcept
+    { return __name[0] == '*' ? __name + 1 : __name; }
+
+
+
+    bool before(const type_info& __arg) const noexcept;
+
+   
+    bool operator==(const type_info& __arg) const noexcept;
+
+
+
+
+
+
+
+    size_t hash_code() const noexcept
+    {
+
+      return _Hash_bytes(name(), __builtin_strlen(name()),
+    static_cast<size_t>(0xc70f6907UL));
+
+
+
+    }
+
+
+
+    virtual bool __is_pointer_p() const;
+
+
+    virtual bool __is_function_p() const;
+
+
+
+
+
+
+
+    virtual bool __do_catch(const type_info *__thr_type, void **__thr_obj,
+       unsigned __outer) const;
+
+
+    virtual bool __do_upcast(const __cxxabiv1::__class_type_info *__target,
+        void **__obj_ptr) const;
+
+  protected:
+    const char *__name;
+
+    explicit type_info(const char *__n): __name(__n) { }
+
+  private:
+
+
+    type_info& operator=(const type_info&) = delete;
+    type_info(const type_info&) = delete;
+# 166 "/usr/include/c++/14/typeinfo" 3
+  };
+
+
+  inline bool
+  type_info::before(const type_info& __arg) const noexcept
+  {
+
+
+
+
+    if (__name[0] != '*' || __arg.__name[0] != '*')
+      return __builtin_strcmp (__name, __arg.__name) < 0;
+# 186 "/usr/include/c++/14/typeinfo" 3
+    return __name < __arg.__name;
+  }
+
+
+
+  inline bool
+  type_info::operator==(const type_info& __arg) const noexcept
+  {
+    if (std::__is_constant_evaluated())
+      return this == &__arg;
+
+    if (__name == __arg.__name)
+      return true;
+
+
+
+
+
+
+    return __name[0] != '*' && __builtin_strcmp (__name, __arg.name()) == 0;
+
+
+
+  }
+# 219 "/usr/include/c++/14/typeinfo" 3
+  class bad_cast : public exception
+  {
+  public:
+    bad_cast() noexcept { }
+
+
+
+    virtual ~bad_cast() noexcept;
+
+
+    virtual const char* what() const noexcept;
+  };
+
+
+
+
+
+  class bad_typeid : public exception
+  {
+  public:
+    bad_typeid () noexcept { }
+
+
+
+    virtual ~bad_typeid() noexcept;
+
+
+    virtual const char* what() const noexcept;
+  };
+}
+
+}
+
+#pragma GCC visibility pop
+# 38 "/usr/include/c++/14/bits/exception_ptr.h" 2 3
+# 50 "/usr/include/c++/14/bits/exception_ptr.h" 3
+extern "C++" {
+
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+  class type_info;
+
+
+
+
+
+
+  namespace __exception_ptr
+  {
+    class exception_ptr;
+  }
+
+  using __exception_ptr::exception_ptr;
+# 75 "/usr/include/c++/14/bits/exception_ptr.h" 3
+  exception_ptr current_exception() noexcept;
+
+  template<typename _Ex>
+  exception_ptr make_exception_ptr(_Ex) noexcept;
+
+
+  void rethrow_exception(exception_ptr) __attribute__ ((__noreturn__));
+
+  namespace __exception_ptr
+  {
+    using std::rethrow_exception;
+# 97 "/usr/include/c++/14/bits/exception_ptr.h" 3
+    class exception_ptr
+    {
+      void* _M_exception_object;
+
+      explicit exception_ptr(void* __e) noexcept;
+
+      void _M_addref() noexcept;
+      void _M_release() noexcept;
+
+      void *_M_get() const noexcept __attribute__ ((__pure__));
+
+      friend exception_ptr std::current_exception() noexcept;
+      friend void std::rethrow_exception(exception_ptr);
+      template<typename _Ex>
+      friend exception_ptr std::make_exception_ptr(_Ex) noexcept;
+
+    public:
+      exception_ptr() noexcept;
+
+      exception_ptr(const exception_ptr&) noexcept;
+
+
+      exception_ptr(nullptr_t) noexcept
+      : _M_exception_object(nullptr)
+      { }
+
+      exception_ptr(exception_ptr&& __o) noexcept
+      : _M_exception_object(__o._M_exception_object)
+      { __o._M_exception_object = nullptr; }
+# 135 "/usr/include/c++/14/bits/exception_ptr.h" 3
+      exception_ptr&
+      operator=(const exception_ptr&) noexcept;
+
+
+      exception_ptr&
+      operator=(exception_ptr&& __o) noexcept
+      {
+        exception_ptr(static_cast<exception_ptr&&>(__o)).swap(*this);
+        return *this;
+      }
+
+
+      ~exception_ptr() noexcept;
+
+      void
+      swap(exception_ptr&) noexcept;
+# 162 "/usr/include/c++/14/bits/exception_ptr.h" 3
+      explicit operator bool() const noexcept
+      { return _M_exception_object; }
+
+
+
+
+      friend bool
+      operator==(const exception_ptr&, const exception_ptr&) noexcept = default;
+# 182 "/usr/include/c++/14/bits/exception_ptr.h" 3
+      const class std::type_info*
+      __cxa_exception_type() const noexcept
+ __attribute__ ((__pure__));
+    };
+
+   
+    inline
+    exception_ptr::exception_ptr() noexcept
+    : _M_exception_object(0)
+    { }
+
+   
+    inline
+    exception_ptr::exception_ptr(const exception_ptr& __other)
+    noexcept
+    : _M_exception_object(__other._M_exception_object)
+    {
+      if (_M_exception_object)
+ _M_addref();
+    }
+
+   
+    inline
+    exception_ptr::~exception_ptr() noexcept
+    {
+      if (_M_exception_object)
+ _M_release();
+    }
+
+   
+    inline exception_ptr&
+    exception_ptr::operator=(const exception_ptr& __other) noexcept
+    {
+      exception_ptr(__other).swap(*this);
+      return *this;
+    }
+
+   
+    inline void
+    exception_ptr::swap(exception_ptr &__other) noexcept
+    {
+      void *__tmp = _M_exception_object;
+      _M_exception_object = __other._M_exception_object;
+      __other._M_exception_object = __tmp;
+    }
+
+
+    inline void
+    swap(exception_ptr& __lhs, exception_ptr& __rhs)
+    { __lhs.swap(__rhs); }
+
+
+    template<typename _Ex>
+     
+      inline void
+      __dest_thunk(void* __x)
+      { static_cast<_Ex*>(__x)->~_Ex(); }
+
+
+  }
+
+  using __exception_ptr::swap;
+
+
+
+  template<typename _Ex>
+    exception_ptr
+    make_exception_ptr(_Ex __ex) noexcept
+    {
+
+      using _Ex2 = typename decay<_Ex>::type;
+      void* __e = __cxxabiv1::__cxa_allocate_exception(sizeof(_Ex));
+      (void) __cxxabiv1::__cxa_init_primary_exception(
+   __e, const_cast<std::type_info*>(&typeid(_Ex)),
+   __exception_ptr::__dest_thunk<_Ex2>);
+      try
+ {
+   ::new (__e) _Ex2(__ex);
+   return exception_ptr(__e);
+ }
+      catch(...)
+ {
+   __cxxabiv1::__cxa_free_exception(__e);
+   return current_exception();
+ }
+# 277 "/usr/include/c++/14/bits/exception_ptr.h" 3
+    }
+# 291 "/usr/include/c++/14/bits/exception_ptr.h" 3
+}
+
+}
+# 167 "/usr/include/c++/14/exception" 2 3
+# 1 "/usr/include/c++/14/bits/nested_exception.h" 1 3
+# 40 "/usr/include/c++/14/bits/nested_exception.h" 3
+extern "C++" {
+
+namespace std __attribute__ ((__visibility__ ("default")))
+{
+# 59 "/usr/include/c++/14/bits/nested_exception.h" 3
+  class nested_exception
+  {
+    exception_ptr _M_ptr;
+
+  public:
+
+    nested_exception() noexcept : _M_ptr(current_exception()) { }
+
+    nested_exception(const nested_exception&) noexcept = default;
+
+    nested_exception& operator=(const nested_exception&) noexcept = default;
+
+    virtual ~nested_exception() noexcept;
+
+
+    [[noreturn]]
+    void
+    rethrow_nested() const
+    {
+      if (_M_ptr)
+ rethrow_exception(_M_ptr);
+      std::terminate();
+    }
+
+
+    exception_ptr
+    nested_ptr() const noexcept
+    { return _M_ptr; }
+  };
+
+
+
+  template<typename _Except>
+    struct _Nested_exception : public _Except, public nested_exception
+    {
+      explicit _Nested_exception(const _Except& __ex)
+      : _Except(__ex)
+      { }
+
+      explicit _Nested_exception(_Except&& __ex)
+      : _Except(static_cast<_Except&&>(__ex))
+      { }
+    };
+# 145 "/usr/include/c++/14/bits/nested_exception.h" 3
+  template<typename _Tp>
+    [[noreturn]]
+    inline void
+    throw_with_nested(_Tp&& __t)
+    {
+      using _Up = typename decay<_Tp>::type;
+      using _CopyConstructible
+ = __and_<is_copy_constructible<_Up>, is_move_constructible<_Up>>;
+      static_assert(_CopyConstructible::value,
+   "throw_with_nested argument must be CopyConstructible");
+
+
+      if constexpr (is_class_v<_Up>)
+ if constexpr (!is_final_v<_Up>)
+   if constexpr (!is_base_of_v<nested_exception, _Up>)
+     throw _Nested_exception<_Up>{std::forward<_Tp>(__t)};
+      throw std::forward<_Tp>(__t);
+
+
+
+
+
+    }
+# 203 "/usr/include/c++/14/bits/nested_exception.h" 3
+  template<typename _Ex>
+
+
+
+    inline void
+    rethrow_if_nested(const _Ex& __ex)
+    {
+      const _Ex* __ptr = __builtin_addressof(__ex);
+# 223 "/usr/include/c++/14/bits/nested_exception.h" 3
+      if constexpr (!is_polymorphic_v<_Ex>)
+ return;
+      else if constexpr (is_base_of_v<nested_exception, _Ex>
+    && !is_convertible_v<_Ex*, nested_exception*>)
+ return;
+
+
+
+
+      else if (auto __ne_ptr = dynamic_cast<const nested_exception*>(__ptr))
+ __ne_ptr->rethrow_nested();
+
+    }
+
+
+}
+
+}
+# 168 "/usr/include/c++/14/exception" 2 3
+# 42 "/usr/include/c++/14/ios" 2 3
+# 1 "/usr/include/c++/14/bits/char_traits.h" 1 3
+# 37 "/usr/include/c++/14/bits/char_traits.h" 3
+       
+# 38 "/usr/include/c++/14/bits/char_traits.h" 3
+# 46 "/usr/include/c++/14/bits/char_traits.h" 3
+# 1 "/usr/include/c++/14/cwchar" 1 3
+# 39 "/usr/include/c++/14/cwchar" 3
+       
+# 40 "/usr/include/c++/14/cwchar" 3
+# 47 "/usr/include/c++/14/bits/char_traits.h" 2 3
+# 64 "/usr/include/c++/14/bits/char_traits.h" 3
 namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 {
 
@@ -12579,91 +19585,7 @@ namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
 # 1 "/usr/include/c++/14/x86_64-suse-linux/bits/c++allocator.h" 1 3
 # 33 "/usr/include/c++/14/x86_64-suse-linux/bits/c++allocator.h" 3
 # 1 "/usr/include/c++/14/bits/new_allocator.h" 1 3
-# 35 "/usr/include/c++/14/bits/new_allocator.h" 3
-# 1 "/usr/include/c++/14/bits/functexcept.h" 1 3
-# 42 "/usr/include/c++/14/bits/functexcept.h" 3
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-
-
-
-  void
-  __throw_bad_exception(void) __attribute__((__noreturn__));
-
-
-  void
-  __throw_bad_alloc(void) __attribute__((__noreturn__));
-
-  void
-  __throw_bad_array_new_length(void) __attribute__((__noreturn__));
-
-
-  void
-  __throw_bad_cast(void) __attribute__((__noreturn__,__cold__));
-
-  void
-  __throw_bad_typeid(void) __attribute__((__noreturn__,__cold__));
-
-
-  void
-  __throw_logic_error(const char*) __attribute__((__noreturn__,__cold__));
-
-  void
-  __throw_domain_error(const char*) __attribute__((__noreturn__,__cold__));
-
-  void
-  __throw_invalid_argument(const char*) __attribute__((__noreturn__,__cold__));
-
-  void
-  __throw_length_error(const char*) __attribute__((__noreturn__,__cold__));
-
-  void
-  __throw_out_of_range(const char*) __attribute__((__noreturn__,__cold__));
-
-  void
-  __throw_out_of_range_fmt(const char*, ...) __attribute__((__noreturn__,__cold__))
-    __attribute__((__format__(__gnu_printf__, 1, 2)));
-
-  void
-  __throw_runtime_error(const char*) __attribute__((__noreturn__,__cold__));
-
-  void
-  __throw_range_error(const char*) __attribute__((__noreturn__,__cold__));
-
-  void
-  __throw_overflow_error(const char*) __attribute__((__noreturn__,__cold__));
-
-  void
-  __throw_underflow_error(const char*) __attribute__((__noreturn__,__cold__));
-
-
-  void
-  __throw_ios_failure(const char*) __attribute__((__noreturn__,__cold__));
-
-  void
-  __throw_ios_failure(const char*, int) __attribute__((__noreturn__,__cold__));
-
-
-  void
-  __throw_system_error(int) __attribute__((__noreturn__,__cold__));
-
-
-  void
-  __throw_future_error(int) __attribute__((__noreturn__,__cold__));
-
-
-  void
-  __throw_bad_function_call() __attribute__((__noreturn__,__cold__));
-# 140 "/usr/include/c++/14/bits/functexcept.h" 3
-
-}
-# 36 "/usr/include/c++/14/bits/new_allocator.h" 2 3
-
-
-
-
-
+# 41 "/usr/include/c++/14/bits/new_allocator.h" 3
 namespace std __attribute__ ((__visibility__ ("default")))
 {
 
@@ -12949,469 +19871,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 }
 # 44 "/usr/include/c++/14/string" 2 3
-# 1 "/usr/include/c++/14/bits/cpp_type_traits.h" 1 3
-# 35 "/usr/include/c++/14/bits/cpp_type_traits.h" 3
-       
-# 36 "/usr/include/c++/14/bits/cpp_type_traits.h" 3
-# 67 "/usr/include/c++/14/bits/cpp_type_traits.h" 3
-extern "C++" {
 
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-
-  struct __true_type { };
-  struct __false_type { };
-
-  template<bool>
-    struct __truth_type
-    { typedef __false_type __type; };
-
-  template<>
-    struct __truth_type<true>
-    { typedef __true_type __type; };
-
-
-
-  template<class _Sp, class _Tp>
-    struct __traitor
-    {
-      enum { __value = bool(_Sp::__value) || bool(_Tp::__value) };
-      typedef typename __truth_type<__value>::__type __type;
-    };
-
-
-  template<typename, typename>
-    struct __are_same
-    {
-      enum { __value = 0 };
-      typedef __false_type __type;
-    };
-
-  template<typename _Tp>
-    struct __are_same<_Tp, _Tp>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-
-  template<typename _Tp>
-    struct __is_void
-    {
-      enum { __value = 0 };
-      typedef __false_type __type;
-    };
-
-  template<>
-    struct __is_void<void>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-
-
-
-  template<typename _Tp>
-    struct __is_integer
-    {
-      enum { __value = 0 };
-      typedef __false_type __type;
-    };
-
-
-
-
-
-  template<>
-    struct __is_integer<bool>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_integer<char>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_integer<signed char>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_integer<unsigned char>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-
-  template<>
-    struct __is_integer<wchar_t>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-
-
-  template<>
-    struct __is_integer<char8_t>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-
-
-  template<>
-    struct __is_integer<char16_t>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_integer<char32_t>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-
-  template<>
-    struct __is_integer<short>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_integer<unsigned short>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_integer<int>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_integer<unsigned int>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_integer<long>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_integer<unsigned long>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_integer<long long>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_integer<unsigned long long>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-# 272 "/usr/include/c++/14/bits/cpp_type_traits.h" 3
-__extension__ template<> struct __is_integer<__int128> { enum { __value = 1 }; typedef __true_type __type; }; __extension__ template<> struct __is_integer<unsigned __int128> { enum { __value = 1 }; typedef __true_type __type; };
-# 289 "/usr/include/c++/14/bits/cpp_type_traits.h" 3
-  template<typename _Tp>
-    struct __is_floating
-    {
-      enum { __value = 0 };
-      typedef __false_type __type;
-    };
-
-
-  template<>
-    struct __is_floating<float>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_floating<double>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_floating<long double>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-# 366 "/usr/include/c++/14/bits/cpp_type_traits.h" 3
-  template<typename _Tp>
-    struct __is_pointer
-    {
-      enum { __value = 0 };
-      typedef __false_type __type;
-    };
-
-  template<typename _Tp>
-    struct __is_pointer<_Tp*>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-
-
-
-  template<typename _Tp>
-    struct __is_arithmetic
-    : public __traitor<__is_integer<_Tp>, __is_floating<_Tp> >
-    { };
-
-
-
-
-  template<typename _Tp>
-    struct __is_scalar
-    : public __traitor<__is_arithmetic<_Tp>, __is_pointer<_Tp> >
-    { };
-
-
-
-
-  template<typename _Tp>
-    struct __is_char
-    {
-      enum { __value = 0 };
-      typedef __false_type __type;
-    };
-
-  template<>
-    struct __is_char<char>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-
-  template<>
-    struct __is_char<wchar_t>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-
-  template<typename _Tp>
-    struct __is_byte
-    {
-      enum { __value = 0 };
-      typedef __false_type __type;
-    };
-
-  template<>
-    struct __is_byte<char>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_byte<signed char>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<>
-    struct __is_byte<unsigned char>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-
-  enum class byte : unsigned char;
-
-  template<>
-    struct __is_byte<byte>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-
-
-  template<>
-    struct __is_byte<char8_t>
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-
-  template<typename> struct iterator_traits;
-
-
-  template<typename _Tp>
-    struct __is_nonvolatile_trivially_copyable
-    {
-      enum { __value = __is_trivially_copyable(_Tp) };
-    };
-
-
-
-
-  template<typename _Tp>
-    struct __is_nonvolatile_trivially_copyable<volatile _Tp>
-    {
-      enum { __value = 0 };
-    };
-
-
-  template<typename _OutputIter, typename _InputIter>
-    struct __memcpyable
-    {
-      enum { __value = 0 };
-    };
-
-  template<typename _Tp>
-    struct __memcpyable<_Tp*, _Tp*>
-    : __is_nonvolatile_trivially_copyable<_Tp>
-    { };
-
-  template<typename _Tp>
-    struct __memcpyable<_Tp*, const _Tp*>
-    : __is_nonvolatile_trivially_copyable<_Tp>
-    { };
-
-
-
-
-
-
-  template<typename _Iter1, typename _Iter2>
-    struct __memcmpable
-    {
-      enum { __value = 0 };
-    };
-
-
-  template<typename _Tp>
-    struct __memcmpable<_Tp*, _Tp*>
-    : __is_nonvolatile_trivially_copyable<_Tp>
-    { };
-
-  template<typename _Tp>
-    struct __memcmpable<const _Tp*, _Tp*>
-    : __is_nonvolatile_trivially_copyable<_Tp>
-    { };
-
-  template<typename _Tp>
-    struct __memcmpable<_Tp*, const _Tp*>
-    : __is_nonvolatile_trivially_copyable<_Tp>
-    { };
-
-
-
-
-
-
-
-  template<typename _Tp, bool _TreatAsBytes =
-
-
-
- __is_byte<_Tp>::__value
-
-    >
-    struct __is_memcmp_ordered
-    {
-      static const bool __value = _Tp(-1) > _Tp(1);
-    };
-
-  template<typename _Tp>
-    struct __is_memcmp_ordered<_Tp, false>
-    {
-      static const bool __value = false;
-    };
-
-
-  template<typename _Tp, typename _Up, bool = sizeof(_Tp) == sizeof(_Up)>
-    struct __is_memcmp_ordered_with
-    {
-      static const bool __value = __is_memcmp_ordered<_Tp>::__value
- && __is_memcmp_ordered<_Up>::__value;
-    };
-
-  template<typename _Tp, typename _Up>
-    struct __is_memcmp_ordered_with<_Tp, _Up, false>
-    {
-      static const bool __value = false;
-    };
-# 579 "/usr/include/c++/14/bits/cpp_type_traits.h" 3
-  template<>
-    struct __is_memcmp_ordered_with<std::byte, std::byte, true>
-    { static constexpr bool __value = true; };
-
-  template<typename _Tp, bool _SameSize>
-    struct __is_memcmp_ordered_with<_Tp, std::byte, _SameSize>
-    { static constexpr bool __value = false; };
-
-  template<typename _Up, bool _SameSize>
-    struct __is_memcmp_ordered_with<std::byte, _Up, _SameSize>
-    { static constexpr bool __value = false; };
-
-
-
-
-
-  template<typename _Tp>
-    struct __is_move_iterator
-    {
-      enum { __value = 0 };
-      typedef __false_type __type;
-    };
-
-
-
-  template<typename _Iterator>
-    constexpr
-    inline _Iterator
-    __miter_base(_Iterator __it)
-    { return __it; }
-
-
-}
-}
-# 45 "/usr/include/c++/14/string" 2 3
 
 # 1 "/usr/include/c++/14/bits/ostream_insert.h" 1 3
 # 33 "/usr/include/c++/14/bits/ostream_insert.h" 3
@@ -13546,2222 +20006,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 }
 # 47 "/usr/include/c++/14/string" 2 3
 
-# 1 "/usr/include/c++/14/bits/stl_iterator.h" 1 3
-# 65 "/usr/include/c++/14/bits/stl_iterator.h" 3
-# 1 "/usr/include/c++/14/ext/type_traits.h" 1 3
-# 32 "/usr/include/c++/14/ext/type_traits.h" 3
-       
-# 33 "/usr/include/c++/14/ext/type_traits.h" 3
 
-
-
-
-extern "C++" {
-
-namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
-{
-
-
-
-  template<bool, typename>
-    struct __enable_if
-    { };
-
-  template<typename _Tp>
-    struct __enable_if<true, _Tp>
-    { typedef _Tp __type; };
-
-
-
-  template<bool _Cond, typename _Iftrue, typename _Iffalse>
-    struct __conditional_type
-    { typedef _Iftrue __type; };
-
-  template<typename _Iftrue, typename _Iffalse>
-    struct __conditional_type<false, _Iftrue, _Iffalse>
-    { typedef _Iffalse __type; };
-
-
-
-  template<typename _Tp>
-    struct __add_unsigned
-    {
-    private:
-      typedef __enable_if<std::__is_integer<_Tp>::__value, _Tp> __if_type;
-
-    public:
-      typedef typename __if_type::__type __type;
-    };
-
-  template<>
-    struct __add_unsigned<char>
-    { typedef unsigned char __type; };
-
-  template<>
-    struct __add_unsigned<signed char>
-    { typedef unsigned char __type; };
-
-  template<>
-    struct __add_unsigned<short>
-    { typedef unsigned short __type; };
-
-  template<>
-    struct __add_unsigned<int>
-    { typedef unsigned int __type; };
-
-  template<>
-    struct __add_unsigned<long>
-    { typedef unsigned long __type; };
-
-  template<>
-    struct __add_unsigned<long long>
-    { typedef unsigned long long __type; };
-
-
-  template<>
-    struct __add_unsigned<bool>;
-
-  template<>
-    struct __add_unsigned<wchar_t>;
-
-
-
-  template<typename _Tp>
-    struct __remove_unsigned
-    {
-    private:
-      typedef __enable_if<std::__is_integer<_Tp>::__value, _Tp> __if_type;
-
-    public:
-      typedef typename __if_type::__type __type;
-    };
-
-  template<>
-    struct __remove_unsigned<char>
-    { typedef signed char __type; };
-
-  template<>
-    struct __remove_unsigned<unsigned char>
-    { typedef signed char __type; };
-
-  template<>
-    struct __remove_unsigned<unsigned short>
-    { typedef short __type; };
-
-  template<>
-    struct __remove_unsigned<unsigned int>
-    { typedef int __type; };
-
-  template<>
-    struct __remove_unsigned<unsigned long>
-    { typedef long __type; };
-
-  template<>
-    struct __remove_unsigned<unsigned long long>
-    { typedef long long __type; };
-
-
-  template<>
-    struct __remove_unsigned<bool>;
-
-  template<>
-    struct __remove_unsigned<wchar_t>;
-
-
-
-  template<typename _Type>
-    constexpr
-    inline bool
-    __is_null_pointer(_Type* __ptr)
-    { return __ptr == 0; }
-
-  template<typename _Type>
-    constexpr
-    inline bool
-    __is_null_pointer(_Type)
-    { return false; }
-
-
-  constexpr bool
-  __is_null_pointer(std::nullptr_t)
-  { return true; }
-
-
-
-
-  template<typename _Tp, bool = std::__is_integer<_Tp>::__value>
-    struct __promote
-    { typedef double __type; };
-
-
-
-
-  template<typename _Tp>
-    struct __promote<_Tp, false>
-    { };
-
-  template<>
-    struct __promote<long double>
-    { typedef long double __type; };
-
-  template<>
-    struct __promote<double>
-    { typedef double __type; };
-
-  template<>
-    struct __promote<float>
-    { typedef float __type; };
-# 225 "/usr/include/c++/14/ext/type_traits.h" 3
-  template<typename... _Tp>
-    using __promoted_t = decltype((typename __promote<_Tp>::__type(0) + ...));
-
-
-
-  template<typename _Tp, typename _Up>
-    using __promote_2 = __promote<__promoted_t<_Tp, _Up>>;
-
-  template<typename _Tp, typename _Up, typename _Vp>
-    using __promote_3 = __promote<__promoted_t<_Tp, _Up, _Vp>>;
-
-  template<typename _Tp, typename _Up, typename _Vp, typename _Wp>
-    using __promote_4 = __promote<__promoted_t<_Tp, _Up, _Vp, _Wp>>;
-# 269 "/usr/include/c++/14/ext/type_traits.h" 3
-
-}
-}
-# 66 "/usr/include/c++/14/bits/stl_iterator.h" 2 3
-# 85 "/usr/include/c++/14/bits/stl_iterator.h" 3
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-
-
-
-
-
-
-
-  namespace __detail
-  {
-
-
-    template<typename _Cat, typename _Limit, typename _Otherwise = _Cat>
-      using __clamp_iter_cat
- = __conditional_t<derived_from<_Cat, _Limit>, _Limit, _Otherwise>;
-  }
-
-
-
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
-# 128 "/usr/include/c++/14/bits/stl_iterator.h" 3
-  template<typename _Iterator>
-    class reverse_iterator
-    : public iterator<typename iterator_traits<_Iterator>::iterator_category,
-        typename iterator_traits<_Iterator>::value_type,
-        typename iterator_traits<_Iterator>::difference_type,
-        typename iterator_traits<_Iterator>::pointer,
-                      typename iterator_traits<_Iterator>::reference>
-    {
-      template<typename _Iter>
- friend class reverse_iterator;
-
-
-
-
-      template<typename _Iter>
- static constexpr bool __convertible = !is_same_v<_Iter, _Iterator>
-     && convertible_to<const _Iter&, _Iterator>;
-
-
-    protected:
-      _Iterator current;
-
-      typedef iterator_traits<_Iterator> __traits_type;
-
-    public:
-      typedef _Iterator iterator_type;
-      typedef typename __traits_type::pointer pointer;
-
-
-
-
-      using iterator_concept
- = __conditional_t<random_access_iterator<_Iterator>,
-     random_access_iterator_tag,
-     bidirectional_iterator_tag>;
-      using iterator_category
- = __detail::__clamp_iter_cat<typename __traits_type::iterator_category,
-         random_access_iterator_tag>;
-      using value_type = iter_value_t<_Iterator>;
-      using difference_type = iter_difference_t<_Iterator>;
-      using reference = iter_reference_t<_Iterator>;
-# 178 "/usr/include/c++/14/bits/stl_iterator.h" 3
-      constexpr
-      reverse_iterator()
-      noexcept(noexcept(_Iterator()))
-      : current()
-      { }
-
-
-
-
-      explicit constexpr
-      reverse_iterator(iterator_type __x)
-      noexcept(noexcept(_Iterator(__x)))
-      : current(__x)
-      { }
-
-
-
-
-      constexpr
-      reverse_iterator(const reverse_iterator& __x)
-      noexcept(noexcept(_Iterator(__x.current)))
-      : current(__x.current)
-      { }
-
-
-      reverse_iterator& operator=(const reverse_iterator&) = default;
-
-
-
-
-
-
-      template<typename _Iter>
-
- requires __convertible<_Iter>
-
- constexpr
-        reverse_iterator(const reverse_iterator<_Iter>& __x)
- noexcept(noexcept(_Iterator(__x.current)))
- : current(__x.current)
- { }
-
-
-      template<typename _Iter>
-
- requires __convertible<_Iter>
-   && assignable_from<_Iterator&, const _Iter&>
-
- constexpr
- reverse_iterator&
- operator=(const reverse_iterator<_Iter>& __x)
- noexcept(noexcept(current = __x.current))
- {
-   current = __x.current;
-   return *this;
- }
-
-
-
-
-
-      [[__nodiscard__]]
-      constexpr iterator_type
-      base() const
-      noexcept(noexcept(_Iterator(current)))
-      { return current; }
-# 255 "/usr/include/c++/14/bits/stl_iterator.h" 3
-      [[__nodiscard__]]
-      constexpr reference
-      operator*() const
-      {
- _Iterator __tmp = current;
- return *--__tmp;
-      }
-
-
-
-
-
-
-      [[__nodiscard__]]
-      constexpr pointer
-      operator->() const
-
-      requires is_pointer_v<_Iterator>
- || requires(const _Iterator __i) { __i.operator->(); }
-
-      {
-
-
- _Iterator __tmp = current;
- --__tmp;
- return _S_to_pointer(__tmp);
-      }
-
-
-
-
-
-
-      constexpr reverse_iterator&
-      operator++()
-      {
- --current;
- return *this;
-      }
-
-
-
-
-
-
-      constexpr reverse_iterator
-      operator++(int)
-      {
- reverse_iterator __tmp = *this;
- --current;
- return __tmp;
-      }
-
-
-
-
-
-
-      constexpr reverse_iterator&
-      operator--()
-      {
- ++current;
- return *this;
-      }
-
-
-
-
-
-
-      constexpr reverse_iterator
-      operator--(int)
-      {
- reverse_iterator __tmp = *this;
- ++current;
- return __tmp;
-      }
-
-
-
-
-
-
-      [[__nodiscard__]]
-      constexpr reverse_iterator
-      operator+(difference_type __n) const
-      { return reverse_iterator(current - __n); }
-
-
-
-
-
-
-
-      constexpr reverse_iterator&
-      operator+=(difference_type __n)
-      {
- current -= __n;
- return *this;
-      }
-
-
-
-
-
-
-      [[__nodiscard__]]
-      constexpr reverse_iterator
-      operator-(difference_type __n) const
-      { return reverse_iterator(current + __n); }
-
-
-
-
-
-
-
-      constexpr reverse_iterator&
-      operator-=(difference_type __n)
-      {
- current += __n;
- return *this;
-      }
-
-
-
-
-
-
-      [[__nodiscard__]]
-      constexpr reference
-      operator[](difference_type __n) const
-      { return *(*this + __n); }
-
-
-      [[nodiscard]]
-      friend constexpr iter_rvalue_reference_t<_Iterator>
-      iter_move(const reverse_iterator& __i)
-      noexcept(is_nothrow_copy_constructible_v<_Iterator>
-        && noexcept(ranges::iter_move(--std::declval<_Iterator&>())))
-      {
- auto __tmp = __i.base();
- return ranges::iter_move(--__tmp);
-      }
-
-      template<indirectly_swappable<_Iterator> _Iter2>
- friend constexpr void
- iter_swap(const reverse_iterator& __x,
-    const reverse_iterator<_Iter2>& __y)
- noexcept(is_nothrow_copy_constructible_v<_Iterator>
-   && is_nothrow_copy_constructible_v<_Iter2>
-   && noexcept(ranges::iter_swap(--std::declval<_Iterator&>(),
-            --std::declval<_Iter2&>())))
- {
-   auto __xtmp = __x.base();
-   auto __ytmp = __y.base();
-   ranges::iter_swap(--__xtmp, --__ytmp);
- }
-
-
-    private:
-      template<typename _Tp>
- static constexpr _Tp*
- _S_to_pointer(_Tp* __p)
-        { return __p; }
-
-      template<typename _Tp>
- static constexpr pointer
- _S_to_pointer(_Tp __t)
-        { return __t.operator->(); }
-    };
-# 524 "/usr/include/c++/14/bits/stl_iterator.h" 3
-  template<typename _IteratorL, typename _IteratorR>
-    [[nodiscard]]
-    constexpr bool
-    operator==(const reverse_iterator<_IteratorL>& __x,
-        const reverse_iterator<_IteratorR>& __y)
-    requires requires { { __x.base() == __y.base() } -> convertible_to<bool>; }
-    { return __x.base() == __y.base(); }
-
-  template<typename _IteratorL, typename _IteratorR>
-    [[nodiscard]]
-    constexpr bool
-    operator!=(const reverse_iterator<_IteratorL>& __x,
-        const reverse_iterator<_IteratorR>& __y)
-    requires requires { { __x.base() != __y.base() } -> convertible_to<bool>; }
-    { return __x.base() != __y.base(); }
-
-  template<typename _IteratorL, typename _IteratorR>
-    [[nodiscard]]
-    constexpr bool
-    operator<(const reverse_iterator<_IteratorL>& __x,
-       const reverse_iterator<_IteratorR>& __y)
-    requires requires { { __x.base() > __y.base() } -> convertible_to<bool>; }
-    { return __x.base() > __y.base(); }
-
-  template<typename _IteratorL, typename _IteratorR>
-    [[nodiscard]]
-    constexpr bool
-    operator>(const reverse_iterator<_IteratorL>& __x,
-       const reverse_iterator<_IteratorR>& __y)
-    requires requires { { __x.base() < __y.base() } -> convertible_to<bool>; }
-    { return __x.base() < __y.base(); }
-
-  template<typename _IteratorL, typename _IteratorR>
-    [[nodiscard]]
-    constexpr bool
-    operator<=(const reverse_iterator<_IteratorL>& __x,
-        const reverse_iterator<_IteratorR>& __y)
-    requires requires { { __x.base() >= __y.base() } -> convertible_to<bool>; }
-    { return __x.base() >= __y.base(); }
-
-  template<typename _IteratorL, typename _IteratorR>
-    [[nodiscard]]
-    constexpr bool
-    operator>=(const reverse_iterator<_IteratorL>& __x,
-        const reverse_iterator<_IteratorR>& __y)
-    requires requires { { __x.base() <= __y.base() } -> convertible_to<bool>; }
-    { return __x.base() <= __y.base(); }
-
-  template<typename _IteratorL,
-    three_way_comparable_with<_IteratorL> _IteratorR>
-    [[nodiscard]]
-    constexpr compare_three_way_result_t<_IteratorL, _IteratorR>
-    operator<=>(const reverse_iterator<_IteratorL>& __x,
-  const reverse_iterator<_IteratorR>& __y)
-    { return __y.base() <=> __x.base(); }
-
-
-
-
-  template<typename _Iterator>
-    [[nodiscard]]
-    constexpr bool
-    operator==(const reverse_iterator<_Iterator>& __x,
-        const reverse_iterator<_Iterator>& __y)
-    requires requires { { __x.base() == __y.base() } -> convertible_to<bool>; }
-    { return __x.base() == __y.base(); }
-
-  template<three_way_comparable _Iterator>
-    [[nodiscard]]
-    constexpr compare_three_way_result_t<_Iterator, _Iterator>
-    operator<=>(const reverse_iterator<_Iterator>& __x,
-  const reverse_iterator<_Iterator>& __y)
-    { return __y.base() <=> __x.base(); }
-# 615 "/usr/include/c++/14/bits/stl_iterator.h" 3
-  template<typename _IteratorL, typename _IteratorR>
-    [[__nodiscard__]]
-    inline constexpr auto
-    operator-(const reverse_iterator<_IteratorL>& __x,
-       const reverse_iterator<_IteratorR>& __y)
-    -> decltype(__y.base() - __x.base())
-    { return __y.base() - __x.base(); }
-
-
-  template<typename _Iterator>
-    [[__nodiscard__]]
-    inline constexpr reverse_iterator<_Iterator>
-    operator+(typename reverse_iterator<_Iterator>::difference_type __n,
-       const reverse_iterator<_Iterator>& __x)
-    { return reverse_iterator<_Iterator>(__x.base() - __n); }
-
-
-
-  template<typename _Iterator>
-    inline constexpr reverse_iterator<_Iterator>
-    __make_reverse_iterator(_Iterator __i)
-    { return reverse_iterator<_Iterator>(__i); }
-
-
-
-
-
-  template<typename _Iterator>
-    [[__nodiscard__]]
-    inline constexpr reverse_iterator<_Iterator>
-    make_reverse_iterator(_Iterator __i)
-    { return reverse_iterator<_Iterator>(__i); }
-
-
-  template<typename _Iterator1, typename _Iterator2>
-    requires (!sized_sentinel_for<_Iterator1, _Iterator2>)
-    inline constexpr bool
-    disable_sized_sentinel_for<reverse_iterator<_Iterator1>,
-          reverse_iterator<_Iterator2>> = true;
-
-
-
-  template<typename _Iterator>
-    constexpr
-    auto
-    __niter_base(reverse_iterator<_Iterator> __it)
-    -> decltype(__make_reverse_iterator(__niter_base(__it.base())))
-    { return __make_reverse_iterator(__niter_base(__it.base())); }
-
-  template<typename _Iterator>
-    struct __is_move_iterator<reverse_iterator<_Iterator> >
-      : __is_move_iterator<_Iterator>
-    { };
-
-  template<typename _Iterator>
-    constexpr
-    auto
-    __miter_base(reverse_iterator<_Iterator> __it)
-    -> decltype(__make_reverse_iterator(__miter_base(__it.base())))
-    { return __make_reverse_iterator(__miter_base(__it.base())); }
-# 688 "/usr/include/c++/14/bits/stl_iterator.h" 3
-  template<typename _Container>
-    class back_insert_iterator
-    : public iterator<output_iterator_tag, void, void, void, void>
-    {
-    protected:
-      _Container* container;
-
-    public:
-
-      typedef _Container container_type;
-
-      using difference_type = ptrdiff_t;
-
-
-
-      explicit constexpr
-      back_insert_iterator(_Container& __x)
-      : container(std::__addressof(__x)) { }
-# 726 "/usr/include/c++/14/bits/stl_iterator.h" 3
-      constexpr
-      back_insert_iterator&
-      operator=(const typename _Container::value_type& __value)
-      {
- container->push_back(__value);
- return *this;
-      }
-
-      constexpr
-      back_insert_iterator&
-      operator=(typename _Container::value_type&& __value)
-      {
- container->push_back(std::move(__value));
- return *this;
-      }
-
-
-
-      [[__nodiscard__]] constexpr
-      back_insert_iterator&
-      operator*()
-      { return *this; }
-
-
-      constexpr
-      back_insert_iterator&
-      operator++()
-      { return *this; }
-
-
-      constexpr
-      back_insert_iterator
-      operator++(int)
-      { return *this; }
-    };
-# 773 "/usr/include/c++/14/bits/stl_iterator.h" 3
-  template<typename _Container>
-    [[__nodiscard__]] constexpr
-    inline back_insert_iterator<_Container>
-    back_inserter(_Container& __x)
-    { return back_insert_iterator<_Container>(__x); }
-# 789 "/usr/include/c++/14/bits/stl_iterator.h" 3
-  template<typename _Container>
-    class front_insert_iterator
-    : public iterator<output_iterator_tag, void, void, void, void>
-    {
-    protected:
-      _Container* container;
-
-    public:
-
-      typedef _Container container_type;
-
-      using difference_type = ptrdiff_t;
-
-
-
-      explicit constexpr
-      front_insert_iterator(_Container& __x)
-      : container(std::__addressof(__x)) { }
-# 827 "/usr/include/c++/14/bits/stl_iterator.h" 3
-      constexpr
-      front_insert_iterator&
-      operator=(const typename _Container::value_type& __value)
-      {
- container->push_front(__value);
- return *this;
-      }
-
-      constexpr
-      front_insert_iterator&
-      operator=(typename _Container::value_type&& __value)
-      {
- container->push_front(std::move(__value));
- return *this;
-      }
-
-
-
-      [[__nodiscard__]] constexpr
-      front_insert_iterator&
-      operator*()
-      { return *this; }
-
-
-      constexpr
-      front_insert_iterator&
-      operator++()
-      { return *this; }
-
-
-      constexpr
-      front_insert_iterator
-      operator++(int)
-      { return *this; }
-    };
-# 874 "/usr/include/c++/14/bits/stl_iterator.h" 3
-  template<typename _Container>
-    [[__nodiscard__]] constexpr
-    inline front_insert_iterator<_Container>
-    front_inserter(_Container& __x)
-    { return front_insert_iterator<_Container>(__x); }
-# 894 "/usr/include/c++/14/bits/stl_iterator.h" 3
-  template<typename _Container>
-    class insert_iterator
-    : public iterator<output_iterator_tag, void, void, void, void>
-    {
-
-      using _Iter = std::__detail::__range_iter_t<_Container>;
-
-
-
-    protected:
-      _Container* container;
-      _Iter iter;
-
-    public:
-
-      typedef _Container container_type;
-
-
-      using difference_type = ptrdiff_t;
-
-
-
-
-
-
-      constexpr
-      insert_iterator(_Container& __x, _Iter __i)
-      : container(std::__addressof(__x)), iter(__i) {}
-# 955 "/usr/include/c++/14/bits/stl_iterator.h" 3
-      constexpr
-      insert_iterator&
-      operator=(const typename _Container::value_type& __value)
-      {
- iter = container->insert(iter, __value);
- ++iter;
- return *this;
-      }
-
-      constexpr
-      insert_iterator&
-      operator=(typename _Container::value_type&& __value)
-      {
- iter = container->insert(iter, std::move(__value));
- ++iter;
- return *this;
-      }
-
-
-
-      [[__nodiscard__]] constexpr
-      insert_iterator&
-      operator*()
-      { return *this; }
-
-
-      constexpr
-      insert_iterator&
-      operator++()
-      { return *this; }
-
-
-      constexpr
-      insert_iterator&
-      operator++(int)
-      { return *this; }
-    };
-
-#pragma GCC diagnostic pop
-# 1008 "/usr/include/c++/14/bits/stl_iterator.h" 3
-  template<typename _Container>
-    [[nodiscard]]
-    constexpr insert_iterator<_Container>
-    inserter(_Container& __x, std::__detail::__range_iter_t<_Container> __i)
-    { return insert_iterator<_Container>(__x, __i); }
-# 1023 "/usr/include/c++/14/bits/stl_iterator.h" 3
-
-}
-
-namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
-{
-
-# 1037 "/usr/include/c++/14/bits/stl_iterator.h" 3
-  template<typename _Iterator, typename _Container>
-    class __normal_iterator
-    {
-    protected:
-      _Iterator _M_current;
-
-      typedef std::iterator_traits<_Iterator> __traits_type;
-
-
-      template<typename _Iter>
- using __convertible_from
-   = std::__enable_if_t<std::is_convertible<_Iter, _Iterator>::value>;
-
-
-    public:
-      typedef _Iterator iterator_type;
-      typedef typename __traits_type::iterator_category iterator_category;
-      typedef typename __traits_type::value_type value_type;
-      typedef typename __traits_type::difference_type difference_type;
-      typedef typename __traits_type::reference reference;
-      typedef typename __traits_type::pointer pointer;
-
-
-      using iterator_concept = std::__detail::__iter_concept<_Iterator>;
-
-
-      constexpr __normal_iterator() noexcept
-      : _M_current(_Iterator()) { }
-
-      explicit constexpr
-      __normal_iterator(const _Iterator& __i) noexcept
-      : _M_current(__i) { }
-
-
-
-      template<typename _Iter, typename = __convertible_from<_Iter>>
- constexpr
- __normal_iterator(const __normal_iterator<_Iter, _Container>& __i)
- noexcept
-# 1085 "/usr/include/c++/14/bits/stl_iterator.h" 3
-        : _M_current(__i.base()) { }
-
-
-      constexpr
-      reference
-      operator*() const noexcept
-      { return *_M_current; }
-
-      constexpr
-      pointer
-      operator->() const noexcept
-      { return _M_current; }
-
-      constexpr
-      __normal_iterator&
-      operator++() noexcept
-      {
- ++_M_current;
- return *this;
-      }
-
-      constexpr
-      __normal_iterator
-      operator++(int) noexcept
-      { return __normal_iterator(_M_current++); }
-
-
-      constexpr
-      __normal_iterator&
-      operator--() noexcept
-      {
- --_M_current;
- return *this;
-      }
-
-      constexpr
-      __normal_iterator
-      operator--(int) noexcept
-      { return __normal_iterator(_M_current--); }
-
-
-      constexpr
-      reference
-      operator[](difference_type __n) const noexcept
-      { return _M_current[__n]; }
-
-      constexpr
-      __normal_iterator&
-      operator+=(difference_type __n) noexcept
-      { _M_current += __n; return *this; }
-
-      constexpr
-      __normal_iterator
-      operator+(difference_type __n) const noexcept
-      { return __normal_iterator(_M_current + __n); }
-
-      constexpr
-      __normal_iterator&
-      operator-=(difference_type __n) noexcept
-      { _M_current -= __n; return *this; }
-
-      constexpr
-      __normal_iterator
-      operator-(difference_type __n) const noexcept
-      { return __normal_iterator(_M_current - __n); }
-
-      constexpr
-      const _Iterator&
-      base() const noexcept
-      { return _M_current; }
-    };
-# 1166 "/usr/include/c++/14/bits/stl_iterator.h" 3
-  template<typename _IteratorL, typename _IteratorR, typename _Container>
-    [[nodiscard]]
-    constexpr bool
-    operator==(const __normal_iterator<_IteratorL, _Container>& __lhs,
-        const __normal_iterator<_IteratorR, _Container>& __rhs)
-    noexcept(noexcept(__lhs.base() == __rhs.base()))
-    requires requires {
-      { __lhs.base() == __rhs.base() } -> std::convertible_to<bool>;
-    }
-    { return __lhs.base() == __rhs.base(); }
-
-  template<typename _IteratorL, typename _IteratorR, typename _Container>
-    [[nodiscard]]
-    constexpr std::__detail::__synth3way_t<_IteratorR, _IteratorL>
-    operator<=>(const __normal_iterator<_IteratorL, _Container>& __lhs,
-  const __normal_iterator<_IteratorR, _Container>& __rhs)
-    noexcept(noexcept(std::__detail::__synth3way(__lhs.base(), __rhs.base())))
-    { return std::__detail::__synth3way(__lhs.base(), __rhs.base()); }
-
-  template<typename _Iterator, typename _Container>
-    [[nodiscard]]
-    constexpr bool
-    operator==(const __normal_iterator<_Iterator, _Container>& __lhs,
-        const __normal_iterator<_Iterator, _Container>& __rhs)
-    noexcept(noexcept(__lhs.base() == __rhs.base()))
-    requires requires {
-      { __lhs.base() == __rhs.base() } -> std::convertible_to<bool>;
-    }
-    { return __lhs.base() == __rhs.base(); }
-
-  template<typename _Iterator, typename _Container>
-    [[nodiscard]]
-    constexpr std::__detail::__synth3way_t<_Iterator>
-    operator<=>(const __normal_iterator<_Iterator, _Container>& __lhs,
-  const __normal_iterator<_Iterator, _Container>& __rhs)
-    noexcept(noexcept(std::__detail::__synth3way(__lhs.base(), __rhs.base())))
-    { return std::__detail::__synth3way(__lhs.base(), __rhs.base()); }
-# 1307 "/usr/include/c++/14/bits/stl_iterator.h" 3
-  template<typename _IteratorL, typename _IteratorR, typename _Container>
-
-
-    [[__nodiscard__]] constexpr
-    inline auto
-    operator-(const __normal_iterator<_IteratorL, _Container>& __lhs,
-       const __normal_iterator<_IteratorR, _Container>& __rhs) noexcept
-    -> decltype(__lhs.base() - __rhs.base())
-
-
-
-
-
-    { return __lhs.base() - __rhs.base(); }
-
-  template<typename _Iterator, typename _Container>
-    [[__nodiscard__]] constexpr
-    inline typename __normal_iterator<_Iterator, _Container>::difference_type
-    operator-(const __normal_iterator<_Iterator, _Container>& __lhs,
-       const __normal_iterator<_Iterator, _Container>& __rhs)
-    noexcept
-    { return __lhs.base() - __rhs.base(); }
-
-  template<typename _Iterator, typename _Container>
-    [[__nodiscard__]] constexpr
-    inline __normal_iterator<_Iterator, _Container>
-    operator+(typename __normal_iterator<_Iterator, _Container>::difference_type
-       __n, const __normal_iterator<_Iterator, _Container>& __i)
-    noexcept
-    { return __normal_iterator<_Iterator, _Container>(__i.base() + __n); }
-
-
-}
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-
-  template<typename _Iterator, typename _Container>
-    constexpr
-    _Iterator
-    __niter_base(__gnu_cxx::__normal_iterator<_Iterator, _Container> __it)
-    noexcept(std::is_nothrow_copy_constructible<_Iterator>::value)
-    { return __it.base(); }
-# 1371 "/usr/include/c++/14/bits/stl_iterator.h" 3
-  template<semiregular _Sent>
-    class move_sentinel
-    {
-    public:
-      constexpr
-      move_sentinel()
-      noexcept(is_nothrow_default_constructible_v<_Sent>)
-      : _M_last() { }
-
-      constexpr explicit
-      move_sentinel(_Sent __s)
-      noexcept(is_nothrow_move_constructible_v<_Sent>)
-      : _M_last(std::move(__s)) { }
-
-      template<typename _S2> requires convertible_to<const _S2&, _Sent>
- constexpr
- move_sentinel(const move_sentinel<_S2>& __s)
- noexcept(is_nothrow_constructible_v<_Sent, const _S2&>)
- : _M_last(__s.base())
- { }
-
-      template<typename _S2> requires assignable_from<_Sent&, const _S2&>
- constexpr move_sentinel&
- operator=(const move_sentinel<_S2>& __s)
- noexcept(is_nothrow_assignable_v<_Sent, const _S2&>)
- {
-   _M_last = __s.base();
-   return *this;
- }
-
-      [[nodiscard]]
-      constexpr _Sent
-      base() const
-      noexcept(is_nothrow_copy_constructible_v<_Sent>)
-      { return _M_last; }
-
-    private:
-      _Sent _M_last;
-    };
-
-
-  namespace __detail
-  {
-
-    template<typename _Iterator>
-      struct __move_iter_cat
-      { };
-
-    template<typename _Iterator>
-      requires requires { typename __iter_category_t<_Iterator>; }
-      struct __move_iter_cat<_Iterator>
-      {
- using iterator_category
-   = __clamp_iter_cat<__iter_category_t<_Iterator>,
-        random_access_iterator_tag>;
-      };
-
-  }
-# 1439 "/usr/include/c++/14/bits/stl_iterator.h" 3
-  template<typename _Iterator>
-    class move_iterator
-
-      : public __detail::__move_iter_cat<_Iterator>
-
-    {
-      _Iterator _M_current;
-
-      using __traits_type = iterator_traits<_Iterator>;
-
-
-
-
-      template<typename _Iter2>
- friend class move_iterator;
-
-
-
-
-      template<typename _Iter2>
- static constexpr bool __convertible = !is_same_v<_Iter2, _Iterator>
-     && convertible_to<const _Iter2&, _Iterator>;
-
-
-
-      static auto
-      _S_iter_concept()
-      {
- if constexpr (random_access_iterator<_Iterator>)
-   return random_access_iterator_tag{};
- else if constexpr (bidirectional_iterator<_Iterator>)
-   return bidirectional_iterator_tag{};
- else if constexpr (forward_iterator<_Iterator>)
-   return forward_iterator_tag{};
- else
-   return input_iterator_tag{};
-      }
-
-
-    public:
-      using iterator_type = _Iterator;
-
-
-      using iterator_concept = decltype(_S_iter_concept());
-
-
-      using value_type = iter_value_t<_Iterator>;
-      using difference_type = iter_difference_t<_Iterator>;
-      using pointer = _Iterator;
-      using reference = iter_rvalue_reference_t<_Iterator>;
-# 1503 "/usr/include/c++/14/bits/stl_iterator.h" 3
-      constexpr
-      move_iterator()
-      : _M_current() { }
-
-      explicit constexpr
-      move_iterator(iterator_type __i)
-      : _M_current(std::move(__i)) { }
-
-      template<typename _Iter>
-
- requires __convertible<_Iter>
-
- constexpr
- move_iterator(const move_iterator<_Iter>& __i)
- : _M_current(__i._M_current) { }
-
-      template<typename _Iter>
-
- requires __convertible<_Iter>
-   && assignable_from<_Iterator&, const _Iter&>
-
- constexpr
- move_iterator& operator=(const move_iterator<_Iter>& __i)
- {
-   _M_current = __i._M_current;
-   return *this;
- }
-
-
-
-
-
-
-
-      [[nodiscard]]
-      constexpr const iterator_type&
-      base() const & noexcept
-      { return _M_current; }
-
-      [[nodiscard]]
-      constexpr iterator_type
-      base() &&
-      { return std::move(_M_current); }
-
-
-      [[__nodiscard__]]
-      constexpr reference
-      operator*() const
-
-      { return ranges::iter_move(_M_current); }
-
-
-
-
-      [[__nodiscard__]]
-      constexpr pointer
-      operator->() const
-      { return _M_current; }
-
-      constexpr move_iterator&
-      operator++()
-      {
- ++_M_current;
- return *this;
-      }
-
-      constexpr move_iterator
-      operator++(int)
-      {
- move_iterator __tmp = *this;
- ++_M_current;
- return __tmp;
-      }
-
-
-      constexpr void
-      operator++(int) requires (!forward_iterator<_Iterator>)
-      { ++_M_current; }
-
-
-      constexpr move_iterator&
-      operator--()
-      {
- --_M_current;
- return *this;
-      }
-
-      constexpr move_iterator
-      operator--(int)
-      {
- move_iterator __tmp = *this;
- --_M_current;
- return __tmp;
-      }
-
-      [[__nodiscard__]]
-      constexpr move_iterator
-      operator+(difference_type __n) const
-      { return move_iterator(_M_current + __n); }
-
-      constexpr move_iterator&
-      operator+=(difference_type __n)
-      {
- _M_current += __n;
- return *this;
-      }
-
-      [[__nodiscard__]]
-      constexpr move_iterator
-      operator-(difference_type __n) const
-      { return move_iterator(_M_current - __n); }
-
-      constexpr move_iterator&
-      operator-=(difference_type __n)
-      {
- _M_current -= __n;
- return *this;
-      }
-
-      [[__nodiscard__]]
-      constexpr reference
-      operator[](difference_type __n) const
-
-      { return ranges::iter_move(_M_current + __n); }
-
-
-
-
-
-      template<sentinel_for<_Iterator> _Sent>
- [[nodiscard]]
- friend constexpr bool
- operator==(const move_iterator& __x, const move_sentinel<_Sent>& __y)
- { return __x.base() == __y.base(); }
-
-      template<sized_sentinel_for<_Iterator> _Sent>
- [[nodiscard]]
- friend constexpr iter_difference_t<_Iterator>
- operator-(const move_sentinel<_Sent>& __x, const move_iterator& __y)
- { return __x.base() - __y.base(); }
-
-      template<sized_sentinel_for<_Iterator> _Sent>
- [[nodiscard]]
- friend constexpr iter_difference_t<_Iterator>
- operator-(const move_iterator& __x, const move_sentinel<_Sent>& __y)
- { return __x.base() - __y.base(); }
-
-      [[nodiscard]]
-      friend constexpr iter_rvalue_reference_t<_Iterator>
-      iter_move(const move_iterator& __i)
-      noexcept(noexcept(ranges::iter_move(__i._M_current)))
-      { return ranges::iter_move(__i._M_current); }
-
-      template<indirectly_swappable<_Iterator> _Iter2>
- friend constexpr void
- iter_swap(const move_iterator& __x, const move_iterator<_Iter2>& __y)
- noexcept(noexcept(ranges::iter_swap(__x._M_current, __y._M_current)))
- { return ranges::iter_swap(__x._M_current, __y._M_current); }
-
-    };
-
-  template<typename _IteratorL, typename _IteratorR>
-    [[__nodiscard__]]
-    inline constexpr bool
-    operator==(const move_iterator<_IteratorL>& __x,
-        const move_iterator<_IteratorR>& __y)
-
-    requires requires { { __x.base() == __y.base() } -> convertible_to<bool>; }
-
-    { return __x.base() == __y.base(); }
-
-
-  template<typename _IteratorL,
-    three_way_comparable_with<_IteratorL> _IteratorR>
-    [[__nodiscard__]]
-    constexpr compare_three_way_result_t<_IteratorL, _IteratorR>
-    operator<=>(const move_iterator<_IteratorL>& __x,
-  const move_iterator<_IteratorR>& __y)
-    { return __x.base() <=> __y.base(); }
-# 1691 "/usr/include/c++/14/bits/stl_iterator.h" 3
-  template<typename _IteratorL, typename _IteratorR>
-    [[__nodiscard__]]
-    inline constexpr bool
-    operator<(const move_iterator<_IteratorL>& __x,
-       const move_iterator<_IteratorR>& __y)
-
-    requires requires { { __x.base() < __y.base() } -> convertible_to<bool>; }
-
-    { return __x.base() < __y.base(); }
-
-  template<typename _IteratorL, typename _IteratorR>
-    [[__nodiscard__]]
-    inline constexpr bool
-    operator<=(const move_iterator<_IteratorL>& __x,
-        const move_iterator<_IteratorR>& __y)
-
-    requires requires { { __y.base() < __x.base() } -> convertible_to<bool>; }
-
-    { return !(__y < __x); }
-
-  template<typename _IteratorL, typename _IteratorR>
-    [[__nodiscard__]]
-    inline constexpr bool
-    operator>(const move_iterator<_IteratorL>& __x,
-       const move_iterator<_IteratorR>& __y)
-
-    requires requires { { __y.base() < __x.base() } -> convertible_to<bool>; }
-
-    { return __y < __x; }
-
-  template<typename _IteratorL, typename _IteratorR>
-    [[__nodiscard__]]
-    inline constexpr bool
-    operator>=(const move_iterator<_IteratorL>& __x,
-        const move_iterator<_IteratorR>& __y)
-
-    requires requires { { __x.base() < __y.base() } -> convertible_to<bool>; }
-
-    { return !(__x < __y); }
-
-
-
-
-  template<typename _Iterator>
-    [[__nodiscard__]]
-    inline constexpr bool
-    operator==(const move_iterator<_Iterator>& __x,
-        const move_iterator<_Iterator>& __y)
-    { return __x.base() == __y.base(); }
-
-
-  template<three_way_comparable _Iterator>
-    [[__nodiscard__]]
-    constexpr compare_three_way_result_t<_Iterator>
-    operator<=>(const move_iterator<_Iterator>& __x,
-  const move_iterator<_Iterator>& __y)
-    { return __x.base() <=> __y.base(); }
-# 1786 "/usr/include/c++/14/bits/stl_iterator.h" 3
-  template<typename _IteratorL, typename _IteratorR>
-    [[__nodiscard__]]
-    inline constexpr auto
-    operator-(const move_iterator<_IteratorL>& __x,
-       const move_iterator<_IteratorR>& __y)
-    -> decltype(__x.base() - __y.base())
-    { return __x.base() - __y.base(); }
-
-  template<typename _Iterator>
-    [[__nodiscard__]]
-    inline constexpr move_iterator<_Iterator>
-    operator+(typename move_iterator<_Iterator>::difference_type __n,
-       const move_iterator<_Iterator>& __x)
-    { return __x + __n; }
-
-  template<typename _Iterator>
-    [[__nodiscard__]]
-    inline constexpr move_iterator<_Iterator>
-    make_move_iterator(_Iterator __i)
-    { return move_iterator<_Iterator>(std::move(__i)); }
-
-  template<typename _Iterator, typename _ReturnType
-    = __conditional_t<__move_if_noexcept_cond
-      <typename iterator_traits<_Iterator>::value_type>::value,
-  _Iterator, move_iterator<_Iterator>>>
-    inline constexpr _ReturnType
-    __make_move_if_noexcept_iterator(_Iterator __i)
-    { return _ReturnType(__i); }
-
-
-
-  template<typename _Tp, typename _ReturnType
-    = __conditional_t<__move_if_noexcept_cond<_Tp>::value,
-        const _Tp*, move_iterator<_Tp*>>>
-    inline constexpr _ReturnType
-    __make_move_if_noexcept_iterator(_Tp* __i)
-    { return _ReturnType(__i); }
-
-
-
-
-  template<typename _Iterator1, typename _Iterator2>
-    requires (!sized_sentinel_for<_Iterator1, _Iterator2>)
-    inline constexpr bool
-    disable_sized_sentinel_for<move_iterator<_Iterator1>,
-          move_iterator<_Iterator2>> = true;
-
-
-
-  namespace __detail
-  {
-    template<typename _It>
-      concept __common_iter_has_arrow = indirectly_readable<const _It>
- && (requires(const _It& __it) { __it.operator->(); }
-     || is_reference_v<iter_reference_t<_It>>
-     || constructible_from<iter_value_t<_It>, iter_reference_t<_It>>);
-
-    template<typename _It>
-      concept __common_iter_use_postfix_proxy
- = (!requires (_It& __i) { { *__i++ } -> __can_reference; })
-   && constructible_from<iter_value_t<_It>, iter_reference_t<_It>>
-   && move_constructible<iter_value_t<_It>>;
-  }
-
-
-  template<input_or_output_iterator _It, sentinel_for<_It> _Sent>
-    requires (!same_as<_It, _Sent>) && copyable<_It>
-  class common_iterator
-  {
-    template<typename _Tp, typename _Up>
-      static constexpr bool
-      _S_noexcept1()
-      {
- if constexpr (is_trivially_default_constructible_v<_Tp>)
-   return is_nothrow_assignable_v<_Tp&, _Up>;
- else
-   return is_nothrow_constructible_v<_Tp, _Up>;
-      }
-
-    template<typename _It2, typename _Sent2>
-      static constexpr bool
-      _S_noexcept()
-      { return _S_noexcept1<_It, _It2>() && _S_noexcept1<_Sent, _Sent2>(); }
-
-    class __arrow_proxy
-    {
-      iter_value_t<_It> _M_keep;
-
-      constexpr
-      __arrow_proxy(iter_reference_t<_It>&& __x)
-      : _M_keep(std::move(__x)) { }
-
-      friend class common_iterator;
-
-    public:
-      constexpr const iter_value_t<_It>*
-      operator->() const noexcept
-      { return std::__addressof(_M_keep); }
-    };
-
-    class __postfix_proxy
-    {
-      iter_value_t<_It> _M_keep;
-
-      constexpr
-      __postfix_proxy(iter_reference_t<_It>&& __x)
-      : _M_keep(std::forward<iter_reference_t<_It>>(__x)) { }
-
-      friend class common_iterator;
-
-    public:
-      constexpr const iter_value_t<_It>&
-      operator*() const noexcept
-      { return _M_keep; }
-    };
-
-  public:
-    constexpr
-    common_iterator()
-    noexcept(is_nothrow_default_constructible_v<_It>)
-    requires default_initializable<_It>
-    : _M_it(), _M_index(0)
-    { }
-
-    constexpr
-    common_iterator(_It __i)
-    noexcept(is_nothrow_move_constructible_v<_It>)
-    : _M_it(std::move(__i)), _M_index(0)
-    { }
-
-    constexpr
-    common_iterator(_Sent __s)
-    noexcept(is_nothrow_move_constructible_v<_Sent>)
-    : _M_sent(std::move(__s)), _M_index(1)
-    { }
-
-    template<typename _It2, typename _Sent2>
-      requires convertible_to<const _It2&, _It>
- && convertible_to<const _Sent2&, _Sent>
-      constexpr
-      common_iterator(const common_iterator<_It2, _Sent2>& __x)
-      noexcept(_S_noexcept<const _It2&, const _Sent2&>())
-      : _M_valueless(), _M_index(__x._M_index)
-      {
- do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__x._M_has_value()), false)) std::__glibcxx_assert_fail(); } while (false);
- if (_M_index == 0)
-   {
-     if constexpr (is_trivially_default_constructible_v<_It>)
-       _M_it = std::move(__x._M_it);
-     else
-       std::construct_at(std::__addressof(_M_it), __x._M_it);
-   }
- else if (_M_index == 1)
-   {
-     if constexpr (is_trivially_default_constructible_v<_Sent>)
-       _M_sent = std::move(__x._M_sent);
-     else
-       std::construct_at(std::__addressof(_M_sent), __x._M_sent);
-   }
-      }
-
-    common_iterator(const common_iterator&) = default;
-
-    constexpr
-    common_iterator(const common_iterator& __x)
-    noexcept(_S_noexcept<const _It&, const _Sent&>())
-    requires (!is_trivially_copyable_v<_It> || !is_trivially_copyable_v<_Sent>)
-    : _M_valueless(), _M_index(__x._M_index)
-    {
-      if (_M_index == 0)
- {
-   if constexpr (is_trivially_default_constructible_v<_It>)
-     _M_it = __x._M_it;
-   else
-     std::construct_at(std::__addressof(_M_it), __x._M_it);
- }
-      else if (_M_index == 1)
- {
-   if constexpr (is_trivially_default_constructible_v<_Sent>)
-     _M_sent = __x._M_sent;
-   else
-     std::construct_at(std::__addressof(_M_sent), __x._M_sent);
- }
-    }
-
-    common_iterator(common_iterator&&) = default;
-
-    constexpr
-    common_iterator(common_iterator&& __x)
-    noexcept(_S_noexcept<_It, _Sent>())
-    requires (!is_trivially_copyable_v<_It> || !is_trivially_copyable_v<_Sent>)
-    : _M_valueless(), _M_index(__x._M_index)
-    {
-      if (_M_index == 0)
- {
-   if constexpr (is_trivially_default_constructible_v<_It>)
-     _M_it = std::move(__x._M_it);
-   else
-     std::construct_at(std::__addressof(_M_it), std::move(__x._M_it));
- }
-      else if (_M_index == 1)
- {
-   if constexpr (is_trivially_default_constructible_v<_Sent>)
-     _M_sent = std::move(__x._M_sent);
-   else
-     std::construct_at(std::__addressof(_M_sent),
-         std::move(__x._M_sent));
- }
-    }
-
-    constexpr common_iterator&
-    operator=(const common_iterator&) = default;
-
-    constexpr common_iterator&
-    operator=(const common_iterator& __x)
-    noexcept(is_nothrow_copy_assignable_v<_It>
-      && is_nothrow_copy_assignable_v<_Sent>
-      && is_nothrow_copy_constructible_v<_It>
-      && is_nothrow_copy_constructible_v<_Sent>)
-    requires (!is_trivially_copy_assignable_v<_It>
-  || !is_trivially_copy_assignable_v<_Sent>)
-    {
-      _M_assign(__x);
-      return *this;
-    }
-
-    constexpr common_iterator&
-    operator=(common_iterator&&) = default;
-
-    constexpr common_iterator&
-    operator=(common_iterator&& __x)
-    noexcept(is_nothrow_move_assignable_v<_It>
-      && is_nothrow_move_assignable_v<_Sent>
-      && is_nothrow_move_constructible_v<_It>
-      && is_nothrow_move_constructible_v<_Sent>)
-    requires (!is_trivially_move_assignable_v<_It>
-  || !is_trivially_move_assignable_v<_Sent>)
-    {
-      _M_assign(std::move(__x));
-      return *this;
-    }
-
-    template<typename _It2, typename _Sent2>
-      requires convertible_to<const _It2&, _It>
- && convertible_to<const _Sent2&, _Sent>
- && assignable_from<_It&, const _It2&>
- && assignable_from<_Sent&, const _Sent2&>
-      constexpr common_iterator&
-      operator=(const common_iterator<_It2, _Sent2>& __x)
-      noexcept(is_nothrow_constructible_v<_It, const _It2&>
-        && is_nothrow_constructible_v<_Sent, const _Sent2&>
-        && is_nothrow_assignable_v<_It&, const _It2&>
-        && is_nothrow_assignable_v<_Sent&, const _Sent2&>)
-      {
- do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__x._M_has_value()), false)) std::__glibcxx_assert_fail(); } while (false);
- _M_assign(__x);
- return *this;
-      }
-
-
-    ~common_iterator() = default;
-
-    constexpr
-    ~common_iterator()
-      requires (!is_trivially_destructible_v<_It>
-    || !is_trivially_destructible_v<_Sent>)
-
-
-
-
-    {
-      if (_M_index == 0)
- _M_it.~_It();
-      else if (_M_index == 1)
- _M_sent.~_Sent();
-    }
-
-    [[nodiscard]]
-    constexpr decltype(auto)
-    operator*()
-    {
-      do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(_M_index == 0), false)) std::__glibcxx_assert_fail(); } while (false);
-      return *_M_it;
-    }
-
-    [[nodiscard]]
-    constexpr decltype(auto)
-    operator*() const requires __detail::__dereferenceable<const _It>
-    {
-      do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(_M_index == 0), false)) std::__glibcxx_assert_fail(); } while (false);
-      return *_M_it;
-    }
-
-    [[nodiscard]]
-    constexpr auto
-    operator->() const requires __detail::__common_iter_has_arrow<_It>
-    {
-      do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(_M_index == 0), false)) std::__glibcxx_assert_fail(); } while (false);
-      if constexpr (is_pointer_v<_It> || requires { _M_it.operator->(); })
- return _M_it;
-      else if constexpr (is_reference_v<iter_reference_t<_It>>)
- {
-   auto&& __tmp = *_M_it;
-   return std::__addressof(__tmp);
- }
-      else
- return __arrow_proxy{*_M_it};
-    }
-
-    constexpr common_iterator&
-    operator++()
-    {
-      do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(_M_index == 0), false)) std::__glibcxx_assert_fail(); } while (false);
-      ++_M_it;
-      return *this;
-    }
-
-    constexpr decltype(auto)
-    operator++(int)
-    {
-      do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(_M_index == 0), false)) std::__glibcxx_assert_fail(); } while (false);
-      if constexpr (forward_iterator<_It>)
- {
-   common_iterator __tmp = *this;
-   ++*this;
-   return __tmp;
- }
-      else if constexpr (!__detail::__common_iter_use_postfix_proxy<_It>)
- return _M_it++;
-      else
- {
-   __postfix_proxy __p(**this);
-   ++*this;
-   return __p;
- }
-    }
-
-    template<typename _It2, sentinel_for<_It> _Sent2>
-      requires sentinel_for<_Sent, _It2>
-      friend constexpr bool
-      operator== [[nodiscard]] (const common_iterator& __x,
-    const common_iterator<_It2, _Sent2>& __y)
-      {
- switch(__x._M_index << 2 | __y._M_index)
-   {
-   case 0b0000:
-   case 0b0101:
-     return true;
-   case 0b0001:
-     return __x._M_it == __y._M_sent;
-   case 0b0100:
-     return __x._M_sent == __y._M_it;
-   default:
-     do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__x._M_has_value()), false)) std::__glibcxx_assert_fail(); } while (false);
-     do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__y._M_has_value()), false)) std::__glibcxx_assert_fail(); } while (false);
-     __builtin_unreachable();
-   }
-      }
-
-    template<typename _It2, sentinel_for<_It> _Sent2>
-      requires sentinel_for<_Sent, _It2> && equality_comparable_with<_It, _It2>
-      friend constexpr bool
-      operator== [[nodiscard]] (const common_iterator& __x,
-    const common_iterator<_It2, _Sent2>& __y)
-      {
- switch(__x._M_index << 2 | __y._M_index)
-   {
-   case 0b0101:
-     return true;
-   case 0b0000:
-     return __x._M_it == __y._M_it;
-   case 0b0001:
-     return __x._M_it == __y._M_sent;
-   case 0b0100:
-     return __x._M_sent == __y._M_it;
-   default:
-     do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__x._M_has_value()), false)) std::__glibcxx_assert_fail(); } while (false);
-     do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__y._M_has_value()), false)) std::__glibcxx_assert_fail(); } while (false);
-     __builtin_unreachable();
-   }
-      }
-
-    template<sized_sentinel_for<_It> _It2, sized_sentinel_for<_It> _Sent2>
-      requires sized_sentinel_for<_Sent, _It2>
-      friend constexpr iter_difference_t<_It2>
-      operator- [[nodiscard]] (const common_iterator& __x,
-          const common_iterator<_It2, _Sent2>& __y)
-      {
- switch(__x._M_index << 2 | __y._M_index)
-   {
-   case 0b0101:
-     return 0;
-   case 0b0000:
-     return __x._M_it - __y._M_it;
-   case 0b0001:
-     return __x._M_it - __y._M_sent;
-   case 0b0100:
-     return __x._M_sent - __y._M_it;
-   default:
-     do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__x._M_has_value()), false)) std::__glibcxx_assert_fail(); } while (false);
-     do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__y._M_has_value()), false)) std::__glibcxx_assert_fail(); } while (false);
-     __builtin_unreachable();
-   }
-      }
-
-    [[nodiscard]]
-    friend constexpr iter_rvalue_reference_t<_It>
-    iter_move(const common_iterator& __i)
-    noexcept(noexcept(ranges::iter_move(std::declval<const _It&>())))
-    requires input_iterator<_It>
-    {
-      do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__i._M_index == 0), false)) std::__glibcxx_assert_fail(); } while (false);
-      return ranges::iter_move(__i._M_it);
-    }
-
-    template<indirectly_swappable<_It> _It2, typename _Sent2>
-      friend constexpr void
-      iter_swap(const common_iterator& __x,
-  const common_iterator<_It2, _Sent2>& __y)
-      noexcept(noexcept(ranges::iter_swap(std::declval<const _It&>(),
-       std::declval<const _It2&>())))
-      {
- do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__x._M_index == 0), false)) std::__glibcxx_assert_fail(); } while (false);
- do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__y._M_index == 0), false)) std::__glibcxx_assert_fail(); } while (false);
- return ranges::iter_swap(__x._M_it, __y._M_it);
-      }
-
-  private:
-    template<input_or_output_iterator _It2, sentinel_for<_It2> _Sent2>
-      requires (!same_as<_It2, _Sent2>) && copyable<_It2>
-      friend class common_iterator;
-
-    constexpr bool
-    _M_has_value() const noexcept { return _M_index != _S_valueless; }
-
-    template<typename _CIt>
-      constexpr void
-      _M_assign(_CIt&& __x)
-      {
- if (_M_index == __x._M_index)
-   {
-     if (_M_index == 0)
-       _M_it = std::forward<_CIt>(__x)._M_it;
-     else if (_M_index == 1)
-       _M_sent = std::forward<_CIt>(__x)._M_sent;
-   }
- else
-   {
-     if (_M_index == 0)
-       _M_it.~_It();
-     else if (_M_index == 1)
-       _M_sent.~_Sent();
-     _M_index = _S_valueless;
-
-     if (__x._M_index == 0)
-       std::construct_at(std::__addressof(_M_it),
-    std::forward<_CIt>(__x)._M_it);
-     else if (__x._M_index == 1)
-       std::construct_at(std::__addressof(_M_sent),
-    std::forward<_CIt>(__x)._M_sent);
-     _M_index = __x._M_index;
-   }
-      }
-
-    union
-    {
-      _It _M_it;
-      _Sent _M_sent;
-      unsigned char _M_valueless;
-    };
-    unsigned char _M_index;
-
-    static constexpr unsigned char _S_valueless{2};
-  };
-
-  template<typename _It, typename _Sent>
-    struct incrementable_traits<common_iterator<_It, _Sent>>
-    {
-      using difference_type = iter_difference_t<_It>;
-    };
-
-  template<input_iterator _It, typename _Sent>
-    struct iterator_traits<common_iterator<_It, _Sent>>
-    {
-    private:
-      template<typename _Iter>
- struct __ptr
- {
-   using type = void;
- };
-
-      template<typename _Iter>
- requires __detail::__common_iter_has_arrow<_Iter>
- struct __ptr<_Iter>
- {
-   using _CIter = common_iterator<_Iter, _Sent>;
-   using type = decltype(std::declval<const _CIter&>().operator->());
- };
-
-      static auto
-      _S_iter_cat()
-      {
- if constexpr (requires { requires derived_from<__iter_category_t<_It>,
-             forward_iterator_tag>; })
-   return forward_iterator_tag{};
- else
-   return input_iterator_tag{};
-      }
-
-    public:
-      using iterator_concept = __conditional_t<forward_iterator<_It>,
-            forward_iterator_tag,
-            input_iterator_tag>;
-      using iterator_category = decltype(_S_iter_cat());
-      using value_type = iter_value_t<_It>;
-      using difference_type = iter_difference_t<_It>;
-      using pointer = typename __ptr<_It>::type;
-      using reference = iter_reference_t<_It>;
-    };
-
-
-
-  namespace __detail
-  {
-    template<typename _It>
-      struct __counted_iter_value_type
-      { };
-
-    template<indirectly_readable _It>
-      struct __counted_iter_value_type<_It>
-      { using value_type = iter_value_t<_It>; };
-
-    template<typename _It>
-      struct __counted_iter_concept
-      { };
-
-    template<typename _It>
-      requires requires { typename _It::iterator_concept; }
-      struct __counted_iter_concept<_It>
-      { using iterator_concept = typename _It::iterator_concept; };
-
-    template<typename _It>
-      struct __counted_iter_cat
-      { };
-
-    template<typename _It>
-      requires requires { typename _It::iterator_category; }
-      struct __counted_iter_cat<_It>
-      { using iterator_category = typename _It::iterator_category; };
-  }
-
-
-  template<input_or_output_iterator _It>
-    class counted_iterator
-      : public __detail::__counted_iter_value_type<_It>,
- public __detail::__counted_iter_concept<_It>,
- public __detail::__counted_iter_cat<_It>
-    {
-    public:
-      using iterator_type = _It;
-
-      using difference_type = iter_difference_t<_It>;
-
-
-
-      constexpr counted_iterator() requires default_initializable<_It> = default;
-
-      constexpr
-      counted_iterator(_It __i, iter_difference_t<_It> __n)
-      : _M_current(std::move(__i)), _M_length(__n)
-      { do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__n >= 0), false)) std::__glibcxx_assert_fail(); } while (false); }
-
-      template<typename _It2>
- requires convertible_to<const _It2&, _It>
- constexpr
- counted_iterator(const counted_iterator<_It2>& __x)
- : _M_current(__x._M_current), _M_length(__x._M_length)
- { }
-
-      template<typename _It2>
- requires assignable_from<_It&, const _It2&>
- constexpr counted_iterator&
- operator=(const counted_iterator<_It2>& __x)
- {
-   _M_current = __x._M_current;
-   _M_length = __x._M_length;
-   return *this;
- }
-
-      [[nodiscard]]
-      constexpr const _It&
-      base() const & noexcept
-      { return _M_current; }
-
-      [[nodiscard]]
-      constexpr _It
-      base() &&
-      noexcept(is_nothrow_move_constructible_v<_It>)
-      { return std::move(_M_current); }
-
-      [[nodiscard]]
-      constexpr iter_difference_t<_It>
-      count() const noexcept { return _M_length; }
-
-      [[nodiscard]]
-      constexpr decltype(auto)
-      operator*()
-      noexcept(noexcept(*_M_current))
-      {
- do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(_M_length > 0), false)) std::__glibcxx_assert_fail(); } while (false);
- return *_M_current;
-      }
-
-      [[nodiscard]]
-      constexpr decltype(auto)
-      operator*() const
-      noexcept(noexcept(*_M_current))
-      requires __detail::__dereferenceable<const _It>
-      {
- do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(_M_length > 0), false)) std::__glibcxx_assert_fail(); } while (false);
- return *_M_current;
-      }
-
-      [[nodiscard]]
-      constexpr auto
-      operator->() const noexcept
-      requires contiguous_iterator<_It>
-      { return std::to_address(_M_current); }
-
-      constexpr counted_iterator&
-      operator++()
-      {
- do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(_M_length > 0), false)) std::__glibcxx_assert_fail(); } while (false);
- ++_M_current;
- --_M_length;
- return *this;
-      }
-
-      constexpr decltype(auto)
-      operator++(int)
-      {
- do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(_M_length > 0), false)) std::__glibcxx_assert_fail(); } while (false);
- --_M_length;
- try
-   {
-     return _M_current++;
-   } catch(...) {
-     ++_M_length;
-     throw;
-   }
-      }
-
-      constexpr counted_iterator
-      operator++(int) requires forward_iterator<_It>
-      {
- auto __tmp = *this;
- ++*this;
- return __tmp;
-      }
-
-      constexpr counted_iterator&
-      operator--() requires bidirectional_iterator<_It>
-      {
- --_M_current;
- ++_M_length;
- return *this;
-      }
-
-      constexpr counted_iterator
-      operator--(int) requires bidirectional_iterator<_It>
-      {
- auto __tmp = *this;
- --*this;
- return __tmp;
-      }
-
-      [[nodiscard]]
-      constexpr counted_iterator
-      operator+(iter_difference_t<_It> __n) const
- requires random_access_iterator<_It>
-      { return counted_iterator(_M_current + __n, _M_length - __n); }
-
-      [[nodiscard]]
-      friend constexpr counted_iterator
-      operator+(iter_difference_t<_It> __n, const counted_iterator& __x)
-      requires random_access_iterator<_It>
-      { return __x + __n; }
-
-      constexpr counted_iterator&
-      operator+=(iter_difference_t<_It> __n)
-      requires random_access_iterator<_It>
-      {
- do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__n <= _M_length), false)) std::__glibcxx_assert_fail(); } while (false);
- _M_current += __n;
- _M_length -= __n;
- return *this;
-      }
-
-      [[nodiscard]]
-      constexpr counted_iterator
-      operator-(iter_difference_t<_It> __n) const
-      requires random_access_iterator<_It>
-      { return counted_iterator(_M_current - __n, _M_length + __n); }
-
-      template<common_with<_It> _It2>
- [[nodiscard]]
- friend constexpr iter_difference_t<_It2>
- operator-(const counted_iterator& __x,
-    const counted_iterator<_It2>& __y)
- { return __y._M_length - __x._M_length; }
-
-      [[nodiscard]]
-      friend constexpr iter_difference_t<_It>
-      operator-(const counted_iterator& __x, default_sentinel_t)
-      { return -__x._M_length; }
-
-      [[nodiscard]]
-      friend constexpr iter_difference_t<_It>
-      operator-(default_sentinel_t, const counted_iterator& __y)
-      { return __y._M_length; }
-
-      constexpr counted_iterator&
-      operator-=(iter_difference_t<_It> __n)
-      requires random_access_iterator<_It>
-      {
- do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(-__n <= _M_length), false)) std::__glibcxx_assert_fail(); } while (false);
- _M_current -= __n;
- _M_length += __n;
- return *this;
-      }
-
-      [[nodiscard]]
-      constexpr decltype(auto)
-      operator[](iter_difference_t<_It> __n) const
-      noexcept(noexcept(_M_current[__n]))
-      requires random_access_iterator<_It>
-      {
- do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__n < _M_length), false)) std::__glibcxx_assert_fail(); } while (false);
- return _M_current[__n];
-      }
-
-      template<common_with<_It> _It2>
- [[nodiscard]]
- friend constexpr bool
- operator==(const counted_iterator& __x,
-     const counted_iterator<_It2>& __y)
- { return __x._M_length == __y._M_length; }
-
-      [[nodiscard]]
-      friend constexpr bool
-      operator==(const counted_iterator& __x, default_sentinel_t)
-      { return __x._M_length == 0; }
-
-      template<common_with<_It> _It2>
- [[nodiscard]]
- friend constexpr strong_ordering
- operator<=>(const counted_iterator& __x,
-      const counted_iterator<_It2>& __y)
- { return __y._M_length <=> __x._M_length; }
-
-      [[nodiscard]]
-      friend constexpr iter_rvalue_reference_t<_It>
-      iter_move(const counted_iterator& __i)
-      noexcept(noexcept(ranges::iter_move(__i._M_current)))
-      requires input_iterator<_It>
-      {
- do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__i._M_length > 0), false)) std::__glibcxx_assert_fail(); } while (false);
- return ranges::iter_move(__i._M_current);
-      }
-
-      template<indirectly_swappable<_It> _It2>
- friend constexpr void
- iter_swap(const counted_iterator& __x,
-    const counted_iterator<_It2>& __y)
- noexcept(noexcept(ranges::iter_swap(__x._M_current, __y._M_current)))
- {
-   do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__x._M_length > 0 && __y._M_length > 0), false)) std::__glibcxx_assert_fail(); } while (false);
-   ranges::iter_swap(__x._M_current, __y._M_current);
- }
-
-    private:
-      template<input_or_output_iterator _It2> friend class counted_iterator;
-
-      _It _M_current = _It();
-      iter_difference_t<_It> _M_length = 0;
-    };
-
-  template<input_iterator _It>
-    requires same_as<__detail::__iter_traits<_It>, iterator_traits<_It>>
-    struct iterator_traits<counted_iterator<_It>> : iterator_traits<_It>
-    {
-      using pointer = __conditional_t<contiguous_iterator<_It>,
-          add_pointer_t<iter_reference_t<_It>>,
-          void>;
-    };
-# 2960 "/usr/include/c++/14/bits/stl_iterator.h" 3
-  template<typename _Iterator>
-    constexpr
-    auto
-    __niter_base(move_iterator<_Iterator> __it)
-    -> decltype(make_move_iterator(__niter_base(__it.base())))
-    { return make_move_iterator(__niter_base(__it.base())); }
-
-  template<typename _Iterator>
-    struct __is_move_iterator<move_iterator<_Iterator> >
-    {
-      enum { __value = 1 };
-      typedef __true_type __type;
-    };
-
-  template<typename _Iterator>
-    constexpr
-    auto
-    __miter_base(move_iterator<_Iterator> __it)
-    -> decltype(__miter_base(__it.base()))
-    { return __miter_base(__it.base()); }
-# 2992 "/usr/include/c++/14/bits/stl_iterator.h" 3
-  template<typename _InputIterator>
-    using __iter_key_t = remove_const_t<
-
-
-
-      typename iterator_traits<_InputIterator>::value_type::first_type>;
-
-
-  template<typename _InputIterator>
-    using __iter_val_t
-
-
-
-      = typename iterator_traits<_InputIterator>::value_type::second_type;
-
-
-  template<typename _T1, typename _T2>
-    struct pair;
-
-  template<typename _InputIterator>
-    using __iter_to_alloc_t
-      = pair<const __iter_key_t<_InputIterator>, __iter_val_t<_InputIterator>>;
-
-
-
-}
-# 49 "/usr/include/c++/14/string" 2 3
 # 1 "/usr/include/c++/14/bits/stl_function.h" 1 3
 # 63 "/usr/include/c++/14/bits/stl_function.h" 3
 namespace std __attribute__ ((__visibility__ ("default")))
@@ -17057,3421 +21302,8 @@ namespace std __attribute__ ((__visibility__ ("default")))
 #pragma GCC diagnostic pop
 # 1436 "/usr/include/c++/14/bits/stl_function.h" 2 3
 # 50 "/usr/include/c++/14/string" 2 3
-# 1 "/usr/include/c++/14/ext/numeric_traits.h" 1 3
-# 32 "/usr/include/c++/14/ext/numeric_traits.h" 3
-       
-# 33 "/usr/include/c++/14/ext/numeric_traits.h" 3
 
 
-
-
-namespace __gnu_cxx __attribute__ ((__visibility__ ("default")))
-{
-
-# 50 "/usr/include/c++/14/ext/numeric_traits.h" 3
-  template<typename _Tp>
-    struct __is_integer_nonstrict
-    : public std::__is_integer<_Tp>
-    {
-      using std::__is_integer<_Tp>::__value;
-
-
-      enum { __width = __value ? sizeof(_Tp) * 8 : 0 };
-    };
-
-  template<typename _Value>
-    struct __numeric_traits_integer
-    {
-
-      static_assert(__is_integer_nonstrict<_Value>::__value,
-      "invalid specialization");
-
-
-
-
-      static const bool __is_signed = (_Value)(-1) < 0;
-      static const int __digits
- = __is_integer_nonstrict<_Value>::__width - __is_signed;
-
-
-      static const _Value __max = __is_signed
- ? (((((_Value)1 << (__digits - 1)) - 1) << 1) + 1)
- : ~(_Value)0;
-      static const _Value __min = __is_signed ? -__max - 1 : (_Value)0;
-    };
-
-  template<typename _Value>
-    const _Value __numeric_traits_integer<_Value>::__min;
-
-  template<typename _Value>
-    const _Value __numeric_traits_integer<_Value>::__max;
-
-  template<typename _Value>
-    const bool __numeric_traits_integer<_Value>::__is_signed;
-
-  template<typename _Value>
-    const int __numeric_traits_integer<_Value>::__digits;
-# 137 "/usr/include/c++/14/ext/numeric_traits.h" 3
-  template<typename _Tp>
-    using __int_traits = __numeric_traits_integer<_Tp>;
-# 157 "/usr/include/c++/14/ext/numeric_traits.h" 3
-  template<typename _Value>
-    struct __numeric_traits_floating
-    {
-
-      static const int __max_digits10 = (2 + (std::__are_same<_Value, float>::__value ? 24 : std::__are_same<_Value, double>::__value ? 53 : 64) * 643L / 2136);
-
-
-      static const bool __is_signed = true;
-      static const int __digits10 = (std::__are_same<_Value, float>::__value ? 6 : std::__are_same<_Value, double>::__value ? 15 : 18);
-      static const int __max_exponent10 = (std::__are_same<_Value, float>::__value ? 38 : std::__are_same<_Value, double>::__value ? 308 : 4932);
-    };
-
-  template<typename _Value>
-    const int __numeric_traits_floating<_Value>::__max_digits10;
-
-  template<typename _Value>
-    const bool __numeric_traits_floating<_Value>::__is_signed;
-
-  template<typename _Value>
-    const int __numeric_traits_floating<_Value>::__digits10;
-
-  template<typename _Value>
-    const int __numeric_traits_floating<_Value>::__max_exponent10;
-
-
-
-
-
-
-  template<typename _Value>
-    struct __numeric_traits
-    : public __numeric_traits_integer<_Value>
-    { };
-
-  template<>
-    struct __numeric_traits<float>
-    : public __numeric_traits_floating<float>
-    { };
-
-  template<>
-    struct __numeric_traits<double>
-    : public __numeric_traits_floating<double>
-    { };
-
-  template<>
-    struct __numeric_traits<long double>
-    : public __numeric_traits_floating<long double>
-    { };
-# 238 "/usr/include/c++/14/ext/numeric_traits.h" 3
-
-}
-# 51 "/usr/include/c++/14/string" 2 3
-# 1 "/usr/include/c++/14/bits/stl_algobase.h" 1 3
-# 64 "/usr/include/c++/14/bits/stl_algobase.h" 3
-# 1 "/usr/include/c++/14/bits/stl_pair.h" 1 3
-# 62 "/usr/include/c++/14/bits/stl_pair.h" 3
-# 1 "/usr/include/c++/14/bits/utility.h" 1 3
-# 36 "/usr/include/c++/14/bits/utility.h" 3
-       
-# 37 "/usr/include/c++/14/bits/utility.h" 3
-
-
-
-
-
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-
-
-  template<typename _Tp>
-    struct tuple_size;
-
-
-
-
-
-  template<typename _Tp,
-    typename _Up = typename remove_cv<_Tp>::type,
-    typename = typename enable_if<is_same<_Tp, _Up>::value>::type,
-    size_t = tuple_size<_Tp>::value>
-    using __enable_if_has_tuple_size = _Tp;
-
-  template<typename _Tp>
-    struct tuple_size<const __enable_if_has_tuple_size<_Tp>>
-    : public tuple_size<_Tp> { };
-
-  template<typename _Tp>
-    struct tuple_size<volatile __enable_if_has_tuple_size<_Tp>>
-    : public tuple_size<_Tp> { };
-
-  template<typename _Tp>
-    struct tuple_size<const volatile __enable_if_has_tuple_size<_Tp>>
-    : public tuple_size<_Tp> { };
-
-
-  template<typename _Tp>
-    inline constexpr size_t tuple_size_v = tuple_size<_Tp>::value;
-
-
-
-  template<size_t __i, typename _Tp>
-    struct tuple_element;
-
-
-  template<size_t __i, typename _Tp>
-    using __tuple_element_t = typename tuple_element<__i, _Tp>::type;
-
-  template<size_t __i, typename _Tp>
-    struct tuple_element<__i, const _Tp>
-    {
-      using type = const __tuple_element_t<__i, _Tp>;
-    };
-
-  template<size_t __i, typename _Tp>
-    struct tuple_element<__i, volatile _Tp>
-    {
-      using type = volatile __tuple_element_t<__i, _Tp>;
-    };
-
-  template<size_t __i, typename _Tp>
-    struct tuple_element<__i, const volatile _Tp>
-    {
-      using type = const volatile __tuple_element_t<__i, _Tp>;
-    };
-
-
-
-
-
-  template<typename _Tp, typename... _Types>
-    constexpr size_t
-    __find_uniq_type_in_pack()
-    {
-      constexpr size_t __sz = sizeof...(_Types);
-      constexpr bool __found[__sz] = { __is_same(_Tp, _Types) ... };
-      size_t __n = __sz;
-      for (size_t __i = 0; __i < __sz; ++__i)
- {
-   if (__found[__i])
-     {
-       if (__n < __sz)
-  return __sz;
-       __n = __i;
-     }
- }
-      return __n;
-    }
-# 134 "/usr/include/c++/14/bits/utility.h" 3
-  template<size_t __i, typename _Tp>
-    using tuple_element_t = typename tuple_element<__i, _Tp>::type;
-
-
-
-
-  template<size_t... _Indexes> struct _Index_tuple { };
-
-
-  template<size_t _Num>
-    struct _Build_index_tuple
-    {
-# 154 "/usr/include/c++/14/bits/utility.h" 3
-      using __type = _Index_tuple<__integer_pack(_Num)...>;
-
-    };
-
-
-
-
-  template<typename _Tp, _Tp... _Idx>
-    struct integer_sequence
-    {
-
-      static_assert(is_integral_v<_Tp>);
-
-      typedef _Tp value_type;
-      static constexpr size_t size() noexcept { return sizeof...(_Idx); }
-    };
-
-
-  template<typename _Tp, _Tp _Num>
-    using make_integer_sequence
-
-
-
-      = integer_sequence<_Tp, __integer_pack(_Num)...>;
-
-
-
-  template<size_t... _Idx>
-    using index_sequence = integer_sequence<size_t, _Idx...>;
-
-
-  template<size_t _Num>
-    using make_index_sequence = make_integer_sequence<size_t, _Num>;
-
-
-  template<typename... _Types>
-    using index_sequence_for = make_index_sequence<sizeof...(_Types)>;
-
-
-
-
-  struct in_place_t {
-    explicit in_place_t() = default;
-  };
-
-  inline constexpr in_place_t in_place{};
-
-  template<typename _Tp> struct in_place_type_t
-  {
-    explicit in_place_type_t() = default;
-  };
-
-  template<typename _Tp>
-    inline constexpr in_place_type_t<_Tp> in_place_type{};
-
-  template<size_t _Idx> struct in_place_index_t
-  {
-    explicit in_place_index_t() = default;
-  };
-
-  template<size_t _Idx>
-    inline constexpr in_place_index_t<_Idx> in_place_index{};
-
-  template<typename>
-    inline constexpr bool __is_in_place_type_v = false;
-
-  template<typename _Tp>
-    inline constexpr bool __is_in_place_type_v<in_place_type_t<_Tp>> = true;
-
-  template<typename _Tp>
-    using __is_in_place_type = bool_constant<__is_in_place_type_v<_Tp>>;
-
-  template<typename>
-    inline constexpr bool __is_in_place_index_v = false;
-
-  template<size_t _Nm>
-    inline constexpr bool __is_in_place_index_v<in_place_index_t<_Nm>> = true;
-
-
-
-
-  template<size_t _Np, typename... _Types>
-    struct _Nth_type
-    { using type = __type_pack_element<_Np, _Types...>; };
-# 276 "/usr/include/c++/14/bits/utility.h" 3
-  namespace ranges::__detail
-  {
-    template<typename _Range>
-      inline constexpr bool __is_subrange = false;
-  }
-
-
-
-}
-# 63 "/usr/include/c++/14/bits/stl_pair.h" 2 3
-
-
-
-
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-# 79 "/usr/include/c++/14/bits/stl_pair.h" 3
-  struct piecewise_construct_t { explicit piecewise_construct_t() = default; };
-
-
-  inline constexpr piecewise_construct_t piecewise_construct =
-    piecewise_construct_t();
-
-
-
-
-  template<typename _T1, typename _T2>
-    struct pair;
-
-  template<typename...>
-    class tuple;
-
-
-
-
-
-  template<typename _Tp, size_t _Nm>
-    struct array;
-
-  template<size_t...>
-    struct _Index_tuple;
-
-  template<size_t _Int, class _Tp1, class _Tp2>
-    constexpr typename tuple_element<_Int, pair<_Tp1, _Tp2>>::type&
-    get(pair<_Tp1, _Tp2>& __in) noexcept;
-
-  template<size_t _Int, class _Tp1, class _Tp2>
-    constexpr typename tuple_element<_Int, pair<_Tp1, _Tp2>>::type&&
-    get(pair<_Tp1, _Tp2>&& __in) noexcept;
-
-  template<size_t _Int, class _Tp1, class _Tp2>
-    constexpr const typename tuple_element<_Int, pair<_Tp1, _Tp2>>::type&
-    get(const pair<_Tp1, _Tp2>& __in) noexcept;
-
-  template<size_t _Int, class _Tp1, class _Tp2>
-    constexpr const typename tuple_element<_Int, pair<_Tp1, _Tp2>>::type&&
-    get(const pair<_Tp1, _Tp2>&& __in) noexcept;
-
-  template<size_t __i, typename... _Elements>
-    constexpr __tuple_element_t<__i, tuple<_Elements...>>&
-    get(tuple<_Elements...>& __t) noexcept;
-
-  template<size_t __i, typename... _Elements>
-    constexpr const __tuple_element_t<__i, tuple<_Elements...>>&
-    get(const tuple<_Elements...>& __t) noexcept;
-
-  template<size_t __i, typename... _Elements>
-    constexpr __tuple_element_t<__i, tuple<_Elements...>>&&
-    get(tuple<_Elements...>&& __t) noexcept;
-
-  template<size_t __i, typename... _Elements>
-    constexpr const __tuple_element_t<__i, tuple<_Elements...>>&&
-    get(const tuple<_Elements...>&& __t) noexcept;
-
-  template<size_t _Int, typename _Tp, size_t _Nm>
-    constexpr _Tp&
-    get(array<_Tp, _Nm>&) noexcept;
-
-  template<size_t _Int, typename _Tp, size_t _Nm>
-    constexpr _Tp&&
-    get(array<_Tp, _Nm>&&) noexcept;
-
-  template<size_t _Int, typename _Tp, size_t _Nm>
-    constexpr const _Tp&
-    get(const array<_Tp, _Nm>&) noexcept;
-
-  template<size_t _Int, typename _Tp, size_t _Nm>
-    constexpr const _Tp&&
-    get(const array<_Tp, _Nm>&&) noexcept;
-# 260 "/usr/include/c++/14/bits/stl_pair.h" 3
-  template<typename _U1, typename _U2> class __pair_base
-  {
-
-
-
-
-
-
-
-  };
-# 283 "/usr/include/c++/14/bits/stl_pair.h" 3
-  template<typename _T1, typename _T2>
-    struct pair
-    : public __pair_base<_T1, _T2>
-    {
-      typedef _T1 first_type;
-      typedef _T2 second_type;
-
-      _T1 first;
-      _T2 second;
-
-
-      constexpr pair(const pair&) = default;
-      constexpr pair(pair&&) = default;
-
-      template<typename... _Args1, typename... _Args2>
- constexpr
- pair(piecewise_construct_t, tuple<_Args1...>, tuple<_Args2...>);
-
-
-      constexpr void
-      swap(pair& __p)
-      noexcept(__and_<__is_nothrow_swappable<_T1>,
-        __is_nothrow_swappable<_T2>>::value)
-      {
- using std::swap;
- swap(first, __p.first);
- swap(second, __p.second);
-      }
-# 331 "/usr/include/c++/14/bits/stl_pair.h" 3
-    private:
-      template<typename... _Args1, size_t... _Indexes1,
-        typename... _Args2, size_t... _Indexes2>
- constexpr
- pair(tuple<_Args1...>&, tuple<_Args2...>&,
-      _Index_tuple<_Indexes1...>, _Index_tuple<_Indexes2...>);
-    public:
-
-
-
-
-
-      constexpr
-      explicit(__not_<__and_<__is_implicitly_default_constructible<_T1>,
-        __is_implicitly_default_constructible<_T2>>>())
-      pair()
-      requires is_default_constructible_v<_T1>
-        && is_default_constructible_v<_T2>
-      : first(), second()
-      { }
-
-    private:
-
-
-      template<typename _U1, typename _U2>
- static constexpr bool
- _S_constructible()
- {
-   if constexpr (is_constructible_v<_T1, _U1>)
-     return is_constructible_v<_T2, _U2>;
-   return false;
- }
-
-      template<typename _U1, typename _U2>
- static constexpr bool
- _S_nothrow_constructible()
- {
-   if constexpr (is_nothrow_constructible_v<_T1, _U1>)
-     return is_nothrow_constructible_v<_T2, _U2>;
-   return false;
- }
-
-      template<typename _U1, typename _U2>
- static constexpr bool
- _S_convertible()
- {
-   if constexpr (is_convertible_v<_U1, _T1>)
-     return is_convertible_v<_U2, _T2>;
-   return false;
- }
-
-
-      template<typename _U1, typename _U2>
- static constexpr bool
- _S_dangles()
- {
-
-   if constexpr (__reference_constructs_from_temporary(_T1, _U1&&))
-     return true;
-   else
-     return __reference_constructs_from_temporary(_T2, _U2&&);
-
-
-
- }
-# 424 "/usr/include/c++/14/bits/stl_pair.h" 3
-    public:
-
-
-      constexpr explicit(!_S_convertible<const _T1&, const _T2&>())
-      pair(const _T1& __x, const _T2& __y)
-      noexcept(_S_nothrow_constructible<const _T1&, const _T2&>())
-      requires (_S_constructible<const _T1&, const _T2&>())
-      : first(__x), second(__y)
-      { }
-
-
-
-
-
-      template<typename _U1, typename _U2>
-
- requires (_S_constructible<_U1, _U2>()) && (!_S_dangles<_U1, _U2>())
- constexpr explicit(!_S_convertible<_U1, _U2>())
- pair(_U1&& __x, _U2&& __y)
- noexcept(_S_nothrow_constructible<_U1, _U2>())
- : first(std::forward<_U1>(__x)), second(std::forward<_U2>(__y))
- { }
-
-
-
-
-      template<typename _U1, typename _U2>
-
- requires (_S_constructible<_U1, _U2>()) && (_S_dangles<_U1, _U2>())
- constexpr explicit(!_S_convertible<_U1, _U2>())
- pair(_U1&&, _U2&&) = delete;
-
-
-      template<typename _U1, typename _U2>
- requires (_S_constructible<const _U1&, const _U2&>())
-   && (!_S_dangles<_U1, _U2>())
- constexpr explicit(!_S_convertible<const _U1&, const _U2&>())
- pair(const pair<_U1, _U2>& __p)
- noexcept(_S_nothrow_constructible<const _U1&, const _U2&>())
- : first(__p.first), second(__p.second)
- { }
-
-      template<typename _U1, typename _U2>
- requires (_S_constructible<const _U1&, const _U2&>())
-       && (_S_dangles<const _U1&, const _U2&>())
- constexpr explicit(!_S_convertible<const _U1&, const _U2&>())
- pair(const pair<_U1, _U2>&) = delete;
-
-
-      template<typename _U1, typename _U2>
- requires (_S_constructible<_U1, _U2>()) && (!_S_dangles<_U1, _U2>())
- constexpr explicit(!_S_convertible<_U1, _U2>())
- pair(pair<_U1, _U2>&& __p)
- noexcept(_S_nothrow_constructible<_U1, _U2>())
- : first(std::forward<_U1>(__p.first)),
-   second(std::forward<_U2>(__p.second))
- { }
-
-      template<typename _U1, typename _U2>
- requires (_S_constructible<_U1, _U2>()) && (_S_dangles<_U1, _U2>())
- constexpr explicit(!_S_convertible<_U1, _U2>())
- pair(pair<_U1, _U2>&&) = delete;
-# 537 "/usr/include/c++/14/bits/stl_pair.h" 3
-  private:
-
-      template<typename _U1, typename _U2>
- static constexpr bool
- _S_assignable()
- {
-   if constexpr (is_assignable_v<_T1&, _U1>)
-     return is_assignable_v<_T2&, _U2>;
-   return false;
- }
-
-      template<typename _U1, typename _U2>
- static constexpr bool
- _S_const_assignable()
- {
-   if constexpr (is_assignable_v<const _T1&, _U1>)
-     return is_assignable_v<const _T2&, _U2>;
-   return false;
- }
-
-      template<typename _U1, typename _U2>
- static constexpr bool
- _S_nothrow_assignable()
- {
-   if constexpr (is_nothrow_assignable_v<_T1&, _U1>)
-     return is_nothrow_assignable_v<_T2&, _U2>;
-   return false;
- }
-# 585 "/usr/include/c++/14/bits/stl_pair.h" 3
-  public:
-
-      pair& operator=(const pair&) = delete;
-
-
-      constexpr pair&
-      operator=(const pair& __p)
-      noexcept(_S_nothrow_assignable<const _T1&, const _T2&>())
-      requires (_S_assignable<const _T1&, const _T2&>())
-      {
- first = __p.first;
- second = __p.second;
- return *this;
-      }
-
-
-      constexpr pair&
-      operator=(pair&& __p)
-      noexcept(_S_nothrow_assignable<_T1, _T2>())
-      requires (_S_assignable<_T1, _T2>())
-      {
- first = std::forward<first_type>(__p.first);
- second = std::forward<second_type>(__p.second);
- return *this;
-      }
-
-
-      template<typename _U1, typename _U2>
- constexpr pair&
- operator=(const pair<_U1, _U2>& __p)
- noexcept(_S_nothrow_assignable<const _U1&, const _U2&>())
- requires (_S_assignable<const _U1&, const _U2&>())
- {
-   first = __p.first;
-   second = __p.second;
-   return *this;
- }
-
-
-      template<typename _U1, typename _U2>
- constexpr pair&
- operator=(pair<_U1, _U2>&& __p)
- noexcept(_S_nothrow_assignable<_U1, _U2>())
- requires (_S_assignable<_U1, _U2>())
- {
-   first = std::forward<_U1>(__p.first);
-   second = std::forward<_U2>(__p.second);
-   return *this;
- }
-# 995 "/usr/include/c++/14/bits/stl_pair.h" 3
-    };
-
-
-
-
-  template<typename _T1, typename _T2> pair(_T1, _T2) -> pair<_T1, _T2>;
-
-
-
-
-
-
-
-  template<typename _T1, typename _T2, typename _U1, typename _U2>
-    inline constexpr bool
-    operator==(const pair<_T1, _T2>& __x, const pair<_U1, _U2>& __y)
-    { return __x.first == __y.first && __x.second == __y.second; }
-# 1020 "/usr/include/c++/14/bits/stl_pair.h" 3
-  template<typename _T1, typename _T2, typename _U1, typename _U2>
-    constexpr common_comparison_category_t<__detail::__synth3way_t<_T1, _U1>,
-        __detail::__synth3way_t<_T2, _U2>>
-    operator<=>(const pair<_T1, _T2>& __x, const pair<_U1, _U2>& __y)
-    {
-      if (auto __c = __detail::__synth3way(__x.first, __y.first); __c != 0)
- return __c;
-      return __detail::__synth3way(__x.second, __y.second);
-    }
-# 1080 "/usr/include/c++/14/bits/stl_pair.h" 3
-  template<typename _T1, typename _T2>
-    constexpr inline
-
-
-    typename enable_if<__and_<__is_swappable<_T1>,
-                              __is_swappable<_T2>>::value>::type
-
-
-
-    swap(pair<_T1, _T2>& __x, pair<_T1, _T2>& __y)
-    noexcept(noexcept(__x.swap(__y)))
-    { __x.swap(__y); }
-# 1103 "/usr/include/c++/14/bits/stl_pair.h" 3
-  template<typename _T1, typename _T2>
-    typename enable_if<!__and_<__is_swappable<_T1>,
-          __is_swappable<_T2>>::value>::type
-    swap(pair<_T1, _T2>&, pair<_T1, _T2>&) = delete;
-# 1129 "/usr/include/c++/14/bits/stl_pair.h" 3
-  template<typename _T1, typename _T2>
-    constexpr pair<typename __decay_and_strip<_T1>::__type,
-                   typename __decay_and_strip<_T2>::__type>
-    make_pair(_T1&& __x, _T2&& __y)
-    {
-      typedef typename __decay_and_strip<_T1>::__type __ds_type1;
-      typedef typename __decay_and_strip<_T2>::__type __ds_type2;
-      typedef pair<__ds_type1, __ds_type2> __pair_type;
-      return __pair_type(std::forward<_T1>(__x), std::forward<_T2>(__y));
-    }
-# 1152 "/usr/include/c++/14/bits/stl_pair.h" 3
-  template<typename _T1, typename _T2>
-    struct __is_tuple_like_impl<pair<_T1, _T2>> : true_type
-    { };
-
-
-
-  template<class _Tp1, class _Tp2>
-    struct tuple_size<pair<_Tp1, _Tp2>>
-    : public integral_constant<size_t, 2> { };
-
-
-  template<class _Tp1, class _Tp2>
-    struct tuple_element<0, pair<_Tp1, _Tp2>>
-    { typedef _Tp1 type; };
-
-
-  template<class _Tp1, class _Tp2>
-    struct tuple_element<1, pair<_Tp1, _Tp2>>
-    { typedef _Tp2 type; };
-
-
-
-  template<size_t __i, typename... _Types>
-    struct tuple_element<__i, tuple<_Types...>>;
-
-
-  template<typename _Tp1, typename _Tp2>
-    inline constexpr size_t tuple_size_v<pair<_Tp1, _Tp2>> = 2;
-
-  template<typename _Tp1, typename _Tp2>
-    inline constexpr size_t tuple_size_v<const pair<_Tp1, _Tp2>> = 2;
-
-  template<typename _Tp>
-    inline constexpr bool __is_pair = false;
-
-  template<typename _Tp, typename _Up>
-    inline constexpr bool __is_pair<pair<_Tp, _Up>> = true;
-
-
-
-  template<size_t _Int>
-    struct __pair_get;
-
-  template<>
-    struct __pair_get<0>
-    {
-      template<typename _Tp1, typename _Tp2>
- static constexpr _Tp1&
- __get(pair<_Tp1, _Tp2>& __pair) noexcept
- { return __pair.first; }
-
-      template<typename _Tp1, typename _Tp2>
- static constexpr _Tp1&&
- __move_get(pair<_Tp1, _Tp2>&& __pair) noexcept
- { return std::forward<_Tp1>(__pair.first); }
-
-      template<typename _Tp1, typename _Tp2>
- static constexpr const _Tp1&
- __const_get(const pair<_Tp1, _Tp2>& __pair) noexcept
- { return __pair.first; }
-
-      template<typename _Tp1, typename _Tp2>
- static constexpr const _Tp1&&
- __const_move_get(const pair<_Tp1, _Tp2>&& __pair) noexcept
- { return std::forward<const _Tp1>(__pair.first); }
-    };
-
-  template<>
-    struct __pair_get<1>
-    {
-      template<typename _Tp1, typename _Tp2>
- static constexpr _Tp2&
- __get(pair<_Tp1, _Tp2>& __pair) noexcept
- { return __pair.second; }
-
-      template<typename _Tp1, typename _Tp2>
- static constexpr _Tp2&&
- __move_get(pair<_Tp1, _Tp2>&& __pair) noexcept
- { return std::forward<_Tp2>(__pair.second); }
-
-      template<typename _Tp1, typename _Tp2>
- static constexpr const _Tp2&
- __const_get(const pair<_Tp1, _Tp2>& __pair) noexcept
- { return __pair.second; }
-
-      template<typename _Tp1, typename _Tp2>
- static constexpr const _Tp2&&
- __const_move_get(const pair<_Tp1, _Tp2>&& __pair) noexcept
- { return std::forward<const _Tp2>(__pair.second); }
-    };
-
-
-
-
-
-
-  template<size_t _Int, class _Tp1, class _Tp2>
-    constexpr typename tuple_element<_Int, pair<_Tp1, _Tp2>>::type&
-    get(pair<_Tp1, _Tp2>& __in) noexcept
-    { return __pair_get<_Int>::__get(__in); }
-
-  template<size_t _Int, class _Tp1, class _Tp2>
-    constexpr typename tuple_element<_Int, pair<_Tp1, _Tp2>>::type&&
-    get(pair<_Tp1, _Tp2>&& __in) noexcept
-    { return __pair_get<_Int>::__move_get(std::move(__in)); }
-
-  template<size_t _Int, class _Tp1, class _Tp2>
-    constexpr const typename tuple_element<_Int, pair<_Tp1, _Tp2>>::type&
-    get(const pair<_Tp1, _Tp2>& __in) noexcept
-    { return __pair_get<_Int>::__const_get(__in); }
-
-  template<size_t _Int, class _Tp1, class _Tp2>
-    constexpr const typename tuple_element<_Int, pair<_Tp1, _Tp2>>::type&&
-    get(const pair<_Tp1, _Tp2>&& __in) noexcept
-    { return __pair_get<_Int>::__const_move_get(std::move(__in)); }
-
-
-
-  template <typename _Tp, typename _Up>
-    constexpr _Tp&
-    get(pair<_Tp, _Up>& __p) noexcept
-    { return __p.first; }
-
-  template <typename _Tp, typename _Up>
-    constexpr const _Tp&
-    get(const pair<_Tp, _Up>& __p) noexcept
-    { return __p.first; }
-
-  template <typename _Tp, typename _Up>
-    constexpr _Tp&&
-    get(pair<_Tp, _Up>&& __p) noexcept
-    { return std::move(__p.first); }
-
-  template <typename _Tp, typename _Up>
-    constexpr const _Tp&&
-    get(const pair<_Tp, _Up>&& __p) noexcept
-    { return std::move(__p.first); }
-
-  template <typename _Tp, typename _Up>
-    constexpr _Tp&
-    get(pair<_Up, _Tp>& __p) noexcept
-    { return __p.second; }
-
-  template <typename _Tp, typename _Up>
-    constexpr const _Tp&
-    get(const pair<_Up, _Tp>& __p) noexcept
-    { return __p.second; }
-
-  template <typename _Tp, typename _Up>
-    constexpr _Tp&&
-    get(pair<_Up, _Tp>&& __p) noexcept
-    { return std::move(__p.second); }
-
-  template <typename _Tp, typename _Up>
-    constexpr const _Tp&&
-    get(const pair<_Up, _Tp>&& __p) noexcept
-    { return std::move(__p.second); }
-# 1332 "/usr/include/c++/14/bits/stl_pair.h" 3
-
-}
-# 65 "/usr/include/c++/14/bits/stl_algobase.h" 2 3
-
-
-
-
-# 1 "/usr/include/c++/14/debug/debug.h" 1 3
-# 48 "/usr/include/c++/14/debug/debug.h" 3
-namespace std
-{
-  namespace __debug { }
-}
-
-
-
-
-namespace __gnu_debug
-{
-  using namespace std::__debug;
-
-  template<typename _Ite, typename _Seq, typename _Cat>
-    struct _Safe_iterator;
-}
-# 70 "/usr/include/c++/14/bits/stl_algobase.h" 2 3
-
-# 1 "/usr/include/c++/14/bits/predefined_ops.h" 1 3
-# 35 "/usr/include/c++/14/bits/predefined_ops.h" 3
-namespace __gnu_cxx
-{
-namespace __ops
-{
-  struct _Iter_less_iter
-  {
-    template<typename _Iterator1, typename _Iterator2>
-      constexpr
-      bool
-      operator()(_Iterator1 __it1, _Iterator2 __it2) const
-      { return *__it1 < *__it2; }
-  };
-
-  constexpr
-  inline _Iter_less_iter
-  __iter_less_iter()
-  { return _Iter_less_iter(); }
-
-  struct _Iter_less_val
-  {
-
-    constexpr _Iter_less_val() = default;
-
-
-
-
-    constexpr
-    explicit
-    _Iter_less_val(_Iter_less_iter) { }
-
-    template<typename _Iterator, typename _Value>
-      constexpr
-      bool
-      operator()(_Iterator __it, _Value& __val) const
-      { return *__it < __val; }
-  };
-
-  constexpr
-  inline _Iter_less_val
-  __iter_less_val()
-  { return _Iter_less_val(); }
-
-  constexpr
-  inline _Iter_less_val
-  __iter_comp_val(_Iter_less_iter)
-  { return _Iter_less_val(); }
-
-  struct _Val_less_iter
-  {
-
-    constexpr _Val_less_iter() = default;
-
-
-
-
-    constexpr
-    explicit
-    _Val_less_iter(_Iter_less_iter) { }
-
-    template<typename _Value, typename _Iterator>
-      constexpr
-      bool
-      operator()(_Value& __val, _Iterator __it) const
-      { return __val < *__it; }
-  };
-
-  constexpr
-  inline _Val_less_iter
-  __val_less_iter()
-  { return _Val_less_iter(); }
-
-  constexpr
-  inline _Val_less_iter
-  __val_comp_iter(_Iter_less_iter)
-  { return _Val_less_iter(); }
-
-  struct _Iter_equal_to_iter
-  {
-    template<typename _Iterator1, typename _Iterator2>
-      constexpr
-      bool
-      operator()(_Iterator1 __it1, _Iterator2 __it2) const
-      { return *__it1 == *__it2; }
-  };
-
-  constexpr
-  inline _Iter_equal_to_iter
-  __iter_equal_to_iter()
-  { return _Iter_equal_to_iter(); }
-
-  struct _Iter_equal_to_val
-  {
-    template<typename _Iterator, typename _Value>
-      constexpr
-      bool
-      operator()(_Iterator __it, _Value& __val) const
-      { return *__it == __val; }
-  };
-
-  constexpr
-  inline _Iter_equal_to_val
-  __iter_equal_to_val()
-  { return _Iter_equal_to_val(); }
-
-  constexpr
-  inline _Iter_equal_to_val
-  __iter_comp_val(_Iter_equal_to_iter)
-  { return _Iter_equal_to_val(); }
-
-  template<typename _Compare>
-    struct _Iter_comp_iter
-    {
-      _Compare _M_comp;
-
-      explicit constexpr
-      _Iter_comp_iter(_Compare __comp)
- : _M_comp(std::move(__comp))
-      { }
-
-      template<typename _Iterator1, typename _Iterator2>
-        constexpr
-        bool
-        operator()(_Iterator1 __it1, _Iterator2 __it2)
-        { return bool(_M_comp(*__it1, *__it2)); }
-    };
-
-  template<typename _Compare>
-    constexpr
-    inline _Iter_comp_iter<_Compare>
-    __iter_comp_iter(_Compare __comp)
-    { return _Iter_comp_iter<_Compare>(std::move(__comp)); }
-
-  template<typename _Compare>
-    struct _Iter_comp_val
-    {
-      _Compare _M_comp;
-
-      constexpr
-      explicit
-      _Iter_comp_val(_Compare __comp)
- : _M_comp(std::move(__comp))
-      { }
-
-      constexpr
-      explicit
-      _Iter_comp_val(const _Iter_comp_iter<_Compare>& __comp)
- : _M_comp(__comp._M_comp)
-      { }
-
-
-      constexpr
-      explicit
-      _Iter_comp_val(_Iter_comp_iter<_Compare>&& __comp)
- : _M_comp(std::move(__comp._M_comp))
-      { }
-
-
-      template<typename _Iterator, typename _Value>
- constexpr
- bool
- operator()(_Iterator __it, _Value& __val)
- { return bool(_M_comp(*__it, __val)); }
-    };
-
-  template<typename _Compare>
-    constexpr
-    inline _Iter_comp_val<_Compare>
-    __iter_comp_val(_Compare __comp)
-    { return _Iter_comp_val<_Compare>(std::move(__comp)); }
-
-  template<typename _Compare>
-    constexpr
-    inline _Iter_comp_val<_Compare>
-    __iter_comp_val(_Iter_comp_iter<_Compare> __comp)
-    { return _Iter_comp_val<_Compare>(std::move(__comp)); }
-
-  template<typename _Compare>
-    struct _Val_comp_iter
-    {
-      _Compare _M_comp;
-
-      constexpr
-      explicit
-      _Val_comp_iter(_Compare __comp)
- : _M_comp(std::move(__comp))
-      { }
-
-      constexpr
-      explicit
-      _Val_comp_iter(const _Iter_comp_iter<_Compare>& __comp)
- : _M_comp(__comp._M_comp)
-      { }
-
-
-      constexpr
-      explicit
-      _Val_comp_iter(_Iter_comp_iter<_Compare>&& __comp)
- : _M_comp(std::move(__comp._M_comp))
-      { }
-
-
-      template<typename _Value, typename _Iterator>
- constexpr
- bool
- operator()(_Value& __val, _Iterator __it)
- { return bool(_M_comp(__val, *__it)); }
-    };
-
-  template<typename _Compare>
-    constexpr
-    inline _Val_comp_iter<_Compare>
-    __val_comp_iter(_Compare __comp)
-    { return _Val_comp_iter<_Compare>(std::move(__comp)); }
-
-  template<typename _Compare>
-    constexpr
-    inline _Val_comp_iter<_Compare>
-    __val_comp_iter(_Iter_comp_iter<_Compare> __comp)
-    { return _Val_comp_iter<_Compare>(std::move(__comp)); }
-
-  template<typename _Value>
-    struct _Iter_equals_val
-    {
-      _Value& _M_value;
-
-      constexpr
-      explicit
-      _Iter_equals_val(_Value& __value)
- : _M_value(__value)
-      { }
-
-      template<typename _Iterator>
- constexpr
- bool
- operator()(_Iterator __it)
- { return *__it == _M_value; }
-    };
-
-  template<typename _Value>
-    constexpr
-    inline _Iter_equals_val<_Value>
-    __iter_equals_val(_Value& __val)
-    { return _Iter_equals_val<_Value>(__val); }
-
-  template<typename _Iterator1>
-    struct _Iter_equals_iter
-    {
-      _Iterator1 _M_it1;
-
-      constexpr
-      explicit
-      _Iter_equals_iter(_Iterator1 __it1)
- : _M_it1(__it1)
-      { }
-
-      template<typename _Iterator2>
- constexpr
- bool
- operator()(_Iterator2 __it2)
- { return *__it2 == *_M_it1; }
-    };
-
-  template<typename _Iterator>
-    constexpr
-    inline _Iter_equals_iter<_Iterator>
-    __iter_comp_iter(_Iter_equal_to_iter, _Iterator __it)
-    { return _Iter_equals_iter<_Iterator>(__it); }
-
-  template<typename _Predicate>
-    struct _Iter_pred
-    {
-      _Predicate _M_pred;
-
-      constexpr
-      explicit
-      _Iter_pred(_Predicate __pred)
- : _M_pred(std::move(__pred))
-      { }
-
-      template<typename _Iterator>
- constexpr
- bool
- operator()(_Iterator __it)
- { return bool(_M_pred(*__it)); }
-    };
-
-  template<typename _Predicate>
-    constexpr
-    inline _Iter_pred<_Predicate>
-    __pred_iter(_Predicate __pred)
-    { return _Iter_pred<_Predicate>(std::move(__pred)); }
-
-  template<typename _Compare, typename _Value>
-    struct _Iter_comp_to_val
-    {
-      _Compare _M_comp;
-      _Value& _M_value;
-
-      constexpr
-      _Iter_comp_to_val(_Compare __comp, _Value& __value)
- : _M_comp(std::move(__comp)), _M_value(__value)
-      { }
-
-      template<typename _Iterator>
- constexpr
- bool
- operator()(_Iterator __it)
- { return bool(_M_comp(*__it, _M_value)); }
-    };
-
-  template<typename _Compare, typename _Value>
-    _Iter_comp_to_val<_Compare, _Value>
-    constexpr
-    __iter_comp_val(_Compare __comp, _Value &__val)
-    {
-      return _Iter_comp_to_val<_Compare, _Value>(std::move(__comp), __val);
-    }
-
-  template<typename _Compare, typename _Iterator1>
-    struct _Iter_comp_to_iter
-    {
-      _Compare _M_comp;
-      _Iterator1 _M_it1;
-
-      constexpr
-      _Iter_comp_to_iter(_Compare __comp, _Iterator1 __it1)
- : _M_comp(std::move(__comp)), _M_it1(__it1)
-      { }
-
-      template<typename _Iterator2>
- constexpr
- bool
- operator()(_Iterator2 __it2)
- { return bool(_M_comp(*__it2, *_M_it1)); }
-    };
-
-  template<typename _Compare, typename _Iterator>
-    constexpr
-    inline _Iter_comp_to_iter<_Compare, _Iterator>
-    __iter_comp_iter(_Iter_comp_iter<_Compare> __comp, _Iterator __it)
-    {
-      return _Iter_comp_to_iter<_Compare, _Iterator>(
-   std::move(__comp._M_comp), __it);
-    }
-
-  template<typename _Predicate>
-    struct _Iter_negate
-    {
-      _Predicate _M_pred;
-
-      constexpr
-      explicit
-      _Iter_negate(_Predicate __pred)
- : _M_pred(std::move(__pred))
-      { }
-
-      template<typename _Iterator>
- constexpr
- bool
- operator()(_Iterator __it)
- { return !bool(_M_pred(*__it)); }
-    };
-
-  template<typename _Predicate>
-    constexpr
-    inline _Iter_negate<_Predicate>
-    __negate(_Iter_pred<_Predicate> __pred)
-    { return _Iter_negate<_Predicate>(std::move(__pred._M_pred)); }
-
-}
-}
-# 72 "/usr/include/c++/14/bits/stl_algobase.h" 2 3
-
-
-
-
-# 1 "/usr/include/c++/14/bit" 1 3
-# 32 "/usr/include/c++/14/bit" 3
-       
-# 33 "/usr/include/c++/14/bit" 3
-# 61 "/usr/include/c++/14/bit" 3
-# 1 "/usr/include/c++/14/bits/version.h" 1 3
-# 47 "/usr/include/c++/14/bits/version.h" 3
-       
-# 48 "/usr/include/c++/14/bits/version.h" 3
-# 62 "/usr/include/c++/14/bit" 2 3
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-# 85 "/usr/include/c++/14/bit" 3
-  template<typename _To, typename _From>
-    [[nodiscard]]
-    constexpr _To
-    bit_cast(const _From& __from) noexcept
-
-    requires (sizeof(_To) == sizeof(_From))
-      && is_trivially_copyable_v<_To> && is_trivially_copyable_v<_From>
-
-    {
-      return __builtin_bit_cast(_To, __from);
-    }
-# 155 "/usr/include/c++/14/bit" 3
-  template<typename _Tp>
-    constexpr _Tp
-    __rotl(_Tp __x, int __s) noexcept
-    {
-      constexpr auto _Nd = __gnu_cxx::__int_traits<_Tp>::__digits;
-      if constexpr ((_Nd & (_Nd - 1)) == 0)
- {
-
-
-   constexpr unsigned __uNd = _Nd;
-   const unsigned __r = __s;
-   return (__x << (__r % __uNd)) | (__x >> ((-__r) % __uNd));
- }
-      const int __r = __s % _Nd;
-      if (__r == 0)
- return __x;
-      else if (__r > 0)
- return (__x << __r) | (__x >> ((_Nd - __r) % _Nd));
-      else
- return (__x >> -__r) | (__x << ((_Nd + __r) % _Nd));
-    }
-
-  template<typename _Tp>
-    constexpr _Tp
-    __rotr(_Tp __x, int __s) noexcept
-    {
-      constexpr auto _Nd = __gnu_cxx::__int_traits<_Tp>::__digits;
-      if constexpr ((_Nd & (_Nd - 1)) == 0)
- {
-
-
-   constexpr unsigned __uNd = _Nd;
-   const unsigned __r = __s;
-   return (__x >> (__r % __uNd)) | (__x << ((-__r) % __uNd));
- }
-      const int __r = __s % _Nd;
-      if (__r == 0)
- return __x;
-      else if (__r > 0)
- return (__x >> __r) | (__x << ((_Nd - __r) % _Nd));
-      else
- return (__x << -__r) | (__x >> ((_Nd + __r) % _Nd));
-    }
-
-  template<typename _Tp>
-    constexpr int
-    __countl_zero(_Tp __x) noexcept
-    {
-      using __gnu_cxx::__int_traits;
-      constexpr auto _Nd = __int_traits<_Tp>::__digits;
-
-      if (__x == 0)
-        return _Nd;
-
-      constexpr auto _Nd_ull = __int_traits<unsigned long long>::__digits;
-      constexpr auto _Nd_ul = __int_traits<unsigned long>::__digits;
-      constexpr auto _Nd_u = __int_traits<unsigned>::__digits;
-
-      if constexpr (_Nd <= _Nd_u)
- {
-   constexpr int __diff = _Nd_u - _Nd;
-   return __builtin_clz(__x) - __diff;
- }
-      else if constexpr (_Nd <= _Nd_ul)
- {
-   constexpr int __diff = _Nd_ul - _Nd;
-   return __builtin_clzl(__x) - __diff;
- }
-      else if constexpr (_Nd <= _Nd_ull)
- {
-   constexpr int __diff = _Nd_ull - _Nd;
-   return __builtin_clzll(__x) - __diff;
- }
-      else
- {
-   static_assert(_Nd <= (2 * _Nd_ull),
-   "Maximum supported integer size is 128-bit");
-
-   unsigned long long __high = __x >> _Nd_ull;
-   if (__high != 0)
-     {
-       constexpr int __diff = (2 * _Nd_ull) - _Nd;
-       return __builtin_clzll(__high) - __diff;
-     }
-   constexpr auto __max_ull = __int_traits<unsigned long long>::__max;
-   unsigned long long __low = __x & __max_ull;
-   return (_Nd - _Nd_ull) + __builtin_clzll(__low);
- }
-    }
-
-  template<typename _Tp>
-    constexpr int
-    __countl_one(_Tp __x) noexcept
-    {
-      return std::__countl_zero<_Tp>((_Tp)~__x);
-    }
-
-  template<typename _Tp>
-    constexpr int
-    __countr_zero(_Tp __x) noexcept
-    {
-      using __gnu_cxx::__int_traits;
-      constexpr auto _Nd = __int_traits<_Tp>::__digits;
-
-      if (__x == 0)
-        return _Nd;
-
-      constexpr auto _Nd_ull = __int_traits<unsigned long long>::__digits;
-      constexpr auto _Nd_ul = __int_traits<unsigned long>::__digits;
-      constexpr auto _Nd_u = __int_traits<unsigned>::__digits;
-
-      if constexpr (_Nd <= _Nd_u)
- return __builtin_ctz(__x);
-      else if constexpr (_Nd <= _Nd_ul)
- return __builtin_ctzl(__x);
-      else if constexpr (_Nd <= _Nd_ull)
- return __builtin_ctzll(__x);
-      else
- {
-   static_assert(_Nd <= (2 * _Nd_ull),
-   "Maximum supported integer size is 128-bit");
-
-   constexpr auto __max_ull = __int_traits<unsigned long long>::__max;
-   unsigned long long __low = __x & __max_ull;
-   if (__low != 0)
-     return __builtin_ctzll(__low);
-   unsigned long long __high = __x >> _Nd_ull;
-   return __builtin_ctzll(__high) + _Nd_ull;
- }
-    }
-
-  template<typename _Tp>
-    constexpr int
-    __countr_one(_Tp __x) noexcept
-    {
-      return std::__countr_zero((_Tp)~__x);
-    }
-
-  template<typename _Tp>
-    constexpr int
-    __popcount(_Tp __x) noexcept
-    {
-      using __gnu_cxx::__int_traits;
-      constexpr auto _Nd = __int_traits<_Tp>::__digits;
-
-      constexpr auto _Nd_ull = __int_traits<unsigned long long>::__digits;
-      constexpr auto _Nd_ul = __int_traits<unsigned long>::__digits;
-      constexpr auto _Nd_u = __int_traits<unsigned>::__digits;
-
-      if constexpr (_Nd <= _Nd_u)
- return __builtin_popcount(__x);
-      else if constexpr (_Nd <= _Nd_ul)
- return __builtin_popcountl(__x);
-      else if constexpr (_Nd <= _Nd_ull)
- return __builtin_popcountll(__x);
-      else
- {
-   static_assert(_Nd <= (2 * _Nd_ull),
-   "Maximum supported integer size is 128-bit");
-
-   constexpr auto __max_ull = __int_traits<unsigned long long>::__max;
-   unsigned long long __low = __x & __max_ull;
-   unsigned long long __high = __x >> _Nd_ull;
-   return __builtin_popcountll(__low) + __builtin_popcountll(__high);
- }
-    }
-
-  template<typename _Tp>
-    constexpr bool
-    __has_single_bit(_Tp __x) noexcept
-    { return std::__popcount(__x) == 1; }
-
-  template<typename _Tp>
-    constexpr _Tp
-    __bit_ceil(_Tp __x) noexcept
-    {
-      using __gnu_cxx::__int_traits;
-      constexpr auto _Nd = __int_traits<_Tp>::__digits;
-      if (__x == 0 || __x == 1)
-        return 1;
-      auto __shift_exponent = _Nd - std::__countl_zero((_Tp)(__x - 1u));
-
-
-
-
-      if (!std::__is_constant_evaluated())
- {
-   do { if (std::__is_constant_evaluated()) if (__builtin_expect(!bool(__shift_exponent != __int_traits<_Tp>::__digits), false)) std::__glibcxx_assert_fail(); } while (false);
- }
-
-      using __promoted_type = decltype(__x << 1);
-      if constexpr (!is_same<__promoted_type, _Tp>::value)
- {
-
-
-
-
-
-   const int __extra_exp = sizeof(__promoted_type) / sizeof(_Tp) / 2;
-   __shift_exponent |= (__shift_exponent & _Nd) << __extra_exp;
- }
-      return (_Tp)1u << __shift_exponent;
-    }
-
-  template<typename _Tp>
-    constexpr _Tp
-    __bit_floor(_Tp __x) noexcept
-    {
-      constexpr auto _Nd = __gnu_cxx::__int_traits<_Tp>::__digits;
-      if (__x == 0)
-        return 0;
-      return (_Tp)1u << (_Nd - std::__countl_zero((_Tp)(__x >> 1)));
-    }
-
-  template<typename _Tp>
-    constexpr int
-    __bit_width(_Tp __x) noexcept
-    {
-      constexpr auto _Nd = __gnu_cxx::__int_traits<_Tp>::__digits;
-      return _Nd - std::__countl_zero(__x);
-    }
-
-
-
-
-
-
-  template<typename _Tp>
-    concept __unsigned_integer = __is_unsigned_integer<_Tp>::value;
-
-
-
-
-
-  template<__unsigned_integer _Tp>
-    [[nodiscard]] constexpr _Tp
-    rotl(_Tp __x, int __s) noexcept
-    { return std::__rotl(__x, __s); }
-
-
-  template<__unsigned_integer _Tp>
-    [[nodiscard]] constexpr _Tp
-    rotr(_Tp __x, int __s) noexcept
-    { return std::__rotr(__x, __s); }
-
-
-
-
-  template<__unsigned_integer _Tp>
-    constexpr int
-    countl_zero(_Tp __x) noexcept
-    { return std::__countl_zero(__x); }
-
-
-  template<__unsigned_integer _Tp>
-    constexpr int
-    countl_one(_Tp __x) noexcept
-    { return std::__countl_one(__x); }
-
-
-  template<__unsigned_integer _Tp>
-    constexpr int
-    countr_zero(_Tp __x) noexcept
-    { return std::__countr_zero(__x); }
-
-
-  template<__unsigned_integer _Tp>
-    constexpr int
-    countr_one(_Tp __x) noexcept
-    { return std::__countr_one(__x); }
-
-
-  template<__unsigned_integer _Tp>
-    constexpr int
-    popcount(_Tp __x) noexcept
-    { return std::__popcount(__x); }
-
-
-
-
-
-
-  template<__unsigned_integer _Tp>
-    constexpr bool
-    has_single_bit(_Tp __x) noexcept
-    { return std::__has_single_bit(__x); }
-
-
-  template<__unsigned_integer _Tp>
-    constexpr _Tp
-    bit_ceil(_Tp __x) noexcept
-    { return std::__bit_ceil(__x); }
-
-
-  template<__unsigned_integer _Tp>
-    constexpr _Tp
-    bit_floor(_Tp __x) noexcept
-    { return std::__bit_floor(__x); }
-
-
-
-
-  template<__unsigned_integer _Tp>
-    constexpr int
-    bit_width(_Tp __x) noexcept
-    { return std::__bit_width(__x); }
-# 472 "/usr/include/c++/14/bit" 3
-  enum class endian
-  {
-    little = 1234,
-    big = 4321,
-    native = 1234
-  };
-
-
-
-
-
-}
-# 77 "/usr/include/c++/14/bits/stl_algobase.h" 2 3
-
-
-
-
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-
-
-
-
-
-  template<typename _Tp, typename _Up>
-    constexpr
-    inline int
-    __memcmp(const _Tp* __first1, const _Up* __first2, size_t __num)
-    {
-
-      static_assert(sizeof(_Tp) == sizeof(_Up), "can be compared with memcmp");
-
-
-      if (std::is_constant_evaluated())
- {
-   for(; __num > 0; ++__first1, ++__first2, --__num)
-     if (*__first1 != *__first2)
-       return *__first1 < *__first2 ? -1 : 1;
-   return 0;
- }
-      else
-
- return __builtin_memcmp(__first1, __first2, sizeof(_Tp) * __num);
-    }
-# 152 "/usr/include/c++/14/bits/stl_algobase.h" 3
-  template<typename _ForwardIterator1, typename _ForwardIterator2>
-    constexpr
-    inline void
-    iter_swap(_ForwardIterator1 __a, _ForwardIterator2 __b)
-    {
-
-     
-
-     
-# 185 "/usr/include/c++/14/bits/stl_algobase.h" 3
-      swap(*__a, *__b);
-
-    }
-# 201 "/usr/include/c++/14/bits/stl_algobase.h" 3
-  template<typename _ForwardIterator1, typename _ForwardIterator2>
-    constexpr
-    _ForwardIterator2
-    swap_ranges(_ForwardIterator1 __first1, _ForwardIterator1 __last1,
-  _ForwardIterator2 __first2)
-    {
-
-     
-
-     
-
-      ;
-
-      for (; __first1 != __last1; ++__first1, (void)++__first2)
- std::iter_swap(__first1, __first2);
-      return __first2;
-    }
-# 230 "/usr/include/c++/14/bits/stl_algobase.h" 3
-  template<typename _Tp>
-    [[__nodiscard__]] constexpr
-    inline const _Tp&
-    min(const _Tp& __a, const _Tp& __b)
-    {
-
-     
-
-      if (__b < __a)
- return __b;
-      return __a;
-    }
-# 254 "/usr/include/c++/14/bits/stl_algobase.h" 3
-  template<typename _Tp>
-    [[__nodiscard__]] constexpr
-    inline const _Tp&
-    max(const _Tp& __a, const _Tp& __b)
-    {
-
-     
-
-      if (__a < __b)
- return __b;
-      return __a;
-    }
-# 278 "/usr/include/c++/14/bits/stl_algobase.h" 3
-  template<typename _Tp, typename _Compare>
-    [[__nodiscard__]] constexpr
-    inline const _Tp&
-    min(const _Tp& __a, const _Tp& __b, _Compare __comp)
-    {
-
-      if (__comp(__b, __a))
- return __b;
-      return __a;
-    }
-# 300 "/usr/include/c++/14/bits/stl_algobase.h" 3
-  template<typename _Tp, typename _Compare>
-    [[__nodiscard__]] constexpr
-    inline const _Tp&
-    max(const _Tp& __a, const _Tp& __b, _Compare __comp)
-    {
-
-      if (__comp(__a, __b))
- return __b;
-      return __a;
-    }
-
-
-
-  template<typename _Iterator>
-    constexpr
-    inline _Iterator
-    __niter_base(_Iterator __it)
-    noexcept(std::is_nothrow_copy_constructible<_Iterator>::value)
-    { return __it; }
-# 332 "/usr/include/c++/14/bits/stl_algobase.h" 3
-  template<typename _Ite, typename _Seq>
-    constexpr
-    decltype(std::__niter_base(std::declval<_Ite>()))
-    __niter_base(const ::__gnu_debug::_Safe_iterator<_Ite, _Seq,
-   std::random_access_iterator_tag>&)
-    noexcept(std::is_nothrow_copy_constructible<_Ite>::value);
-
-
-
-
-
-  template<typename _From, typename _To>
-    constexpr
-    inline _From
-    __niter_wrap(_From __from, _To __res)
-    { return __from + (std::__niter_base(__res) - std::__niter_base(__from)); }
-
-
-  template<typename _Iterator>
-    constexpr
-    inline _Iterator
-    __niter_wrap(const _Iterator&, _Iterator __res)
-    { return __res; }
-
-
-
-
-
-
-
-  template<bool _IsMove, bool _IsSimple, typename _Category>
-    struct __copy_move
-    {
-      template<typename _II, typename _OI>
- constexpr
- static _OI
- __copy_m(_II __first, _II __last, _OI __result)
- {
-   for (; __first != __last; ++__result, (void)++__first)
-     *__result = *__first;
-   return __result;
- }
-    };
-
-
-  template<typename _Category>
-    struct __copy_move<true, false, _Category>
-    {
-      template<typename _II, typename _OI>
- constexpr
- static _OI
- __copy_m(_II __first, _II __last, _OI __result)
- {
-   for (; __first != __last; ++__result, (void)++__first)
-     *__result = std::move(*__first);
-   return __result;
- }
-    };
-
-
-  template<>
-    struct __copy_move<false, false, random_access_iterator_tag>
-    {
-      template<typename _II, typename _OI>
- constexpr
- static _OI
- __copy_m(_II __first, _II __last, _OI __result)
- {
-   typedef typename iterator_traits<_II>::difference_type _Distance;
-   for(_Distance __n = __last - __first; __n > 0; --__n)
-     {
-       *__result = *__first;
-       ++__first;
-       ++__result;
-     }
-   return __result;
- }
-
-      template<typename _Tp, typename _Up>
- static void
- __assign_one(_Tp* __to, _Up* __from)
- { *__to = *__from; }
-    };
-
-
-  template<>
-    struct __copy_move<true, false, random_access_iterator_tag>
-    {
-      template<typename _II, typename _OI>
- constexpr
- static _OI
- __copy_m(_II __first, _II __last, _OI __result)
- {
-   typedef typename iterator_traits<_II>::difference_type _Distance;
-   for(_Distance __n = __last - __first; __n > 0; --__n)
-     {
-       *__result = std::move(*__first);
-       ++__first;
-       ++__result;
-     }
-   return __result;
- }
-
-      template<typename _Tp, typename _Up>
- static void
- __assign_one(_Tp* __to, _Up* __from)
- { *__to = std::move(*__from); }
-    };
-
-
-  template<bool _IsMove>
-    struct __copy_move<_IsMove, true, random_access_iterator_tag>
-    {
-      template<typename _Tp, typename _Up>
- constexpr
- static _Up*
- __copy_m(_Tp* __first, _Tp* __last, _Up* __result)
- {
-   const ptrdiff_t _Num = __last - __first;
-   if (__builtin_expect(_Num > 1, true))
-     __builtin_memmove(__result, __first, sizeof(_Tp) * _Num);
-   else if (_Num == 1)
-     std::__copy_move<_IsMove, false, random_access_iterator_tag>::
-       __assign_one(__result, __first);
-   return __result + _Num;
- }
-    };
-
-
-
-  template<typename _Tp, typename _Ref, typename _Ptr>
-    struct _Deque_iterator;
-
-  struct _Bit_iterator;
-
-
-
-
-
-
-  template<typename _CharT>
-    struct char_traits;
-
-  template<typename _CharT, typename _Traits>
-    class istreambuf_iterator;
-
-  template<typename _CharT, typename _Traits>
-    class ostreambuf_iterator;
-
-  template<bool _IsMove, typename _CharT>
-    typename __gnu_cxx::__enable_if<__is_char<_CharT>::__value,
-      ostreambuf_iterator<_CharT, char_traits<_CharT> > >::__type
-    __copy_move_a2(_CharT*, _CharT*,
-     ostreambuf_iterator<_CharT, char_traits<_CharT> >);
-
-  template<bool _IsMove, typename _CharT>
-    typename __gnu_cxx::__enable_if<__is_char<_CharT>::__value,
-      ostreambuf_iterator<_CharT, char_traits<_CharT> > >::__type
-    __copy_move_a2(const _CharT*, const _CharT*,
-     ostreambuf_iterator<_CharT, char_traits<_CharT> >);
-
-  template<bool _IsMove, typename _CharT>
-    typename __gnu_cxx::__enable_if<__is_char<_CharT>::__value,
-        _CharT*>::__type
-    __copy_move_a2(istreambuf_iterator<_CharT, char_traits<_CharT> >,
-     istreambuf_iterator<_CharT, char_traits<_CharT> >, _CharT*);
-
-  template<bool _IsMove, typename _CharT>
-    typename __gnu_cxx::__enable_if<
-      __is_char<_CharT>::__value,
-      std::_Deque_iterator<_CharT, _CharT&, _CharT*> >::__type
-    __copy_move_a2(
- istreambuf_iterator<_CharT, char_traits<_CharT> >,
- istreambuf_iterator<_CharT, char_traits<_CharT> >,
- std::_Deque_iterator<_CharT, _CharT&, _CharT*>);
-
-
-  template<bool _IsMove, typename _II, typename _OI>
-    constexpr
-    inline _OI
-    __copy_move_a2(_II __first, _II __last, _OI __result)
-    {
-      typedef typename iterator_traits<_II>::iterator_category _Category;
-
-      if (std::is_constant_evaluated())
- return std::__copy_move<_IsMove, false, _Category>::
-   __copy_m(__first, __last, __result);
-
-      return std::__copy_move<_IsMove, __memcpyable<_OI, _II>::__value,
-         _Category>::__copy_m(__first, __last, __result);
-    }
-
-  template<bool _IsMove,
-    typename _Tp, typename _Ref, typename _Ptr, typename _OI>
-    _OI
-    __copy_move_a1(std::_Deque_iterator<_Tp, _Ref, _Ptr>,
-     std::_Deque_iterator<_Tp, _Ref, _Ptr>,
-     _OI);
-
-  template<bool _IsMove,
-    typename _ITp, typename _IRef, typename _IPtr, typename _OTp>
-    std::_Deque_iterator<_OTp, _OTp&, _OTp*>
-    __copy_move_a1(std::_Deque_iterator<_ITp, _IRef, _IPtr>,
-     std::_Deque_iterator<_ITp, _IRef, _IPtr>,
-     std::_Deque_iterator<_OTp, _OTp&, _OTp*>);
-
-  template<bool _IsMove, typename _II, typename _Tp>
-    typename __gnu_cxx::__enable_if<
-      __is_random_access_iter<_II>::__value,
-      std::_Deque_iterator<_Tp, _Tp&, _Tp*> >::__type
-    __copy_move_a1(_II, _II, std::_Deque_iterator<_Tp, _Tp&, _Tp*>);
-
-  template<bool _IsMove, typename _II, typename _OI>
-    constexpr
-    inline _OI
-    __copy_move_a1(_II __first, _II __last, _OI __result)
-    { return std::__copy_move_a2<_IsMove>(__first, __last, __result); }
-
-  template<bool _IsMove, typename _II, typename _OI>
-    constexpr
-    inline _OI
-    __copy_move_a(_II __first, _II __last, _OI __result)
-    {
-      return std::__niter_wrap(__result,
-  std::__copy_move_a1<_IsMove>(std::__niter_base(__first),
-          std::__niter_base(__last),
-          std::__niter_base(__result)));
-    }
-
-  template<bool _IsMove,
-    typename _Ite, typename _Seq, typename _Cat, typename _OI>
-    constexpr
-    _OI
-    __copy_move_a(const ::__gnu_debug::_Safe_iterator<_Ite, _Seq, _Cat>&,
-    const ::__gnu_debug::_Safe_iterator<_Ite, _Seq, _Cat>&,
-    _OI);
-
-  template<bool _IsMove,
-    typename _II, typename _Ite, typename _Seq, typename _Cat>
-    constexpr
-    __gnu_debug::_Safe_iterator<_Ite, _Seq, _Cat>
-    __copy_move_a(_II, _II,
-    const ::__gnu_debug::_Safe_iterator<_Ite, _Seq, _Cat>&);
-
-  template<bool _IsMove,
-    typename _IIte, typename _ISeq, typename _ICat,
-    typename _OIte, typename _OSeq, typename _OCat>
-    constexpr
-    ::__gnu_debug::_Safe_iterator<_OIte, _OSeq, _OCat>
-    __copy_move_a(const ::__gnu_debug::_Safe_iterator<_IIte, _ISeq, _ICat>&,
-    const ::__gnu_debug::_Safe_iterator<_IIte, _ISeq, _ICat>&,
-    const ::__gnu_debug::_Safe_iterator<_OIte, _OSeq, _OCat>&);
-
-  template<typename _InputIterator, typename _Size, typename _OutputIterator>
-    constexpr
-    _OutputIterator
-    __copy_n_a(_InputIterator __first, _Size __n, _OutputIterator __result,
-        bool)
-    {
-      if (__n > 0)
- {
-   while (true)
-     {
-       *__result = *__first;
-       ++__result;
-       if (--__n > 0)
-  ++__first;
-       else
-  break;
-     }
- }
-      return __result;
-    }
-
-
-  template<typename _CharT, typename _Size>
-    typename __gnu_cxx::__enable_if<
-      __is_char<_CharT>::__value, _CharT*>::__type
-    __copy_n_a(istreambuf_iterator<_CharT, char_traits<_CharT> >,
-        _Size, _CharT*, bool);
-
-  template<typename _CharT, typename _Size>
-    typename __gnu_cxx::__enable_if<
-      __is_char<_CharT>::__value,
-      std::_Deque_iterator<_CharT, _CharT&, _CharT*> >::__type
-    __copy_n_a(istreambuf_iterator<_CharT, char_traits<_CharT> >, _Size,
-        std::_Deque_iterator<_CharT, _CharT&, _CharT*>,
-        bool);
-# 639 "/usr/include/c++/14/bits/stl_algobase.h" 3
-  template<typename _II, typename _OI>
-    constexpr
-    inline _OI
-    copy(_II __first, _II __last, _OI __result)
-    {
-
-     
-     
-
-      ;
-
-      return std::__copy_move_a<__is_move_iterator<_II>::__value>
-      (std::__miter_base(__first), std::__miter_base(__last), __result);
-    }
-# 672 "/usr/include/c++/14/bits/stl_algobase.h" 3
-  template<typename _II, typename _OI>
-    constexpr
-    inline _OI
-    move(_II __first, _II __last, _OI __result)
-    {
-
-     
-     
-
-      ;
-
-      return std::__copy_move_a<true>(std::__miter_base(__first),
-          std::__miter_base(__last), __result);
-    }
-
-
-
-
-
-
-  template<bool _IsMove, bool _IsSimple, typename _Category>
-    struct __copy_move_backward
-    {
-      template<typename _BI1, typename _BI2>
- constexpr
- static _BI2
- __copy_move_b(_BI1 __first, _BI1 __last, _BI2 __result)
- {
-   while (__first != __last)
-     *--__result = *--__last;
-   return __result;
- }
-    };
-
-
-  template<typename _Category>
-    struct __copy_move_backward<true, false, _Category>
-    {
-      template<typename _BI1, typename _BI2>
- constexpr
- static _BI2
- __copy_move_b(_BI1 __first, _BI1 __last, _BI2 __result)
- {
-   while (__first != __last)
-     *--__result = std::move(*--__last);
-   return __result;
- }
-    };
-
-
-  template<>
-    struct __copy_move_backward<false, false, random_access_iterator_tag>
-    {
-      template<typename _BI1, typename _BI2>
- constexpr
- static _BI2
- __copy_move_b(_BI1 __first, _BI1 __last, _BI2 __result)
- {
-   typename iterator_traits<_BI1>::difference_type
-     __n = __last - __first;
-   for (; __n > 0; --__n)
-     *--__result = *--__last;
-   return __result;
- }
-    };
-
-
-  template<>
-    struct __copy_move_backward<true, false, random_access_iterator_tag>
-    {
-      template<typename _BI1, typename _BI2>
- constexpr
- static _BI2
- __copy_move_b(_BI1 __first, _BI1 __last, _BI2 __result)
- {
-   typename iterator_traits<_BI1>::difference_type
-     __n = __last - __first;
-   for (; __n > 0; --__n)
-     *--__result = std::move(*--__last);
-   return __result;
- }
-    };
-
-
-  template<bool _IsMove>
-    struct __copy_move_backward<_IsMove, true, random_access_iterator_tag>
-    {
-      template<typename _Tp, typename _Up>
- constexpr
- static _Up*
- __copy_move_b(_Tp* __first, _Tp* __last, _Up* __result)
- {
-   const ptrdiff_t _Num = __last - __first;
-   if (__builtin_expect(_Num > 1, true))
-     __builtin_memmove(__result - _Num, __first, sizeof(_Tp) * _Num);
-   else if (_Num == 1)
-     std::__copy_move<_IsMove, false, random_access_iterator_tag>::
-       __assign_one(__result - 1, __first);
-   return __result - _Num;
- }
-    };
-
-  template<bool _IsMove, typename _BI1, typename _BI2>
-    constexpr
-    inline _BI2
-    __copy_move_backward_a2(_BI1 __first, _BI1 __last, _BI2 __result)
-    {
-      typedef typename iterator_traits<_BI1>::iterator_category _Category;
-
-      if (std::is_constant_evaluated())
- return std::__copy_move_backward<_IsMove, false, _Category>::
-   __copy_move_b(__first, __last, __result);
-
-      return std::__copy_move_backward<_IsMove,
-           __memcpyable<_BI2, _BI1>::__value,
-           _Category>::__copy_move_b(__first,
-         __last,
-         __result);
-    }
-
-  template<bool _IsMove, typename _BI1, typename _BI2>
-    constexpr
-    inline _BI2
-    __copy_move_backward_a1(_BI1 __first, _BI1 __last, _BI2 __result)
-    { return std::__copy_move_backward_a2<_IsMove>(__first, __last, __result); }
-
-  template<bool _IsMove,
-    typename _Tp, typename _Ref, typename _Ptr, typename _OI>
-    _OI
-    __copy_move_backward_a1(std::_Deque_iterator<_Tp, _Ref, _Ptr>,
-       std::_Deque_iterator<_Tp, _Ref, _Ptr>,
-       _OI);
-
-  template<bool _IsMove,
-    typename _ITp, typename _IRef, typename _IPtr, typename _OTp>
-    std::_Deque_iterator<_OTp, _OTp&, _OTp*>
-    __copy_move_backward_a1(
-   std::_Deque_iterator<_ITp, _IRef, _IPtr>,
-   std::_Deque_iterator<_ITp, _IRef, _IPtr>,
-   std::_Deque_iterator<_OTp, _OTp&, _OTp*>);
-
-  template<bool _IsMove, typename _II, typename _Tp>
-    typename __gnu_cxx::__enable_if<
-      __is_random_access_iter<_II>::__value,
-      std::_Deque_iterator<_Tp, _Tp&, _Tp*> >::__type
-    __copy_move_backward_a1(_II, _II,
-       std::_Deque_iterator<_Tp, _Tp&, _Tp*>);
-
-  template<bool _IsMove, typename _II, typename _OI>
-    constexpr
-    inline _OI
-    __copy_move_backward_a(_II __first, _II __last, _OI __result)
-    {
-      return std::__niter_wrap(__result,
-  std::__copy_move_backward_a1<_IsMove>
-    (std::__niter_base(__first), std::__niter_base(__last),
-     std::__niter_base(__result)));
-    }
-
-  template<bool _IsMove,
-    typename _Ite, typename _Seq, typename _Cat, typename _OI>
-    constexpr
-    _OI
-    __copy_move_backward_a(
-  const ::__gnu_debug::_Safe_iterator<_Ite, _Seq, _Cat>&,
-  const ::__gnu_debug::_Safe_iterator<_Ite, _Seq, _Cat>&,
-  _OI);
-
-  template<bool _IsMove,
-    typename _II, typename _Ite, typename _Seq, typename _Cat>
-    constexpr
-    __gnu_debug::_Safe_iterator<_Ite, _Seq, _Cat>
-    __copy_move_backward_a(_II, _II,
-  const ::__gnu_debug::_Safe_iterator<_Ite, _Seq, _Cat>&);
-
-  template<bool _IsMove,
-    typename _IIte, typename _ISeq, typename _ICat,
-    typename _OIte, typename _OSeq, typename _OCat>
-    constexpr
-    ::__gnu_debug::_Safe_iterator<_OIte, _OSeq, _OCat>
-    __copy_move_backward_a(
-  const ::__gnu_debug::_Safe_iterator<_IIte, _ISeq, _ICat>&,
-  const ::__gnu_debug::_Safe_iterator<_IIte, _ISeq, _ICat>&,
-  const ::__gnu_debug::_Safe_iterator<_OIte, _OSeq, _OCat>&);
-# 875 "/usr/include/c++/14/bits/stl_algobase.h" 3
-  template<typename _BI1, typename _BI2>
-    constexpr
-    inline _BI2
-    copy_backward(_BI1 __first, _BI1 __last, _BI2 __result)
-    {
-
-     
-     
-     
-
-      ;
-
-      return std::__copy_move_backward_a<__is_move_iterator<_BI1>::__value>
-      (std::__miter_base(__first), std::__miter_base(__last), __result);
-    }
-# 910 "/usr/include/c++/14/bits/stl_algobase.h" 3
-  template<typename _BI1, typename _BI2>
-    constexpr
-    inline _BI2
-    move_backward(_BI1 __first, _BI1 __last, _BI2 __result)
-    {
-
-     
-     
-     
-
-      ;
-
-      return std::__copy_move_backward_a<true>(std::__miter_base(__first),
-            std::__miter_base(__last),
-            __result);
-    }
-
-
-
-
-
-
-  template<typename _ForwardIterator, typename _Tp>
-    constexpr
-    inline typename
-    __gnu_cxx::__enable_if<!__is_scalar<_Tp>::__value, void>::__type
-    __fill_a1(_ForwardIterator __first, _ForwardIterator __last,
-       const _Tp& __value)
-    {
-      for (; __first != __last; ++__first)
- *__first = __value;
-    }
-
-  template<typename _ForwardIterator, typename _Tp>
-    constexpr
-    inline typename
-    __gnu_cxx::__enable_if<__is_scalar<_Tp>::__value, void>::__type
-    __fill_a1(_ForwardIterator __first, _ForwardIterator __last,
-       const _Tp& __value)
-    {
-      const _Tp __tmp = __value;
-      for (; __first != __last; ++__first)
- *__first = __tmp;
-    }
-
-
-  template<typename _Tp>
-    constexpr
-    inline typename
-    __gnu_cxx::__enable_if<__is_byte<_Tp>::__value, void>::__type
-    __fill_a1(_Tp* __first, _Tp* __last, const _Tp& __c)
-    {
-      const _Tp __tmp = __c;
-
-      if (std::is_constant_evaluated())
- {
-   for (; __first != __last; ++__first)
-     *__first = __tmp;
-   return;
- }
-
-      if (const size_t __len = __last - __first)
- __builtin_memset(__first, static_cast<unsigned char>(__tmp), __len);
-    }
-
-  template<typename _Ite, typename _Cont, typename _Tp>
-    constexpr
-    inline void
-    __fill_a1(::__gnu_cxx::__normal_iterator<_Ite, _Cont> __first,
-       ::__gnu_cxx::__normal_iterator<_Ite, _Cont> __last,
-       const _Tp& __value)
-    { std::__fill_a1(__first.base(), __last.base(), __value); }
-
-  template<typename _Tp, typename _VTp>
-    void
-    __fill_a1(const std::_Deque_iterator<_Tp, _Tp&, _Tp*>&,
-       const std::_Deque_iterator<_Tp, _Tp&, _Tp*>&,
-       const _VTp&);
-
-  constexpr
-  void
-  __fill_a1(std::_Bit_iterator, std::_Bit_iterator,
-     const bool&);
-
-  template<typename _FIte, typename _Tp>
-    constexpr
-    inline void
-    __fill_a(_FIte __first, _FIte __last, const _Tp& __value)
-    { std::__fill_a1(__first, __last, __value); }
-
-  template<typename _Ite, typename _Seq, typename _Cat, typename _Tp>
-    constexpr
-    void
-    __fill_a(const ::__gnu_debug::_Safe_iterator<_Ite, _Seq, _Cat>&,
-      const ::__gnu_debug::_Safe_iterator<_Ite, _Seq, _Cat>&,
-      const _Tp&);
-# 1019 "/usr/include/c++/14/bits/stl_algobase.h" 3
-  template<typename _ForwardIterator, typename _Tp>
-    constexpr
-    inline void
-    fill(_ForwardIterator __first, _ForwardIterator __last, const _Tp& __value)
-    {
-
-     
-
-      ;
-
-      std::__fill_a(__first, __last, __value);
-    }
-
-
-  inline constexpr int
-  __size_to_integer(int __n) { return __n; }
-  inline constexpr unsigned
-  __size_to_integer(unsigned __n) { return __n; }
-  inline constexpr long
-  __size_to_integer(long __n) { return __n; }
-  inline constexpr unsigned long
-  __size_to_integer(unsigned long __n) { return __n; }
-  inline constexpr long long
-  __size_to_integer(long long __n) { return __n; }
-  inline constexpr unsigned long long
-  __size_to_integer(unsigned long long __n) { return __n; }
-
-
-  __extension__ inline constexpr __int128
-  __size_to_integer(__int128 __n) { return __n; }
-  __extension__ inline constexpr unsigned __int128
-  __size_to_integer(unsigned __int128 __n) { return __n; }
-# 1071 "/usr/include/c++/14/bits/stl_algobase.h" 3
-  inline constexpr long long
-  __size_to_integer(float __n) { return (long long)__n; }
-  inline constexpr long long
-  __size_to_integer(double __n) { return (long long)__n; }
-  inline constexpr long long
-  __size_to_integer(long double __n) { return (long long)__n; }
-
-  __extension__ inline constexpr long long
-  __size_to_integer(__float128 __n) { return (long long)__n; }
-
-
-  template<typename _OutputIterator, typename _Size, typename _Tp>
-    constexpr
-    inline typename
-    __gnu_cxx::__enable_if<!__is_scalar<_Tp>::__value, _OutputIterator>::__type
-    __fill_n_a1(_OutputIterator __first, _Size __n, const _Tp& __value)
-    {
-      for (; __n > 0; --__n, (void) ++__first)
- *__first = __value;
-      return __first;
-    }
-
-  template<typename _OutputIterator, typename _Size, typename _Tp>
-    constexpr
-    inline typename
-    __gnu_cxx::__enable_if<__is_scalar<_Tp>::__value, _OutputIterator>::__type
-    __fill_n_a1(_OutputIterator __first, _Size __n, const _Tp& __value)
-    {
-      const _Tp __tmp = __value;
-      for (; __n > 0; --__n, (void) ++__first)
- *__first = __tmp;
-      return __first;
-    }
-
-  template<typename _Ite, typename _Seq, typename _Cat, typename _Size,
-    typename _Tp>
-    constexpr
-    ::__gnu_debug::_Safe_iterator<_Ite, _Seq, _Cat>
-    __fill_n_a(const ::__gnu_debug::_Safe_iterator<_Ite, _Seq, _Cat>& __first,
-        _Size __n, const _Tp& __value,
-        std::input_iterator_tag);
-
-  template<typename _OutputIterator, typename _Size, typename _Tp>
-    constexpr
-    inline _OutputIterator
-    __fill_n_a(_OutputIterator __first, _Size __n, const _Tp& __value,
-        std::output_iterator_tag)
-    {
-
-      static_assert(is_integral<_Size>{}, "fill_n must pass integral size");
-
-      return __fill_n_a1(__first, __n, __value);
-    }
-
-  template<typename _OutputIterator, typename _Size, typename _Tp>
-    constexpr
-    inline _OutputIterator
-    __fill_n_a(_OutputIterator __first, _Size __n, const _Tp& __value,
-        std::input_iterator_tag)
-    {
-
-      static_assert(is_integral<_Size>{}, "fill_n must pass integral size");
-
-      return __fill_n_a1(__first, __n, __value);
-    }
-
-  template<typename _OutputIterator, typename _Size, typename _Tp>
-    constexpr
-    inline _OutputIterator
-    __fill_n_a(_OutputIterator __first, _Size __n, const _Tp& __value,
-        std::random_access_iterator_tag)
-    {
-
-      static_assert(is_integral<_Size>{}, "fill_n must pass integral size");
-
-      if (__n <= 0)
- return __first;
-
-      ;
-
-      std::__fill_a(__first, __first + __n, __value);
-      return __first + __n;
-    }
-# 1172 "/usr/include/c++/14/bits/stl_algobase.h" 3
-  template<typename _OI, typename _Size, typename _Tp>
-    constexpr
-    inline _OI
-    fill_n(_OI __first, _Size __n, const _Tp& __value)
-    {
-
-     
-
-      return std::__fill_n_a(__first, std::__size_to_integer(__n), __value,
-          std::__iterator_category(__first));
-    }
-
-  template<bool _BoolType>
-    struct __equal
-    {
-      template<typename _II1, typename _II2>
- constexpr
- static bool
- equal(_II1 __first1, _II1 __last1, _II2 __first2)
- {
-   for (; __first1 != __last1; ++__first1, (void) ++__first2)
-     if (!(*__first1 == *__first2))
-       return false;
-   return true;
- }
-    };
-
-  template<>
-    struct __equal<true>
-    {
-      template<typename _Tp>
- constexpr
- static bool
- equal(const _Tp* __first1, const _Tp* __last1, const _Tp* __first2)
- {
-   if (const size_t __len = (__last1 - __first1))
-     return !std::__memcmp(__first1, __first2, __len);
-   return true;
- }
-    };
-
-  template<typename _Tp, typename _Ref, typename _Ptr, typename _II>
-    typename __gnu_cxx::__enable_if<
-      __is_random_access_iter<_II>::__value, bool>::__type
-    __equal_aux1(std::_Deque_iterator<_Tp, _Ref, _Ptr>,
-   std::_Deque_iterator<_Tp, _Ref, _Ptr>,
-   _II);
-
-  template<typename _Tp1, typename _Ref1, typename _Ptr1,
-    typename _Tp2, typename _Ref2, typename _Ptr2>
-    bool
-    __equal_aux1(std::_Deque_iterator<_Tp1, _Ref1, _Ptr1>,
-   std::_Deque_iterator<_Tp1, _Ref1, _Ptr1>,
-   std::_Deque_iterator<_Tp2, _Ref2, _Ptr2>);
-
-  template<typename _II, typename _Tp, typename _Ref, typename _Ptr>
-    typename __gnu_cxx::__enable_if<
-      __is_random_access_iter<_II>::__value, bool>::__type
-    __equal_aux1(_II, _II,
-  std::_Deque_iterator<_Tp, _Ref, _Ptr>);
-
-  template<typename _II1, typename _II2>
-    constexpr
-    inline bool
-    __equal_aux1(_II1 __first1, _II1 __last1, _II2 __first2)
-    {
-      typedef typename iterator_traits<_II1>::value_type _ValueType1;
-      const bool __simple = ((__is_integer<_ValueType1>::__value
-         || __is_pointer<_ValueType1>::__value)
-        && __memcmpable<_II1, _II2>::__value);
-      return std::__equal<__simple>::equal(__first1, __last1, __first2);
-    }
-
-  template<typename _II1, typename _II2>
-    constexpr
-    inline bool
-    __equal_aux(_II1 __first1, _II1 __last1, _II2 __first2)
-    {
-      return std::__equal_aux1(std::__niter_base(__first1),
-          std::__niter_base(__last1),
-          std::__niter_base(__first2));
-    }
-
-  template<typename _II1, typename _Seq1, typename _Cat1, typename _II2>
-    constexpr
-    bool
-    __equal_aux(const ::__gnu_debug::_Safe_iterator<_II1, _Seq1, _Cat1>&,
-  const ::__gnu_debug::_Safe_iterator<_II1, _Seq1, _Cat1>&,
-  _II2);
-
-  template<typename _II1, typename _II2, typename _Seq2, typename _Cat2>
-    constexpr
-    bool
-    __equal_aux(_II1, _II1,
-  const ::__gnu_debug::_Safe_iterator<_II2, _Seq2, _Cat2>&);
-
-  template<typename _II1, typename _Seq1, typename _Cat1,
-    typename _II2, typename _Seq2, typename _Cat2>
-    constexpr
-    bool
-    __equal_aux(const ::__gnu_debug::_Safe_iterator<_II1, _Seq1, _Cat1>&,
-  const ::__gnu_debug::_Safe_iterator<_II1, _Seq1, _Cat1>&,
-  const ::__gnu_debug::_Safe_iterator<_II2, _Seq2, _Cat2>&);
-
-  template<typename, typename>
-    struct __lc_rai
-    {
-      template<typename _II1, typename _II2>
- constexpr
- static _II1
- __newlast1(_II1, _II1 __last1, _II2, _II2)
- { return __last1; }
-
-      template<typename _II>
- constexpr
- static bool
- __cnd2(_II __first, _II __last)
- { return __first != __last; }
-    };
-
-  template<>
-    struct __lc_rai<random_access_iterator_tag, random_access_iterator_tag>
-    {
-      template<typename _RAI1, typename _RAI2>
- constexpr
- static _RAI1
- __newlast1(_RAI1 __first1, _RAI1 __last1,
-     _RAI2 __first2, _RAI2 __last2)
- {
-   const typename iterator_traits<_RAI1>::difference_type
-     __diff1 = __last1 - __first1;
-   const typename iterator_traits<_RAI2>::difference_type
-     __diff2 = __last2 - __first2;
-   return __diff2 < __diff1 ? __first1 + __diff2 : __last1;
- }
-
-      template<typename _RAI>
- static constexpr bool
- __cnd2(_RAI, _RAI)
- { return true; }
-    };
-
-  template<typename _II1, typename _II2, typename _Compare>
-    constexpr
-    bool
-    __lexicographical_compare_impl(_II1 __first1, _II1 __last1,
-       _II2 __first2, _II2 __last2,
-       _Compare __comp)
-    {
-      typedef typename iterator_traits<_II1>::iterator_category _Category1;
-      typedef typename iterator_traits<_II2>::iterator_category _Category2;
-      typedef std::__lc_rai<_Category1, _Category2> __rai_type;
-
-      __last1 = __rai_type::__newlast1(__first1, __last1, __first2, __last2);
-      for (; __first1 != __last1 && __rai_type::__cnd2(__first2, __last2);
-    ++__first1, (void)++__first2)
- {
-   if (__comp(__first1, __first2))
-     return true;
-   if (__comp(__first2, __first1))
-     return false;
- }
-      return __first1 == __last1 && __first2 != __last2;
-    }
-
-  template<bool _BoolType>
-    struct __lexicographical_compare
-    {
-      template<typename _II1, typename _II2>
- constexpr
- static bool
- __lc(_II1 __first1, _II1 __last1, _II2 __first2, _II2 __last2)
- {
-   using __gnu_cxx::__ops::__iter_less_iter;
-   return std::__lexicographical_compare_impl(__first1, __last1,
-           __first2, __last2,
-           __iter_less_iter());
- }
-
-      template<typename _II1, typename _II2>
- constexpr
- static int
- __3way(_II1 __first1, _II1 __last1, _II2 __first2, _II2 __last2)
- {
-   while (__first1 != __last1)
-     {
-       if (__first2 == __last2)
-  return +1;
-       if (*__first1 < *__first2)
-  return -1;
-       if (*__first2 < *__first1)
-  return +1;
-       ++__first1;
-       ++__first2;
-     }
-   return int(__first2 == __last2) - 1;
- }
-    };
-
-  template<>
-    struct __lexicographical_compare<true>
-    {
-      template<typename _Tp, typename _Up>
- constexpr
- static bool
- __lc(const _Tp* __first1, const _Tp* __last1,
-      const _Up* __first2, const _Up* __last2)
- { return __3way(__first1, __last1, __first2, __last2) < 0; }
-
-      template<typename _Tp, typename _Up>
- constexpr
- static ptrdiff_t
- __3way(const _Tp* __first1, const _Tp* __last1,
-        const _Up* __first2, const _Up* __last2)
- {
-   const size_t __len1 = __last1 - __first1;
-   const size_t __len2 = __last2 - __first2;
-   if (const size_t __len = std::min(__len1, __len2))
-     if (int __result = std::__memcmp(__first1, __first2, __len))
-       return __result;
-   return ptrdiff_t(__len1 - __len2);
- }
-    };
-
-  template<typename _II1, typename _II2>
-    constexpr
-    inline bool
-    __lexicographical_compare_aux1(_II1 __first1, _II1 __last1,
-       _II2 __first2, _II2 __last2)
-    {
-      typedef typename iterator_traits<_II1>::value_type _ValueType1;
-      typedef typename iterator_traits<_II2>::value_type _ValueType2;
-      const bool __simple =
- (__is_memcmp_ordered_with<_ValueType1, _ValueType2>::__value
-  && __is_pointer<_II1>::__value
-  && __is_pointer<_II2>::__value
-
-
-
-
-  && !is_volatile_v<remove_reference_t<iter_reference_t<_II1>>>
-  && !is_volatile_v<remove_reference_t<iter_reference_t<_II2>>>
-
-  );
-
-      return std::__lexicographical_compare<__simple>::__lc(__first1, __last1,
-           __first2, __last2);
-    }
-
-  template<typename _Tp1, typename _Ref1, typename _Ptr1,
-    typename _Tp2>
-    bool
-    __lexicographical_compare_aux1(
- std::_Deque_iterator<_Tp1, _Ref1, _Ptr1>,
- std::_Deque_iterator<_Tp1, _Ref1, _Ptr1>,
- _Tp2*, _Tp2*);
-
-  template<typename _Tp1,
-    typename _Tp2, typename _Ref2, typename _Ptr2>
-    bool
-    __lexicographical_compare_aux1(_Tp1*, _Tp1*,
- std::_Deque_iterator<_Tp2, _Ref2, _Ptr2>,
- std::_Deque_iterator<_Tp2, _Ref2, _Ptr2>);
-
-  template<typename _Tp1, typename _Ref1, typename _Ptr1,
-    typename _Tp2, typename _Ref2, typename _Ptr2>
-    bool
-    __lexicographical_compare_aux1(
- std::_Deque_iterator<_Tp1, _Ref1, _Ptr1>,
- std::_Deque_iterator<_Tp1, _Ref1, _Ptr1>,
- std::_Deque_iterator<_Tp2, _Ref2, _Ptr2>,
- std::_Deque_iterator<_Tp2, _Ref2, _Ptr2>);
-
-  template<typename _II1, typename _II2>
-    constexpr
-    inline bool
-    __lexicographical_compare_aux(_II1 __first1, _II1 __last1,
-      _II2 __first2, _II2 __last2)
-    {
-      return std::__lexicographical_compare_aux1(std::__niter_base(__first1),
-       std::__niter_base(__last1),
-       std::__niter_base(__first2),
-       std::__niter_base(__last2));
-    }
-
-  template<typename _Iter1, typename _Seq1, typename _Cat1,
-    typename _II2>
-    constexpr
-    bool
-    __lexicographical_compare_aux(
-  const ::__gnu_debug::_Safe_iterator<_Iter1, _Seq1, _Cat1>&,
-  const ::__gnu_debug::_Safe_iterator<_Iter1, _Seq1, _Cat1>&,
-  _II2, _II2);
-
-  template<typename _II1,
-    typename _Iter2, typename _Seq2, typename _Cat2>
-    constexpr
-    bool
-    __lexicographical_compare_aux(
-  _II1, _II1,
-  const ::__gnu_debug::_Safe_iterator<_Iter2, _Seq2, _Cat2>&,
-  const ::__gnu_debug::_Safe_iterator<_Iter2, _Seq2, _Cat2>&);
-
-  template<typename _Iter1, typename _Seq1, typename _Cat1,
-    typename _Iter2, typename _Seq2, typename _Cat2>
-    constexpr
-    bool
-    __lexicographical_compare_aux(
-  const ::__gnu_debug::_Safe_iterator<_Iter1, _Seq1, _Cat1>&,
-  const ::__gnu_debug::_Safe_iterator<_Iter1, _Seq1, _Cat1>&,
-  const ::__gnu_debug::_Safe_iterator<_Iter2, _Seq2, _Cat2>&,
-  const ::__gnu_debug::_Safe_iterator<_Iter2, _Seq2, _Cat2>&);
-
-  template<typename _ForwardIterator, typename _Tp, typename _Compare>
-    constexpr
-    _ForwardIterator
-    __lower_bound(_ForwardIterator __first, _ForwardIterator __last,
-    const _Tp& __val, _Compare __comp)
-    {
-      typedef typename iterator_traits<_ForwardIterator>::difference_type
- _DistanceType;
-
-      _DistanceType __len = std::distance(__first, __last);
-
-      while (__len > 0)
- {
-   _DistanceType __half = __len >> 1;
-   _ForwardIterator __middle = __first;
-   std::advance(__middle, __half);
-   if (__comp(__middle, __val))
-     {
-       __first = __middle;
-       ++__first;
-       __len = __len - __half - 1;
-     }
-   else
-     __len = __half;
- }
-      return __first;
-    }
-# 1524 "/usr/include/c++/14/bits/stl_algobase.h" 3
-  template<typename _ForwardIterator, typename _Tp>
-    [[__nodiscard__]] constexpr
-    inline _ForwardIterator
-    lower_bound(_ForwardIterator __first, _ForwardIterator __last,
-  const _Tp& __val)
-    {
-
-     
-     
-
-      ;
-
-      return std::__lower_bound(__first, __last, __val,
-    __gnu_cxx::__ops::__iter_less_val());
-    }
-
-
-
-  template<typename _Tp>
-    inline constexpr _Tp
-    __lg(_Tp __n)
-    {
-
-      return std::__bit_width(make_unsigned_t<_Tp>(__n)) - 1;
-# 1557 "/usr/include/c++/14/bits/stl_algobase.h" 3
-    }
-
-
-# 1573 "/usr/include/c++/14/bits/stl_algobase.h" 3
-  template<typename _II1, typename _II2>
-    [[__nodiscard__]] constexpr
-    inline bool
-    equal(_II1 __first1, _II1 __last1, _II2 __first2)
-    {
-
-     
-     
-     
-
-
-      ;
-
-      return std::__equal_aux(__first1, __last1, __first2);
-    }
-# 1604 "/usr/include/c++/14/bits/stl_algobase.h" 3
-  template<typename _IIter1, typename _IIter2, typename _BinaryPredicate>
-    [[__nodiscard__]] constexpr
-    inline bool
-    equal(_IIter1 __first1, _IIter1 __last1,
-   _IIter2 __first2, _BinaryPredicate __binary_pred)
-    {
-
-     
-     
-      ;
-
-      for (; __first1 != __last1; ++__first1, (void)++__first2)
- if (!bool(__binary_pred(*__first1, *__first2)))
-   return false;
-      return true;
-    }
-
-
-
-  template<typename _II1, typename _II2>
-    constexpr
-    inline bool
-    __equal4(_II1 __first1, _II1 __last1, _II2 __first2, _II2 __last2)
-    {
-      using _RATag = random_access_iterator_tag;
-      using _Cat1 = typename iterator_traits<_II1>::iterator_category;
-      using _Cat2 = typename iterator_traits<_II2>::iterator_category;
-      using _RAIters = __and_<is_same<_Cat1, _RATag>, is_same<_Cat2, _RATag>>;
-      if (_RAIters())
- {
-   auto __d1 = std::distance(__first1, __last1);
-   auto __d2 = std::distance(__first2, __last2);
-   if (__d1 != __d2)
-     return false;
-   return std::equal(__first1, __last1, __first2);
- }
-
-      for (; __first1 != __last1 && __first2 != __last2;
-   ++__first1, (void)++__first2)
- if (!(*__first1 == *__first2))
-   return false;
-      return __first1 == __last1 && __first2 == __last2;
-    }
-
-
-  template<typename _II1, typename _II2, typename _BinaryPredicate>
-    constexpr
-    inline bool
-    __equal4(_II1 __first1, _II1 __last1, _II2 __first2, _II2 __last2,
-      _BinaryPredicate __binary_pred)
-    {
-      using _RATag = random_access_iterator_tag;
-      using _Cat1 = typename iterator_traits<_II1>::iterator_category;
-      using _Cat2 = typename iterator_traits<_II2>::iterator_category;
-      using _RAIters = __and_<is_same<_Cat1, _RATag>, is_same<_Cat2, _RATag>>;
-      if (_RAIters())
- {
-   auto __d1 = std::distance(__first1, __last1);
-   auto __d2 = std::distance(__first2, __last2);
-   if (__d1 != __d2)
-     return false;
-   return std::equal(__first1, __last1, __first2,
-           __binary_pred);
- }
-
-      for (; __first1 != __last1 && __first2 != __last2;
-   ++__first1, (void)++__first2)
- if (!bool(__binary_pred(*__first1, *__first2)))
-   return false;
-      return __first1 == __last1 && __first2 == __last2;
-    }
-# 1691 "/usr/include/c++/14/bits/stl_algobase.h" 3
-  template<typename _II1, typename _II2>
-    [[__nodiscard__]] constexpr
-    inline bool
-    equal(_II1 __first1, _II1 __last1, _II2 __first2, _II2 __last2)
-    {
-
-     
-     
-     
-
-
-      ;
-      ;
-
-      return std::__equal4(__first1, __last1, __first2, __last2);
-    }
-# 1724 "/usr/include/c++/14/bits/stl_algobase.h" 3
-  template<typename _IIter1, typename _IIter2, typename _BinaryPredicate>
-    [[__nodiscard__]] constexpr
-    inline bool
-    equal(_IIter1 __first1, _IIter1 __last1,
-   _IIter2 __first2, _IIter2 __last2, _BinaryPredicate __binary_pred)
-    {
-
-     
-     
-      ;
-      ;
-
-      return std::__equal4(__first1, __last1, __first2, __last2,
-          __binary_pred);
-    }
-# 1756 "/usr/include/c++/14/bits/stl_algobase.h" 3
-  template<typename _II1, typename _II2>
-    [[__nodiscard__]] constexpr
-    inline bool
-    lexicographical_compare(_II1 __first1, _II1 __last1,
-       _II2 __first2, _II2 __last2)
-    {
-
-
-
-
-
-     
-     
-     
-     
-      ;
-      ;
-
-      return std::__lexicographical_compare_aux(__first1, __last1,
-      __first2, __last2);
-    }
-# 1791 "/usr/include/c++/14/bits/stl_algobase.h" 3
-  template<typename _II1, typename _II2, typename _Compare>
-    [[__nodiscard__]] constexpr
-    inline bool
-    lexicographical_compare(_II1 __first1, _II1 __last1,
-       _II2 __first2, _II2 __last2, _Compare __comp)
-    {
-
-     
-     
-      ;
-      ;
-
-      return std::__lexicographical_compare_impl
- (__first1, __last1, __first2, __last2,
-  __gnu_cxx::__ops::__iter_comp_iter(__comp));
-    }
-
-
-
-
-
-  template<typename _Iter1, typename _Iter2>
-    concept __memcmp_ordered_with
-      = (__is_memcmp_ordered_with<iter_value_t<_Iter1>,
-      iter_value_t<_Iter2>>::__value)
-   && contiguous_iterator<_Iter1> && contiguous_iterator<_Iter2>;
-
-
-
-  template<typename _Tp>
-    constexpr auto
-    __min_cmp(_Tp __x, _Tp __y)
-    {
-      struct _Res {
- _Tp _M_min;
- decltype(__x <=> __y) _M_cmp;
-      };
-      auto __c = __x <=> __y;
-      if (__c > 0)
- return _Res{__y, __c};
-      return _Res{__x, __c};
-    }
-# 1845 "/usr/include/c++/14/bits/stl_algobase.h" 3
-  template<typename _InputIter1, typename _InputIter2, typename _Comp>
-    [[nodiscard]] constexpr auto
-    lexicographical_compare_three_way(_InputIter1 __first1,
-          _InputIter1 __last1,
-          _InputIter2 __first2,
-          _InputIter2 __last2,
-          _Comp __comp)
-    -> decltype(__comp(*__first1, *__first2))
-    {
-
-     
-     
-      ;
-      ;
-
-      using _Cat = decltype(__comp(*__first1, *__first2));
-      static_assert(same_as<common_comparison_category_t<_Cat>, _Cat>);
-
-      if (!std::__is_constant_evaluated())
- if constexpr (same_as<_Comp, __detail::_Synth3way>
-        || same_as<_Comp, compare_three_way>)
-   if constexpr (__memcmp_ordered_with<_InputIter1, _InputIter2>)
-     {
-       const auto [__len, __lencmp] = std::
-  __min_cmp(__last1 - __first1, __last2 - __first2);
-       if (__len)
-  {
-    const auto __blen = __len * sizeof(*__first1);
-    const auto __c
-      = __builtin_memcmp(&*__first1, &*__first2, __blen) <=> 0;
-    if (__c != 0)
-      return __c;
-  }
-       return __lencmp;
-     }
-
-      while (__first1 != __last1)
- {
-   if (__first2 == __last2)
-     return strong_ordering::greater;
-   if (auto __cmp = __comp(*__first1, *__first2); __cmp != 0)
-     return __cmp;
-   ++__first1;
-   ++__first2;
- }
-      return (__first2 == __last2) <=> true;
-    }
-
-  template<typename _InputIter1, typename _InputIter2>
-    constexpr auto
-    lexicographical_compare_three_way(_InputIter1 __first1,
-          _InputIter1 __last1,
-          _InputIter2 __first2,
-          _InputIter2 __last2)
-    {
-      return std::
- lexicographical_compare_three_way(__first1, __last1, __first2, __last2,
-       compare_three_way{});
-    }
-
-
-  template<typename _InputIterator1, typename _InputIterator2,
-    typename _BinaryPredicate>
-    constexpr
-    pair<_InputIterator1, _InputIterator2>
-    __mismatch(_InputIterator1 __first1, _InputIterator1 __last1,
-        _InputIterator2 __first2, _BinaryPredicate __binary_pred)
-    {
-      while (__first1 != __last1 && __binary_pred(__first1, __first2))
- {
-   ++__first1;
-   ++__first2;
- }
-      return pair<_InputIterator1, _InputIterator2>(__first1, __first2);
-    }
-# 1934 "/usr/include/c++/14/bits/stl_algobase.h" 3
-  template<typename _InputIterator1, typename _InputIterator2>
-    [[__nodiscard__]] constexpr
-    inline pair<_InputIterator1, _InputIterator2>
-    mismatch(_InputIterator1 __first1, _InputIterator1 __last1,
-      _InputIterator2 __first2)
-    {
-
-     
-     
-     
-
-
-      ;
-
-      return std::__mismatch(__first1, __last1, __first2,
-        __gnu_cxx::__ops::__iter_equal_to_iter());
-    }
-# 1968 "/usr/include/c++/14/bits/stl_algobase.h" 3
-  template<typename _InputIterator1, typename _InputIterator2,
-    typename _BinaryPredicate>
-    [[__nodiscard__]] constexpr
-    inline pair<_InputIterator1, _InputIterator2>
-    mismatch(_InputIterator1 __first1, _InputIterator1 __last1,
-      _InputIterator2 __first2, _BinaryPredicate __binary_pred)
-    {
-
-     
-     
-      ;
-
-      return std::__mismatch(__first1, __last1, __first2,
- __gnu_cxx::__ops::__iter_comp_iter(__binary_pred));
-    }
-
-
-  template<typename _InputIterator1, typename _InputIterator2,
-    typename _BinaryPredicate>
-    constexpr
-    pair<_InputIterator1, _InputIterator2>
-    __mismatch(_InputIterator1 __first1, _InputIterator1 __last1,
-        _InputIterator2 __first2, _InputIterator2 __last2,
-        _BinaryPredicate __binary_pred)
-    {
-      while (__first1 != __last1 && __first2 != __last2
-      && __binary_pred(__first1, __first2))
- {
-   ++__first1;
-   ++__first2;
- }
-      return pair<_InputIterator1, _InputIterator2>(__first1, __first2);
-    }
-# 2016 "/usr/include/c++/14/bits/stl_algobase.h" 3
-  template<typename _InputIterator1, typename _InputIterator2>
-    [[__nodiscard__]] constexpr
-    inline pair<_InputIterator1, _InputIterator2>
-    mismatch(_InputIterator1 __first1, _InputIterator1 __last1,
-      _InputIterator2 __first2, _InputIterator2 __last2)
-    {
-
-     
-     
-     
-
-
-      ;
-      ;
-
-      return std::__mismatch(__first1, __last1, __first2, __last2,
-        __gnu_cxx::__ops::__iter_equal_to_iter());
-    }
-# 2052 "/usr/include/c++/14/bits/stl_algobase.h" 3
-  template<typename _InputIterator1, typename _InputIterator2,
-    typename _BinaryPredicate>
-    [[__nodiscard__]] constexpr
-    inline pair<_InputIterator1, _InputIterator2>
-    mismatch(_InputIterator1 __first1, _InputIterator1 __last1,
-      _InputIterator2 __first2, _InputIterator2 __last2,
-      _BinaryPredicate __binary_pred)
-    {
-
-     
-     
-      ;
-      ;
-
-      return std::__mismatch(__first1, __last1, __first2, __last2,
-        __gnu_cxx::__ops::__iter_comp_iter(__binary_pred));
-    }
-
-
-
-
-
-  template<typename _InputIterator, typename _Predicate>
-    constexpr
-    inline _InputIterator
-    __find_if(_InputIterator __first, _InputIterator __last,
-       _Predicate __pred, input_iterator_tag)
-    {
-      while (__first != __last && !__pred(__first))
- ++__first;
-      return __first;
-    }
-
-
-  template<typename _RandomAccessIterator, typename _Predicate>
-    constexpr
-    _RandomAccessIterator
-    __find_if(_RandomAccessIterator __first, _RandomAccessIterator __last,
-       _Predicate __pred, random_access_iterator_tag)
-    {
-      typename iterator_traits<_RandomAccessIterator>::difference_type
- __trip_count = (__last - __first) >> 2;
-
-      for (; __trip_count > 0; --__trip_count)
- {
-   if (__pred(__first))
-     return __first;
-   ++__first;
-
-   if (__pred(__first))
-     return __first;
-   ++__first;
-
-   if (__pred(__first))
-     return __first;
-   ++__first;
-
-   if (__pred(__first))
-     return __first;
-   ++__first;
- }
-
-      switch (__last - __first)
- {
- case 3:
-   if (__pred(__first))
-     return __first;
-   ++__first;
-
- case 2:
-   if (__pred(__first))
-     return __first;
-   ++__first;
-
- case 1:
-   if (__pred(__first))
-     return __first;
-   ++__first;
-
- case 0:
- default:
-   return __last;
- }
-    }
-
-  template<typename _Iterator, typename _Predicate>
-    constexpr
-    inline _Iterator
-    __find_if(_Iterator __first, _Iterator __last, _Predicate __pred)
-    {
-      return __find_if(__first, __last, __pred,
-         std::__iterator_category(__first));
-    }
-
-  template<typename _InputIterator, typename _Predicate>
-    constexpr
-    typename iterator_traits<_InputIterator>::difference_type
-    __count_if(_InputIterator __first, _InputIterator __last, _Predicate __pred)
-    {
-      typename iterator_traits<_InputIterator>::difference_type __n = 0;
-      for (; __first != __last; ++__first)
- if (__pred(__first))
-   ++__n;
-      return __n;
-    }
-
-  template<typename _ForwardIterator, typename _Predicate>
-    constexpr
-    _ForwardIterator
-    __remove_if(_ForwardIterator __first, _ForwardIterator __last,
-  _Predicate __pred)
-    {
-      __first = std::__find_if(__first, __last, __pred);
-      if (__first == __last)
- return __first;
-      _ForwardIterator __result = __first;
-      ++__first;
-      for (; __first != __last; ++__first)
- if (!__pred(__first))
-   {
-     *__result = std::move(*__first);
-     ++__result;
-   }
-      return __result;
-    }
-
-  template<typename _ForwardIterator1, typename _ForwardIterator2,
-    typename _BinaryPredicate>
-    constexpr
-    _ForwardIterator1
-    __search(_ForwardIterator1 __first1, _ForwardIterator1 __last1,
-      _ForwardIterator2 __first2, _ForwardIterator2 __last2,
-      _BinaryPredicate __predicate)
-    {
-
-      if (__first1 == __last1 || __first2 == __last2)
- return __first1;
-
-
-      _ForwardIterator2 __p1(__first2);
-      if (++__p1 == __last2)
- return std::__find_if(__first1, __last1,
-  __gnu_cxx::__ops::__iter_comp_iter(__predicate, __first2));
-
-
-      _ForwardIterator1 __current = __first1;
-
-      for (;;)
- {
-   __first1 =
-     std::__find_if(__first1, __last1,
-  __gnu_cxx::__ops::__iter_comp_iter(__predicate, __first2));
-
-   if (__first1 == __last1)
-     return __last1;
-
-   _ForwardIterator2 __p = __p1;
-   __current = __first1;
-   if (++__current == __last1)
-     return __last1;
-
-   while (__predicate(__current, __p))
-     {
-       if (++__p == __last2)
-  return __first1;
-       if (++__current == __last1)
-  return __last1;
-     }
-   ++__first1;
- }
-      return __first1;
-    }
-
-
-  template<typename _ForwardIterator1, typename _ForwardIterator2,
-    typename _BinaryPredicate>
-    constexpr
-    bool
-    __is_permutation(_ForwardIterator1 __first1, _ForwardIterator1 __last1,
-       _ForwardIterator2 __first2, _BinaryPredicate __pred)
-    {
-
-
-      for (; __first1 != __last1; ++__first1, (void)++__first2)
- if (!__pred(__first1, __first2))
-   break;
-
-      if (__first1 == __last1)
- return true;
-
-
-
-      _ForwardIterator2 __last2 = __first2;
-      std::advance(__last2, std::distance(__first1, __last1));
-      for (_ForwardIterator1 __scan = __first1; __scan != __last1; ++__scan)
- {
-   if (__scan != std::__find_if(__first1, __scan,
-     __gnu_cxx::__ops::__iter_comp_iter(__pred, __scan)))
-     continue;
-
-   auto __matches
-     = std::__count_if(__first2, __last2,
-   __gnu_cxx::__ops::__iter_comp_iter(__pred, __scan));
-   if (0 == __matches ||
-       std::__count_if(__scan, __last1,
-   __gnu_cxx::__ops::__iter_comp_iter(__pred, __scan))
-       != __matches)
-     return false;
- }
-      return true;
-    }
-# 2276 "/usr/include/c++/14/bits/stl_algobase.h" 3
-  template<typename _ForwardIterator1, typename _ForwardIterator2>
-    constexpr
-    inline bool
-    is_permutation(_ForwardIterator1 __first1, _ForwardIterator1 __last1,
-     _ForwardIterator2 __first2)
-    {
-
-     
-     
-     
-
-
-      ;
-
-      return std::__is_permutation(__first1, __last1, __first2,
-       __gnu_cxx::__ops::__iter_equal_to_iter());
-    }
-
-
-
-# 2318 "/usr/include/c++/14/bits/stl_algobase.h" 3
-  template<typename _ForwardIterator1, typename _ForwardIterator2,
-    typename _BinaryPredicate>
-    constexpr
-    inline _ForwardIterator1
-    search(_ForwardIterator1 __first1, _ForwardIterator1 __last1,
-    _ForwardIterator2 __first2, _ForwardIterator2 __last2,
-    _BinaryPredicate __predicate)
-    {
-
-     
-     
-     
-
-
-      ;
-      ;
-
-      return std::__search(__first1, __last1, __first2, __last2,
-      __gnu_cxx::__ops::__iter_comp_iter(__predicate));
-    }
-
-
-
-}
-# 52 "/usr/include/c++/14/string" 2 3
 # 1 "/usr/include/c++/14/bits/refwrap.h" 1 3
 # 33 "/usr/include/c++/14/bits/refwrap.h" 3
        
@@ -20788,410 +21620,7 @@ template<typename _Res, typename _Class, typename... _ArgTypes> struct _Mem_fn_t
 
 }
 # 53 "/usr/include/c++/14/string" 2 3
-# 1 "/usr/include/c++/14/bits/range_access.h" 1 3
-# 33 "/usr/include/c++/14/bits/range_access.h" 3
-       
-# 34 "/usr/include/c++/14/bits/range_access.h" 3
 
-
-# 1 "/usr/include/c++/14/initializer_list" 1 3
-# 33 "/usr/include/c++/14/initializer_list" 3
-       
-# 34 "/usr/include/c++/14/initializer_list" 3
-
-
-
-
-
-
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-  template<class _E>
-    class initializer_list
-    {
-    public:
-      typedef _E value_type;
-      typedef const _E& reference;
-      typedef const _E& const_reference;
-      typedef size_t size_type;
-      typedef const _E* iterator;
-      typedef const _E* const_iterator;
-
-    private:
-      iterator _M_array;
-      size_type _M_len;
-
-
-      constexpr initializer_list(const_iterator __a, size_type __l)
-      : _M_array(__a), _M_len(__l) { }
-
-    public:
-      constexpr initializer_list() noexcept
-      : _M_array(0), _M_len(0) { }
-
-
-      constexpr size_type
-      size() const noexcept { return _M_len; }
-
-
-      constexpr const_iterator
-      begin() const noexcept { return _M_array; }
-
-
-      constexpr const_iterator
-      end() const noexcept { return begin() + size(); }
-    };
-
-
-
-
-
-
-
-  template<class _Tp>
-    constexpr const _Tp*
-    begin(initializer_list<_Tp> __ils) noexcept
-    { return __ils.begin(); }
-
-
-
-
-
-
-
-  template<class _Tp>
-    constexpr const _Tp*
-    end(initializer_list<_Tp> __ils) noexcept
-    { return __ils.end(); }
-}
-# 37 "/usr/include/c++/14/bits/range_access.h" 2 3
-
-
-
-namespace std __attribute__ ((__visibility__ ("default")))
-{
-
-
-
-
-
-
-
-  template<typename _Container>
-    [[__nodiscard__, __gnu__::__always_inline__]]
-    inline constexpr auto
-    begin(_Container& __cont) -> decltype(__cont.begin())
-    { return __cont.begin(); }
-
-
-
-
-
-
-  template<typename _Container>
-    [[__nodiscard__, __gnu__::__always_inline__]]
-    inline constexpr auto
-    begin(const _Container& __cont) -> decltype(__cont.begin())
-    { return __cont.begin(); }
-
-
-
-
-
-
-  template<typename _Container>
-    [[__nodiscard__, __gnu__::__always_inline__]]
-    inline constexpr auto
-    end(_Container& __cont) -> decltype(__cont.end())
-    { return __cont.end(); }
-
-
-
-
-
-
-  template<typename _Container>
-    [[__nodiscard__, __gnu__::__always_inline__]]
-    inline constexpr auto
-    end(const _Container& __cont) -> decltype(__cont.end())
-    { return __cont.end(); }
-
-
-
-
-
-  template<typename _Tp, size_t _Nm>
-    [[__nodiscard__, __gnu__::__always_inline__]]
-    inline constexpr _Tp*
-    begin(_Tp (&__arr)[_Nm]) noexcept
-    { return __arr; }
-
-
-
-
-
-
-  template<typename _Tp, size_t _Nm>
-    [[__nodiscard__, __gnu__::__always_inline__]]
-    inline constexpr _Tp*
-    end(_Tp (&__arr)[_Nm]) noexcept
-    { return __arr + _Nm; }
-
-
-
-  template<typename _Tp> class valarray;
-
-  template<typename _Tp> _Tp* begin(valarray<_Tp>&) noexcept;
-  template<typename _Tp> const _Tp* begin(const valarray<_Tp>&) noexcept;
-  template<typename _Tp> _Tp* end(valarray<_Tp>&) noexcept;
-  template<typename _Tp> const _Tp* end(const valarray<_Tp>&) noexcept;
-
-
-
-
-
-
-  template<typename _Container>
-    [[__nodiscard__, __gnu__::__always_inline__]]
-    constexpr auto
-    cbegin(const _Container& __cont) noexcept(noexcept(std::begin(__cont)))
-      -> decltype(std::begin(__cont))
-    { return std::begin(__cont); }
-
-
-
-
-
-
-  template<typename _Container>
-    [[__nodiscard__, __gnu__::__always_inline__]]
-    constexpr auto
-    cend(const _Container& __cont) noexcept(noexcept(std::end(__cont)))
-      -> decltype(std::end(__cont))
-    { return std::end(__cont); }
-
-
-
-
-
-
-  template<typename _Container>
-    [[__nodiscard__, __gnu__::__always_inline__]]
-    inline constexpr auto
-    rbegin(_Container& __cont) -> decltype(__cont.rbegin())
-    { return __cont.rbegin(); }
-
-
-
-
-
-
-  template<typename _Container>
-    [[__nodiscard__, __gnu__::__always_inline__]]
-    inline constexpr auto
-    rbegin(const _Container& __cont) -> decltype(__cont.rbegin())
-    { return __cont.rbegin(); }
-
-
-
-
-
-
-  template<typename _Container>
-    [[__nodiscard__, __gnu__::__always_inline__]]
-    inline constexpr auto
-    rend(_Container& __cont) -> decltype(__cont.rend())
-    { return __cont.rend(); }
-
-
-
-
-
-
-  template<typename _Container>
-    [[__nodiscard__, __gnu__::__always_inline__]]
-    inline constexpr auto
-    rend(const _Container& __cont) -> decltype(__cont.rend())
-    { return __cont.rend(); }
-
-
-
-
-
-
-  template<typename _Tp, size_t _Nm>
-    [[__nodiscard__]]
-    inline constexpr reverse_iterator<_Tp*>
-    rbegin(_Tp (&__arr)[_Nm]) noexcept
-    { return reverse_iterator<_Tp*>(__arr + _Nm); }
-
-
-
-
-
-
-  template<typename _Tp, size_t _Nm>
-    [[__nodiscard__]]
-    inline constexpr reverse_iterator<_Tp*>
-    rend(_Tp (&__arr)[_Nm]) noexcept
-    { return reverse_iterator<_Tp*>(__arr); }
-
-
-
-
-
-
-  template<typename _Tp>
-    [[__nodiscard__]]
-    inline constexpr reverse_iterator<const _Tp*>
-    rbegin(initializer_list<_Tp> __il) noexcept
-    { return reverse_iterator<const _Tp*>(__il.end()); }
-
-
-
-
-
-
-  template<typename _Tp>
-    [[__nodiscard__]]
-    inline constexpr reverse_iterator<const _Tp*>
-    rend(initializer_list<_Tp> __il) noexcept
-    { return reverse_iterator<const _Tp*>(__il.begin()); }
-
-
-
-
-
-
-  template<typename _Container>
-    [[__nodiscard__, __gnu__::__always_inline__]]
-    inline constexpr auto
-    crbegin(const _Container& __cont) -> decltype(std::rbegin(__cont))
-    { return std::rbegin(__cont); }
-
-
-
-
-
-
-  template<typename _Container>
-    [[__nodiscard__, __gnu__::__always_inline__]]
-    inline constexpr auto
-    crend(const _Container& __cont) -> decltype(std::rend(__cont))
-    { return std::rend(__cont); }
-# 259 "/usr/include/c++/14/bits/range_access.h" 3
-  template <typename _Container>
-    [[nodiscard, __gnu__::__always_inline__]]
-    constexpr auto
-    size(const _Container& __cont) noexcept(noexcept(__cont.size()))
-    -> decltype(__cont.size())
-    { return __cont.size(); }
-
-
-
-
-  template <typename _Tp, size_t _Nm>
-    [[nodiscard, __gnu__::__always_inline__]]
-    constexpr size_t
-    size(const _Tp (&)[_Nm]) noexcept
-    { return _Nm; }
-
-
-
-
-
-  template <typename _Container>
-    [[nodiscard, __gnu__::__always_inline__]]
-    constexpr auto
-    empty(const _Container& __cont) noexcept(noexcept(__cont.empty()))
-    -> decltype(__cont.empty())
-    { return __cont.empty(); }
-
-
-
-
-  template <typename _Tp, size_t _Nm>
-    [[nodiscard, __gnu__::__always_inline__]]
-    constexpr bool
-    empty(const _Tp (&)[_Nm]) noexcept
-    { return false; }
-
-
-
-
-
-  template <typename _Tp>
-    [[nodiscard, __gnu__::__always_inline__]]
-    constexpr bool
-    empty(initializer_list<_Tp> __il) noexcept
-    { return __il.size() == 0;}
-
-
-
-
-
-  template <typename _Container>
-    [[nodiscard, __gnu__::__always_inline__]]
-    constexpr auto
-    data(_Container& __cont) noexcept(noexcept(__cont.data()))
-    -> decltype(__cont.data())
-    { return __cont.data(); }
-
-
-
-
-
-  template <typename _Container>
-    [[nodiscard, __gnu__::__always_inline__]]
-    constexpr auto
-    data(const _Container& __cont) noexcept(noexcept(__cont.data()))
-    -> decltype(__cont.data())
-    { return __cont.data(); }
-
-
-
-
-
-  template <typename _Tp, size_t _Nm>
-    [[nodiscard, __gnu__::__always_inline__]]
-    constexpr _Tp*
-    data(_Tp (&__array)[_Nm]) noexcept
-    { return __array; }
-
-
-
-
-
-  template <typename _Tp>
-    [[nodiscard, __gnu__::__always_inline__]]
-    constexpr const _Tp*
-    data(initializer_list<_Tp> __il) noexcept
-    { return __il.begin(); }
-
-
-
-  template<typename _Container>
-    [[nodiscard, __gnu__::__always_inline__]]
-    constexpr auto
-    ssize(const _Container& __cont)
-    noexcept(noexcept(__cont.size()))
-    -> common_type_t<ptrdiff_t, make_signed_t<decltype(__cont.size())>>
-    {
-      using type = make_signed_t<decltype(__cont.size())>;
-      return static_cast<common_type_t<ptrdiff_t, type>>(__cont.size());
-    }
-
-  template<typename _Tp, ptrdiff_t _Num>
-    [[nodiscard, __gnu__::__always_inline__]]
-    constexpr ptrdiff_t
-    ssize(const _Tp (&)[_Num]) noexcept
-    { return _Num; }
-
-
-}
-# 54 "/usr/include/c++/14/string" 2 3
 # 1 "/usr/include/c++/14/bits/basic_string.h" 1 3
 # 37 "/usr/include/c++/14/bits/basic_string.h" 3
        
@@ -43356,7 +43785,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 2 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp" 2
+# 3 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp" 2
 # 1 "/usr/include/c++/14/math.h" 1 3
 # 36 "/usr/include/c++/14/math.h" 3
 # 1 "/usr/include/c++/14/cmath" 1 3
@@ -54122,7 +54551,7 @@ using std::tgamma;
 using std::trunc;
 # 183 "/usr/include/c++/14/math.h" 3
 using std::lerp;
-# 3 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp" 2
+# 4 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp" 2
 # 1 "/usr/include/c++/14/numeric" 1 3
 # 58 "/usr/include/c++/14/numeric" 3
        
@@ -54931,7 +55360,7 @@ adjacent_difference(_ExecutionPolicy&& __exec, _ForwardIterator1 __first, _Forwa
 
 }
 # 740 "/usr/include/c++/14/numeric" 2 3
-# 4 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp" 2
+# 5 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp" 2
 # 1 "/usr/include/c++/14/queue" 1 3
 # 58 "/usr/include/c++/14/queue" 3
        
@@ -63667,7 +64096,7 @@ namespace std __attribute__ ((__visibility__ ("default")))
        
 # 48 "/usr/include/c++/14/bits/version.h" 3
 # 70 "/usr/include/c++/14/queue" 2 3
-# 5 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp" 2
+# 6 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp" 2
 # 1 "/usr/include/c++/14/valarray" 1 3
 # 34 "/usr/include/c++/14/valarray" 3
        
@@ -77255,7 +77684,7 @@ template<typename _Tp> inline _Expr<_BinClos<__greater_equal, _ValArray, _ValArr
 
 
 }
-# 6 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp" 2
+# 7 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp" 2
 
 # 1 "/usr/include/c++/14/set" 1 3
 # 58 "/usr/include/c++/14/set" 3
@@ -81388,225 +81817,220 @@ namespace std __attribute__ ((__visibility__ ("default")))
     }
 
 }
-# 8 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp" 2
+# 9 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp" 2
 
 
 
-# 10 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp"
+
+
+
+# 14 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp"
 using namespace std;
 
-int input(long long int numbers[], int N);
+constexpr bool isPrime(size_t n) noexcept {
+    if (n <= 1) return false;
+    for (size_t i = 2; i * i <= n; i++) if (n % i == 0) return false;
+    return true;
+}
 
-int findPrimes(set<int> &primes, int Pmax);
+constexpr unsigned int primeAtIndex(size_t i) noexcept {
+    size_t k{3};
+    for (size_t counter{}; counter < i; ++k)
+        if (isPrime(k)) ++counter;
+    return (k - 1) * (k - 1);
+}
 
-int findMod(long long int numbers[], int N);
+template<typename Generator, size_t ... Indices>
+constexpr array<unsigned int, sizeof...(Indices)> generateArrayHelper(Generator generator,
+                                                                      std::index_sequence<Indices...>) {
+    return array<unsigned int, sizeof...(Indices)>{generator(Indices)...};
+}
 
-int findMods(set<int> &primes, set<long long int> &mods, long long int Mmax);
+template<size_t Size, typename Generator>
+constexpr auto generateArray(Generator generator) {
+    return generateArrayHelper(generator, std::make_index_sequence<Size>());
+}
 
-long long int findMultiplier(long long int numbers[], long long int M);
+int input(long long numbers[], int N);
 
-long long int findIncrement(long long int numbers[], long long int M, long long int A);
+tuple<long long, long long, long long> findMods(set<long long> &mods, long long numbers[], int Pmax, long long Mmax,
+                                                long long maxN, int N, int idx, long long M);
 
-bool verify(long long int numbers[], long long int M, long long int A, long long int C, int N, long long int Mmax);
+long long findMultiplier(long long numbers[], long long M);
 
-long long int modInverse(long long int a, long long int m);
+long long findIncrement(long long numbers[], long long M, long long A);
+
+bool verify(long long numbers[], long long M, long long A, long long C, int N, long long Mmax);
+
+long long modInverse(long long a, long long m);
+
+
+constexpr array<unsigned int, 503> Primes = generateArray<503>(primeAtIndex);
 
 int main() {
     int Pmax, N;
-    long long int Mmax;
+    long long Mmax;
 
     if (scanf("%i %lli %i", &Pmax, &Mmax, &N) != 3) return 
-# 32 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp" 3 4
+# 60 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp" 3 4
                                                           1
-# 32 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp"
+# 60 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp"
                                                                       ;
 
     if (Pmax < 5 || Pmax > 503) return 
-# 34 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp" 3 4
+# 62 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp" 3 4
                                       1
-# 34 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp"
+# 62 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp"
                                                   ;
     if (Mmax < 25 || Mmax > 2 * pow(10, 18)) return 
-# 35 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp" 3 4
+# 63 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp" 3 4
                                                    1
-# 35 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp"
+# 63 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp"
                                                                ;
     if (N < 10 || N > 30) return 
-# 36 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp" 3 4
+# 64 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp" 3 4
                                 1
-# 36 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp"
+# 64 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp"
                                             ;
 
-    long long int numbers[N];
+    long long numbers[N];
 
     if (input(numbers, N) != 
-# 40 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp" 3 4
+# 68 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp" 3 4
                             0
-# 40 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp"
+# 68 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp"
                                         ) return 
-# 40 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp" 3 4
+# 68 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp" 3 4
                                                  1
-# 40 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp"
+# 68 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp"
                                                              ;
 
-    set<int> primes;
+    long long maxN = 0;
+    for (long long number: numbers) {
+        if (number > maxN)
+            maxN = number;
+    }
 
-    findPrimes(primes, Pmax);
+    set<long long> mods;
+
+    long long A, C, M;
+
+    auto res = findMods(mods, numbers, Pmax, Mmax, maxN, N, 0, 1);
+
+    A = get<0>(res), C = get<1>(res), M = get<2>(res);
 
 
 
 
-
-    long long int A, C, M;
-# 69 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp"
-    M = findMod(numbers, N);
-    A = findMultiplier(numbers, M);
-    C = findIncrement(numbers, M, A);
 
     printf("%lli %lli %lli\n", A, C, M);
 
     return 
-# 75 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp" 3 4
+# 90 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp" 3 4
           0
-# 75 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp"
+# 90 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp"
                       ;
 }
 
-int input(long long int numbers[], int N) {
+int input(long long numbers[], int N) {
     for (int i = 0; i < N; i++) {
         if (scanf("%lli", &numbers[i]) != 1) return 
-# 80 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp" 3 4
+# 95 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp" 3 4
                                                    1
-# 80 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp"
+# 95 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp"
                                                                ;
     }
 
     return 
-# 83 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp" 3 4
+# 98 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp" 3 4
           0
-# 83 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp"
+# 98 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp"
                       ;
 }
 
-int findPrimes(set<int> &primes, int Pmax) {
-    vector<bool> isPrime(Pmax + 1, true);
+tuple<long long, long long, long long> findMods(set<long long> &mods, long long numbers[], int Pmax, long long Mmax,
+                                                long long maxN, int N, int idx, long long M) {
+    if (Primes[idx] > Pmax * Pmax)
+        return make_tuple(-1, -1, -1);
 
-    isPrime[0] = isPrime[1] = false;
+    if (M > maxN) {
+        long long a = findMultiplier(numbers, M);
+        long long c = findIncrement(numbers, M, a);
 
-    for (int i = 2; i * i <= Pmax; i++) {
-        if (isPrime[i]) {
-            for (int j = i * i; j <= Pmax; j += i) {
-                isPrime[j] = false;
-            }
+        if (verify(numbers, M, a, c, N, Mmax)) {
+            return make_tuple(a, c, M);
         }
     }
 
-    for (int i = 5; i <= Pmax; i++) {
-        if (isPrime[i]) {
-            primes.insert(i);
-        }
+    auto res = findMods(mods, numbers, Pmax, Mmax, maxN, N, idx + 1, M);
+    if (get<0>(res) != -1) return res;
+
+    if (M <= Mmax / Primes[idx]) {
+        res = findMods(mods, numbers, Pmax, Mmax, maxN, N, idx + 1, M * Primes[idx]);
+        if (get<0>(res) != -1) return res;
     }
 
-    return 
-# 105 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp" 3 4
-          0
-# 105 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp"
-                      ;
+    return make_tuple(-1, -1, -1);
 }
 
-int findMod(long long int numbers[], int N) {
-    long long int diffs[N - 1];
-    for (int i = 0; i < N - 1; i++) {
-        diffs[i] = numbers[i + 1] - numbers[i];
-    }
+long long findMultiplier(long long numbers[], long long M) {
+    long long diff1 = (numbers[2] - numbers[1] + M) % M;
+    long long diff2 = (numbers[1] - numbers[0] + M) % M;
+    long long diff2Inverse = modInverse(diff2, M);
+    long long A = ((__int128)diff1 * diff2Inverse) % M;
 
-    long long int zeros[N - 3];
-    for (int i = 0; i < N - 3; i++) {
-        zeros[i] = (diffs[i + 2] * diffs[i]) - (diffs[i + 1] * diffs[i + 1]);
-    }
-
-    long long int gcdAll = zeros[0];
-    for (int i = 1; i < N - 3; i++) {
-        gcdAll = __gcd(gcdAll, zeros[i]);
-    }
-    long long int M = abs(gcdAll);
-    return M;
-}
-
-int findMods(set<int> &primes, set<long long int> &mods, long long int Mmax) {
-    vector<long long int> currentMods;
-
-    for (int prime: primes) {
-        currentMods.push_back(prime);
-
-        for (const int e: primes) {
-            if (e == prime) continue;
-
-            const size_t cmSize = currentMods.size();
-
-            for (int i = 0; i < cmSize; i++) {
-                long long int p = e * currentMods[i];
-                currentMods.push_back(p);
-            }
-        }
-
-        for (long long int m: currentMods) {
-            if (m * m <= Mmax && m * m > 0) {
-                mods.insert(m * m);
-            }
-        }
-
-        currentMods.clear();
-    }
-
-    return 
-# 153 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp" 3 4
-          0
-# 153 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp"
-                      ;
-}
-
-long long int findMultiplier(long long int numbers[], long long int M) {
-    long long int A = (numbers[2] - numbers[1]) * modInverse(numbers[1] - numbers[0], M) % M;
-    if (A < 0) A += M;
-    if (A > M) A -= M;
+    A = (A + M) % M;
     return A;
 }
 
-long long int findIncrement(long long int numbers[], long long int M, long long int A) {
-    long long int C = (numbers[1] - numbers[0] * A) % M;
-    if (C < 1) C += M;
-    if (C > M) C -= M;
+long long findIncrement(long long numbers[], long long M, long long A) {
+
+    long long C = (numbers[1] - ((__int128) numbers[0] * A % M)) % M;
+
+    C = (C + M) % M;
     return C;
 }
 
-bool verify(long long int numbers[], long long int M, long long int A, long long int C, int N, long long int Mmax) {
+bool verify(long long numbers[], long long M, long long A, long long C, int N, long long Mmax) {
     if (M < 1 || M > Mmax) return false;
     if (A < 1 || A >= M) return false;
     if (C < 1 || C >= M) return false;
 
     for (int i = 1; i < N; i++) {
-        long long int x = (A * numbers[i - 1] + C) % M;
+        long long x1= ((A % M * numbers[i-1] % M) % M) + (C % M) % M;
+        long long x = ((__int128)A * numbers[i - 1] + C) % M;
         if (numbers[i] != x) return false;
     }
     return true;
 }
 
-tuple<long long int, long long int, long long int> egcd(long long int a, long long int b) {
-    if (a == 0) return {b, 0, 1};
+long long egcd(long long a, long long b, long long *x, long long *y) {
+    if (a == 0) {
+        *x = 0;
+        *y = 1;
+        return b;
+    }
 
-    auto [g, x, y] = egcd(b % a, a);
+    long long x1, y1;
+    long long gcd = egcd(b % a, a, &x1, &y1);
 
-    return {g, y - (b / a) * x, x};
+    *x = y1 - (b / a) * x1;
+    *y = x1;
+
+    return gcd;
 }
 
-long long int modInverse(long long int a, long long int m) {
-    auto [g, x, y] = egcd(a, m);
-    if (g == 1) return x % m;
+long long modInverse(long long a, long long m) {
+    long long x, y;
 
-    return 
-# 194 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp" 3 4
-          __null
-# 194 "/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/main.cpp"
-              ;
+    a = (a + m) % m;
+
+    long long g = egcd(a, m, &x, &y);
+
+    if (g != 1)
+        return -1;
+
+    long long res = (x % m + m) % m;
+
+    return res;
 }

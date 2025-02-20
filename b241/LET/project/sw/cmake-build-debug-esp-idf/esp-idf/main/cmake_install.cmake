@@ -1,4 +1,4 @@
-# Install script for directory: /home/tomkys144/Documents/CTU/b241/LET/project/main
+# Install script for directory: /home/tomkys144/Documents/CTU/b241/LET/project/sw/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
