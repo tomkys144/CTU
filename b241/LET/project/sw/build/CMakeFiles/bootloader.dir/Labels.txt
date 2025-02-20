@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/home/tomkys144/Documents/CTU/b241/LET/project/sw/build/CMakeFiles/bootloader
+/home/tomkys144/Documents/CTU/b241/LET/project/sw/build/CMakeFiles/bootloader.rule
+/home/tomkys144/Documents/CTU/b241/LET/project/sw/build/CMakeFiles/bootloader-complete.rule
+/home/tomkys144/Documents/CTU/b241/LET/project/sw/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/home/tomkys144/Documents/CTU/b241/LET/project/sw/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/home/tomkys144/Documents/CTU/b241/LET/project/sw/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/home/tomkys144/Documents/CTU/b241/LET/project/sw/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/home/tomkys144/Documents/CTU/b241/LET/project/sw/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/home/tomkys144/Documents/CTU/b241/LET/project/sw/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/home/tomkys144/Documents/CTU/b241/LET/project/sw/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

@@ -1,0 +1,50 @@
+clear all
+close all
+
+%% Generování nízkofrekvenčního barevného šumu AR modelem
+
+% Generujte bílý šum s Gaussovským rozložením, nulovou střední hodnotou a
+% jednotkovým rozptylem.
+N = 10000;
+un = randn([N, 1]);
+
+% Určete přenosovou funkci AR systému 1. řádu pro generování nízko-
+% frekvenčního barevného šumu se šířkou pásma B = 300 Hz při vzorkovacím
+% kmitočtu fs = 8000 Hz.
+B = 300; % B = ln|p1|/(pi * Ts)
+fs = 8000;
+p1_abs = exp(-B * pi / fs);
+
+a = [1, -p1_abs];
+b = [1];
+
+% Sledujte v MATLABu frekvenční charakteristiku daného systému (AR modelu).
+freqz(b, a, 1000, fs);
+
+% Generujte požadovaný NF barevný šum filtrací bílého šumu AR systémem
+% (signál nc1). Sledujte vyhlazený odhad PSD generovaného šumu, jeho
+% periodogram (nevyhlazený odhad) a spektrogram.
+nc1 = filter(b, a, un);
+
+figure
+subplot(211)
+plot(un)
+title("noise")
+
+subplot(212)
+plot(nc1)
+title("AR LF BW=300Hz")
+
+figure
+winlen = 512;
+NFFT = winlen;
+pwelch(nc1, winlen, winlen / 2, NFFT, fs)
+%% Generování dalších barevných šumů AR resp. MA modelem 1. řádu
+
+% Opakujte předchozí úlohu pro případ generování vysokofrekvenčního (VF) šumu AR modelem 1. řádu se stejnými parametry (signál nc2). 
+a = [1, p1_abs];
+b = [1];
+
+freqz(b, a, 1000, fs)
+
+nc2 = filter(b, a, un);

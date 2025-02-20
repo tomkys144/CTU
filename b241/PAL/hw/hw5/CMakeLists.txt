@@ -3,4 +3,4 @@ project(hw5)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(hw5 main_new.cpp)
+add_executable(hw5 main.cpp)
