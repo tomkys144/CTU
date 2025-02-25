@@ -17,7 +17,7 @@ imshow(im_brain)
 
 gaussfilt = fspecial('gaussian',15,5);
 im_filt = conv2(gaussfilt,img);
-
+figure
 histogram(im_filt)
 
 im_brain = ones(size(im_filt)) * 255;

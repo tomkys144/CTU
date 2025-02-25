@@ -1,0 +1,531 @@
+
+
+
+
+
+%% příklad 4
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%stacionární signál mix vzniknul součtem stacionárních signálů sig(čistý
+%signál) a noise(šum pozadí), tj. mix + sig = noise. Určete frekvenční
+%charakteristiku Wienerova filtru pro potlačení šumu pozadí v zašuměném
+%signálu mix ve frekvenční oblasti. Komplexní spektra v jednotlivých
+%krátkodobých segmentech jsou uložená v mat-souboru WF_FFT_sigs_01.mat v
+%maticích sigFFT, noiFFT resp. mixFFT (jednotlivá krátkodobá spektra délky
+%512 jsou v řádcích daných matic). Jako výsledek uveďte hodnoty prvních 10
+%spektrálních komponent wienerova filtru
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%tenhle soubor tam neni
+%načtení souboru
+%WF_FFT = load("WF_FFT_sigs_01.mat");
+%sigFFT = WF_FFT.sigFFT;
+%noiFFT = WF_FFT.noiFFT;
+%mixFFT = WF_FFT.mixFFT;
+%výpočet spektrálních výkonových hustot - mean(FFT) zprůměruje přes sloupce
+%-> výsledek je jeden řádek zprůměrovanýho spektra
+%G_sig = mean(abs(sigFFT).^2);
+%G_noi = mean(abs(noiFFT).^2);
+%G_mix = mean(abs(mixFFT).^2);
+%přenosová funkce wienerova filtru
+%H_WF = sqrt(G_sig/G_mix);
+%ans4 = H_WF(1:10)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% příklad 5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Vypočítejte bázi KLT transformace pro signál, jehož realizace máte k
+%disposici v matici sigrames uložené v mat-souboru sigframes_002.mat,
+%jednotlivé realizace jsou v řádcích dané matice. První bázový vektor volte
+%pro nejvýznamnější komponentu. Určete prvních 10 komponent KLT spektra pro
+%1. realizaci daného signálu, tj. signálu v 1. řádku matice realizací
+%sigframes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%tenhle tam taky neni
+%načtení signálu
+%sigframes002 = load('sigframes_002.mat');
+%sigframes = sigframes002.sigframes;
+%výpočet kovarianční matice pro vektory realizací v řádcích
+%RSS = sigframes'*sigframes;
+%výpočet vlastních čísel a vlastních vektorů RSS
+%[V,D] = eig(RSS);
+%matice pro výpočet KLT
+%WKLT = flipud(V');
+%KLT spektrum
+%XKLT = WKLT*sigframes(1, :);
+%ans5 = XKLT(1:10)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+%% příklad 9
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%pro posloupnost vzorků [12345678] určete posloupnost doplněnou se sudou 2N
+%symetrií pro účely výpočtu DCT pomocí DFT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%vstupní posloupnost
+x9 = [1 2 3 4 5 6 7 8];
+%2N symetrická posloupnost
+ans9 = [x9 fliplr(x9)]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+
+
+
+
+%% příklad 16
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%pro posloupnost vzorků [10 8 6 4 2 0 -2 -4 -2] určete posloupnost s 2N-2
+%symetrií
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+x16 = [10 8 6 4 2 0 -2 -4 -2];
+ans16 = [x16 fliplr(x16(2:(end -1)))]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% příklad 17
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%stacionární signál mix vzniknul součtem stacionárních signálů sig a noise.
+%Určete odhad amplitudového spektra čistého signálu sig na základě
+%amplitudového spektrálního odečítání s dvoucestným usměrněním. Komplexní
+%spektra v jednotlivých krátkodobých segmentech jsou uložená v mat-souboru
+%SO_FFT_sigs_01.mat v maticích noiFFT resp. mixFFT(jednotlivá krátkodobá
+%spektra délky 512 jsou v řádcích daných matic). Jako výsledek uveďte
+%hodnoty prvních 10 frekvenčních komponent určeného amplitudového spektra
+%1. segmentu signálu sig
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%soubor neni
+%načtení signálů
+%SO_FFT = load('SO_FFT_sigs_01.mat');
+%noiFFT = SO_FFT.noiFFT;
+%mixFFT = SO_FFT.mixFFT;
+%průměrování spektra šumu
+%Xnoi = mean(abs(noiFFT));
+%výpočet amplitudového spektra 1. segmentu
+%Xsig = abs(mixFFT(1,:) - Xnoi);
+%ans17 = Xsig(1:10)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%% příklad 19
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%určete DCT-2 signálu frame-002.bin. segment před výpočtem váhujte
+%hammingovým oknem a jako výsledek uveďte prvních 8 koeficientů DCT spektra
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%načtení signálu
+sig19 = loadbin('frame-002.bin');
+%váhování oknem
+w19 = hamming(length(sig19));
+sig19 = sig19.*w19;
+%výpočet DCT-2
+Xdct19 = dctxc2(sig19);
+ans19 = Xdct19(1:8)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% příklad 20
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Určete kosinovou transformaci DCT-1 signálu frame-000.bin. Segment před 
+%výpočtem váhujte Hammingovým oknem odpovídající délky a jako výsledek
+%uveďte prvních 8 koeficientů DCCT spektra
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+sig20 = loadbin('frame-000.bin');
+%váhování oknem
+w20 = hamming(length(sig20));
+sig20 = sig20.*w20;
+%výpočet DCT-2
+Xdct20 = dctxc1(sig20);
+ans20 = Xdct20(1:8)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% PŘÍKLADY NA MSC %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% příklad 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Pro signály sig1 a sig2 vzorkované kmitočtem fs = 8 kHz a uložené v
+%mat-souboru sigs_2chan_07.mat vypočtěte koherenční funkci, konkrétně MSC,
+%přičemž pro výpočet volte následující parametry
+%délka segmentu 32 ms
+%váhování hamming odpovídající délky
+%segmentace s 75 procentním překryvem
+%řád fft stejný jako délka segmentu
+%určete průměrnou koherenci(průměrnou hodnotu MSC)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%načtení signálů
+%sigs = load("sigs_2chan_07.mat");
+sigs = load("sigs_2chan_01.mat");
+sig1_1 = sigs.sig1;
+sig1_2 = sigs.sig2;
+sig1_1 = sig1_1(:);
+sig1_2 = sig1_2(:);
+%parametry 
+% tlen1 = 0.032;
+% fs1   = 8000;
+tlen1 = 0.008;
+fs1   = 16000;
+wlen1 = fs1*tlen1;
+w1 = hamming(wlen1);
+%nover1 = 0.75*wlen1;
+nover1 = 0.5*wlen1;
+%výpočet MSC
+msc1 = mscohere(sig1_1,sig1_2,w1,nover1,wlen1,fs1);
+ans1 = mean(msc1)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% příklad 23
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%pro signály sig1 a sig2 vzorkované kmitočtem fs = 8000 a uložené v
+%mat-souboru sigs_2chan_08.mat vypočtěte koherenční funkci, konkrétně MSC,
+%přičemž pro výpočet volte následující parametry. Délka krátkodobého
+%segmentu 642 ms, váhování hammingovým oknem, segmentace s 50% překryvem,
+%řád FFT stejný jako délka segmentu. Určte prvních 10 hodnot MSC
+%v zadání je překlep, myslí se tim 64 ms
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%načtení signálů
+sigs23 = load('sigs_2chan_08.mat');
+sig23_1 = sigs23.sig1;
+sig23_2 = sigs23.sig2;
+%parametry výpočtu
+fs23 = 8000;
+tlen23 = 0.064;
+wlen23 = tlen23*fs23;
+nover23 = wlen23/2;
+%výpočet MSC
+MSC23 = mscohere(sig23_1,sig23_2,wlen23,nover23,wlen23,fs23);
+ans23 = MSC23(1:10)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% PŘÍKLADY NA SNR %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% příklad 14
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Jaký je SNR v případě sečtení užitečného signálu SA017S01.CS0 a
+% zeslabeného šumu nc2.bin(vynásobeného konstantou scale = 0.01)?
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%načtení signálů
+%sig14 = loadbin('SA017S01.CS0');
+%noi14 = loadbin('nc2.bin');
+sig14 = loadbin('SA019S01.CS0');
+noi14 = loadbin('nc4.bin');
+%zeslabení šumu
+%noi14 = noi14.*0.01;
+noi14 = noi14.*0.6;
+%výpočet SNR
+P_sig14 = mean(sig14.^2);
+P_noi14 = mean(noi14.^2);
+ans14 = 10*log10(P_sig14/P_noi14)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% příklad 7
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Jaký je odstup signálu od šumu zašuměného signálu SX018S01.CS0, je-li
+%referenční čistý signál SA018S01.CS0? 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%načtení signálů
+sig7_clean = loadbin('SA018S01.CS0');
+sig7_noisy = loadbin('SX018S01.CS0');
+%výpočet šumu
+n7 = sig7_noisy - sig7_clean;
+%výkony
+P_sig7 = mean(sig7_clean.^2);
+P_n7 = mean(n7.^2);
+%SNR
+ans7 = 10*log10(P_sig7/P_n7)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%% PŘÍKLADY NA KEPSTRUM %%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% příklad 22
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Určete zkreslení signálu SA014S01.CSX na bázi kepstrální vzdálenosti a
+%reálného kepstra, referenční nezkreslený signál je SA014S01.CS0. Počítejte
+%reálné kepstrum po segmentech délky wlen = 512 s 50% překryvem a
+%implicitní váhování každého segmentu hammingovým oknem. Počet kepstrálních
+%koeficientů bez c[0] volte cp=20 a vzdálenost počítejte na bázi
+%euklidovské vzdálenosti bez nultého koeficientu c[0].
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%načtení signálů
+sig22_clean = loadbin('SA014S01.CS0');
+sig22_dist  = loadbin('SA014S01.CSX');
+%parametry výpočtu
+wlen22 = 512;
+wstep22 = wlen22*0.5;
+cp22 = 20;
+%výpočet kepster
+keps22_clean = vrceps(sig22_clean,1,cp22,wlen22,wstep22);
+keps22_dist  = vrceps(sig22_dist,1,cp22,wlen22,wstep22);
+%odebrání nultého koeficientu
+keps22_clean = keps22_clean(:,2:21);
+keps22_dist = keps22_dist(:,2:21);
+%výpočet kepstrální vzdálenosti
+ans22 = mean(cde(keps22_dist, keps22_clean)) 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% příklad 21
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Určete LPC kepstrum signálu frame-001.bin. Řád LPC volte p=16 a signál
+%váhujte hammingovým oknem příslušné délky. Zobrazte prvních 21 koeficientů
+%včetně nultého koeficientu.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%načtení signálu
+sig21 = loadbin('frame-000.bin');
+%váhování oknem
+w21 = hamming(length(sig21));
+sig21 = sig21.*w21;
+%výpočet LPC kepstra
+p21 = 16;
+cp21 = 20;
+keps21 = aceps(sig21,p21,cp21);
+%zobrazení výsledku
+figure(21)
+    plot(keps21)
+    axis tight
+    title('výsledek příkladu 21')
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% příklad 18
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Určete euklidovskou kepstrální vzdálenost na bázi reálného kepstra mezi 
+%signály frame-001.bin a frame-009.bin. Signály váhovat hammingovým oknem.
+%Vzdálenost počítejte z prvních 12 koeficientů bez nultého koeficientu
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%načtení signálů
+sig18_1 = loadbin('frame-001.bin');
+sig18_2 = loadbin('frame-009.bin');
+%parametry
+w18 = hamming(length(sig15_1));
+%váhování
+sig18_1 = sig18_1.*w15;
+sig18_2 = sig18_2.*w15;
+%výpočet kepster
+keps18_1 = rceps(sig18_1);
+keps18_2 = rceps(sig18_2);
+%vyberu koeficienty 1-12 a udělam z toho řádkovej vektor
+keps18_1 = keps18_1(2:13,1).';
+keps18_2 = keps18_2(2:13,1).';
+%kepstrální vzdálenost
+ans15 = cde(keps18_1, keps18_2)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% příklad 15
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Určete euklidovskou kepstrální vzdálenost na bázi lpc kepstra mezi signály
+%frame-001.bin a frame-009.bin. Řád LPC modelu p=16, signály váhovat
+%hammingovým oknem. Vzdálenost počítejte z prvních 13 koeficientů včetně
+%nultého
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%načtení signálů
+sig15_1 = loadbin('frame-001.bin');
+sig15_2 = loadbin('frame-009.bin');
+%parametry
+p15 = 16;
+cp15 = 12;
+w15 = hamming(length(sig15_1));
+%váhování
+sig15_1 = sig15_1.*w15;
+sig15_2 = sig15_2.*w15;
+%výpočet kepster
+keps15_1 = aceps(sig15_1,p15,cp15);
+keps15_2 = aceps(sig15_2,p15,cp15);
+%kepstrální vzdálenost
+ans15 = cde(keps15_1, keps15_2)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% příklad 11
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Určete zkreslení delšího signálu SA013S01.CSX na bázi kepstrální
+%vzdálenosti a LPC KEPSTRA, jestliže referenční nezkreslený signál je
+%SA013S01.CS0. Počítejte LPC kepstrum po segmentech délky wlen = 512 s 50%
+%překryvem a uvažujte implicitní váhování každého segmentu Hammingovým
+%oknem. Řád LPC volte p=16, počet kepstrálních koeficientů bez c[0] volte
+%cp=20 a vzdálenost počítejte na bázi Euklidovské vzdálenosti bez
+%nultého koeficientu c[0].
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%načtení signálů
+sig11_clean = loadbin('SA013S01.CS0');
+sig11_dist  = loadbin('SA013S01.CSX');
+%parametry výpočtu
+wlen11 = 512;
+wstep11 = wlen11*0.5;
+p11 = 16;
+cp11 = 20;
+%výpočet LPC kepster
+LPC_keps11_clean = vaceps(sig11_clean,1,p11,cp11,wlen11,wstep11);
+LPC_keps11_dist  = vaceps(sig11_dist,1,p11,cp11,wlen11,wstep11);
+%odebrání nultého koeficientu
+LPC_keps11_clean = LPC_keps11_clean(:,2:21);
+LPC_keps11_dist = LPC_keps11_dist(:,2:21);
+%výpočet kepstrální vzdálenosti
+ans11 = mean(cde(LPC_keps11_dist, LPC_keps11_clean)) 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% příklad 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Určete euklidovskou kepstrální vzdálenost na bázi reálného kepstra mezi
+%dvěma signály frame-001.bin a frame-025.bin. Počítejte reálné kepstrum,
+%signály váhujte hammingovým oknem příslušné délky. Vzdálenost počítejte z
+%prvních 13 koeficientů včetně nultého koeficientu c[0], tj z koeficientů
+%c[0]-c[12]. Pro výpočet vzdálenosti použijte funkci cde.m
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%načtení signálů
+sig2_1 = loadbin('frame-001.bin');
+sig2_2 = loadbin('frame-025.bin');
+sig2_1 = sig2_1(:);
+sig2_2 = sig2_2(:);
+%váhování oknem
+w2 = hamming(length(sig2_1));
+sig2_1 = sig2_1.*w2;
+sig2_2 = sig2_2.*w2;
+%výpočet kepster
+keps2_1 = rceps(sig2_1);
+keps2_2 = rceps(sig2_2);
+%cde žere řádkový a ne sloupcový vektory tak je to třeba transponovat
+keps2_1 = keps2_1.';
+keps2_2 = keps2_2.';
+%výpočet kepstrální vzdálenosti
+ans2 = cde(keps2_1, keps2_2, 13)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% příklad 8
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Určete zkreslení delšího signálu SA010S01.CSX na bázi kepstrální
+%vzdálenosti a LPC KEPSTRA, jestliže referenční nezkreslený signál je
+%SA010S01.CS0. Počítejte LPC kepstrum po segmentech délky wlen = 512 s 50%
+%překryvem a uvažujte implicitní váhování každého segmentu Hammingovým
+%oknem. Řád LPC volte p=16, počet kepstrálních koeficientů bez c[0] volte
+%cp=20 a vzdálenost počítejte na bázi Euklidovské vzdálenosti včetně
+%nultého koeficientu c[0].
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%načtení signálů
+sig8_clean = loadbin('SA010S01.CS0');
+sig8_dist  = loadbin('SA010S01.CSX');
+%parametry výpočtu
+wlen8 = 512;
+wstep8 = wlen8*0.5;
+p8 = 16;
+cp8 = 20;
+%výpočet LPC kepster
+LPC_keps8_clean = vaceps(sig8_clean,1,p8,cp8,wlen8,wstep8);
+LPC_keps8_dist  = vaceps(sig8_dist,1,p8,cp8,wlen8,wstep8);
+%výpočet kepstrální vzdálenosti
+ans8 = mean(cde(LPC_keps8_dist, LPC_keps8_clean)) 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% příklad 10
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Určete reálné kepstrum signálu frame-014.bin. Signál váhujte Hammingovým
+%oknem příslušné délky. Zobrazte prvních 21 koeficientů vypočítaného
+%kepstra
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%načtení signálu
+sig10 = loadbin('frame-014.bin');
+%hammingovo okno
+w10 = hamming(length(sig10));
+sig10 = sig10.*w10;
+%výpočet kepstra
+keps10 = rceps(sig10);
+%zobrazení prvních 21 koeficientů
+figure(10)
+    plot(keps10(1:21))
+    title('odpověď na příklad 10')
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% příklad 12
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Vypočítejte reálné kepstrum signálu frame-016.bin. Váhovat hammingem,
+%zobrazit ho celý
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%načtení signálu
+sig12 = loadbin('frame-016.bin');
+%váhování oknem
+w12 = hamming(length(sig12));
+sig12 = sig12.*w12;
+%výpočet kepstra
+keps12 = rceps(sig12);
+%plot
+figure(12)
+    plot(keps12)
+    title('odpověď na příklad 12')
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% PŘÍKLADY NA CPSD %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% příklad 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Spočítejte vyhlazený odhad vzájemné spektrální výkonové hustoty(CPSD)
+%Welchovou metodou pro signály x a y uložené v mat-souboru sig_xy_02.mat.
+%Signály jsou vzorkované kmitočtem sf = 16 kHz a pro výpočet volte
+%parametry
+%délka segmentu 1024 vzorků
+%váhování hammingovým oknem
+%segmentace s 50% překryvem
+%NFFT stejný jako délka segmentu
+%implicitní jednostranný odhad
+%určete, který z následujících obrázků je požadovaným odhadem modulu CPSD v
+%decibelech
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%načtení signálů
+sigs3 = load('sig_xy_02.mat');
+sig3_x = sigs3.x;
+sig3_y = sigs3.y;
+sig3_x = sig3_x(:);
+sig3_y = sig3_y(:);
+%parametry CPSD
+fs3 = 16000;
+wlen3 = 1024;
+w3 = hamming(wlen3);
+nover3 = 0.5*wlen3;
+%výpočet cpsd
+figure(3)
+    cpsd(sig3_x,sig3_y,w3,nover3,wlen3,fs3);
+    title("odpověď na příklad 3")
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% příklad 13
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Spočítejte CPSD welchovou metodou pro signály x a y uloženeé v mat-souboru
+%sig_xy_04.mat. fs = 16 kHz, wlen = 512, hammingovo okno, 50% překryv,
+%NFFT=wlen, jednostranný odhad CPSD. Určete, který z následujících obrázků
+%je požadovaným odhadem fáze CPSD v radiánech
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%načtení signálů
+sigs13 = load('sig_xy_04.mat');
+sig13_x = sigs13.x;
+sig13_y = sigs13.y;
+%parametry výpočtu
+fs13 = 16000;
+wlen13 = 512;
+nover13 = wlen13/2;
+%výpočet cpsd
+[Sxy13, ff13] = cpsd(sig13_x, sig13_y,wlen13,nover13,wlen13,fs13);
+%plot
+figure(13)
+    plot(ff13, unwrap(angle(Sxy13)))
+    title('odpověď na příklad 13')
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% PŘÍKLADY NA DCT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
