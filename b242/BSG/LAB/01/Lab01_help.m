@@ -10,113 +10,234 @@ clc; clear; close all;
 fs = 500; % vzorkovací frekvence
 threshold = 1; % práh pro detekci stisku tlačítka
 
-%% Načtení a zobrazení signálu
-button_signal = load('Data_lab01/odezvy_zvuk/odezvy_zvuk01.txt');
-button_signal = button_signal(:,2); % pouze signál tlačítka
-time_axis = linspace(0, (length(button_signal)-1)/fs, length(button_signal)); % časová osa
+%% Načtení a zobrazení signálu 1
+button_signal1 = load('data/data/01.txt');
+button_signal_drift1 = button_signal1(1,1);
 
-stimuli = load('Data_lab01/znacky_zvuk/znacky_zvuk01.txt'); % časové značky stimulací
+secondspersample1 = button_signal1(2,1) - button_signal1(1,1);
+
+start1 = zeros(floor(button_signal_drift1/secondspersample1),1);
+
+button_signal1 = button_signal1(:,2); % pouze signál tlačítka
+button_signal1 = [start1;button_signal1];
+
+time_axis1 = linspace(0, (length(button_signal1)-1)/fs, length(button_signal1)); % časová osa
+
+stimuli1 = load('data/markers/01.txt'); % časové značky stimulací
 
 figure(1)
-plot(time_axis, button_signal); hold on;
-plot(stimuli, 5 * ones(size(stimuli)), 'rv'); % značení stimulací
+plot(time_axis1, button_signal1); hold on;
+plot(stimuli1, 5 * ones(size(stimuli1)), 'rv'); % značení stimulací
 xlabel('Cas (s)'); ylabel('Napeti (V)');
-title('Signal tlacitka a stimuly');
 legend('Stisk tlacitka', 'Stimul');
+xlim([0, max(time_axis1)])
+
+%% Načtení a zobrazení signálu 2
+
+button_signal2 = load('data/data/02.txt');
+button_signal_drift2 = button_signal2(1,1);
+
+secondspersample2 = button_signal2(2,1) - button_signal2(1,1);
+
+start2 = zeros(floor(button_signal_drift2/secondspersample2),1);
+
+button_signal2 = button_signal2(:,2); % pouze signál tlačítka
+button_signal2 = [start2;button_signal2];
+
+time_axis2 = linspace(0, (length(button_signal2)-1)/fs, length(button_signal2)); % časová osa
+
+stimuli2 = load('data/markers/02.txt'); % časové značky stimulací
+
+figure(2)
+plot(time_axis2, button_signal2); hold on;
+plot(stimuli2, 5 * ones(size(stimuli2)), 'rv'); % značení stimulací
+xlabel('Cas (s)'); ylabel('Napeti (V)');
+legend('Stisk tlacitka', 'Stimul');
+xlim([0, max(time_axis2)])
 
 %% Detaily stimulů, prahovaného signálu a diference signálu
-figure(2)
+figure(3)
 subplot(3,1,1);
-button_pressed = button_signal > threshold;
-diff_signal = diff([0; button_pressed]);
+button_pressed1 = button_signal1 > threshold;
+diff_signal1 = diff([0; button_pressed1]);
 
-plot(time_axis, button_signal); hold on;
-plot(stimuli, 5 * ones(size(stimuli)), 'rv');
-xlim([stimuli(1)-0.5 stimuli(3)+0.5]);
+plot(time_axis1, button_signal1); hold on;
+plot(stimuli1, 5 * ones(size(stimuli1)), 'rv');
+xlim([stimuli1(1)-0.5 stimuli1(3)+0.5]);
 title('Detail stimulů a reakcí');
 xlabel('Čas (s)'); ylabel('Napětí (V)');
 
 subplot(3,1,2);
-plot(time_axis, button_pressed);
-xlim([stimuli(1)-0.5 stimuli(3)+0.5]);
+plot(time_axis1, button_pressed1);
+xlim([stimuli1(1)-0.5 stimuli1(3)+0.5]);
 title('Prahovaný signál');
 
 subplot(3,1,3);
-plot(time_axis(1:length(diff_signal)), diff_signal);
-xlim([stimuli(1)-0.5 stimuli(3)+0.5]);
+plot(time_axis1(1:length(diff_signal1)), diff_signal1);
+xlim([stimuli1(1)-0.5 stimuli1(3)+0.5]);
+title('Diference signálu');
+
+%%
+figure(4)
+subplot(3,1,1);
+button_pressed2 = button_signal2 > threshold;
+diff_signal2 = diff([0; button_pressed2]);
+
+plot(time_axis2, button_signal2); hold on;
+plot(stimuli2, 5 * ones(size(stimuli2)), 'rv');
+xlim([stimuli2(1)-0.5 stimuli2(3)+0.5]);
+title('Detail stimulů a reakcí');
+xlabel('Čas (s)'); ylabel('Napětí (V)');
+
+subplot(3,1,2);
+plot(time_axis2, button_pressed2);
+xlim([stimuli2(1)-0.5 stimuli2(3)+0.5]);
+title('Prahovaný signál');
+
+subplot(3,1,3);
+plot(time_axis2(1:length(diff_signal2)), diff_signal2);
+xlim([stimuli2(1)-0.5 stimuli2(3)+0.5]);
 title('Diference signálu');
 
 %% Detekce náběžné hrany (stisk tlačítka)
-reaction_indices = find(diff_signal > 0);
-reaction_times = time_axis(reaction_indices);
+reaction_indices1 = find(diff_signal1 > 0);
+reaction_times1 = time_axis1(reaction_indices1);
 
+
+reaction_indices2 = find(diff_signal2 > 0);
+reaction_times2 = time_axis1(reaction_indices2);
 %% Výpočet reakční doby
-reaction_durations = nan(length(stimuli),1);
-for i = 1:length(stimuli)
-    pos = find(reaction_times > stimuli(i), 1);
+reaction_durations1 = nan(length(stimuli1),1);
+for i = 1:length(stimuli1)
+    pos = find(reaction_times1 > stimuli1(i), 1);
     if ~isempty(pos)
-        delta = reaction_times(pos) - stimuli(i);
+        delta = reaction_times1(pos) - stimuli1(i);
         if delta <= 1
-            reaction_durations(i) = delta;
+            reaction_durations1(i) = delta;
         end
     end
 end
 
+reaction_durations2 = nan(length(stimuli2),1);
+for i = 1:length(stimuli2)
+    pos = find(reaction_times2 > stimuli2(i), 1);
+    if ~isempty(pos)
+        delta = reaction_times2(pos) - stimuli2(i);
+        if delta <= 1
+            reaction_durations2(i) = delta;
+        end
+    end
+end
 %% Statistická analýza
-random_reactions = reaction_durations(1:20);
-random_reactions = random_reactions(~isnan(random_reactions));
-periodic_reactions = reaction_durations(21:40);
-periodic_reactions = periodic_reactions(~isnan(periodic_reactions));
+random_reactions1 = reaction_durations1(1:19);
+random_reactions1 = random_reactions1(~isnan(random_reactions1));
+random_reactions1 = [random_reactions1; mean(random_reactions1)];
+periodic_reactions1 = reaction_durations1(20:39);
+periodic_reactions1 = periodic_reactions1(~isnan(periodic_reactions1));
 
-figure(3)
-boxplot([random_reactions, periodic_reactions], 'Labels', {'Nahodna', 'Periodicka'});
-title('Boxplot reakcnich casu');
+random_reactions2 = reaction_durations2(1:20);
+random_reactions2 = random_reactions2(~isnan(random_reactions2));
+periodic_reactions2 = reaction_durations2(21:40);
+periodic_reactions2 = periodic_reactions2(~isnan(periodic_reactions2));
+
+figure(5)
+boxplot([random_reactions1, periodic_reactions1, random_reactions2, periodic_reactions2], 'Labels', {'Nahodna M', 'Periodicka M', 'Nahodna F', 'PeriodickaF'});
+% title('Boxplot reakcnich casu');
 ylabel('Reakcni cas (s)');
 
-figure(4)
-edges = linspace(min([random_reactions; periodic_reactions]), max([random_reactions; periodic_reactions]), 10);
-histogram(random_reactions, 'Normalization', 'pdf', 'BinEdges', edges); hold on;
-histogram(periodic_reactions, 'Normalization', 'pdf', 'BinEdges', edges);
-smooth_edges = linspace(min([random_reactions; periodic_reactions]), max([random_reactions; periodic_reactions]), 100);
-rand_pdf = normpdf(smooth_edges, mean(random_reactions), std(random_reactions));
-periodic_pdf = normpdf(smooth_edges, mean(periodic_reactions), std(periodic_reactions));
-plot(smooth_edges, rand_pdf, 'b', 'LineWidth', 3);
-plot(smooth_edges, periodic_pdf, 'r', 'LineWidth', 3);
-title('Histogram s křivkou normálního rozdělení');
-legend('Nahodna', 'Periodicka', 'Gauss Nahodna', 'Gauss Periodicka');
+figure(6)
+edges = linspace(min([random_reactions1; random_reactions2]), max([random_reactions1; random_reactions2]), 10);
+histogram(random_reactions1, 'Normalization', 'pdf', 'BinEdges', edges); hold on;
+histogram(random_reactions2, 'Normalization', 'pdf', 'BinEdges', edges);
+smooth_edges = linspace(min([random_reactions1; random_reactions2]), max([random_reactions1; random_reactions2]), 100);
+pdf1 = normpdf(smooth_edges, mean(random_reactions1), std(random_reactions1));
+pdf2 = normpdf(smooth_edges, mean(random_reactions2), std(random_reactions2));
+plot(smooth_edges, pdf1, 'b', 'LineWidth', 3);
+plot(smooth_edges, pdf2, 'r', 'LineWidth', 3);
+% title('Histogram s křivkou normálního rozdělení');
+legend('Muz', 'Zena', 'Gauss M', 'Gauss F');
+xlabel('Reakcni cas (s)'); ylabel('Pravdepodobnostni hustota');
+
+figure(7)
+edges = linspace(min([periodic_reactions1; periodic_reactions2]), max([periodic_reactions1; periodic_reactions2]), 10);
+histogram(periodic_reactions1, 'Normalization', 'pdf', 'BinEdges', edges); hold on;
+histogram(periodic_reactions2, 'Normalization', 'pdf', 'BinEdges', edges);
+smooth_edges = linspace(min([periodic_reactions1; periodic_reactions2]), max([periodic_reactions1; periodic_reactions2]), 100);
+pdf1 = normpdf(smooth_edges, mean(periodic_reactions1), std(periodic_reactions1));
+pdf2 = normpdf(smooth_edges, mean(periodic_reactions2), std(periodic_reactions2));
+plot(smooth_edges, pdf1, 'b', 'LineWidth', 3);
+plot(smooth_edges, pdf2, 'r', 'LineWidth', 3);
+% title('Histogram s křivkou normálního rozdělení');
+legend('Muz', 'Zena', 'Gauss M', 'Gauss F');
 xlabel('Reakcni cas (s)'); ylabel('Pravdepodobnostni hustota');
 
 %% Testy normality
-[h_shapiro_rand, p_shapiro_rand] = swtest(random_reactions);
-[h_shapiro_periodic, p_shapiro_periodic] = swtest(periodic_reactions);
+[h_shapiro_rand1, p_shapiro_rand1] = swtest(random_reactions1);
+[h_shapiro_periodic1, p_shapiro_periodic1] = swtest(periodic_reactions1);
+
+[h_shapiro_rand2, p_shapiro_rand2] = swtest(random_reactions2);
+[h_shapiro_periodic2, p_shapiro_periodic2] = swtest(periodic_reactions2);
 
 %% Statistické testy
-[h_ttest, p_ttest] = ttest2(random_reactions, periodic_reactions);
-[p_utest, h_utest] = ranksum(random_reactions, periodic_reactions);
+[h_ttest_rand, p_ttest_rand, ~, stats_rand] = ttest2(random_reactions1, random_reactions2);
+[p_utest_rand, h_utest_rand] = ranksum(random_reactions1, random_reactions2);
 
+[h_ttest_per, p_ttest_per, ~, stats_per] = ttest2(periodic_reactions1, periodic_reactions2);
+[p_utest_per, h_utest_per] = ranksum(periodic_reactions1, periodic_reactions2);
 %% Výpis výsledků
 disp('--- VYSLEDKY TESTU ---');
-if h_shapiro_rand == 0
-    disp('Random: Data mohou být normálně rozdělena.');
+if h_shapiro_rand1 == 0
+    disp('Random1: Data mohou být normálně rozdělena.');
 else
-    disp('Random: Data nejsou normálně rozdělena.');
+    disp('Random1: Data nejsou normálně rozdělena.');
 end
-if h_shapiro_periodic == 0
-    disp('Periodic: Data mohou být normálně rozdělena.');
+if h_shapiro_periodic1 == 0
+    disp('Periodic1: Data mohou být normálně rozdělena.');
 else
-    disp('Periodic: Data nejsou normálně rozdělena.');
+    disp('Periodic1: Data nejsou normálně rozdělena.');
+end
+if h_shapiro_rand2 == 0
+    disp('Random2: Data mohou být normálně rozdělena.');
+else
+    disp('Random2: Data nejsou normálně rozdělena.');
+end
+if h_shapiro_periodic2 == 0
+    disp('Periodic2: Data mohou být normálně rozdělena.');
+else
+    disp('Periodic2: Data nejsou normálně rozdělena.');
 end
 
-disp(['p-hodnota t-testu: ', num2str(p_ttest)]);
-if h_ttest == 1
-    disp('T-test: Statisticky významný rozdíl mezi průměry skupin.');
+disp(['p-hodnota t-testu random: ', num2str(p_ttest_rand)]);
+if h_ttest_rand == 1
+    disp('T-test random: Statisticky významný rozdíl mezi průměry skupin.');
 else
-    disp('T-test: Nebyl nalezen významný rozdíl mezi průměry skupin.');
+    disp('T-test random: Nebyl nalezen významný rozdíl mezi průměry skupin.');
 end
 
-disp(['p-hodnota Mann-Whitney U-testu: ', num2str(p_utest)]);
-if h_utest == 1
-    disp('U-test: Statisticky významný rozdíl mezi mediány skupin.');
+disp(['p-hodnota Mann-Whitney U-testu rand: ', num2str(p_utest_rand)]);
+if h_utest_rand == 1
+    disp('U-test rand: Statisticky významný rozdíl mezi mediány skupin.');
 else
-    disp('U-test: Nebyl nalezen významný rozdíl mezi mediány skupin.');
+    disp('U-test rand: Nebyl nalezen významný rozdíl mezi mediány skupin.');
 end
+
+disp(['p-hodnota t-testu per: ', num2str(p_ttest_per)]);
+if h_ttest_per == 1
+    disp('T-test per: Statisticky významný rozdíl mezi průměry skupin.');
+else
+    disp('T-test per: Nebyl nalezen významný rozdíl mezi průměry skupin.');
+end
+
+disp(['p-hodnota Mann-Whitney U-testu per: ', num2str(p_utest_per)]);
+if h_utest_per == 1
+    disp('U-test per: Statisticky významný rozdíl mezi mediány skupin.');
+else
+    disp('U-test per: Nebyl nalezen významný rozdíl mezi mediány skupin.');
+end
+
+%%
+clc
+mean(periodic_reactions2)
+std(periodic_reactions2)
+min(periodic_reactions2)
+max(periodic_reactions2)
