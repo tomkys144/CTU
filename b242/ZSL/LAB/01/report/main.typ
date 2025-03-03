@@ -8,41 +8,45 @@
   author: "Tomáš Kysela",
   language: "cs",
   show-outline: false,
-  it
+  it,
 )
 
 #set par(justify: true)
 
-
 = Filtrace, binární masky
 
-Pomocí prahování byla nalezena maska kosti a mozku. Dále byl gaussovským filtrem upraven původní obrázek a byla nalezena lepší maska mozku bez okolní tkáně.
+Pomocí prahování byla nalezena maska kosti a mozku. Dále byl gaussovským filtrem upraven původní obrázek a byla nalezena
+lepší maska mozku bez okolní tkáně.
 
 #subpar.grid(
   figure(
     image("/assets/ct_brain.jpg", width: 5cm),
     caption: [
       Původní obrázek
-    ]
-  ), <original>,
+    ],
+  ),
+  <original>,
   figure(
     image("/assets/skull.png", width: 5cm),
     caption: [
       Binární maska lebky
-    ]
-  ), <skull>,
+    ],
+  ),
+  <skull>,
   figure(
     image("/assets/brain.png", width: 5cm),
     caption: [
       Binární maska mozku
-    ]
-  ), <brain>,
+    ],
+  ),
+  <brain>,
   figure(
     image("/assets/brain-filt.png", width: 5cm),
     caption: [
       Binární maska mozku po filtraci
-    ]
-  ), <brain-filt>,
+    ],
+  ),
+  <brain-filt>,
   columns: (6cm, 6cm),
   caption: [Výsledné obrázky úlohy 1],
   label: <full>,
@@ -65,7 +69,7 @@ Implementace dodána v přiloženém souboru ``` my_ttest2.m ```
       [4], [], [], [], [], [3.3915e-07],
       [5], [], [], [], [], [],
     ),
-    caption: [Proměnná 1]
+    caption: [Proměnná 1],
   ),
   figure(
     table(
@@ -77,7 +81,7 @@ Implementace dodána v přiloženém souboru ``` my_ttest2.m ```
       [4], [], [], [], [], [3.7318e-07],
       [5], [], [], [], [], [],
     ),
-    caption: [Proměnná 2]
+    caption: [Proměnná 2],
   ),
-  caption: [Tabulka p-hodnot (tučně zvýrazněny významné hodnoty)]
+  caption: [Tabulka p-hodnot (tučně zvýrazněny významné hodnoty)],
 )
