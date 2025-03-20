@@ -56,11 +56,11 @@ class TDAgent(AbstractAgent):
 
                 observation = next_observation
 
-            # self.U10.append(self.U[(10, 0, 0)])
+            self.U10.append(self.U[(10, 0, 0)])
 
         self.env.render()
 
-        # evaluate.plot_series(self.U10)
+        evaluate.plot_series(self.U10)
 
     def receive_observation_and_get_action(self, observation: BlackjackObservation, terminal: bool) -> int:
         return BlackjackAction.HIT.value if observation.player_hand.value() < 17 else BlackjackAction.STAND.value

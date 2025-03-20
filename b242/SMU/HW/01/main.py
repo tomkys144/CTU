@@ -39,7 +39,7 @@ if __name__ == "__main__":
     # ... or whatever
 
     env = get_env()
-    number_of_episodes = int(5e5)  # TODO do not forget to change the number of episodes
+    number_of_episodes = int(1e6)  # TODO do not forget to change the number of episodes
 
     # agent: AbstractAgent = RandomAgent(env, number_of_episodes)
     # agent: AbstractAgent = DealerAgent(env, number_of_episodes)
@@ -50,4 +50,4 @@ if __name__ == "__main__":
 
     # in evaluate.py are some ideas that you might want to use to evaluate the agent
     # feel free to modify the code as you want to
-    evaluate(list(env.return_queue))
+    evaluate(list(env.return_queue), "sarsa")

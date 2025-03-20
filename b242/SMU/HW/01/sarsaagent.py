@@ -28,16 +28,19 @@ class SarsaAgent(AbstractAgent):
 
     def train(self):
         for i in range(self.number_of_episodes):
-            print(i)
             observation, _ = self.env.reset()
             # TODO your code here (and do not forget to set the number of episodes for learning in main)
 
             terminal = False
-            t = 0
+
+            eps0 = 1.0
+            decay_const = 3/self.number_of_episodes
+            eps = eps0 * np.exp(-decay_const * i)
+            epsilon = max(0.05, eps)
+
+            print(i, epsilon)
 
             while not terminal:
-                t += 1
-                epsilon = 1 / t
 
                 state = self.get_state(observation)
                 action = self.get_action(state, epsilon)
