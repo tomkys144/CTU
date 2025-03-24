@@ -1,0 +1,40 @@
+LHD: SAM 6.1
+DBN: SPEECON_CS
+SES: 001
+CMT: *** Speech Label Information
+SRC: SA001_01.CS0,SA001_01.CS1,SA001_01.CS2,SA001_01.CS3
+DIR: \ADULT1CS\BLOCK00\SES001
+CCD: _01
+BEG: 0
+END: 584999
+REP: OFFICE_01
+RED: 22/Apr/2003
+RET: 13:03:22
+CMT: *** Speech Data Coding ***
+SAM: 16000
+SNB: 2 signed
+SBF: lohi
+SSB: 16
+QNT: PCM
+NCH: 4
+CMT: *** Speaker Information ***
+SCD: 001
+SEX: M
+AGE: 26
+ACC: Central-West-North Bohemia
+CMT: *** Recording Conditions ***
+SNQ: CHN0=34.829, CHN1=24.219, CHN2=0.270, CHN3=0.268
+MIP: CHN0=CLOSE_LOUDSPEAKER,CHN1=MEDIUM,CHN2=,CHN3=
+MIT: CHN0=MBF_HAUN,CHN1=MBF_HAUN,CHN2=,CHN3=
+SCC: ENV=OFFICE,PLC=OFFICE_01,POS=CLOSE_WALL_01,SIZ=SQM_20_30,AUD=,DRV=
+DBA: 
+CMT: *** Labelling information ***
+SYS: FTP Transcriber 3.0
+EXP: Petr Fousek
+DAT: 04/May/2003, 22:41:25
+EPI:
+CMT: *** Label File Body ***
+LBD:
+LBR: 0,584999,,,, --- noise_rec_1 ---
+LBO: 0,292500,585000,
+ELF:

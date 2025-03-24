@@ -1,0 +1,40 @@
+LHD: SAM 6.1
+DBN: SPEECON_CS
+SES: 001
+CMT: *** Speech Label Information
+SRC: SA001S08.CS0,SA001S08.CS1,SA001S08.CS2,SA001S08.CS3
+DIR: \ADULT1CS\BLOCK00\SES001
+CCD: S08
+BEG: 0
+END: 88999
+REP: OFFICE_01
+RED: 22/Apr/2003
+RET: 14:36:13
+CMT: *** Speech Data Coding ***
+SAM: 16000
+SNB: 2 signed
+SBF: lohi
+SSB: 16
+QNT: PCM
+NCH: 4
+CMT: *** Speaker Information ***
+SCD: 001
+SEX: M
+AGE: 26
+ACC: Central-West-North Bohemia
+CMT: *** Recording Conditions ***
+SNQ: CHN0=34.086, CHN1=28.947, CHN2=15.718, CHN3=6.053
+MIP: CHN0=CLOSE_HEADSET,CHN1=CLOSE_LAVALIER,CHN2=MEDIUM,CHN3=FAR
+MIT: CHN0=SENNHEISER_ME104,CHN1=NOKIA,CHN2=SENNHEISER_ME64,CHN3=MBF_HAUN
+SCC: ENV=OFFICE,PLC=OFFICE_01,POS=CLOSE_WALL_01,SIZ=SQM_20_30,AUD=,DRV=
+DBA: 36.0
+CMT: *** Labelling information ***
+SYS: FTP Transcriber 3.0
+EXP: Petr Fousek
+DAT: 04/May/2003, 23:17:34
+EPI: t_seli: kraj voJel ko_uP\em jak se topilo olivovi:m dP\i:vi:m
+CMT: *** Label File Body ***
+LBD:
+LBR: 0,88999,,,, Celý kraj vonìl kouøem, jak se topilo olivovým døívím.
+LBO: 0,44500,89000,celý kraj vonìl kouøem jak se topilo olivovým døívím
+ELF:
