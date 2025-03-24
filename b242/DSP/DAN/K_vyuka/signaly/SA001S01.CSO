@@ -1,0 +1,40 @@
+LHD: SAM 6.1
+DBN: SPEECON_CS
+SES: 001
+CMT: *** Speech Label Information
+SRC: SA001S01.CS0,SA001S01.CS1,SA001S01.CS2,SA001S01.CS3
+DIR: \ADULT1CS\BLOCK00\SES001
+CCD: S01
+BEG: 0
+END: 92999
+REP: OFFICE_01
+RED: 22/Apr/2003
+RET: 14:42:17
+CMT: *** Speech Data Coding ***
+SAM: 16000
+SNB: 2 signed
+SBF: lohi
+SSB: 16
+QNT: PCM
+NCH: 4
+CMT: *** Speaker Information ***
+SCD: 001
+SEX: M
+AGE: 26
+ACC: Central-West-North Bohemia
+CMT: *** Recording Conditions ***
+SNQ: CHN0=34.522, CHN1=25.442, CHN2=14.733, CHN3=15.904
+MIP: CHN0=CLOSE_HEADSET,CHN1=CLOSE_LAVALIER,CHN2=MEDIUM,CHN3=FAR
+MIT: CHN0=SENNHEISER_ME104,CHN1=NOKIA,CHN2=SENNHEISER_ME64,CHN3=MBF_HAUN
+SCC: ENV=OFFICE,PLC=OFFICE_01,POS=CLOSE_WALL_01,SIZ=SQM_20_30,AUD=,DRV=
+DBA: 36.0
+CMT: *** Labelling information ***
+SYS: FTP Transcriber 3.0
+EXP: Petr Fousek
+DAT: 04/May/2003, 23:16:32
+EPI: rovJeS je znepokojen pozit_si: gruzije a:zerba:jd_Za:nu a uzbekista:nu [int]
+CMT: *** Label File Body ***
+LBD:
+LBR: 0,92999,,,, Rovnì¾ je znepokojen pozicí Gruzie, Ázerbájd¾ánu a Uzbekistánu.
+LBO: 0,46500,93000,rovnì¾ je znepokojen pozicí gruzie ázerbájd¾ánu a uzbekistánu [int]
+ELF:

@@ -1,0 +1,188 @@
+---
+title: "Clustering"
+output: pdf_document
+date: "2024-12-17"
+---
+
+```{r setup, include=FALSE}
+library(MASS) # multivariate normal distribution
+library(dbscan) # density-based clustering
+library(mclust) # EM GMM
+library(cluster) # gap statistic
+library(NMI) # normalized mutual information
+library(knitr) # markup tables
+```
+
+The goal of this tutorial is to introduce the most popular and simple clustering algorithms, namely k-means, EM GMM, hierarchical clustering and DBSCAN. We will illustrate their strengths and weaknesses on a few artificial datasets. We will deal with low dimensional data to reinforce understandability of the task.
+
+## Mixture of bivariate normal distributions
+
+We will start with a mixture of 4 bivariate normal distributions. The data could be generated as follows:
+
+```{r generate}
+Sigma <- matrix(c(1,0,0,1),2,2)
+d<-mvrnorm(n = 50, mu=c(1,1),Sigma)
+d<-rbind(d,mvrnorm(n = 50, mu=c(1,5),Sigma))
+d<-rbind(d,mvrnorm(n = 50, mu=c(5,1),Sigma))
+d<-rbind(d,mvrnorm(n = 50, mu=c(5,5),Sigma))
+d<-cbind(d,rep(c(1,2,3,4),each=50))
+plot(d[,1],d[,2],col=d[,3],xlab="x",ylab="y")
+d<-as.data.frame(d)
+colnames(d)<-c("x","y","class")
+```
+
+Let us start by estimating which methods will work best for this dataset. Obviously, EM GMM should be our first choice since we deal with GMM data. Gaussian mixture is the right model with the right assumption. Similarly, k-means will also work well as we deal with isotropic diagonal covariance matrices, which implies that the clusters will be spherical.
+
+Now we will implement, test and evaluate the individual clustering methods.
+
+## K-means clustering
+
+We will use the algorithm proposed by Hartigan and Wong implemented in mclust package. We will run the algorithm multiple times with different cluster seeds and take the best partition out of these random runs. The elbow method is used for figuring out of optimal $k$ (in our case it should obviously be 4). Gap statistic is used to set the number of clusters automatically.
+
+```{r k-means}
+# plot the homogeneity plot up to k.max
+# the best k may be guessed from the elbow in the homogeneity curve
+elbowMethod<-function(data,k.max){
+  wss <- sapply(1:k.max, 
+          function(k){kmeans(data, k, nstart=50,iter.max = 15)$tot.withinss})
+  plot(1:k.max, wss,
+     type="b", pch = 19, frame = FALSE, 
+     xlab="Number of clusters K",
+     ylab="Total within-clusters sum of squares")
+}
+
+elbowMethod(d[,c(1,2)],10) # manually estimate the optimal number of clusters with the elbow method
+gapStat<-clusGap(d[,c(1,2)], FUNcluster = kmeans, K.max = 10) # find the optimal number of clusters with the gap statistic
+km.out<-kmeans(d[,c(1,2)],centers=which.max(gapStat$Tab[,3]),nstart=10) # run k-means with the optimal number of clusters
+km.out$cluster # see its outcome
+table(d[,3],km.out$cluster) # confusion matrix clusters vs true classes
+plot(d[,1],d[,2],col=d[,3],xlab="x",ylab="y")
+points(x=d[,1],y=d[,2],col=km.out$cluster,pch=4)
+plot(x=d[,1],y=d[,2],col=km.out$cluster,pch=4,xlab="x",ylab="y") # mismatch between clusters and classes
+```
+
+## EM GMM
+
+Here, model-based clustering based on parameterized finite Gaussian mixture models will be used. Models are estimated by EM algorithm initialized by hierarchical model-based agglomerative clustering. The optimal model is selected according to Bayesian information criterion (BIC). BIC sums the model negative log likelihood and the number of model parameters, models with lower BIC are generally preferred. In our case, we distinguish between spherical equal volume clusters (EII, the right case for our dataset), spherical unequal volume clusters (VII), ellipsoidal, equal volume, shape, and orientation clusters (EEE), ..., or ellipsoidal, varying volume, shape, and orientation clusters (VVV).
+
+```{r EM GMM}
+BIC <- mclustBIC(d[,c(1,2)]) # find the best model with BIC
+BIC # check that we truly found EII with k=4 which corresponds to the dataset
+gmm <- Mclust(d[,c(1,2)], x = BIC) # learn the EM GMM model
+summary(gmm, parameters = TRUE)
+plot(x=d[,1],y=d[,2],col=gmm$classification,pch=4,xlab="x",ylab="y")
+```
+
+## Hierarchical clustering
+
+Hierarchical clustering builds a hierarchy of clusters. We will compare three ways of agglomerative hierarchical clustering differing in the linkage function that defines similarity between clusters. The algorithm starts by treating each object as a singleton cluster. Next, pairs of clusters are successively merged until all clusters have been merged into one big cluster containing all objects. The result is a tree-based representation of the objects, named dendrogram. Note that the number of clusters is set manually which may favor this class of methods in later quality assessment.
+
+```{r hierarchical clustering}
+hc.complete<-hclust(dist(d[,c(1,2)]), method="complete")
+hc.average<-hclust(dist(d[,c(1,2)]), method="average")
+hc.single<-hclust(dist(d[,c(1,2)]), method="single")
+par(mfrow=c(1,3))
+plot(hc.complete,main="Complete Linkage", xlab="", sub="", cex=.9)
+plot(hc.average, main="Average Linkage", xlab="", sub="", cex=.9)
+plot(hc.single, main="Single Linkage", xlab="", sub="", cex=.9)
+hc.complete.out<-cutree(hc.complete,4)
+hc.average.out<-cutree(hc.average,4)
+hc.single.out<-cutree(hc.single,4)
+plot(x=d[,1],y=d[,2],col=hc.complete.out,pch=4,xlab="x",ylab="y")
+plot(x=d[,1],y=d[,2],col=hc.average.out,pch=4,xlab="x",ylab="y")
+plot(x=d[,1],y=d[,2],col=hc.single.out,pch=4,xlab="x",ylab="y")
+```
+
+## Density-based clustering
+
+DBSCAN is a non-parametric density-based clustering algorithm. It categorizes points in a space by grouping closely packed points (those with numerous nearby neighbors) and identifies outliers as points that exist alone in low-density regions (where their nearest neighbors are too far away). Epsilon and minPts are two parameters that influence the clustering process. Epsilon defines the radius within which the algorithm searches for neighboring points around a given data point. Larger values of epsilon result in larger neighborhoods, potentially causing more points to be considered neighbors and leading to larger clusters. MinPts is the minimum number of data points required to form a dense region or a cluster. A larger minPts value makes the algorithm more conservative in forming clusters.
+
+```{r DBSCAN}
+kNNdistplot(d[,c(1,2)], k = 4) # find the best settings for Epsilon and minPts, look for the knee!
+abline(h=.9, col = "red", lty=2) # the knee gives the optimal eps for the given minPts/k
+dbscan<-dbscan(d[,c(1,2)],eps=0.9, minPts = 4) # the knee seems to be around 0.9, however, clustering is not satisfiable, 2 clusters originate 
+dbscan<-dbscan(d[,c(1,2)],eps=0.65, minPts = 4) # use a smaller eps to have more clusters
+dbscan$cluster # zero indicates noise points
+plot(x=d[,1],y=d[,2],col=dbscan$cluster+1,pch=4,xlab="x",ylab="y")
+```
+
+## Clustering quality
+
+The clustering quality can directly be evaluated as the gold standard clusters (also referred to as classes) match the original mixture elements. We can employ the measures of purity (clusterPurity implemented below), normalized mutual information (NMI taken from NMI library) or rand index (adjustedRandIndex taken from mclust library). For all these measures it holds that higher is better and as expected, EM GMM seems to work the best.
+
+```{r quality measures}
+clusterPurity <- function(clusters, classes) {
+  sum(apply(table(classes, clusters), 2, max)) / length(clusters)
+}
+
+clustOut<-list(kmeans=km.out$cluster,gmm=gmm$classification,hcomp=hc.complete.out,havg=hc.average.out,hsingle=hc.single.out,dbscan=dbscan$cluster)
+
+quality<-data.frame(row.names=c("k-means","EM GMM","Hcomplete","Haverage","Hsingle","DBSCAN"),
+                    purity=sapply(clustOut,function(x) clusterPurity(x,d$class)),
+                    NMI=sapply(clustOut,function(x) unlist(NMI(data.frame(seq(nrow(d)),x),data.frame(seq(nrow(d)),d$class)))),
+                    adjustedRandIndex=sapply(clustOut,function(x) adjustedRandIndex(x,d$class)))
+
+kable(quality)
+```
+
+## Challenges in clustering
+
+Let us show the influence of some simple modifications of the introductory task. We will change the scale in one of the dimensions, add outliers or change cluster density and shapes. We will see what is their influence on clustering partitions and how they match with the gold standard classes.
+
+```{r challenges}
+# change the scale in the second dimension
+d[,2]<-d[,2]/100 
+# scale(d[,c(1,2)]) # scale the data back if needed
+
+# add outliers, two objects very distant from the rest
+d[1,c(1:2)]<-c(-100,-100) 
+d[100,c(1:2)]<-c(100,100)
+
+# change cluster density
+# remove 80% objects from clusters 1 and 4
+d<-d[c(41:160),]
+
+# change cluster shapes
+Sigma1 <- matrix(c(1,0.9,0.9,1),2,2)
+Sigma2 <- matrix(c(2,-0.8,-0.8,1),2,2)
+d<-mvrnorm(n = 50, mu=c(1,1),Sigma2)
+d<-rbind(d,mvrnorm(n = 50, mu=c(1,5),Sigma1))
+d<-rbind(d,mvrnorm(n = 50, mu=c(5,1),Sigma1))
+d<-rbind(d,mvrnorm(n = 50, mu=c(5,5),Sigma2))
+d<-cbind(d,rep(c(1,2,3,4),each=50))
+
+# change cluster shapes as well as cluster centers
+Sigma2 <- matrix(c(1,-0.98,-0.98,1),2,2)
+d<-mvrnorm(n = 50, mu=c(1,1),Sigma2)
+d<-rbind(d,mvrnorm(n = 50, mu=c(2,2),Sigma2))
+d<-rbind(d,mvrnorm(n = 50, mu=c(3,3),Sigma2))
+d<-rbind(d,mvrnorm(n = 50, mu=c(4,4),Sigma2))
+d<-cbind(d,rep(c(1,2,3,4),each=50))
+
+plot(d[,1],d[,2],col=d[,3])
+d<-as.data.frame(d)
+colnames(d)<-c("x","y","class")
+
+```
+
+## Individual work:
+
+Your task is to play with the data generator settings and demonstrate their impact on the individual algorithms. You can propose your own changes, for example, to push forward your favorite method. Remember that we worked with GM generator which favors EM GMM. Eventually, verbally summarize advantages and disadvantages of the individual clustering algorithms wrt different settings.
+
+### Changing the scale
+
+With the scaling in one of the axis, the clustering outcome gets much worse. Only the first dimension really matters, the second one gets unimportant for object distances, information is lost. The only exception is EM GMM, which is scaling invariant. The method rescales its mean and variance parameters and the clustering quality remains the same. In general, we always have to use a good measure of distance between objects which may include scaling.
+
+### Adding the outliers
+
+With these two severe outliers, DBSCAN can naturally recognize them as noise and maintain its performance. For the rest of the methods, it is important to assign the outliers to separate clusters. Above all, it means to recognize the right number of clusters. BIC works well for EM GMM, the right model EII with 6 clusters was found and EM GMM as a whole works very well too. For k-means, the elbow method fails to identify outliers as new clusters which may result in performance decrease. If the number of clusters is set to 6 manually, the method works well too. In hierarchical clustering, dendrograms point out the outliers clearly, the outliers may make it more difficult to recognize the rest of the clusters. When finding them properly and setting the number of clusters to 6, the original performance remain maintained too.
+
+### Cluster density changes
+
+The identification of the right number of clusters is difficult. Both k-means with gap statistic and EM GMM with BIC tend to propose 2 clusters. DBSCAN may miss less dense clusters too and treat them as noise. This estimate leads to decrease in clustering quality measures. If the number of clusters is found correctly (such as the manual setting in hierarchical clustering), the performance is more or less maintained.
+
+### Changing cluster shapes
+
+When changing the cluster shapes, EM GMM works very well. We still have to keep on our mind that the clustering model matches the model used by data generator. K-means often fails in finding the right number of clusters, the cluster shapes are far away from isotropic (=round) as well. Single-link clustering does not work at all. DBSCAN suffers from poor separation between clusters.
+
+When changing the cluster shapes as well as their centers, EM GMM still works very well, k-means further worsens, single link surprisingly does not improve much and DBSCAN catches up on EM GMM.

@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 (fp_lib_table
   (version 7)
   (lib (name "SemacSys")(type "KiCad")(uri "${KIPRJMOD}/libs/SamacSys_Parts.pretty")(options "")(descr ""))
 )
+=======
+(fp_lib_table
+  (version 7)
+  (lib (name "SemacSys")(type "KiCad")(uri "${KIPRJMOD}/libs/SamacSys_Parts.pretty")(options "")(descr ""))
+  (lib (name "Custom")(type "KiCad")(uri "${KIPRJMOD}/libs/Custom.pretty")(options "")(descr ""))
+)
+>>>>>>> f1f1cf6f9623067967a5c4f43d5c7d9ce7849766

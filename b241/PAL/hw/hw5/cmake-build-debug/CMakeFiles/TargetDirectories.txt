@@ -1,0 +1,3 @@
+/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/cmake-build-debug/CMakeFiles/hw5.dir
+/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/tomkys144/Documents/CTU/b241/PAL/hw/hw5/cmake-build-debug/CMakeFiles/rebuild_cache.dir
