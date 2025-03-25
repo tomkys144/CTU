@@ -1,10 +1,10 @@
 [submodule "b201/ZPR"]
 	path = b201/ZPR
-	url = https://github.com/tomkys144/ZPR
+	url = git@github.com:tomkys144/ZPR
 	branch = master
 [submodule "b202/PRGA"]
 	path = b202/PRGA
-	url = https://github.com/tomkys144/PRGA
+	url = git@github.com:tomkys144/PRGA
 	branch = master
 [submodule "b221/RPZ/HW-template"]
 	path = b221/RPZ/HW-template
