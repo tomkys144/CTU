@@ -1,4 +1,4 @@
-#import "@local/ctu-report:0.1.0": *
+#import "@local/ctu-report:0.2.0": *
 #import "@preview/subpar:0.2.1"
 #import "@preview/unify:0.7.1": num
 
@@ -8,16 +8,15 @@
   author: "Tomáš Kysela",
   language: "en",
   show-outline: false,
+  faculty: "F3",
   it,
 )
-
-#set math.equation(numbering: "(1)")
 
 = State proposals
 
 == Sum of player's hand, Dealer's card, Ace <subsec:state1>
 
-In this state representation we use three values. First one is sum of our hand, second value of card, dealer has face-up and the last one is bool stating if we have an ace which counts as 11. We can calculate number of states using @eq:state1.
+In this state representation we use three values. The first value is the sum of the player's hand, the second is the dealer's face-up card, and the third is a Boolean indicating if the player has a usable Ace (counts as 11). We can calculate number of states using @eq:state1.
 
 $
   "Hand sum" times "Dealer's card" times "Ace existence" &= \
@@ -36,7 +35,7 @@ $ <eq:state2>
 == Sum of player's hand, Number of cards, Dealer's card <subsec:state3>
 
 
-This state is somewhat middleground between previous states. We know if we used multiple small cards or few bigger cards to get to this sum. As stated in @eq:state3, there is much lower number of states than in #ref(<subsec:state2>, supplement: "Proposition"), but more than #ref(<subsec:state1>, supplement: "Proposition").
+This representation balances detail and efficiency, capturing more information than #ref(<subsec:state1>, supplement: "Proposition") while avoiding the complexity of #ref(<subsec:state2>, supplement: "Proposition"). We know if we used multiple small cards or few bigger cards to get to this sum. Number of resulting states is calculated in @eq:state3.
 
 $
   "Hand sum" times "Number of cards" times "Dealer's card" &= \
@@ -98,7 +97,7 @@ First possible comparison between agents is using rewards. For this I used movin
     "assets/trends.png",
     width: 10cm,
   ),
-  caption: [ Comparison of rewards using 3d degree polynoms ],
+  caption: [ Comparison of rewards using 3rd degree polynoms ],
 ) <img:trends>
 
 To verify my agents learn and converge we can look at state with sum of player's hand 10 and lower. Progression of U and Q values are shown in @img:qu10. These graphs show, that all values converge, U values learned by TD agent significantly faster. This also shows, that Q value for action _HIT_ converges to higher score than Q value for _STAND_ action, which is expected, since we always want to _HIT_ if we have lower sum than 11.
