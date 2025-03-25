@@ -2,7 +2,7 @@ clear all
 close all
 clc
 
-addpath('field_ii_ver_3_30_windows')
+addpath('../field_ii_ver_3_30_windows')
 
 field_init;
 
@@ -25,7 +25,7 @@ Th = xdc_linear_array (no_elements, width, height, kerf, no_sub_x, no_sub_y, foc
 
 %% 1.2 modelling impulse response
 
-fc = 7.5e6; % TODO central frequency
+fc = 10e6; % TODO central frequency
 bw = 0.5; % TODO fractional bandwidth
 bwr = -6; % TODO fractional bandwidth reference level
 tpe = -40; %  TODO drop in trailing pulse envelope for cutoff time estimation
@@ -65,7 +65,7 @@ imagesc(x,t,hp)
 colormap(gray)
 ylabel('Time [s]')
 xlabel('Distance [mm]')
-title({'Time-dependent changes in pressure on a line going through the fixed focus point',sprintf('(%d mm parallel from the transducer)', d)})
+% title({'Time-dependent changes in pressure on a line going through the fixed focus point',sprintf('(%d mm parallel from the transducer)', d)})
 
 
 figure()
@@ -77,7 +77,7 @@ ylabel('Acoustic pressure [Pa]')
 figure()
 Pm_i = max(abs(hp),[],1);
 plot(x,20*log10(Pm_i/max(Pm_i)))
-title({'Normalized pressure maxima',sprintf('for a line %d mm parallel from the tranducer', d)})
+% title({'Normalized pressure maxima',sprintf('for a line %d mm parallel from the tranducer', d)})
 xlabel('Distance [mm]')
 ylabel('Acoustic pressure [dB]')
 axis tight
@@ -91,7 +91,7 @@ axis tight
 
 %% BONUS apodization
 
-points = []; TODO 
+points = []; % TODO 
 xdc_impulse(Th,y);
 [hp, ~] = calc_hp(Th, points);
 
