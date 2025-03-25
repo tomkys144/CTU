@@ -1,0 +1,196 @@
+{
+  "main": {
+    "id": "c6d288bfaf174bd8",
+    "type": "split",
+    "children": [
+      {
+        "id": "d4391b70c70b2ccd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e8db3efaf826a32b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "5/5.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b2979c140ec9818f",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "3/3.pdf"
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f7a8a53172fe04c7",
+    "type": "split",
+    "children": [
+      {
+        "id": "353c40dd4ffccb7b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8b2878c5c0a629a6",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "1c5b1982af577aaa",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "363fb404666cb730",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "2e7fa9a308493ecd",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "b4e956822f6d930d",
+    "type": "split",
+    "children": [
+      {
+        "id": "35675b1a13f013a5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9c394188bb46ebc9",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "3/3.pdf",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "e166938b9a8be93a",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "3/3.pdf",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f1aac5f2c53988e2",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "f354c900ddc08014",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "3/3.pdf"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "b2979c140ec9818f",
+  "lastOpenFiles": [
+    "3/3.md",
+    "4/Picture2.png",
+    "4/Picture1.png",
+    "4/4.pdf",
+    "3/3.pdf",
+    "2/2.pdf",
+    "4/4.md",
+    "4/Picture6.png",
+    "4/mereni/7B5AD110",
+    "4/mereni/~$TRACE023.xlsx",
+    "4/Picture5.png",
+    "4/mereni/~$TRACE022.xlsx",
+    "4/Picture4.png",
+    "4/mereni/19849010",
+    "4/Picture3.png",
+    "4/mereni/~$TRACE021.xlsx",
+    "4/mereni/81A09010",
+    "4/mereni/10709010",
+    "Pasted image 20230418190328.png",
+    "5/5.md",
+    "Untitled.canvas",
+    "2/2.md",
+    "3/mereni/4_F-20.PNG",
+    "3/mereni/4_F0.PNG",
+    "3/mereni/4_F10.PNG"
+  ]
+}
