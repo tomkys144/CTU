@@ -21,3 +21,6 @@
 [submodule "bc-thesis"]
 	path = bc-thesis
 	url = git@github.com:tomkys144/bc-thesis.git
+[submodule "b242/AOL/Project"]
+	path = b242/AOL/Project
+	url = git@gitlab.fel.cvut.cz:B242_BAM31AOL/kuklaon1.git
