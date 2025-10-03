@@ -4,7 +4,7 @@
 
 #show: it => ctu-report(
   doc-category: "BAM33ZSL Laboratorní protokol",
-  doc-title: "Lab 04: Ultrasound theory",
+  doc-title: "Lab 05: Ultrasound theory",
   author: "Tomáš Kysela",
   language: "en",
   show-outline: false,
@@ -13,64 +13,64 @@
 
 #set par(justify: true)
 
-#add-unit("rayl", "rayl", "upright(\"rayl\")")
+= US field simulation
 
-= US exercises
+== Time dependent changes in pressure field
 
-== Ultrasound resolution
+#subpar.grid(
+  figure(image("assets/time-7.5-25.png", width: 7cm), caption: [ depth 25mm ]),
+  figure(image("assets/time-7.5-30.png", width: 7cm), caption: [ depth 30mm ]),
+  figure(image("assets/time-7.5-35.png", width: 7cm), caption: [ depth 35mm ]),
+  caption: [ Time dependent changes for central frequency #qty("7.5", "Mega Hertz")],
+  label: <fig:time75>,
+)
 
-$
-  lambda = c / f arrow.double f = c / lambda = c / qty("0.5", "milli meter")
-$
+#subpar.grid(
+  figure(image("assets/time-5-25.png", width: 7cm), caption: [ depth 25mm ]),
+  figure(image("assets/time-5-30.png", width: 7cm), caption: [ depth 30mm ]),
+  figure(image("assets/time-5-35.png", width: 7cm), caption: [ depth 35mm ]),
+  caption: [ Time dependent changes for central frequency #qty("5", "Mega Hertz")],
+  label: <fig:time5>,
+)
 
-assuming tissue is fat, $c = qty("1450", "meter per second")$
+#subpar.grid(
+  figure(image("assets/time-10-25.png", width: 7cm), caption: [ depth 25mm ]),
+  figure(image("assets/time-10-30.png", width: 7cm), caption: [ depth 30mm ]),
+  figure(image("assets/time-10-35.png", width: 7cm), caption: [ depth 35mm ]),
+  caption: [ Time dependent changes for central frequency #qty("10", "Mega Hertz")],
+  label: <fig:time10>,
+)
 
-$
-  f = qty("1450", "meter per second") / qty("0.5", "milli meter") = qty("2.9", "mega hertz")
-$
+== Normalised pressure maxima
 
-$
-  "depth" = 500 lambda = qty("250", "milli meter")
-$
+#subpar.grid(
+  figure(image("assets/norm-7.5-25.png", width: 7cm), caption: [ depth 25mm ]),
+  figure(image("assets/norm-7.5-30.png", width: 7cm), caption: [ depth 30mm ]),
+  figure(image("assets/norm-7.5-35.png", width: 7cm), caption: [ depth 35mm ]),
+  caption: [ Normalised pressure maxima for central frequency #qty("7.5", "Mega Hertz")],
+  label: <fig:norm75>,
+)
 
-== Reflectivity
+#subpar.grid(
+  figure(image("assets/norm-5-25.png", width: 7cm), caption: [ depth 25mm ]),
+  figure(image("assets/norm-5-30.png", width: 7cm), caption: [ depth 30mm ]),
+  figure(image("assets/norm-5-35.png", width: 7cm), caption: [ depth 35mm ]),
+  caption: [ Normalised pressure maxima for central frequency #qty("5", "Mega Hertz")],
+  label: <fig:norm5>,
+)
 
-$
-  Z_"adi" = rho_"adi" dot c_"tissue" = qty("911", "kilo gram per meter cubed") dot qty("1540", "meter per second") &= qty("1.403e6", "rayl") \
-  Z_"car" = rho_"car" dot c_"tissue" = qty("1100", "kilo gram per meter cubed") dot qty("1540", "meter per second") &= qty("1.694e6", "rayl")
-$
+#subpar.grid(
+  figure(image("assets/norm-10-25.png", width: 7cm), caption: [ depth 25mm ]),
+  figure(image("assets/norm-10-30.png", width: 7cm), caption: [ depth 30mm ]),
+  figure(image("assets/norm-10-35.png", width: 7cm), caption: [ depth 35mm ]),
+  caption: [ Normalised pressure maxima for central frequency #qty("10", "Mega Hertz")],
+  label: <fig:norm10>,
+)
 
-$
-  R_"adi-bone" = (Z_"adi" - Z_"bone")^2 / (Z_"adi" + Z_"bone")^2 = (qty("1.403e6", "rayl") - qty("6.75e6", "rayl"))^2 / (qty("1.403e6", "rayl") + qty("6.75e6", "rayl"))^2 &= 0.43 \
-  R_"car-bone" = (Z_"car" - Z_"bone")^2 / (Z_"car" + Z_"bone")^2 = (qty("1.694e6", "rayl") - qty("6.75e6", "rayl"))^2 / (qty("1.694e6", "rayl") + qty("6.75e6", "rayl"))^2 &= 0.36
-$
+== Discussion
 
-== Sampling frequency
+We can see, that with higher central frequency the central lobe gets narrower as well as side lobes in focal point. Before and after the focal point there is much higher number of side lobes with higher frequency.
 
-$
-  lambda = "depth" / 500 = qty("10", "centi meter") / 500 = qty("0.2", "milli meter") \
-  f = c / lambda = qty("1540", "meter per second") / qty("0.2", "milli meter") = qty("7.7", "mega hertz") \
-  f_s = f / 200 = qty("38.5", "kilo hertz")
-$
+= B-mode of water-filled cyst phantom
 
-= US excitation pulse
-
-#figure(image("assets/bw05.png", width: 10cm))
-
-== Bandwidth influence
-
-As seen in @img:bwcomp higher bandwidth makes higher jitter and lower peaks in frequency domain. In time domain these signals are mostly the same. Higher bandwidth can improve axial resolution, but leads to lower penetration.
-
-#figure(
-  image("assets/bwcomp.png", width: 10cm),
-  caption: [Comparison of 2 different bandwidths],
-) <img:bwcomp>
-
-== Central frequency influence
-
-As seen in @img:fccomp lower central frequency makes much "wider" impulse in time domain and much more consentrated response in frequency domain. This can help with penetration, but can lead to lower image resolution.
-
-#figure(
-  image("assets/fccomp.png", width: 10cm),
-  caption: [Comparison of 2 different central frequencies],
-) <img:fccomp>
+#figure(image("assets/cyst.png"), caption: [ Simulated image of cysts, 60 lines, depth 50mm ])

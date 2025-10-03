@@ -24,3 +24,9 @@
 [submodule "b242/AOL/Project"]
 	path = b242/AOL/Project
 	url = git@gitlab.fel.cvut.cz:B242_BAM31AOL/kuklaon1.git
+[submodule "b241/SAN/semestralka"]
+	path = b241/SAN/semestralka
+	url = git@gitlab.fel.cvut.cz:ljachver/san-semestralka.git
+[submodule "b242/AOL/project"]
+	path = b242/AOL/project
+	url = git@gitlab.fel.cvut.cz:B242_BAM31AOL/kuklaon1.git
