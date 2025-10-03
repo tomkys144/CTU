@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/../../../.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../../b201/ZPR" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../../b201/ZPR/SemestralWork/backend" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../../b201/ZPR/SemestralWork/frontend" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../../b201/ZPR/SemestralWork/master" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../../b221/RPZ/HW-template" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../../b222/lpe/projekt" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../../b231/bsp/project" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../../b241/SAN/semestralka" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../AOL/Project" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/corpusCzechVerse" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../../bc-thesis" vcs="Git" />
+  </component>
+</project>

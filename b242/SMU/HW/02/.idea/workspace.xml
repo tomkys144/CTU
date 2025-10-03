@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="19d26768-71bb-43a0-82a0-139589e3fedf" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../../b241/SAN/semestralka" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../AOL/Project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../01/hw1.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ZSL/LAB/05/Archive.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ZSL/LAB/05/main.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ZSL/LAB/05/pht_data.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../.gitmodules" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../.gitmodules" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b201/ZPR" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../b201/ZPR" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b201/ZPR/SemestralWork/backend" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../b201/ZPR/SemestralWork/backend" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b201/ZPR/SemestralWork/master" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../b201/ZPR/SemestralWork/master" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b221/RPZ/HW-template" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../b221/RPZ/HW-template" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b222/lpe/projekt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../b222/lpe/projekt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b222/lpe/projekt/docs/Circuit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b222/lpe/projekt/docs/ac.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b222/lpe/projekt/docs/bridge.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b222/lpe/projekt/docs/dc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b222/lpe/projekt/docs/lpe.aux" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b222/lpe/projekt/docs/lpe.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b222/lpe/projekt/docs/lpe.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b222/lpe/projekt/docs/lpe.synctex.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b222/lpe/projekt/docs/lpe.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b222/lpe/projekt/docs/method.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b222/lpe/projekt/docs/mmHg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b222/lpe/projekt/hw/lpe-backups/lpe-2023-05-03_174342.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b222/lpe/projekt/hw/lpe-backups/lpe-2023-05-03_180102.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b222/lpe/projekt/hw/lpe-backups/lpe-2023-05-04_103228.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b222/lpe/projekt/hw/lpe-backups/lpe-2023-05-17_144330.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b222/lpe/projekt/hw/lpe-backups/lpe-2023-05-17_164301.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b222/lpe/projekt/hw/lpe-backups/lpe-2023-05-17_172217.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b222/lpe/projekt/hw/lpe-backups/lpe-2023-05-17_172735.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b222/lpe/projekt/hw/lpe-backups/lpe-2023-05-17_175446.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b222/lpe/projekt/hw/lpe-backups/lpe-2023-05-19_151212.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b222/lpe/projekt/hw/lpe-backups/lpe-2023-07-02_211409.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b222/lpe/projekt/hw/lpe-backups/lpe-2023-07-02_212635.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b222/lpe/projekt/hw/lpe-backups/lpe-2023-07-02_213510.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b222/lpe/projekt/hw/lpe.kicad_prl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b222/lpe/projekt/hw/lpe.kicad_pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b222/lpe/projekt/hw/lpe.kicad_sch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b222/lpe/projekt/sw/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b222/lpe/projekt/sw/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b222/lpe/projekt/sw/main.hpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b222/lpe/projekt/sw/mbed-os.lib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b222/lpe/projekt/sw/mbed_app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b222/lpe/projekt/sw/movingaverage" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b222/lpe/projekt/sw/movingaverage.lib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../b231/bsp/project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/.github/workflows/main.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/doc/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/doc/.~lock.presentation.pptx#" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/doc/assets/lcd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/doc/assets/ldr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/doc/assets/lin_reg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/doc/assets/spectrum.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/doc/fit.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/doc/luxmetr.bib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/doc/luxmetr.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/doc/luxmetr.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/doc/presentation.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/doc/presentation.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/doc/presentation.pptx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/hw/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/hw/lux_meter.kicad_pcb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/hw/lux_meter.kicad_pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/hw/lux_meter.kicad_sch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/hw/lux_meter.kicad_sym" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/hw/sym-lib-table" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/hw/~lux_meter.kicad_sch.lck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/.cproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/.mxproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Core/Inc/lcd.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Core/Inc/main.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Core/Inc/stm32g4xx_hal_conf.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Core/Inc/stm32g4xx_it.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Core/Src/lcd.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Core/Src/main.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Core/Src/stm32g4xx_hal_msp.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Core/Src/stm32g4xx_it.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Core/Src/syscalls.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Core/Src/sysmem.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Core/Src/system_stm32g4xx.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Core/Startup/startup_stm32g491retx.s" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g491xx.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g4xx.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/CMSIS/Device/ST/STM32G4xx/Include/system_stm32g4xx.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/CMSIS/Device/ST/STM32G4xx/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/CMSIS/Include/cmsis_armcc.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/CMSIS/Include/cmsis_armclang.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/CMSIS/Include/cmsis_armclang_ltm.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/CMSIS/Include/cmsis_compiler.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/CMSIS/Include/cmsis_gcc.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/CMSIS/Include/cmsis_iccarm.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/CMSIS/Include/cmsis_version.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/CMSIS/Include/core_armv81mml.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/CMSIS/Include/core_armv8mbl.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/CMSIS/Include/core_armv8mml.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/CMSIS/Include/core_cm0.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/CMSIS/Include/core_cm0plus.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/CMSIS/Include/core_cm1.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/CMSIS/Include/core_cm23.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/CMSIS/Include/core_cm3.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/CMSIS/Include/core_cm33.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/CMSIS/Include/core_cm35p.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/CMSIS/Include/core_cm4.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/CMSIS/Include/core_cm7.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/CMSIS/Include/core_sc000.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/CMSIS/Include/core_sc300.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/CMSIS/Include/mpu_armv7.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/CMSIS/Include/mpu_armv8.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/CMSIS/Include/tz_context.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/CMSIS/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_adc_ex.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_cortex.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_def.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_dma_ex.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_exti.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ex.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_flash_ramfunc.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_gpio_ex.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_pwr_ex.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_rcc_ex.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_tim_ex.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart_ex.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_adc.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_bus.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_cortex.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_crs.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dma.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_dmamux.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_exti.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_gpio.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_lpuart.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_pwr.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_rcc.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_system.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_usart.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_ll_utils.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_adc.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/STM32G491RETX_FLASH.ld" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/STM32G491RETX_RAM.ld" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/lux Debug.launch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b231/bsp/project/sw/lux.ioc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../b241/SAN/san-semestralka" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AOL/Project/reaction-tester/.vscode/c_cpp_properties.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../AOL/Project/reaction-tester/.vscode/c_cpp_properties.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AOL/Project/reaction-tester/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../AOL/Project/reaction-tester/.vscode/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AOL/Project/reaction-tester/components/us_sensor/us_sensor.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../../AOL/Project/reaction-tester/components/us_sensor/us_sensor.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AOL/Project/reaction-tester/components/us_sensor/us_sensor.h" beforeDir="false" afterPath="$PROJECT_DIR$/../../../AOL/Project/reaction-tester/components/us_sensor/us_sensor.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AOL/Project/reaction-tester/main/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../../AOL/Project/reaction-tester/main/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../AOL/project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../01/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../01/main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../01/main.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ZSL/LAB/04/main.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ZSL/LAB/04/main.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ZSL/LAB/05/main.typ" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ZSL/LAB/05/main.typ" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../bc-thesis" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../bc-thesis" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../bc-thesis/assets/ecg.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../bc-thesis/assets/ecg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../bc-thesis/assets/pohyb-corr-res.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../bc-thesis/assets/pohyb-corr-res.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../bc-thesis/assets/pohyb-emg-envelope-res.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../bc-thesis/assets/pohyb-emg-envelope-res.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../bc-thesis/assets/pohyb-emg-res.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../bc-thesis/assets/pohyb-emg-res.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../bc-thesis/assets/pohyb-result.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../bc-thesis/assets/pohyb-result.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../bc-thesis/assets/signal_compare.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../bc-thesis/assets/signal_compare.png" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2vqp5aes5z2tb38mcUrIFPLNEY5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.main.executor": "Debug",
+    "Python.tradingagent.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/tomkys144/Documents/CTU/b242/SMU/HW/03",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "stardust.markdown.MarkdownSplitEditorSuppressor:keyList": []
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-PY-251.25410.159" />
+        <option value="bundled-python-sdk-e0ed3721d81e-36ea0e71a18c-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.25410.159" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="19d26768-71bb-43a0-82a0-139589e3fedf" name="Changes" comment="" />
+      <created>1744882276305</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1744882276305</updated>
+      <workItem from="1744882277626" duration="2459000" />
+      <workItem from="1744894485903" duration="462000" />
+      <workItem from="1747841395289" duration="87000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tradingagent.py</url>
+          <line>36</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/02$tradingagent.coverage" NAME="tradingagent Coverage Results" MODIFIED="1744883386675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/02$main.coverage" NAME="main Coverage Results" MODIFIED="1744884428505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
