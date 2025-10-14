@@ -1,0 +1,16 @@
+#!/bin/nu
+const current_file = path self
+
+const root_path = $current_file | path dirname
+
+let files = ls b242/**/*.xopp
+
+for file in $files.name {
+        print (["Proccesing " $file] | str join)
+
+        let xoppPath = $root_path | path join $file
+
+        let pdfPath = $xoppPath | str replace -r '(.+).xopp' '$1.pdf'
+
+        xournalpp -p $pdfPath $xoppPath
+}
