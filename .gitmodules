@@ -30,3 +30,6 @@
 [submodule "b242/AOL/project"]
 	path = b242/AOL/project
 	url = git@gitlab.fel.cvut.cz:B242_BAM31AOL/kuklaon1.git
+[submodule "b251/NetSci/Project"]
+	path = b251/NetSci/Project
+	url = git@github.com:tomkys144/NetSci-Project.git

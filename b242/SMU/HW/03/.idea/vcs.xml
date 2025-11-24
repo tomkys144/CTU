@@ -12,6 +12,7 @@
     <mapping directory="$PROJECT_DIR$/../../../../b241/SAN/semestralka" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../../../AOL/Project" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/corpusCzechVerse" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../../b251/NetSci/Project" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../../../../bc-thesis" vcs="Git" />
   </component>
 </project>
