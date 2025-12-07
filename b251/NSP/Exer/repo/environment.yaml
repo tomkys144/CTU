@@ -1,0 +1,24 @@
+name: nsp
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - jupyter=1.1.1
+  - ffmpeg=7.1.0
+  - matplotlib=3.10.6
+  - numpy=2.3.3
+  - pandas=2.3.3
+  - pillow=11.3.0
+  - pip=25.2
+  - python=3.12.12
+  - scipy=1.16.3
+  - stingray=2.2.10
+  - pip:
+    - gpytorch==1.14.2
+    - pyro-ppl==1.9.1
+    - scikit-learn==1.7.2
+    - torch==2.9.0
+    - torchaudio==2.9.0
+    - torchcodec==0.8.1
+    - torchvision==0.24.0
+    - --extra-index-url https://download.pytorch.org/whl/cpu
